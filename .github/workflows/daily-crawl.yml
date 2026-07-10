@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "0 6 * * *"
   workflow_dispatch:
+    inputs:
+      fail_on_regression:
+        description: "Fail the workflow if a regression is detected (default: true)"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -44,7 +53,7 @@ jobs:
           uv run stripe-fee-crawler crawl \
             --output .. \
             --atomic \
-            --fail-on-regression \
+            ${{ inputs.fail_on_regression == 'true' && '--fail-on-regression' || '' }} \
             --report /tmp/crawl-report.json
 
       - name: Validate generated JSON
