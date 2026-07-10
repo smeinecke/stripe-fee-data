@@ -1,6 +1,49 @@
 {
-  "aliases": {},
-  "fee_page_urls": {},
+  "aliases": {
+    "en-ae": "ae",
+    "en-au": "au",
+    "en-br": "br",
+    "en-de": "de",
+    "en-gb": "gb",
+    "en-id": "id",
+    "en-in": "in",
+    "en-jp": "jp",
+    "en-us": "us"
+  },
+  "fee_page_urls": {
+    "ae": [
+      "https://stripe.com/ae/pricing",
+      "https://stripe.com/ae/pricing"
+    ],
+    "au": [
+      "https://stripe.com/au/pricing",
+      "https://stripe.com/au/pricing/local-payment-methods"
+    ],
+    "br": [
+      "https://stripe.com/en-br/pricing",
+      "https://stripe.com/en-br/pricing/local-payment-methods"
+    ],
+    "de": [
+      "https://stripe.com/en-de/pricing",
+      "https://stripe.com/en-de/pricing/local-payment-methods"
+    ],
+    "gb": [
+      "https://stripe.com/gb/pricing",
+      "https://stripe.com/gb/pricing/local-payment-methods"
+    ],
+    "in": [
+      "https://stripe.com/in/pricing",
+      "https://stripe.com/in/pricing"
+    ],
+    "jp": [
+      "https://stripe.com/en-jp/pricing",
+      "https://stripe.com/en-jp/pricing/local-payment-methods"
+    ],
+    "us": [
+      "https://stripe.com/pricing",
+      "https://stripe.com/pricing/local-payment-methods"
+    ]
+  },
   "generated_at": null,
   "markets": [
     {
