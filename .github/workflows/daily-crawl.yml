@@ -50,17 +50,7 @@ jobs:
         working-directory: ./crawler
         run: uv run stripe-fee-crawler validate ..
 
-      - name: Check for changes
-        id: changes
-        run: |
-          if git diff --quiet --exit-code; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Create pull request
-        if: steps.changes.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@67ccf781d68cd99b580ae25a5c18a1cc84ffff1f # v7.0.6
         with:
           add-paths: |
