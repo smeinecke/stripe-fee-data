@@ -1,0 +1,127 @@
+{
+  "generated_at": null,
+  "markets": [
+    {
+      "account_country": "AE",
+      "content_sha256": "dfc3168e0157b134648a8a19601f3d206967cfa500b29fb43253db2a6c1745ed",
+      "data_path": "json/AE.json",
+      "derivation_status": "partial",
+      "locale": "en-ae",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/ae/pricing"
+      ],
+      "stripe_market_code": "ae"
+    },
+    {
+      "account_country": "AU",
+      "content_sha256": "18c6d88bd2a437f6c86846c7c81ee9eb9eef6d921fc1430661ce4e626495b83e",
+      "data_path": "json/AU.json",
+      "derivation_status": "partial",
+      "locale": "en-au",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/au/pricing",
+        "https://stripe.com/au/pricing/local-payment-methods"
+      ],
+      "stripe_market_code": "au"
+    },
+    {
+      "account_country": "BR",
+      "content_sha256": "9f01bf1dee1567edde44d8cdd8930acce05e1343ed9060e5775ed682edd0fab4",
+      "data_path": "json/BR.json",
+      "derivation_status": "partial",
+      "locale": "en-br",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/en-br/pricing",
+        "https://stripe.com/en-br/pricing/local-payment-methods"
+      ],
+      "stripe_market_code": "br"
+    },
+    {
+      "account_country": "DE",
+      "content_sha256": "03d0ac35e20284bed745e1a90b76a3f15765fc649303141edb01eec467a9fce3",
+      "data_path": "json/DE.json",
+      "derivation_status": "partial",
+      "locale": "en-de",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/en-de/pricing",
+        "https://stripe.com/en-de/pricing/local-payment-methods"
+      ],
+      "stripe_market_code": "de"
+    },
+    {
+      "account_country": "GB",
+      "content_sha256": "d9bc31c855208e17d3d74ed39dcd51c47d8d43f03c646cf1b63484a0abe1a408",
+      "data_path": "json/GB.json",
+      "derivation_status": "partial",
+      "locale": "en-gb",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/gb/pricing",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "stripe_market_code": "gb"
+    },
+    {
+      "account_country": "ID",
+      "content_sha256": "6555de22599f0e48110535d5853720830bccea988c0b140052dde39e647c3088",
+      "data_path": "json/ID.json",
+      "derivation_status": "unclassified",
+      "locale": "en-id",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [],
+      "stripe_market_code": "id"
+    },
+    {
+      "account_country": "IN",
+      "content_sha256": "b2e442b7d5ab481442fcefc5ff1a2d60cfbe2ae7a3bd4ddd3304e3187e54b09d",
+      "data_path": "json/IN.json",
+      "derivation_status": "partial",
+      "locale": "en-in",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/in/pricing"
+      ],
+      "stripe_market_code": "in"
+    },
+    {
+      "account_country": "JP",
+      "content_sha256": "2fae4f8066feaf1941b9db16d79c17ac7088ad2f0c3c099f2a8f0c0945f9cf23",
+      "data_path": "json/JP.json",
+      "derivation_status": "partial",
+      "locale": "en-jp",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/en-jp/pricing",
+        "https://stripe.com/en-jp/pricing/local-payment-methods"
+      ],
+      "stripe_market_code": "jp"
+    },
+    {
+      "account_country": "US",
+      "content_sha256": "6c5a0f670f09d532cfee41415410c18c73bf3d1d77cf0c8080cfca7e18fc86d7",
+      "data_path": "json/US.json",
+      "derivation_status": "partial",
+      "locale": "en-us",
+      "schema_version": 1,
+      "source_updated_at": null,
+      "source_urls": [
+        "https://stripe.com/en-de/pricing",
+        "https://stripe.com/en-de/pricing/local-payment-methods"
+      ],
+      "stripe_market_code": "us"
+    }
+  ],
+  "schema_version": 1
+}

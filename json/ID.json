@@ -1,0 +1,31 @@
+{
+  "derivation_status": "unclassified",
+  "derived_rules": [],
+  "entries": [],
+  "generated_at": null,
+  "market": {
+    "account_country": "ID",
+    "country_name": "Indonesia",
+    "default_currency": "IDR",
+    "languages": [
+      {
+        "code": "en",
+        "name": "English"
+      }
+    ],
+    "locale": "en-id",
+    "preferred_language": "en",
+    "region": "asia_pacific",
+    "status": "pricing_page_unavailable",
+    "stripe_market_code": "id",
+    "url_prefix": "https://stripe.com/en-id",
+    "url_slug": "id"
+  },
+  "schema_version": 1,
+  "sections": [],
+  "sources": [],
+  "transient_failure": false,
+  "unclassified_entries": [],
+  "unsupported_reason": "pricing_page_unavailable",
+  "warnings": []
+}

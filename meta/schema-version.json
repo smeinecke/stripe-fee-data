@@ -1,0 +1,12 @@
+{
+  "description": null,
+  "schema_path": "schemas/stripe-fees-v1.schema.json",
+  "schema_version": 1,
+  "schemas": [
+    "schemas/stripe-fees-v1.schema.json",
+    "schemas/core-fees-v1.schema.json",
+    "schemas/payment-methods-v1.schema.json",
+    "schemas/index-v1.schema.json",
+    "schemas/manifest-v1.schema.json"
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "aliases": {},
+  "fee_page_urls": {},
+  "generated_at": null,
+  "markets": [
+    {
+      "account_country": "AE",
+      "country_name": "United Arab Emirates",
+      "default_currency": "AED",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ],
+      "locale": "en-ae",
+      "preferred_language": "en",
+      "region": "middle_east_africa",
+      "status": "supported",
+      "stripe_market_code": "ae",
+      "url_prefix": "https://stripe.com/ae",
+      "url_slug": "ae"
+    },
+    {
+      "account_country": "AU",
+      "country_name": "Australia",
+      "default_currency": "AUD",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ],
+      "locale": "en-au",
+      "preferred_language": "en",
+      "region": "asia_pacific",
+      "status": "supported",
+      "stripe_market_code": "au",
+      "url_prefix": "https://stripe.com/au",
+      "url_slug": "au"
+    },
+    {
+      "account_country": "BR",
+      "country_name": "Brazil",
+      "default_currency": "BRL",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        },
+        {
+          "code": "pt",
+          "name": "Português"
+        }
+      ],
+      "locale": "en-br",
+      "preferred_language": "en",
+      "region": "south_america",
+      "status": "supported",
+      "stripe_market_code": "br",
+      "url_prefix": "https://stripe.com/en-br",
+      "url_slug": "br"
+    },
+    {
+      "account_country": "DE",
+      "country_name": "Germany",
+      "default_currency": "EUR",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        },
+        {
+          "code": "de",
+          "name": "Deutsch"
+        }
+      ],
+      "locale": "en-de",
+      "preferred_language": "en",
+      "region": "europe",
+      "status": "supported",
+      "stripe_market_code": "de",
+      "url_prefix": "https://stripe.com/en-de",
+      "url_slug": "de"
+    },
+    {
+      "account_country": "GB",
+      "country_name": "United Kingdom",
+      "default_currency": "GBP",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ],
+      "locale": "en-gb",
+      "preferred_language": "en",
+      "region": "europe",
+      "status": "supported",
+      "stripe_market_code": "gb",
+      "url_prefix": "https://stripe.com/gb",
+      "url_slug": "gb"
+    },
+    {
+      "account_country": "ID",
+      "country_name": "Indonesia",
+      "default_currency": "IDR",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ],
+      "locale": "en-id",
+      "preferred_language": "en",
+      "region": "asia_pacific",
+      "status": "pricing_page_unavailable",
+      "stripe_market_code": "id",
+      "url_prefix": "https://stripe.com/en-id",
+      "url_slug": "id"
+    },
+    {
+      "account_country": "IN",
+      "country_name": "India",
+      "default_currency": "INR",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ],
+      "locale": "en-in",
+      "preferred_language": "en",
+      "region": "asia_pacific",
+      "status": "supported",
+      "stripe_market_code": "in",
+      "url_prefix": "https://stripe.com/in",
+      "url_slug": "in"
+    },
+    {
+      "account_country": "JP",
+      "country_name": "Japan",
+      "default_currency": "JPY",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        },
+        {
+          "code": "ja",
+          "name": "日本語"
+        }
+      ],
+      "locale": "en-jp",
+      "preferred_language": "en",
+      "region": "asia_pacific",
+      "status": "supported",
+      "stripe_market_code": "jp",
+      "url_prefix": "https://stripe.com/en-jp",
+      "url_slug": "jp"
+    },
+    {
+      "account_country": "US",
+      "country_name": "United States",
+      "default_currency": "USD",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ],
+      "locale": "en-us",
+      "preferred_language": "en",
+      "region": "north_america",
+      "status": "supported",
+      "stripe_market_code": "us",
+      "url_prefix": "https://stripe.com",
+      "url_slug": "us"
+    }
+  ],
+  "schema_version": 1,
+  "transient_failures": [],
+  "unsupported": []
+}

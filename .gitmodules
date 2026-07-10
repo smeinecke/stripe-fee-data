@@ -1,0 +1,6 @@
+[submodule "stripe-fee-crawler"]
+	path = stripe-fee-crawler
+	url = https://github.com/smeinecke/stripe-fee-crawler
+[submodule "crawler"]
+	path = crawler
+	url = https://github.com/smeinecke/stripe-fee-crawler
