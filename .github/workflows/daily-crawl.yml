@@ -6,13 +6,10 @@ on:
   workflow_dispatch:
     inputs:
       fail_on_regression:
-        description: "Fail the workflow if a regression is detected (default: true)"
+        description: "Fail the workflow if a regression is detected"
         required: false
-        default: "true"
-        type: choice
-        options:
-          - "true"
-          - "false"
+        default: true
+        type: boolean
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -47,13 +44,22 @@ jobs:
         working-directory: ./crawler
         run: uv sync --frozen
 
+      - name: Determine regression gate
+        id: gate
+        run: |
+          fail_on_regression="${{ inputs.fail_on_regression }}"
+          if [ -z "$fail_on_regression" ]; then
+            fail_on_regression="true"
+          fi
+          echo "fail_on_regression=$fail_on_regression" >> "$GITHUB_OUTPUT"
+
       - name: Run crawler
         working-directory: ./crawler
         run: |
           uv run stripe-fee-crawler crawl \
             --output .. \
             --atomic \
-            ${{ inputs.fail_on_regression == 'true' && '--fail-on-regression' || '' }} \
+            ${{ steps.gate.outputs.fail_on_regression == 'true' && '--fail-on-regression' || '' }} \
             --report /tmp/crawl-report.json
 
       - name: Validate generated JSON
