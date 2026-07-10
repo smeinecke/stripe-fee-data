@@ -5,8 +5,13 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   crawl:
@@ -14,17 +19,17 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Check out data repo with crawler submodule
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           submodules: recursive
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@b5f58b2abc5763ade55e4e9d0fe52cd1ff7979ca # v5.2.1
         with:
           version: "0.11.12"
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
         with:
           python-version: "3.12"
 
@@ -54,27 +59,25 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Stage optional change report
+      - name: Create pull request
         if: steps.changes.outputs.changed == 'true'
-        run: |
-          if [ -f change-report.json ]; then
-            git add change-report.json
-          fi
-
-      - name: Add and commit
-        if: steps.changes.outputs.changed == 'true'
-        uses: EndBug/add-and-commit@v9
-        env:
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+        uses: peter-evans/create-pull-request@67ccf781d68cd99b580ae25a5c18a1cc84ffff1f # v7.0.6
         with:
-          add: 'json meta schemas'
-          author_name: Auto Update Bot
-          author_email: bot@github.com
-          message: 'Daily Stripe fee update'
+          add-paths: |
+            json
+            meta
+            schemas
+            change-report.json
+          commit-message: "Daily Stripe fee update"
+          branch: auto/daily-stripe-fee-update
+          delete-branch: true
+          title: "Daily Stripe fee update"
+          body: |
+            Automated daily crawl of Stripe pricing pages.
 
       - name: Upload diagnostics
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
         with:
           name: crawl-diagnostics
           path: /tmp/crawl-report.json
