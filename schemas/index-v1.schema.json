@@ -1,30 +1,112 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/smeinecke/stripe-fee-data/schemas/index-v1.schema.json",
-  "title": "Stripe fee data index",
-  "description": "Index of published per-market fee data files.",
-  "type": "object",
-  "required": ["schema_version", "markets"],
-  "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
-    "generated_at": { "type": ["string", "null"] },
-    "markets": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["account_country", "stripe_market_code", "locale", "data_path"],
-        "properties": {
-          "account_country": { "type": "string", "pattern": "^[A-Z]{2}$" },
-          "stripe_market_code": { "type": "string" },
-          "locale": { "type": "string" },
-          "data_path": { "type": "string" },
-          "source_urls": { "type": "array", "items": { "type": "string", "format": "uri" } },
-          "source_updated_at": { "type": ["string", "null"] },
-          "derivation_status": { "type": ["string", "null"] },
-          "content_sha256": { "type": ["string", "null"] },
-          "schema_version": { "type": "integer" }
+  "$defs": {
+    "MarketIndexEntry": {
+      "description": "Compact entry in the market index.",
+      "properties": {
+        "account_country": {
+          "title": "Account Country",
+          "type": "string"
+        },
+        "content_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Content Sha256"
+        },
+        "data_path": {
+          "title": "Data Path",
+          "type": "string"
+        },
+        "derivation_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Derivation Status"
+        },
+        "locale": {
+          "title": "Locale",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "source_updated_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Updated At"
+        },
+        "source_urls": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Urls",
+          "type": "array"
+        },
+        "stripe_market_code": {
+          "title": "Stripe Market Code",
+          "type": "string"
         }
-      }
+      },
+      "required": [
+        "account_country",
+        "stripe_market_code",
+        "locale",
+        "data_path"
+      ],
+      "title": "MarketIndexEntry",
+      "type": "object"
     }
-  }
+  },
+  "$id": "https://github.com/smeinecke/stripe-fee-data/schemas/index-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Index of successfully processed markets.",
+  "properties": {
+    "generated_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Generated At"
+    },
+    "markets": {
+      "items": {
+        "$ref": "#/$defs/MarketIndexEntry"
+      },
+      "title": "Markets",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "title": "MarketIndex",
+  "type": "object"
 }

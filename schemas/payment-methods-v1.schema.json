@@ -1,38 +1,106 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/smeinecke/stripe-fee-data/schemas/payment-methods-v1.schema.json",
-  "title": "Stripe payment method catalog",
-  "description": "Cross-market payment method catalog with fee rule references.",
-  "type": "object",
-  "required": ["schema_version", "methods"],
-  "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
-    "generated_at": { "type": ["string", "null"] },
-    "methods": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["method_id", "family", "display_name", "supported_account_countries", "fee_rule_refs", "source_refs"],
-        "properties": {
-          "method_id": { "type": "string" },
-          "family": { "type": "string" },
-          "display_name": { "type": "string" },
-          "localized_names": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": ["language", "name"],
-              "properties": {
-                "language": { "type": "string" },
-                "name": { "type": "string" }
-              }
-            }
+  "$defs": {
+    "PaymentMethodEntry": {
+      "description": "A normalized payment method in the cross-market catalog.",
+      "properties": {
+        "display_name": {
+          "title": "Display Name",
+          "type": "string"
+        },
+        "family": {
+          "title": "Family",
+          "type": "string"
+        },
+        "fee_rule_refs": {
+          "items": {
+            "type": "string"
           },
-          "supported_account_countries": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z]{2}$" } },
-          "fee_rule_refs": { "type": "array", "items": { "type": "string" } },
-          "source_refs": { "type": "array", "items": { "type": "string" } }
+          "title": "Fee Rule Refs",
+          "type": "array"
+        },
+        "localized_names": {
+          "items": {
+            "$ref": "#/$defs/PaymentMethodName"
+          },
+          "title": "Localized Names",
+          "type": "array"
+        },
+        "method_id": {
+          "title": "Method Id",
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "supported_account_countries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supported Account Countries",
+          "type": "array"
         }
-      }
+      },
+      "required": [
+        "method_id",
+        "family",
+        "display_name"
+      ],
+      "title": "PaymentMethodEntry",
+      "type": "object"
+    },
+    "PaymentMethodName": {
+      "description": "Localized display name for a payment method.",
+      "properties": {
+        "language": {
+          "title": "Language",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "language",
+        "name"
+      ],
+      "title": "PaymentMethodName",
+      "type": "object"
     }
-  }
+  },
+  "$id": "https://github.com/smeinecke/stripe-fee-data/schemas/payment-methods-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Cross-market payment-method catalog.",
+  "properties": {
+    "generated_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Generated At"
+    },
+    "methods": {
+      "items": {
+        "$ref": "#/$defs/PaymentMethodEntry"
+      },
+      "title": "Methods",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "title": "PaymentMethodCatalog",
+  "type": "object"
 }

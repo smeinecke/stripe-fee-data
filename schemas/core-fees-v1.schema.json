@@ -1,27 +1,500 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/smeinecke/stripe-fee-data/schemas/core-fees-v1.schema.json",
-  "title": "Stripe core fees",
-  "description": "Consolidated calculation-ready fee rules across all supported Stripe markets.",
-  "type": "object",
-  "required": ["schema_version", "markets"],
-  "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
-    "generated_at": { "type": ["string", "null"] },
-    "markets": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["account_country", "stripe_market_code", "locale", "derivation_status", "rules"],
-        "properties": {
-          "account_country": { "type": "string", "pattern": "^[A-Z]{2}$" },
-          "stripe_market_code": { "type": "string" },
-          "locale": { "type": "string" },
-          "derivation_status": { "type": "string", "enum": ["complete", "partial", "unclassified", "failed"] },
-          "rules": { "type": "array", "items": { "type": "object" } },
-          "unclassified_count": { "type": "integer", "minimum": 0 }
+  "$defs": {
+    "CoreFeeEntry": {
+      "description": "A single market's confidently derived core fees.",
+      "properties": {
+        "account_country": {
+          "title": "Account Country",
+          "type": "string"
+        },
+        "derivation_status": {
+          "title": "Derivation Status",
+          "type": "string"
+        },
+        "locale": {
+          "title": "Locale",
+          "type": "string"
+        },
+        "rules": {
+          "items": {
+            "$ref": "#/$defs/FeeRule"
+          },
+          "title": "Rules",
+          "type": "array"
+        },
+        "stripe_market_code": {
+          "title": "Stripe Market Code",
+          "type": "string"
+        },
+        "unclassified_count": {
+          "default": 0,
+          "title": "Unclassified Count",
+          "type": "integer"
         }
-      }
+      },
+      "required": [
+        "account_country",
+        "stripe_market_code",
+        "locale",
+        "derivation_status"
+      ],
+      "title": "CoreFeeEntry",
+      "type": "object"
+    },
+    "FeeCondition": {
+      "description": "A single applicability condition for a fee rule.",
+      "properties": {
+        "dimension": {
+          "title": "Dimension",
+          "type": "string"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence"
+        },
+        "operator": {
+          "default": "eq",
+          "title": "Operator",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value"
+        }
+      },
+      "required": [
+        "dimension",
+        "value"
+      ],
+      "title": "FeeCondition",
+      "type": "object"
+    },
+    "FeeRule": {
+      "description": "A derived calculation-ready fee rule.\n\nMoney amounts are represented as exact decimal strings in major units\ntogether with a currency code. Percentage rates are represented as exact\ndecimal strings and as basis points for unambiguous computation.",
+      "properties": {
+        "account_country": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Account Country"
+        },
+        "additional_fees": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Additional Fees",
+          "type": "array"
+        },
+        "basis_points": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Basis Points"
+        },
+        "behavior": {
+          "default": "additive",
+          "title": "Behavior",
+          "type": "string"
+        },
+        "billing_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Billing Type"
+        },
+        "card_origin": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Card Origin"
+        },
+        "card_region": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Card Region"
+        },
+        "card_tier": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Card Tier"
+        },
+        "channel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel"
+        },
+        "classification_evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Classification Evidence",
+          "type": "array"
+        },
+        "classification_status": {
+          "default": "unclassified",
+          "title": "Classification Status",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "$ref": "#/$defs/FeeCondition"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "confidence": {
+          "default": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "currency_conversion_required": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Currency Conversion Required"
+        },
+        "customer_country": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Customer Country"
+        },
+        "dispute_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dispute State"
+        },
+        "entry_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Entry Id"
+        },
+        "exactness": {
+          "default": "exact",
+          "title": "Exactness",
+          "type": "string"
+        },
+        "fixed_amount": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fixed Amount"
+        },
+        "fixed_amount_minor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fixed Amount Minor"
+        },
+        "fixed_currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fixed Currency"
+        },
+        "maximum_amount": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Amount"
+        },
+        "minimum_amount": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum Amount"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "payment_method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payment Method"
+        },
+        "payout_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payout Type"
+        },
+        "percentage": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Percentage"
+        },
+        "presentment_currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Presentment Currency"
+        },
+        "provider": {
+          "default": "stripe",
+          "title": "Provider",
+          "type": "string"
+        },
+        "recurring": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recurring"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "settlement_currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Settlement Currency"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "transaction_amount_max": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transaction Amount Max"
+        },
+        "transaction_amount_min": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transaction Amount Min"
+        },
+        "unit": {
+          "default": "per_transaction",
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id"
+      ],
+      "title": "FeeRule",
+      "type": "object"
     }
-  }
+  },
+  "$id": "https://github.com/smeinecke/stripe-fee-data/schemas/core-fees-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Consolidated core fees across all markets.",
+  "properties": {
+    "generated_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Generated At"
+    },
+    "markets": {
+      "items": {
+        "$ref": "#/$defs/CoreFeeEntry"
+      },
+      "title": "Markets",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "title": "CoreFees",
+  "type": "object"
 }
