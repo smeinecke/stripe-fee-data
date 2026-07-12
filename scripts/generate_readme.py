@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -28,9 +29,52 @@ def _format_dt(value: str | None) -> str:
         return value
 
 
+def _git_latest_update(data_dir: Path) -> datetime | None:
+    """Return the latest relevant timestamp from git or the current time.
+
+    If the data directory has uncommitted changes, the data is being updated
+    right now, so use the current UTC time. Otherwise, fall back to the last
+    commit that touched the json/ or meta/ directories.
+    """
+    try:
+        status = subprocess.run(
+            ["git", "status", "--porcelain", "--", "json/", "meta/"],
+            cwd=data_dir,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return None
+
+    if status.stdout.strip():
+        return datetime.now(timezone.utc)
+
+    try:
+        log = subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "--", "json/", "meta/"],
+            cwd=data_dir,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return None
+
+    commit_date = log.stdout.strip()
+    if not commit_date:
+        return None
+
+    try:
+        return datetime.fromisoformat(commit_date.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
 def _derive_stats(data_dir: Path) -> dict:
     index = _load_json(data_dir / "json" / "index.json")
     core_fees = _load_json(data_dir / "json" / "core-fees.json")
+    payment_methods_catalog = _load_json(data_dir / "json" / "payment-methods.json")
     markets_meta = _load_json(data_dir / "meta" / "markets.json")
     unsupported = _load_json(data_dir / "meta" / "unsupported-markets.json")
     transient_failures = _load_json(data_dir / "meta" / "transient-failures.json")
@@ -43,13 +87,15 @@ def _derive_stats(data_dir: Path) -> dict:
         status_counts[status] = status_counts.get(status, 0) + 1
 
     total_rules = 0
-    payment_methods: set[str] = set()
     for market in core_fees.get("markets", []):
         for rule in market.get("rules", []):
             total_rules += 1
-            pm = rule.get("payment_method")
-            if pm:
-                payment_methods.add(pm)
+
+    payment_methods: set[str] = set()
+    for method in payment_methods_catalog.get("methods", []):
+        method_id = method.get("method_id")
+        if method_id:
+            payment_methods.add(method_id)
 
     regions: set[str] = set()
     for market in markets_meta.get("markets", []):
@@ -68,12 +114,20 @@ def _derive_stats(data_dir: Path) -> dict:
             except Exception:
                 pass
 
-    generated_at = index.get("generated_at") or core_fees.get("generated_at")
+    generated_at = (
+        index.get("generated_at")
+        or core_fees.get("generated_at")
+        or payment_methods_catalog.get("generated_at")
+        or markets_meta.get("generated_at")
+    )
     if generated_at and latest_update is None:
         try:
             latest_update = datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
         except Exception:
             pass
+
+    if latest_update is None:
+        latest_update = _git_latest_update(data_dir)
 
     return {
         "total_markets": total_markets,
