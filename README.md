@@ -16,7 +16,7 @@ This repository publishes structured, schema-validated, and deterministic JSON d
 | Regions | 5 (asia_pacific, europe, middle_east_africa, north_america, south_america) |
 | Unsupported markets | 0 |
 | Transient failures | 0 |
-| Last crawled | 2026-07-13 08:57 UTC |
+| Last crawled | 2026-07-14 07:52 UTC |
 <!-- STATS_END -->
 
 ## Structure

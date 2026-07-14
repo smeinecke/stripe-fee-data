@@ -3849,6 +3849,43 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "entry_id": "ad0ae73fef80daea",
+      "fee_category": "Explore the docs",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Explore the docs",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Explore the docs"
+      ],
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nBrazil (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_order": 104,
+      "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "range",
+          "kind": "qualifier",
+          "note": null,
+          "operator": "per",
+          "percentage": null,
+          "raw": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
       "entry_id": "a41423be213aa04d",
       "fee_category": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards",
       "footnotes": [],
@@ -4116,7 +4153,7 @@
       "source_order": 9
     },
     {
-      "body": "Product roadmap\nSee what’s ahead\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCommunity\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nJobs\nNewsroom\nStripe Press\nContact\nBecome a partner",
+      "body": "Product roadmap\nSee what’s ahead\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCommunity\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nJobs\nNewsroom\nStripe Press\nContact\nBecome a partner",
       "heading": "More",
       "level": 1,
       "links": [],
@@ -5215,7 +5252,7 @@
       "source_order": 103
     },
     {
-      "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe’s Meters API as part of Billing pricing.\nStripe logo\nBrazil (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nBrazil (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
       "heading": "Explore the docs",
       "level": 1,
       "links": [],
@@ -5259,7 +5296,7 @@
       "source_order": 107
     },
     {
-      "body": "Documentation\nAPI reference\nAPI status\nAPI changelog\nLibraries and SDKs\nDeveloper blog",
+      "body": "Documentation\nAPI reference\nAPI status\nAPI changelog\nLibraries and SDKs\nStripe Projects\nDeveloper blog",
       "heading": "Developers",
       "level": 1,
       "links": [],
@@ -5361,9 +5398,9 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "1c45d35e6255be21fc152204beb183ae3322987b4017925aad3f795298b94bc9",
+      "content_sha256": "98ac8e907d53fe9932570edc06f471812cdcd165aee72da35a0aa7e77757181f",
       "etag": null,
-      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexibl",
+      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payments Payments Online payments Payment links No-code payments Chec",
       "last_modified": null,
       "page_id": "pricing",
       "page_title": "Pricing & Fees",
@@ -5373,9 +5410,9 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "1f449441048a07c0f55f86f388aa4e6f2cc764f2a1d73d07396e823b6c1a896b",
+      "content_sha256": "cf26e75cf35d912d9b6d3c7f23ef48ae62d5cde8239aef7c5ded8a510a1c0d37",
       "etag": null,
-      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Local payment methods pricing Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs E",
+      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Local payment methods pricing Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payments Payments Online payments Payment links No-cod",
       "last_modified": null,
       "page_id": "local_payment_methods",
       "page_title": "Local payment methods pricing",
@@ -6565,6 +6602,45 @@
           "operator": "for",
           "percentage": null,
           "raw": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear numeric fee or unrecognized category"
+      ],
+      "classification_status": "non_calculable",
+      "confidence": 0.0,
+      "entry_id": "ad0ae73fef80daea",
+      "fee_category": "Explore the docs",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Explore the docs",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Explore the docs"
+      ],
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nBrazil (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_order": 104,
+      "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "range",
+          "kind": "qualifier",
+          "note": null,
+          "operator": "per",
+          "percentage": null,
+          "raw": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
           "token_id": null,
           "value": null
         }
