@@ -1507,6 +1507,50 @@
         "behavior=informational"
       ],
       "classification_status": "non_calculable",
+      "conditions": [],
+      "confidence": 0.0,
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "aa01b1e122c52e78",
+      "exactness": "included",
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "other",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "48ca9d7529a156de",
+      "settlement_currency": null,
+      "source_text": "Included",
+      "source_url": "https://stripe.com/ae/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational"
+    },
+    {
+      "account_country": null,
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "informational",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [
+        "matched other pattern",
+        "channel=unknown",
+        "unit=unknown",
+        "behavior=informational"
+      ],
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "recurring",
@@ -3483,7 +3527,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nAED0.066\nper additional step",
-      "source_order": 73,
+      "source_order": 76,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3520,7 +3564,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nAED0.066\nper additional step",
-      "source_order": 74,
+      "source_order": 77,
       "source_text": "AED0.066",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3557,6 +3601,80 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "entry_id": "aa01b1e122c52e78",
+      "fee_category": "Startup",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Startup",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Startup"
+      ],
+      "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\n$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
+      "source_order": 56,
+      "source_text": "Included",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "included",
+          "kind": "qualifier",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "Included",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "entry_id": "50858d679bf82c81",
+      "fee_category": "Startup",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Startup",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Startup"
+      ],
+      "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\n$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
+      "source_order": 57,
+      "source_text": "$100,000.00",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": "100000.00",
+          "basis_points": null,
+          "currency": "USD",
+          "exactness": null,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "100,000.00",
+          "token_id": "f7a5947989e23ae3",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
       "entry_id": "1d455270a160d3ff",
       "fee_category": "Starter",
       "footnotes": [],
@@ -3570,7 +3688,7 @@
         "Starter"
       ],
       "source_evidence": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
-      "source_order": 56,
+      "source_order": 59,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3607,7 +3725,7 @@
         "Tax Complete"
       ],
       "source_evidence": "All-in-one tax compliance —including automated threshold monitoring, registrations, calculations, and filings.\nStarting at\nAED330.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
-      "source_order": 58,
+      "source_order": 61,
       "source_text": "AED330.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3657,7 +3775,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 59,
+      "source_order": 62,
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3694,7 +3812,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 60,
+      "source_order": 63,
       "source_text": "AED2.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3744,7 +3862,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 61,
+      "source_order": 64,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3794,7 +3912,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Flexible monthly subscription–cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nAED90.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 67,
+      "source_order": 70,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3831,7 +3949,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Flexible monthly subscription–cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nAED90.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 68,
+      "source_order": 71,
       "source_text": "AED90.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3881,7 +3999,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximize savings.\nTry for free for 30 days\nStarting at\nAED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 68,
+      "source_order": 71,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3918,7 +4036,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximize savings.\nTry for free for 30 days\nStarting at\nAED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 69,
+      "source_order": 72,
       "source_text": "AED700.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -3968,7 +4086,7 @@
         "Atlas"
       ],
       "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
-      "source_order": 70,
+      "source_order": 73,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4005,7 +4123,7 @@
         "Incorporate your company"
       ],
       "source_evidence": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nOne-time\n$500.00\none-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 71,
+      "source_order": 74,
       "source_text": "$500.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4042,7 +4160,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 83,
+      "source_order": 86,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4079,7 +4197,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": null,
-      "source_order": 86,
+      "source_order": 89,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4116,7 +4234,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 94,
+      "source_order": 97,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4153,7 +4271,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 96,
+      "source_order": 99,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4190,7 +4308,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 97,
+      "source_order": 100,
       "source_text": "+1%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4227,7 +4345,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 102,
+      "source_order": 105,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4264,7 +4382,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 110,
+      "source_order": 113,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4301,7 +4419,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 111,
+      "source_order": 114,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4503,7 +4621,7 @@
       "source_order": 13
     },
     {
-      "body": "Design a custom package— available for businesses with large payments volume or unique business models.\nIC+ pricing\nVolume discounts\nMulti-product discounts\nCountry-specific rates\nStandard pricing\nCustom pricing\nFAQs",
+      "body": "For companies scaling revenue or transforming pricing. Tailored pricing for your needs.\nCustom pricing\nContact Metronome",
       "heading": "Custom",
       "level": 1,
       "links": [],
@@ -4511,7 +4629,7 @@
       "section_path": [
         "Custom"
       ],
-      "source_order": 14
+      "source_order": 57
     },
     {
       "body": null,
@@ -4625,7 +4743,7 @@
       "source_order": 24
     },
     {
-      "body": "Online and in-person payments, recurring billing, embedded payments, and much more.\nGlobal payments\nPayments\nPayment Links\nCheckout\nRadar\nMoney management\nConnect\nRevenue and finance automation\nBilling\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nAtlas\nWorkflows\nCustom pricing",
+      "body": "Online and in-person payments, recurring billing, embedded payments, and much more.\nGlobal payments\nPayments\nPayment Links\nCheckout\nRadar\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nAtlas\nWorkflows\nCustom pricing",
       "heading": "Explore pricing for the full Stripe platform",
       "level": 1,
       "links": [],
@@ -4952,7 +5070,40 @@
       "section_path": [
         "Pay as you go"
       ],
-      "source_order": 73
+      "source_order": 76
+    },
+    {
+      "body": "Real-time metering, pricing, and analytics for usage-based billing.\nSign up with Metronome\nLaunch quickly with any usage-based or hybrid pricing models.\nIterate on pricing without engineering overhead.\nGain real-time visibility into usage and revenue.\nChoose a plan",
+      "heading": "Metronome",
+      "level": 1,
+      "links": [],
+      "section_id": "9e03f56799b94a3c",
+      "section_path": [
+        "Metronome"
+      ],
+      "source_order": 55
+    },
+    {
+      "body": "For teams launching usage-based products. Pay as your business grows.\nIncluded\n$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
+      "heading": "Startup",
+      "level": 1,
+      "links": [],
+      "section_id": "8e7e3ff9c84fb08d",
+      "section_path": [
+        "Startup"
+      ],
+      "source_order": 56
+    },
+    {
+      "body": null,
+      "heading": "Custom",
+      "level": 1,
+      "links": [],
+      "section_id": "6cdfd271da635d49",
+      "section_path": [
+        "Custom"
+      ],
+      "source_order": 57
     },
     {
       "body": "Global invoicing software.\nCreate, customize, and send an invoice in minutes—no code required.\nSave time with automated accounts receivable and invoicing workflows.\nConfigure invoices for any use case.",
@@ -4963,7 +5114,7 @@
       "section_path": [
         "Invoicing"
       ],
-      "source_order": 55
+      "source_order": 58
     },
     {
       "body": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
@@ -4974,7 +5125,7 @@
       "section_path": [
         "Starter"
       ],
-      "source_order": 56
+      "source_order": 59
     },
     {
       "body": "Grow faster with global, all-in-one tax compliance.\nGet compliant quickly with no-code and low-code setups.\nReceive alerts when you reach a sales tax, VAT, or GST threshold and need to collect taxes.\nScale with confidence by automating tax calculations and collections in 100+ countries.\nIncrease your finance team’s efficiency by easily registering and filing taxes in 90+ countries.\nChoose a plan",
@@ -4985,7 +5136,7 @@
       "section_path": [
         "Tax"
       ],
-      "source_order": 57
+      "source_order": 60
     },
     {
       "body": "All-in-one tax compliance —including automated threshold monitoring, registrations, calculations, and filings.\nStarting at\nAED330.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
@@ -4996,7 +5147,7 @@
       "section_path": [
         "Tax Complete"
       ],
-      "source_order": 58
+      "source_order": 61
     },
     {
       "body": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
@@ -5007,7 +5158,7 @@
       "section_path": [
         "Tax Basic"
       ],
-      "source_order": 59
+      "source_order": 62
     },
     {
       "body": "An interactive SQL environment for analyzing your Stripe data and creating custom reports.\nGet faster, more comprehensive insights using SQL or AI-powered natural language prompts.\nMake confident, data-driven decisions with fully customizable reporting.\nKeep teams in sync and save time with scheduled reports.",
@@ -5018,7 +5169,7 @@
       "section_path": [
         "Stripe Sigma"
       ],
-      "source_order": 60
+      "source_order": 63
     },
     {
       "body": "Flexible monthly subscription–cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nAED90.00\nper month\nSubscription and cancellation\nterms apply.",
@@ -5029,7 +5180,7 @@
       "section_path": [
         "Monthly subscription"
       ],
-      "source_order": 67
+      "source_order": 70
     },
     {
       "body": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximize savings.\nTry for free for 30 days\nStarting at\nAED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
@@ -5040,7 +5191,7 @@
       "section_path": [
         "Annual subscription"
       ],
-      "source_order": 68
+      "source_order": 71
     },
     {
       "body": "Send Stripe data and reports directly to your data warehouse or cloud storage.\nIncludes access to Stripe Sigma.\nSet up your pipeline in minutes, and automate data delivery—no code required.\nSpeed up your financial close, and access more complete business insights.\nGet insights faster and fully customizable reporting with Stripe Sigma.",
@@ -5050,39 +5201,6 @@
       "section_id": "a09f293d40ec3f89",
       "section_path": [
         "Data Pipeline"
-      ],
-      "source_order": 63
-    },
-    {
-      "body": null,
-      "heading": "Monthly subscription",
-      "level": 1,
-      "links": [],
-      "section_id": "a63d71ea48a69048",
-      "section_path": [
-        "Monthly subscription"
-      ],
-      "source_order": 64
-    },
-    {
-      "body": null,
-      "heading": "Annual subscription",
-      "level": 1,
-      "links": [],
-      "section_id": "f6bb0a5a9c368c8e",
-      "section_path": [
-        "Annual subscription"
-      ],
-      "source_order": 65
-    },
-    {
-      "body": "Automated revenue reporting to streamline accrual accounting.\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.\nChoose a plan",
-      "heading": "Revenue Recognition",
-      "level": 1,
-      "links": [],
-      "section_id": "9bb446322114bde8",
-      "section_path": [
-        "Revenue Recognition"
       ],
       "source_order": 66
     },
@@ -5109,6 +5227,39 @@
       "source_order": 68
     },
     {
+      "body": "Automated revenue reporting to streamline accrual accounting.\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.\nChoose a plan",
+      "heading": "Revenue Recognition",
+      "level": 1,
+      "links": [],
+      "section_id": "9bb446322114bde8",
+      "section_path": [
+        "Revenue Recognition"
+      ],
+      "source_order": 69
+    },
+    {
+      "body": null,
+      "heading": "Monthly subscription",
+      "level": 1,
+      "links": [],
+      "section_id": "a63d71ea48a69048",
+      "section_path": [
+        "Monthly subscription"
+      ],
+      "source_order": 70
+    },
+    {
+      "body": null,
+      "heading": "Annual subscription",
+      "level": 1,
+      "links": [],
+      "section_id": "f6bb0a5a9c368c8e",
+      "section_path": [
+        "Annual subscription"
+      ],
+      "source_order": 71
+    },
+    {
       "body": null,
       "heading": "More",
       "level": 1,
@@ -5117,7 +5268,7 @@
       "section_path": [
         "More"
       ],
-      "source_order": 69
+      "source_order": 72
     },
     {
       "body": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
@@ -5128,7 +5279,7 @@
       "section_path": [
         "Atlas"
       ],
-      "source_order": 70
+      "source_order": 73
     },
     {
       "body": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nOne-time\n$500.00\none-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
@@ -5139,7 +5290,7 @@
       "section_path": [
         "Incorporate your company"
       ],
-      "source_order": 71
+      "source_order": 74
     },
     {
       "body": "Automate tasks and create custom flows, without writing code.\nAutomate business processes with 600+ event triggers.\nEliminate boilerplate code with visual workflow builder.\nExtend Stripe capabilities by connecting third-party applications.\nMonitor and debug with built-in logging and versioning.",
@@ -5150,7 +5301,7 @@
       "section_path": [
         "Workflows"
       ],
-      "source_order": 72
+      "source_order": 75
     },
     {
       "body": null,
@@ -5161,10 +5312,10 @@
       "section_path": [
         "Pay as you go"
       ],
-      "source_order": 73
+      "source_order": 76
     },
     {
-      "body": "Global payments\nMoney management\nRevenue and finance automation\nMore\nGlobal payments\nPayments\nPayment Links\nCheckout\nRadar\nMoney management\nConnect\nRevenue and finance automation\nBilling\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nAtlas\nWorkflows",
+      "body": "Global payments\nMoney management\nRevenue and finance automation\nMore\nGlobal payments\nPayments\nPayment Links\nCheckout\nRadar\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nAtlas\nWorkflows",
       "heading": "Navigate to:",
       "level": 3,
       "links": [],
@@ -5173,7 +5324,7 @@
         "Pay as you go",
         "Navigate to:"
       ],
-      "source_order": 74
+      "source_order": 77
     },
     {
       "body": null,
@@ -5185,7 +5336,7 @@
         "Pay as you go",
         "Custom pricing"
       ],
-      "source_order": 75
+      "source_order": 78
     },
     {
       "body": "Create tailored solutions to help you expand into new markets, optimize payments performance, automate revenue and finance workflows, monetize financial services, and\nmore.",
@@ -5196,7 +5347,7 @@
       "section_path": [
         "Join leading enterprises on Stripe"
       ],
-      "source_order": 76
+      "source_order": 79
     },
     {
       "body": "Work with our sales team to design a solution that meets your needs:\nPayments\nPayments\nRadar\nRadar\nConnect\nConnect\nInvoicing\nInvoicing\nBilling\nBilling\nand more",
@@ -5207,7 +5358,7 @@
       "section_path": [
         "Build your custom package"
       ],
-      "source_order": 77
+      "source_order": 80
     },
     {
       "body": "Technical account management\nProfessional Services\nCertified implementation partners",
@@ -5218,7 +5369,7 @@
       "section_path": [
         "Get the support you need"
       ],
-      "source_order": 78
+      "source_order": 81
     },
     {
       "body": "IC+ pricing, discounted flat rates, subscriptions, and buy-rates for platforms.",
@@ -5229,7 +5380,7 @@
       "section_path": [
         "Flexible structures"
       ],
-      "source_order": 79
+      "source_order": 82
     },
     {
       "body": "Discounts based on volume tiers, commitments, and product usage.",
@@ -5240,7 +5391,7 @@
       "section_path": [
         "Volume-based discounts"
       ],
-      "source_order": 80
+      "source_order": 83
     },
     {
       "body": "Optional aggregated pricing for all markets, allowing you to go global with ease.",
@@ -5251,7 +5402,7 @@
       "section_path": [
         "Global single rates"
       ],
-      "source_order": 81
+      "source_order": 84
     },
     {
       "body": "Dashboards, tools, and APIs that give you transparency into your costs.",
@@ -5262,7 +5413,7 @@
       "section_path": [
         "Cost transparency"
       ],
-      "source_order": 82
+      "source_order": 85
     },
     {
       "body": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
@@ -5273,7 +5424,7 @@
       "section_path": [
         "Integrating Stripe provides a 326% return on investment"
       ],
-      "source_order": 83
+      "source_order": 86
     },
     {
       "body": null,
@@ -5285,7 +5436,7 @@
         "Integrating Stripe provides a 326% return on investment",
         "Report"
       ],
-      "source_order": 84
+      "source_order": 87
     },
     {
       "body": null,
@@ -5296,7 +5447,7 @@
       "section_path": [
         "The Total Economic Impact™ Of Stripe"
       ],
-      "source_order": 85
+      "source_order": 88
     },
     {
       "body": null,
@@ -5307,7 +5458,7 @@
       "section_path": [
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
-      "source_order": 86
+      "source_order": 89
     },
     {
       "body": "BMW owners using ConnectedDrive Store",
@@ -5318,7 +5469,7 @@
       "section_path": [
         "Millions"
       ],
-      "source_order": 87
+      "source_order": 90
     },
     {
       "body": "US dealerships",
@@ -5329,7 +5480,7 @@
       "section_path": [
         "350+"
       ],
-      "source_order": 88
+      "source_order": 91
     },
     {
       "body": "Payments\nPayments\nStripe Sigma\nStripe Sigma\nBMW logo\nRead story",
@@ -5340,7 +5491,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 98
+      "source_order": 101
     },
     {
       "body": "Amazon businesses on Stripe including Prime, Audible, and Amazon Pay.",
@@ -5351,7 +5502,7 @@
       "section_path": [
         "5+"
       ],
-      "source_order": 90
+      "source_order": 93
     },
     {
       "body": "Payment methods available on Stripe",
@@ -5361,39 +5512,6 @@
       "section_id": "b7442fa74ead3c39",
       "section_path": [
         "50+"
-      ],
-      "source_order": 91
-    },
-    {
-      "body": null,
-      "heading": "Products used",
-      "level": 1,
-      "links": [],
-      "section_id": "bc4607c7d782d110",
-      "section_path": [
-        "Products used"
-      ],
-      "source_order": 92
-    },
-    {
-      "body": "Countries in logistics network",
-      "heading": "130",
-      "level": 1,
-      "links": [],
-      "section_id": "38d66d9692ac5900",
-      "section_path": [
-        "130"
-      ],
-      "source_order": 93
-    },
-    {
-      "body": "Worth of goods moved around the world each year",
-      "heading": "$10B+",
-      "level": 1,
-      "links": [],
-      "section_id": "48b4b1eea3791a7e",
-      "section_path": [
-        "$10B+"
       ],
       "source_order": 94
     },
@@ -5409,24 +5527,24 @@
       "source_order": 95
     },
     {
-      "body": "Uplift from Stripe's Global Payments Infrastructure",
-      "heading": "+5.5%",
+      "body": "Countries in logistics network",
+      "heading": "130",
       "level": 1,
       "links": [],
-      "section_id": "79b82733c2129c1c",
+      "section_id": "38d66d9692ac5900",
       "section_path": [
-        "+5.5%"
+        "130"
       ],
       "source_order": 96
     },
     {
-      "body": "Uplift from Adaptive Acceptance",
-      "heading": "+1%",
+      "body": "Worth of goods moved around the world each year",
+      "heading": "$10B+",
       "level": 1,
       "links": [],
-      "section_id": "9658e64e58132bff",
+      "section_id": "48b4b1eea3791a7e",
       "section_path": [
-        "+1%"
+        "$10B+"
       ],
       "source_order": 97
     },
@@ -5442,6 +5560,39 @@
       "source_order": 98
     },
     {
+      "body": "Uplift from Stripe's Global Payments Infrastructure",
+      "heading": "+5.5%",
+      "level": 1,
+      "links": [],
+      "section_id": "79b82733c2129c1c",
+      "section_path": [
+        "+5.5%"
+      ],
+      "source_order": 99
+    },
+    {
+      "body": "Uplift from Adaptive Acceptance",
+      "heading": "+1%",
+      "level": 1,
+      "links": [],
+      "section_id": "9658e64e58132bff",
+      "section_path": [
+        "+1%"
+      ],
+      "source_order": 100
+    },
+    {
+      "body": null,
+      "heading": "Products used",
+      "level": 1,
+      "links": [],
+      "section_id": "bc4607c7d782d110",
+      "section_path": [
+        "Products used"
+      ],
+      "source_order": 101
+    },
+    {
       "body": "Amazon logo\nRead story",
       "heading": "Learn why BMW chose Stripe to power ecommerce and payments",
       "level": 1,
@@ -5450,7 +5601,7 @@
       "section_path": [
         "Learn why BMW chose Stripe to power ecommerce and payments"
       ],
-      "source_order": 99
+      "source_order": 102
     },
     {
       "body": "Maersk logo\nRead story",
@@ -5461,7 +5612,7 @@
       "section_path": [
         "See how Amazon simplified cross-border payments with Stripe"
       ],
-      "source_order": 100
+      "source_order": 103
     },
     {
       "body": "Twilio logo\nRead story",
@@ -5472,7 +5623,7 @@
       "section_path": [
         "See how Maersk tapped into new technology to make it easier to ship around the world"
       ],
-      "source_order": 101
+      "source_order": 104
     },
     {
       "body": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
@@ -5483,7 +5634,7 @@
       "section_path": [
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
-      "source_order": 102
+      "source_order": 105
     },
     {
       "body": null,
@@ -5494,7 +5645,7 @@
       "section_path": [
         "FAQs"
       ],
-      "source_order": 103
+      "source_order": 106
     },
     {
       "body": "Stripe charges a per-transaction fee depending on the payment method used by the end customer.\nMore details on fees by payment method.",
@@ -5506,7 +5657,7 @@
         "FAQs",
         "How are payment fees calculated?"
       ],
-      "source_order": 104
+      "source_order": 107
     },
     {
       "body": "Stripe is required to charge tax on certain products and services. Tax is charged based on your location and/ or your business/tax status, which determines whether a product or service is subject to taxes, and the applicable tax rates.\nRead more",
@@ -5518,7 +5669,7 @@
         "FAQs",
         "Will I be charged tax?"
       ],
-      "source_order": 105
+      "source_order": 108
     },
     {
       "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used.For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
@@ -5530,7 +5681,7 @@
         "FAQs",
         "Are there additional fees for refunds?"
       ],
-      "source_order": 106
+      "source_order": 109
     },
     {
       "body": "Stripe does not charge setup fees, monthly fees, or any other hidden fees like closure fees. All fees for businesses on standard pricing are listed on our website.",
@@ -5542,7 +5693,7 @@
         "FAQs",
         "Do you have setup fees or monthly fees?"
       ],
-      "source_order": 107
+      "source_order": 110
     },
     {
       "body": "Stripe offers custom pricing for businesses with large processing volumes. Eligibility varies by market.",
@@ -5554,7 +5705,7 @@
         "FAQs",
         "Do you offer any discounts?"
       ],
-      "source_order": 108
+      "source_order": 111
     },
     {
       "body": "Access a complete payments platform with simple, pay-as-you-go pricing, or contact us to design a custom package specifically for your business.",
@@ -5565,7 +5716,7 @@
       "section_path": [
         "Ready to get started? Get in touch or create an account."
       ],
-      "source_order": 109
+      "source_order": 112
     },
     {
       "body": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
@@ -5576,7 +5727,7 @@
       "section_path": [
         "See our customers"
       ],
-      "source_order": 110
+      "source_order": 113
     },
     {
       "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
@@ -5587,7 +5738,7 @@
       "section_path": [
         "Explore the docs"
       ],
-      "source_order": 111
+      "source_order": 114
     },
     {
       "body": "Pricing\nAtlas\nAuthorization Boost\nBilling\nCapital\nCheckout\nClimate\nConnect\nCrypto\nData Pipeline\nElements\nFinancial Connections\nIdentity\nInvoicing\nIssuing\nLink\nManaged Payments\nPayment links\nPayments\nPayouts\nRadar\nRevenue Recognition\nStripe Sigma\nTax\nTerminal\nTreasury",
@@ -5598,7 +5749,7 @@
       "section_path": [
         "Products & pricing"
       ],
-      "source_order": 112
+      "source_order": 115
     },
     {
       "body": "Enterprises\nStartups\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail",
@@ -5609,7 +5760,7 @@
       "section_path": [
         "Solutions"
       ],
-      "source_order": 113
+      "source_order": 116
     },
     {
       "body": "Stripe App Marketplace\nStripe Partner ecosystem\nProfessional services",
@@ -5620,7 +5771,7 @@
       "section_path": [
         "Integrations & custom solutions"
       ],
-      "source_order": 114
+      "source_order": 117
     },
     {
       "body": "Documentation\nAPI reference\nAPI status\nAPI changelog\nLibraries and SDKs\nStripe Projects\nDeveloper blog",
@@ -5631,7 +5782,7 @@
       "section_path": [
         "Developers"
       ],
-      "source_order": 115
+      "source_order": 118
     },
     {
       "body": "Guides\nCustomer stories\nBlog\nCommunity\nSessions annual conference\nPrivacy & terms\nProhibited & restricted businesses\nLicenses\nSitemap\nCookie settings\nMore resources",
@@ -5642,7 +5793,7 @@
       "section_path": [
         "Resources"
       ],
-      "source_order": 116
+      "source_order": 119
     },
     {
       "body": "Product roadmap\nJobs\nNewsroom\nStripe Press",
@@ -5653,7 +5804,7 @@
       "section_path": [
         "Company"
       ],
-      "source_order": 117
+      "source_order": 120
     },
     {
       "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
@@ -5664,13 +5815,13 @@
       "section_path": [
         "Support"
       ],
-      "source_order": 118
+      "source_order": 121
     }
   ],
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "f960f47e3fec9b6cbe31dca2386a5f078f01285fbe777863c48f95870a304e53",
+      "content_sha256": "38e5dc43d3a07f9290550ce75f4485082afeb3330a4754e6f4440f0f4da08abb",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payme",
       "last_modified": null,
@@ -6367,7 +6518,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nAED0.066\nper additional step",
-      "source_order": 74,
+      "source_order": 77,
       "source_text": "AED0.066",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6406,6 +6557,45 @@
       ],
       "classification_status": "non_calculable",
       "confidence": 0.0,
+      "entry_id": "50858d679bf82c81",
+      "fee_category": "Startup",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Startup",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Startup"
+      ],
+      "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\n$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
+      "source_order": 57,
+      "source_text": "$100,000.00",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": "100000.00",
+          "basis_points": null,
+          "currency": "USD",
+          "exactness": null,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "100,000.00",
+          "token_id": "f7a5947989e23ae3",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear numeric fee or unrecognized category"
+      ],
+      "classification_status": "non_calculable",
+      "confidence": 0.0,
       "entry_id": "1d455270a160d3ff",
       "fee_category": "Starter",
       "footnotes": [],
@@ -6419,7 +6609,7 @@
         "Starter"
       ],
       "source_evidence": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
-      "source_order": 56,
+      "source_order": 59,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6458,7 +6648,7 @@
         "Tax Complete"
       ],
       "source_evidence": "All-in-one tax compliance —including automated threshold monitoring, registrations, calculations, and filings.\nStarting at\nAED330.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
-      "source_order": 58,
+      "source_order": 61,
       "source_text": "AED330.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6510,7 +6700,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 59,
+      "source_order": 62,
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6549,7 +6739,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 60,
+      "source_order": 63,
       "source_text": "AED2.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6601,7 +6791,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 61,
+      "source_order": 64,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6653,7 +6843,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Flexible monthly subscription–cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nAED90.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 68,
+      "source_order": 71,
       "source_text": "AED90.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6705,7 +6895,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximize savings.\nTry for free for 30 days\nStarting at\nAED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 68,
+      "source_order": 71,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6744,7 +6934,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximize savings.\nTry for free for 30 days\nStarting at\nAED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 69,
+      "source_order": 72,
       "source_text": "AED700.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6796,7 +6986,7 @@
         "Atlas"
       ],
       "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
-      "source_order": 70,
+      "source_order": 73,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6835,7 +7025,7 @@
         "Incorporate your company"
       ],
       "source_evidence": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nOne-time\n$500.00\none-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 71,
+      "source_order": 74,
       "source_text": "$500.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6874,7 +7064,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 83,
+      "source_order": 86,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6913,7 +7103,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": null,
-      "source_order": 86,
+      "source_order": 89,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6952,7 +7142,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 94,
+      "source_order": 97,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6991,7 +7181,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 96,
+      "source_order": 99,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7030,7 +7220,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 97,
+      "source_order": 100,
       "source_text": "+1%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7069,7 +7259,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 102,
+      "source_order": 105,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7108,7 +7298,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 110,
+      "source_order": 113,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7147,7 +7337,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 111,
+      "source_order": 114,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
