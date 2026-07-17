@@ -2,16 +2,19 @@
   "calculator_coverage_status": "partial",
   "coverage_summary": {
     "ambiguous_entries": 0,
-    "calculable_rules": 105,
-    "conflicting_rule_identities": 0,
-    "custom_pricing": 3,
+    "calculable_rules": 93,
+    "conflicting_rule_identities": 33,
+    "custom_pricing": 4,
+    "dropped_numeric_entries": 0,
     "ignored_non_fee": 0,
     "included": 0,
-    "non_calculable_rules": 29,
-    "numeric_fee_candidates": 14,
+    "non_calculable_rules": 27,
+    "numeric_fee_candidates": 17,
+    "numeric_source_entries": 208,
     "reference_only": 0,
+    "referenced_numeric_entries": 208,
     "source_entries": 236,
-    "unclassified_fee_candidates": 17,
+    "unclassified_fee_candidates": 5,
     "unsupported_fee_shapes": 0
   },
   "derivation_status": "partial",
@@ -31,9 +34,10 @@
         "variant=online_domestic_cards",
         "payment_method=card",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -113,7 +117,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "20a7658af9632dd3",
+      "rule_id": "42da764897b7e767",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -126,6 +130,122 @@
         "1.5% + €0.25 for"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_domestic_cards"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "310.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_domestic_cards",
+        "payment_method=card",
+        "channel=online",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "a674e295f58b2b4e"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "a674e295f58b2b4e",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "25",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "a674e295f58b2b4e",
+          "source_text": "South Korean payment methods 3.1% + €0.25",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "310.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "a674e295f58b2b4e",
+          "source_text": "South Korean payment methods 3.1% + €0.25",
+          "type": "percentage",
+          "value": "3.1"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "South Korean payment methods 3.1% + €0.25"
+        ],
+        "source_entry_ids": [
+          "a674e295f58b2b4e"
+        ],
+        "type": "insufficient"
+      },
+      "fixed_amount": "0.25",
+      "fixed_amount_minor": "25",
+      "fixed_currency": "EUR",
+      "label": "South Korean payment methods 3.1% + €0.25",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "payments",
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": "3.1",
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "a7f917e805062ba1",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "a674e295f58b2b4e",
+          "text": "South Korean payment methods 3.1% + €0.25"
+        }
+      ],
+      "source_text": "South Korean payment methods 3.1% + €0.25",
+      "source_texts": [
+        "South Korean payment methods 3.1% + €0.25"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
@@ -249,7 +369,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "e509509bece4722f",
+      "rule_id": "89ae50007e449af2",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -278,103 +398,7 @@
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
-        "product=unspecified",
-        "variant=standard",
-        "channel=online",
-        "account_country=DE"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "DE"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "b21dd9d9fee342ee"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "b21dd9d9fee342ee",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "9999.900",
-          "currency": null,
-          "minor_amount": null,
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "b21dd9d9fee342ee",
-          "source_text": "99.999% average historical uptime",
-          "type": "percentage",
-          "value": "99.999"
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.0,
-        "phrases": [
-          "99.999% average historical uptime"
-        ],
-        "source_entry_ids": [
-          "b21dd9d9fee342ee"
-        ],
-        "type": "insufficient"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "99.999% average historical uptime",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "unspecified",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": "99.999",
-      "presentment_currency": null,
-      "product_id": "unspecified",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "58f503d8fc965008",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "b21dd9d9fee342ee",
-          "text": "99.999% average historical uptime"
-        }
-      ],
-      "source_text": "99.999% average historical uptime",
-      "source_texts": [
-        "99.999% average historical uptime"
-      ],
-      "source_url": "https://stripe.com/en-de/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "DE",
-      "additional_fees": [],
-      "basis_points": "9999.900",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=unspecified",
+        "product=platform",
         "variant=standard",
         "channel=online",
         "account_country=DE",
@@ -440,15 +464,15 @@
       "label": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "unspecified",
+      "name": "platform",
       "payment_method": null,
       "payout_type": null,
       "percentage": "99.999",
       "presentment_currency": null,
-      "product_id": "unspecified",
+      "product_id": "platform",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8ee3b7428e692090",
+      "rule_id": "6b53f84c9d086696",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -469,7 +493,7 @@
     {
       "account_country": "DE",
       "additional_fees": [],
-      "basis_points": "20.0",
+      "basis_points": "150.0",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": "domestic",
@@ -483,9 +507,10 @@
         "channel=online",
         "card_region=domestic",
         "card_origin=domestic",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -518,7 +543,385 @@
           "value": "DE"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "c5f41a307c51e024"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "c5f41a307c51e024",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "25",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "c5f41a307c51e024",
+          "source_text": "1.5% + €0.25 for",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "c5f41a307c51e024",
+          "source_text": "1.5% + €0.25 for",
+          "type": "percentage",
+          "value": "1.5"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "1.5% + €0.25 for"
+        ],
+        "source_entry_ids": [
+          "c5f41a307c51e024"
+        ],
+        "type": "insufficient"
+      },
+      "fixed_amount": "0.25",
+      "fixed_amount_minor": "25",
+      "fixed_currency": "EUR",
+      "label": "1.5% + €0.25 for",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "payments",
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": "1.5",
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "897cd1bdd96ce19f",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "c5f41a307c51e024",
+          "text": "1.5% + €0.25 for"
+        }
+      ],
+      "source_text": "1.5% + €0.25 for",
+      "source_texts": [
+        "1.5% + €0.25 for"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_domestic_cards"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "190.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": "domestic",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_domestic_cards",
+        "payment_method=card",
+        "channel=online",
+        "card_region=domestic",
+        "card_origin=domestic",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "212e7223278458c8"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "212e7223278458c8",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "25",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "212e7223278458c8",
+          "source_text": "1.9% + €0.25 for",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "190.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "212e7223278458c8",
+          "source_text": "1.9% + €0.25 for",
+          "type": "percentage",
+          "value": "1.9"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "1.9% + €0.25 for"
+        ],
+        "source_entry_ids": [
+          "212e7223278458c8"
+        ],
+        "type": "insufficient"
+      },
+      "fixed_amount": "0.25",
+      "fixed_amount_minor": "25",
+      "fixed_currency": "EUR",
+      "label": "1.9% + €0.25 for",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "payments",
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": "1.9",
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "9742a0a29cdcb06e",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "212e7223278458c8",
+          "text": "1.9% + €0.25 for"
+        }
+      ],
+      "source_text": "1.9% + €0.25 for",
+      "source_texts": [
+        "1.9% + €0.25 for"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_domestic_cards"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": "domestic",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_domestic_cards",
+        "payment_method=card",
+        "channel=online",
+        "card_region=domestic",
+        "card_origin=domestic",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "71c68d6427879f56"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "71c68d6427879f56",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "500.000",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "50000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "71c68d6427879f56",
+          "source_text": "for the first €500,000 in card transactions",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "for the first €500,000 in card transactions"
+        ],
+        "source_entry_ids": [
+          "71c68d6427879f56"
+        ],
+        "type": "insufficient"
+      },
+      "fixed_amount": "500.000",
+      "fixed_amount_minor": "50000",
+      "fixed_currency": "EUR",
+      "label": "for the first €500,000 in card transactions",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "payments",
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "0ee4701a3760e410",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "71c68d6427879f56",
+          "text": "for the first €500,000 in card transactions"
+        }
+      ],
+      "source_text": "for the first €500,000 in card transactions",
+      "source_texts": [
+        "for the first €500,000 in card transactions"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_domestic_cards"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "20.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": "domestic",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_domestic_cards",
+        "payment_method=card",
+        "channel=online",
+        "card_region=domestic",
+        "card_origin=domestic",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "40fa7635360e8db0"
       ],
@@ -577,7 +980,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "fc5eceafc202e18c",
+      "rule_id": "3877395669b91738",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -598,7 +1001,7 @@
     {
       "account_country": "DE",
       "additional_fees": [],
-      "basis_points": "325.00",
+      "basis_points": "250.0",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": "international",
@@ -612,9 +1015,10 @@
         "channel=online",
         "card_region=international",
         "card_origin=international",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -647,9 +1051,148 @@
           "value": "DE"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
-        "ae1f70f744424d35"
+        "bad4a61d0d8471e3",
+        "8f402aae95cbcf91"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "bad4a61d0d8471e3",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "25",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "bad4a61d0d8471e3",
+          "source_text": "2.5% + €0.25 for UK cards",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "250.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "bad4a61d0d8471e3",
+          "source_text": "2.5% + €0.25 for UK cards",
+          "type": "percentage",
+          "value": "2.5"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "2.5% + €0.25 for UK cards",
+          "International card payments 2.5% + €0.25 for UK cards"
+        ],
+        "source_entry_ids": [
+          "bad4a61d0d8471e3",
+          "8f402aae95cbcf91"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "0.25",
+      "fixed_amount_minor": "25",
+      "fixed_currency": "EUR",
+      "label": "2.5% + €0.25 for UK cards",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "payments",
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": "2.5",
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "3eab2f60a6f10eb2",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "bad4a61d0d8471e3",
+          "text": "2.5% + €0.25 for UK cards"
+        },
+        {
+          "entry_id": "8f402aae95cbcf91",
+          "text": "International card payments 2.5% + €0.25 for UK cards"
+        }
+      ],
+      "source_text": "2.5% + €0.25 for UK cards",
+      "source_texts": [
+        "2.5% + €0.25 for UK cards",
+        "International card payments 2.5% + €0.25 for UK cards"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_international_cards"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "325.00",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "international",
+      "card_region": "international",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_international_cards",
+        "payment_method=card",
+        "channel=online",
+        "card_region=international",
+        "card_origin=international",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "international"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "international"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "ae1f70f744424d35",
+        "d5f3a9b6338029a3"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
@@ -685,10 +1228,12 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "3.25% + €0.25 for international cards"
+          "3.25% + €0.25 for international cards",
+          "International card payments 3.25% + €0.25 for international cards"
         ],
         "source_entry_ids": [
-          "ae1f70f744424d35"
+          "ae1f70f744424d35",
+          "d5f3a9b6338029a3"
         ],
         "type": "explicit_fee_phrase"
       },
@@ -706,17 +1251,22 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c06676cae2757138",
+      "rule_id": "e3da9f973b30b07b",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "ae1f70f744424d35",
           "text": "3.25% + €0.25 for international cards"
+        },
+        {
+          "entry_id": "d5f3a9b6338029a3",
+          "text": "International card payments 3.25% + €0.25 for international cards"
         }
       ],
       "source_text": "3.25% + €0.25 for international cards",
       "source_texts": [
-        "3.25% + €0.25 for international cards"
+        "3.25% + €0.25 for international cards",
+        "International card payments 3.25% + €0.25 for international cards"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -785,7 +1335,9 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "c6df527d302c8a61"
+        "c6df527d302c8a61",
+        "f4b3a2f3f8cdc9fd",
+        "ea33d973c11eb42d"
       ],
       "currency_conversion_required": true,
       "customer_country": null,
@@ -809,10 +1361,13 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "+ 2% if currency conversion is required"
+          "+ 2% if currency conversion is required",
+          "International card payments + 2% if currency conversion is required"
         ],
         "source_entry_ids": [
-          "c6df527d302c8a61"
+          "c6df527d302c8a61",
+          "f4b3a2f3f8cdc9fd",
+          "ea33d973c11eb42d"
         ],
         "type": "explicit_fee_phrase"
       },
@@ -830,17 +1385,22 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "54e943797f575045",
+      "rule_id": "98772b36e8b0a982",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "c6df527d302c8a61",
           "text": "+ 2% if currency conversion is required"
+        },
+        {
+          "entry_id": "ea33d973c11eb42d",
+          "text": "International card payments + 2% if currency conversion is required"
         }
       ],
       "source_text": "+ 2% if currency conversion is required",
       "source_texts": [
-        "+ 2% if currency conversion is required"
+        "+ 2% if currency conversion is required",
+        "International card payments + 2% if currency conversion is required"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -863,9 +1423,10 @@
         "variant=standard",
         "payment_method=link",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -945,7 +1506,7 @@
       "product_id": "link",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "db3b61d42e3adb7b",
+      "rule_id": "18e357ee3c372653",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -956,6 +1517,122 @@
       "source_text": "1.5% + €0.25 for",
       "source_texts": [
         "1.5% + €0.25 for"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "190.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=link",
+        "variant=standard",
+        "payment_method=link",
+        "channel=online",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "link"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "5d2b1a6a902e0545"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "5d2b1a6a902e0545",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "25",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "5d2b1a6a902e0545",
+          "source_text": "1.9% + €0.25 for",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "190.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "5d2b1a6a902e0545",
+          "source_text": "1.9% + €0.25 for",
+          "type": "percentage",
+          "value": "1.9"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "1.9% + €0.25 for"
+        ],
+        "source_entry_ids": [
+          "5d2b1a6a902e0545"
+        ],
+        "type": "insufficient"
+      },
+      "fixed_amount": "0.25",
+      "fixed_amount_minor": "25",
+      "fixed_currency": "EUR",
+      "label": "1.9% + €0.25 for",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "link",
+      "payment_method": "link",
+      "payout_type": null,
+      "percentage": "1.9",
+      "presentment_currency": null,
+      "product_id": "link",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "00edc26fa1b4ac3a",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "5d2b1a6a902e0545",
+          "text": "1.9% + €0.25 for"
+        }
+      ],
+      "source_text": "1.9% + €0.25 for",
+      "source_texts": [
+        "1.9% + €0.25 for"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -1048,7 +1725,7 @@
       "product_id": "sepa_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "03f10ce4c057dea3",
+      "rule_id": "7fa59ba245fb8293",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1170,7 +1847,7 @@
       "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "e4b04db2de28d9d9",
+      "rule_id": "e47e46fdb5fe27e9",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1266,7 +1943,7 @@
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "3e21234b980fd089",
+      "rule_id": "4fef4605810f5d58",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1376,7 +2053,7 @@
       "product_id": "smart_disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "fb365ae364b34ced",
+      "rule_id": "cff9eb61d07c28ff",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1416,7 +2093,8 @@
       ],
       "confidence": 0.7,
       "contributing_entry_ids": [
-        "95221c160b19ba22"
+        "95221c160b19ba22",
+        "5a9c62ba056b0144"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
@@ -1427,10 +2105,12 @@
       "fee_evidence": {
         "confidence": 0.7,
         "phrases": [
-          "Included with Payments"
+          "Included with Payments",
+          "Included"
         ],
         "source_entry_ids": [
-          "95221c160b19ba22"
+          "95221c160b19ba22",
+          "5a9c62ba056b0144"
         ],
         "type": "included"
       },
@@ -1448,12 +2128,13 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "20b55406ce0e53ea",
+      "rule_id": "a4a2639e177bfe48",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included with Payments",
       "source_texts": [
-        "Included with Payments"
+        "Included with Payments",
+        "Included"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -1515,7 +2196,7 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "bbcfb40c201a8fe3",
+      "rule_id": "a66cabb958b10df4",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included",
@@ -1588,7 +2269,7 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "ef11a2e15868eee2",
+      "rule_id": "b8012bec8c6aa463",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
@@ -1679,7 +2360,7 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "320d281ba457b49e",
+      "rule_id": "a6111b61bcf1c740",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1751,7 +2432,7 @@
       "product_id": "authorization_boost",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "0d08b52e33ebde5d",
+      "rule_id": "05523dd74434ccdf",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included",
@@ -1824,7 +2505,7 @@
       "product_id": "authorization_boost",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d7c8503c6ad2691f",
+      "rule_id": "6f81702baa87e3a5",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
@@ -1936,7 +2617,7 @@
       "product_id": "authorization_boost",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "760e680e391c9de0",
+      "rule_id": "d1d4aa99c4dadbb9",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2008,7 +2689,7 @@
       "product_id": "adaptive_pricing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "0126d5e2e1a316c0",
+      "rule_id": "7298978ed81d8172",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included",
@@ -2081,7 +2762,7 @@
       "product_id": "adaptive_pricing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "f8a12de0e02d569e",
+      "rule_id": "a359664b218818af",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
@@ -2179,7 +2860,7 @@
       "product_id": "adaptive_pricing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "824e42beb4f4fd1a",
+      "rule_id": "c4e69f21973ed00e",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2251,7 +2932,7 @@
       "product_id": "instant_payouts",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "34cbb0fde5314684",
+      "rule_id": "b4c199ab4524b56a",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "standard schedule for free.",
@@ -2314,18 +2995,6 @@
       "exactness": "from",
       "fee_components": [
         {
-          "amount": null,
-          "basis_points": "100",
-          "currency": null,
-          "minor_amount": null,
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "a54d65cc58325ed2",
-          "source_text": "1% of Instant Payouts volume",
-          "type": "percentage",
-          "value": "1"
-        },
-        {
           "amount": "0.50",
           "basis_points": null,
           "currency": "EUR",
@@ -2336,6 +3005,18 @@
           "source_text": "Minimum fee of €0.50",
           "type": "minimum_fee",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "100",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "a54d65cc58325ed2",
+          "source_text": "1% of Instant Payouts volume",
+          "type": "percentage",
+          "value": "1"
         }
       ],
       "fee_evidence": {
@@ -2364,7 +3045,7 @@
       "product_id": "instant_payouts",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "e1a43099584a6605",
+      "rule_id": "353a74b6b8fe16af",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2390,8 +3071,8 @@
     {
       "account_country": "DE",
       "additional_fees": [],
-      "basis_points": "100",
-      "behavior": "alternative",
+      "basis_points": null,
+      "behavior": "informational",
       "billing_type": null,
       "card_origin": null,
       "card_region": null,
@@ -2402,7 +3083,7 @@
         "variant=standard",
         "account_country=DE"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "informational",
       "conditions": [
         {
           "dimension": "account_country",
@@ -2413,34 +3094,57 @@
       ],
       "confidence": 0.0,
       "contributing_entry_ids": [
-        "f4b72b556c823fee"
+        "f4b72b556c823fee",
+        "db02113eaecabda2",
+        "4e10280a061b2262",
+        "610db6c0fc600967",
+        "e9a7db9cf3093fbc",
+        "ab05da9d88e11063",
+        "27b344a78d2f4cec",
+        "44d496ecd794a908",
+        "b80d310a2f2d5125",
+        "1183036e931c0d34",
+        "eb2169f8cc3badd0",
+        "fa44b57ad8aac343",
+        "1f4bfe1430751031"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "f4b72b556c823fee",
       "exactness": "from",
-      "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "100",
-          "currency": null,
-          "minor_amount": null,
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "f4b72b556c823fee",
-          "source_text": "1% of pay out volume or a minimum fee.",
-          "type": "percentage",
-          "value": "1"
-        }
-      ],
+      "fee_components": [],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "1% of pay out volume or a minimum fee."
+          "1% of pay out volume or a minimum fee.",
+          "€500.00 per month, 1-year contract",
+          "€0.015 per additional step",
+          "€1.25 per successful instant verification",
+          "€1.25 per successful API call",
+          "€1.25 per verification",
+          "€0.10 per successful API call",
+          "€0.25 per institution per account holder per month",
+          "€0.40 per lookup",
+          "Get over $50K in discounts and perks.",
+          "Buy carbon removal tons from 3% of order value",
+          "$10B+",
+          "+1%"
         ],
         "source_entry_ids": [
-          "f4b72b556c823fee"
+          "f4b72b556c823fee",
+          "db02113eaecabda2",
+          "4e10280a061b2262",
+          "610db6c0fc600967",
+          "e9a7db9cf3093fbc",
+          "ab05da9d88e11063",
+          "27b344a78d2f4cec",
+          "44d496ecd794a908",
+          "b80d310a2f2d5125",
+          "1183036e931c0d34",
+          "eb2169f8cc3badd0",
+          "fa44b57ad8aac343",
+          "1f4bfe1430751031"
         ],
         "type": "explicit_fee_phrase"
       },
@@ -2453,22 +3157,82 @@
       "name": "unspecified",
       "payment_method": null,
       "payout_type": null,
-      "percentage": "1",
+      "percentage": null,
       "presentment_currency": null,
       "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a8f86ebbd23cd56c",
+      "rule_id": "198d5261d44524de",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "f4b72b556c823fee",
           "text": "1% of pay out volume or a minimum fee."
+        },
+        {
+          "entry_id": "db02113eaecabda2",
+          "text": "€500.00 per month, 1-year contract"
+        },
+        {
+          "entry_id": "4e10280a061b2262",
+          "text": "€0.015 per additional step"
+        },
+        {
+          "entry_id": "610db6c0fc600967",
+          "text": "€1.25 per successful instant verification"
+        },
+        {
+          "entry_id": "e9a7db9cf3093fbc",
+          "text": "€1.25 per successful API call"
+        },
+        {
+          "entry_id": "ab05da9d88e11063",
+          "text": "€1.25 per verification"
+        },
+        {
+          "entry_id": "27b344a78d2f4cec",
+          "text": "€0.10 per successful API call"
+        },
+        {
+          "entry_id": "44d496ecd794a908",
+          "text": "€0.25 per institution per account holder per month"
+        },
+        {
+          "entry_id": "b80d310a2f2d5125",
+          "text": "€0.40 per lookup"
+        },
+        {
+          "entry_id": "1183036e931c0d34",
+          "text": "Get over $50K in discounts and perks."
+        },
+        {
+          "entry_id": "eb2169f8cc3badd0",
+          "text": "Buy carbon removal tons from 3% of order value"
+        },
+        {
+          "entry_id": "fa44b57ad8aac343",
+          "text": "$10B+"
+        },
+        {
+          "entry_id": "1f4bfe1430751031",
+          "text": "+1%"
         }
       ],
       "source_text": "1% of pay out volume or a minimum fee.",
       "source_texts": [
-        "1% of pay out volume or a minimum fee."
+        "1% of pay out volume or a minimum fee.",
+        "€500.00 per month, 1-year contract",
+        "€0.015 per additional step",
+        "€1.25 per successful instant verification",
+        "€1.25 per successful API call",
+        "€1.25 per verification",
+        "€0.10 per successful API call",
+        "€0.25 per institution per account holder per month",
+        "€0.40 per lookup",
+        "Get over $50K in discounts and perks.",
+        "Buy carbon removal tons from 3% of order value",
+        "$10B+",
+        "+1%"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -2561,7 +3325,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "4d2f14ddc15f2e4c",
+      "rule_id": "319632680cd44821",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2657,7 +3421,7 @@
       "product_id": "adaptive_pricing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "509371246c49c81f",
+      "rule_id": "901a3e1a022b95d7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2746,7 +3510,7 @@
       "product_id": "adaptive_pricing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "f88d48f0db91fbb5",
+      "rule_id": "91905011c766bbb3",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2842,7 +3606,7 @@
       "product_id": "post_payment_invoice",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c96523d71d11715e",
+      "rule_id": "8590c7d95f926258",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2866,13 +3630,13 @@
       "basis_points": "350.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
-        "product=payments",
-        "variant=online_domestic_cards",
+        "product=managed_payments",
+        "variant=standard",
         "channel=online",
         "account_country=DE"
       ],
@@ -2930,15 +3694,15 @@
       "label": "3.5% per successful Managed Payments transaction in addition to Payments fees",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "payments",
+      "name": "managed_payments",
       "payment_method": null,
       "payout_type": null,
       "percentage": "3.5",
       "presentment_currency": null,
-      "product_id": "payments",
+      "product_id": "managed_payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "ee4febdc1a70c7a8",
+      "rule_id": "adaf3a677e7eb25d",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2954,7 +3718,7 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
-      "variant_id": "online_domestic_cards"
+      "variant_id": "standard"
     },
     {
       "account_country": "DE",
@@ -3081,7 +3845,7 @@
       "product_id": "terminal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a1f69ca0539dd149",
+      "rule_id": "407cfb4d646812c5",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -3224,7 +3988,7 @@
       "product_id": "terminal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7cd7314ac7eb8d04",
+      "rule_id": "7f86da9c77dd59a2",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -3348,7 +4112,7 @@
       "product_id": "terminal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "037523036563d67a",
+      "rule_id": "8fe9fe552ba45c25",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -3472,7 +4236,7 @@
       "product_id": "terminal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c80164c73b265f92",
+      "rule_id": "51b0e1aeb1a551cb",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -3496,13 +4260,13 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
       "card_tier": null,
       "channel": "in_person",
       "classification_evidence": [
-        "product=unspecified",
-        "variant=standard",
+        "product=terminal",
+        "variant=domestic_cards",
         "channel=in_person",
         "account_country=DE"
       ],
@@ -3560,15 +4324,15 @@
       "label": "€9.00 per reader per month",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "unspecified",
+      "name": "terminal",
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
-      "product_id": "unspecified",
+      "product_id": "terminal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "481d8963c5f8206d",
+      "rule_id": "e8229ebd5b3f14d7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -3584,7 +4348,7 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "monthly",
-      "variant_id": "standard"
+      "variant_id": "domestic_cards"
     },
     {
       "account_country": "DE",
@@ -3646,7 +4410,7 @@
       "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6c1087844526c40e",
+      "rule_id": "94053e82f0a37376",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included For accounts with all payment methods on standard pricing",
@@ -3674,9 +4438,10 @@
         "variant=custom_pricing",
         "channel=online",
         "account_country=DE",
-        "pricing_plan=custom"
+        "pricing_plan=custom",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "channel",
@@ -3697,7 +4462,7 @@
           "value": "custom"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "7761030b9f0ef5ca"
       ],
@@ -3744,7 +4509,7 @@
       "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "714e4506bc221c5b",
+      "rule_id": "db82c6271601f8fe",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -3755,6 +4520,110 @@
       "source_text": "€0.05 per screened transaction for accounts with custom pricing for any payment method",
       "source_texts": [
         "€0.05 per screened transaction for accounts with custom pricing for any payment method"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "custom_pricing"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=radar",
+        "variant=custom_pricing",
+        "channel=online",
+        "account_country=DE",
+        "pricing_plan=custom",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        },
+        {
+          "dimension": "pricing_plan",
+          "evidence": null,
+          "operator": "eq",
+          "value": "custom"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "6bb981bf335dcbb6"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "6bb981bf335dcbb6",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.07",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "7",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "6bb981bf335dcbb6",
+          "source_text": "€0.07 per screened transaction for accounts with custom pricing for any payment method",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "€0.07 per screened transaction for accounts with custom pricing for any payment method"
+        ],
+        "source_entry_ids": [
+          "6bb981bf335dcbb6"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "0.07",
+      "fixed_amount_minor": "7",
+      "fixed_currency": "EUR",
+      "label": "€0.07 per screened transaction for accounts with custom pricing for any payment method",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "radar",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "radar",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "7d1d022366e46249",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "6bb981bf335dcbb6",
+          "text": "€0.07 per screened transaction for accounts with custom pricing for any payment method"
+        }
+      ],
+      "source_text": "€0.07 per screened transaction for accounts with custom pricing for any payment method",
+      "source_texts": [
+        "€0.07 per screened transaction for accounts with custom pricing for any payment method"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -3816,7 +4685,7 @@
       "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "4371fd9ea087a679",
+      "rule_id": "2dcf39fffdcfe37d",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Try for free for 30 days",
@@ -3914,7 +4783,7 @@
       "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2fdef08bccab6df0",
+      "rule_id": "820c0053ddc69f7d",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4004,7 +4873,7 @@
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c6358a4d977c426e",
+      "rule_id": "359c4df4dbd54c45",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
@@ -4034,9 +4903,10 @@
         "cross_border=False",
         "transaction_region=domestic",
         "account_country=DE",
-        "transaction_type=dispute"
+        "transaction_type=dispute",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "channel",
@@ -4071,7 +4941,8 @@
       ],
       "confidence": 0.0,
       "contributing_entry_ids": [
-        "aad26023c618d85b"
+        "aad26023c618d85b",
+        "71f4f2c59d12501c"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
@@ -4098,7 +4969,8 @@
           "€20.00 per"
         ],
         "source_entry_ids": [
-          "aad26023c618d85b"
+          "aad26023c618d85b",
+          "71f4f2c59d12501c"
         ],
         "type": "insufficient"
       },
@@ -4116,7 +4988,7 @@
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "09c0e4c3ea041c41",
+      "rule_id": "3a49ebd15bb34e60",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4127,6 +4999,124 @@
       "source_text": "€20.00 per",
       "source_texts": [
         "€20.00 per"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "channel=online",
+        "cross_border=False",
+        "transaction_region=domestic",
+        "account_country=DE",
+        "transaction_type=dispute",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "cross_border",
+          "evidence": null,
+          "operator": "eq",
+          "value": false
+        },
+        {
+          "dimension": "transaction_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "0c042225e52184fb"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "0c042225e52184fb",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "40.00",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "4000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "0c042225e52184fb",
+          "source_text": "€40.00 per",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "€40.00 per"
+        ],
+        "source_entry_ids": [
+          "0c042225e52184fb"
+        ],
+        "type": "insufficient"
+      },
+      "fixed_amount": "40.00",
+      "fixed_amount_minor": "4000",
+      "fixed_currency": "EUR",
+      "label": "€40.00 per",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "88c11d2fe41cf503",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "0c042225e52184fb",
+          "text": "€40.00 per"
+        }
+      ],
+      "source_text": "€40.00 per",
+      "source_texts": [
+        "€40.00 per"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -4188,12 +5178,111 @@
       "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "345ad2b0ba7f7ca0",
+      "rule_id": "45b95ccc849fb1ba",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_texts": [
         "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "informational",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=unspecified",
+        "variant=standard",
+        "channel=online",
+        "account_country=DE"
+      ],
+      "classification_status": "informational",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "253129d799422619",
+        "529e79f9daa64454",
+        "a674e295f58b2b4e"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "253129d799422619",
+      "exactness": "exact",
+      "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "0.25%",
+          "+5.5%",
+          "South Korean payment methods 3.1% + €0.25"
+        ],
+        "source_entry_ids": [
+          "253129d799422619",
+          "529e79f9daa64454",
+          "a674e295f58b2b4e"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "0.25%",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "unspecified",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "unspecified",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "a366e829cf351841",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "253129d799422619",
+          "text": "0.25%"
+        },
+        {
+          "entry_id": "529e79f9daa64454",
+          "text": "+5.5%"
+        },
+        {
+          "entry_id": "a674e295f58b2b4e",
+          "text": "South Korean payment methods 3.1% + €0.25"
+        }
+      ],
+      "source_text": "0.25%",
+      "source_texts": [
+        "0.25%",
+        "+5.5%",
+        "South Korean payment methods 3.1% + €0.25"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -4262,7 +5351,8 @@
       ],
       "confidence": 0.75,
       "contributing_entry_ids": [
-        "8840437e71a72abd"
+        "8840437e71a72abd",
+        "2570ada37b29aaed"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
@@ -4298,10 +5388,12 @@
       "fee_evidence": {
         "confidence": 0.75,
         "phrases": [
-          "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards"
+          "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards",
+          "€3.50 per standard, physical card Custom cards subject to additional pricing. Shipping rates not included."
         ],
         "source_entry_ids": [
-          "8840437e71a72abd"
+          "8840437e71a72abd",
+          "2570ada37b29aaed"
         ],
         "type": "pricing_table_value"
       },
@@ -4319,17 +5411,22 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "26ff444502bf816c",
+      "rule_id": "2fbd897d8fdadda9",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "8840437e71a72abd",
           "text": "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards"
+        },
+        {
+          "entry_id": "2570ada37b29aaed",
+          "text": "€3.50 per standard, physical card Custom cards subject to additional pricing. Shipping rates not included."
         }
       ],
       "source_text": "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards",
       "source_texts": [
-        "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards"
+        "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards",
+        "€3.50 per standard, physical card Custom cards subject to additional pricing. Shipping rates not included."
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -4409,7 +5506,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "3cb3605c9417de10",
+      "rule_id": "a8c794b8e2c3552a",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included",
@@ -4526,7 +5623,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2a6b52b0cbae1cca",
+      "rule_id": "111fbac092328455",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4643,7 +5740,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "866b5ff96d5d3a0f",
+      "rule_id": "ed4785ee5d32dca0",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4676,7 +5773,9 @@
       "conditions": [],
       "confidence": 0.7,
       "contributing_entry_ids": [
-        "7f478ade4b7cabba"
+        "7f478ade4b7cabba",
+        "aa01b1e122c52e78",
+        "c2b3d3fe2f9ed19d"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
@@ -4687,10 +5786,13 @@
       "fee_evidence": {
         "confidence": 0.7,
         "phrases": [
-          "Included"
+          "Included",
+          "Micro-deposit verifications are free"
         ],
         "source_entry_ids": [
-          "7f478ade4b7cabba"
+          "7f478ade4b7cabba",
+          "aa01b1e122c52e78",
+          "c2b3d3fe2f9ed19d"
         ],
         "type": "included"
       },
@@ -4708,17 +5810,107 @@
       "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2599d168c3d12c72",
+      "rule_id": "adb06387d9f8df61",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Included",
       "source_texts": [
-        "Included"
+        "Included",
+        "Micro-deposit verifications are free"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "40.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=invoicing",
+        "variant=standard",
+        "account_country=DE"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "1d455270a160d3ff"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "1d455270a160d3ff",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "40.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "1d455270a160d3ff",
+          "source_text": "0.4% per paid invoice",
+          "type": "percentage",
+          "value": "0.4"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "0.4% per paid invoice"
+        ],
+        "source_entry_ids": [
+          "1d455270a160d3ff"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "0.4% per paid invoice",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "invoicing",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": "0.4",
+      "presentment_currency": null,
+      "product_id": "invoicing",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "d1970a8f7f8eac86",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "1d455270a160d3ff",
+          "text": "0.4% per paid invoice"
+        }
+      ],
+      "source_text": "0.4% per paid invoice",
+      "source_texts": [
+        "0.4% per paid invoice"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_invoice",
       "variant_id": "standard"
     },
     {
@@ -4792,7 +5984,7 @@
       "product_id": "tax",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a5612e015fb7a4b6",
+      "rule_id": "c45dddc38d57cc22",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4824,9 +6016,10 @@
         "product=tax",
         "variant=standard",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "channel",
@@ -4841,7 +6034,7 @@
           "value": "DE"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "04c3905d72d43062"
       ],
@@ -4888,7 +6081,7 @@
       "product_id": "tax",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2a580ecf9e4dc9e7",
+      "rule_id": "5b61f5e614af7f92",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4899,6 +6092,103 @@
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_texts": [
         "0.5% per transaction, where you’re registered to collect taxes"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=tax",
+        "variant=standard",
+        "channel=online",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "f4f7ee6157d3e06f"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "f4f7ee6157d3e06f",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.45",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "45",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "f4f7ee6157d3e06f",
+          "source_text": "€0.45 per transaction, where you’re registered to collect taxes",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "€0.45 per transaction, where you’re registered to collect taxes"
+        ],
+        "source_entry_ids": [
+          "f4f7ee6157d3e06f"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "0.45",
+      "fixed_amount_minor": "45",
+      "fixed_currency": "EUR",
+      "label": "€0.45 per transaction, where you’re registered to collect taxes",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "tax",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "tax",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "b5f173bd32b543fc",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "f4f7ee6157d3e06f",
+          "text": "€0.45 per transaction, where you’re registered to collect taxes"
+        }
+      ],
+      "source_text": "€0.45 per transaction, where you’re registered to collect taxes",
+      "source_texts": [
+        "€0.45 per transaction, where you’re registered to collect taxes"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -4960,7 +6250,7 @@
       "product_id": "subscriptions",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "617ed61ae67b8169",
+      "rule_id": "efb32cca3b786fc1",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Try for free for 30 days",
@@ -4987,9 +6277,10 @@
         "product=subscriptions",
         "variant=standard",
         "account_country=DE",
-        "recurring=True"
+        "recurring=True",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "account_country",
@@ -5051,7 +6342,7 @@
       "product_id": "subscriptions",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7516a2be07019331",
+      "rule_id": "f8731aa5856a5f16",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5062,6 +6353,103 @@
       "source_text": "€20.00 per month",
       "source_texts": [
         "€20.00 per month"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "monthly",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [
+        "product=subscriptions",
+        "variant=standard",
+        "account_country=DE",
+        "recurring=True",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        },
+        {
+          "dimension": "recurring",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "28ba2cc15bc050ed"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "28ba2cc15bc050ed",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "175.00",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "17500",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "28ba2cc15bc050ed",
+          "source_text": "€175.00 per month, 1-year contract",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "€175.00 per month, 1-year contract"
+        ],
+        "source_entry_ids": [
+          "28ba2cc15bc050ed"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "175.00",
+      "fixed_amount_minor": "17500",
+      "fixed_currency": "EUR",
+      "label": "€175.00 per month, 1-year contract",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "subscriptions",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "subscriptions",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "4a562aa1335a25fd",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "28ba2cc15bc050ed",
+          "text": "€175.00 per month, 1-year contract"
+        }
+      ],
+      "source_text": "€175.00 per month, 1-year contract",
+      "source_texts": [
+        "€175.00 per month, 1-year contract"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -5147,7 +6535,7 @@
       "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c6c003fd4ffe519c",
+      "rule_id": "a8b4e96c9fb9c723",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5283,7 +6671,7 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "595b533654d16ad9",
+      "rule_id": "dc4edef0c24a8fa8",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5412,7 +6800,7 @@
       "product_id": "alipay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "27c4eb32c0988501",
+      "rule_id": "02ca54518ea696e3",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5522,7 +6910,7 @@
       "product_id": "alipay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b5a3bee324865b9d",
+      "rule_id": "1b03ead325c4d8e5",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5637,7 +7025,7 @@
       "product_id": "mobilepay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "64c586fbdb9df92c",
+      "rule_id": "e2b039932bec886b",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5747,7 +7135,7 @@
       "product_id": "mobilepay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "00b06b3d12edb8f9",
+      "rule_id": "36d951d0ecccbb3a",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5878,7 +7266,7 @@
       "product_id": "paypal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "032a00685c99cc57",
+      "rule_id": "a697fdb509b0d274",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5988,7 +7376,7 @@
       "product_id": "paypal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "755e0f377df6c2c1",
+      "rule_id": "4a24e497df4ea3a9",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6117,7 +7505,7 @@
       "product_id": "revolut_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6c4aacfb40e61810",
+      "rule_id": "86eb77955de56313",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6227,7 +7615,7 @@
       "product_id": "revolut_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "0aae1ad6f2506755",
+      "rule_id": "d1e0f20c975dd8f6",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6356,7 +7744,7 @@
       "product_id": "wechat_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2be596eb17d36e7b",
+      "rule_id": "085db73b6e3f457e",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6466,7 +7854,7 @@
       "product_id": "wechat_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "fd66f5d51c50d559",
+      "rule_id": "16fb09f110ceca06",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6595,7 +7983,7 @@
       "product_id": "amazon_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7a0850084a968e64",
+      "rule_id": "100d3e93299506c7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6705,7 +8093,7 @@
       "product_id": "amazon_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "31a36c7cf4fd25ad",
+      "rule_id": "c9cc5a93e46ab755",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6822,7 +8210,7 @@
       "product_id": "amazon_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "f0f1d98043f2f8ab",
+      "rule_id": "d07f56ddcad0c62f",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -6951,7 +8339,7 @@
       "product_id": "satispay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "5146098c3928f054",
+      "rule_id": "48e1aa93e8df23dd",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7061,7 +8449,7 @@
       "product_id": "satispay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "baad64f7330cf96e",
+      "rule_id": "a414deba655e37ee",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7095,9 +8483,10 @@
         "payment_method=ach_direct_debit",
         "channel=online",
         "account_country=DE",
-        "settlement_timing=standard"
+        "settlement_timing=standard",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -7124,7 +8513,7 @@
           "value": "standard"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "501a267f5f001f98"
       ],
@@ -7171,7 +8560,7 @@
       "product_id": "ach_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a890fd991cc9e5f1",
+      "rule_id": "7bb31fab018142ac",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7192,7 +8581,7 @@
     {
       "account_country": "DE",
       "additional_fees": [],
-      "basis_points": null,
+      "basis_points": "80.0",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": null,
@@ -7204,9 +8593,11 @@
         "variant=standard",
         "payment_method=ach_direct_debit",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "settlement_timing=standard",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -7225,16 +8616,23 @@
           "evidence": null,
           "operator": "eq",
           "value": "DE"
+        },
+        {
+          "dimension": "settlement_timing",
+          "evidence": null,
+          "operator": "eq",
+          "value": "standard"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
+        "501a267f5f001f98",
         "f27c38347c3461d6"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "f27c38347c3461d6",
+      "entry_id": "501a267f5f001f98",
       "exactness": "range",
       "fee_components": [
         {
@@ -7248,14 +8646,28 @@
           "source_text": "ACH Direct Debit €5.00 cap",
           "type": "maximum_fee",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "80.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "501a267f5f001f98",
+          "source_text": "ACH Direct Debit 0.8% per transaction for standard settlement timing",
+          "type": "percentage",
+          "value": "0.8"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
+          "ACH Direct Debit 0.8% per transaction for standard settlement timing",
           "ACH Direct Debit €5.00 cap"
         ],
         "source_entry_ids": [
+          "501a267f5f001f98",
           "f27c38347c3461d6"
         ],
         "type": "explicit_fee_phrase"
@@ -7263,27 +8675,32 @@
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "ACH Direct Debit €5.00 cap",
+      "label": "ACH Direct Debit 0.8% per transaction for standard settlement timing",
       "maximum_amount": "5.00",
       "minimum_amount": null,
       "name": "ach_direct_debit",
       "payment_method": "ach_direct_debit",
       "payout_type": null,
-      "percentage": null,
+      "percentage": "0.8",
       "presentment_currency": null,
       "product_id": "ach_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "03df1f3e8d780bcb",
+      "rule_id": "f048aa6783971d00",
       "settlement_currency": null,
       "source_fragments": [
+        {
+          "entry_id": "501a267f5f001f98",
+          "text": "ACH Direct Debit 0.8% per transaction for standard settlement timing"
+        },
         {
           "entry_id": "f27c38347c3461d6",
           "text": "ACH Direct Debit €5.00 cap"
         }
       ],
-      "source_text": "ACH Direct Debit €5.00 cap",
+      "source_text": "ACH Direct Debit 0.8% per transaction for standard settlement timing",
       "source_texts": [
+        "ACH Direct Debit 0.8% per transaction for standard settlement timing",
         "ACH Direct Debit €5.00 cap"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
@@ -7391,7 +8808,7 @@
       "product_id": "ach_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "9d6535ddd32e2161",
+      "rule_id": "aedbc1f12de9caba",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7501,7 +8918,7 @@
       "product_id": "ach_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b1c51386a0e02864",
+      "rule_id": "3b7992ac4397e4bd",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7512,6 +8929,116 @@
       "source_text": "ACH Direct Debit + 2% if currency conversion is required",
       "source_texts": [
         "ACH Direct Debit + 2% if currency conversion is required"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=ach_direct_debit",
+        "variant=standard",
+        "payment_method=ach_direct_debit",
+        "channel=online",
+        "account_country=DE",
+        "transaction_type=bank_account_validation"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "ach_direct_debit"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "bank_account_validation"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "05a4040459f05a5c"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "05a4040459f05a5c",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "1.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "125",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "05a4040459f05a5c",
+          "source_text": "ACH Direct Debit €1.25 per instant bank account validation",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "ACH Direct Debit €1.25 per instant bank account validation"
+        ],
+        "source_entry_ids": [
+          "05a4040459f05a5c"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "1.25",
+      "fixed_amount_minor": "125",
+      "fixed_currency": "EUR",
+      "label": "ACH Direct Debit €1.25 per instant bank account validation",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "ach_direct_debit",
+      "payment_method": "ach_direct_debit",
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "ach_direct_debit",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "38b10670b314f282",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "05a4040459f05a5c",
+          "text": "ACH Direct Debit €1.25 per instant bank account validation"
+        }
+      ],
+      "source_text": "ACH Direct Debit €1.25 per instant bank account validation",
+      "source_texts": [
+        "ACH Direct Debit €1.25 per instant bank account validation"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -7618,7 +9145,7 @@
       "product_id": "ach_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "695023621a13ac8a",
+      "rule_id": "a178cee3c723887a",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7728,7 +9255,7 @@
       "product_id": "ach_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "21ab9195a386e75c",
+      "rule_id": "2450dc83175c1f78",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7761,9 +9288,10 @@
         "variant=standard",
         "payment_method=bacs_direct_debit",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -7784,7 +9312,7 @@
           "value": "DE"
         }
       ],
-      "confidence": 0.75,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "945c769a703e6e64"
       ],
@@ -7843,7 +9371,7 @@
       "product_id": "bacs_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "273bd8d8d7f44184",
+      "rule_id": "ef4de0ca7a1deec7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -7854,6 +9382,142 @@
       "source_text": "Bacs Direct Debit 1% + €0.25",
       "source_texts": [
         "Bacs Direct Debit 1% + €0.25"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "100",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=bacs_direct_debit",
+        "variant=standard",
+        "payment_method=bacs_direct_debit",
+        "channel=online",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "bacs_direct_debit"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "945c769a703e6e64",
+        "613908440b5b863b"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "945c769a703e6e64",
+      "exactness": "range",
+      "fee_components": [
+        {
+          "amount": "0.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "25",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "945c769a703e6e64",
+          "source_text": "Bacs Direct Debit 1% + €0.25",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": "5.00",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "500",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "613908440b5b863b",
+          "source_text": "Bacs Direct Debit €5.00 cap",
+          "type": "maximum_fee",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "100",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "945c769a703e6e64",
+          "source_text": "Bacs Direct Debit 1% + €0.25",
+          "type": "percentage",
+          "value": "1"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Bacs Direct Debit 1% + €0.25",
+          "Bacs Direct Debit €5.00 cap"
+        ],
+        "source_entry_ids": [
+          "945c769a703e6e64",
+          "613908440b5b863b"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "0.25",
+      "fixed_amount_minor": "25",
+      "fixed_currency": "EUR",
+      "label": "Bacs Direct Debit 1% + €0.25",
+      "maximum_amount": "5.00",
+      "minimum_amount": null,
+      "name": "bacs_direct_debit",
+      "payment_method": "bacs_direct_debit",
+      "payout_type": null,
+      "percentage": "1",
+      "presentment_currency": null,
+      "product_id": "bacs_direct_debit",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "8dd7220f96292996",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "945c769a703e6e64",
+          "text": "Bacs Direct Debit 1% + €0.25"
+        },
+        {
+          "entry_id": "613908440b5b863b",
+          "text": "Bacs Direct Debit €5.00 cap"
+        }
+      ],
+      "source_text": "Bacs Direct Debit 1% + €0.25",
+      "source_texts": [
+        "Bacs Direct Debit 1% + €0.25",
+        "Bacs Direct Debit €5.00 cap"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -7960,7 +9624,7 @@
       "product_id": "bacs_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d48ea7a80977221d",
+      "rule_id": "8b6b3596035f63f8",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8070,7 +9734,7 @@
       "product_id": "bacs_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d937248adcc8de85",
+      "rule_id": "76e7abe63605ab99",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8187,7 +9851,7 @@
       "product_id": "bacs_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "22b7e7e538b26409",
+      "rule_id": "6beef4c7303706a5",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8297,7 +9961,7 @@
       "product_id": "bacs_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "cb35252f34d735ea",
+      "rule_id": "9be9c0f674b0ca13",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8407,7 +10071,7 @@
       "product_id": "bacs_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b23a48e53711eef1",
+      "rule_id": "695ce1b87e91544e",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8522,7 +10186,7 @@
       "product_id": "bancontact",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "cc31cf92d0ffe7f3",
+      "rule_id": "0fa007d19d67a6e3",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8632,7 +10296,7 @@
       "product_id": "bancontact",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "76ba0d1299cd3a51",
+      "rule_id": "1db1c34e0d478010",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8761,7 +10425,7 @@
       "product_id": "bizum",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "5df68f09c1147d93",
+      "rule_id": "554d8c62a7292512",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8871,7 +10535,7 @@
       "product_id": "bizum",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "07294844120787b9",
+      "rule_id": "b216d94700a30b14",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -8986,7 +10650,7 @@
       "product_id": "blik",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "ae89c69454cdc655",
+      "rule_id": "6978d81270e27bb0",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9096,7 +10760,7 @@
       "product_id": "blik",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a30059d07eafe435",
+      "rule_id": "45415d6af14a99a0",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9211,7 +10875,7 @@
       "product_id": "eps",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "225fa741e3b747d2",
+      "rule_id": "12d90677d6cb3fda",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9321,7 +10985,7 @@
       "product_id": "eps",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b91bd2e875ee1103",
+      "rule_id": "32c5fb0e6ef51ba7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9424,7 +11088,7 @@
       "product_id": "ideal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7132d95e81d737df",
+      "rule_id": "65d0d8b96e591962",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9534,7 +11198,7 @@
       "product_id": "ideal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "ba658c09c0b456dc",
+      "rule_id": "aae49f574944d069",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9649,7 +11313,7 @@
       "product_id": "przelewy24",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b066772296fd9437",
+      "rule_id": "0d9987b21544830e",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9759,7 +11423,7 @@
       "product_id": "przelewy24",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7863eeb1fd9d923a",
+      "rule_id": "a0f5b2dfaea0c088",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9794,9 +11458,10 @@
         "channel=online",
         "account_country=DE",
         "success=True",
-        "transaction_type=charge"
+        "transaction_type=charge",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -9829,7 +11494,7 @@
           "value": "charge"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "e7cc4a0b2c33edcc"
       ],
@@ -9876,7 +11541,7 @@
       "product_id": "sepa_bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a8dc5a448b07fc27",
+      "rule_id": "1e8965e240ae0358",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -9897,7 +11562,7 @@
     {
       "account_country": "DE",
       "additional_fees": [],
-      "basis_points": null,
+      "basis_points": "50.0",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": null,
@@ -9909,9 +11574,12 @@
         "variant=standard",
         "payment_method=sepa_bank_transfer",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "success=True",
+        "transaction_type=charge",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -9930,16 +11598,29 @@
           "evidence": null,
           "operator": "eq",
           "value": "DE"
+        },
+        {
+          "dimension": "success",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "charge"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
+        "e7cc4a0b2c33edcc",
         "b4768c38f17232ef"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "b4768c38f17232ef",
+      "entry_id": "e7cc4a0b2c33edcc",
       "exactness": "range",
       "fee_components": [
         {
@@ -9953,14 +11634,28 @@
           "source_text": "SEPA Bank Transfer €5.00 cap",
           "type": "maximum_fee",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "50.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "e7cc4a0b2c33edcc",
+          "source_text": "SEPA Bank Transfer 0.5% per successful charge*",
+          "type": "percentage",
+          "value": "0.5"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
+          "SEPA Bank Transfer 0.5% per successful charge*",
           "SEPA Bank Transfer €5.00 cap"
         ],
         "source_entry_ids": [
+          "e7cc4a0b2c33edcc",
           "b4768c38f17232ef"
         ],
         "type": "explicit_fee_phrase"
@@ -9968,33 +11663,38 @@
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "SEPA Bank Transfer €5.00 cap",
+      "label": "SEPA Bank Transfer 0.5% per successful charge*",
       "maximum_amount": "5.00",
       "minimum_amount": null,
       "name": "sepa_bank_transfer",
       "payment_method": "sepa_bank_transfer",
       "payout_type": null,
-      "percentage": null,
+      "percentage": "0.5",
       "presentment_currency": null,
       "product_id": "sepa_bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "1371fdfddc7fe51c",
+      "rule_id": "763fe56e17414466",
       "settlement_currency": null,
       "source_fragments": [
+        {
+          "entry_id": "e7cc4a0b2c33edcc",
+          "text": "SEPA Bank Transfer 0.5% per successful charge*"
+        },
         {
           "entry_id": "b4768c38f17232ef",
           "text": "SEPA Bank Transfer €5.00 cap"
         }
       ],
-      "source_text": "SEPA Bank Transfer €5.00 cap",
+      "source_text": "SEPA Bank Transfer 0.5% per successful charge*",
       "source_texts": [
+        "SEPA Bank Transfer 0.5% per successful charge*",
         "SEPA Bank Transfer €5.00 cap"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_transaction",
+      "unit": "per_charge",
       "variant_id": "standard"
     },
     {
@@ -10089,7 +11789,7 @@
       "product_id": "sepa_bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "5e6d7eba76bd108a",
+      "rule_id": "089e29eaf349f149",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10206,7 +11906,7 @@
       "product_id": "sepa_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "867940061020db6d",
+      "rule_id": "cc1b6aa8691c46a1",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10316,7 +12016,7 @@
       "product_id": "sepa_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6425ba63e7a7c66d",
+      "rule_id": "a7dfc07e2b39c649",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10433,7 +12133,7 @@
       "product_id": "sepa_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2601399b21d8304b",
+      "rule_id": "67a7c55dc3b5fc74",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10543,7 +12243,7 @@
       "product_id": "sepa_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "1148ad4479ccb4dc",
+      "rule_id": "cb516a433470d0fc",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10576,9 +12276,10 @@
         "variant=standard",
         "payment_method=swish",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -10599,7 +12300,7 @@
           "value": "DE"
         }
       ],
-      "confidence": 0.75,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "0829f79345d53f9e"
       ],
@@ -10658,7 +12359,7 @@
       "product_id": "swish",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b9ab012d112922b8",
+      "rule_id": "f5f71914d121e4e4",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10669,6 +12370,142 @@
       "source_text": "Swish 1% + €0.30",
       "source_texts": [
         "Swish 1% + €0.30"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "100",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=swish",
+        "variant=standard",
+        "payment_method=swish",
+        "channel=online",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "swish"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "0829f79345d53f9e",
+        "b544478c5ee835b3"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "0829f79345d53f9e",
+      "exactness": "range",
+      "fee_components": [
+        {
+          "amount": "0.30",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "30",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "0829f79345d53f9e",
+          "source_text": "Swish 1% + €0.30",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": "0.70",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "70",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "b544478c5ee835b3",
+          "source_text": "Swish €0.70 cap",
+          "type": "maximum_fee",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "100",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "0829f79345d53f9e",
+          "source_text": "Swish 1% + €0.30",
+          "type": "percentage",
+          "value": "1"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Swish 1% + €0.30",
+          "Swish €0.70 cap"
+        ],
+        "source_entry_ids": [
+          "0829f79345d53f9e",
+          "b544478c5ee835b3"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "0.30",
+      "fixed_amount_minor": "30",
+      "fixed_currency": "EUR",
+      "label": "Swish 1% + €0.30",
+      "maximum_amount": "0.70",
+      "minimum_amount": null,
+      "name": "swish",
+      "payment_method": "swish",
+      "payout_type": null,
+      "percentage": "1",
+      "presentment_currency": null,
+      "product_id": "swish",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "d27951f0452b5582",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "0829f79345d53f9e",
+          "text": "Swish 1% + €0.30"
+        },
+        {
+          "entry_id": "b544478c5ee835b3",
+          "text": "Swish €0.70 cap"
+        }
+      ],
+      "source_text": "Swish 1% + €0.30",
+      "source_texts": [
+        "Swish 1% + €0.30",
+        "Swish €0.70 cap"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -10768,7 +12605,7 @@
       "product_id": "swish",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "fbcfa36bf33c60cb",
+      "rule_id": "6fb2a778679ba86d",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10883,7 +12720,7 @@
       "product_id": "twint",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "85d2f0275cbeb44f",
+      "rule_id": "f622635c8f9b0c1c",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -10993,7 +12830,7 @@
       "product_id": "twint",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8c3b19495d9f2b99",
+      "rule_id": "a0b07cdcf9c56db0",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -11027,9 +12864,10 @@
         "payment_method=bank_transfer",
         "channel=online",
         "account_country=DE",
-        "success=True"
+        "success=True",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -11056,7 +12894,7 @@
           "value": true
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "ddf8b326348b14c4"
       ],
@@ -11103,7 +12941,7 @@
       "product_id": "bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "f754c2f9f30d49bd",
+      "rule_id": "eb3eaeb19983e795",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -11124,7 +12962,7 @@
     {
       "account_country": "DE",
       "additional_fees": [],
-      "basis_points": null,
+      "basis_points": "50.0",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": null,
@@ -11136,9 +12974,11 @@
         "variant=standard",
         "payment_method=bank_transfer",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "success=True",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -11157,16 +12997,23 @@
           "evidence": null,
           "operator": "eq",
           "value": "DE"
+        },
+        {
+          "dimension": "success",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
+        "ddf8b326348b14c4",
         "bbbd869073253ae3"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "bbbd869073253ae3",
+      "entry_id": "ddf8b326348b14c4",
       "exactness": "range",
       "fee_components": [
         {
@@ -11180,14 +13027,28 @@
           "source_text": "USD Bank Transfer €5.00 cap",
           "type": "maximum_fee",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "50.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "ddf8b326348b14c4",
+          "source_text": "USD Bank Transfer 0.5% per successful transaction",
+          "type": "percentage",
+          "value": "0.5"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
+          "USD Bank Transfer 0.5% per successful transaction",
           "USD Bank Transfer €5.00 cap"
         ],
         "source_entry_ids": [
+          "ddf8b326348b14c4",
           "bbbd869073253ae3"
         ],
         "type": "explicit_fee_phrase"
@@ -11195,27 +13056,32 @@
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "USD Bank Transfer €5.00 cap",
+      "label": "USD Bank Transfer 0.5% per successful transaction",
       "maximum_amount": "5.00",
       "minimum_amount": null,
       "name": "bank_transfer",
       "payment_method": "bank_transfer",
       "payout_type": null,
-      "percentage": null,
+      "percentage": "0.5",
       "presentment_currency": null,
       "product_id": "bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b458f454cce1c72d",
+      "rule_id": "e30a76d65a7d260d",
       "settlement_currency": null,
       "source_fragments": [
+        {
+          "entry_id": "ddf8b326348b14c4",
+          "text": "USD Bank Transfer 0.5% per successful transaction"
+        },
         {
           "entry_id": "bbbd869073253ae3",
           "text": "USD Bank Transfer €5.00 cap"
         }
       ],
-      "source_text": "USD Bank Transfer €5.00 cap",
+      "source_text": "USD Bank Transfer 0.5% per successful transaction",
       "source_texts": [
+        "USD Bank Transfer 0.5% per successful transaction",
         "USD Bank Transfer €5.00 cap"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
@@ -11323,7 +13189,7 @@
       "product_id": "bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b9734ef922c64855",
+      "rule_id": "376e7525b8281d6b",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -11433,7 +13299,7 @@
       "product_id": "bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "3abaef209c9d92ea",
+      "rule_id": "30b64e08e9226da7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -11449,6 +13315,109 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=bank_transfer",
+        "variant=standard",
+        "payment_method=bank_transfer",
+        "channel=online",
+        "account_country=DE"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "bank_transfer"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "afac8a8c1fb69d1a"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "afac8a8c1fb69d1a",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "15.00",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "1500",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "afac8a8c1fb69d1a",
+          "source_text": "USD Bank Transfer €15.00 per wire payment",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "USD Bank Transfer €15.00 per wire payment"
+        ],
+        "source_entry_ids": [
+          "afac8a8c1fb69d1a"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "15.00",
+      "fixed_amount_minor": "1500",
+      "fixed_currency": "EUR",
+      "label": "USD Bank Transfer €15.00 per wire payment",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "bank_transfer",
+      "payment_method": "bank_transfer",
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "bank_transfer",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "3ce4a44e3fea0159",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "afac8a8c1fb69d1a",
+          "text": "USD Bank Transfer €15.00 per wire payment"
+        }
+      ],
+      "source_text": "USD Bank Transfer €15.00 per wire payment",
+      "source_texts": [
+        "USD Bank Transfer €15.00 per wire payment"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_charge",
       "variant_id": "standard"
     },
     {
@@ -11557,7 +13526,7 @@
       "product_id": "bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "fd72d18d3fe2dd58",
+      "rule_id": "2ed17a08f51615d7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -11592,9 +13561,10 @@
         "channel=online",
         "account_country=DE",
         "success=True",
-        "transaction_type=charge"
+        "transaction_type=charge",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -11627,7 +13597,7 @@
           "value": "charge"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "3887e795c46ea61c"
       ],
@@ -11686,7 +13656,7 @@
       "product_id": "pay_by_bank",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "cfd41c4a0ff5a531",
+      "rule_id": "dac4c07603631219",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -11707,7 +13677,7 @@
     {
       "account_country": "DE",
       "additional_fees": [],
-      "basis_points": null,
+      "basis_points": "50.0",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": null,
@@ -11719,9 +13689,12 @@
         "variant=standard",
         "payment_method=pay_by_bank",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "success=True",
+        "transaction_type=charge",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -11740,18 +13713,43 @@
           "evidence": null,
           "operator": "eq",
           "value": "DE"
+        },
+        {
+          "dimension": "success",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "charge"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
+        "3887e795c46ea61c",
         "eb7455ec9a421465"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "eb7455ec9a421465",
+      "entry_id": "3887e795c46ea61c",
       "exactness": "range",
       "fee_components": [
+        {
+          "amount": "0.25",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "25",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "3887e795c46ea61c",
+          "source_text": "Pay by Bank 0.5% + €0.25 per successful charge",
+          "type": "fixed_amount",
+          "value": null
+        },
         {
           "amount": "5.00",
           "basis_points": null,
@@ -11763,48 +13761,67 @@
           "source_text": "Pay by Bank €5.00 cap",
           "type": "maximum_fee",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "50.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "3887e795c46ea61c",
+          "source_text": "Pay by Bank 0.5% + €0.25 per successful charge",
+          "type": "percentage",
+          "value": "0.5"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
+          "Pay by Bank 0.5% + €0.25 per successful charge",
           "Pay by Bank €5.00 cap"
         ],
         "source_entry_ids": [
+          "3887e795c46ea61c",
           "eb7455ec9a421465"
         ],
         "type": "explicit_fee_phrase"
       },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Pay by Bank €5.00 cap",
+      "fixed_amount": "0.25",
+      "fixed_amount_minor": "25",
+      "fixed_currency": "EUR",
+      "label": "Pay by Bank 0.5% + €0.25 per successful charge",
       "maximum_amount": "5.00",
       "minimum_amount": null,
       "name": "pay_by_bank",
       "payment_method": "pay_by_bank",
       "payout_type": null,
-      "percentage": null,
+      "percentage": "0.5",
       "presentment_currency": null,
       "product_id": "pay_by_bank",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8ad7f9dd7018ef52",
+      "rule_id": "fb6b8ce8605d6608",
       "settlement_currency": null,
       "source_fragments": [
+        {
+          "entry_id": "3887e795c46ea61c",
+          "text": "Pay by Bank 0.5% + €0.25 per successful charge"
+        },
         {
           "entry_id": "eb7455ec9a421465",
           "text": "Pay by Bank €5.00 cap"
         }
       ],
-      "source_text": "Pay by Bank €5.00 cap",
+      "source_text": "Pay by Bank 0.5% + €0.25 per successful charge",
       "source_texts": [
+        "Pay by Bank 0.5% + €0.25 per successful charge",
         "Pay by Bank €5.00 cap"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_transaction",
+      "unit": "per_charge",
       "variant_id": "standard"
     },
     {
@@ -11906,7 +13923,7 @@
       "product_id": "pay_by_bank",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "1ed59558484a0b45",
+      "rule_id": "35cdff2b381ed66c",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12016,7 +14033,7 @@
       "product_id": "pay_by_bank",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "00714596a3279cac",
+      "rule_id": "a81eb33b0654c2a7",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12131,7 +14148,7 @@
       "product_id": "mb_way",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "f04344696a850a1b",
+      "rule_id": "12ee9962b68351ab",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12248,7 +14265,7 @@
       "product_id": "mb_way",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d128388a47e19742",
+      "rule_id": "14cfc461b3173df2",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12358,7 +14375,7 @@
       "product_id": "mb_way",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "f0f312431737453a",
+      "rule_id": "a5b23a2eb9b56f08",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12475,7 +14492,7 @@
       "product_id": "pix",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c03acd374fbd4b9f",
+      "rule_id": "19855d065e8fb92f",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12592,7 +14609,7 @@
       "product_id": "pix",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "bd81ed731ff86ab4",
+      "rule_id": "d77920c7d9162345",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12702,7 +14719,7 @@
       "product_id": "pix",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2b017ed964074f92",
+      "rule_id": "553bba28cd434417",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12819,7 +14836,7 @@
       "product_id": "upi",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b6d8ddf5097d5e39",
+      "rule_id": "8ae46d73e7ca0892",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -12936,7 +14953,7 @@
       "product_id": "upi",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "06f59e0ebdb6fd38",
+      "rule_id": "56d00e6d0feb4b3d",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13046,7 +15063,7 @@
       "product_id": "upi",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "02eaa725fc447028",
+      "rule_id": "6125bc1db5043131",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13079,9 +15096,10 @@
         "variant=standard",
         "payment_method=klarna",
         "channel=online",
-        "account_country=DE"
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -13102,7 +15120,7 @@
           "value": "DE"
         }
       ],
-      "confidence": 0.75,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "19c44cfd79628e1e"
       ],
@@ -13161,7 +15179,7 @@
       "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "dd8e4bdbc7887539",
+      "rule_id": "24d6f375c876cf76",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13172,6 +15190,238 @@
       "source_text": "Klarna United States, Canada 5.99% + €0.30",
       "source_texts": [
         "Klarna United States, Canada 5.99% + €0.30"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "299.00",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=klarna",
+        "variant=standard",
+        "payment_method=klarna",
+        "channel=online",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "klarna"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "0c859b2feb6f2f96"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "0c859b2feb6f2f96",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.35",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "35",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "0c859b2feb6f2f96",
+          "source_text": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + €0.35",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "299.00",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "0c859b2feb6f2f96",
+          "source_text": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + €0.35",
+          "type": "percentage",
+          "value": "2.99"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + €0.35"
+        ],
+        "source_entry_ids": [
+          "0c859b2feb6f2f96"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "0.35",
+      "fixed_amount_minor": "35",
+      "fixed_currency": "EUR",
+      "label": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + €0.35",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "klarna",
+      "payment_method": "klarna",
+      "payout_type": null,
+      "percentage": "2.99",
+      "presentment_currency": null,
+      "product_id": "klarna",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "5df0e1ac188f38e3",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "0c859b2feb6f2f96",
+          "text": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + €0.35"
+        }
+      ],
+      "source_text": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + €0.35",
+      "source_texts": [
+        "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + €0.35"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "299.00",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=klarna",
+        "variant=standard",
+        "payment_method=klarna",
+        "channel=online",
+        "account_country=DE",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "klarna"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "1417aa6f2dcb14a9"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "1417aa6f2dcb14a9",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.40",
+          "basis_points": null,
+          "currency": "EUR",
+          "minor_amount": "40",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "1417aa6f2dcb14a9",
+          "source_text": "Klarna Denmark, Finland, Norway, Sweden 2.99% + €0.40",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "299.00",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "1417aa6f2dcb14a9",
+          "source_text": "Klarna Denmark, Finland, Norway, Sweden 2.99% + €0.40",
+          "type": "percentage",
+          "value": "2.99"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "Klarna Denmark, Finland, Norway, Sweden 2.99% + €0.40"
+        ],
+        "source_entry_ids": [
+          "1417aa6f2dcb14a9"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "0.40",
+      "fixed_amount_minor": "40",
+      "fixed_currency": "EUR",
+      "label": "Klarna Denmark, Finland, Norway, Sweden 2.99% + €0.40",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "klarna",
+      "payment_method": "klarna",
+      "payout_type": null,
+      "percentage": "2.99",
+      "presentment_currency": null,
+      "product_id": "klarna",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "75f34133a283deeb",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "1417aa6f2dcb14a9",
+          "text": "Klarna Denmark, Finland, Norway, Sweden 2.99% + €0.40"
+        }
+      ],
+      "source_text": "Klarna Denmark, Finland, Norway, Sweden 2.99% + €0.40",
+      "source_texts": [
+        "Klarna Denmark, Finland, Norway, Sweden 2.99% + €0.40"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -13278,7 +15528,7 @@
       "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "fa8aaa67f2f392fb",
+      "rule_id": "68c65f2aa431e7af",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13343,7 +15593,9 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "9ec2e6b89c8b7e5f"
+        "9ec2e6b89c8b7e5f",
+        "dd55589fac3670d7",
+        "acd7add67ca71968"
       ],
       "currency_conversion_required": true,
       "customer_country": null,
@@ -13367,10 +15619,14 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Klarna United States, Canada + 2% if currency conversion is required"
+          "Klarna United States, Canada + 2% if currency conversion is required",
+          "Klarna Austria, Belgium, Germany, Netherlands, Switzerland + 2% if currency conversion is required",
+          "Klarna Denmark, Finland, Norway, Sweden + 2% if currency conversion is required"
         ],
         "source_entry_ids": [
-          "9ec2e6b89c8b7e5f"
+          "9ec2e6b89c8b7e5f",
+          "dd55589fac3670d7",
+          "acd7add67ca71968"
         ],
         "type": "explicit_fee_phrase"
       },
@@ -13388,17 +15644,27 @@
       "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "1939ff85d1b85cc3",
+      "rule_id": "8bc5044fecf6c6ff",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "9ec2e6b89c8b7e5f",
           "text": "Klarna United States, Canada + 2% if currency conversion is required"
+        },
+        {
+          "entry_id": "dd55589fac3670d7",
+          "text": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland + 2% if currency conversion is required"
+        },
+        {
+          "entry_id": "acd7add67ca71968",
+          "text": "Klarna Denmark, Finland, Norway, Sweden + 2% if currency conversion is required"
         }
       ],
       "source_text": "Klarna United States, Canada + 2% if currency conversion is required",
       "source_texts": [
-        "Klarna United States, Canada + 2% if currency conversion is required"
+        "Klarna United States, Canada + 2% if currency conversion is required",
+        "Klarna Austria, Belgium, Germany, Netherlands, Switzerland + 2% if currency conversion is required",
+        "Klarna Denmark, Finland, Norway, Sweden + 2% if currency conversion is required"
       ],
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -13517,7 +15783,7 @@
       "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "36cfc9dcef9c4ea8",
+      "rule_id": "7aef3c9fef01ee9f",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13641,7 +15907,7 @@
       "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "cf6fca6c0cfbfd53",
+      "rule_id": "cdaf39d2b031297c",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13758,7 +16024,7 @@
       "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "0cede36ef917e772",
+      "rule_id": "d1dc4cd5419d4477",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13887,7 +16153,7 @@
       "product_id": "billie",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "f63c619ff985b12c",
+      "rule_id": "989d2a3a313fcf68",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -13997,7 +16263,7 @@
       "product_id": "billie",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7a111de55687cf0c",
+      "rule_id": "3ffe0a5a3f6604e1",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -14112,7 +16378,7 @@
       "product_id": "scalapay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d7fcc79377a6611d",
+      "rule_id": "93bec044d3586e63",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -14184,7 +16450,7 @@
       "product_id": "scalapay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "beae98ad5bab4efc",
+      "rule_id": "5eea921f83c77ca0",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe.",
@@ -14289,7 +16555,7 @@
       "product_id": "scalapay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "50c89ea7136859d9",
+      "rule_id": "ea66a8bc27e33151",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -14404,7 +16670,7 @@
       "product_id": "multibanco",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "3e7c24025b27cb0f",
+      "rule_id": "f3d836a9ffbc6de1",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -14514,7 +16780,7 @@
       "product_id": "multibanco",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "111ee4f846feefa5",
+      "rule_id": "14532e0de1e7ba5c",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -14530,6 +16796,219 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "150.0",
+      "behavior": "additive",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=unspecified",
+        "variant=standard",
+        "channel=online",
+        "cross_border=True",
+        "transaction_region=international",
+        "account_country=DE"
+      ],
+      "classification_status": "non_calculable",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "cross_border",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
+        },
+        {
+          "dimension": "transaction_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "international"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "fcfaf4f7c90fe00c"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "fcfaf4f7c90fe00c",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "fcfaf4f7c90fe00c",
+          "source_text": "South Korean payment methods + 1.5% for international transactions",
+          "type": "percentage_surcharge",
+          "value": "1.5"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "South Korean payment methods + 1.5% for international transactions"
+        ],
+        "source_entry_ids": [
+          "fcfaf4f7c90fe00c"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "South Korean payment methods + 1.5% for international transactions",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "unspecified",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": "1.5",
+      "presentment_currency": null,
+      "product_id": "unspecified",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "9656de44a55bad56",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "fcfaf4f7c90fe00c",
+          "text": "South Korean payment methods + 1.5% for international transactions"
+        }
+      ],
+      "source_text": "South Korean payment methods + 1.5% for international transactions",
+      "source_texts": [
+        "South Korean payment methods + 1.5% for international transactions"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "DE",
+      "additional_fees": [],
+      "basis_points": "200",
+      "behavior": "additive",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=unspecified",
+        "variant=standard",
+        "channel=online",
+        "account_country=DE",
+        "currency_conversion_required=True"
+      ],
+      "classification_status": "non_calculable",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "DE"
+        },
+        {
+          "dimension": "currency_conversion_required",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "eabc103880b70c0d"
+      ],
+      "currency_conversion_required": true,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "eabc103880b70c0d",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "200",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "eabc103880b70c0d",
+          "source_text": "South Korean payment methods + 2% if currency conversion is required",
+          "type": "percentage_surcharge",
+          "value": "2"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "South Korean payment methods + 2% if currency conversion is required"
+        ],
+        "source_entry_ids": [
+          "eabc103880b70c0d"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "South Korean payment methods + 2% if currency conversion is required",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "unspecified",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": "2",
+      "presentment_currency": null,
+      "product_id": "unspecified",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "90cfde1e39c702c8",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "eabc103880b70c0d",
+          "text": "South Korean payment methods + 2% if currency conversion is required"
+        }
+      ],
+      "source_text": "South Korean payment methods + 2% if currency conversion is required",
+      "source_texts": [
+        "South Korean payment methods + 2% if currency conversion is required"
+      ],
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
       "variant_id": "standard"
     }
   ],
@@ -29813,7 +32292,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "07a175d0f71e8620ef970a2bf0def37a769ac156b60aac751c43ab6da197e278",
+      "content_sha256": "5d79735f4bfe7dbe197f3a0ce78bdb8b91bffcb98ade490bd40a3e3eb3847595",
       "detected_currency": null,
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -29829,7 +32308,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "d9b1d2a418d55b95f7f2562f9ccc2934b5b97e3350e1e1931fbeae5b920d0d68",
+      "content_sha256": "e7cdf3d7d11caa14462b7d72a312a2a3d6aa3365c43c39a755b9123cf2d253b6",
       "detected_currency": null,
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -29847,11 +32326,52 @@
   "transient_failure": false,
   "unclassified_entries": [
     {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "informational",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "b21dd9d9fee342ee",
+      "fee_category": "Security, reliability and compliance",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Security, reliability and compliance",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Security, reliability and compliance"
+      ],
+      "source_evidence": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
+      "source_order": 2,
+      "source_text": "99.999% average historical uptime",
+      "source_url": "https://stripe.com/en-de/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "9999.900",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "99.999",
+          "raw": "99.999",
+          "token_id": "55dbb96490e2bf04",
+          "value": null
+        }
+      ]
+    },
+    {
       "channel": "in_person",
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "ae5929415c9c8593",
@@ -29892,7 +32412,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "16dce6e2dcff581c",
@@ -29933,7 +32453,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "de58a957a5eaf17e",
@@ -30015,7 +32535,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "2c853bf60933c802",
@@ -30138,7 +32658,48 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "629cf10baa966b6d",
+      "fee_category": "Integrating Stripe provides a 326% return on investment",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Integrating Stripe provides a 326% return on investment",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Integrating Stripe provides a 326% return on investment"
+      ],
+      "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
+      "source_order": 88,
+      "source_text": "Integrating Stripe provides a 326% return on investment",
+      "source_url": "https://stripe.com/en-de/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "32600",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "326",
+          "raw": "326",
+          "token_id": "32ecf94effa03b3f",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "95186c9dc81044fc",
@@ -30246,7 +32807,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "5757f83f2a19ea23",
@@ -30293,7 +32854,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "54386b75d243a339",
@@ -30340,7 +32901,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "047c489dba3f0640",
@@ -30387,7 +32948,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "29aaf8149c9192da",
@@ -30532,11 +33093,66 @@
       ]
     },
     {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "custom_pricing",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "e0089ad6d0a3d267",
+      "fee_category": "SEPA Bank Transfer €0.50 per successful refund",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-de/payments/europe-bank-transfers"
+        },
+        {
+          "text": "reach out to us",
+          "uri": "https://stripe.com/en-de/contact/sales"
+        },
+        {
+          "text": "contact us",
+          "uri": "https://stripe.com/en-de/contact/sales"
+        }
+      ],
+      "payment_method": "sepa_bank_transfer",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "SEPA Bank Transfer €0.50 per successful refund"
+      ],
+      "source_evidence": "",
+      "source_order": 170,
+      "source_text": "*The fees above for bank transfers include up to 1000 free virtual bank account numbers. If you use more than 1000 VBANs, there is an additional fee of €2.00 per VBAN. Please note that there is a total limit of 50,000 VBANs per account. If you require a large number of VBANs and would like to discuss pricing, please reach out to us . If you would like to discuss volume pricing, contact us .",
+      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": "2.00",
+          "basis_points": null,
+          "currency": "EUR",
+          "exactness": "range",
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "2.00",
+          "token_id": "b423b4f4cc7a0148",
+          "value": null
+        }
+      ]
+    },
+    {
       "channel": "online",
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "2f11ce0f7fb7a8c7",
@@ -30583,7 +33199,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "0fde78992a145109",
@@ -30630,7 +33246,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "unclassified_fee_candidate",
+      "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
       "entry_id": "392a2d1759fb1dcb",

@@ -213,6 +213,11 @@
           "title": "Custom Pricing",
           "type": "integer"
         },
+        "dropped_numeric_entries": {
+          "default": 0,
+          "title": "Dropped Numeric Entries",
+          "type": "integer"
+        },
         "ignored_non_fee": {
           "default": 0,
           "title": "Ignored Non Fee",
@@ -233,9 +238,19 @@
           "title": "Numeric Fee Candidates",
           "type": "integer"
         },
+        "numeric_source_entries": {
+          "default": 0,
+          "title": "Numeric Source Entries",
+          "type": "integer"
+        },
         "reference_only": {
           "default": 0,
           "title": "Reference Only",
+          "type": "integer"
+        },
+        "referenced_numeric_entries": {
+          "default": 0,
+          "title": "Referenced Numeric Entries",
           "type": "integer"
         },
         "source_entries": {
