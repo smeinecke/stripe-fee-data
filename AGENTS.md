@@ -49,3 +49,17 @@ under the `--output` directory.
 - `crawler/tests/fixtures/de-pricing.html`
 - `crawler/tests/fixtures/de-lpm.html`
 - `crawler/tests/fixtures/jp-pricing.html`
+
+## Regeneration and publication
+
+- Regenerate all markets (strict): `cd crawler && make regenerate-strict`
+- `make validate` runs formatting, ruff, pyright, and bandit checks.
+- The crawler records its Git revision in `meta/crawler-revision.json`; strict
+  validation fails if the `crawler/` submodule points to a different commit.
+- Strict validation also fails when:
+  - derived rules exist but `core-fees.json` is empty,
+  - every derived rule for a supported market is non-calculable,
+  - a base fee is classified only as a surcharge/modifier,
+  - `change-report.json` has `has_regression: true`.
+- A stale baseline whose `change-report.json` already has `has_regression: true`
+  is overwritten with a clean report during the next crawl.
