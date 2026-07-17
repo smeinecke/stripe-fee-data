@@ -3,7 +3,7 @@
   "markets": [
     {
       "account_country": "AE",
-      "content_sha256": "8345c02c1ba753e96ecf1fc65fa341bc216e495236ba205508061addbb237bec",
+      "content_sha256": "dcc9280a0af39996cb7abeef19056fcf3c46cfddc355c19469c546a241018e07",
       "data_path": "json/AE.json",
       "derivation_status": "partial",
       "locale": "en-ae",
@@ -16,7 +16,7 @@
     },
     {
       "account_country": "AU",
-      "content_sha256": "365aec583d28fc7c11cdb5054bf29c04c43eafa53a836503d6fe093324bae7ee",
+      "content_sha256": "99a991439375ebfc953ec306fcc0179c3296920efb7b0c357cd48f6f7952360e",
       "data_path": "json/AU.json",
       "derivation_status": "partial",
       "locale": "en-au",
@@ -30,7 +30,7 @@
     },
     {
       "account_country": "BR",
-      "content_sha256": "c8b60374301623d5661d0dcf62b782b8ec8a9769420f173d61e1caeda9c9f5c5",
+      "content_sha256": "5def5ad01eb497dd55711a0782248bff52bbb8a1ee3dba64e9bfd4e29933485a",
       "data_path": "json/BR.json",
       "derivation_status": "partial",
       "locale": "en-br",
@@ -44,7 +44,7 @@
     },
     {
       "account_country": "DE",
-      "content_sha256": "7feb6547cc0a5b907233367e21273e075261f06447622b01240d38fc09e07b85",
+      "content_sha256": "662c974f9bbb2944cca096bc43d3c4377708db29fa5da02385d54598c2db5263",
       "data_path": "json/DE.json",
       "derivation_status": "partial",
       "locale": "en-de",
@@ -58,7 +58,7 @@
     },
     {
       "account_country": "GB",
-      "content_sha256": "e5e675533685f5f7c91c3a4a1a5aa11394228609a64dd7811335d3e74bc7ba09",
+      "content_sha256": "3afbbccf95dd145a434f00d16a5dcedd683cf3c1521fbf123d63d1416d4ddc12",
       "data_path": "json/GB.json",
       "derivation_status": "partial",
       "locale": "en-gb",
@@ -83,7 +83,7 @@
     },
     {
       "account_country": "IN",
-      "content_sha256": "f7d155fa8fb62badb1959e6646178ea234d78c2d893060e195d9d28aaa6efdc2",
+      "content_sha256": "a577aca3fa1a67556c3af5c2df0035047b6aaccdf3d5c35f6641c3ab02f13551",
       "data_path": "json/IN.json",
       "derivation_status": "partial",
       "locale": "en-in",
@@ -96,7 +96,7 @@
     },
     {
       "account_country": "JP",
-      "content_sha256": "dde6185ae016db94dc13ade1e9c5b8376139b52a12c1fc0c4de95b2e30248c08",
+      "content_sha256": "701d425b21638dbf90d1a2975e802d5b226b79f87063fa87f3bbba7651c615e5",
       "data_path": "json/JP.json",
       "derivation_status": "partial",
       "locale": "en-jp",
@@ -110,7 +110,7 @@
     },
     {
       "account_country": "US",
-      "content_sha256": "fb2923a6f1fa2b084d1478b400998193cba9f1e5a81ae15525ccd691370cc952",
+      "content_sha256": "1ef26f05c2a4a1fc2a79352da0423642c05796b72dfb5729fc64afb548df0f53",
       "data_path": "json/US.json",
       "derivation_status": "partial",
       "locale": "en-us",

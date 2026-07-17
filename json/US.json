@@ -4120,7 +4120,7 @@
       "section_path": [
         "Payments"
       ],
-      "source_evidence": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
+      "source_evidence": "An online payments platform engineered for growth.\nSign up with Payments\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
       "source_order": 27,
       "source_text": "Increase customer acquisition with 100+ payment methods.",
       "source_url": "https://stripe.com/pricing",
@@ -7821,7 +7821,7 @@
       "section_path": [
         "Financial Connections"
       ],
-      "source_evidence": "Secure access to users’ financial accounts.\nMaximize conversion with an embedded authentication flow.\nInstantly verify bank accounts from 5,000 financial institutions.\nReduce development time with a single integration.",
+      "source_evidence": "Secure access to users’ financial accounts.\nSign up with Financial Connections\nMaximize conversion with an embedded authentication flow.\nInstantly verify bank accounts from 5,000 financial institutions.\nReduce development time with a single integration.",
       "source_order": 99,
       "source_text": "Instantly verify bank accounts from 5,000 financial institutions.",
       "source_url": "https://stripe.com/pricing",
@@ -8117,7 +8117,7 @@
       "section_path": [
         "Atlas"
       ],
-      "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
+      "source_evidence": "Software to quickly incorporate your startup.\nSign up with Atlas\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
       "source_order": 107,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/pricing",
@@ -10425,7 +10425,7 @@
       "source_order": 0
     },
     {
-      "body": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
+      "body": "An online payments platform engineered for growth.\nSign up with Payments\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
       "heading": "Payments",
       "level": 1,
       "links": [],
@@ -10889,7 +10889,7 @@
       "source_order": 42
     },
     {
-      "body": "No-code links to sell online without a website.\nAccept payments in minutes by generating no-code links.\nSell products, offer subscriptions, and more.\nCreate at scale via our API to automate marketing campaigns and sales operations.",
+      "body": "No-code links to sell online without a website.\nSign up with Payment Links\nAccept payments in minutes by generating no-code links.\nSell products, offer subscriptions, and more.\nCreate at scale via our API to automate marketing campaigns and sales operations.",
       "heading": "Payment Links",
       "level": 1,
       "links": [],
@@ -10933,7 +10933,7 @@
       "source_order": 50
     },
     {
-      "body": "Prebuilt payment form optimized for conversion.\nSave engineering time and get started quickly.\nReduce friction with features designed to improve conversion.\nCustomize with your branding.",
+      "body": "Prebuilt payment form optimized for conversion.\nSign up with Checkout\nSave engineering time and get started quickly.\nReduce friction with features designed to improve conversion.\nCustomize with your branding.",
       "heading": "Checkout",
       "level": 1,
       "links": [],
@@ -10977,7 +10977,7 @@
       "source_order": 50
     },
     {
-      "body": "Stripe’s merchant of record solution that simplifies global selling.\nQuickly launch or expand your businesses worldwide with no additional setup.\nOffload tax compliance, fraud, disputes, and customer support responsibilities.\nUse Managed Payments for all your transactions or just for specific markets and products.",
+      "body": "Stripe’s merchant of record solution that simplifies global selling.\nSign up with Managed Payments\nQuickly launch or expand your businesses worldwide with no additional setup.\nOffload tax compliance, fraud, disputes, and customer support responsibilities.\nUse Managed Payments for all your transactions or just for specific markets and products.",
       "heading": "Managed Payments",
       "level": 1,
       "links": [],
@@ -10999,7 +10999,7 @@
       "source_order": 52
     },
     {
-      "body": "Tools to accept in-person payments and unify commerce.\nBuild a custom checkout or integrate with hundreds of third-party POS systems.\nStreamline hardware logistics with pre-certified Stripe or select 3P card readers.\nUnify online and in-person payments to create a cohesive customer experience.\nScale globally with one integration.",
+      "body": "Tools to accept in-person payments and unify commerce.\nSign up with Terminal\nBuild a custom checkout or integrate with hundreds of third-party POS systems.\nStreamline hardware logistics with pre-certified Stripe or select 3P card readers.\nUnify online and in-person payments to create a cohesive customer experience.\nScale globally with one integration.",
       "heading": "Terminal",
       "level": 1,
       "links": [],
@@ -11043,7 +11043,7 @@
       "source_order": 56
     },
     {
-      "body": "AI-powered fraud and abuse protection.\nReduce fraud across payment methods with AI powered by the Stripe network.\nFlag and prevent suspicious accounts from joining your platform.\nStay ahead of emerging fraud and stop abuse across the entire customer lifecycle.\nGet started with zero integration, or access Radar’s intelligence via API.",
+      "body": "AI-powered fraud and abuse protection.\nSign up with Radar\nReduce fraud across payment methods with AI powered by the Stripe network.\nFlag and prevent suspicious accounts from joining your platform.\nStay ahead of emerging fraud and stop abuse across the entire customer lifecycle.\nGet started with zero integration, or access Radar’s intelligence via API.",
       "heading": "Radar",
       "level": 1,
       "links": [],
@@ -11098,7 +11098,7 @@
       "source_order": 61
     },
     {
-      "body": "Embedded payments for platforms and marketplaces.\nLaunch faster with Stripe-hosted or prebuilt embedded components.\nSave time by using tooling from Stripe for onboarding, risk, tax forms and more.\nGrow revenue by monetizing payments.",
+      "body": "Embedded payments for platforms and marketplaces.\nSign up with Connect\nLaunch faster with Stripe-hosted or prebuilt embedded components.\nSave time by using tooling from Stripe for onboarding, risk, tax forms and more.\nGrow revenue by monetizing payments.",
       "heading": "Connect",
       "level": 1,
       "links": [],
@@ -11186,7 +11186,7 @@
       "source_order": 69
     },
     {
-      "body": "Securely send money to third parties in minutes\nSave time with no-code and hosted solutions.\nProvide Dashboard access to developers and support teams.\nGet reporting and analytics to track payouts success globally.",
+      "body": "Securely send money to third parties in minutes\nSign up with Global Payouts\nSave time with no-code and hosted solutions.\nProvide Dashboard access to developers and support teams.\nGet reporting and analytics to track payouts success globally.",
       "heading": "Global Payouts",
       "level": 1,
       "links": [],
@@ -11274,7 +11274,7 @@
       "source_order": 77
     },
     {
-      "body": "Subscription management software for recurring revenue models² and one-time billing.\nRespond to user demand faster with flexible pricing models.\nIncrease revenue and reduce churn with Smart Retries and recovery workflow automations.\nSave engineering time with no-code tools or our composable APIs.\nChoose a plan",
+      "body": "Subscription management software for recurring revenue models² and one-time billing.\nSign up with Billing\nRespond to user demand faster with flexible pricing models.\nIncrease revenue and reduce churn with Smart Retries and recovery workflow automations.\nSave engineering time with no-code tools or our composable APIs.\nChoose a plan",
       "heading": "Billing",
       "level": 1,
       "links": [],
@@ -11340,7 +11340,7 @@
       "source_order": 83
     },
     {
-      "body": "Global invoicing software.\nCreate, customize, and send an invoice in minutes—no code required.\nSave time with automated accounts receivable and invoicing workflows.\nConfigure invoices for any use case.",
+      "body": "Global invoicing software.\nSign up with Invoicing\nCreate, customize, and send an invoice in minutes—no code required.\nSave time with automated accounts receivable and invoicing workflows.\nConfigure invoices for any use case.",
       "heading": "Invoicing",
       "level": 1,
       "links": [],
@@ -11362,7 +11362,7 @@
       "source_order": 85
     },
     {
-      "body": "Grow faster with global, all-in-one tax compliance.\nGet compliant quickly with no-code and low-code setups.\nReceive alerts when you reach a sales tax, VAT, or GST threshold and need to collect taxes.\nScale with confidence by automating tax calculations and collections in 100+ countries.\nIncrease your finance team’s efficiency by easily registering and filing taxes in 90+ countries.\nChoose a plan",
+      "body": "Grow faster with global, all-in-one tax compliance.\nSign up with Tax\nGet compliant quickly with no-code and low-code setups.\nReceive alerts when you reach a sales tax, VAT, or GST threshold and need to collect taxes.\nScale with confidence by automating tax calculations and collections in 100+ countries.\nIncrease your finance team’s efficiency by easily registering and filing taxes in 90+ countries.\nChoose a plan",
       "heading": "Tax",
       "level": 1,
       "links": [],
@@ -11395,7 +11395,7 @@
       "source_order": 88
     },
     {
-      "body": "An interactive SQL environment for analyzing your Stripe data and creating custom reports.\nGet faster, more comprehensive insights using SQL or AI-powered natural language prompts.\nMake confident, data-driven decisions with fully customizable reporting.\nKeep teams in sync and save time with scheduled reports.",
+      "body": "An interactive SQL environment for analyzing your Stripe data and creating custom reports.\nSign up with Stripe Sigma\nGet faster, more comprehensive insights using SQL or AI-powered natural language prompts.\nMake confident, data-driven decisions with fully customizable reporting.\nKeep teams in sync and save time with scheduled reports.",
       "heading": "Stripe Sigma",
       "level": 1,
       "links": [],
@@ -11428,7 +11428,7 @@
       "source_order": 97
     },
     {
-      "body": "Send Stripe data and reports directly to your data warehouse or cloud storage.\nIncludes access to Stripe Sigma.\nSet up your pipeline in minutes, and automate data delivery—no code required.\nSpeed up your financial close, and access more complete business insights.\nGet insights faster and fully customizable reporting with Stripe Sigma.",
+      "body": "Send Stripe data and reports directly to your data warehouse or cloud storage.\nIncludes access to Stripe Sigma.\nSign up with Data Pipeline\nSet up your pipeline in minutes, and automate data delivery—no code required.\nSpeed up your financial close, and access more complete business insights.\nGet insights faster and fully customizable reporting with Stripe Sigma.",
       "heading": "Data Pipeline",
       "level": 1,
       "links": [],
@@ -11461,7 +11461,7 @@
       "source_order": 94
     },
     {
-      "body": "Automated revenue reporting to streamline accrual accounting.\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.\nChoose a plan",
+      "body": "Automated revenue reporting to streamline accrual accounting.\nSign up with Revenue Recognition\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.\nChoose a plan",
       "heading": "Revenue Recognition",
       "level": 1,
       "links": [],
@@ -11505,7 +11505,7 @@
       "source_order": 98
     },
     {
-      "body": "Secure access to users’ financial accounts.\nMaximize conversion with an embedded authentication flow.\nInstantly verify bank accounts from 5,000 financial institutions.\nReduce development time with a single integration.",
+      "body": "Secure access to users’ financial accounts.\nSign up with Financial Connections\nMaximize conversion with an embedded authentication flow.\nInstantly verify bank accounts from 5,000 financial institutions.\nReduce development time with a single integration.",
       "heading": "Financial Connections",
       "level": 1,
       "links": [],
@@ -11560,7 +11560,7 @@
       "source_order": 103
     },
     {
-      "body": "Verification tools that confirm the identity of global users.\nReduce fraud losses by identifying high-risk users.\nStreamline a crucial part of your KYC compliance requirements.\nSave engineering and ops time with centralized ID verification.",
+      "body": "Verification tools that confirm the identity of global users.\nSign up with Identity\nReduce fraud losses by identifying high-risk users.\nStreamline a crucial part of your KYC compliance requirements.\nSave engineering and ops time with centralized ID verification.",
       "heading": "Identity",
       "level": 1,
       "links": [],
@@ -11593,7 +11593,7 @@
       "source_order": 106
     },
     {
-      "body": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
+      "body": "Software to quickly incorporate your startup.\nSign up with Atlas\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
       "heading": "Atlas",
       "level": 1,
       "links": [],
@@ -11615,7 +11615,7 @@
       "source_order": 108
     },
     {
-      "body": "Tools to remove carbon as you grow your business.\nSupport promising permanent carbon removal technologies.\nGet started in just a few clicks with the Dashboard.",
+      "body": "Tools to remove carbon as you grow your business.\nSign up with Climate\nSupport promising permanent carbon removal technologies.\nGet started in just a few clicks with the Dashboard.",
       "heading": "Climate",
       "level": 1,
       "links": [],
@@ -11637,7 +11637,7 @@
       "source_order": 110
     },
     {
-      "body": "Automate tasks and create custom flows, without writing code.\nAutomate business processes with 600+ event triggers.\nEliminate boilerplate code with visual workflow builder.\nExtend Stripe capabilities by connecting third-party applications.\nMonitor and debug with built-in logging and versioning.",
+      "body": "Automate tasks and create custom flows, without writing code.\nSign up with Workflows\nAutomate business processes with 600+ event triggers.\nEliminate boilerplate code with visual workflow builder.\nExtend Stripe capabilities by connecting third-party applications.\nMonitor and debug with built-in logging and versioning.",
       "heading": "Workflows",
       "level": 1,
       "links": [],
@@ -12783,7 +12783,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/pricing",
-      "content_sha256": "fb64b1e1c99debf28cabb9a55d76a034d0f5fe409a9af37f7dbc800ddf842f59",
+      "content_sha256": "93ffbea991965fc739efd6ff82c0080582149920a5cc7dc26d3a6102a5a15789",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Guide me Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Terminal In-person payments Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Treasury Business finances Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms Capital for platforms Customer financing Treasury for platforms Embedded financial services Issuing Physical and virtual cards More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Identity Online identity verification Financial Connections Linked financial account data Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Iss",
       "last_modified": null,
@@ -12795,7 +12795,7 @@
     },
     {
       "canonical_url": "https://stripe.com/pricing/local-payment-methods",
-      "content_sha256": "1a0772f4ee2cd163f649eba6a21046e9e82bb7ee91a99e5a233b51f26bfa7125",
+      "content_sha256": "0dd5d078eddd266b9d2ffb0629052ccd7d2ab448fdd6840da942070fbf9ca85e",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Local payment methods pricing Stripe logo Stripe logo Back Guide me Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Terminal In-person payments Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Treasury Business finances Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms Capital for platforms Customer financing Treasury for platforms Embedded financial services Issuing Physical and virtual cards More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Identity Online identity verification Financial Connections Linked financial account data Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-ba",
       "last_modified": null,
@@ -12827,7 +12827,7 @@
       "section_path": [
         "Payments"
       ],
-      "source_evidence": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
+      "source_evidence": "An online payments platform engineered for growth.\nSign up with Payments\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
       "source_order": 27,
       "source_text": "Increase customer acquisition with 100+ payment methods.",
       "source_url": "https://stripe.com/pricing",
@@ -14778,7 +14778,7 @@
       "section_path": [
         "Financial Connections"
       ],
-      "source_evidence": "Secure access to users’ financial accounts.\nMaximize conversion with an embedded authentication flow.\nInstantly verify bank accounts from 5,000 financial institutions.\nReduce development time with a single integration.",
+      "source_evidence": "Secure access to users’ financial accounts.\nSign up with Financial Connections\nMaximize conversion with an embedded authentication flow.\nInstantly verify bank accounts from 5,000 financial institutions.\nReduce development time with a single integration.",
       "source_order": 99,
       "source_text": "Instantly verify bank accounts from 5,000 financial institutions.",
       "source_url": "https://stripe.com/pricing",
@@ -15051,7 +15051,7 @@
       "section_path": [
         "Atlas"
       ],
-      "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
+      "source_evidence": "Software to quickly incorporate your startup.\nSign up with Atlas\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
       "source_order": 107,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/pricing",
