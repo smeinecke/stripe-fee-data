@@ -2,16 +2,16 @@
   "calculator_coverage_status": "partial",
   "coverage_summary": {
     "ambiguous_entries": 0,
-    "calculable_rules": 20,
+    "calculable_rules": 16,
     "conflicting_rule_identities": 0,
-    "custom_pricing": 13,
+    "custom_pricing": 9,
     "ignored_non_fee": 0,
     "included": 0,
-    "non_calculable_rules": 11,
-    "numeric_fee_candidates": 5,
+    "non_calculable_rules": 18,
+    "numeric_fee_candidates": 10,
     "reference_only": 0,
-    "source_entries": 98,
-    "unclassified_fee_candidates": 5,
+    "source_entries": 107,
+    "unclassified_fee_candidates": 16,
     "unsupported_fee_shapes": 0
   },
   "derivation_status": "partial",
@@ -63,6 +63,16 @@
           "value": "3.6"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "3.6%"
+        ],
+        "source_entry_ids": [
+          "453f1d91e3f64525"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -88,85 +98,6 @@
       "source_text": "3.6%",
       "source_texts": [
         "3.6%"
-      ],
-      "source_url": "https://stripe.com/en-jp/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "JP",
-      "additional_fees": [],
-      "basis_points": "9999.900",
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "product=platform",
-        "variant=standard",
-        "account_country=JP"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "JP"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "586b716e998824c6"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "586b716e998824c6",
-      "exactness": "range",
-      "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "9999.900",
-          "currency": null,
-          "minor_amount": null,
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "586b716e998824c6",
-          "source_text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-          "type": "percentage",
-          "value": "99.999"
-        }
-      ],
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "platform",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": "99.999",
-      "presentment_currency": null,
-      "product_id": "platform",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "4ca5550ee2b8c2ee",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "586b716e998824c6",
-          "text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
-        }
-      ],
-      "source_text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "source_texts": [
-        "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
       ],
       "source_url": "https://stripe.com/en-jp/pricing",
       "transaction_amount_max": null,
@@ -249,6 +180,16 @@
           "value": "3.24"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "3.24% per successful transaction"
+        ],
+        "source_entry_ids": [
+          "1178e52a61eb956e"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -299,7 +240,7 @@
         "card_origin=domestic",
         "account_country=JP"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -326,7 +267,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "5a688f5a732b091f"
       ],
@@ -349,6 +290,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "+ ¥18"
+        ],
+        "source_entry_ids": [
+          "5a688f5a732b091f"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -447,6 +398,16 @@
           "value": "3.6"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "3.6% Minimum fee of ¥120"
+        ],
+        "source_entry_ids": [
+          "165eec02dc3832be"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -510,14 +471,14 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.75,
       "contributing_entry_ids": [
-        "746ec28dfe8d724d"
+        "8158608c0ed7d253"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "746ec28dfe8d724d",
+      "entry_id": "8158608c0ed7d253",
       "exactness": "exact",
       "fee_components": [
         {
@@ -527,7 +488,7 @@
           "minor_amount": "250",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "746ec28dfe8d724d",
+          "source_entry_id": "8158608c0ed7d253",
           "source_text": "¥250 + 10% consumption tax for refunds",
           "type": "fixed_amount",
           "value": null
@@ -539,12 +500,22 @@
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "746ec28dfe8d724d",
+          "source_entry_id": "8158608c0ed7d253",
           "source_text": "¥250 + 10% consumption tax for refunds",
           "type": "percentage",
           "value": "10"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "¥250 + 10% consumption tax for refunds"
+        ],
+        "source_entry_ids": [
+          "8158608c0ed7d253"
+        ],
+        "type": "pricing_table_value"
+      },
       "fixed_amount": "250",
       "fixed_amount_minor": "250",
       "fixed_currency": "JPY",
@@ -559,11 +530,11 @@
       "product_id": "refunds",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d4a3b40541bfbe8b",
+      "rule_id": "ae90fae2374b8fa2",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "746ec28dfe8d724d",
+          "entry_id": "8158608c0ed7d253",
           "text": "¥250 + 10% consumption tax for refunds"
         }
       ],
@@ -571,7 +542,7 @@
       "source_texts": [
         "¥250 + 10% consumption tax for refunds"
       ],
-      "source_url": "https://stripe.com/en-jp/pricing",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
@@ -631,6 +602,16 @@
           "value": "3.98"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "3.98% per successful transaction For digital content businesses"
+        ],
+        "source_entry_ids": [
+          "fc484ddeb676ce63"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -678,7 +659,7 @@
         "variant=online_domestic_cards",
         "account_country=JP"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -687,7 +668,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "61adaf4bd16c523a"
       ],
@@ -710,6 +691,16 @@
           "value": "1.5"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "1.5%"
+        ],
+        "source_entry_ids": [
+          "61adaf4bd16c523a"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -801,6 +792,16 @@
           "value": "10"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "¥250 + 10% consumption tax for refunds"
+        ],
+        "source_entry_ids": [
+          "cc0ecbc27a9dc34c"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "250",
       "fixed_amount_minor": "250",
       "fixed_currency": "JPY",
@@ -849,7 +850,7 @@
         "account_country=JP",
         "transaction_type=dispute"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -864,7 +865,7 @@
           "value": "dispute"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "45d1f7e856315576"
       ],
@@ -887,6 +888,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "¥1,500"
+        ],
+        "source_entry_ids": [
+          "45d1f7e856315576"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "1.500",
       "fixed_amount_minor": "1",
       "fixed_currency": "JPY",
@@ -982,6 +993,20 @@
           "value": "30"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "30%",
+          "Included with Payments",
+          "Included at no additional charge for businesses on standard payments pricing"
+        ],
+        "source_entry_ids": [
+          "50783c5ffb37cee3",
+          "27467a01b148e84b",
+          "67241d4ae5e42bba"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1042,7 +1067,7 @@
         "card_origin=domestic",
         "account_country=JP"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -1069,7 +1094,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "a02d9126958a3e00"
       ],
@@ -1092,6 +1117,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "¥3"
+        ],
+        "source_entry_ids": [
+          "a02d9126958a3e00"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "3",
       "fixed_amount_minor": "3",
       "fixed_currency": "JPY",
@@ -1147,6 +1182,16 @@
       "entry_id": "bce7cbd9f0954af6",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "bce7cbd9f0954af6"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1197,6 +1242,16 @@
       "entry_id": "b31be03a99f49054",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "b31be03a99f49054"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1271,6 +1326,16 @@
           "value": "2"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "2%"
+        ],
+        "source_entry_ids": [
+          "932599e79965b412"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1326,6 +1391,16 @@
       "entry_id": "5a9c62ba056b0144",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "5a9c62ba056b0144"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1400,6 +1475,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "$10.00"
+        ],
+        "source_entry_ids": [
+          "301ff6fa704cd1ff"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "10.00",
       "fixed_amount_minor": "1000",
       "fixed_currency": "USD",
@@ -1447,7 +1532,7 @@
         "variant=standard",
         "account_country=JP"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -1456,7 +1541,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "b3c9c0469c0639c4"
       ],
@@ -1479,6 +1564,16 @@
           "value": "0.4"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "0.4%"
+        ],
+        "source_entry_ids": [
+          "b3c9c0469c0639c4"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1558,6 +1653,16 @@
           "value": "3.5"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "3.5% per successful Managed Payments transaction in addition to Payments fees"
+        ],
+        "source_entry_ids": [
+          "5551dd4f77369fb8"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1613,6 +1718,16 @@
       "entry_id": "42e448bbd996a95a",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "42e448bbd996a95a"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1655,7 +1770,7 @@
         "variant=standard",
         "account_country=JP"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -1664,7 +1779,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "8b63f82dc2401bfb"
       ],
@@ -1687,6 +1802,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "¥5"
+        ],
+        "source_entry_ids": [
+          "8b63f82dc2401bfb"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "5",
       "fixed_amount_minor": "5",
       "fixed_currency": "JPY",
@@ -1749,6 +1874,16 @@
       "entry_id": "43cbbbd58d3bdf21",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "43cbbbd58d3bdf21"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1775,113 +1910,6 @@
       "transaction_amount_min": null,
       "unit": "informational",
       "variant_id": "standard"
-    },
-    {
-      "account_country": "JP",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": "domestic",
-      "card_tier": null,
-      "channel": "in_person",
-      "classification_evidence": [
-        "product=terminal",
-        "variant=domestic_cards",
-        "payment_method=card",
-        "channel=in_person",
-        "card_region=domestic",
-        "card_origin=domestic",
-        "account_country=JP"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "payment_method",
-          "evidence": null,
-          "operator": "eq",
-          "value": "card"
-        },
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "in_person"
-        },
-        {
-          "dimension": "card_region",
-          "evidence": null,
-          "operator": "eq",
-          "value": "domestic"
-        },
-        {
-          "dimension": "card_origin",
-          "evidence": null,
-          "operator": "eq",
-          "value": "domestic"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "JP"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "868ef67d7f137670"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "868ef67d7f137670",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "10.480",
-          "basis_points": null,
-          "currency": "JPY",
-          "minor_amount": "10",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "868ef67d7f137670",
-          "source_text": "¥10,480",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fixed_amount": "10.480",
-      "fixed_amount_minor": "10",
-      "fixed_currency": "JPY",
-      "label": "¥10,480",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "terminal",
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "terminal",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "298a5fe50658823f",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "868ef67d7f137670",
-          "text": "¥10,480"
-        }
-      ],
-      "source_text": "¥10,480",
-      "source_texts": [
-        "¥10,480"
-      ],
-      "source_url": "https://stripe.com/en-jp/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_transaction",
-      "variant_id": "domestic_cards"
     },
     {
       "account_country": "JP",
@@ -1930,6 +1958,16 @@
           "value": "0.4"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "0.4% per paid invoice"
+        ],
+        "source_entry_ids": [
+          "1d455270a160d3ff"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1978,7 +2016,7 @@
         "channel=online",
         "account_country=JP"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "channel",
@@ -1993,7 +2031,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "f67216c8f8c98cf6"
       ],
@@ -2016,6 +2054,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "¥65"
+        ],
+        "source_entry_ids": [
+          "f67216c8f8c98cf6"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "65",
       "fixed_amount_minor": "65",
       "fixed_currency": "JPY",
@@ -2047,85 +2095,6 @@
       "transaction_amount_min": null,
       "unit": "per_transaction",
       "variant_id": "online_domestic_cards"
-    },
-    {
-      "account_country": "JP",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=ach_direct_debit",
-        "variant=standard",
-        "account_country=JP"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "JP"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "95186c9dc81044fc"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "95186c9dc81044fc",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "1",
-          "basis_points": null,
-          "currency": "USD",
-          "minor_amount": "100",
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "95186c9dc81044fc",
-          "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fixed_amount": "1",
-      "fixed_amount_minor": "100",
-      "fixed_currency": "USD",
-      "label": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "ach_direct_debit",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "ach_direct_debit",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "bf266cf09be2deb0",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "95186c9dc81044fc",
-          "text": "100+ category leaders each process more than $1 billion per year on Stripe."
-        }
-      ],
-      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "source_texts": [
-        "100+ category leaders each process more than $1 billion per year on Stripe."
-      ],
-      "source_url": "https://stripe.com/en-jp/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "yearly",
-      "variant_id": "standard"
     },
     {
       "account_country": "JP",
@@ -2181,6 +2150,16 @@
           "value": "10"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "See how Twilio increased authorization rates by 10% with Stripe"
+        ],
+        "source_entry_ids": [
+          "edda7a9b0ce47913"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -2224,6 +2203,116 @@
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
+        "product=alipay",
+        "variant=standard",
+        "payment_method=alipay",
+        "account_country=JP",
+        "success=True",
+        "transaction_type=charge"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "alipay"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        },
+        {
+          "dimension": "success",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "charge"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "ac32adb8d0a1000e"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "ac32adb8d0a1000e",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "360.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "ac32adb8d0a1000e",
+          "source_text": "Alipay 3.6% per successful charge per successful charge",
+          "type": "percentage",
+          "value": "3.6"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Alipay 3.6% per successful charge per successful charge"
+        ],
+        "source_entry_ids": [
+          "ac32adb8d0a1000e"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Alipay 3.6% per successful charge per successful charge",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "alipay",
+      "payment_method": "alipay",
+      "payout_type": null,
+      "percentage": "3.6",
+      "presentment_currency": null,
+      "product_id": "alipay",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "f49ac4717cc2f158",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "ac32adb8d0a1000e",
+          "text": "Alipay 3.6% per successful charge per successful charge"
+        }
+      ],
+      "source_text": "Alipay 3.6% per successful charge per successful charge",
+      "source_texts": [
+        "Alipay 3.6% per successful charge per successful charge"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_charge",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
+      "basis_points": "360.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
         "product=payments",
         "variant=online_domestic_cards",
         "account_country=JP",
@@ -2253,12 +2342,12 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "cf4235ec3d861132"
+        "94d1a0e1cdfdbd8b"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "cf4235ec3d861132",
+      "entry_id": "94d1a0e1cdfdbd8b",
       "exactness": "exact",
       "fee_components": [
         {
@@ -2268,16 +2357,26 @@
           "minor_amount": null,
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "cf4235ec3d861132",
-          "source_text": "Apple Pay 3.6% per successful charge",
+          "source_entry_id": "94d1a0e1cdfdbd8b",
+          "source_text": "Apple Pay 3.6% per successful charge per successful charge",
           "type": "percentage",
           "value": "3.6"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Apple Pay 3.6% per successful charge per successful charge"
+        ],
+        "source_entry_ids": [
+          "94d1a0e1cdfdbd8b"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "Apple Pay 3.6% per successful charge",
+      "label": "Apple Pay 3.6% per successful charge per successful charge",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "payments",
@@ -2288,23 +2387,133 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7bd9a821a86a9361",
+      "rule_id": "960fd4b074ae9461",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "cf4235ec3d861132",
-          "text": "Apple Pay 3.6% per successful charge"
+          "entry_id": "94d1a0e1cdfdbd8b",
+          "text": "Apple Pay 3.6% per successful charge per successful charge"
         }
       ],
-      "source_text": "Apple Pay 3.6% per successful charge",
+      "source_text": "Apple Pay 3.6% per successful charge per successful charge",
       "source_texts": [
-        "Apple Pay 3.6% per successful charge"
+        "Apple Pay 3.6% per successful charge per successful charge"
       ],
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_charge",
       "variant_id": "online_domestic_cards"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
+      "basis_points": "360.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=wechat_pay",
+        "variant=standard",
+        "payment_method=wechat_pay",
+        "account_country=JP",
+        "success=True",
+        "transaction_type=charge"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "wechat_pay"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        },
+        {
+          "dimension": "success",
+          "evidence": null,
+          "operator": "eq",
+          "value": true
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "charge"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "655c635ff062ff8b"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "655c635ff062ff8b",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "360.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "655c635ff062ff8b",
+          "source_text": "WeChat Pay 3.6% per successful charge per successful charge",
+          "type": "percentage",
+          "value": "3.6"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "WeChat Pay 3.6% per successful charge per successful charge"
+        ],
+        "source_entry_ids": [
+          "655c635ff062ff8b"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "WeChat Pay 3.6% per successful charge per successful charge",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "wechat_pay",
+      "payment_method": "wechat_pay",
+      "payout_type": null,
+      "percentage": "3.6",
+      "presentment_currency": null,
+      "product_id": "wechat_pay",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "99b69c8b28f015bf",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "655c635ff062ff8b",
+          "text": "WeChat Pay 3.6% per successful charge per successful charge"
+        }
+      ],
+      "source_text": "WeChat Pay 3.6% per successful charge per successful charge",
+      "source_texts": [
+        "WeChat Pay 3.6% per successful charge per successful charge"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_charge",
+      "variant_id": "standard"
     },
     {
       "account_country": "JP",
@@ -2339,12 +2548,12 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "ab937e99b26cde50"
+        "abea763852750d72"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "ab937e99b26cde50",
+      "entry_id": "abea763852750d72",
       "exactness": "exact",
       "fee_components": [
         {
@@ -2354,16 +2563,26 @@
           "minor_amount": null,
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "ab937e99b26cde50",
-          "source_text": "PayPay 3.98% per successful transaction",
+          "source_entry_id": "abea763852750d72",
+          "source_text": "PayPay 3.98% per successful transaction per successful transaction",
           "type": "percentage",
           "value": "3.98"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "PayPay 3.98% per successful transaction per successful transaction"
+        ],
+        "source_entry_ids": [
+          "abea763852750d72"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "PayPay 3.98% per successful transaction",
+      "label": "PayPay 3.98% per successful transaction per successful transaction",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "payments",
@@ -2374,17 +2593,17 @@
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "9497e4961ed9e065",
+      "rule_id": "66b113a66d0cba8f",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "ab937e99b26cde50",
-          "text": "PayPay 3.98% per successful transaction"
+          "entry_id": "abea763852750d72",
+          "text": "PayPay 3.98% per successful transaction per successful transaction"
         }
       ],
-      "source_text": "PayPay 3.98% per successful transaction",
+      "source_text": "PayPay 3.98% per successful transaction per successful transaction",
       "source_texts": [
-        "PayPay 3.98% per successful transaction"
+        "PayPay 3.98% per successful transaction per successful transaction"
       ],
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -2395,7 +2614,115 @@
     {
       "account_country": "JP",
       "additional_fees": [],
-      "basis_points": "1000",
+      "basis_points": "140.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=bancontact",
+        "variant=standard",
+        "payment_method=bancontact",
+        "account_country=JP"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "bancontact"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "06c9ead0e8949f53"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "06c9ead0e8949f53",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "35",
+          "basis_points": null,
+          "currency": "JPY",
+          "minor_amount": "35",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "06c9ead0e8949f53",
+          "source_text": "Bancontact 1.4% + ¥35",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "140.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "06c9ead0e8949f53",
+          "source_text": "Bancontact 1.4% + ¥35",
+          "type": "percentage",
+          "value": "1.4"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "Bancontact 1.4% + ¥35"
+        ],
+        "source_entry_ids": [
+          "06c9ead0e8949f53"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "35",
+      "fixed_amount_minor": "35",
+      "fixed_currency": "JPY",
+      "label": "Bancontact 1.4% + ¥35",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "bancontact",
+      "payment_method": "bancontact",
+      "payout_type": null,
+      "percentage": "1.4",
+      "presentment_currency": null,
+      "product_id": "bancontact",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "20fdd25dea51cdc0",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "06c9ead0e8949f53",
+          "text": "Bancontact 1.4% + ¥35"
+        }
+      ],
+      "source_text": "Bancontact 1.4% + ¥35",
+      "source_texts": [
+        "Bancontact 1.4% + ¥35"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
+      "basis_points": "150.0",
       "behavior": "alternative",
       "billing_type": null,
       "card_origin": "domestic",
@@ -2408,7 +2735,7 @@
         "payment_method=bank_transfer",
         "account_country=JP"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -2423,14 +2750,14 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
-        "65398246743e8b73"
+        "06720b438a20b42a"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "65398246743e8b73",
+      "entry_id": "06720b438a20b42a",
       "exactness": "exact",
       "fee_components": [
         {
@@ -2440,10 +2767,22 @@
           "minor_amount": "250",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "65398246743e8b73",
-          "source_text": "¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "06720b438a20b42a",
+          "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
           "type": "fixed_amount",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "06720b438a20b42a",
+          "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+          "type": "percentage",
+          "value": "1.5"
         },
         {
           "amount": null,
@@ -2452,37 +2791,47 @@
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "65398246743e8b73",
-          "source_text": "¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "06720b438a20b42a",
+          "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
           "type": "percentage",
           "value": "10"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+        ],
+        "source_entry_ids": [
+          "06720b438a20b42a"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "250",
       "fixed_amount_minor": "250",
       "fixed_currency": "JPY",
-      "label": "¥250 + 10% consumption tax for refunds",
+      "label": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "refunds",
       "payment_method": "bank_transfer",
       "payout_type": null,
-      "percentage": "10",
+      "percentage": "1.5",
       "presentment_currency": null,
       "product_id": "refunds",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "beae145e98fbd6e8",
+      "rule_id": "0b4b1a9c4f1eabd5",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "65398246743e8b73",
-          "text": "¥250 + 10% consumption tax for refunds"
+          "entry_id": "06720b438a20b42a",
+          "text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
         }
       ],
-      "source_text": "¥250 + 10% consumption tax for refunds",
+      "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
       "source_texts": [
-        "¥250 + 10% consumption tax for refunds"
+        "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
       ],
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -2493,8 +2842,224 @@
     {
       "account_country": "JP",
       "additional_fees": [],
-      "basis_points": null,
-      "behavior": "alternative",
+      "basis_points": "160.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=eps",
+        "variant=standard",
+        "payment_method=eps",
+        "account_country=JP"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "eps"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "33f9fd22e9bd91d4"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "33f9fd22e9bd91d4",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "35",
+          "basis_points": null,
+          "currency": "JPY",
+          "minor_amount": "35",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "33f9fd22e9bd91d4",
+          "source_text": "EPS 1.6% + ¥35",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "160.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "33f9fd22e9bd91d4",
+          "source_text": "EPS 1.6% + ¥35",
+          "type": "percentage",
+          "value": "1.6"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "EPS 1.6% + ¥35"
+        ],
+        "source_entry_ids": [
+          "33f9fd22e9bd91d4"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "35",
+      "fixed_amount_minor": "35",
+      "fixed_currency": "JPY",
+      "label": "EPS 1.6% + ¥35",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "eps",
+      "payment_method": "eps",
+      "payout_type": null,
+      "percentage": "1.6",
+      "presentment_currency": null,
+      "product_id": "eps",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "52802402599fe796",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "33f9fd22e9bd91d4",
+          "text": "EPS 1.6% + ¥35"
+        }
+      ],
+      "source_text": "EPS 1.6% + ¥35",
+      "source_texts": [
+        "EPS 1.6% + ¥35"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
+      "basis_points": "80.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=sepa_direct_debit",
+        "variant=standard",
+        "payment_method=sepa_direct_debit",
+        "account_country=JP"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "sepa_direct_debit"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "6fcd0b18b482650e"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "6fcd0b18b482650e",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "35",
+          "basis_points": null,
+          "currency": "JPY",
+          "minor_amount": "35",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "6fcd0b18b482650e",
+          "source_text": "SEPA Direct Debit 0.8% + ¥35",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "80.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "6fcd0b18b482650e",
+          "source_text": "SEPA Direct Debit 0.8% + ¥35",
+          "type": "percentage",
+          "value": "0.8"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "SEPA Direct Debit 0.8% + ¥35"
+        ],
+        "source_entry_ids": [
+          "6fcd0b18b482650e"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "35",
+      "fixed_amount_minor": "35",
+      "fixed_currency": "JPY",
+      "label": "SEPA Direct Debit 0.8% + ¥35",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "sepa_direct_debit",
+      "payment_method": "sepa_direct_debit",
+      "payout_type": null,
+      "percentage": "0.8",
+      "presentment_currency": null,
+      "product_id": "sepa_direct_debit",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "c039e488d3e31fa7",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "6fcd0b18b482650e",
+          "text": "SEPA Direct Debit 0.8% + ¥35"
+        }
+      ],
+      "source_text": "SEPA Direct Debit 0.8% + ¥35",
+      "source_texts": [
+        "SEPA Direct Debit 0.8% + ¥35"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
+      "basis_points": "220.0",
+      "behavior": "conditional",
       "billing_type": null,
       "card_origin": "domestic",
       "card_region": null,
@@ -2521,54 +3086,184 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.75,
       "contributing_entry_ids": [
-        "f2837d0acae4badf"
+        "e0f5e8db30a6d717"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "f2837d0acae4badf",
-      "exactness": "from",
+      "entry_id": "e0f5e8db30a6d717",
+      "exactness": "exact",
       "fee_components": [
         {
-          "amount": "0.24",
+          "amount": "35",
           "basis_points": null,
-          "currency": "GBP",
-          "minor_amount": "24",
-          "operator": null,
+          "currency": "JPY",
+          "minor_amount": "35",
+          "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "f2837d0acae4badf",
-          "source_text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+          "source_entry_id": "e0f5e8db30a6d717",
+          "source_text": "Przelewy24 2.2% + ¥35",
           "type": "fixed_amount",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "220.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "e0f5e8db30a6d717",
+          "source_text": "Przelewy24 2.2% + ¥35",
+          "type": "percentage",
+          "value": "2.2"
         }
       ],
-      "fixed_amount": "0.24",
-      "fixed_amount_minor": "24",
-      "fixed_currency": "GBP",
-      "label": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "Przelewy24 2.2% + ¥35"
+        ],
+        "source_entry_ids": [
+          "e0f5e8db30a6d717"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "35",
+      "fixed_amount_minor": "35",
+      "fixed_currency": "JPY",
+      "label": "Przelewy24 2.2% + ¥35",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "przelewy24",
       "payment_method": "przelewy24",
       "payout_type": null,
-      "percentage": null,
+      "percentage": "2.2",
       "presentment_currency": null,
       "product_id": "przelewy24",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8b80d48c7a9cb508",
+      "rule_id": "7b09f07ae1bf0a88",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "f2837d0acae4badf",
-          "text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal."
+          "entry_id": "e0f5e8db30a6d717",
+          "text": "Przelewy24 2.2% + ¥35"
         }
       ],
-      "source_text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+      "source_text": "Przelewy24 2.2% + ¥35",
       "source_texts": [
-        "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal."
+        "Przelewy24 2.2% + ¥35"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
+      "basis_points": "150.0",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=mb_way",
+        "variant=standard",
+        "payment_method=mb_way",
+        "account_country=JP"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "mb_way"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "73173ea1c4a78da9"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "73173ea1c4a78da9",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "41",
+          "basis_points": null,
+          "currency": "JPY",
+          "minor_amount": "41",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "73173ea1c4a78da9",
+          "source_text": "MB WAY 1.5% + ¥41",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "73173ea1c4a78da9",
+          "source_text": "MB WAY 1.5% + ¥41",
+          "type": "percentage",
+          "value": "1.5"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "MB WAY 1.5% + ¥41"
+        ],
+        "source_entry_ids": [
+          "73173ea1c4a78da9"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "41",
+      "fixed_amount_minor": "41",
+      "fixed_currency": "JPY",
+      "label": "MB WAY 1.5% + ¥41",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "mb_way",
+      "payment_method": "mb_way",
+      "payout_type": null,
+      "percentage": "1.5",
+      "presentment_currency": null,
+      "product_id": "mb_way",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "a0d92c314e29a0f2",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "73173ea1c4a78da9",
+          "text": "MB WAY 1.5% + ¥41"
+        }
+      ],
+      "source_text": "MB WAY 1.5% + ¥41",
+      "source_texts": [
+        "MB WAY 1.5% + ¥41"
       ],
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -5529,22 +6224,7 @@
       "source_order": 74,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/en-jp/pricing",
-      "tokens": [
-        {
-          "amount": "1",
-          "basis_points": null,
-          "currency": "USD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "1",
-          "token_id": "a6b59d8c4da363d7",
-          "value": null
-        }
-      ]
+      "tokens": []
     },
     {
       "channel": null,
@@ -5786,7 +6466,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "4759ec033aa2e200",
+      "entry_id": "eac2c603a4a8e9b0",
       "fee_category": "Card payments 3.6% per successful transaction for domestic cards",
       "footnotes": [],
       "links": [
@@ -5808,9 +6488,9 @@
         "Payment methods",
         "Card payments 3.6% per successful transaction for domestic cards"
       ],
-      "source_evidence": "per successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nif currency conversion is required",
+      "source_evidence": "Card payments 3.6% per successful transaction for domestic cards\nper successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nif currency conversion is required",
       "source_order": 0,
-      "source_text": "Card payments 3.6% per successful transaction for domestic cards",
+      "source_text": "Card payments 3.6% per successful transaction for domestic cards per successful transaction for domestic cards",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
         {
@@ -5835,7 +6515,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "b2305ecee255bd8c",
+      "entry_id": "ac32adb8d0a1000e",
       "fee_category": "Alipay 3.6% per successful charge",
       "footnotes": [],
       "links": [
@@ -5853,8 +6533,53 @@
         "Payment methods",
         "Alipay 3.6% per successful charge"
       ],
-      "source_evidence": "per successful charge\nAllow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.\nper successful charge\nif currency conversion is required",
+      "source_evidence": "Alipay 3.6% per successful charge\nper successful charge\nAllow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.\nper successful charge\nif currency conversion is required",
       "source_order": 1,
+      "source_text": "Alipay 3.6% per successful charge per successful charge",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "360.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "3.6",
+          "raw": "3.6",
+          "token_id": "3fe5618a23787ce8",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "208a76b65c32e4c5",
+      "fee_category": "Alipay 3.6% per successful charge",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/alipay"
+        }
+      ],
+      "payment_method": "alipay",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Alipay 3.6% per successful charge"
+      ],
+      "source_evidence": "Alipay 3.6% per successful charge\nper successful charge\nAllow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.\nper successful charge\nif currency conversion is required",
+      "source_order": 2,
       "source_text": "Allow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -5880,7 +6605,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "cf4235ec3d861132",
+      "entry_id": "94d1a0e1cdfdbd8b",
       "fee_category": "Apple Pay 3.6% per successful charge",
       "footnotes": [],
       "links": [
@@ -5898,9 +6623,9 @@
         "Payment methods",
         "Apple Pay 3.6% per successful charge"
       ],
-      "source_evidence": "per successful charge\nOffer Apple Pay out of the box to customers who have set it up on their device or browser, enabling faster checkout.\nper successful charge\nif currency conversion is required",
-      "source_order": 2,
-      "source_text": "Apple Pay 3.6% per successful charge",
+      "source_evidence": "Apple Pay 3.6% per successful charge\nper successful charge\nOffer Apple Pay out of the box to customers who have set it up on their device or browser, enabling faster checkout.\nper successful charge\nif currency conversion is required",
+      "source_order": 3,
+      "source_text": "Apple Pay 3.6% per successful charge per successful charge",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
         {
@@ -5925,7 +6650,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "786ee56f4191235e",
+      "entry_id": "d2a04527aadfcc48",
       "fee_category": "Google Pay 3.6% per successful charge",
       "footnotes": [],
       "links": [
@@ -5943,9 +6668,9 @@
         "Payment methods",
         "Google Pay 3.6% per successful charge"
       ],
-      "source_evidence": "per successful charge\nOffer Google Pay out of the box to customers who have set it up on their device or browser.\nper successful charge\nif currency conversion is required",
-      "source_order": 3,
-      "source_text": "Google Pay 3.6% per successful charge",
+      "source_evidence": "Google Pay 3.6% per successful charge\nper successful charge\nOffer Google Pay out of the box to customers who have set it up on their device or browser.\nper successful charge\nif currency conversion is required",
+      "source_order": 4,
+      "source_text": "Google Pay 3.6% per successful charge per successful charge",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
         {
@@ -5970,7 +6695,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "63ab9e3059c42bac",
+      "entry_id": "655c635ff062ff8b",
       "fee_category": "WeChat Pay 3.6% per successful charge",
       "footnotes": [],
       "links": [
@@ -5988,8 +6713,53 @@
         "Payment methods",
         "WeChat Pay 3.6% per successful charge"
       ],
-      "source_evidence": "per successful charge\nLet your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.\nper successful charge\nif currency conversion is required",
-      "source_order": 4,
+      "source_evidence": "WeChat Pay 3.6% per successful charge\nper successful charge\nLet your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.\nper successful charge\nif currency conversion is required",
+      "source_order": 5,
+      "source_text": "WeChat Pay 3.6% per successful charge per successful charge",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "360.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "3.6",
+          "raw": "3.6",
+          "token_id": "3fe5618a23787ce8",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "ec8fa6f95743b74f",
+      "fee_category": "WeChat Pay 3.6% per successful charge",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/wechat-pay"
+        }
+      ],
+      "payment_method": "wechat_pay",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "WeChat Pay 3.6% per successful charge"
+      ],
+      "source_evidence": "WeChat Pay 3.6% per successful charge\nper successful charge\nLet your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.\nper successful charge\nif currency conversion is required",
+      "source_order": 6,
       "source_text": "Let your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6015,7 +6785,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "ab937e99b26cde50",
+      "entry_id": "abea763852750d72",
       "fee_category": "PayPay 3.98% per successful transaction",
       "footnotes": [],
       "links": [
@@ -6033,9 +6803,9 @@
         "Payment methods",
         "PayPay 3.98% per successful transaction"
       ],
-      "source_evidence": "per successful transaction\nAccept payments from Japan’s largest QR code-based wallet.\nper successful transaction\nper successful transaction",
-      "source_order": 5,
-      "source_text": "PayPay 3.98% per successful transaction",
+      "source_evidence": "PayPay 3.98% per successful transaction\nper successful transaction\nAccept payments from Japan’s largest QR code-based wallet.\nper successful transaction\nper successful transaction",
+      "source_order": 7,
+      "source_text": "PayPay 3.98% per successful transaction per successful transaction",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
         {
@@ -6055,12 +6825,12 @@
       ]
     },
     {
-      "channel": "online",
+      "channel": null,
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "6d846017360ffa90",
+      "entry_id": "06c9ead0e8949f53",
       "fee_category": "Bancontact 1.4% + ¥35",
       "footnotes": [],
       "links": [
@@ -6078,8 +6848,67 @@
         "Payment methods",
         "Bancontact 1.4% + ¥35"
       ],
-      "source_evidence": "Let your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses.\nfor international transactions\nif currency conversion is required",
-      "source_order": 6,
+      "source_evidence": "Bancontact 1.4% + ¥35\nLet your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses.\nfor international transactions\nif currency conversion is required",
+      "source_order": 8,
+      "source_text": "Bancontact 1.4% + ¥35",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": "35",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": "+",
+          "percentage": null,
+          "raw": "35",
+          "token_id": "3933f9cd999c7f04",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "140.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "1.4",
+          "raw": "1.4",
+          "token_id": "6089dad47253e6a0",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": "online",
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "a5648a8200c50426",
+      "fee_category": "Bancontact 1.4% + ¥35",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/bancontact"
+        }
+      ],
+      "payment_method": "bancontact",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Bancontact 1.4% + ¥35"
+      ],
+      "source_evidence": "Bancontact 1.4% + ¥35\nLet your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses.\nfor international transactions\nif currency conversion is required",
+      "source_order": 9,
       "source_text": "Let your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6105,7 +6934,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "65398246743e8b73",
+      "entry_id": "06720b438a20b42a",
       "fee_category": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
       "footnotes": [],
       "links": [
@@ -6127,9 +6956,9 @@
         "Payment methods",
         "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
       ],
-      "source_evidence": "¥250 + 10% consumption tax for refunds\nKeep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.\n¥250 + 10% consumption tax for refunds",
-      "source_order": 7,
-      "source_text": "¥250 + 10% consumption tax for refunds",
+      "source_evidence": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds\n¥250 + 10% consumption tax for refunds\nKeep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.\n¥250 + 10% consumption tax for refunds",
+      "source_order": 10,
+      "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
         {
@@ -6144,6 +6973,20 @@
           "percentage": null,
           "raw": "250",
           "token_id": "73633f0ccf8e2a58",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "1.5",
+          "raw": "1.5",
+          "token_id": "820f4478b986de24",
           "value": null
         },
         {
@@ -6190,8 +7033,8 @@
         "Payment methods",
         "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
       ],
-      "source_evidence": "¥250 + 10% consumption tax for refunds\nKeep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.\n¥250 + 10% consumption tax for refunds",
-      "source_order": 8,
+      "source_evidence": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds\n¥250 + 10% consumption tax for refunds\nKeep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.\n¥250 + 10% consumption tax for refunds",
+      "source_order": 11,
       "source_text": "¥250 + 10% consumption tax for refunds",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6226,12 +7069,75 @@
       ]
     },
     {
-      "channel": "online",
+      "channel": null,
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "fb7879c8c325916e",
+      "entry_id": "608304d00172f93b",
+      "fee_category": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/jp-bank-transfers"
+        },
+        {
+          "text": "See more payment methods",
+          "uri": "https://stripe.com/en-jp/pricing/local-payment-methods"
+        }
+      ],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+      ],
+      "source_evidence": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds\n¥250 + 10% consumption tax for refunds\nKeep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.\n¥250 + 10% consumption tax for refunds",
+      "source_order": 12,
+      "source_text": "¥250 + 10% consumption tax for refunds",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": "250",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": "+",
+          "percentage": null,
+          "raw": "250",
+          "token_id": "73633f0ccf8e2a58",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "1000",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "10",
+          "raw": "10",
+          "token_id": "f9c0aea58f804c94",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "33f9fd22e9bd91d4",
       "fee_category": "EPS 1.6% + ¥35",
       "footnotes": [],
       "links": [
@@ -6249,8 +7155,67 @@
         "Payment methods",
         "EPS 1.6% + ¥35"
       ],
-      "source_evidence": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.\nfor international transactions\nif currency conversion is required",
-      "source_order": 9,
+      "source_evidence": "EPS 1.6% + ¥35\nLet your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.\nfor international transactions\nif currency conversion is required",
+      "source_order": 13,
+      "source_text": "EPS 1.6% + ¥35",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": "35",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": "+",
+          "percentage": null,
+          "raw": "35",
+          "token_id": "3933f9cd999c7f04",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "160.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "1.6",
+          "raw": "1.6",
+          "token_id": "aefab450ad70cfc8",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": "online",
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "e59e81c62fcb5e31",
+      "fee_category": "EPS 1.6% + ¥35",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/eps"
+        }
+      ],
+      "payment_method": "eps",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "EPS 1.6% + ¥35"
+      ],
+      "source_evidence": "EPS 1.6% + ¥35\nLet your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.\nfor international transactions\nif currency conversion is required",
+      "source_order": 14,
       "source_text": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6295,7 +7260,7 @@
         "iDEAL | Wero ¥55"
       ],
       "source_evidence": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments.\nfor international transactions\nif currency conversion is required",
-      "source_order": 10,
+      "source_order": 15,
       "source_text": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6321,7 +7286,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "3495036ccc63f493",
+      "entry_id": "6fcd0b18b482650e",
       "fee_category": "SEPA Direct Debit 0.8% + ¥35",
       "footnotes": [],
       "links": [
@@ -6339,8 +7304,67 @@
         "Payment methods",
         "SEPA Direct Debit 0.8% + ¥35"
       ],
-      "source_evidence": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
-      "source_order": 11,
+      "source_evidence": "SEPA Direct Debit 0.8% + ¥35\nMinimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
+      "source_order": 16,
+      "source_text": "SEPA Direct Debit 0.8% + ¥35",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": "35",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": "+",
+          "percentage": null,
+          "raw": "35",
+          "token_id": "3933f9cd999c7f04",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "80.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "0.8",
+          "raw": "0.8",
+          "token_id": "147872427856899d",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "902637a7b303ef74",
+      "fee_category": "SEPA Direct Debit 0.8% + ¥35",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/sepa-direct-debit"
+        }
+      ],
+      "payment_method": "sepa_direct_debit",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "SEPA Direct Debit 0.8% + ¥35"
+      ],
+      "source_evidence": "SEPA Direct Debit 0.8% + ¥35\nMinimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
+      "source_order": 17,
       "source_text": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries. for international transactions if currency conversion is required for disputed payments for failed payments",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6366,7 +7390,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "f2837d0acae4badf",
+      "entry_id": "e0f5e8db30a6d717",
       "fee_category": "Przelewy24 2.2% + ¥35",
       "footnotes": [],
       "links": [
@@ -6384,34 +7408,93 @@
         "Payment methods",
         "Przelewy24 2.2% + ¥35"
       ],
-      "source_evidence": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.\nfor international transactions\nif currency conversion is required",
-      "source_order": 12,
-      "source_text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+      "source_evidence": "Przelewy24 2.2% + ¥35\nLet your Polish customers pay with multiple local polish payment methods, from the P24 portal.\nfor international transactions\nif currency conversion is required",
+      "source_order": 18,
+      "source_text": "Przelewy24 2.2% + ¥35",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
         {
-          "amount": "0.24",
+          "amount": "35",
           "basis_points": null,
-          "currency": "GBP",
-          "exactness": "from",
-          "is_minor_currency": true,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
-          "operator": null,
+          "operator": "+",
           "percentage": null,
-          "raw": "24",
-          "token_id": "e14475e62bbab608",
+          "raw": "35",
+          "token_id": "3933f9cd999c7f04",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "220.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "2.2",
+          "raw": "2.2",
+          "token_id": "126dc12831161fb6",
           "value": null
         }
       ]
     },
     {
-      "channel": "online",
+      "channel": null,
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "2e67a60c280ac035",
+      "entry_id": "c25eb000941e02ee",
+      "fee_category": "Przelewy24 2.2% + ¥35",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/przelewy24"
+        }
+      ],
+      "payment_method": "przelewy24",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Przelewy24 2.2% + ¥35"
+      ],
+      "source_evidence": "Przelewy24 2.2% + ¥35\nLet your Polish customers pay with multiple local polish payment methods, from the P24 portal.\nfor international transactions\nif currency conversion is required",
+      "source_order": 19,
+      "source_text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "from",
+          "is_minor_currency": false,
+          "kind": "qualifier",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "73173ea1c4a78da9",
       "fee_category": "MB WAY 1.5% + ¥41",
       "footnotes": [],
       "links": [
@@ -6429,8 +7512,67 @@
         "Payment methods",
         "MB WAY 1.5% + ¥41"
       ],
-      "source_evidence": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.\nfor international transactions\nif currency conversion is required",
-      "source_order": 13,
+      "source_evidence": "MB WAY 1.5% + ¥41\nIncrease conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.\nfor international transactions\nif currency conversion is required",
+      "source_order": 20,
+      "source_text": "MB WAY 1.5% + ¥41",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": "41",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": "+",
+          "percentage": null,
+          "raw": "41",
+          "token_id": "5818ac536cead938",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "1.5",
+          "raw": "1.5",
+          "token_id": "820f4478b986de24",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": "online",
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "27a63b70be76f815",
+      "fee_category": "MB WAY 1.5% + ¥41",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/mb-way"
+        }
+      ],
+      "payment_method": "mb_way",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "MB WAY 1.5% + ¥41"
+      ],
+      "source_evidence": "MB WAY 1.5% + ¥41\nIncrease conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.\nfor international transactions\nif currency conversion is required",
+      "source_order": 21,
       "source_text": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6456,7 +7598,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "66564bbe3b7364ab",
+      "entry_id": "ee8b36a49d422b02",
       "fee_category": "Konbini 3.6%",
       "footnotes": [],
       "links": [
@@ -6478,8 +7620,57 @@
         "Payment methods",
         "Konbini 3.6%"
       ],
-      "source_evidence": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
-      "source_order": 14,
+      "source_evidence": "Konbini 3.6%\nOffer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
+      "source_order": 22,
+      "source_text": "Konbini 3.6%",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "360.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "3.6",
+          "raw": "3.6",
+          "token_id": "3fe5618a23787ce8",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "3cb3907652ee7390",
+      "fee_category": "Konbini 3.6%",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/konbini"
+        },
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/docs/payments/konbini"
+        }
+      ],
+      "payment_method": "konbini",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Konbini 3.6%"
+      ],
+      "source_evidence": "Konbini 3.6%\nOffer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
+      "source_order": 23,
       "source_text": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6505,7 +7696,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "e5fc77b6fed782b1",
+      "entry_id": "8158608c0ed7d253",
       "fee_category": "Konbini 3.6%",
       "footnotes": [],
       "links": [
@@ -6527,8 +7718,8 @@
         "Payment methods",
         "Konbini 3.6%"
       ],
-      "source_evidence": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
-      "source_order": 15,
+      "source_evidence": "Konbini 3.6%\nOffer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
+      "source_order": 24,
       "source_text": "¥250 + 10% consumption tax for refunds",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -6586,8 +7777,8 @@
         "Payment methods",
         "South Korean payment methods 3.1%"
       ],
-      "source_evidence": "Accept payments from local cards and wallets available in South Korea without a local entity.\nfor international transactions\nif currency conversion is required",
-      "source_order": 16,
+      "source_evidence": "South Korean payment methods 3.1%\nAccept payments from local cards and wallets available in South Korea without a local entity.\nfor international transactions\nif currency conversion is required",
+      "source_order": 25,
       "source_text": "South Korean payment methods 3.1%",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -8090,7 +9281,7 @@
       "source_order": 130
     },
     {
-      "body": "per successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nif currency conversion is required",
+      "body": "Card payments 3.6% per successful transaction for domestic cards\nper successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nif currency conversion is required",
       "heading": "Card payments 3.6% per successful transaction for domestic cards",
       "level": 3,
       "links": [
@@ -8111,7 +9302,7 @@
       "source_order": 0
     },
     {
-      "body": "per successful charge\nAllow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.\nper successful charge\nif currency conversion is required",
+      "body": "Alipay 3.6% per successful charge\nper successful charge\nAllow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.\nper successful charge\nif currency conversion is required",
       "heading": "Alipay 3.6% per successful charge",
       "level": 3,
       "links": [
@@ -8128,7 +9319,7 @@
       "source_order": 1
     },
     {
-      "body": "per successful charge\nOffer Apple Pay out of the box to customers who have set it up on their device or browser, enabling faster checkout.\nper successful charge\nif currency conversion is required",
+      "body": "Apple Pay 3.6% per successful charge\nper successful charge\nOffer Apple Pay out of the box to customers who have set it up on their device or browser, enabling faster checkout.\nper successful charge\nif currency conversion is required",
       "heading": "Apple Pay 3.6% per successful charge",
       "level": 3,
       "links": [
@@ -8145,7 +9336,7 @@
       "source_order": 2
     },
     {
-      "body": "per successful charge\nOffer Google Pay out of the box to customers who have set it up on their device or browser.\nper successful charge\nif currency conversion is required",
+      "body": "Google Pay 3.6% per successful charge\nper successful charge\nOffer Google Pay out of the box to customers who have set it up on their device or browser.\nper successful charge\nif currency conversion is required",
       "heading": "Google Pay 3.6% per successful charge",
       "level": 3,
       "links": [
@@ -8162,7 +9353,7 @@
       "source_order": 3
     },
     {
-      "body": "per successful charge\nLet your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.\nper successful charge\nif currency conversion is required",
+      "body": "WeChat Pay 3.6% per successful charge\nper successful charge\nLet your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.\nper successful charge\nif currency conversion is required",
       "heading": "WeChat Pay 3.6% per successful charge",
       "level": 3,
       "links": [
@@ -8179,7 +9370,7 @@
       "source_order": 4
     },
     {
-      "body": "per successful transaction\nAccept payments from Japan’s largest QR code-based wallet.\nper successful transaction\nper successful transaction",
+      "body": "PayPay 3.98% per successful transaction\nper successful transaction\nAccept payments from Japan’s largest QR code-based wallet.\nper successful transaction\nper successful transaction",
       "heading": "PayPay 3.98% per successful transaction",
       "level": 3,
       "links": [
@@ -8196,7 +9387,7 @@
       "source_order": 5
     },
     {
-      "body": "Let your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses.\nfor international transactions\nif currency conversion is required",
+      "body": "Bancontact 1.4% + ¥35\nLet your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses.\nfor international transactions\nif currency conversion is required",
       "heading": "Bancontact 1.4% + ¥35",
       "level": 3,
       "links": [
@@ -8213,7 +9404,7 @@
       "source_order": 6
     },
     {
-      "body": "¥250 + 10% consumption tax for refunds\nKeep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.\n¥250 + 10% consumption tax for refunds",
+      "body": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds\n¥250 + 10% consumption tax for refunds\nKeep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.\n¥250 + 10% consumption tax for refunds",
       "heading": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
       "level": 3,
       "links": [
@@ -8234,7 +9425,7 @@
       "source_order": 7
     },
     {
-      "body": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.\nfor international transactions\nif currency conversion is required",
+      "body": "EPS 1.6% + ¥35\nLet your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.\nfor international transactions\nif currency conversion is required",
       "heading": "EPS 1.6% + ¥35",
       "level": 3,
       "links": [
@@ -8268,7 +9459,7 @@
       "source_order": 9
     },
     {
-      "body": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
+      "body": "SEPA Direct Debit 0.8% + ¥35\nMinimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
       "heading": "SEPA Direct Debit 0.8% + ¥35",
       "level": 3,
       "links": [
@@ -8285,7 +9476,7 @@
       "source_order": 10
     },
     {
-      "body": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.\nfor international transactions\nif currency conversion is required",
+      "body": "Przelewy24 2.2% + ¥35\nLet your Polish customers pay with multiple local polish payment methods, from the P24 portal.\nfor international transactions\nif currency conversion is required",
       "heading": "Przelewy24 2.2% + ¥35",
       "level": 3,
       "links": [
@@ -8302,7 +9493,7 @@
       "source_order": 11
     },
     {
-      "body": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.\nfor international transactions\nif currency conversion is required",
+      "body": "MB WAY 1.5% + ¥41\nIncrease conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.\nfor international transactions\nif currency conversion is required",
       "heading": "MB WAY 1.5% + ¥41",
       "level": 3,
       "links": [
@@ -8319,7 +9510,7 @@
       "source_order": 12
     },
     {
-      "body": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
+      "body": "Konbini 3.6%\nOffer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
       "heading": "Konbini 3.6%",
       "level": 3,
       "links": [
@@ -8340,7 +9531,7 @@
       "source_order": 13
     },
     {
-      "body": "Accept payments from local cards and wallets available in South Korea without a local entity.\nfor international transactions\nif currency conversion is required",
+      "body": "South Korean payment methods 3.1%\nAccept payments from local cards and wallets available in South Korea without a local entity.\nfor international transactions\nif currency conversion is required",
       "heading": "South Korean payment methods 3.1%",
       "level": 3,
       "links": [
@@ -8463,6 +9654,47 @@
           "percentage": null,
           "raw": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
           "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "586b716e998824c6",
+      "fee_category": "Security, reliability and compliance",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Security, reliability and compliance",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Security, reliability and compliance"
+      ],
+      "source_evidence": "99.999% average historical uptime\nMaximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licenses globally\nStripe is certified to the highest industry standards and has obtained regulatory licenses around the world.\nStandard pricing\nCustom pricing\nFAQs",
+      "source_order": 4,
+      "source_text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
+      "source_url": "https://stripe.com/en-jp/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "9999.900",
+          "currency": null,
+          "exactness": "range",
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "99.999",
+          "raw": "99.999",
+          "token_id": "55dbb96490e2bf04",
           "value": null
         }
       ]
@@ -8673,6 +9905,129 @@
       ]
     },
     {
+      "channel": "in_person",
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "868ef67d7f137670",
+      "fee_category": "Card readers",
+      "footnotes": [],
+      "links": [],
+      "payment_method": "card",
+      "payment_method_family": null,
+      "product": "Card readers",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Card readers"
+      ],
+      "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\n¥10,480\nBBPOS WisePad 3\n¥46,480\nStripe Reader S700",
+      "source_order": 46,
+      "source_text": "¥10,480",
+      "source_url": "https://stripe.com/en-jp/pricing",
+      "tokens": [
+        {
+          "amount": "10.480",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "10,480",
+          "token_id": "d52a02d6681facf7",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": "in_person",
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "d56d162d3a0931d1",
+      "fee_category": "Card readers",
+      "footnotes": [],
+      "links": [],
+      "payment_method": "card",
+      "payment_method_family": null,
+      "product": "Card readers",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Card readers"
+      ],
+      "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\n¥10,480\nBBPOS WisePad 3\n¥46,480\nStripe Reader S700",
+      "source_order": 47,
+      "source_text": "¥46,480",
+      "source_url": "https://stripe.com/en-jp/pricing",
+      "tokens": [
+        {
+          "amount": "46.480",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "46,480",
+          "token_id": "936ec7550a1a77e7",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": "online",
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "8299bf7d7267043f",
+      "fee_category": "Integrate Tax with custom checkout or payment flows",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Integrate Tax with custom checkout or payment flows",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Integrate Tax with custom checkout or payment flows"
+      ],
+      "source_evidence": "Stripe Tax works with Stripe Payments APIs and can calculate and report tax on any payment processor.\n¥65\nper transaction, where you’re registered to collect taxes\nIncludes 10 calculation API calls per transaction. ¥6 per additional calculation API call above 10.\nSee pricing details",
+      "source_order": 58,
+      "source_text": "Includes 10 calculation API calls per transaction. ¥6 per additional calculation API call above 10.",
+      "source_url": "https://stripe.com/en-jp/pricing",
+      "tokens": [
+        {
+          "amount": "6",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "6",
+          "token_id": "90f81f7fda8d8362",
+          "value": null
+        }
+      ]
+    },
+    {
       "channel": null,
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
@@ -8712,6 +10067,73 @@
           "value": null
         }
       ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "1b539c4989d99ff3",
+      "fee_category": "Access to Revenue Recognition",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Access to Revenue Recognition",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Access to Revenue Recognition"
+      ],
+      "source_evidence": "Simplify accrual accounting.\nTry for free for 30 days\n0.25%\nof volume\nSee pricing details",
+      "source_order": 65,
+      "source_text": "0.25%",
+      "source_url": "https://stripe.com/en-jp/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "25.00",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "0.25",
+          "raw": "0.25",
+          "token_id": "56715c7f7bd02241",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "95186c9dc81044fc",
+      "fee_category": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "100+ category leaders each process more than $1 billion per year on Stripe."
+      ],
+      "source_evidence": null,
+      "source_order": 74,
+      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "source_url": "https://stripe.com/en-jp/pricing",
+      "tokens": []
     },
     {
       "channel": null,
@@ -8803,7 +10225,7 @@
       "classification_status": "custom_pricing",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "b2305ecee255bd8c",
+      "entry_id": "208a76b65c32e4c5",
       "fee_category": "Alipay 3.6% per successful charge",
       "footnotes": [],
       "links": [
@@ -8821,8 +10243,8 @@
         "Payment methods",
         "Alipay 3.6% per successful charge"
       ],
-      "source_evidence": "per successful charge\nAllow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.\nper successful charge\nif currency conversion is required",
-      "source_order": 1,
+      "source_evidence": "Alipay 3.6% per successful charge\nper successful charge\nAllow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.\nper successful charge\nif currency conversion is required",
+      "source_order": 2,
       "source_text": "Allow customers in China as well as Chinese travelers to pay with Alipay in 11 major currencies.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -8850,7 +10272,7 @@
       "classification_status": "custom_pricing",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "63ab9e3059c42bac",
+      "entry_id": "ec8fa6f95743b74f",
       "fee_category": "WeChat Pay 3.6% per successful charge",
       "footnotes": [],
       "links": [
@@ -8868,8 +10290,8 @@
         "Payment methods",
         "WeChat Pay 3.6% per successful charge"
       ],
-      "source_evidence": "per successful charge\nLet your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.\nper successful charge\nif currency conversion is required",
-      "source_order": 4,
+      "source_evidence": "WeChat Pay 3.6% per successful charge\nper successful charge\nLet your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.\nper successful charge\nif currency conversion is required",
+      "source_order": 6,
       "source_text": "Let your customers pay with WeChat Pay—the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -8894,10 +10316,10 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "custom_pricing",
+      "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "6d846017360ffa90",
+      "entry_id": "a5648a8200c50426",
       "fee_category": "Bancontact 1.4% + ¥35",
       "footnotes": [],
       "links": [
@@ -8915,8 +10337,8 @@
         "Payment methods",
         "Bancontact 1.4% + ¥35"
       ],
-      "source_evidence": "Let your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses.\nfor international transactions\nif currency conversion is required",
-      "source_order": 6,
+      "source_evidence": "Bancontact 1.4% + ¥35\nLet your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses.\nfor international transactions\nif currency conversion is required",
+      "source_order": 9,
       "source_text": "Let your Belgian customers pay with Bancontact—Belgium’s most popular payment method offered by over 80% of online businesses. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -8941,10 +10363,10 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "custom_pricing",
+      "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "fb7879c8c325916e",
+      "entry_id": "e59e81c62fcb5e31",
       "fee_category": "EPS 1.6% + ¥35",
       "footnotes": [],
       "links": [
@@ -8962,8 +10384,8 @@
         "Payment methods",
         "EPS 1.6% + ¥35"
       ],
-      "source_evidence": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.\nfor international transactions\nif currency conversion is required",
-      "source_order": 9,
+      "source_evidence": "EPS 1.6% + ¥35\nLet your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.\nfor international transactions\nif currency conversion is required",
+      "source_order": 14,
       "source_text": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -8988,7 +10410,7 @@
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "custom_pricing",
+      "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
       "entry_id": "6c7d956c2e693589",
@@ -9010,7 +10432,7 @@
         "iDEAL | Wero ¥55"
       ],
       "source_evidence": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments.\nfor international transactions\nif currency conversion is required",
-      "source_order": 10,
+      "source_order": 15,
       "source_text": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -9038,7 +10460,7 @@
       "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "3495036ccc63f493",
+      "entry_id": "902637a7b303ef74",
       "fee_category": "SEPA Direct Debit 0.8% + ¥35",
       "footnotes": [],
       "links": [
@@ -9056,8 +10478,8 @@
         "Payment methods",
         "SEPA Direct Debit 0.8% + ¥35"
       ],
-      "source_evidence": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
-      "source_order": 11,
+      "source_evidence": "SEPA Direct Debit 0.8% + ¥35\nMinimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
+      "source_order": 17,
       "source_text": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries. for international transactions if currency conversion is required for disputed payments for failed payments",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -9078,14 +10500,61 @@
       ]
     },
     {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "c25eb000941e02ee",
+      "fee_category": "Przelewy24 2.2% + ¥35",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/przelewy24"
+        }
+      ],
+      "payment_method": "przelewy24",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Przelewy24 2.2% + ¥35"
+      ],
+      "source_evidence": "Przelewy24 2.2% + ¥35\nLet your Polish customers pay with multiple local polish payment methods, from the P24 portal.\nfor international transactions\nif currency conversion is required",
+      "source_order": 19,
+      "source_text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "from",
+          "is_minor_currency": false,
+          "kind": "qualifier",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
       "channel": "online",
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "custom_pricing",
+      "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "2e67a60c280ac035",
+      "entry_id": "27a63b70be76f815",
       "fee_category": "MB WAY 1.5% + ¥41",
       "footnotes": [],
       "links": [
@@ -9103,8 +10572,8 @@
         "Payment methods",
         "MB WAY 1.5% + ¥41"
       ],
-      "source_evidence": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.\nfor international transactions\nif currency conversion is required",
-      "source_order": 13,
+      "source_evidence": "MB WAY 1.5% + ¥41\nIncrease conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.\nfor international transactions\nif currency conversion is required",
+      "source_order": 21,
       "source_text": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments. for international transactions if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -9132,7 +10601,7 @@
       "classification_status": "custom_pricing",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "66564bbe3b7364ab",
+      "entry_id": "3cb3907652ee7390",
       "fee_category": "Konbini 3.6%",
       "footnotes": [],
       "links": [
@@ -9154,8 +10623,8 @@
         "Payment methods",
         "Konbini 3.6%"
       ],
-      "source_evidence": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
-      "source_order": 14,
+      "source_evidence": "Konbini 3.6%\nOffer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.\n¥250 + 10% consumption tax for refunds",
+      "source_order": 23,
       "source_text": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [

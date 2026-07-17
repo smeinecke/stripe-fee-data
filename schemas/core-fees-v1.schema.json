@@ -93,6 +93,11 @@
           "title": "Conditions",
           "type": "array"
         },
+        "confidence": {
+          "default": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
         "exactness": {
           "default": "exact",
           "title": "Exactness",
@@ -104,6 +109,17 @@
           },
           "title": "Fee Components",
           "type": "array"
+        },
+        "fee_evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FeeEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "label": {
           "anyOf": [
@@ -396,6 +412,39 @@
         "value"
       ],
       "title": "FeeCondition",
+      "type": "object"
+    },
+    "FeeEvidence": {
+      "description": "Positive or negative evidence supporting a fee classification decision.",
+      "properties": {
+        "confidence": {
+          "default": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "phrases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Phrases",
+          "type": "array"
+        },
+        "source_entry_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Entry Ids",
+          "type": "array"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "FeeEvidence",
       "type": "object"
     }
   },

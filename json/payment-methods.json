@@ -5,9 +5,9 @@
       "display_name": "Ach Direct Debit",
       "family": "bank_debit",
       "fee_rule_refs": [
-        "9cb04f11420da469",
-        "b8e19d754ed2f703",
-        "e44bd0fafa7863ff"
+        "5b8f8f167114547d",
+        "85cb7896b2421c2f",
+        "f2ad0ef4e0b7bf2b"
       ],
       "localized_names": [],
       "method_id": "ach_direct_debit",
@@ -22,11 +22,37 @@
       ]
     },
     {
+      "display_name": "Alipay",
+      "family": "wallet",
+      "fee_rule_refs": [
+        "945fea09a4dbc408",
+        "986ea5262b940270",
+        "b3881d826ac33ca3",
+        "eddc20372df6602b",
+        "f49ac4717cc2f158"
+      ],
+      "localized_names": [],
+      "method_id": "alipay",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/en-jp/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "JP",
+        "US"
+      ]
+    },
+    {
       "display_name": "Amazon Pay",
       "family": "wallet",
       "fee_rule_refs": [
-        "601be76970700331",
-        "67b09f405594abe1"
+        "4d03172f562bda2f",
+        "8b7912053be24444"
       ],
       "localized_names": [],
       "method_id": "amazon_pay",
@@ -62,16 +88,40 @@
       ]
     },
     {
+      "display_name": "Bancontact",
+      "family": "bank_redirect",
+      "fee_rule_refs": [
+        "20fdd25dea51cdc0",
+        "36c6ef4b08a4c132",
+        "714815d9f6109f5d",
+        "f3442c579f403730",
+        "f3c8f061812d66cf"
+      ],
+      "localized_names": [],
+      "method_id": "bancontact",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/en-jp/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "JP",
+        "US"
+      ]
+    },
+    {
       "display_name": "Bank Transfer",
       "family": "other",
       "fee_rule_refs": [
-        "2d654744141b7bbc",
-        "2e0bc73f1a95b1a7",
-        "455ad564a9a6e893",
-        "69d7985f1a70ddc5",
+        "0b4b1a9c4f1eabd5",
+        "4f5c6984d97242e9",
+        "8d63f3baef504b66",
         "a5adc1ab6d0b2ab5",
-        "beae145e98fbd6e8",
-        "e64c4e9e2aa186d3"
+        "fdce4d3f93c6a515"
       ],
       "localized_names": [],
       "method_id": "bank_transfer",
@@ -91,9 +141,9 @@
       "display_name": "Billie",
       "family": "buy_now_pay_later",
       "fee_rule_refs": [
-        "5191c9391295dd07",
-        "a2f084cd9b6484db",
-        "b5f10ce4745baecb"
+        "3985891c30fd3055",
+        "850a6ce722137c65",
+        "9792ba2dff4d6776"
       ],
       "localized_names": [],
       "method_id": "billie",
@@ -108,26 +158,65 @@
       ]
     },
     {
+      "display_name": "Bizum",
+      "family": "bank_redirect",
+      "fee_rule_refs": [
+        "48f8a58c059b8796",
+        "59ed4c22d932cc41",
+        "5dc61b4deaa9174d",
+        "6d2a2eceae05df21"
+      ],
+      "localized_names": [],
+      "method_id": "bizum",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "US"
+      ]
+    },
+    {
+      "display_name": "Blik",
+      "family": "bank_redirect",
+      "fee_rule_refs": [
+        "2809a7eea68170e1",
+        "326a66e270e48ed8",
+        "926a1476fb465ae5",
+        "9ffdd4fdbf7b1e00"
+      ],
+      "localized_names": [],
+      "method_id": "blik",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "US"
+      ]
+    },
+    {
       "display_name": "Card",
       "family": "card",
       "fee_rule_refs": [
+        "03bbe2ca2173a97b",
         "09cbca83d956df8a",
         "0e37a3363df8c896",
-        "10796d2713bf6574",
-        "194c8483c4ff8f34",
+        "1f45e17e53607973",
         "23f97990d5ef4c57",
-        "277a4b799113f61e",
         "28ed61c2506d3269",
-        "298a5fe50658823f",
         "2ac4c2b87001cbe8",
-        "2f0d42a85dedae5f",
-        "2f698e880b559897",
         "32fc3a057012cff2",
         "381f2d8ff757d342",
-        "3881d652f7bfc877",
-        "38d067404e2c60b7",
-        "39d5447d92377625",
-        "3cbc8e96eaf5ff2d",
+        "4654b53e112f3b73",
         "46c7fe84dced7cbc",
         "4ee3b55e1a183280",
         "541c9add32ec546d",
@@ -136,35 +225,37 @@
         "5eaa337117b44ec6",
         "62957dbf78f9d179",
         "6793a09e35b8add3",
+        "67c474fa808f9512",
         "6b4a7b17ac0df493",
         "6df756bd0bc67a20",
         "71801e181da72fa3",
+        "77d5697449e32da7",
         "7840903453f82eac",
         "866d95e15ea17ca2",
-        "878da771020eb554",
         "8894641377885807",
         "8a025fc0cb2340c2",
-        "8b04e87b019d82b7",
         "8e102e4c562746ae",
         "996c5cfac60695bb",
         "a8e96d82a0701f65",
+        "a9b29ac8f4053347",
+        "aa5e06250997c6c0",
         "abbb6adb04cd6f8f",
-        "b45ddbb14107319c",
         "cff0e04254777ac8",
         "d35d21bf1fb40238",
+        "d5ea241c6b4ead4d",
         "d6f51a491f2cd74a",
-        "d77a1c5c8d2a8579",
         "dbe04be6f0d0cc7b",
-        "e6eda19f2f243c85",
+        "ecd46d7fc57c9b1d",
         "f51b22b1f826677b",
-        "f99c4c989aa7b71e",
-        "f9f37fd14f49860b"
+        "fb90ac0570d38805",
+        "fbea34be6fb31045"
       ],
       "localized_names": [],
       "method_id": "card",
       "source_refs": [
         "https://stripe.com/ae/pricing",
         "https://stripe.com/au/pricing",
+        "https://stripe.com/au/pricing/local-payment-methods",
         "https://stripe.com/en-br/pricing",
         "https://stripe.com/en-de/pricing",
         "https://stripe.com/en-de/pricing/local-payment-methods",
@@ -185,19 +276,45 @@
       ]
     },
     {
+      "display_name": "Eps",
+      "family": "bank_redirect",
+      "fee_rule_refs": [
+        "30afa9891129024e",
+        "52802402599fe796",
+        "8e231b0f5293396e",
+        "ad892c29bdc8d35f",
+        "bffb1116a14276b6"
+      ],
+      "localized_names": [],
+      "method_id": "eps",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/en-jp/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "JP",
+        "US"
+      ]
+    },
+    {
       "display_name": "Klarna",
       "family": "buy_now_pay_later",
       "fee_rule_refs": [
-        "0a021adbe1d09a6d",
-        "370b297753ea1a49",
-        "4736e6a59e092e98",
+        "0d2778036a4233eb",
+        "3c5a2767e2b9b9c2",
+        "3ff11a555054d9ae",
         "5db1aead4d24fe03",
         "741ade64cd7a777d",
-        "8ae24feb811692da",
-        "a6d6f971c62d6923",
-        "be099a59194c99a1",
-        "f37af73542fb9228",
-        "f7d544025c836fb9"
+        "7ad79fc3b8b48ab5",
+        "ad24a58c2859c20a",
+        "d3090f9bcbbc082c",
+        "d6e85d14a19b872c",
+        "f37af73542fb9228"
       ],
       "localized_names": [],
       "method_id": "klarna",
@@ -219,13 +336,14 @@
       "display_name": "Konbini",
       "family": "other",
       "fee_rule_refs": [
-        "d4a3b40541bfbe8b",
+        "ae90fae2374b8fa2",
         "f611782025df235a"
       ],
       "localized_names": [],
       "method_id": "konbini",
       "source_refs": [
-        "https://stripe.com/en-jp/pricing"
+        "https://stripe.com/en-jp/pricing",
+        "https://stripe.com/en-jp/pricing/local-payment-methods"
       ],
       "supported_account_countries": [
         "JP"
@@ -248,6 +366,32 @@
       "supported_account_countries": [
         "DE",
         "GB",
+        "US"
+      ]
+    },
+    {
+      "display_name": "Mb Way",
+      "family": "bank_redirect",
+      "fee_rule_refs": [
+        "67601552b5834e25",
+        "74373bff290257ed",
+        "81e491e16d61f10b",
+        "a0d92c314e29a0f2",
+        "c022aad26cb2b403"
+      ],
+      "localized_names": [],
+      "method_id": "mb_way",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/en-jp/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "JP",
         "US"
       ]
     },
@@ -292,10 +436,10 @@
       "display_name": "Pay By Bank",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "2b7ce76966b5ce48",
-        "38f9f8259b5e9aee",
-        "9a451fd79d5f812c",
-        "9fdce367cf332aba"
+        "04db97fc014f22db",
+        "4f862fd27136df6b",
+        "68be64a9013cc27d",
+        "fb0bd5f6d5627437"
       ],
       "localized_names": [],
       "method_id": "pay_by_bank",
@@ -312,31 +456,60 @@
       ]
     },
     {
+      "display_name": "Paypal",
+      "family": "wallet",
+      "fee_rule_refs": [
+        "28d1559f92eafffb",
+        "33c9bb515bd1832d",
+        "be28f42fc5c705fd"
+      ],
+      "localized_names": [],
+      "method_id": "paypal",
+      "source_refs": [
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "DE",
+        "GB",
+        "US"
+      ]
+    },
+    {
       "display_name": "Pix",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "b844a75bd4700c9f",
-        "bbf9f4fc2fafe123"
+        "269b7564cc14b425",
+        "5140369f2f88cdf4",
+        "657ead24874acc3c",
+        "cc53fb9078b11cf3",
+        "f48c2390d18bdfd1"
       ],
       "localized_names": [],
       "method_id": "pix",
       "source_refs": [
-        "https://stripe.com/en-br/pricing",
-        "https://stripe.com/en-br/pricing/local-payment-methods"
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-br/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
       ],
       "supported_account_countries": [
-        "BR"
+        "AU",
+        "BR",
+        "DE",
+        "GB",
+        "US"
       ]
     },
     {
       "display_name": "Przelewy24",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "8b653558845a11ef",
-        "8b80d48c7a9cb508",
-        "a6942158cc2d7309",
-        "c16df165e70f2a6c",
-        "f4f54e19caac2736"
+        "2483c48dfe5f29c3",
+        "43c3b5e3aef4679c",
+        "7b09f07ae1bf0a88",
+        "b247bf7f656df997",
+        "bb33c70fb4764acc"
       ],
       "localized_names": [],
       "method_id": "przelewy24",
@@ -358,9 +531,9 @@
       "display_name": "Revolut Pay",
       "family": "wallet",
       "fee_rule_refs": [
-        "2c234a387437b261",
-        "60eb65ce247fafc0",
-        "97ab6830dd324999"
+        "4b5390530a7d60c2",
+        "b53fbf442304e6c8",
+        "fa334bc1d6a0a59a"
       ],
       "localized_names": [],
       "method_id": "revolut_pay",
@@ -375,15 +548,16 @@
       ]
     },
     {
-      "display_name": "Scalapay",
-      "family": "buy_now_pay_later",
+      "display_name": "Satispay",
+      "family": "wallet",
       "fee_rule_refs": [
-        "56a76bf1599c90d2",
-        "791c045252e91262",
-        "d47532f9f098a782"
+        "2b3d4b2e80aceda3",
+        "357d1171b7c443b6",
+        "d4e492d2fcb28ab7",
+        "db3467fc75338789"
       ],
       "localized_names": [],
-      "method_id": "scalapay",
+      "method_id": "satispay",
       "source_refs": [
         "https://stripe.com/au/pricing/local-payment-methods",
         "https://stripe.com/en-de/pricing/local-payment-methods",
@@ -393,6 +567,58 @@
         "AU",
         "DE",
         "GB",
+        "US"
+      ]
+    },
+    {
+      "display_name": "Sepa Bank Transfer",
+      "family": "bank_debit",
+      "fee_rule_refs": [
+        "1492a823964743e3",
+        "e6f56d5e7da8b292"
+      ],
+      "localized_names": [],
+      "method_id": "sepa_bank_transfer",
+      "source_refs": [
+        "https://stripe.com/en-de/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "DE",
+        "US"
+      ]
+    },
+    {
+      "display_name": "Sepa Direct Debit",
+      "family": "bank_debit",
+      "fee_rule_refs": [
+        "874ac67b7fa72f8c",
+        "c039e488d3e31fa7"
+      ],
+      "localized_names": [],
+      "method_id": "sepa_direct_debit",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-jp/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "JP"
+      ]
+    },
+    {
+      "display_name": "Swish",
+      "family": "bank_redirect",
+      "fee_rule_refs": [
+        "8b78be36d7d9cca7",
+        "a05c0c53bea81632"
+      ],
+      "localized_names": [],
+      "method_id": "swish",
+      "source_refs": [
+        "https://stripe.com/en-de/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "DE",
         "US"
       ]
     },
@@ -413,6 +639,55 @@
       "supported_account_countries": [
         "DE",
         "GB",
+        "US"
+      ]
+    },
+    {
+      "display_name": "Upi",
+      "family": "bank_redirect",
+      "fee_rule_refs": [
+        "4beef9d88edc6c5a",
+        "6c4cf88d55d63e55",
+        "90ab3d2cbc755a72",
+        "b22297b152e320f5"
+      ],
+      "localized_names": [],
+      "method_id": "upi",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "US"
+      ]
+    },
+    {
+      "display_name": "Wechat Pay",
+      "family": "wallet",
+      "fee_rule_refs": [
+        "60a526e0e19cbafb",
+        "953bf88d9484f265",
+        "97f51eff51df4bbc",
+        "99b69c8b28f015bf",
+        "e2df889ed9a12d7a"
+      ],
+      "localized_names": [],
+      "method_id": "wechat_pay",
+      "source_refs": [
+        "https://stripe.com/au/pricing/local-payment-methods",
+        "https://stripe.com/en-de/pricing/local-payment-methods",
+        "https://stripe.com/en-jp/pricing/local-payment-methods",
+        "https://stripe.com/gb/pricing/local-payment-methods"
+      ],
+      "supported_account_countries": [
+        "AU",
+        "DE",
+        "GB",
+        "JP",
         "US"
       ]
     }

@@ -2,16 +2,16 @@
   "calculator_coverage_status": "partial",
   "coverage_summary": {
     "ambiguous_entries": 0,
-    "calculable_rules": 13,
+    "calculable_rules": 6,
     "conflicting_rule_identities": 0,
-    "custom_pricing": 6,
+    "custom_pricing": 5,
     "ignored_non_fee": 0,
     "included": 0,
-    "non_calculable_rules": 9,
-    "numeric_fee_candidates": 2,
+    "non_calculable_rules": 13,
+    "numeric_fee_candidates": 5,
     "reference_only": 0,
-    "source_entries": 68,
-    "unclassified_fee_candidates": 3,
+    "source_entries": 69,
+    "unclassified_fee_candidates": 8,
     "unsupported_fee_shapes": 0
   },
   "derivation_status": "partial",
@@ -75,6 +75,16 @@
           "value": "3.99"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "3.99% + R$0.39"
+        ],
+        "source_entry_ids": [
+          "4612dc28d49056e3"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "0.39",
       "fixed_amount_minor": "39",
       "fixed_currency": "BRL",
@@ -100,85 +110,6 @@
       "source_text": "3.99% + R$0.39",
       "source_texts": [
         "3.99% + R$0.39"
-      ],
-      "source_url": "https://stripe.com/en-br/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "BR",
-      "additional_fees": [],
-      "basis_points": "9999.900",
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "product=platform",
-        "variant=standard",
-        "account_country=BR"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "BR"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "586b716e998824c6"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "586b716e998824c6",
-      "exactness": "range",
-      "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "9999.900",
-          "currency": null,
-          "minor_amount": null,
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "586b716e998824c6",
-          "source_text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-          "type": "percentage",
-          "value": "99.999"
-        }
-      ],
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "platform",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": "99.999",
-      "presentment_currency": null,
-      "product_id": "platform",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "4f02b7e1a2dcb880",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "586b716e998824c6",
-          "text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
-        }
-      ],
-      "source_text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "source_texts": [
-        "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
       ],
       "source_url": "https://stripe.com/en-br/pricing",
       "transaction_amount_max": null,
@@ -273,6 +204,16 @@
           "value": "3.99"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "3.99% + R$0.39 per successful transaction for domestic cards"
+        ],
+        "source_entry_ids": [
+          "0e9c626cab50923d"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": "0.39",
       "fixed_amount_minor": "39",
       "fixed_currency": "BRL",
@@ -373,6 +314,16 @@
           "value": "2"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "+ 2% for transactions with international cards, Stripe will charge the User a fee corresponding to the percentage applied above on the transaction amount (after"
+        ],
+        "source_entry_ids": [
+          "c70d8ba9f033c0c5"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -420,7 +371,7 @@
         "variant=online_domestic_cards",
         "account_country=BR"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -429,7 +380,7 @@
           "value": "BR"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "313afc22b4b9a940"
       ],
@@ -452,6 +403,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "R$3.45"
+        ],
+        "source_entry_ids": [
+          "313afc22b4b9a940"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "3.45",
       "fixed_amount_minor": "345",
       "fixed_currency": "BRL",
@@ -515,14 +476,14 @@
           "value": "BR"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.75,
       "contributing_entry_ids": [
-        "4bee1053f4155111"
+        "6551090fdf8f61e2"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "4bee1053f4155111",
+      "entry_id": "6551090fdf8f61e2",
       "exactness": "exact",
       "fee_components": [
         {
@@ -532,16 +493,26 @@
           "minor_amount": null,
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "4bee1053f4155111",
-          "source_text": "1.19% per paid PIX",
+          "source_entry_id": "6551090fdf8f61e2",
+          "source_text": "Pix 1.19%",
           "type": "percentage",
           "value": "1.19"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "Pix 1.19%"
+        ],
+        "source_entry_ids": [
+          "6551090fdf8f61e2"
+        ],
+        "type": "pricing_table_value"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "1.19% per paid PIX",
+      "label": "Pix 1.19%",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "pix",
@@ -552,19 +523,19 @@
       "product_id": "pix",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b844a75bd4700c9f",
+      "rule_id": "5140369f2f88cdf4",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "4bee1053f4155111",
-          "text": "1.19% per paid PIX"
+          "entry_id": "6551090fdf8f61e2",
+          "text": "Pix 1.19%"
         }
       ],
-      "source_text": "1.19% per paid PIX",
+      "source_text": "Pix 1.19%",
       "source_texts": [
-        "1.19% per paid PIX"
+        "Pix 1.19%"
       ],
-      "source_url": "https://stripe.com/en-br/pricing",
+      "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
@@ -586,7 +557,7 @@
         "account_country=BR",
         "transaction_type=dispute"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -601,7 +572,7 @@
           "value": "dispute"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "fa49d45b1bdfbd75"
       ],
@@ -624,6 +595,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "R$55.00"
+        ],
+        "source_entry_ids": [
+          "fa49d45b1bdfbd75"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "55.00",
       "fixed_amount_minor": "5500",
       "fixed_currency": "BRL",
@@ -719,6 +700,20 @@
           "value": "30"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "30%",
+          "Included with Payments",
+          "Included at no additional charge for businesses on standard payments pricing"
+        ],
+        "source_entry_ids": [
+          "50783c5ffb37cee3",
+          "27467a01b148e84b",
+          "67241d4ae5e42bba"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -779,7 +774,7 @@
         "card_origin=domestic",
         "account_country=BR"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -806,7 +801,7 @@
           "value": "BR"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "5baed7a39cb3f617"
       ],
@@ -829,6 +824,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "R$0.10"
+        ],
+        "source_entry_ids": [
+          "5baed7a39cb3f617"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "0.10",
       "fixed_amount_minor": "10",
       "fixed_currency": "BRL",
@@ -884,6 +889,16 @@
       "entry_id": "bce7cbd9f0954af6",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "bce7cbd9f0954af6"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -934,6 +949,16 @@
       "entry_id": "b31be03a99f49054",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "b31be03a99f49054"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1008,6 +1033,16 @@
           "value": "2"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "2%"
+        ],
+        "source_entry_ids": [
+          "932599e79965b412"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1063,6 +1098,16 @@
       "entry_id": "5a9c62ba056b0144",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "5a9c62ba056b0144"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1137,6 +1182,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "$10.00"
+        ],
+        "source_entry_ids": [
+          "301ff6fa704cd1ff"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "10.00",
       "fixed_amount_minor": "1000",
       "fixed_currency": "USD",
@@ -1184,7 +1239,7 @@
         "variant=standard",
         "account_country=BR"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -1193,7 +1248,7 @@
           "value": "BR"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "b3c9c0469c0639c4"
       ],
@@ -1216,6 +1271,16 @@
           "value": "0.4"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "0.4%"
+        ],
+        "source_entry_ids": [
+          "b3c9c0469c0639c4"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1271,6 +1336,16 @@
       "entry_id": "42e448bbd996a95a",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "42e448bbd996a95a"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1313,7 +1388,7 @@
         "variant=standard",
         "account_country=BR"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -1322,7 +1397,7 @@
           "value": "BR"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "b9e5e940ce3aaccd"
       ],
@@ -1345,6 +1420,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "R$0.19"
+        ],
+        "source_entry_ids": [
+          "b9e5e940ce3aaccd"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "0.19",
       "fixed_amount_minor": "19",
       "fixed_currency": "BRL",
@@ -1407,6 +1492,16 @@
       "entry_id": "43cbbbd58d3bdf21",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "43cbbbd58d3bdf21"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1481,6 +1576,16 @@
           "value": "0.4"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "0.4% per paid invoice"
+        ],
+        "source_entry_ids": [
+          "1d455270a160d3ff"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1511,85 +1616,6 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_invoice",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "BR",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=ach_direct_debit",
-        "variant=standard",
-        "account_country=BR"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "BR"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "95186c9dc81044fc"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "95186c9dc81044fc",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "1",
-          "basis_points": null,
-          "currency": "USD",
-          "minor_amount": "100",
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "95186c9dc81044fc",
-          "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fixed_amount": "1",
-      "fixed_amount_minor": "100",
-      "fixed_currency": "USD",
-      "label": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "ach_direct_debit",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "ach_direct_debit",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "6759e6c19c00e447",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "95186c9dc81044fc",
-          "text": "100+ category leaders each process more than $1 billion per year on Stripe."
-        }
-      ],
-      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "source_texts": [
-        "100+ category leaders each process more than $1 billion per year on Stripe."
-      ],
-      "source_url": "https://stripe.com/en-br/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "yearly",
       "variant_id": "standard"
     },
     {
@@ -1646,6 +1672,16 @@
           "value": "10"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "See how Twilio increased authorization rates by 10% with Stripe"
+        ],
+        "source_entry_ids": [
+          "edda7a9b0ce47913"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1676,99 +1712,6 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "BR",
-      "additional_fees": [],
-      "basis_points": "4000",
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=pix",
-        "variant=standard",
-        "payment_method=pix",
-        "channel=online",
-        "account_country=BR"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "payment_method",
-          "evidence": null,
-          "operator": "eq",
-          "value": "pix"
-        },
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "BR"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "28aaa129205cf552"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "28aaa129205cf552",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "4000",
-          "currency": null,
-          "minor_amount": null,
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "28aaa129205cf552",
-          "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
-          "type": "percentage",
-          "value": "40"
-        }
-      ],
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "pix",
-      "payment_method": "pix",
-      "payout_type": null,
-      "percentage": "40",
-      "presentment_currency": null,
-      "product_id": "pix",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "bbf9f4fc2fafe123",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "28aaa129205cf552",
-          "text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only."
-        }
-      ],
-      "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
-      "source_texts": [
-        "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only."
-      ],
-      "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_transaction",
       "variant_id": "standard"
     }
   ],
@@ -4086,22 +4029,7 @@
       "source_order": 58,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/en-br/pricing",
-      "tokens": [
-        {
-          "amount": "1",
-          "basis_points": null,
-          "currency": "USD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "1",
-          "token_id": "a6b59d8c4da363d7",
-          "value": null
-        }
-      ]
+      "tokens": []
     },
     {
       "channel": null,
@@ -4343,7 +4271,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "376fa1ee98574f95",
+      "entry_id": "e6df268a327bd543",
       "fee_category": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards",
       "footnotes": [],
       "links": [
@@ -4365,9 +4293,9 @@
         "Payment methods",
         "Card payments 3.99% + R$0.39 per successful transaction for domestic cards"
       ],
-      "source_evidence": "per successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nfor transactions with international cards, Stripe will charge the User a fee corresponding to the percentage applied above on the transaction amount (after conversion to local currency ).",
+      "source_evidence": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards\nper successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nfor transactions with international cards, Stripe will charge the User a fee corresponding to the percentage applied above on the transaction amount (after conversion to local currency ).",
       "source_order": 0,
-      "source_text": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards",
+      "source_text": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards per successful transaction for domestic cards",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
         {
@@ -4401,12 +4329,12 @@
       ]
     },
     {
-      "channel": "online",
+      "channel": null,
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "28aaa129205cf552",
+      "entry_id": "6551090fdf8f61e2",
       "fee_category": "Pix 1.19%",
       "footnotes": [],
       "links": [
@@ -4424,8 +4352,53 @@
         "Payment methods",
         "Pix 1.19%"
       ],
-      "source_evidence": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_evidence": "Pix 1.19%\nAccept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "source_order": 1,
+      "source_text": "Pix 1.19%",
+      "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "119.00",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "1.19",
+          "raw": "1.19",
+          "token_id": "39f02f5121a51e3f",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": "online",
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "64ada2cc5ee3c1dc",
+      "fee_category": "Pix 1.19%",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-br/payment-method/pix"
+        }
+      ],
+      "payment_method": "pix",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Pix 1.19%"
+      ],
+      "source_evidence": "Pix 1.19%\nAccept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_order": 2,
       "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -4470,7 +4443,7 @@
         "Boleto Bancário R$3.45"
       ],
       "source_evidence": "Let your Brazilian customers pay with Boleto—a voucher-based payment method that represents more than 20% of transactions in Brazil.",
-      "source_order": 2,
+      "source_order": 3,
       "source_text": "Let your Brazilian customers pay with Boleto—a voucher-based payment method that represents more than 20% of transactions in Brazil.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -5797,7 +5770,7 @@
       "source_order": 114
     },
     {
-      "body": "per successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nfor transactions with international cards, Stripe will charge the User a fee corresponding to the percentage applied above on the transaction amount (after conversion to local currency ).",
+      "body": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards\nper successful transaction for domestic cards\nAccept online payments made using cards.\nper successful transaction for domestic cards\nfor transactions with international cards, Stripe will charge the User a fee corresponding to the percentage applied above on the transaction amount (after conversion to local currency ).",
       "heading": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards",
       "level": 3,
       "links": [
@@ -5818,7 +5791,7 @@
       "source_order": 0
     },
     {
-      "body": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "body": "Pix 1.19%\nAccept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "heading": "Pix 1.19%",
       "level": 3,
       "links": [
@@ -5958,6 +5931,47 @@
           "percentage": null,
           "raw": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
           "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "586b716e998824c6",
+      "fee_category": "Security, reliability and compliance",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Security, reliability and compliance",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Security, reliability and compliance"
+      ],
+      "source_evidence": "99.999% average historical uptime\nMaximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licenses globally\nStripe is certified to the highest industry standards and has obtained regulatory licenses around the world.\nStandard pricing\nCustom pricing\nFAQs",
+      "source_order": 4,
+      "source_text": "Maximize your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "9999.900",
+          "currency": null,
+          "exactness": "range",
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "99.999",
+          "raw": "99.999",
+          "token_id": "55dbb96490e2bf04",
           "value": null
         }
       ]
@@ -6134,6 +6148,73 @@
       "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
+      "entry_id": "1b539c4989d99ff3",
+      "fee_category": "Access to Revenue Recognition",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Access to Revenue Recognition",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Access to Revenue Recognition"
+      ],
+      "source_evidence": "Simplify accrual accounting.\nTry for free for 30 days\n0.25%\nof volume\nSee pricing details",
+      "source_order": 52,
+      "source_text": "0.25%",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "25.00",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "0.25",
+          "raw": "0.25",
+          "token_id": "56715c7f7bd02241",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "95186c9dc81044fc",
+      "fee_category": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "100+ category leaders each process more than $1 billion per year on Stripe."
+      ],
+      "source_evidence": null,
+      "source_order": 58,
+      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": []
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
       "entry_id": "3e3ef727f8992efc",
       "fee_category": "See our customers",
       "footnotes": [],
@@ -6209,11 +6290,58 @@
       ]
     },
     {
+      "channel": "online",
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "64ada2cc5ee3c1dc",
+      "fee_category": "Pix 1.19%",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-br/payment-method/pix"
+        }
+      ],
+      "payment_method": "pix",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Pix 1.19%"
+      ],
+      "source_evidence": "Pix 1.19%\nAccept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_order": 2,
+      "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "4000",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "40",
+          "raw": "40",
+          "token_id": "f36ec49fdc3faa57",
+          "value": null
+        }
+      ]
+    },
+    {
       "channel": null,
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "custom_pricing",
+      "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
       "entry_id": "f3281bc64f384015",
@@ -6235,7 +6363,7 @@
         "Boleto Bancário R$3.45"
       ],
       "source_evidence": "Let your Brazilian customers pay with Boleto—a voucher-based payment method that represents more than 20% of transactions in Brazil.",
-      "source_order": 2,
+      "source_order": 3,
       "source_text": "Let your Brazilian customers pay with Boleto—a voucher-based payment method that represents more than 20% of transactions in Brazil.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [

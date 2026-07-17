@@ -2,16 +2,16 @@
   "calculator_coverage_status": "partial",
   "coverage_summary": {
     "ambiguous_entries": 0,
-    "calculable_rules": 9,
+    "calculable_rules": 4,
     "conflicting_rule_identities": 0,
     "custom_pricing": 3,
     "ignored_non_fee": 0,
     "included": 0,
-    "non_calculable_rules": 7,
-    "numeric_fee_candidates": 1,
+    "non_calculable_rules": 10,
+    "numeric_fee_candidates": 2,
     "reference_only": 0,
-    "source_entries": 52,
-    "unclassified_fee_candidates": 2,
+    "source_entries": 50,
+    "unclassified_fee_candidates": 4,
     "unsupported_fee_shapes": 0
   },
   "derivation_status": "partial",
@@ -63,6 +63,16 @@
           "value": "2"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "2%"
+        ],
+        "source_entry_ids": [
+          "0cbfd034ccf846bf"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -98,87 +108,8 @@
     {
       "account_country": "IN",
       "additional_fees": [],
-      "basis_points": "9999.900",
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "product=platform",
-        "variant=standard",
-        "account_country=IN"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "IN"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "da4d6acc3adbf289"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "da4d6acc3adbf289",
-      "exactness": "range",
-      "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "9999.900",
-          "currency": null,
-          "minor_amount": null,
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "da4d6acc3adbf289",
-          "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-          "type": "percentage",
-          "value": "99.999"
-        }
-      ],
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "platform",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": "99.999",
-      "presentment_currency": null,
-      "product_id": "platform",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "86259d9bc669ac58",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "da4d6acc3adbf289",
-          "text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
-        }
-      ],
-      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "source_texts": [
-        "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
-      ],
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "IN",
-      "additional_fees": [],
-      "basis_points": "200",
-      "behavior": "alternative",
+      "basis_points": "40.0",
+      "behavior": "conditional",
       "billing_type": null,
       "card_origin": "domestic",
       "card_region": "domestic",
@@ -221,52 +152,74 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "286266d7341690cc"
+        "aeda0c65456d8b07"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "286266d7341690cc",
-      "exactness": "exact",
+      "entry_id": "aeda0c65456d8b07",
+      "exactness": "range",
       "fee_components": [
         {
+          "amount": "200",
+          "basis_points": null,
+          "currency": "INR",
+          "minor_amount": "20000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "aeda0c65456d8b07",
+          "source_text": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
+          "type": "maximum_fee",
+          "value": null
+        },
+        {
           "amount": null,
-          "basis_points": "200",
+          "basis_points": "40.0",
           "currency": null,
           "minor_amount": null,
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "286266d7341690cc",
-          "source_text": "2% for Mastercard and Visa cards issued in India*",
+          "source_entry_id": "aeda0c65456d8b07",
+          "source_text": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
           "type": "percentage",
-          "value": "2"
+          "value": "0.4"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200."
+        ],
+        "source_entry_ids": [
+          "aeda0c65456d8b07"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "2% for Mastercard and Visa cards issued in India*",
-      "maximum_amount": null,
+      "label": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
+      "maximum_amount": "200",
       "minimum_amount": null,
       "name": "payments",
       "payment_method": "card",
       "payout_type": null,
-      "percentage": "2",
+      "percentage": "0.4",
       "presentment_currency": null,
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "277a4b799113f61e",
+      "rule_id": "77d5697449e32da7",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "286266d7341690cc",
-          "text": "2% for Mastercard and Visa cards issued in India*"
+          "entry_id": "aeda0c65456d8b07",
+          "text": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200."
         }
       ],
-      "source_text": "2% for Mastercard and Visa cards issued in India*",
+      "source_text": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
       "source_texts": [
-        "2% for Mastercard and Visa cards issued in India*"
+        "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200."
       ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
@@ -292,7 +245,7 @@
         "card_origin=international",
         "account_country=IN"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -319,7 +272,7 @@
           "value": "IN"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "07b75bd30056abe6"
       ],
@@ -342,6 +295,16 @@
           "value": "3"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "3% for Mastercard and Visa cards issued outside India"
+        ],
+        "source_entry_ids": [
+          "07b75bd30056abe6"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -393,7 +356,7 @@
         "account_country=IN",
         "currency_conversion_required=True"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -426,7 +389,7 @@
           "value": true
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "c6df527d302c8a61"
       ],
@@ -449,6 +412,16 @@
           "value": "2"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "+ 2% if currency conversion is required"
+        ],
+        "source_entry_ids": [
+          "c6df527d302c8a61"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -497,7 +470,7 @@
         "account_country=IN",
         "transaction_type=dispute"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -512,7 +485,7 @@
           "value": "dispute"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "deac36067fa447fb"
       ],
@@ -535,6 +508,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "₹1,000.00"
+        ],
+        "source_entry_ids": [
+          "deac36067fa447fb"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "1000.00",
       "fixed_amount_minor": "100000",
       "fixed_currency": "INR",
@@ -630,6 +613,20 @@
           "value": "30"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "30%",
+          "Included with Payments",
+          "Included at no additional charge for businesses on standard payments pricing"
+        ],
+        "source_entry_ids": [
+          "50783c5ffb37cee3",
+          "27467a01b148e84b",
+          "67241d4ae5e42bba"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -695,6 +692,16 @@
       "entry_id": "9d252ba8a813c408",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "9d252ba8a813c408"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -745,6 +752,16 @@
       "entry_id": "b31be03a99f49054",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "b31be03a99f49054"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -819,6 +836,16 @@
           "value": "2"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "2%"
+        ],
+        "source_entry_ids": [
+          "932599e79965b412"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -874,6 +901,16 @@
       "entry_id": "42e448bbd996a95a",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "42e448bbd996a95a"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -916,7 +953,7 @@
         "variant=standard",
         "account_country=IN"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -925,7 +962,7 @@
           "value": "IN"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "56b4ee77a5514dea"
       ],
@@ -948,6 +985,16 @@
           "value": null
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "₹4.00"
+        ],
+        "source_entry_ids": [
+          "56b4ee77a5514dea"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": "4.00",
       "fixed_amount_minor": "400",
       "fixed_currency": "INR",
@@ -1010,6 +1057,16 @@
       "entry_id": "43cbbbd58d3bdf21",
       "exactness": "included",
       "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included"
+        ],
+        "source_entry_ids": [
+          "43cbbbd58d3bdf21"
+        ],
+        "type": "included"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1084,6 +1141,16 @@
           "value": "0.4"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "0.4% per paid invoice"
+        ],
+        "source_entry_ids": [
+          "1d455270a160d3ff"
+        ],
+        "type": "explicit_fee_phrase"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -1114,85 +1181,6 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_invoice",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "IN",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=ach_direct_debit",
-        "variant=standard",
-        "account_country=IN"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "IN"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "95186c9dc81044fc"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "95186c9dc81044fc",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "1",
-          "basis_points": null,
-          "currency": "USD",
-          "minor_amount": "100",
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "95186c9dc81044fc",
-          "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fixed_amount": "1",
-      "fixed_amount_minor": "100",
-      "fixed_currency": "USD",
-      "label": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "ach_direct_debit",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "ach_direct_debit",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "521cd940229b6345",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "95186c9dc81044fc",
-          "text": "100+ category leaders each process more than $1 billion per year on Stripe."
-        }
-      ],
-      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "source_texts": [
-        "100+ category leaders each process more than $1 billion per year on Stripe."
-      ],
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "yearly",
       "variant_id": "standard"
     },
     {
@@ -1249,6 +1237,16 @@
           "value": "10"
         }
       ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "See how Twilio increased authorisation rates by 10% with Stripe"
+        ],
+        "source_entry_ids": [
+          "c57714efc2135b10"
+        ],
+        "type": "insufficient"
+      },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
@@ -2787,45 +2785,6 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "bd26d4a1fb2b427f",
-      "fee_category": "Startup",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Startup",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Startup"
-      ],
-      "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\nUS$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 38,
-      "source_text": "US$100,000.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "100000.00",
-          "basis_points": null,
-          "currency": "SGD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "100,000.00",
-          "token_id": "dfb965bc8299a941",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
       "entry_id": "1d455270a160d3ff",
       "fee_category": "Starter",
       "footnotes": [],
@@ -2839,7 +2798,7 @@
         "Starter"
       ],
       "source_evidence": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
-      "source_order": 39,
+      "source_order": 38,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2878,7 +2837,7 @@
         "Atlas"
       ],
       "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
-      "source_order": 40,
+      "source_order": 39,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2904,45 +2863,6 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "89426236fbc8c2e4",
-      "fee_category": "Incorporate your company",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Incorporate your company",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Incorporate your company"
-      ],
-      "source_evidence": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nUS$500.00\none-off setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 41,
-      "source_text": "US$500.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "500.00",
-          "basis_points": null,
-          "currency": "SGD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "500.00",
-          "token_id": "a1de4d194c4d5cf3",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
       "entry_id": "7f478ade4b7cabba",
       "fee_category": "Pay as you go",
       "footnotes": [],
@@ -2956,7 +2876,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 42,
+      "source_order": 40,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2995,7 +2915,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 43,
+      "source_order": 41,
       "source_text": "₹1.64",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3034,7 +2954,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 44,
+      "source_order": 42,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3073,25 +2993,10 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": null,
-      "source_order": 45,
+      "source_order": 43,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "1",
-          "basis_points": null,
-          "currency": "USD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "1",
-          "token_id": "a6b59d8c4da363d7",
-          "value": null
-        }
-      ]
+      "tokens": []
     },
     {
       "channel": null,
@@ -3112,7 +3017,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 46,
+      "source_order": 44,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3151,7 +3056,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 47,
+      "source_order": 45,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3190,7 +3095,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 48,
+      "source_order": 46,
       "source_text": "+1%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3229,7 +3134,7 @@
         "See how Twilio increased authorisation rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 49,
+      "source_order": 47,
       "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3268,7 +3173,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 50,
+      "source_order": 48,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3307,7 +3212,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 51,
+      "source_order": 49,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4565,6 +4470,47 @@
       ]
     },
     {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "da4d6acc3adbf289",
+      "fee_category": "Security, reliability and compliance",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Security, reliability and compliance",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Security, reliability and compliance"
+      ],
+      "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
+      "source_order": 5,
+      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
+      "source_url": "https://stripe.com/in/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "9999.900",
+          "currency": null,
+          "exactness": "range",
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "99.999",
+          "raw": "99.999",
+          "token_id": "55dbb96490e2bf04",
+          "value": null
+        }
+      ]
+    },
+    {
       "channel": "online",
       "classification_evidence": [
         "no clear calculable fee or unsupported shape"
@@ -4613,6 +4559,32 @@
       "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
+      "entry_id": "95186c9dc81044fc",
+      "fee_category": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "100+ category leaders each process more than $1 billion per year on Stripe."
+      ],
+      "source_evidence": null,
+      "source_order": 43,
+      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "source_url": "https://stripe.com/in/pricing",
+      "tokens": []
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
       "entry_id": "3e3ef727f8992efc",
       "fee_category": "See our customers",
       "footnotes": [],
@@ -4626,7 +4598,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 50,
+      "source_order": 48,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4667,7 +4639,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 51,
+      "source_order": 49,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [

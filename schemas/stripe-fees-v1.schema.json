@@ -224,6 +224,39 @@
       "title": "FeeCondition",
       "type": "object"
     },
+    "FeeEvidence": {
+      "description": "Positive or negative evidence supporting a fee classification decision.",
+      "properties": {
+        "confidence": {
+          "default": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "phrases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Phrases",
+          "type": "array"
+        },
+        "source_entry_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Entry Ids",
+          "type": "array"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "FeeEvidence",
+      "type": "object"
+    },
     "FeeRule": {
       "description": "A derived calculation-ready fee rule.\n\nMoney amounts are represented as exact decimal strings in major units\ntogether with a currency code. Percentage rates are represented as exact\ndecimal strings and as basis points for unambiguous computation.\n\nA rule is identified by ``product_id + variant_id + conditions``. The\ndisplay ``label`` and localized source text are not part of semantic\nidentity.",
       "properties": {
@@ -413,6 +446,17 @@
           },
           "title": "Fee Components",
           "type": "array"
+        },
+        "fee_evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FeeEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "fixed_amount": {
           "anyOf": [
