@@ -7,11 +7,11 @@
     "custom_pricing": 1,
     "ignored_non_fee": 0,
     "included": 0,
-    "non_calculable_rules": 23,
-    "numeric_fee_candidates": 13,
+    "non_calculable_rules": 21,
+    "numeric_fee_candidates": 12,
     "reference_only": 0,
     "source_entries": 107,
-    "unclassified_fee_candidates": 16,
+    "unclassified_fee_candidates": 15,
     "unsupported_fee_shapes": 0
   },
   "derivation_status": "partial",
@@ -22,7 +22,7 @@
       "basis_points": "170.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": null,
@@ -123,12 +123,12 @@
       "basis_points": "9999.900",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": null,
       "classification_evidence": [
-        "product=platform",
+        "product=unspecified",
         "variant=standard",
         "account_country=AU",
         "pricing_plan=custom"
@@ -187,15 +187,15 @@
       "label": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "platform",
+      "name": "unspecified",
       "payment_method": null,
       "payout_type": null,
       "percentage": "99.999",
       "presentment_currency": null,
-      "product_id": "platform",
+      "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "aa3a0d38774dadc3",
+      "rule_id": "2dabc8f0eef3d545",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -729,7 +729,7 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -832,7 +832,7 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -935,7 +935,7 @@
       "basis_points": "3000",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -1232,7 +1232,7 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -1455,28 +1455,21 @@
       "basis_points": "20.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": "domestic",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=authorization_boost",
         "variant=custom_pricing",
-        "payment_method=card",
         "channel=online",
-        "card_region=domestic",
-        "card_origin=domestic",
+        "cross_border=False",
+        "transaction_region=domestic",
         "account_country=AU",
         "pricing_plan=custom"
       ],
       "classification_status": "calculable_rule",
       "conditions": [
-        {
-          "dimension": "payment_method",
-          "evidence": null,
-          "operator": "eq",
-          "value": "card"
-        },
         {
           "dimension": "channel",
           "evidence": null,
@@ -1484,13 +1477,13 @@
           "value": "online"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "domestic"
+          "value": false
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "domestic"
@@ -1548,14 +1541,14 @@
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "authorization_boost",
-      "payment_method": "card",
+      "payment_method": null,
       "payout_type": null,
       "percentage": "0.2",
       "presentment_currency": null,
       "product_id": "authorization_boost",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "77f6c99eb61c19d2",
+      "rule_id": "bf7a8dd728d5ac47",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1706,7 +1699,7 @@
       "basis_points": "200",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -1876,7 +1869,7 @@
       "basis_points": "150.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -1999,7 +1992,7 @@
       "basis_points": "40.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -2085,20 +2078,27 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": "350.0",
+      "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
-      "channel": "online",
+      "channel": "in_person",
       "classification_evidence": [
-        "product=managed_payments",
+        "product=unspecified",
         "variant=standard",
+        "channel=in_person",
         "account_country=AU"
       ],
       "classification_status": "calculable_rule",
       "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "in_person"
+        },
         {
           "dimension": "account_country",
           "evidence": null,
@@ -2108,67 +2108,67 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "154b5275005a62e8"
+        "1d96d9f28d807af8"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "154b5275005a62e8",
+      "entry_id": "1d96d9f28d807af8",
       "exactness": "exact",
       "fee_components": [
         {
-          "amount": null,
-          "basis_points": "350.0",
-          "currency": null,
-          "minor_amount": null,
+          "amount": "15.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "1500",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "154b5275005a62e8",
-          "source_text": "3.5% per successful Managed Payments transaction in addition to Payments fees",
-          "type": "percentage",
-          "value": "3.5"
+          "source_entry_id": "1d96d9f28d807af8",
+          "source_text": "A$15.00 per reader per month",
+          "type": "fixed_amount",
+          "value": null
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "3.5% per successful Managed Payments transaction in addition to Payments fees"
+          "A$15.00 per reader per month"
         ],
         "source_entry_ids": [
-          "154b5275005a62e8"
+          "1d96d9f28d807af8"
         ],
         "type": "explicit_fee_phrase"
       },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "3.5% per successful Managed Payments transaction in addition to Payments fees",
+      "fixed_amount": "15.00",
+      "fixed_amount_minor": "1500",
+      "fixed_currency": "AUD",
+      "label": "A$15.00 per reader per month",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "managed_payments",
+      "name": "unspecified",
       "payment_method": null,
       "payout_type": null,
-      "percentage": "3.5",
+      "percentage": null,
       "presentment_currency": null,
-      "product_id": "managed_payments",
+      "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "9f0fd6b6994f429c",
+      "rule_id": "fd12f3c0c1fab085",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "154b5275005a62e8",
-          "text": "3.5% per successful Managed Payments transaction in addition to Payments fees"
+          "entry_id": "1d96d9f28d807af8",
+          "text": "A$15.00 per reader per month"
         }
       ],
-      "source_text": "3.5% per successful Managed Payments transaction in addition to Payments fees",
+      "source_text": "A$15.00 per reader per month",
       "source_texts": [
-        "3.5% per successful Managed Payments transaction in addition to Payments fees"
+        "A$15.00 per reader per month"
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_transaction",
+      "unit": "monthly",
       "variant_id": "standard"
     },
     {
@@ -2244,7 +2244,7 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -2340,7 +2340,7 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -2444,13 +2444,13 @@
       "classification_status": "included",
       "conditions": [
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "domestic"
+          "value": false
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "domestic"
@@ -2496,7 +2496,7 @@
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "ea9ebf2078ac3e8a",
+      "rule_id": "f52e857227bd3540",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
@@ -2515,35 +2515,28 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=disputes",
         "variant=standard",
-        "payment_method=card",
-        "card_region=domestic",
-        "card_origin=domestic",
+        "cross_border=False",
+        "transaction_region=domestic",
         "account_country=AU",
         "transaction_type=dispute"
       ],
       "classification_status": "non_calculable",
       "conditions": [
         {
-          "dimension": "payment_method",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "card"
+          "value": false
         },
         {
-          "dimension": "card_region",
-          "evidence": null,
-          "operator": "eq",
-          "value": "domestic"
-        },
-        {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "domestic"
@@ -2601,14 +2594,14 @@
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "disputes",
-      "payment_method": "card",
+      "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6ba021c7de403dac",
+      "rule_id": "ff9afe315f6cfab4",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -2689,15 +2682,15 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": "40.0",
+      "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
-        "product=invoicing",
+        "product=tax",
         "variant=standard",
         "account_country=AU"
       ],
@@ -2712,67 +2705,67 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "1d455270a160d3ff"
+        "0f641f1e456f59ac"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "1d455270a160d3ff",
+      "entry_id": "0f641f1e456f59ac",
       "exactness": "exact",
       "fee_components": [
         {
-          "amount": null,
-          "basis_points": "40.0",
-          "currency": null,
-          "minor_amount": null,
+          "amount": "140.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "14000",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "1d455270a160d3ff",
-          "source_text": "0.4% per paid invoice",
-          "type": "percentage",
-          "value": "0.4"
+          "source_entry_id": "0f641f1e456f59ac",
+          "source_text": "A$140.00 per month, 1-year contract",
+          "type": "fixed_amount",
+          "value": null
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "0.4% per paid invoice"
+          "A$140.00 per month, 1-year contract"
         ],
         "source_entry_ids": [
-          "1d455270a160d3ff"
+          "0f641f1e456f59ac"
         ],
         "type": "explicit_fee_phrase"
       },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "0.4% per paid invoice",
+      "fixed_amount": "140.00",
+      "fixed_amount_minor": "14000",
+      "fixed_currency": "AUD",
+      "label": "A$140.00 per month, 1-year contract",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "invoicing",
+      "name": "tax",
       "payment_method": null,
       "payout_type": null,
-      "percentage": "0.4",
+      "percentage": null,
       "presentment_currency": null,
-      "product_id": "invoicing",
+      "product_id": "tax",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7936fe4e4ec8a9ff",
+      "rule_id": "7189aec481d7d1c2",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "1d455270a160d3ff",
-          "text": "0.4% per paid invoice"
+          "entry_id": "0f641f1e456f59ac",
+          "text": "A$140.00 per month, 1-year contract"
         }
       ],
-      "source_text": "0.4% per paid invoice",
+      "source_text": "A$140.00 per month, 1-year contract",
       "source_texts": [
-        "0.4% per paid invoice"
+        "A$140.00 per month, 1-year contract"
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_invoice",
+      "unit": "monthly",
       "variant_id": "standard"
     },
     {
@@ -2848,7 +2841,7 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": null,
@@ -2944,7 +2937,7 @@
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -3033,7 +3026,7 @@
       "basis_points": "1000",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": null,
@@ -3206,7 +3199,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Card payments 1.7% + A$0.30 for domestic cards for domestic cards for domestic cards for international cards if currency conversion is required"
+          "Card payments 1.7% + A$0.30 for domestic cards for international cards if currency conversion is required"
         ],
         "source_entry_ids": [
           "541e41997a247015"
@@ -3216,7 +3209,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards for domestic cards for international cards if currency conversion is required",
+      "label": "Card payments 1.7% + A$0.30 for domestic cards for international cards if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "payments",
@@ -3232,12 +3225,12 @@
       "source_fragments": [
         {
           "entry_id": "541e41997a247015",
-          "text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards for domestic cards for international cards if currency conversion is required"
+          "text": "Card payments 1.7% + A$0.30 for domestic cards for international cards if currency conversion is required"
         }
       ],
-      "source_text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards for domestic cards for international cards if currency conversion is required",
+      "source_text": "Card payments 1.7% + A$0.30 for domestic cards for international cards if currency conversion is required",
       "source_texts": [
-        "Card payments 1.7% + A$0.30 for domestic cards for domestic cards for domestic cards for international cards if currency conversion is required"
+        "Card payments 1.7% + A$0.30 for domestic cards for international cards if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -3251,7 +3244,7 @@
       "basis_points": "290.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -3335,7 +3328,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Alipay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required"
+          "Alipay 2.9% + A$0.30 per successful charge if currency conversion is required"
         ],
         "source_entry_ids": [
           "92ae6a5bd8a3b6df"
@@ -3345,7 +3338,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Alipay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required",
+      "label": "Alipay 2.9% + A$0.30 per successful charge if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "alipay",
@@ -3361,12 +3354,12 @@
       "source_fragments": [
         {
           "entry_id": "92ae6a5bd8a3b6df",
-          "text": "Alipay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required"
+          "text": "Alipay 2.9% + A$0.30 per successful charge if currency conversion is required"
         }
       ],
-      "source_text": "Alipay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required",
+      "source_text": "Alipay 2.9% + A$0.30 per successful charge if currency conversion is required",
       "source_texts": [
-        "Alipay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required"
+        "Alipay 2.9% + A$0.30 per successful charge if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -3478,7 +3471,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Apple Pay 1.7% + A$0.30 per successful charge per successful charge per successful charge for international cards if currency conversion is required"
+          "Apple Pay 1.7% + A$0.30 per successful charge for international cards if currency conversion is required"
         ],
         "source_entry_ids": [
           "6674ba191029b27f"
@@ -3488,7 +3481,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Apple Pay 1.7% + A$0.30 per successful charge per successful charge per successful charge for international cards if currency conversion is required",
+      "label": "Apple Pay 1.7% + A$0.30 per successful charge for international cards if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "payments",
@@ -3504,12 +3497,12 @@
       "source_fragments": [
         {
           "entry_id": "6674ba191029b27f",
-          "text": "Apple Pay 1.7% + A$0.30 per successful charge per successful charge per successful charge for international cards if currency conversion is required"
+          "text": "Apple Pay 1.7% + A$0.30 per successful charge for international cards if currency conversion is required"
         }
       ],
-      "source_text": "Apple Pay 1.7% + A$0.30 per successful charge per successful charge per successful charge for international cards if currency conversion is required",
+      "source_text": "Apple Pay 1.7% + A$0.30 per successful charge for international cards if currency conversion is required",
       "source_texts": [
-        "Apple Pay 1.7% + A$0.30 per successful charge per successful charge per successful charge for international cards if currency conversion is required"
+        "Apple Pay 1.7% + A$0.30 per successful charge for international cards if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -3523,16 +3516,16 @@
       "basis_points": "180.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=satispay",
         "variant=standard",
         "payment_method=satispay",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True",
         "success=True",
@@ -3547,13 +3540,13 @@
           "value": "satispay"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -3621,7 +3614,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Satispay 1.8% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "Satispay 1.8% + A$0.30 per successful charge for international transactions if currency conversion is required"
         ],
         "source_entry_ids": [
           "601887d25923172d"
@@ -3631,7 +3624,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Satispay 1.8% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "label": "Satispay 1.8% + A$0.30 per successful charge for international transactions if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "satispay",
@@ -3642,17 +3635,17 @@
       "product_id": "satispay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6f6f3f80b5b6eb63",
+      "rule_id": "be0010dd3afc6959",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "601887d25923172d",
-          "text": "Satispay 1.8% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "text": "Satispay 1.8% + A$0.30 per successful charge for international transactions if currency conversion is required"
         }
       ],
-      "source_text": "Satispay 1.8% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "source_text": "Satispay 1.8% + A$0.30 per successful charge for international transactions if currency conversion is required",
       "source_texts": [
-        "Satispay 1.8% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+        "Satispay 1.8% + A$0.30 per successful charge for international transactions if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -3666,7 +3659,7 @@
       "basis_points": "290.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -3750,7 +3743,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "WeChat Pay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required"
+          "WeChat Pay 2.9% + A$0.30 per successful charge if currency conversion is required"
         ],
         "source_entry_ids": [
           "2d7b3d4cdee8c49b"
@@ -3760,7 +3753,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "WeChat Pay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required",
+      "label": "WeChat Pay 2.9% + A$0.30 per successful charge if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "wechat_pay",
@@ -3776,12 +3769,12 @@
       "source_fragments": [
         {
           "entry_id": "2d7b3d4cdee8c49b",
-          "text": "WeChat Pay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required"
+          "text": "WeChat Pay 2.9% + A$0.30 per successful charge if currency conversion is required"
         }
       ],
-      "source_text": "WeChat Pay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required",
+      "source_text": "WeChat Pay 2.9% + A$0.30 per successful charge if currency conversion is required",
       "source_texts": [
-        "WeChat Pay 2.9% + A$0.30 per successful charge per successful charge per successful charge if currency conversion is required"
+        "WeChat Pay 2.9% + A$0.30 per successful charge if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -3795,19 +3788,18 @@
       "basis_points": "100",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
-        "product=disputes",
+        "product=bacs_direct_debit",
         "variant=standard",
         "payment_method=bacs_direct_debit",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
-        "currency_conversion_required=True",
-        "transaction_type=dispute"
+        "currency_conversion_required=True"
       ],
       "classification_status": "calculable_rule",
       "conditions": [
@@ -3818,13 +3810,13 @@
           "value": "bacs_direct_debit"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -3840,12 +3832,6 @@
           "evidence": null,
           "operator": "eq",
           "value": true
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
         }
       ],
       "confidence": 0.85,
@@ -3899,15 +3885,15 @@
       "label": "Bacs Direct Debit 1% + A$0.40 for international transactions if currency conversion is required for disputed payments for failed payments per successful refund",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "disputes",
+      "name": "bacs_direct_debit",
       "payment_method": "bacs_direct_debit",
       "payout_type": null,
       "percentage": "1",
       "presentment_currency": null,
-      "product_id": "disputes",
+      "product_id": "bacs_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8bdb8ddcfcd93000",
+      "rule_id": "c33153a92f0dd620",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -3922,7 +3908,7 @@
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_dispute",
+      "unit": "per_transaction",
       "variant_id": "standard"
     },
     {
@@ -3931,16 +3917,16 @@
       "basis_points": "140.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=bancontact",
         "variant=standard",
         "payment_method=bancontact",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True"
       ],
@@ -3953,13 +3939,13 @@
           "value": "bancontact"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -4036,7 +4022,7 @@
       "product_id": "bancontact",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "51212c257ebdb1c3",
+      "rule_id": "183f8c15b315b055",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4060,16 +4046,16 @@
       "basis_points": "190.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=bizum",
         "variant=standard",
         "payment_method=bizum",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True",
         "success=True",
@@ -4084,13 +4070,13 @@
           "value": "bizum"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -4158,7 +4144,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Bizum 1.9% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "Bizum 1.9% + A$0.30 per successful charge for international transactions if currency conversion is required"
         ],
         "source_entry_ids": [
           "50b05eda3486b372"
@@ -4168,7 +4154,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Bizum 1.9% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "label": "Bizum 1.9% + A$0.30 per successful charge for international transactions if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "bizum",
@@ -4179,17 +4165,17 @@
       "product_id": "bizum",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "868431b57c73dfba",
+      "rule_id": "eec0612b517e2208",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "50b05eda3486b372",
-          "text": "Bizum 1.9% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "text": "Bizum 1.9% + A$0.30 per successful charge for international transactions if currency conversion is required"
         }
       ],
-      "source_text": "Bizum 1.9% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "source_text": "Bizum 1.9% + A$0.30 per successful charge for international transactions if currency conversion is required",
       "source_texts": [
-        "Bizum 1.9% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+        "Bizum 1.9% + A$0.30 per successful charge for international transactions if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -4203,16 +4189,16 @@
       "basis_points": "190.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=blik",
         "variant=standard",
         "payment_method=blik",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True"
       ],
@@ -4225,13 +4211,13 @@
           "value": "blik"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -4308,7 +4294,7 @@
       "product_id": "blik",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "21aa5ebe359d53c4",
+      "rule_id": "d8ef6a6a25628948",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4329,127 +4315,19 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": "100",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=disputes",
-        "variant=standard",
-        "account_country=AU",
-        "transaction_type=dispute"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AU"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "40bbc65aa3a05285"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "40bbc65aa3a05285",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "0.30",
-          "basis_points": null,
-          "currency": "AUD",
-          "minor_amount": "30",
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "40bbc65aa3a05285",
-          "source_text": "PayTo 1% + A$0.30 for disputed payments for refunds",
-          "type": "fixed_amount",
-          "value": null
-        },
-        {
-          "amount": null,
-          "basis_points": "100",
-          "currency": null,
-          "minor_amount": null,
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "40bbc65aa3a05285",
-          "source_text": "PayTo 1% + A$0.30 for disputed payments for refunds",
-          "type": "percentage",
-          "value": "1"
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.0,
-        "phrases": [
-          "PayTo 1% + A$0.30 for disputed payments for refunds"
-        ],
-        "source_entry_ids": [
-          "40bbc65aa3a05285"
-        ],
-        "type": "insufficient"
-      },
-      "fixed_amount": "0.30",
-      "fixed_amount_minor": "30",
-      "fixed_currency": "AUD",
-      "label": "PayTo 1% + A$0.30 for disputed payments for refunds",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "disputes",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": "1",
-      "presentment_currency": null,
-      "product_id": "disputes",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "793e3ff286c7ba80",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "40bbc65aa3a05285",
-          "text": "PayTo 1% + A$0.30 for disputed payments for refunds"
-        }
-      ],
-      "source_text": "PayTo 1% + A$0.30 for disputed payments for refunds",
-      "source_texts": [
-        "PayTo 1% + A$0.30 for disputed payments for refunds"
-      ],
-      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AU",
-      "additional_fees": [],
       "basis_points": "160.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=eps",
         "variant=standard",
         "payment_method=eps",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True"
       ],
@@ -4462,13 +4340,13 @@
           "value": "eps"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -4545,7 +4423,7 @@
       "product_id": "eps",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "55d8ff004709b386",
+      "rule_id": "638e4a2c1f79af7f",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4569,16 +4447,16 @@
       "basis_points": "220.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=przelewy24",
         "variant=standard",
         "payment_method=przelewy24",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True"
       ],
@@ -4591,13 +4469,13 @@
           "value": "przelewy24"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -4674,7 +4552,7 @@
       "product_id": "przelewy24",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "5eef78dd1ab76c87",
+      "rule_id": "b5464fb49a6811bb",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4698,19 +4576,18 @@
       "basis_points": "80.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
-        "product=disputes",
+        "product=sepa_direct_debit",
         "variant=standard",
         "payment_method=sepa_direct_debit",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
-        "currency_conversion_required=True",
-        "transaction_type=dispute"
+        "currency_conversion_required=True"
       ],
       "classification_status": "calculable_rule",
       "conditions": [
@@ -4721,13 +4598,13 @@
           "value": "sepa_direct_debit"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -4743,12 +4620,6 @@
           "evidence": null,
           "operator": "eq",
           "value": true
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
         }
       ],
       "confidence": 0.85,
@@ -4802,15 +4673,15 @@
       "label": "SEPA Direct Debit 0.8% + A$0.30 for international transactions if currency conversion is required for disputed payments for failed payments",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "disputes",
+      "name": "sepa_direct_debit",
       "payment_method": "sepa_direct_debit",
       "payout_type": null,
       "percentage": "0.8",
       "presentment_currency": null,
-      "product_id": "disputes",
+      "product_id": "sepa_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d3edaf7f61be076a",
+      "rule_id": "a7d31476f8e8748a",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -4825,7 +4696,7 @@
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_dispute",
+      "unit": "per_transaction",
       "variant_id": "standard"
     },
     {
@@ -4834,16 +4705,16 @@
       "basis_points": "150.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=pay_by_bank",
         "variant=standard",
         "payment_method=pay_by_bank",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True",
         "success=True",
@@ -4858,13 +4729,13 @@
           "value": "pay_by_bank"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -4932,7 +4803,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Pay by Bank 1.5% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "Pay by Bank 1.5% + A$0.30 per successful charge for international transactions if currency conversion is required"
         ],
         "source_entry_ids": [
           "47621788a5b9b75c"
@@ -4942,7 +4813,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Pay by Bank 1.5% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "label": "Pay by Bank 1.5% + A$0.30 per successful charge for international transactions if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "pay_by_bank",
@@ -4953,17 +4824,17 @@
       "product_id": "pay_by_bank",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a7fc87b22dd21c4b",
+      "rule_id": "bb9f7b43d25de276",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "47621788a5b9b75c",
-          "text": "Pay by Bank 1.5% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "text": "Pay by Bank 1.5% + A$0.30 per successful charge for international transactions if currency conversion is required"
         }
       ],
-      "source_text": "Pay by Bank 1.5% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "source_text": "Pay by Bank 1.5% + A$0.30 per successful charge for international transactions if currency conversion is required",
       "source_texts": [
-        "Pay by Bank 1.5% + A$0.30 per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+        "Pay by Bank 1.5% + A$0.30 per successful charge for international transactions if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -4977,16 +4848,16 @@
       "basis_points": "150.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=mb_way",
         "variant=standard",
         "payment_method=mb_way",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True"
       ],
@@ -4999,13 +4870,13 @@
           "value": "mb_way"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -5082,7 +4953,7 @@
       "product_id": "mb_way",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a9438b69e982268b",
+      "rule_id": "e207515fb0b466be",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5106,16 +4977,16 @@
       "basis_points": "200",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=pix",
         "variant=standard",
         "payment_method=pix",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True",
         "success=True",
@@ -5130,13 +5001,13 @@
           "value": "pix"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -5192,7 +5063,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Pix 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "Pix 2% per successful charge for international transactions if currency conversion is required"
         ],
         "source_entry_ids": [
           "12b7b918c173b81c"
@@ -5202,7 +5073,7 @@
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "Pix 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "label": "Pix 2% per successful charge for international transactions if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "pix",
@@ -5213,17 +5084,17 @@
       "product_id": "pix",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "baa97f4941940996",
+      "rule_id": "13380fbcf57605c8",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "12b7b918c173b81c",
-          "text": "Pix 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "text": "Pix 2% per successful charge for international transactions if currency conversion is required"
         }
       ],
-      "source_text": "Pix 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "source_text": "Pix 2% per successful charge for international transactions if currency conversion is required",
       "source_texts": [
-        "Pix 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+        "Pix 2% per successful charge for international transactions if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -5237,16 +5108,16 @@
       "basis_points": "200",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
         "product=upi",
         "variant=standard",
         "payment_method=upi",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
         "currency_conversion_required=True",
         "success=True",
@@ -5261,13 +5132,13 @@
           "value": "upi"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -5323,7 +5194,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "UPI 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "UPI 2% per successful charge for international transactions if currency conversion is required"
         ],
         "source_entry_ids": [
           "ae891bce3df536a5"
@@ -5333,7 +5204,7 @@
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "UPI 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "label": "UPI 2% per successful charge for international transactions if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "upi",
@@ -5344,17 +5215,17 @@
       "product_id": "upi",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "58d4a56b78a843b4",
+      "rule_id": "e49d7daa3ff903f7",
       "settlement_currency": null,
       "source_fragments": [
         {
           "entry_id": "ae891bce3df536a5",
-          "text": "UPI 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+          "text": "UPI 2% per successful charge for international transactions if currency conversion is required"
         }
       ],
-      "source_text": "UPI 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required",
+      "source_text": "UPI 2% per successful charge for international transactions if currency conversion is required",
       "source_texts": [
-        "UPI 2% per successful charge per successful charge per successful charge for international transactions if currency conversion is required"
+        "UPI 2% per successful charge for international transactions if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -5438,7 +5309,7 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge per successful charge"
+          "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge"
         ],
         "source_entry_ids": [
           "106cbb4604b705ec"
@@ -5448,7 +5319,7 @@
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge per successful charge",
+      "label": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "payments",
@@ -5464,12 +5335,12 @@
       "source_fragments": [
         {
           "entry_id": "106cbb4604b705ec",
-          "text": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge per successful charge"
+          "text": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge"
         }
       ],
-      "source_text": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge per successful charge",
+      "source_text": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge",
       "source_texts": [
-        "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge per successful charge"
+        "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -5574,20 +5445,18 @@
       "basis_points": "499.00",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": null,
+      "card_region": null,
       "card_tier": null,
       "channel": "online",
       "classification_evidence": [
-        "product=disputes",
+        "product=klarna",
         "variant=standard",
         "payment_method=klarna",
-        "card_region=international",
-        "card_origin=international",
+        "cross_border=True",
+        "transaction_region=international",
         "account_country=AU",
-        "currency_conversion_required=True",
-        "dispute_state=lost",
-        "transaction_type=dispute"
+        "currency_conversion_required=True"
       ],
       "classification_status": "calculable_rule",
       "conditions": [
@@ -5598,13 +5467,13 @@
           "value": "klarna"
         },
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -5620,18 +5489,6 @@
           "evidence": null,
           "operator": "eq",
           "value": true
-        },
-        {
-          "dimension": "dispute_state",
-          "evidence": null,
-          "operator": "eq",
-          "value": "lost"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
         }
       ],
       "confidence": 0.85,
@@ -5685,15 +5542,15 @@
       "label": "Klarna Australia, New Zealand 4.99% + A$0.55 for international transactions if currency conversion is required for lost disputes",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "disputes",
+      "name": "klarna",
       "payment_method": "klarna",
       "payout_type": null,
       "percentage": "4.99",
       "presentment_currency": null,
-      "product_id": "disputes",
+      "product_id": "klarna",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2f5e97c03d663402",
+      "rule_id": "56494d18da7c00bb",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -5708,7 +5565,7 @@
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_dispute",
+      "unit": "per_transaction",
       "variant_id": "standard"
     },
     {
@@ -5717,7 +5574,7 @@
       "basis_points": "499.00",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "domestic",
+      "card_origin": null,
       "card_region": null,
       "card_tier": null,
       "channel": "online",
@@ -5833,13 +5690,13 @@
       "classification_status": "free",
       "conditions": [
         {
-          "dimension": "card_region",
+          "dimension": "cross_border",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": true
         },
         {
-          "dimension": "card_origin",
+          "dimension": "transaction_region",
           "evidence": null,
           "operator": "eq",
           "value": "international"
@@ -5885,7 +5742,7 @@
       "product_id": "scalapay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "523c72bc13d8b88a",
+      "rule_id": "bc713b562381ea65",
       "settlement_currency": null,
       "source_fragments": [],
       "source_text": "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe. for international transactions if currency conversion is required",
@@ -5896,136 +5753,6 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AU",
-      "additional_fees": [],
-      "basis_points": "549.00",
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=disputes",
-        "variant=standard",
-        "account_country=AU",
-        "dispute_state=lost",
-        "success=True",
-        "transaction_type=charge"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AU"
-        },
-        {
-          "dimension": "dispute_state",
-          "evidence": null,
-          "operator": "eq",
-          "value": "lost"
-        },
-        {
-          "dimension": "success",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "charge"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "95ac9f57f256e12b",
-        "69dac3103037bdb0"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "95ac9f57f256e12b",
-      "exactness": "free",
-      "fee_components": [
-        {
-          "amount": "0.30",
-          "basis_points": null,
-          "currency": "AUD",
-          "minor_amount": "30",
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "95ac9f57f256e12b",
-          "source_text": "Zip Zip Pay, always interest-free 5.49% + A$0.30 per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge for lost disputed payments",
-          "type": "free",
-          "value": null
-        },
-        {
-          "amount": null,
-          "basis_points": "549.00",
-          "currency": null,
-          "minor_amount": null,
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "95ac9f57f256e12b",
-          "source_text": "Zip Zip Pay, always interest-free 5.49% + A$0.30 per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge for lost disputed payments",
-          "type": "percentage",
-          "value": "5.49"
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.0,
-        "phrases": [
-          "Zip Zip Pay, always interest-free 5.49% + A$0.30 per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge for lost disputed payments",
-          "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
-        ],
-        "source_entry_ids": [
-          "95ac9f57f256e12b",
-          "69dac3103037bdb0"
-        ],
-        "type": "contradictory_fee_evidence"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Zip Zip Pay, always interest-free 5.49% + A$0.30 per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge for lost disputed payments",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "disputes",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": "5.49",
-      "presentment_currency": null,
-      "product_id": "disputes",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "d40c4e17a0aa4f93",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "95ac9f57f256e12b",
-          "text": "Zip Zip Pay, always interest-free 5.49% + A$0.30 per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge for lost disputed payments"
-        },
-        {
-          "entry_id": "69dac3103037bdb0",
-          "text": "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
-        }
-      ],
-      "source_text": "Zip Zip Pay, always interest-free 5.49% + A$0.30 per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge for lost disputed payments",
-      "source_texts": [
-        "Zip Zip Pay, always interest-free 5.49% + A$0.30 per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge per successful charge for lost disputed payments",
-        "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
-      ],
-      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute",
       "variant_id": "standard"
     }
   ],
@@ -12937,47 +12664,6 @@
           "percentage": null,
           "raw": "449.00",
           "token_id": "b2e6ebf2b1448fa9",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": "in_person",
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "unclassified_fee_candidate",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "1d96d9f28d807af8",
-      "fee_category": "Mobile",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Mobile",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Mobile"
-      ],
-      "source_evidence": "Unlimited cellular data usage on enabled readers. Apps on Device data usage limited to 10 GB per reader per month.\nA$15.00\nper reader per month\nSee pricing details",
-      "source_order": 36,
-      "source_text": "A$15.00 per reader per month",
-      "source_url": "https://stripe.com/au/pricing",
-      "tokens": [
-        {
-          "amount": "15.00",
-          "basis_points": null,
-          "currency": "AUD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "15.00",
-          "token_id": "1beae66c30848d63",
           "value": null
         }
       ]
