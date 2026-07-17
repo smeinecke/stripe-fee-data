@@ -4,13 +4,14 @@
     {
       "account_country": "AE",
       "calculator_coverage_status": null,
-      "content_sha256": "fb45c41f745225a5194a7db2435cc0bceb1918d7da5bf3b0fa15a077887bc65a",
+      "content_sha256": "5c208193ac579fac0e74190918655aaa8e596293d357ac1aee9ee1bd951e3f53",
       "data_path": "json/AE.json",
       "derivation_status": "partial",
       "locale": "en-ae",
       "schema_version": 1,
       "source_updated_at": null,
       "source_urls": [
+        "https://stripe.com/ae/pricing",
         "https://stripe.com/ae/pricing"
       ],
       "stripe_market_code": "ae"
@@ -18,7 +19,7 @@
     {
       "account_country": "AU",
       "calculator_coverage_status": null,
-      "content_sha256": "82300ea66e6b34f73dc5903eec6250ebaa85a7dfb584e47d07318ded1fa7e72b",
+      "content_sha256": "03cb703d6f622437555b5ad7a10368c76f1c2ab2e967c114c542b2e8bf78fed4",
       "data_path": "json/AU.json",
       "derivation_status": "partial",
       "locale": "en-au",
@@ -33,7 +34,7 @@
     {
       "account_country": "BR",
       "calculator_coverage_status": null,
-      "content_sha256": "0a3ea7ac6de448ed738dd0d455c096779cbd8ba78c929f84a386be4bbfe188d4",
+      "content_sha256": "ea148a1d6438757456dd52285e5c997e9260a80508ef58b315054ed035a41e32",
       "data_path": "json/BR.json",
       "derivation_status": "partial",
       "locale": "en-br",
@@ -48,7 +49,7 @@
     {
       "account_country": "DE",
       "calculator_coverage_status": null,
-      "content_sha256": "6259bdc997265337b09a75ec61f502cd0aecb39fa3ec037814ef42b9f92618cb",
+      "content_sha256": "159e2bd84d70888e20620cee6d1109339e6493940481f4b0408e68d52c0578bd",
       "data_path": "json/DE.json",
       "derivation_status": "partial",
       "locale": "en-de",
@@ -63,7 +64,7 @@
     {
       "account_country": "GB",
       "calculator_coverage_status": null,
-      "content_sha256": "4ed9695700e2f67ae1f8c70c93cb467307510cfaf855f7cd5ef9cbdc8879e593",
+      "content_sha256": "952c625169c51d38bbd41de7ca392d933a2b163fc95e909bfeb88b11d5154074",
       "data_path": "json/GB.json",
       "derivation_status": "partial",
       "locale": "en-gb",
@@ -90,13 +91,14 @@
     {
       "account_country": "IN",
       "calculator_coverage_status": null,
-      "content_sha256": "dc8713f02673148dd33f2273b3d7fd0904d466cf6bc3d2887c49a45e000a2559",
+      "content_sha256": "b63f042d826294eeaeb96fcd1db084be3d98d8c8e2f5324f802fb44b28b145e5",
       "data_path": "json/IN.json",
       "derivation_status": "partial",
       "locale": "en-in",
       "schema_version": 1,
       "source_updated_at": null,
       "source_urls": [
+        "https://stripe.com/in/pricing",
         "https://stripe.com/in/pricing"
       ],
       "stripe_market_code": "in"
@@ -104,7 +106,7 @@
     {
       "account_country": "JP",
       "calculator_coverage_status": null,
-      "content_sha256": "da1c7f0d0be2f1834bdc8b51f9d4348c0a8d6ecce9c26d1a4c57ed47ce6edee6",
+      "content_sha256": "ff161307b66289b07f095191ca6ffe919c5e87de5ded93eb24d3806cf12659df",
       "data_path": "json/JP.json",
       "derivation_status": "partial",
       "locale": "en-jp",
@@ -119,15 +121,15 @@
     {
       "account_country": "US",
       "calculator_coverage_status": null,
-      "content_sha256": "54655d88d27dca5846fedc60f2aa5ba8c070c3aaff2332f79cead5eddf0edcef",
+      "content_sha256": "06affa29ca9b31d3aefcb950bbd85ca2d82cdfe0c9c376279b8aa643d1436b52",
       "data_path": "json/US.json",
       "derivation_status": "partial",
       "locale": "en-us",
       "schema_version": 1,
       "source_updated_at": null,
       "source_urls": [
-        "https://stripe.com/en-de/pricing",
-        "https://stripe.com/en-de/pricing/local-payment-methods"
+        "https://stripe.com/pricing",
+        "https://stripe.com/pricing/local-payment-methods"
       ],
       "stripe_market_code": "us"
     }

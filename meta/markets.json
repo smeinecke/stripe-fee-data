@@ -12,12 +12,12 @@
   },
   "fee_page_urls": {
     "ae": [
-      "https://stripe.com/ae/pricing",
-      "https://stripe.com/ae/pricing"
+      "https://stripe.com/en-ae/pricing",
+      "https://stripe.com/en-ae/pricing/local-payment-methods"
     ],
     "au": [
-      "https://stripe.com/au/pricing",
-      "https://stripe.com/au/pricing/local-payment-methods"
+      "https://stripe.com/en-au/pricing",
+      "https://stripe.com/en-au/pricing/local-payment-methods"
     ],
     "br": [
       "https://stripe.com/en-br/pricing",
@@ -28,20 +28,20 @@
       "https://stripe.com/en-de/pricing/local-payment-methods"
     ],
     "gb": [
-      "https://stripe.com/gb/pricing",
-      "https://stripe.com/gb/pricing/local-payment-methods"
+      "https://stripe.com/en-gb/pricing",
+      "https://stripe.com/en-gb/pricing/local-payment-methods"
     ],
     "in": [
-      "https://stripe.com/in/pricing",
-      "https://stripe.com/in/pricing"
+      "https://stripe.com/en-in/pricing",
+      "https://stripe.com/en-in/pricing/local-payment-methods"
     ],
     "jp": [
       "https://stripe.com/en-jp/pricing",
       "https://stripe.com/en-jp/pricing/local-payment-methods"
     ],
     "us": [
-      "https://stripe.com/en-de/pricing",
-      "https://stripe.com/en-de/pricing/local-payment-methods"
+      "https://stripe.com/en-us/pricing",
+      "https://stripe.com/en-us/pricing/local-payment-methods"
     ]
   },
   "generated_at": null,

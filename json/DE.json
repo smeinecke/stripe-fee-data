@@ -2,7 +2,7 @@
   "calculator_coverage_status": "partial",
   "coverage_summary": {
     "ambiguous_entries": 0,
-    "calculable_rules": 49,
+    "calculable_rules": 48,
     "conflicting_rule_identities": 0,
     "custom_pricing": 3,
     "ignored_non_fee": 0,
@@ -6180,123 +6180,6 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "DE",
-      "additional_fees": [],
-      "basis_points": "50.0",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=sepa_bank_transfer",
-        "variant=standard",
-        "payment_method=sepa_bank_transfer",
-        "account_country=DE",
-        "currency_conversion_required=True",
-        "success=True",
-        "transaction_type=charge"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "payment_method",
-          "evidence": null,
-          "operator": "eq",
-          "value": "sepa_bank_transfer"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "DE"
-        },
-        {
-          "dimension": "currency_conversion_required",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        },
-        {
-          "dimension": "success",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "charge"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "d062afede85bbf77"
-      ],
-      "currency_conversion_required": true,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "d062afede85bbf77",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "50.0",
-          "currency": null,
-          "minor_amount": null,
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "d062afede85bbf77",
-          "source_text": "SEPA Bank Transfer 0.5% per successful charge* per successful charge* per successful charge* if currency conversion is required per successful refund",
-          "type": "percentage",
-          "value": "0.5"
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.85,
-        "phrases": [
-          "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund"
-        ],
-        "source_entry_ids": [
-          "d062afede85bbf77"
-        ],
-        "type": "explicit_fee_phrase"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "sepa_bank_transfer",
-      "payment_method": "sepa_bank_transfer",
-      "payout_type": null,
-      "percentage": "0.5",
-      "presentment_currency": null,
-      "product_id": "sepa_bank_transfer",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "35576658f6cbf19d",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "d062afede85bbf77",
-          "text": "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund"
-        }
-      ],
-      "source_text": "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund",
-      "source_texts": [
-        "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund"
-      ],
-      "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_charge",
       "variant_id": "standard"
     },
     {
@@ -16295,7 +16178,11 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "a9d1988ae4f7506ee781ffeb8c11ac5425ba0069311cdbaa42a5d8ec6f6dcedf",
+      "content_sha256": "c07e881b185fcf62d5c5bbf97df8ee881f77aea6ed1dd7e14cdb95de0fac7eb1",
+      "detected_currency": null,
+      "detected_locale": "en-de",
+      "detected_market": "DE",
+      "effective_url": "https://stripe.com/en-de/pricing",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Terminal In-person payments Radar Fraud prevention Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Crypto On-ramp Embeddable Cryptocurrency purchases Platforms and marketplaces Connect Payments for platforms Treasury for platforms Embedded financial services Issuing Physical and virtual cards More Product roadmap See what's ahead Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Financial Connections Linked financial account data Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agent",
       "last_modified": null,
@@ -16307,7 +16194,11 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "bf9d38f7eb0fd2d3ccbfd47dfda6562932bfa33bb484b91903c0d76cd8d03b62",
+      "content_sha256": "98e3bbc64aaa944c624f83a8669300263a47bc93d7a7c7033a4d929058ff9ca3",
+      "detected_currency": null,
+      "detected_locale": "en-de",
+      "detected_market": "DE",
+      "effective_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Local payment methods pricing Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Terminal In-person payments Radar Fraud prevention Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Crypto On-ramp Embeddable Cryptocurrency purchases Platforms and marketplaces Connect Payments for platforms Treasury for platforms Embedded financial services Issuing Physical and virtual cards More Product roadmap See what's ahead Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Financial Connections Linked financial account data Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage serv",
       "last_modified": null,
@@ -16932,7 +16823,7 @@
       "classification_status": "custom_pricing",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "d0b69b47c04731d2",
+      "entry_id": "d062afede85bbf77",
       "fee_category": "SEPA Bank Transfer 0.5% per successful charge*",
       "footnotes": [],
       "links": [
@@ -16959,22 +16850,22 @@
         "SEPA Bank Transfer 0.5% per successful charge*"
       ],
       "source_evidence": "SEPA Bank Transfer 0.5% per successful charge*\nper successful charge*\nKeep transaction costs low with bank transfers – ideal for large, one-off transactions such as B2B payments.\nper successful charge*\nif currency conversion is required\nper successful refund\n*The fees above for bank transfers include up to 1000 free virtual bank account numbers. If you use more than 1000 VBANs, there is an additional fee of €2.00 per VBAN. Please note that there is a total limit of 50,000 VBANs per account. If you require a large number of VBANs and would like to discuss pricing, please reach out to us .\nIf you would like to discuss volume pricing, contact us .",
-      "source_order": 22,
-      "source_text": "*The fees above for bank transfers include up to 1000 free virtual bank account numbers. If you use more than 1000 VBANs, there is an additional fee of €2.00 per VBAN. Please note that there is a total limit of 50,000 VBANs per account. If you require a large number of VBANs and would like to discuss pricing, please reach out to us . If you would like to discuss volume pricing, contact us .",
+      "source_order": 21,
+      "source_text": "SEPA Bank Transfer 0.5% per successful charge* per successful charge* per successful charge* if currency conversion is required per successful refund",
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "tokens": [
         {
-          "amount": "2.00",
-          "basis_points": null,
-          "currency": "EUR",
-          "exactness": "range",
+          "amount": null,
+          "basis_points": "50.0",
+          "currency": null,
+          "exactness": null,
           "is_minor_currency": false,
-          "kind": "amount",
+          "kind": "percentage",
           "note": null,
           "operator": null,
-          "percentage": null,
-          "raw": "2.00",
-          "token_id": "b423b4f4cc7a0148",
+          "percentage": "0.5",
+          "raw": "0.5",
+          "token_id": "8247ec75cb6a7c73",
           "value": null
         }
       ]

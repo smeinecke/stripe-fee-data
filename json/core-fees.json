@@ -4151,7 +4151,7 @@
       "calculator_coverage_status": "partial",
       "coverage_summary": {
         "ambiguous_entries": 0,
-        "calculable_rules": 49,
+        "calculable_rules": 48,
         "conflicting_rule_identities": 0,
         "custom_pricing": 3,
         "ignored_non_fee": 0,
@@ -6632,77 +6632,6 @@
           "provider": "stripe",
           "rule_id": "f1c4dac03f690c91",
           "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "DE",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "sepa_bank_transfer"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "DE"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "50.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund"
-            ],
-            "source_entry_ids": [
-              "d062afede85bbf77"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund",
-          "payment_method": "sepa_bank_transfer",
-          "product_id": "sepa_bank_transfer",
-          "provider": "stripe",
-          "rule_id": "35576658f6cbf19d",
-          "unit": "per_charge",
           "variant_id": "standard"
         },
         {
@@ -13155,15 +13084,15 @@
       "calculator_coverage_status": "partial",
       "coverage_summary": {
         "ambiguous_entries": 0,
-        "calculable_rules": 49,
+        "calculable_rules": 43,
         "conflicting_rule_identities": 0,
-        "custom_pricing": 3,
+        "custom_pricing": 2,
         "ignored_non_fee": 0,
         "included": 0,
-        "non_calculable_rules": 26,
-        "numeric_fee_candidates": 14,
+        "non_calculable_rules": 33,
+        "numeric_fee_candidates": 13,
         "reference_only": 0,
-        "source_entries": 137,
+        "source_entries": 158,
         "unclassified_fee_candidates": 16,
         "unsupported_fee_shapes": 0
       },
@@ -13199,16 +13128,22 @@
               "evidence": null,
               "operator": "eq",
               "value": "US"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
             }
           ],
           "confidence": 0.85,
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.20",
+              "amount": "0.05",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "20",
+              "currency": "USD",
+              "minor_amount": "5",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -13218,7 +13153,7 @@
             },
             {
               "amount": null,
-              "basis_points": "20.0",
+              "basis_points": "270.0",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -13226,24 +13161,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "0.2"
+              "value": "2.7"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "0.2% + €0.20 per transaction after that"
+              "2.7% + 5¢ per successful transaction for domestic cards"
             ],
             "source_entry_ids": [
-              "40fa7635360e8db0"
+              "230b4d4167ce03f4"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "0.2% + €0.20 per transaction after that",
+          "label": "2.7% + 5¢ per successful transaction for domestic cards",
           "payment_method": "card",
           "product_id": "payments",
           "provider": "stripe",
-          "rule_id": "270867f80daa0aca",
+          "rule_id": "9531023427f6d20a",
           "unit": "per_transaction",
           "variant_id": "online_domestic_cards"
         },
@@ -13263,13 +13198,13 @@
               "dimension": "card_region",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "card_origin",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "account_country",
@@ -13278,7 +13213,78 @@
               "value": "US"
             },
             {
-              "dimension": "currency_conversion_required",
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "authorization"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.10",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "10",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_surcharge",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "+ $0.10 per authorization for"
+            ],
+            "source_entry_ids": [
+              "5a8c1d332cd1248a"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "+ $0.10 per authorization for",
+          "payment_method": "card",
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "ffe1278ea1994e98",
+          "unit": "per_attempt",
+          "variant_id": "online_domestic_cards"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "link"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": false
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "domestic"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "success",
               "evidence": null,
               "operator": "eq",
               "value": true
@@ -13288,82 +13294,47 @@
           "exactness": "exact",
           "fee_components": [
             {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
               "amount": null,
-              "basis_points": "200",
+              "basis_points": "290.0",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
               "source_text": null,
-              "type": "percentage_surcharge",
-              "value": "2"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "+ 2% if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "c6df527d302c8a61"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "+ 2% if currency conversion is required",
-          "payment_method": "card",
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "a8e96d82a0701f65",
-          "unit": "per_transaction",
-          "variant_id": "online_international_cards"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "350.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
               "type": "percentage",
-              "value": "3.5"
+              "value": "2.9"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "3.5% per successful Managed Payments transaction in addition to Payments fees"
+              "2.9% + 30¢ per successful transaction for domestic cards"
             ],
             "source_entry_ids": [
-              "154b5275005a62e8"
+              "be27ae48b00bc521"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "3.5% per successful Managed Payments transaction in addition to Payments fees",
-          "payment_method": null,
-          "product_id": "payments",
+          "label": "2.9% + 30¢ per successful transaction for domestic cards",
+          "payment_method": "link",
+          "product_id": "link",
           "provider": "stripe",
-          "rule_id": "7d55585e6d40c1cb",
+          "rule_id": "ebd3f9d294d85f2f",
           "unit": "per_transaction",
-          "variant_id": "online_domestic_cards"
+          "variant_id": "standard"
         },
         {
           "account_country": "US",
@@ -13394,10 +13365,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.35",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "35",
+              "currency": "USD",
+              "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -13407,7 +13378,7 @@
             },
             {
               "amount": null,
-              "basis_points": "299.00",
+              "basis_points": "599.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -13415,26 +13386,87 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "2.99"
+              "value": "5.99"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "2.99% + €0.35 per successful transaction for Klarna"
+              "5.99% + 30¢ per successful transaction for Klarna"
             ],
             "source_entry_ids": [
-              "17d4ea8c9d19c629"
+              "6c9634fbdb8b491e"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "2.99% + €0.35 per successful transaction for Klarna",
+          "label": "5.99% + 30¢ per successful transaction for Klarna",
           "payment_method": "klarna",
           "product_id": "klarna",
           "provider": "stripe",
-          "rule_id": "5db1aead4d24fe03",
+          "rule_id": "562b060ab4c7687d",
           "unit": "per_transaction",
           "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "range",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "80.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.8"
+            },
+            {
+              "amount": "5.00",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "500",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "maximum_fee",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.8%",
+              "$5.00 cap"
+            ],
+            "source_entry_ids": [
+              "5b162aaff382ca29",
+              "4009215ce7097dfa"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.8%",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "91da30ecea72a4f8",
+          "unit": "per_transaction",
+          "variant_id": "online_domestic_cards"
         },
         {
           "account_country": "US",
@@ -13461,7 +13493,7 @@
             {
               "amount": "15.00",
               "basis_points": null,
-              "currency": "EUR",
+              "currency": "USD",
               "minor_amount": "1500",
               "operator": null,
               "schedule_id": null,
@@ -13474,18 +13506,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "€15.00 per dispute*"
+              "$15.00 per dispute*"
             ],
             "source_entry_ids": [
-              "a29cc46cfffd693c"
+              "59d3bb0449174c50"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "€15.00 per dispute*",
+          "label": "$15.00 per dispute*",
           "payment_method": null,
           "product_id": "disputes",
           "provider": "stripe",
-          "rule_id": "58b86969cedbb50f",
+          "rule_id": "6bf31d2a58a5e011",
           "unit": "per_dispute",
           "variant_id": "standard"
         },
@@ -13579,7 +13611,7 @@
             {
               "amount": "0.03",
               "basis_points": null,
-              "currency": "EUR",
+              "currency": "USD",
               "minor_amount": "3",
               "operator": null,
               "schedule_id": null,
@@ -13592,18 +13624,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "€0.03 per 3D Secure attempt for accounts with custom pricing."
+              "$0.03 per 3D Secure attempt for accounts with custom pricing."
             ],
             "source_entry_ids": [
-              "2465bb8769dc6ae4"
+              "28e4eda65ba71a63"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "€0.03 per 3D Secure attempt for accounts with custom pricing.",
+          "label": "$0.03 per 3D Secure attempt for accounts with custom pricing.",
           "payment_method": null,
           "product_id": "three_d_secure",
           "provider": "stripe",
-          "rule_id": "5a9f51cba0ec64ee",
+          "rule_id": "e810171037a31915",
           "unit": "per_attempt",
           "variant_id": "custom_pricing"
         },
@@ -13666,7 +13698,7 @@
               "0.2% per successful online card transaction for accounts with custom payments pricing"
             ],
             "source_entry_ids": [
-              "3278ceffd282bae1"
+              "3707d735548d74d2"
             ],
             "type": "explicit_fee_phrase"
           },
@@ -13674,7 +13706,7 @@
           "payment_method": null,
           "product_id": "authorization_boost",
           "provider": "stripe",
-          "rule_id": "c5ae28287e2af2bd",
+          "rule_id": "1252443b99dce759",
           "unit": "per_transaction",
           "variant_id": "custom_pricing"
         },
@@ -13767,7 +13799,7 @@
           "fee_components": [
             {
               "amount": null,
-              "basis_points": "100",
+              "basis_points": "150.0",
               "currency": null,
               "minor_amount": null,
               "operator": null,
@@ -13775,12 +13807,12 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "1"
+              "value": "1.5"
             },
             {
-              "amount": "0.50",
+              "amount": "0.5",
               "basis_points": null,
-              "currency": "EUR",
+              "currency": "USD",
               "minor_amount": "50",
               "operator": null,
               "schedule_id": null,
@@ -13793,75 +13825,22 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "1% of Instant Payouts volume",
-              "Minimum fee of €0.50"
+              "1.5% of Instant Payouts volume",
+              "Minimum fee of 50¢"
             ],
             "source_entry_ids": [
-              "a54d65cc58325ed2",
-              "defd0a8bd97f04a2"
+              "1f06c87a6de99293",
+              "d1b5b80a9b6de05a"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "1% of Instant Payouts volume",
+          "label": "1.5% of Instant Payouts volume",
           "payment_method": null,
           "product_id": "instant_payouts",
           "provider": "stripe",
-          "rule_id": "30c2da914720b60c",
+          "rule_id": "c5add45f17736d65",
           "unit": "per_payout",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "from",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "50.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Convert currencies instantly from your multi-currency settlement funds within your payments balance. 0.5% of the converted amount"
-            ],
-            "source_entry_ids": [
-              "449a6b7c151cd13f"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Convert currencies instantly from your multi-currency settlement funds within your payments balance. 0.5% of the converted amount",
-          "payment_method": null,
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "089f257de09a7427",
-          "unit": "per_transaction",
-          "variant_id": "online_domestic_cards"
         },
         {
           "account_country": "US",
@@ -13887,7 +13866,7 @@
           "fee_components": [
             {
               "amount": null,
-              "basis_points": "200",
+              "basis_points": "100",
               "currency": null,
               "minor_amount": null,
               "operator": null,
@@ -13895,24 +13874,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "2"
+              "value": "1"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Set and manage prices in multiple currencies with rate locking for up to 24 hours. 2% per successful transaction"
+              "Set and manage prices in multiple currencies with rate locking for up to 24 hours. 1% per successful transaction"
             ],
             "source_entry_ids": [
-              "740733733734e6a5"
+              "2053ab7e50273b66"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Set and manage prices in multiple currencies with rate locking for up to 24 hours. 2% per successful transaction",
+          "label": "Set and manage prices in multiple currencies with rate locking for up to 24 hours. 1% per successful transaction",
           "payment_method": null,
           "product_id": "adaptive_pricing",
           "provider": "stripe",
-          "rule_id": "c81300e9e78dcaa7",
+          "rule_id": "7dc79fd34aa88729",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -13990,203 +13969,39 @@
               "source_text": null,
               "type": "percentage",
               "value": "0.4"
+            },
+            {
+              "amount": "2.00",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "200",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "maximum_fee",
+              "value": null
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "0.4% cap per invoice"
+              "0.4%",
+              "$2.00 cap per invoice"
             ],
             "source_entry_ids": [
-              "3133092a69325af7"
+              "b3c9c0469c0639c4",
+              "691b688d93dc9ddd"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "0.4% cap per invoice",
+          "label": "0.4%",
           "payment_method": null,
           "product_id": "post_payment_invoice",
           "provider": "stripe",
-          "rule_id": "1c6df83fbd708a80",
+          "rule_id": "708e219ee21d6125",
           "unit": "per_invoice",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "card"
-            },
-            {
-              "dimension": "card_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "eea"
-            },
-            {
-              "dimension": "card_origin",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.10",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "10",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "140.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.4"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "1.4% + €0.10 per successful charge for EEA cards"
-            ],
-            "source_entry_ids": [
-              "82b46135aa4426e0"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "1.4% + €0.10 per successful charge for EEA cards",
-          "payment_method": "card",
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "6793a09e35b8add3",
-          "unit": "per_charge",
-          "variant_id": "online_international_cards"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "card"
-            },
-            {
-              "dimension": "card_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
-              "dimension": "card_origin",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.10",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "10",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "290.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "2.9"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "2.9% + €0.10 per successful charge for non-EEA cards"
-            ],
-            "source_entry_ids": [
-              "d883159d89b98b08"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "2.9% + €0.10 per successful charge for non-EEA cards",
-          "payment_method": "card",
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "7840903453f82eac",
-          "unit": "per_charge",
-          "variant_id": "online_international_cards"
         },
         {
           "account_country": "US",
@@ -14211,10 +14026,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "9.00",
+              "amount": "10.00",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "900",
+              "currency": "USD",
+              "minor_amount": "1000",
               "operator": null,
               "schedule_id": null,
               "source_entry_id": null,
@@ -14226,18 +14041,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "€9.00 per reader per month"
+              "$10.00 per reader per month"
             ],
             "source_entry_ids": [
-              "32e6e78c95b6c944"
+              "6b3b76f048aa5666"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "€9.00 per reader per month",
+          "label": "$10.00 per reader per month",
           "payment_method": null,
           "product_id": "unspecified",
           "provider": "stripe",
-          "rule_id": "2481b11c927d19f4",
+          "rule_id": "349673d44b60cc4c",
           "unit": "monthly",
           "variant_id": "standard"
         },
@@ -14266,7 +14081,7 @@
             {
               "amount": "0.05",
               "basis_points": null,
-              "currency": "EUR",
+              "currency": "USD",
               "minor_amount": "5",
               "operator": null,
               "schedule_id": null,
@@ -14279,18 +14094,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "€0.05 per screened transaction for accounts with custom pricing for any payment method"
+              "$0.05 per screened transaction for accounts with custom pricing for any payment method"
             ],
             "source_entry_ids": [
-              "7761030b9f0ef5ca"
+              "a1e0a6d8e704484b"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "€0.05 per screened transaction for accounts with custom pricing for any payment method",
+          "label": "$0.05 per screened transaction for accounts with custom pricing for any payment method",
           "payment_method": null,
           "product_id": "radar",
           "provider": "stripe",
-          "rule_id": "73c64ff9ec1a783b",
+          "rule_id": "c6d5c0117ac85496",
           "unit": "per_transaction",
           "variant_id": "custom_pricing"
         },
@@ -14319,7 +14134,7 @@
             {
               "amount": "0.02",
               "basis_points": null,
-              "currency": "EUR",
+              "currency": "USD",
               "minor_amount": "2",
               "operator": null,
               "schedule_id": null,
@@ -14332,18 +14147,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "€0.02 per screened transaction for accounts with all payment methods on standard pricing"
+              "$0.02 per screened transaction for accounts with all payment methods on standard pricing"
             ],
             "source_entry_ids": [
-              "374dfc409cad138f"
+              "c861d3b5e597e678"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "€0.02 per screened transaction for accounts with all payment methods on standard pricing",
+          "label": "$0.02 per screened transaction for accounts with all payment methods on standard pricing",
           "payment_method": null,
           "product_id": "radar",
           "provider": "stripe",
-          "rule_id": "e77ef3c7f46fc660",
+          "rule_id": "7f569fffce6d56c5",
           "unit": "per_transaction",
           "variant_id": "standard_pricing"
         },
@@ -14383,7 +14198,7 @@
           "fee_components": [
             {
               "amount": null,
-              "basis_points": "200",
+              "basis_points": "100",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -14391,24 +14206,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage_surcharge",
-              "value": "2"
+              "value": "1"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "+ 2% if currency conversion is required"
+              "+ 1% if currency conversion is required"
             ],
             "source_entry_ids": [
-              "8657585ef4c888ae"
+              "cac848f085be9fe3"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "+ 2% if currency conversion is required",
+          "label": "+ 1% if currency conversion is required",
           "payment_method": null,
           "product_id": "payments",
           "provider": "stripe",
-          "rule_id": "fd6eccdcfd46e1db",
+          "rule_id": "f21b3f80092a4be7",
           "unit": "per_transaction",
           "variant_id": "online_international_cards"
         },
@@ -14429,10 +14244,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "80.00",
+              "amount": "90.00",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "8000",
+              "currency": "USD",
+              "minor_amount": "9000",
               "operator": null,
               "schedule_id": null,
               "source_entry_id": null,
@@ -14444,103 +14259,20 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "€80.00 per month, 1-year contract"
+              "$90.00 per month, 1-year contract"
             ],
             "source_entry_ids": [
-              "d821417032758a51"
+              "f1c41cc61415b11f"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "€80.00 per month, 1-year contract",
+          "label": "$90.00 per month, 1-year contract",
           "payment_method": null,
           "product_id": "tax",
           "provider": "stripe",
-          "rule_id": "7737369068a40ccc",
+          "rule_id": "628ed04cccca4735",
           "unit": "monthly",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "card"
-            },
-            {
-              "dimension": "card_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "domestic"
-            },
-            {
-              "dimension": "card_origin",
-              "evidence": null,
-              "operator": "eq",
-              "value": "domestic"
-            },
-            {
-              "dimension": "card_tier",
-              "evidence": null,
-              "operator": "eq",
-              "value": "premium"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            }
-          ],
-          "confidence": 0.75,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.75,
-            "phrases": [
-              "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards for premium European Economic Area cards"
-            ],
-            "source_entry_ids": [
-              "efd06a074fa2b67f"
-            ],
-            "type": "pricing_table_value"
-          },
-          "label": "Domestic card payments 1.5% + €0.25 for standard European Economic Area cards for premium European Economic Area cards",
-          "payment_method": "card",
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "1b99c9f83e5e05f3",
-          "unit": "per_transaction",
-          "variant_id": "online_premium_cards"
         },
         {
           "account_country": "US",
@@ -14583,10 +14315,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.25",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
+              "currency": "USD",
+              "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -14610,18 +14342,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Alipay 2.9% + €0.25 per successful charge if currency conversion is required"
+              "Alipay 2.9% + 30¢ per successful charge if currency conversion is required"
             ],
             "source_entry_ids": [
-              "8066b6f84f4aa922"
+              "0f7fdaca31530c16"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Alipay 2.9% + €0.25 per successful charge if currency conversion is required",
+          "label": "Alipay 2.9% + 30¢ per successful charge if currency conversion is required",
           "payment_method": "alipay",
           "product_id": "alipay",
           "provider": "stripe",
-          "rule_id": "a8c88afcc43ed017",
+          "rule_id": "8ca35fa9364bac60",
           "unit": "per_charge",
           "variant_id": "standard"
         },
@@ -14635,78 +14367,19 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
-              "value": "mobilepay"
+              "value": "card"
             },
             {
-              "dimension": "account_country",
+              "dimension": "card_region",
               "evidence": null,
               "operator": "eq",
-              "value": "US"
+              "value": "international"
             },
             {
-              "dimension": "currency_conversion_required",
+              "dimension": "card_origin",
               "evidence": null,
               "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.36",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "36",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "MobilePay 1.5% + €0.36 if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "12b8ee80e66ddd14"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "MobilePay 1.5% + €0.36 if currency conversion is required",
-          "payment_method": "mobilepay",
-          "product_id": "mobilepay",
-          "provider": "stripe",
-          "rule_id": "de968d2b1c7d4892",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "paypal"
+              "value": "international"
             },
             {
               "dimension": "account_country",
@@ -14737,10 +14410,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.10",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "10",
+              "currency": "USD",
+              "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -14750,7 +14423,7 @@
             },
             {
               "amount": null,
-              "basis_points": "20.0",
+              "basis_points": "290.0",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -14758,26 +14431,26 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "0.2"
+              "value": "2.9"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "PayPal 0.2% + €0.10 + PayPal fees per successful charge if currency conversion is required"
+              "Apple Pay 2.9% + 30¢ per successful charge for international cards if currency conversion is required"
             ],
             "source_entry_ids": [
-              "072cb5993e878fe7"
+              "5eb9b1f7c20cb966"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "PayPal 0.2% + €0.10 + PayPal fees per successful charge if currency conversion is required",
-          "payment_method": "paypal",
-          "product_id": "paypal",
+          "label": "Apple Pay 2.9% + 30¢ per successful charge for international cards if currency conversion is required",
+          "payment_method": "card",
+          "product_id": "payments",
           "provider": "stripe",
-          "rule_id": "8e4b170871daa424",
+          "rule_id": "c5fffeb97ac19524",
           "unit": "per_charge",
-          "variant_id": "standard"
+          "variant_id": "online_international_cards"
         },
         {
           "account_country": "US",
@@ -14789,7 +14462,19 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
-              "value": "revolut_pay"
+              "value": "amazon_pay"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
             },
             {
               "dimension": "account_country",
@@ -14820,10 +14505,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.25",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
+              "currency": "USD",
+              "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -14833,7 +14518,7 @@
             },
             {
               "amount": null,
-              "basis_points": "150.0",
+              "basis_points": "290.0",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -14841,24 +14526,119 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "1.5"
+              "value": "2.9"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Revolut Pay 1.5% + €0.25 per successful charge if currency conversion is required"
+              "Amazon Pay 2.9% + 30¢ per successful charge for international cards if currency conversion is required for disputed payments (excluding A-to-z Guarantee claims )"
             ],
             "source_entry_ids": [
-              "5b2f745b559bea53"
+              "0f1d557631f137ec"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Revolut Pay 1.5% + €0.25 per successful charge if currency conversion is required",
-          "payment_method": "revolut_pay",
-          "product_id": "revolut_pay",
+          "label": "Amazon Pay 2.9% + 30¢ per successful charge for international cards if currency conversion is required for disputed payments (excluding A-to-z Guarantee claims )",
+          "payment_method": "amazon_pay",
+          "product_id": "amazon_pay",
           "provider": "stripe",
-          "rule_id": "3b1635ea610d7398",
+          "rule_id": "0c4b3ae2f0f94818",
+          "unit": "per_charge",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "satispay"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "charge"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "180.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.8"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Satispay 1.8% + 30¢ per successful charge for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "5cdcfc4fc01111ce"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Satispay 1.8% + 30¢ per successful charge for international transactions if currency conversion is required",
+          "payment_method": "satispay",
+          "product_id": "satispay",
+          "provider": "stripe",
+          "rule_id": "353fdabd92b17921",
           "unit": "per_charge",
           "variant_id": "standard"
         },
@@ -14903,10 +14683,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.25",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
+              "currency": "USD",
+              "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -14930,184 +14710,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "WeChat Pay 2.9% + €0.25 per successful charge if currency conversion is required"
+              "WeChat Pay 2.9% + 30¢ per successful charge if currency conversion is required"
             ],
             "source_entry_ids": [
-              "61211f4bb79dd16c"
+              "34962e69d5ddb054"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "WeChat Pay 2.9% + €0.25 per successful charge if currency conversion is required",
+          "label": "WeChat Pay 2.9% + 30¢ per successful charge if currency conversion is required",
           "payment_method": "wechat_pay",
           "product_id": "wechat_pay",
           "provider": "stripe",
-          "rule_id": "91f1b7d14d997c57",
-          "unit": "per_charge",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "amazon_pay"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Amazon Pay 1.5% + €0.25 per successful charge if currency conversion is required for disputed payments (excluding A-to-z Guarantee claims )"
-            ],
-            "source_entry_ids": [
-              "7c39791edf28e596"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Amazon Pay 1.5% + €0.25 per successful charge if currency conversion is required for disputed payments (excluding A-to-z Guarantee claims )",
-          "payment_method": "amazon_pay",
-          "product_id": "amazon_pay",
-          "provider": "stripe",
-          "rule_id": "47751585aca0a8de",
-          "unit": "per_charge",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "satispay"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "180.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.8"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Satispay 1.8% + €0.25 per successful charge if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "42b0e689e6fa530a"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Satispay 1.8% + €0.25 per successful charge if currency conversion is required",
-          "payment_method": "satispay",
-          "product_id": "satispay",
-          "provider": "stripe",
-          "rule_id": "363f345e243c5122",
+          "rule_id": "380dba6a1da71e2b",
           "unit": "per_charge",
           "variant_id": "standard"
         },
@@ -15124,28 +14738,10 @@
               "value": "ach_direct_debit"
             },
             {
-              "dimension": "cross_border",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
               "dimension": "account_country",
               "evidence": null,
               "operator": "eq",
               "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
             },
             {
               "dimension": "settlement_timing",
@@ -15173,18 +14769,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "ACH Direct Debit 0.8% per transaction for standard settlement timing for international transactions if currency conversion is required per instant bank account validation for disputed payments for failed payments"
+              "ACH Direct Debit 0.8% per transaction for standard settlement timing per transaction for two-day settlement per instant bank account validation for disputed payments for failed payments"
             ],
             "source_entry_ids": [
-              "b83a4bc7c729e9b3"
+              "cda2a617bd501879"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "ACH Direct Debit 0.8% per transaction for standard settlement timing for international transactions if currency conversion is required per instant bank account validation for disputed payments for failed payments",
+          "label": "ACH Direct Debit 0.8% per transaction for standard settlement timing per transaction for two-day settlement per instant bank account validation for disputed payments for failed payments",
           "payment_method": "ach_direct_debit",
           "product_id": "ach_direct_debit",
           "provider": "stripe",
-          "rule_id": "a3da8d356e373fa8",
+          "rule_id": "0aa6990a4edf96d5",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -15229,583 +14825,9 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.25",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "100",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Bacs Direct Debit 1% + €0.25 for international transactions if currency conversion is required for disputed payments for failed payments per successful refund"
-            ],
-            "source_entry_ids": [
-              "fcad0561268084cf"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Bacs Direct Debit 1% + €0.25 for international transactions if currency conversion is required for disputed payments for failed payments per successful refund",
-          "payment_method": "bacs_direct_debit",
-          "product_id": "bacs_direct_debit",
-          "provider": "stripe",
-          "rule_id": "7f627f39b7af3ed6",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "bancontact"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "140.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.4"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Bancontact 1.4% + €0.25 if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "41de87a9fa811ebb"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Bancontact 1.4% + €0.25 if currency conversion is required",
-          "payment_method": "bancontact",
-          "product_id": "bancontact",
-          "provider": "stripe",
-          "rule_id": "085d19e2c6a7de79",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "bizum"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Bizum 1.5% + €0.25 per successful charge if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "43316baaa0d11116"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Bizum 1.5% + €0.25 per successful charge if currency conversion is required",
-          "payment_method": "bizum",
-          "product_id": "bizum",
-          "provider": "stripe",
-          "rule_id": "b88de217b39df00d",
-          "unit": "per_charge",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "blik"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "160.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.6"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "BLIK 1.6% + €0.25 if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "2652e822b3c3d7e1"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "BLIK 1.6% + €0.25 if currency conversion is required",
-          "payment_method": "blik",
-          "product_id": "blik",
-          "provider": "stripe",
-          "rule_id": "4538e54aa9fff80b",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "eps"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "160.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.6"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "EPS 1.6% + €0.25 if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "6068fbb3013eb7a1"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "EPS 1.6% + €0.25 if currency conversion is required",
-          "payment_method": "eps",
-          "product_id": "eps",
-          "provider": "stripe",
-          "rule_id": "c4b046702917eda8",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "przelewy24"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "220.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "2.2"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Przelewy24 2.2% + €0.25 if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "be337e4efc133f69"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Przelewy24 2.2% + €0.25 if currency conversion is required",
-          "payment_method": "przelewy24",
-          "product_id": "przelewy24",
-          "provider": "stripe",
-          "rule_id": "0ebdf5bd48b732e4",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "sepa_bank_transfer"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "50.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund"
-            ],
-            "source_entry_ids": [
-              "d062afede85bbf77"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "SEPA Bank Transfer 0.5% per successful charge* if currency conversion is required per successful refund",
-          "payment_method": "sepa_bank_transfer",
-          "product_id": "sepa_bank_transfer",
-          "provider": "stripe",
-          "rule_id": "af5574742417a4bd",
-          "unit": "per_charge",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "sepa_direct_debit"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.35",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "35",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "SEPA Direct Debit €0.35 per successful charge"
-            ],
-            "source_entry_ids": [
-              "9511a2209da91e3f"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "SEPA Direct Debit €0.35 per successful charge",
-          "payment_method": "sepa_direct_debit",
-          "product_id": "sepa_direct_debit",
-          "provider": "stripe",
-          "rule_id": "b826db698872e7a6",
-          "unit": "per_charge",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "swish"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.30",
-              "basis_points": null,
-              "currency": "EUR",
+              "currency": "USD",
               "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
@@ -15830,18 +14852,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Swish 1% + €0.30 if currency conversion is required"
+              "Bacs Direct Debit 1% + 30¢ for international transactions if currency conversion is required for disputed payments for failed payments per successful refund"
             ],
             "source_entry_ids": [
-              "85ee1547d596bf45"
+              "6f39921d5a4dfde2"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Swish 1% + €0.30 if currency conversion is required",
-          "payment_method": "swish",
-          "product_id": "swish",
+          "label": "Bacs Direct Debit 1% + 30¢ for international transactions if currency conversion is required for disputed payments for failed payments per successful refund",
+          "payment_method": "bacs_direct_debit",
+          "product_id": "bacs_direct_debit",
           "provider": "stripe",
-          "rule_id": "11eb8fa4be4e9652",
+          "rule_id": "07acd09c44a186e1",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -15855,7 +14877,19 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
-              "value": "twint"
+              "value": "bancontact"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
             },
             {
               "dimension": "account_country",
@@ -15874,10 +14908,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.25",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
+              "currency": "USD",
+              "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -15887,7 +14921,7 @@
             },
             {
               "amount": null,
-              "basis_points": "260.0",
+              "basis_points": "140.0",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -15895,25 +14929,606 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "2.6"
+              "value": "1.4"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "TWINT 2.6% + €0.25 if currency conversion is required"
+              "Bancontact 1.4% + 30¢ for international transactions if currency conversion is required"
             ],
             "source_entry_ids": [
-              "abfe6862675e0755"
+              "5f3c8e46834709fd"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "TWINT 2.6% + €0.25 if currency conversion is required",
-          "payment_method": "twint",
-          "product_id": "twint",
+          "label": "Bancontact 1.4% + 30¢ for international transactions if currency conversion is required",
+          "payment_method": "bancontact",
+          "product_id": "bancontact",
           "provider": "stripe",
-          "rule_id": "0825e03ff760b280",
+          "rule_id": "1d3b4f654146f1be",
           "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bizum"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "charge"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "190.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.9"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bizum 1.9% + 30¢ per successful charge for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "d7935d31c4f860a2"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bizum 1.9% + 30¢ per successful charge for international transactions if currency conversion is required",
+          "payment_method": "bizum",
+          "product_id": "bizum",
+          "provider": "stripe",
+          "rule_id": "b1dec30af672197f",
+          "unit": "per_charge",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "blik"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "190.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.9"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "BLIK 1.9% + 30¢ for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "ba51c7fd34522aed"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "BLIK 1.9% + 30¢ for international transactions if currency conversion is required",
+          "payment_method": "blik",
+          "product_id": "blik",
+          "provider": "stripe",
+          "rule_id": "bdde22e0250e6ded",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "eps"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "160.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.6"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "EPS 1.6% + 30¢ for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "01a4d8df95e09376"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "EPS 1.6% + 30¢ for international transactions if currency conversion is required",
+          "payment_method": "eps",
+          "product_id": "eps",
+          "provider": "stripe",
+          "rule_id": "006bf6c04507e0f8",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "przelewy24"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "220.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "2.2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Przelewy24 2.2% + 30¢ for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "61efc00eeec174af"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Przelewy24 2.2% + 30¢ for international transactions if currency conversion is required",
+          "payment_method": "przelewy24",
+          "product_id": "przelewy24",
+          "provider": "stripe",
+          "rule_id": "013865b658e5dc0d",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "sepa_direct_debit"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "80.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.8"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "SEPA Direct Debit 0.8% + 30¢ for international transactions if currency conversion is required for disputed payments for failed payments"
+            ],
+            "source_entry_ids": [
+              "1541c1d6b34f19d6"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "SEPA Direct Debit 0.8% + 30¢ for international transactions if currency conversion is required for disputed payments for failed payments",
+          "payment_method": "sepa_direct_debit",
+          "product_id": "sepa_direct_debit",
+          "provider": "stripe",
+          "rule_id": "11312b514ac2709f",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bank_transfer"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "50.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "USD Bank Transfer 0.5% per successful transaction per wire payment"
+            ],
+            "source_entry_ids": [
+              "96636189a8ba0664"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "USD Bank Transfer 0.5% per successful transaction per wire payment",
+          "payment_method": "bank_transfer",
+          "product_id": "bank_transfer",
+          "provider": "stripe",
+          "rule_id": "3c47957b16c07b66",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pay_by_bank"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "charge"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pay by Bank 1.5% + 30¢ per successful charge for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "085367d3c354e3f7"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pay by Bank 1.5% + 30¢ per successful charge for international transactions if currency conversion is required",
+          "payment_method": "pay_by_bank",
+          "product_id": "pay_by_bank",
+          "provider": "stripe",
+          "rule_id": "7c2e581b496c66eb",
+          "unit": "per_charge",
           "variant_id": "standard"
         },
         {
@@ -15978,196 +15593,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "USD Bank Transfer 0.5% per successful transaction for international transactions if currency conversion is required per wire payment"
+              "EUR Bank Transfer 0.5% per successful transaction if currency conversion is required for international transactions per successful refund per international wire payment"
             ],
             "source_entry_ids": [
-              "9d307d9d7b242c32"
+              "25353e67e3442381"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "USD Bank Transfer 0.5% per successful transaction for international transactions if currency conversion is required per wire payment",
+          "label": "EUR Bank Transfer 0.5% per successful transaction if currency conversion is required for international transactions per successful refund per international wire payment",
           "payment_method": "bank_transfer",
           "product_id": "bank_transfer",
           "provider": "stripe",
-          "rule_id": "5d7720e331142b72",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "pay_by_bank"
-            },
-            {
-              "dimension": "cross_border",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "50.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Pay by Bank 0.5% + €0.25 per successful charge for international transactions if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "680c2905c4aa9df9"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Pay by Bank 0.5% + €0.25 per successful charge for international transactions if currency conversion is required",
-          "payment_method": "pay_by_bank",
-          "product_id": "pay_by_bank",
-          "provider": "stripe",
-          "rule_id": "16f939628f9d56b2",
-          "unit": "per_charge",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "mb_way"
-            },
-            {
-              "dimension": "cross_border",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.25",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "MB WAY 1.5% + €0.25 for international transactions if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "dfa70ab344d377a2"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "MB WAY 1.5% + €0.25 for international transactions if currency conversion is required",
-          "payment_method": "mb_way",
-          "product_id": "mb_way",
-          "provider": "stripe",
-          "rule_id": "8c6a1d057add32c5",
+          "rule_id": "987dc2fde5b4468c",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -16264,6 +15701,89 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
+              "value": "mb_way"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "MB WAY 1.5% + 30¢ for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "0eba167421314bb5"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "MB WAY 1.5% + 30¢ for international transactions if currency conversion is required",
+          "payment_method": "mb_way",
+          "product_id": "mb_way",
+          "provider": "stripe",
+          "rule_id": "192a52ea9dbd4c07",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
               "value": "upi"
             },
             {
@@ -16344,6 +15864,166 @@
           "classification_status": "calculable_rule",
           "conditions": [
             {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "charge"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "600",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "6"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Affirm Standard 6% + 30¢ per successful charge"
+            ],
+            "source_entry_ids": [
+              "d2e8fa0ec802bd18"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Affirm Standard 6% + 30¢ per successful charge",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "757d8d0e414e136d",
+          "unit": "per_charge",
+          "variant_id": "online_domestic_cards"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "card_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "card_origin",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "charge"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "600",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "6"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Cash App Afterpay 6% + 30¢ per successful charge for international transactions if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "edc0f78c2287ab48"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Cash App Afterpay 6% + 30¢ per successful charge for international transactions if currency conversion is required",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "ea47c905db075533",
+          "unit": "per_charge",
+          "variant_id": "online_international_cards"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
@@ -16378,9 +16058,9 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.30",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
+              "currency": "USD",
               "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
@@ -16405,102 +16085,19 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Klarna United States, Canada 5.99% + €0.30 for international transactions if currency conversion is required for lost disputes"
+              "Klarna United States, Canada 5.99% + 30¢ for international transactions if currency conversion is required for lost disputes"
             ],
             "source_entry_ids": [
-              "30e2a4b677e9f6a9"
+              "7102216b0e31332c"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Klarna United States, Canada 5.99% + €0.30 for international transactions if currency conversion is required for lost disputes",
+          "label": "Klarna United States, Canada 5.99% + 30¢ for international transactions if currency conversion is required for lost disputes",
           "payment_method": "klarna",
           "product_id": "klarna",
           "provider": "stripe",
-          "rule_id": "e1993e6f0e8f8827",
+          "rule_id": "58adcc8e48a9b1cf",
           "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "billie"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "charge"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.30",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "30",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "350.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "3.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Billie 3.5% + €0.30 per successful charge if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "4c28cf8e94537be6"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Billie 3.5% + €0.30 per successful charge if currency conversion is required",
-          "payment_method": "billie",
-          "product_id": "billie",
-          "provider": "stripe",
-          "rule_id": "42cfa77453978f6b",
-          "unit": "per_charge",
           "variant_id": "standard"
         },
         {
@@ -16526,10 +16123,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.35",
+              "amount": "0.45",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "35",
+              "currency": "USD",
+              "minor_amount": "45",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -16539,7 +16136,7 @@
             },
             {
               "amount": null,
-              "basis_points": "499.00",
+              "basis_points": "599.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -16547,24 +16144,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "4.99"
+              "value": "5.99"
             }
           ],
           "fee_evidence": {
             "confidence": 0.75,
             "phrases": [
-              "Scalapay 4.99% + €0.35"
+              "Scalapay 5.99% + 45¢"
             ],
             "source_entry_ids": [
-              "4902071e5c310836"
+              "c6fac299a66333ba"
             ],
             "type": "pricing_table_value"
           },
-          "label": "Scalapay 4.99% + €0.35",
+          "label": "Scalapay 5.99% + 45¢",
           "payment_method": "scalapay",
           "product_id": "scalapay",
           "provider": "stripe",
-          "rule_id": "fe3cba20716b9754",
+          "rule_id": "e0130514ea45657e",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -16579,6 +16176,18 @@
               "evidence": null,
               "operator": "eq",
               "value": "multibanco"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
             },
             {
               "dimension": "account_country",
@@ -16597,10 +16206,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.25",
+              "amount": "0.3",
               "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "25",
+              "currency": "USD",
+              "minor_amount": "30",
               "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
@@ -16624,24 +16233,24 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Multibanco 2.95% + €0.25 if currency conversion is required"
+              "Multibanco 2.95% + 30¢ for international transactions if currency conversion is required"
             ],
             "source_entry_ids": [
-              "9c67d0b6ee709ffb"
+              "9e579be4dbffe0a1"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Multibanco 2.95% + €0.25 if currency conversion is required",
+          "label": "Multibanco 2.95% + 30¢ for international transactions if currency conversion is required",
           "payment_method": "multibanco",
           "product_id": "multibanco",
           "provider": "stripe",
-          "rule_id": "0baf042a6ca364ef",
+          "rule_id": "06889b7964871bb0",
           "unit": "per_transaction",
           "variant_id": "standard"
         }
       ],
       "stripe_market_code": "us",
-      "unclassified_count": 19
+      "unclassified_count": 18
     }
   ],
   "schema_version": 1
