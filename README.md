@@ -11,12 +11,12 @@ This repository publishes structured, schema-validated, and deterministic JSON d
 |--------|------:|
 | Markets | **9** |
 | Derivation status | 8 partial, 1 unclassified |
-| Core fee rules | **190** |
-| Payment methods | 30 (ach_direct_debit, alipay, amazon_pay, bacs_direct_debit, bancontact, billie, bizum, blik, card, eps, ideal, klarna, konbini, link, mb_way, mobilepay, multibanco, pay_by_bank, paypal, pix, przelewy24, revolut_pay, satispay, scalapay, sepa_bank_transfer, sepa_direct_debit, swish, twint, upi, wechat_pay) |
+| Core fee rules | **222** |
+| Payment methods | 30 (ach_direct_debit, alipay, amazon_pay, bacs_direct_debit, bancontact, bank_transfer, billie, bizum, blik, card, eps, klarna, konbini, link, mb_way, mobilepay, multibanco, pay_by_bank, paypal, pix, przelewy24, revolut_pay, satispay, scalapay, sepa_bank_transfer, sepa_direct_debit, swish, twint, upi, wechat_pay) |
 | Regions | 5 (asia_pacific, europe, middle_east_africa, north_america, south_america) |
 | Unsupported markets | 0 |
 | Transient failures | 0 |
-| Last crawled | 2026-07-17 15:55 UTC |
+| Last crawled | 2026-07-17 16:59 UTC |
 <!-- STATS_END -->
 
 ## Structure

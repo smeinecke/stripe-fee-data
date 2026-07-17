@@ -2,16 +2,16 @@
   "calculator_coverage_status": "partial",
   "coverage_summary": {
     "ambiguous_entries": 0,
-    "calculable_rules": 25,
+    "calculable_rules": 32,
     "conflicting_rule_identities": 0,
-    "custom_pricing": 11,
+    "custom_pricing": 9,
     "ignored_non_fee": 0,
     "included": 0,
-    "non_calculable_rules": 16,
-    "numeric_fee_candidates": 16,
+    "non_calculable_rules": 15,
+    "numeric_fee_candidates": 17,
     "reference_only": 0,
-    "source_entries": 119,
-    "unclassified_fee_candidates": 21,
+    "source_entries": 117,
+    "unclassified_fee_candidates": 23,
     "unsupported_fee_shapes": 0
   },
   "derivation_status": "partial",
@@ -392,8 +392,8 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": "170.0",
-      "behavior": "alternative",
+      "basis_points": null,
+      "behavior": "additive",
       "billing_type": null,
       "card_origin": "domestic",
       "card_region": "domestic",
@@ -405,9 +405,10 @@
         "payment_method=card",
         "card_region=domestic",
         "card_origin=domestic",
-        "account_country=AU"
+        "account_country=AU",
+        "transaction_type=authorization"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -432,83 +433,77 @@
           "evidence": null,
           "operator": "eq",
           "value": "AU"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "authorization"
         }
       ],
-      "confidence": 0.75,
+      "confidence": 0.0,
       "contributing_entry_ids": [
-        "53aa87c49273a2d5"
+        "efecfcb19c10c038"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "53aa87c49273a2d5",
+      "entry_id": "efecfcb19c10c038",
       "exactness": "exact",
       "fee_components": [
         {
-          "amount": "0.30",
+          "amount": "0.15",
           "basis_points": null,
           "currency": "AUD",
-          "minor_amount": "30",
+          "minor_amount": "15",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "53aa87c49273a2d5",
-          "source_text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
-          "type": "fixed_amount",
+          "source_entry_id": "efecfcb19c10c038",
+          "source_text": "+ A$0.15 per authorisation for",
+          "type": "fixed_surcharge",
           "value": null
-        },
-        {
-          "amount": null,
-          "basis_points": "170.0",
-          "currency": null,
-          "minor_amount": null,
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "53aa87c49273a2d5",
-          "source_text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
-          "type": "percentage",
-          "value": "1.7"
         }
       ],
       "fee_evidence": {
-        "confidence": 0.75,
+        "confidence": 0.0,
         "phrases": [
-          "Card payments 1.7% + A$0.30 for domestic cards for domestic cards"
+          "+ A$0.15 per authorisation for"
         ],
         "source_entry_ids": [
-          "53aa87c49273a2d5"
+          "efecfcb19c10c038"
         ],
-        "type": "pricing_table_value"
+        "type": "insufficient"
       },
-      "fixed_amount": "0.30",
-      "fixed_amount_minor": "30",
-      "fixed_currency": "AUD",
-      "label": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "+ A$0.15 per authorisation for",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "payments",
       "payment_method": "card",
       "payout_type": null,
-      "percentage": "1.7",
+      "percentage": null,
       "presentment_currency": null,
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "4654b53e112f3b73",
+      "rule_id": "82ed6c9535671e86",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "53aa87c49273a2d5",
-          "text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards"
+          "entry_id": "efecfcb19c10c038",
+          "text": "+ A$0.15 per authorisation for"
         }
       ],
-      "source_text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
+      "source_text": "+ A$0.15 per authorisation for",
       "source_texts": [
-        "Card payments 1.7% + A$0.30 for domestic cards for domestic cards"
+        "+ A$0.15 per authorisation for"
       ],
-      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
+      "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_transaction",
+      "unit": "per_attempt",
       "variant_id": "online_domestic_cards"
     },
     {
@@ -636,7 +631,7 @@
       "account_country": "AU",
       "additional_fees": [],
       "basis_points": null,
-      "behavior": "conditional",
+      "behavior": "alternative",
       "billing_type": null,
       "card_origin": "domestic",
       "card_region": null,
@@ -646,104 +641,8 @@
         "product=disputes",
         "variant=standard",
         "account_country=AU",
+        "dispute_state=received",
         "transaction_type=dispute"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AU"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "5e8bce68cdf2436c"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "5e8bce68cdf2436c",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "25.00",
-          "basis_points": null,
-          "currency": "AUD",
-          "minor_amount": "2500",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "5e8bce68cdf2436c",
-          "source_text": "A$25.00",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.0,
-        "phrases": [
-          "A$25.00"
-        ],
-        "source_entry_ids": [
-          "5e8bce68cdf2436c"
-        ],
-        "type": "insufficient"
-      },
-      "fixed_amount": "25.00",
-      "fixed_amount_minor": "2500",
-      "fixed_currency": "AUD",
-      "label": "A$25.00",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "disputes",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "disputes",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "954060f5dcfc85ff",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "5e8bce68cdf2436c",
-          "text": "A$25.00"
-        }
-      ],
-      "source_text": "A$25.00",
-      "source_texts": [
-        "A$25.00"
-      ],
-      "source_url": "https://stripe.com/au/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AU",
-      "additional_fees": [],
-      "basis_points": "3000",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=disputes",
-        "variant=standard",
-        "account_country=AU",
-        "transaction_type=dispute",
-        "card_tier=standard"
       ],
       "classification_status": "calculable_rule",
       "conditions": [
@@ -754,92 +653,76 @@
           "value": "AU"
         },
         {
+          "dimension": "dispute_state",
+          "evidence": null,
+          "operator": "eq",
+          "value": "received"
+        },
+        {
           "dimension": "transaction_type",
           "evidence": null,
           "operator": "eq",
           "value": "dispute"
-        },
-        {
-          "dimension": "card_tier",
-          "evidence": null,
-          "operator": "eq",
-          "value": "standard"
         }
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "50783c5ffb37cee3",
-        "27467a01b148e84b",
-        "67241d4ae5e42bba"
+        "4327603ff9be6014"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "50783c5ffb37cee3",
+      "entry_id": "4327603ff9be6014",
       "exactness": "exact",
       "fee_components": [
         {
-          "amount": null,
-          "basis_points": "3000",
-          "currency": null,
-          "minor_amount": null,
+          "amount": "25.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "2500",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "50783c5ffb37cee3",
-          "source_text": "30%",
-          "type": "percentage",
-          "value": "30"
+          "source_entry_id": "4327603ff9be6014",
+          "source_text": "Dispute received fee A$25.00 for each dispute you receive.",
+          "type": "fixed_amount",
+          "value": null
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "30%",
-          "Included with Payments",
-          "Included at no additional charge for businesses on standard payments pricing"
+          "Dispute received fee A$25.00 for each dispute you receive."
         ],
         "source_entry_ids": [
-          "50783c5ffb37cee3",
-          "27467a01b148e84b",
-          "67241d4ae5e42bba"
+          "4327603ff9be6014"
         ],
         "type": "explicit_fee_phrase"
       },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "30%",
+      "fixed_amount": "25.00",
+      "fixed_amount_minor": "2500",
+      "fixed_currency": "AUD",
+      "label": "Dispute received fee A$25.00 for each dispute you receive.",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "disputes",
       "payment_method": null,
       "payout_type": null,
-      "percentage": "30",
+      "percentage": null,
       "presentment_currency": null,
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "49f04ced3f193817",
+      "rule_id": "f9fd71a3aec37b50",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "50783c5ffb37cee3",
-          "text": "30%"
-        },
-        {
-          "entry_id": "27467a01b148e84b",
-          "text": "Included with Payments"
-        },
-        {
-          "entry_id": "67241d4ae5e42bba",
-          "text": "Included at no additional charge for businesses on standard payments pricing"
+          "entry_id": "4327603ff9be6014",
+          "text": "Dispute received fee A$25.00 for each dispute you receive."
         }
       ],
-      "source_text": "30%",
+      "source_text": "Dispute received fee A$25.00 for each dispute you receive.",
       "source_texts": [
-        "30%",
-        "Included with Payments",
-        "Included at no additional charge for businesses on standard payments pricing"
+        "Dispute received fee A$25.00 for each dispute you receive."
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
@@ -851,7 +734,273 @@
       "account_country": "AU",
       "additional_fees": [],
       "basis_points": null,
-      "behavior": "conditional",
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "account_country=AU",
+        "dispute_state=countered",
+        "transaction_type=dispute"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AU"
+        },
+        {
+          "dimension": "dispute_state",
+          "evidence": null,
+          "operator": "eq",
+          "value": "countered"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "fbb973e37cb0c77e"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "fbb973e37cb0c77e",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "25.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "2500",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "fbb973e37cb0c77e",
+          "source_text": "Dispute countered fee A$25.00 for each dispute you respond to manually.",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Dispute countered fee A$25.00 for each dispute you respond to manually."
+        ],
+        "source_entry_ids": [
+          "fbb973e37cb0c77e"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "25.00",
+      "fixed_amount_minor": "2500",
+      "fixed_currency": "AUD",
+      "label": "Dispute countered fee A$25.00 for each dispute you respond to manually.",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "f520aa93b6396326",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "fbb973e37cb0c77e",
+          "text": "Dispute countered fee A$25.00 for each dispute you respond to manually."
+        }
+      ],
+      "source_text": "Dispute countered fee A$25.00 for each dispute you respond to manually.",
+      "source_texts": [
+        "Dispute countered fee A$25.00 for each dispute you respond to manually."
+      ],
+      "source_url": "https://stripe.com/au/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": "3000",
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "account_country=AU",
+        "dispute_state=won",
+        "transaction_type=dispute"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AU"
+        },
+        {
+          "dimension": "dispute_state",
+          "evidence": null,
+          "operator": "eq",
+          "value": "won"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "7ef1f265b0a6c69f"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "7ef1f265b0a6c69f",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "3000",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "7ef1f265b0a6c69f",
+          "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
+          "type": "percentage",
+          "value": "30"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Smart Disputes fee 30% of the disputed amount for each dispute you win."
+        ],
+        "source_entry_ids": [
+          "7ef1f265b0a6c69f"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": "30",
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "bee6ec851e8d8222",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "7ef1f265b0a6c69f",
+          "text": "Smart Disputes fee 30% of the disputed amount for each dispute you win."
+        }
+      ],
+      "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
+      "source_texts": [
+        "Smart Disputes fee 30% of the disputed amount for each dispute you win."
+      ],
+      "source_url": "https://stripe.com/au/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "informational",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "included",
+      "conditions": [],
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "95221c160b19ba22"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "95221c160b19ba22",
+      "exactness": "included",
+      "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Included with Payments"
+        ],
+        "source_entry_ids": [
+          "95221c160b19ba22"
+        ],
+        "type": "included"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Included with Payments",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": null,
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "2aa37d1ca8a69f0e",
+      "settlement_currency": null,
+      "source_fragments": [],
+      "source_text": "Included with Payments",
+      "source_texts": [
+        "Included with Payments"
+      ],
+      "source_url": "https://stripe.com/au/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "online_domestic_cards"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "alternative",
       "billing_type": null,
       "card_origin": "domestic",
       "card_region": null,
@@ -865,7 +1014,7 @@
         "card_origin=domestic",
         "account_country=AU"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "calculable_rule",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -892,14 +1041,14 @@
           "value": "AU"
         }
       ],
-      "confidence": 0.0,
+      "confidence": 0.85,
       "contributing_entry_ids": [
-        "ad38ef6b1bd585af"
+        "b7ade8e91d176973"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "ad38ef6b1bd585af",
+      "entry_id": "b7ade8e91d176973",
       "exactness": "exact",
       "fee_components": [
         {
@@ -909,26 +1058,26 @@
           "minor_amount": "4",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "ad38ef6b1bd585af",
-          "source_text": "A$0.04",
+          "source_entry_id": "b7ade8e91d176973",
+          "source_text": "A$0.04 per 3D Secure attempt for accounts with custom pricing.",
           "type": "fixed_amount",
           "value": null
         }
       ],
       "fee_evidence": {
-        "confidence": 0.0,
+        "confidence": 0.85,
         "phrases": [
-          "A$0.04"
+          "A$0.04 per 3D Secure attempt for accounts with custom pricing."
         ],
         "source_entry_ids": [
-          "ad38ef6b1bd585af"
+          "b7ade8e91d176973"
         ],
-        "type": "insufficient"
+        "type": "explicit_fee_phrase"
       },
       "fixed_amount": "0.04",
       "fixed_amount_minor": "4",
       "fixed_currency": "AUD",
-      "label": "A$0.04",
+      "label": "A$0.04 per 3D Secure attempt for accounts with custom pricing.",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "three_d_secure",
@@ -939,17 +1088,17 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "54684be5f01b72a4",
+      "rule_id": "6aaf09270ee5870d",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "ad38ef6b1bd585af",
-          "text": "A$0.04"
+          "entry_id": "b7ade8e91d176973",
+          "text": "A$0.04 per 3D Secure attempt for accounts with custom pricing."
         }
       ],
-      "source_text": "A$0.04",
+      "source_text": "A$0.04 per 3D Secure attempt for accounts with custom pricing.",
       "source_texts": [
-        "A$0.04"
+        "A$0.04 per 3D Secure attempt for accounts with custom pricing."
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
@@ -1016,6 +1165,123 @@
       "transaction_amount_min": null,
       "unit": "informational",
       "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": "20.0",
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": "domestic",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_domestic_cards",
+        "payment_method=card",
+        "channel=online",
+        "card_region=domestic",
+        "card_origin=domestic",
+        "account_country=AU"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AU"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "3278ceffd282bae1"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "3278ceffd282bae1",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "20.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "3278ceffd282bae1",
+          "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
+          "type": "percentage",
+          "value": "0.2"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "0.2% per successful online card transaction for accounts with custom payments pricing"
+        ],
+        "source_entry_ids": [
+          "3278ceffd282bae1"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "0.2% per successful online card transaction for accounts with custom payments pricing",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "payments",
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": "0.2",
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "bffdd97ea142818e",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "3278ceffd282bae1",
+          "text": "0.2% per successful online card transaction for accounts with custom payments pricing"
+        }
+      ],
+      "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
+      "source_texts": [
+        "0.2% per successful online card transaction for accounts with custom payments pricing"
+      ],
+      "source_url": "https://stripe.com/au/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_domestic_cards"
     },
     {
       "account_country": "AU",
@@ -1252,16 +1518,30 @@
       "classification_evidence": [
         "product=instant_payouts",
         "variant=standard",
+        "card_tier=standard",
         "account_country=AU",
+        "settlement_timing=instant",
         "transaction_type=payout"
       ],
       "classification_status": "calculable_rule",
       "conditions": [
         {
+          "dimension": "card_tier",
+          "evidence": null,
+          "operator": "eq",
+          "value": "standard"
+        },
+        {
           "dimension": "account_country",
           "evidence": null,
           "operator": "eq",
           "value": "AU"
+        },
+        {
+          "dimension": "settlement_timing",
+          "evidence": null,
+          "operator": "eq",
+          "value": "instant"
         },
         {
           "dimension": "transaction_type",
@@ -1272,27 +1552,14 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "ea464e738fdc341a",
-        "d942c0700ce0de49"
+        "91724419149d1d41"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "ea464e738fdc341a",
+      "entry_id": "91724419149d1d41",
       "exactness": "from",
       "fee_components": [
-        {
-          "amount": null,
-          "basis_points": "150.0",
-          "currency": null,
-          "minor_amount": null,
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "ea464e738fdc341a",
-          "source_text": "1.5%",
-          "type": "percentage",
-          "value": "1.5"
-        },
         {
           "amount": "0.50",
           "basis_points": null,
@@ -1300,28 +1567,38 @@
           "minor_amount": "50",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "d942c0700ce0de49",
-          "source_text": "Minimum fee of A$0.50",
+          "source_entry_id": "91724419149d1d41",
+          "source_text": "1.5% of Instant Payouts volume Minimum fee of A$0.50",
           "type": "minimum_fee",
           "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "91724419149d1d41",
+          "source_text": "1.5% of Instant Payouts volume Minimum fee of A$0.50",
+          "type": "percentage",
+          "value": "1.5"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "1.5%",
-          "Minimum fee of A$0.50"
+          "1.5% of Instant Payouts volume Minimum fee of A$0.50"
         ],
         "source_entry_ids": [
-          "ea464e738fdc341a",
-          "d942c0700ce0de49"
+          "91724419149d1d41"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "1.5%",
+      "label": "1.5% of Instant Payouts volume Minimum fee of A$0.50",
       "maximum_amount": null,
       "minimum_amount": "0.50",
       "name": "instant_payouts",
@@ -1332,88 +1609,23 @@
       "product_id": "instant_payouts",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "2b77dcd0253c66ab",
+      "rule_id": "0ea6dd2afd0532c5",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "ea464e738fdc341a",
-          "text": "1.5%"
-        },
-        {
-          "entry_id": "d942c0700ce0de49",
-          "text": "Minimum fee of A$0.50"
+          "entry_id": "91724419149d1d41",
+          "text": "1.5% of Instant Payouts volume Minimum fee of A$0.50"
         }
       ],
-      "source_text": "1.5%",
+      "source_text": "1.5% of Instant Payouts volume Minimum fee of A$0.50",
       "source_texts": [
-        "1.5%",
-        "Minimum fee of A$0.50"
+        "1.5% of Instant Payouts volume Minimum fee of A$0.50"
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_payout",
       "variant_id": "standard"
-    },
-    {
-      "account_country": "AU",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "included",
-      "conditions": [],
-      "confidence": 0.7,
-      "contributing_entry_ids": [
-        "5a9c62ba056b0144"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "5a9c62ba056b0144",
-      "exactness": "included",
-      "fee_components": [],
-      "fee_evidence": {
-        "confidence": 0.7,
-        "phrases": [
-          "Included"
-        ],
-        "source_entry_ids": [
-          "5a9c62ba056b0144"
-        ],
-        "type": "included"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Included",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": null,
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "payments",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "16bbe5a873992a21",
-      "settlement_currency": null,
-      "source_fragments": [],
-      "source_text": "Included",
-      "source_texts": [
-        "Included"
-      ],
-      "source_url": "https://stripe.com/au/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "online_domestic_cards"
     },
     {
       "account_country": "AU",
@@ -1605,31 +1817,38 @@
       "channel": null,
       "classification_evidence": [],
       "classification_status": "included",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimension": "card_tier",
+          "evidence": null,
+          "operator": "eq",
+          "value": "standard"
+        }
+      ],
       "confidence": 0.7,
       "contributing_entry_ids": [
-        "42e448bbd996a95a"
+        "b107009a91ac3e44"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "42e448bbd996a95a",
+      "entry_id": "b107009a91ac3e44",
       "exactness": "included",
       "fee_components": [],
       "fee_evidence": {
         "confidence": 0.7,
         "phrases": [
-          "Included"
+          "Included For accounts with all payment methods on standard pricing"
         ],
         "source_entry_ids": [
-          "42e448bbd996a95a"
+          "b107009a91ac3e44"
         ],
         "type": "included"
       },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "Included",
+      "label": "Included For accounts with all payment methods on standard pricing",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": null,
@@ -1640,12 +1859,12 @@
       "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7332f8701b925e71",
+      "rule_id": "82aedbc06d2f5b62",
       "settlement_currency": null,
       "source_fragments": [],
-      "source_text": "Included",
+      "source_text": "Included For accounts with all payment methods on standard pricing",
       "source_texts": [
-        "Included"
+        "Included For accounts with all payment methods on standard pricing"
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
@@ -1657,7 +1876,7 @@
       "account_country": "AU",
       "additional_fees": [],
       "basis_points": null,
-      "behavior": "conditional",
+      "behavior": "alternative",
       "billing_type": null,
       "card_origin": "domestic",
       "card_region": null,
@@ -1668,7 +1887,7 @@
         "variant=standard",
         "account_country=AU"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "calculable_rule",
       "conditions": [
         {
           "dimension": "account_country",
@@ -1677,14 +1896,14 @@
           "value": "AU"
         }
       ],
-      "confidence": 0.0,
+      "confidence": 0.85,
       "contributing_entry_ids": [
-        "a04cf82bad0c210e"
+        "74009ee2b77047c5"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "a04cf82bad0c210e",
+      "entry_id": "74009ee2b77047c5",
       "exactness": "exact",
       "fee_components": [
         {
@@ -1694,26 +1913,26 @@
           "minor_amount": "8",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "a04cf82bad0c210e",
-          "source_text": "A$0.08",
+          "source_entry_id": "74009ee2b77047c5",
+          "source_text": "A$0.08 per screened transaction for accounts with custom pricing for any payment method",
           "type": "fixed_amount",
           "value": null
         }
       ],
       "fee_evidence": {
-        "confidence": 0.0,
+        "confidence": 0.85,
         "phrases": [
-          "A$0.08"
+          "A$0.08 per screened transaction for accounts with custom pricing for any payment method"
         ],
         "source_entry_ids": [
-          "a04cf82bad0c210e"
+          "74009ee2b77047c5"
         ],
-        "type": "insufficient"
+        "type": "explicit_fee_phrase"
       },
       "fixed_amount": "0.08",
       "fixed_amount_minor": "8",
       "fixed_currency": "AUD",
-      "label": "A$0.08",
+      "label": "A$0.08 per screened transaction for accounts with custom pricing for any payment method",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "radar",
@@ -1724,17 +1943,113 @@
       "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "3ffca69c265eb381",
+      "rule_id": "54a26dd828507838",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "a04cf82bad0c210e",
-          "text": "A$0.08"
+          "entry_id": "74009ee2b77047c5",
+          "text": "A$0.08 per screened transaction for accounts with custom pricing for any payment method"
         }
       ],
-      "source_text": "A$0.08",
+      "source_text": "A$0.08 per screened transaction for accounts with custom pricing for any payment method",
       "source_texts": [
-        "A$0.08"
+        "A$0.08 per screened transaction for accounts with custom pricing for any payment method"
+      ],
+      "source_url": "https://stripe.com/au/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": "standard",
+      "channel": "online",
+      "classification_evidence": [
+        "product=radar",
+        "variant=standard",
+        "card_tier=standard",
+        "account_country=AU"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "card_tier",
+          "evidence": null,
+          "operator": "eq",
+          "value": "standard"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AU"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "49ee491b7d7ae12b"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "49ee491b7d7ae12b",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.02",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "2",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "49ee491b7d7ae12b",
+          "source_text": "A$0.02 per screened transaction for accounts with all payment methods on standard pricing",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "A$0.02 per screened transaction for accounts with all payment methods on standard pricing"
+        ],
+        "source_entry_ids": [
+          "49ee491b7d7ae12b"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "0.02",
+      "fixed_amount_minor": "2",
+      "fixed_currency": "AUD",
+      "label": "A$0.02 per screened transaction for accounts with all payment methods on standard pricing",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "radar",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "radar",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "9a104fd465a9c4d8",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "49ee491b7d7ae12b",
+          "text": "A$0.02 per screened transaction for accounts with all payment methods on standard pricing"
+        }
+      ],
+      "source_text": "A$0.02 per screened transaction for accounts with all payment methods on standard pricing",
+      "source_texts": [
+        "A$0.02 per screened transaction for accounts with all payment methods on standard pricing"
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
@@ -1807,6 +2122,102 @@
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "account_country=AU",
+        "transaction_type=dispute"
+      ],
+      "classification_status": "non_calculable",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AU"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "1adae18c1d64dfd2"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "1adae18c1d64dfd2",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "25.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "2500",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "1adae18c1d64dfd2",
+          "source_text": "A$25.00 per",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.0,
+        "phrases": [
+          "A$25.00 per"
+        ],
+        "source_entry_ids": [
+          "1adae18c1d64dfd2"
+        ],
+        "type": "insufficient"
+      },
+      "fixed_amount": "25.00",
+      "fixed_amount_minor": "2500",
+      "fixed_currency": "AUD",
+      "label": "A$25.00 per",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "aedc84f1c52c4f0f",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "1adae18c1d64dfd2",
+          "text": "A$25.00 per"
+        }
+      ],
+      "source_text": "A$25.00 per",
+      "source_texts": [
+        "A$25.00 per"
+      ],
+      "source_url": "https://stripe.com/au/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
       "variant_id": "standard"
     },
     {
@@ -1998,12 +2409,12 @@
       ],
       "confidence": 0.0,
       "contributing_entry_ids": [
-        "8cc5fa22ac37dd47"
+        "7c4773a269a31c59"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "8cc5fa22ac37dd47",
+      "entry_id": "7c4773a269a31c59",
       "exactness": "exact",
       "fee_components": [
         {
@@ -2013,8 +2424,8 @@
           "minor_amount": "4000",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "8cc5fa22ac37dd47",
-          "source_text": "A$40.00",
+          "source_entry_id": "7c4773a269a31c59",
+          "source_text": "A$40.00 per month",
           "type": "fixed_amount",
           "value": null
         }
@@ -2022,17 +2433,17 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "A$40.00"
+          "A$40.00 per month"
         ],
         "source_entry_ids": [
-          "8cc5fa22ac37dd47"
+          "7c4773a269a31c59"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "40.00",
       "fixed_amount_minor": "4000",
       "fixed_currency": "AUD",
-      "label": "A$40.00",
+      "label": "A$40.00 per month",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "subscriptions",
@@ -2043,22 +2454,22 @@
       "product_id": "subscriptions",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "bdd0ec069c4b7426",
+      "rule_id": "4349f3c856831a1c",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "8cc5fa22ac37dd47",
-          "text": "A$40.00"
+          "entry_id": "7c4773a269a31c59",
+          "text": "A$40.00 per month"
         }
       ],
-      "source_text": "A$40.00",
+      "source_text": "A$40.00 per month",
       "source_texts": [
-        "A$40.00"
+        "A$40.00 per month"
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational",
+      "unit": "monthly",
       "variant_id": "standard"
     },
     {
@@ -2156,6 +2567,128 @@
       "transaction_amount_min": null,
       "unit": "informational",
       "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": "170.0",
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": "domestic",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_domestic_cards",
+        "payment_method=card",
+        "card_region=domestic",
+        "card_origin=domestic",
+        "account_country=AU"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AU"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "53aa87c49273a2d5"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "53aa87c49273a2d5",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.30",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "30",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "53aa87c49273a2d5",
+          "source_text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "170.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "53aa87c49273a2d5",
+          "source_text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
+          "type": "percentage",
+          "value": "1.7"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "Card payments 1.7% + A$0.30 for domestic cards for domestic cards"
+        ],
+        "source_entry_ids": [
+          "53aa87c49273a2d5"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "0.30",
+      "fixed_amount_minor": "30",
+      "fixed_currency": "AUD",
+      "label": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "payments",
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": "1.7",
+      "presentment_currency": null,
+      "product_id": "payments",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "4654b53e112f3b73",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "53aa87c49273a2d5",
+          "text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards"
+        }
+      ],
+      "source_text": "Card payments 1.7% + A$0.30 for domestic cards for domestic cards",
+      "source_texts": [
+        "Card payments 1.7% + A$0.30 for domestic cards for domestic cards"
+      ],
+      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_domestic_cards"
     },
     {
       "account_country": "AU",
@@ -3861,97 +4394,6 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "free",
-      "conditions": [
-        {
-          "dimension": "card_region",
-          "evidence": null,
-          "operator": "eq",
-          "value": "international"
-        },
-        {
-          "dimension": "card_origin",
-          "evidence": null,
-          "operator": "eq",
-          "value": "international"
-        },
-        {
-          "dimension": "currency_conversion_required",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        },
-        {
-          "dimension": "success",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "charge"
-        }
-      ],
-      "confidence": 0.7,
-      "contributing_entry_ids": [
-        "71f242a728a2b2cd"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "71f242a728a2b2cd",
-      "exactness": "included",
-      "fee_components": [],
-      "fee_evidence": {
-        "confidence": 0.7,
-        "phrases": [
-          "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers. per successful charge for international transactions if currency conversion is required"
-        ],
-        "source_entry_ids": [
-          "71f242a728a2b2cd"
-        ],
-        "type": "free"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers. per successful charge for international transactions if currency conversion is required",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": null,
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "payments",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "2acd97bd422ca013",
-      "settlement_currency": null,
-      "source_fragments": [],
-      "source_text": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers. per successful charge for international transactions if currency conversion is required",
-      "source_texts": [
-        "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers. per successful charge for international transactions if currency conversion is required"
-      ],
-      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "online_international_cards"
-    },
-    {
-      "account_country": "AU",
-      "additional_fees": [],
       "basis_points": "499.00",
       "behavior": "conditional",
       "billing_type": null,
@@ -4069,6 +4511,174 @@
       "channel": null,
       "classification_evidence": [],
       "classification_status": "free",
+      "conditions": [],
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "f826d9d4eac3b798"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "f826d9d4eac3b798",
+      "exactness": "included",
+      "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets."
+        ],
+        "source_entry_ids": [
+          "f826d9d4eac3b798"
+        ],
+        "type": "free"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets.",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": null,
+      "payment_method": "klarna",
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "klarna",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "05887dace6283523",
+      "settlement_currency": null,
+      "source_fragments": [],
+      "source_text": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets.",
+      "source_texts": [
+        "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets."
+      ],
+      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": "499.00",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=scalapay",
+        "variant=standard",
+        "payment_method=scalapay",
+        "account_country=AU"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "scalapay"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AU"
+        }
+      ],
+      "confidence": 0.75,
+      "contributing_entry_ids": [
+        "ffa6d7205fa0eddb"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "ffa6d7205fa0eddb",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.55",
+          "basis_points": null,
+          "currency": "AUD",
+          "minor_amount": "55",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "ffa6d7205fa0eddb",
+          "source_text": "Scalapay 4.99% + A$0.55",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "499.00",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "ffa6d7205fa0eddb",
+          "source_text": "Scalapay 4.99% + A$0.55",
+          "type": "percentage",
+          "value": "4.99"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.75,
+        "phrases": [
+          "Scalapay 4.99% + A$0.55"
+        ],
+        "source_entry_ids": [
+          "ffa6d7205fa0eddb"
+        ],
+        "type": "pricing_table_value"
+      },
+      "fixed_amount": "0.55",
+      "fixed_amount_minor": "55",
+      "fixed_currency": "AUD",
+      "label": "Scalapay 4.99% + A$0.55",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "scalapay",
+      "payment_method": "scalapay",
+      "payout_type": null,
+      "percentage": "4.99",
+      "presentment_currency": null,
+      "product_id": "scalapay",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "f38c15be93fab474",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "ffa6d7205fa0eddb",
+          "text": "Scalapay 4.99% + A$0.55"
+        }
+      ],
+      "source_text": "Scalapay 4.99% + A$0.55",
+      "source_texts": [
+        "Scalapay 4.99% + A$0.55"
+      ],
+      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AU",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "informational",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "free",
       "conditions": [
         {
           "dimension": "card_region",
@@ -4083,70 +4693,64 @@
           "value": "international"
         },
         {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "scalapay"
+        },
+        {
           "dimension": "currency_conversion_required",
           "evidence": null,
           "operator": "eq",
           "value": true
-        },
-        {
-          "dimension": "dispute_state",
-          "evidence": null,
-          "operator": "eq",
-          "value": "lost"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
         }
       ],
       "confidence": 0.7,
       "contributing_entry_ids": [
-        "f84744ee0aacad10"
+        "52caec54e3ada69c"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "f84744ee0aacad10",
+      "entry_id": "52caec54e3ada69c",
       "exactness": "included",
       "fee_components": [],
       "fee_evidence": {
         "confidence": 0.7,
         "phrases": [
-          "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets. for international transactions if currency conversion is required for lost disputes"
+          "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe. for international transactions if currency conversion is required"
         ],
         "source_entry_ids": [
-          "f84744ee0aacad10"
+          "52caec54e3ada69c"
         ],
         "type": "free"
       },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets. for international transactions if currency conversion is required for lost disputes",
+      "label": "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe. for international transactions if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": null,
-      "payment_method": "klarna",
+      "payment_method": "scalapay",
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
-      "product_id": "disputes",
+      "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d3090f9bcbbc082c",
+      "rule_id": "f3a202470dd640c3",
       "settlement_currency": null,
       "source_fragments": [],
-      "source_text": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets. for international transactions if currency conversion is required for lost disputes",
+      "source_text": "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe. for international transactions if currency conversion is required",
       "source_texts": [
-        "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets. for international transactions if currency conversion is required for lost disputes"
+        "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe. for international transactions if currency conversion is required"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "informational",
-      "variant_id": "standard"
+      "variant_id": "online_international_cards"
     }
   ],
   "entries": [
@@ -4526,7 +5130,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "33144e602f376b73",
+      "entry_id": "efecfcb19c10c038",
       "fee_category": "Cards and wallets",
       "footnotes": [],
       "links": [],
@@ -4540,7 +5144,7 @@
       ],
       "source_evidence": "Accept widely used credit cards, debit cards, and digital wallets for in-person payments.\n1.7% + A$0.10\nper successful charge for domestic cards\n3.5% + A$0.10\nper successful charge for international cards\n+ A$0.15\nper authorisation for\nTap to Pay\nAccept contactless payments without additional hardware using compatible iPhone or Android devices.\n+ A$0.07\nper authorisation for optional\npoint-to-point-encryption\nAccess PCI-certified point-to-point-encryption (P2PE) required in certain industries. All Terminal transactions are end-to-end encrypted by default.",
       "source_order": 8,
-      "source_text": "+ A$0.15",
+      "source_text": "+ A$0.15 per authorisation for",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -4565,7 +5169,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "538dc4dafafee5a9",
+      "entry_id": "ce8224f36e59b513",
       "fee_category": "Cards and wallets",
       "footnotes": [],
       "links": [],
@@ -4579,7 +5183,7 @@
       ],
       "source_evidence": "Accept widely used credit cards, debit cards, and digital wallets for in-person payments.\n1.7% + A$0.10\nper successful charge for domestic cards\n3.5% + A$0.10\nper successful charge for international cards\n+ A$0.15\nper authorisation for\nTap to Pay\nAccept contactless payments without additional hardware using compatible iPhone or Android devices.\n+ A$0.07\nper authorisation for optional\npoint-to-point-encryption\nAccess PCI-certified point-to-point-encryption (P2PE) required in certain industries. All Terminal transactions are end-to-end encrypted by default.",
       "source_order": 9,
-      "source_text": "+ A$0.07",
+      "source_text": "+ A$0.07 per authorisation for optional",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -4788,7 +5392,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "5e8bce68cdf2436c",
+      "entry_id": "4327603ff9be6014",
       "fee_category": "Disputes",
       "footnotes": [],
       "links": [],
@@ -4802,7 +5406,7 @@
       ],
       "source_evidence": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\nA$25.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\nA$25.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
       "source_order": 14,
-      "source_text": "A$25.00",
+      "source_text": "Dispute received fee A$25.00 for each dispute you receive.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -4827,7 +5431,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "daaac576dc6da4d7",
+      "entry_id": "fbb973e37cb0c77e",
       "fee_category": "Disputes",
       "footnotes": [],
       "links": [],
@@ -4841,7 +5445,7 @@
       ],
       "source_evidence": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\nA$25.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\nA$25.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
       "source_order": 15,
-      "source_text": "A$25.00",
+      "source_text": "Dispute countered fee A$25.00 for each dispute you respond to manually.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -4866,7 +5470,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "50783c5ffb37cee3",
+      "entry_id": "7ef1f265b0a6c69f",
       "fee_category": "Smart Disputes",
       "footnotes": [],
       "links": [],
@@ -4878,9 +5482,9 @@
       "section_path": [
         "Smart Disputes"
       ],
-      "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.\nPayment optimisations\nIncluded with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
+      "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
       "source_order": 16,
-      "source_text": "30%",
+      "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -4905,19 +5509,19 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "27467a01b148e84b",
-      "fee_category": "Smart Disputes",
+      "entry_id": "95221c160b19ba22",
+      "fee_category": "Payment optimisations",
       "footnotes": [],
       "links": [],
       "payment_method": null,
       "payment_method_family": null,
-      "product": "Smart Disputes",
+      "product": "Payment optimisations",
       "product_category": "pricing",
       "qualifiers": [],
       "section_path": [
-        "Smart Disputes"
+        "Payment optimisations"
       ],
-      "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.\nPayment optimisations\nIncluded with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
+      "source_evidence": "Included with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
       "source_order": 17,
       "source_text": "Included with Payments",
       "source_url": "https://stripe.com/au/pricing",
@@ -4944,19 +5548,19 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "67241d4ae5e42bba",
-      "fee_category": "Smart Disputes",
+      "entry_id": "225e4a2d444fe261",
+      "fee_category": "Payment optimisations",
       "footnotes": [],
       "links": [],
       "payment_method": null,
       "payment_method_family": null,
-      "product": "Smart Disputes",
+      "product": "Payment optimisations",
       "product_category": "pricing",
       "qualifiers": [],
       "section_path": [
-        "Smart Disputes"
+        "Payment optimisations"
       ],
-      "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.\nPayment optimisations\nIncluded with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
+      "source_evidence": "Included with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
       "source_order": 18,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/au/pricing",
@@ -5100,7 +5704,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "ad38ef6b1bd585af",
+      "entry_id": "b7ade8e91d176973",
       "fee_category": "3D Secure authentication",
       "footnotes": [],
       "links": [],
@@ -5114,14 +5718,14 @@
       ],
       "source_evidence": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.",
       "source_order": 22,
-      "source_text": "A$0.04",
+      "source_text": "A$0.04 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
           "amount": "0.04",
           "basis_points": null,
           "currency": "AUD",
-          "exactness": null,
+          "exactness": "custom",
           "is_minor_currency": false,
           "kind": "amount",
           "note": null,
@@ -5129,45 +5733,6 @@
           "percentage": null,
           "raw": "0.04",
           "token_id": "46d184e23799fa32",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "882197ca61266434",
-      "fee_category": "3D Secure authentication",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "3D Secure authentication",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "3D Secure authentication"
-      ],
-      "source_evidence": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.",
-      "source_order": 23,
-      "source_text": "per 3D Secure attempt for accounts with custom pricing.",
-      "source_url": "https://stripe.com/au/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "for",
-          "percentage": null,
-          "raw": "per 3D Secure attempt for accounts with custom pricing.",
-          "token_id": null,
           "value": null
         }
       ]
@@ -5190,8 +5755,8 @@
       "section_path": [
         "Authorisation Boost"
       ],
-      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
-      "source_order": 24,
+      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
+      "source_order": 23,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5229,8 +5794,8 @@
       "section_path": [
         "Authorisation Boost"
       ],
-      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
-      "source_order": 25,
+      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
+      "source_order": 24,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5268,8 +5833,8 @@
       "section_path": [
         "Authorisation Boost"
       ],
-      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
-      "source_order": 26,
+      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
+      "source_order": 25,
       "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5308,7 +5873,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 27,
+      "source_order": 26,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5347,7 +5912,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 28,
+      "source_order": 27,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5386,7 +5951,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 29,
+      "source_order": 28,
       "source_text": "2%",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5425,7 +5990,7 @@
         "Instant payouts"
       ],
       "source_evidence": "Access funds within minutes through an eligible debit card or bank account. Alternatively, pay out your funds on our\nstandard schedule for free.\n1.5%\nof Instant Payouts volume\nMinimum fee of A$0.50\n(\nPricing differs for Connect users)",
-      "source_order": 30,
+      "source_order": 29,
       "source_text": "standard schedule for free.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5451,7 +6016,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "ea464e738fdc341a",
+      "entry_id": "91724419149d1d41",
       "fee_category": "Instant payouts",
       "footnotes": [],
       "links": [],
@@ -5464,15 +6029,29 @@
         "Instant payouts"
       ],
       "source_evidence": "Access funds within minutes through an eligible debit card or bank account. Alternatively, pay out your funds on our\nstandard schedule for free.\n1.5%\nof Instant Payouts volume\nMinimum fee of A$0.50\n(\nPricing differs for Connect users)",
-      "source_order": 31,
-      "source_text": "1.5%",
+      "source_order": 30,
+      "source_text": "1.5% of Instant Payouts volume Minimum fee of A$0.50",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
+        {
+          "amount": "0.50",
+          "basis_points": null,
+          "currency": "AUD",
+          "exactness": "from",
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "0.50",
+          "token_id": "29accacb2200b021",
+          "value": null
+        },
         {
           "amount": null,
           "basis_points": "150.0",
           "currency": null,
-          "exactness": null,
+          "exactness": "from",
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
@@ -5490,46 +6069,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "d942c0700ce0de49",
-      "fee_category": "Instant payouts",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Instant payouts",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Instant payouts"
-      ],
-      "source_evidence": "Access funds within minutes through an eligible debit card or bank account. Alternatively, pay out your funds on our\nstandard schedule for free.\n1.5%\nof Instant Payouts volume\nMinimum fee of A$0.50\n(\nPricing differs for Connect users)",
-      "source_order": 32,
-      "source_text": "Minimum fee of A$0.50",
-      "source_url": "https://stripe.com/au/pricing",
-      "tokens": [
-        {
-          "amount": "0.50",
-          "basis_points": null,
-          "currency": "AUD",
-          "exactness": "from",
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "0.50",
-          "token_id": "29accacb2200b021",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "577c4fe639de57c3",
+      "entry_id": "f4b72b556c823fee",
       "fee_category": "Multi-currency settlement",
       "footnotes": [],
       "links": [],
@@ -5542,15 +6082,15 @@
         "Multi-currency settlement"
       ],
       "source_evidence": "Settle and pay out funds in additional currencies.\n1%\nof pay out volume or a minimum fee.",
-      "source_order": 33,
-      "source_text": "1%",
+      "source_order": 31,
+      "source_text": "1% of pay out volume or a minimum fee.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
           "amount": null,
           "basis_points": "100",
           "currency": null,
-          "exactness": null,
+          "exactness": "from",
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
@@ -5581,7 +6121,7 @@
         "Accept payments"
       ],
       "source_evidence": "Accept payments made on Stripe Checkout.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 34,
+      "source_order": 32,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5620,7 +6160,7 @@
         "Accept payments"
       ],
       "source_evidence": "Accept payments made on Stripe Checkout.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 35,
+      "source_order": 33,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5659,7 +6199,7 @@
         "Post-payment invoices"
       ],
       "source_evidence": "Automatically generate an invoice after a one-off purchase.\n0.4%\non transaction total\nUS$2.00\ncap per invoice",
-      "source_order": 36,
+      "source_order": 34,
       "source_text": "0.4%",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5698,7 +6238,7 @@
         "Merchant of record services"
       ],
       "source_evidence": "A complete merchant of record solution for global digital commerce. Includes indirect tax compliance (sales tax, VAT, GST) and remittance in more than 75 countries, along with fraud prevention, dispute management, invoicing, and customer support globally.\n3.5%\nper successful Managed Payments transaction in addition to Payments fees",
-      "source_order": 37,
+      "source_order": 35,
       "source_text": "A complete merchant of record solution for global digital commerce. Includes indirect tax compliance (sales tax, VAT, GST) and remittance in more than 75 countries, along with fraud prevention, dispute management, invoicing, and customer support globally.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5737,7 +6277,7 @@
         "Merchant of record services"
       ],
       "source_evidence": "A complete merchant of record solution for global digital commerce. Includes indirect tax compliance (sales tax, VAT, GST) and remittance in more than 75 countries, along with fraud prevention, dispute management, invoicing, and customer support globally.\n3.5%\nper successful Managed Payments transaction in addition to Payments fees",
-      "source_order": 38,
+      "source_order": 36,
       "source_text": "3.5% per successful Managed Payments transaction in addition to Payments fees",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5776,7 +6316,7 @@
         "Card readers"
       ],
       "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\nA$89.00\nBBPOS WisePad 3\nExcl. GST\nA$449.00\nStripe Reader S710\nExcl. GST\nA$449.00\nStripe Reader S700\nExcl. GST",
-      "source_order": 39,
+      "source_order": 37,
       "source_text": "A$89.00",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5815,7 +6355,7 @@
         "Card readers"
       ],
       "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\nA$89.00\nBBPOS WisePad 3\nExcl. GST\nA$449.00\nStripe Reader S710\nExcl. GST\nA$449.00\nStripe Reader S700\nExcl. GST",
-      "source_order": 40,
+      "source_order": 38,
       "source_text": "A$449.00",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5854,7 +6394,7 @@
         "Card readers"
       ],
       "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\nA$89.00\nBBPOS WisePad 3\nExcl. GST\nA$449.00\nStripe Reader S710\nExcl. GST\nA$449.00\nStripe Reader S700\nExcl. GST",
-      "source_order": 41,
+      "source_order": 39,
       "source_text": "A$449.00",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -5875,12 +6415,12 @@
       ]
     },
     {
-      "channel": null,
+      "channel": "in_person",
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "7ae138ab611e883a",
+      "entry_id": "1d96d9f28d807af8",
       "fee_category": "Mobile",
       "footnotes": [],
       "links": [],
@@ -5893,8 +6433,8 @@
         "Mobile"
       ],
       "source_evidence": "Unlimited cellular data usage on enabled readers. Apps on Device data usage limited to 10 GB per reader per month.\nA$15.00\nper reader per month\nSee pricing details",
-      "source_order": 42,
-      "source_text": "A$15.00",
+      "source_order": 40,
+      "source_text": "A$15.00 per reader per month",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -5919,7 +6459,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "42e448bbd996a95a",
+      "entry_id": "b107009a91ac3e44",
       "fee_category": "Radar’s machine learning",
       "footnotes": [],
       "links": [],
@@ -5932,8 +6472,8 @@
         "Radar’s machine learning"
       ],
       "source_evidence": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\nA$0.08\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 43,
-      "source_text": "Included",
+      "source_order": 41,
+      "source_text": "Included For accounts with all payment methods on standard pricing",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -5944,9 +6484,9 @@
           "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
-          "operator": null,
+          "operator": "for",
           "percentage": null,
-          "raw": "Included",
+          "raw": "Included For accounts with all payment methods on standard pricing",
           "token_id": null,
           "value": null
         }
@@ -5958,7 +6498,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "a04cf82bad0c210e",
+      "entry_id": "74009ee2b77047c5",
       "fee_category": "Radar’s machine learning",
       "footnotes": [],
       "links": [],
@@ -5971,15 +6511,15 @@
         "Radar’s machine learning"
       ],
       "source_evidence": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\nA$0.08\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 44,
-      "source_text": "A$0.08",
+      "source_order": 42,
+      "source_text": "A$0.08 per screened transaction for accounts with custom pricing for any payment method",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
           "amount": "0.08",
           "basis_points": null,
           "currency": "AUD",
-          "exactness": null,
+          "exactness": "custom",
           "is_minor_currency": false,
           "kind": "amount",
           "note": null,
@@ -5997,7 +6537,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "07ac1e00aac679a9",
+      "entry_id": "49ee491b7d7ae12b",
       "fee_category": "Radar for Fraud Teams",
       "footnotes": [],
       "links": [],
@@ -6010,8 +6550,8 @@
         "Radar for Fraud Teams"
       ],
       "source_evidence": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nA$0.02\nper screened transaction for accounts with all payment methods on standard pricing\nA$0.10\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 45,
-      "source_text": "A$0.02",
+      "source_order": 43,
+      "source_text": "A$0.02 per screened transaction for accounts with all payment methods on standard pricing",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6036,7 +6576,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "96a82a7770604c1f",
+      "entry_id": "9ac178630aa40c7b",
       "fee_category": "Radar for Fraud Teams",
       "footnotes": [],
       "links": [],
@@ -6049,15 +6589,15 @@
         "Radar for Fraud Teams"
       ],
       "source_evidence": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nA$0.02\nper screened transaction for accounts with all payment methods on standard pricing\nA$0.10\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 46,
-      "source_text": "A$0.10",
+      "source_order": 44,
+      "source_text": "A$0.10 per screened transaction for accounts with custom pricing for any payment method",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
           "amount": "0.10",
           "basis_points": null,
           "currency": "AUD",
-          "exactness": null,
+          "exactness": "custom",
           "is_minor_currency": false,
           "kind": "amount",
           "note": null,
@@ -6088,7 +6628,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nA$25.00\nper\nVisa resolution\nA$25.00\nper\nVisa Compelling Evidence 3.0 block\nA$50.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 47,
+      "source_order": 45,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6114,7 +6654,85 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "e27d4ca51708e774",
+      "entry_id": "1adae18c1d64dfd2",
+      "fee_category": "Dispute prevention",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Dispute prevention",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Dispute prevention"
+      ],
+      "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nA$25.00\nper\nVisa resolution\nA$25.00\nper\nVisa Compelling Evidence 3.0 block\nA$50.00\nper\nMastercard resolution\nCompare plans",
+      "source_order": 46,
+      "source_text": "A$25.00 per",
+      "source_url": "https://stripe.com/au/pricing",
+      "tokens": [
+        {
+          "amount": "25.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "25.00",
+          "token_id": "bd92c1e26c5624aa",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "88f2ae1ec34b2c56",
+      "fee_category": "Dispute prevention",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Dispute prevention",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Dispute prevention"
+      ],
+      "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nA$25.00\nper\nVisa resolution\nA$25.00\nper\nVisa Compelling Evidence 3.0 block\nA$50.00\nper\nMastercard resolution\nCompare plans",
+      "source_order": 47,
+      "source_text": "A$25.00 per",
+      "source_url": "https://stripe.com/au/pricing",
+      "tokens": [
+        {
+          "amount": "25.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "25.00",
+          "token_id": "bd92c1e26c5624aa",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "79e006ee5e4a4d01",
       "fee_category": "Dispute prevention",
       "footnotes": [],
       "links": [],
@@ -6128,85 +6746,7 @@
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nA$25.00\nper\nVisa resolution\nA$25.00\nper\nVisa Compelling Evidence 3.0 block\nA$50.00\nper\nMastercard resolution\nCompare plans",
       "source_order": 48,
-      "source_text": "A$25.00",
-      "source_url": "https://stripe.com/au/pricing",
-      "tokens": [
-        {
-          "amount": "25.00",
-          "basis_points": null,
-          "currency": "AUD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "25.00",
-          "token_id": "bd92c1e26c5624aa",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "71a667844dab713b",
-      "fee_category": "Dispute prevention",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Dispute prevention",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Dispute prevention"
-      ],
-      "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nA$25.00\nper\nVisa resolution\nA$25.00\nper\nVisa Compelling Evidence 3.0 block\nA$50.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 49,
-      "source_text": "A$25.00",
-      "source_url": "https://stripe.com/au/pricing",
-      "tokens": [
-        {
-          "amount": "25.00",
-          "basis_points": null,
-          "currency": "AUD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "25.00",
-          "token_id": "bd92c1e26c5624aa",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "5124e75b3b0d7c7d",
-      "fee_category": "Dispute prevention",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Dispute prevention",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Dispute prevention"
-      ],
-      "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nA$25.00\nper\nVisa resolution\nA$25.00\nper\nVisa Compelling Evidence 3.0 block\nA$50.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 50,
-      "source_text": "A$50.00",
+      "source_text": "A$50.00 per",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6244,7 +6784,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 51,
+      "source_order": 49,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6283,7 +6823,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 52,
+      "source_order": 50,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6322,7 +6862,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 53,
+      "source_order": 51,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6348,7 +6888,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "986791881bca5de3",
+      "entry_id": "6ea2362c923c1079",
       "fee_category": "Pay monthly",
       "footnotes": [],
       "links": [],
@@ -6361,8 +6901,8 @@
         "Pay monthly"
       ],
       "source_evidence": "Annual subscription. Paid monthly. Based on a volume tier that works for your business.\nStarting at\nA$930.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
-      "source_order": 54,
-      "source_text": "A$930.00",
+      "source_order": 52,
+      "source_text": "A$930.00 per month, 1-year contract",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6400,7 +6940,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nA$0.026\nper additional step",
-      "source_order": 55,
+      "source_order": 53,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6426,7 +6966,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "08fe6a22aa3e5460",
+      "entry_id": "15440d266c3b3b12",
       "fee_category": "Pay as you go",
       "footnotes": [],
       "links": [],
@@ -6439,8 +6979,8 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nA$0.026\nper additional step",
-      "source_order": 56,
-      "source_text": "A$0.026",
+      "source_order": 54,
+      "source_text": "A$0.026 per additional step",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6478,7 +7018,7 @@
         "Startup"
       ],
       "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\nUS$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 57,
+      "source_order": 55,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6517,7 +7057,7 @@
         "Starter"
       ],
       "source_evidence": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
-      "source_order": 58,
+      "source_order": 56,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6543,7 +7083,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "ed6081dff2d0a0c5",
+      "entry_id": "0f641f1e456f59ac",
       "fee_category": "Tax Complete",
       "footnotes": [],
       "links": [],
@@ -6556,8 +7096,8 @@
         "Tax Complete"
       ],
       "source_evidence": "All-in-one tax compliance – including automated threshold monitoring, registrations, calculations, and filings.\nStarting at\nA$140.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
-      "source_order": 59,
-      "source_text": "A$140.00",
+      "source_order": 57,
+      "source_text": "A$140.00 per month, 1-year contract",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6595,7 +7135,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing and Payment Links integrations.\n.\nAPI integration\nA$0.75\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. A$0.07 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 60,
+      "source_order": 58,
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6621,7 +7161,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "b71aeb16770aadb8",
+      "entry_id": "f52daff3990864c0",
       "fee_category": "Tax Basic",
       "footnotes": [],
       "links": [],
@@ -6634,8 +7174,8 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing and Payment Links integrations.\n.\nAPI integration\nA$0.75\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. A$0.07 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 61,
-      "source_text": "A$0.75",
+      "source_order": 59,
+      "source_text": "A$0.75 per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6673,7 +7213,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing and Payment Links integrations.\n.\nAPI integration\nA$0.75\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. A$0.07 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 62,
+      "source_order": 60,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. A$0.07 per calculation API call above 10.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6712,7 +7252,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Flexible monthly subscription – cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nA$40.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 63,
+      "source_order": 61,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6738,7 +7278,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "8cc5fa22ac37dd47",
+      "entry_id": "7c4773a269a31c59",
       "fee_category": "Monthly subscription",
       "footnotes": [],
       "links": [],
@@ -6751,8 +7291,8 @@
         "Monthly subscription"
       ],
       "source_evidence": "Flexible monthly subscription – cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nA$40.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 64,
-      "source_text": "A$40.00",
+      "source_order": 62,
+      "source_text": "A$40.00 per month",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6790,7 +7330,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximise savings.\nTry for free for 30 days\nStarting at\nA$300.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 65,
+      "source_order": 63,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6816,7 +7356,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "df3996ec6b94e45d",
+      "entry_id": "ebb1113a0c651e53",
       "fee_category": "Annual subscription",
       "footnotes": [],
       "links": [],
@@ -6829,8 +7369,8 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximise savings.\nTry for free for 30 days\nStarting at\nA$300.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 66,
-      "source_text": "A$300.00",
+      "source_order": 64,
+      "source_text": "A$300.00 per month, 1-year contract",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6855,7 +7395,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "738beed3f38e2482",
+      "entry_id": "58d68d1f0b3367a3",
       "fee_category": "ID document and selfie verification",
       "footnotes": [],
       "links": [],
@@ -6868,8 +7408,8 @@
         "ID document and selfie verification"
       ],
       "source_evidence": "Capture and verify the authenticity of global ID documents. Use biometric verification to match ID photos with selfies of the document holder.\nA$2.00\nper verification\nCharged when a user completes verification.",
-      "source_order": 67,
-      "source_text": "A$2.00",
+      "source_order": 65,
+      "source_text": "A$2.00 per verification",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6894,7 +7434,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "22cbdf30276251df",
+      "entry_id": "13628f5b11b3a406",
       "fee_category": "ID number lookup",
       "footnotes": [],
       "links": [],
@@ -6907,8 +7447,8 @@
         "ID number lookup"
       ],
       "source_evidence": "Allow users to key in name, date of birth, and local government ID number. Validate against government and third-party databases (only available for US SSNs).\nA$0.65\nper lookup\nSee pricing details",
-      "source_order": 68,
-      "source_text": "A$0.65",
+      "source_order": 66,
+      "source_text": "A$0.65 per lookup",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -6946,7 +7486,7 @@
         "Atlas"
       ],
       "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
-      "source_order": 69,
+      "source_order": 67,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -6985,7 +7525,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 70,
+      "source_order": 68,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -7024,7 +7564,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": null,
-      "source_order": 71,
+      "source_order": 69,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": []
@@ -7048,7 +7588,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 72,
+      "source_order": 70,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -7087,7 +7627,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 73,
+      "source_order": 71,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -7126,7 +7666,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 74,
+      "source_order": 72,
       "source_text": "+1%",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -7165,7 +7705,7 @@
         "See how Twilio increased authorisation rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 75,
+      "source_order": 73,
       "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -7204,7 +7744,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 76,
+      "source_order": 74,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -7243,7 +7783,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nAustralia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 77,
+      "source_order": 75,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -8563,7 +9103,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "1210bafa602d9a57",
+      "entry_id": "cffd97b99b72b292",
       "fee_category": "SEPA Direct Debit 0.8% + A$0.30",
       "footnotes": [],
       "links": [
@@ -8583,7 +9123,7 @@
       ],
       "source_evidence": "SEPA Direct Debit 0.8% + A$0.30\nMinimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
       "source_order": 24,
-      "source_text": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries. for international transactions if currency conversion is required for disputed payments for failed payments",
+      "source_text": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -8594,9 +9134,9 @@
           "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
-          "operator": "if",
+          "operator": "for",
           "percentage": null,
-          "raw": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries. for international transactions if currency conversion is required for disputed payments for failed payments",
+          "raw": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
           "token_id": null,
           "value": null
         }
@@ -9010,7 +9550,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "71f242a728a2b2cd",
+      "entry_id": "6c552cd89c9fcdca",
       "fee_category": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge",
       "footnotes": [],
       "links": [
@@ -9030,7 +9570,7 @@
       ],
       "source_evidence": "Afterpay Pay in 4 & Monthly Instalments 6% + A$0.30 per successful charge\nper successful charge\nLet your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers.\nper successful charge\nfor international transactions\nif currency conversion is required",
       "source_order": 33,
-      "source_text": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers. per successful charge for international transactions if currency conversion is required",
+      "source_text": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -9041,9 +9581,9 @@
           "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
-          "operator": "if",
+          "operator": null,
           "percentage": null,
-          "raw": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers. per successful charge for international transactions if currency conversion is required",
+          "raw": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers.",
           "token_id": null,
           "value": null
         }
@@ -9118,7 +9658,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "f84744ee0aacad10",
+      "entry_id": "f826d9d4eac3b798",
       "fee_category": "Klarna Australia, New Zealand 4.99% + A$0.55",
       "footnotes": [],
       "links": [
@@ -9142,7 +9682,7 @@
       ],
       "source_evidence": "Klarna Australia, New Zealand 4.99% + A$0.55\nOffer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets.\nfor international transactions\nif currency conversion is required\nfor lost disputes\nCertain businesses may qualify for temporarily reduced rates on selected local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.7% + A$0.30 per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
       "source_order": 35,
-      "source_text": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets. for international transactions if currency conversion is required for lost disputes",
+      "source_text": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -9153,9 +9693,9 @@
           "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
-          "operator": "if",
+          "operator": "for",
           "percentage": null,
-          "raw": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets. for international transactions if currency conversion is required for lost disputes",
+          "raw": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets.",
           "token_id": null,
           "value": null
         }
@@ -9517,7 +10057,7 @@
       "section_path": [
         "Money management"
       ],
-      "source_order": 58
+      "source_order": 60
     },
     {
       "body": "Connect\nPayments for platforms",
@@ -9651,7 +10191,7 @@
       "section_path": [
         "Custom"
       ],
-      "source_order": 67
+      "source_order": 69
     },
     {
       "body": null,
@@ -9806,7 +10346,7 @@
       "section_path": [
         "Cards and wallets"
       ],
-      "source_order": 51
+      "source_order": 53
     },
     {
       "body": "Let your customers buy something and pay for it in instalments over time. Fees include GST\n5.49% + A$0.30\nfor Zip\nSee more payment methods",
@@ -9842,7 +10382,7 @@
       "source_order": 32
     },
     {
-      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.\nPayment optimisations\nIncluded with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
+      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
       "heading": "Smart Disputes",
       "level": 1,
       "links": [],
@@ -9853,6 +10393,17 @@
       "source_order": 33
     },
     {
+      "body": "Included with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
+      "heading": "Payment optimisations",
+      "level": 1,
+      "links": [],
+      "section_id": "82fb86bac2c31065",
+      "section_path": [
+        "Payment optimisations"
+      ],
+      "source_order": 34
+    },
+    {
       "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.",
       "heading": "3D Secure authentication",
       "level": 1,
@@ -9861,10 +10412,10 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_order": 34
+      "source_order": 35
     },
     {
-      "body": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
+      "body": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
       "heading": "Authorisation Boost",
       "level": 1,
       "links": [],
@@ -9872,7 +10423,18 @@
       "section_path": [
         "Authorisation Boost"
       ],
-      "source_order": 35
+      "source_order": 36
+    },
+    {
+      "body": null,
+      "heading": "More features",
+      "level": 1,
+      "links": [],
+      "section_id": "5f210a9a0433ebd3",
+      "section_path": [
+        "More features"
+      ],
+      "source_order": 37
     },
     {
       "body": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
@@ -9883,7 +10445,7 @@
       "section_path": [
         "Adaptive Pricing"
       ],
-      "source_order": 36
+      "source_order": 38
     },
     {
       "body": "Access funds within minutes through an eligible debit card or bank account. Alternatively, pay out your funds on our\nstandard schedule for free.\n1.5%\nof Instant Payouts volume\nMinimum fee of A$0.50\n(\nPricing differs for Connect users)",
@@ -9894,7 +10456,7 @@
       "section_path": [
         "Instant payouts"
       ],
-      "source_order": 37
+      "source_order": 39
     },
     {
       "body": "Settle and pay out funds in additional currencies.\n1%\nof pay out volume or a minimum fee.",
@@ -9905,7 +10467,7 @@
       "section_path": [
         "Multi-currency settlement"
       ],
-      "source_order": 38
+      "source_order": 40
     },
     {
       "body": "Route payment requests to other processors while tokenising and storing card details in Stripe's PCI-compliant vault.\nContact your Stripe representative or\nStripe support.",
@@ -9916,7 +10478,7 @@
       "section_path": [
         "Vault and Forward API"
       ],
-      "source_order": 39
+      "source_order": 41
     },
     {
       "body": "No-code links to sell online without a website.\nAccept payments in minutes by generating no-code links.\nSell products, offer subscriptions, and more.\nCreate at scale via our API to automate marketing campaigns and sales operations.",
@@ -9927,7 +10489,7 @@
       "section_path": [
         "Payment Links"
       ],
-      "source_order": 40
+      "source_order": 42
     },
     {
       "body": "Accept payments made on Stripe Checkout.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing",
@@ -9938,7 +10500,7 @@
       "section_path": [
         "Accept payments"
       ],
-      "source_order": 45
+      "source_order": 47
     },
     {
       "body": "Use your own domain while hosting your payments page or customer portal on Stripe.\nUS$10.00\nper month",
@@ -9949,7 +10511,7 @@
       "section_path": [
         "Custom domain"
       ],
-      "source_order": 46
+      "source_order": 48
     },
     {
       "body": "Automatically generate an invoice after a one-off purchase.\n0.4%\non transaction total\nUS$2.00\ncap per invoice",
@@ -9960,7 +10522,7 @@
       "section_path": [
         "Post-payment invoices"
       ],
-      "source_order": 47
+      "source_order": 49
     },
     {
       "body": "Pre-built payment form optimised for conversion.\nSave engineering time and get started quickly.\nReduce friction with features designed to improve conversion.\nCustomise with your branding.",
@@ -9971,7 +10533,7 @@
       "section_path": [
         "Checkout"
       ],
-      "source_order": 44
+      "source_order": 46
     },
     {
       "body": null,
@@ -9982,7 +10544,7 @@
       "section_path": [
         "Accept payments"
       ],
-      "source_order": 45
+      "source_order": 47
     },
     {
       "body": null,
@@ -9993,7 +10555,7 @@
       "section_path": [
         "Custom domain"
       ],
-      "source_order": 46
+      "source_order": 48
     },
     {
       "body": null,
@@ -10004,7 +10566,7 @@
       "section_path": [
         "Post-payment invoices"
       ],
-      "source_order": 47
+      "source_order": 49
     },
     {
       "body": "Stripe's merchant of record solution that simplifies global selling.\nQuickly launch or expand your businesses worldwide with no additional setup.\nOffload tax compliance, fraud, disputes, and customer support responsibilities.\nUse Managed Payments for all your transactions or just for specific markets and products.",
@@ -10015,7 +10577,7 @@
       "section_path": [
         "Managed Payments"
       ],
-      "source_order": 48
+      "source_order": 50
     },
     {
       "body": "A complete merchant of record solution for global digital commerce. Includes indirect tax compliance (sales tax, VAT, GST) and remittance in more than 75 countries, along with fraud prevention, dispute management, invoicing, and customer support globally.\n3.5%\nper successful Managed Payments transaction in addition to Payments fees",
@@ -10026,7 +10588,7 @@
       "section_path": [
         "Merchant of record services"
       ],
-      "source_order": 49
+      "source_order": 51
     },
     {
       "body": "Tools to accept in-person payments and unify commerce.\nBuild a custom checkout or integrate with hundreds of third-party POS systems.\nStreamline hardware logistics with pre-certified Stripe or select 3P card readers.\nUnify online and in-person payments to create a cohesive customer experience.\nScale globally with one integration.",
@@ -10037,7 +10599,7 @@
       "section_path": [
         "Terminal"
       ],
-      "source_order": 50
+      "source_order": 52
     },
     {
       "body": null,
@@ -10048,7 +10610,7 @@
       "section_path": [
         "Cards and wallets"
       ],
-      "source_order": 51
+      "source_order": 53
     },
     {
       "body": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\nA$89.00\nBBPOS WisePad 3\nExcl. GST\nA$449.00\nStripe Reader S710\nExcl. GST\nA$449.00\nStripe Reader S700\nExcl. GST",
@@ -10059,7 +10621,7 @@
       "section_path": [
         "Card readers"
       ],
-      "source_order": 52
+      "source_order": 54
     },
     {
       "body": "Unlimited cellular data usage on enabled readers. Apps on Device data usage limited to 10 GB per reader per month.\nA$15.00\nper reader per month\nSee pricing details",
@@ -10070,7 +10632,7 @@
       "section_path": [
         "Mobile"
       ],
-      "source_order": 53
+      "source_order": 55
     },
     {
       "body": "AI-powered fraud and abuse protection.\nReduce fraud across payment methods with AI powered by the Stripe network.\nFlag and prevent suspicious accounts from joining your platform.\nStay ahead of emerging fraud and stop abuse across the entire customer lifecycle.\nGet started with zero integration, or access Radar’s intelligence via API.",
@@ -10081,7 +10643,7 @@
       "section_path": [
         "Radar"
       ],
-      "source_order": 54
+      "source_order": 56
     },
     {
       "body": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\nA$0.08\nper screened transaction for accounts with custom pricing for any payment method",
@@ -10092,7 +10654,7 @@
       "section_path": [
         "Radar’s machine learning"
       ],
-      "source_order": 55
+      "source_order": 57
     },
     {
       "body": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nA$0.02\nper screened transaction for accounts with all payment methods on standard pricing\nA$0.10\nper screened transaction for accounts with custom pricing for any payment method",
@@ -10103,7 +10665,7 @@
       "section_path": [
         "Radar for Fraud Teams"
       ],
-      "source_order": 56
+      "source_order": 58
     },
     {
       "body": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nA$25.00\nper\nVisa resolution\nA$25.00\nper\nVisa Compelling Evidence 3.0 block\nA$50.00\nper\nMastercard resolution\nCompare plans",
@@ -10114,7 +10676,7 @@
       "section_path": [
         "Dispute prevention"
       ],
-      "source_order": 57
+      "source_order": 59
     },
     {
       "body": null,
@@ -10125,7 +10687,7 @@
       "section_path": [
         "Money management"
       ],
-      "source_order": 58
+      "source_order": 60
     },
     {
       "body": "Embedded payments for platforms and marketplaces.\nLaunch faster with Stripe-hosted or pre-built embedded components.\nSave time by using tooling from Stripe for onboarding, risk, tax forms and more.\nGrow revenue by monetising payments.",
@@ -10136,7 +10698,7 @@
       "section_path": [
         "Connect"
       ],
-      "source_order": 59
+      "source_order": 61
     },
     {
       "body": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
@@ -10147,7 +10709,7 @@
       "section_path": [
         "Stripe handles pricing for your users"
       ],
-      "source_order": 60
+      "source_order": 62
     },
     {
       "body": "Streamline critical business processes with modular billing, tax, revenue reporting, and data analysis tools that work seamlessly together.",
@@ -10158,7 +10720,7 @@
       "section_path": [
         "Revenue and finance automation"
       ],
-      "source_order": 61
+      "source_order": 63
     },
     {
       "body": "Subscription management software for recurring revenue models² and one-time billing.\nRespond to user demand faster with flexible pricing models.\nIncrease revenue and reduce churn with Smart Retries and recovery workflow automations.\nSave engineering time with no-code tools or our composable APIs.\nChoose a plan",
@@ -10169,7 +10731,7 @@
       "section_path": [
         "Billing"
       ],
-      "source_order": 62
+      "source_order": 64
     },
     {
       "body": "Annual subscription. Paid monthly. Based on a volume tier that works for your business.\nStarting at\nA$930.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
@@ -10180,7 +10742,7 @@
       "section_path": [
         "Pay monthly"
       ],
-      "source_order": 63
+      "source_order": 65
     },
     {
       "body": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nA$0.026\nper additional step",
@@ -10191,7 +10753,7 @@
       "section_path": [
         "Pay as you go"
       ],
-      "source_order": 89
+      "source_order": 91
     },
     {
       "body": "Real-time metering, pricing and analytics for usage-based billing.\nSign up with Metronome\nLaunch quickly with any usage-based or hybrid pricing models.\nIterate on pricing without engineering overhead.\nGain real-time visibility into usage and revenue.\nChoose a plan",
@@ -10202,7 +10764,7 @@
       "section_path": [
         "Metronome"
       ],
-      "source_order": 65
+      "source_order": 67
     },
     {
       "body": "For teams launching usage-based products. Pay as your business grows.\nIncluded\nUS$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
@@ -10213,7 +10775,7 @@
       "section_path": [
         "Startup"
       ],
-      "source_order": 66
+      "source_order": 68
     },
     {
       "body": null,
@@ -10224,7 +10786,7 @@
       "section_path": [
         "Custom"
       ],
-      "source_order": 67
+      "source_order": 69
     },
     {
       "body": "Global invoicing software.\nCreate, customise, and send an invoice in minutes – no code required.\nSave time with automated accounts receivable and invoicing workflows.\nConfigure invoices for any use case.",
@@ -10235,7 +10797,7 @@
       "section_path": [
         "Invoicing"
       ],
-      "source_order": 68
+      "source_order": 70
     },
     {
       "body": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
@@ -10246,7 +10808,7 @@
       "section_path": [
         "Starter"
       ],
-      "source_order": 69
+      "source_order": 71
     },
     {
       "body": "Grow faster with global, all-in-one tax compliance.\nGet compliant quickly with no-code and low-code setups.\nReceive alerts when you reach a VAT, sales tax, or GST threshold and need to collect taxes.\nScale with confidence by automating tax calculations and collections in 100+ countries.\nIncrease your finance team’s efficiency by easily registering and filing taxes in 90+ countries.\nChoose a plan",
@@ -10257,7 +10819,7 @@
       "section_path": [
         "Tax"
       ],
-      "source_order": 70
+      "source_order": 72
     },
     {
       "body": "All-in-one tax compliance – including automated threshold monitoring, registrations, calculations, and filings.\nStarting at\nA$140.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
@@ -10268,7 +10830,7 @@
       "section_path": [
         "Tax Complete"
       ],
-      "source_order": 71
+      "source_order": 73
     },
     {
       "body": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing and Payment Links integrations.\n.\nAPI integration\nA$0.75\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. A$0.07 per calculation API call above 10.\n.\nCompare plans",
@@ -10279,7 +10841,7 @@
       "section_path": [
         "Tax Basic"
       ],
-      "source_order": 72
+      "source_order": 74
     },
     {
       "body": "An interactive SQL environment for analysing your Stripe data and creating custom reports.\nGet faster, more comprehensive insights using SQL or AI-powered natural language prompts.\nMake confident, data-driven decisions with fully customisable reporting.\nKeep teams in sync and save time with scheduled reports.",
@@ -10290,7 +10852,7 @@
       "section_path": [
         "Stripe Sigma"
       ],
-      "source_order": 73
+      "source_order": 75
     },
     {
       "body": "Flexible monthly subscription – cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nA$40.00\nper month\nSubscription and cancellation\nterms apply.",
@@ -10301,7 +10863,7 @@
       "section_path": [
         "Monthly subscription"
       ],
-      "source_order": 80
+      "source_order": 82
     },
     {
       "body": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximise savings.\nTry for free for 30 days\nStarting at\nA$300.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
@@ -10312,7 +10874,7 @@
       "section_path": [
         "Annual subscription"
       ],
-      "source_order": 81
+      "source_order": 83
     },
     {
       "body": "Send Stripe data and reports directly to your data warehouse or cloud storage.\nIncludes access to Stripe Sigma.\nSet up your pipeline in minutes and automate data delivery – no code required.\nSpeed up your financial close and access more complete business insights.\nGet insights faster and fully customisable reporting with Stripe Sigma.",
@@ -10323,7 +10885,7 @@
       "section_path": [
         "Data Pipeline"
       ],
-      "source_order": 76
+      "source_order": 78
     },
     {
       "body": null,
@@ -10334,7 +10896,7 @@
       "section_path": [
         "Monthly subscription"
       ],
-      "source_order": 77
+      "source_order": 79
     },
     {
       "body": null,
@@ -10345,7 +10907,7 @@
       "section_path": [
         "Annual subscription"
       ],
-      "source_order": 78
+      "source_order": 80
     },
     {
       "body": "Automated revenue reporting to streamline accrual accounting.\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.\nChoose a plan",
@@ -10356,7 +10918,7 @@
       "section_path": [
         "Revenue Recognition"
       ],
-      "source_order": 79
+      "source_order": 81
     },
     {
       "body": null,
@@ -10367,7 +10929,7 @@
       "section_path": [
         "Monthly subscription"
       ],
-      "source_order": 80
+      "source_order": 82
     },
     {
       "body": null,
@@ -10378,7 +10940,7 @@
       "section_path": [
         "Annual subscription"
       ],
-      "source_order": 81
+      "source_order": 83
     },
     {
       "body": null,
@@ -10389,7 +10951,7 @@
       "section_path": [
         "More"
       ],
-      "source_order": 82
+      "source_order": 84
     },
     {
       "body": "Verification tools that confirm the identity of global users.\nReduce fraud losses by identifying high-risk users.\nStreamline a crucial part of your KYC compliance requirements.\nSave engineering and ops time with centralised ID verification.",
@@ -10400,7 +10962,7 @@
       "section_path": [
         "Identity"
       ],
-      "source_order": 83
+      "source_order": 85
     },
     {
       "body": "Capture and verify the authenticity of global ID documents. Use biometric verification to match ID photos with selfies of the document holder.\nA$2.00\nper verification\nCharged when a user completes verification.",
@@ -10411,7 +10973,7 @@
       "section_path": [
         "ID document and selfie verification"
       ],
-      "source_order": 84
+      "source_order": 86
     },
     {
       "body": "Allow users to key in name, date of birth, and local government ID number. Validate against government and third-party databases (only available for US SSNs).\nA$0.65\nper lookup\nSee pricing details",
@@ -10422,7 +10984,7 @@
       "section_path": [
         "ID number lookup"
       ],
-      "source_order": 85
+      "source_order": 87
     },
     {
       "body": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
@@ -10433,7 +10995,7 @@
       "section_path": [
         "Atlas"
       ],
-      "source_order": 86
+      "source_order": 88
     },
     {
       "body": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nUS$500.00\none-off setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
@@ -10444,7 +11006,7 @@
       "section_path": [
         "Incorporate your company"
       ],
-      "source_order": 87
+      "source_order": 89
     },
     {
       "body": "Automate tasks and create custom flows, without writing code.\nAutomate business processes with 600+ event triggers.\nEliminate boilerplate code with visual workflow builder.\nExtend Stripe capabilities by connecting third-party applications.\nMonitor and debug with built-in logging and versioning.",
@@ -10455,7 +11017,7 @@
       "section_path": [
         "Workflows"
       ],
-      "source_order": 88
+      "source_order": 90
     },
     {
       "body": null,
@@ -10466,7 +11028,7 @@
       "section_path": [
         "Pay as you go"
       ],
-      "source_order": 89
+      "source_order": 91
     },
     {
       "body": "Global payments\nMoney management\nRevenue and finance automation\nMore\nGlobal payments\nPayments\nPayment Links\nCheckout\nManaged Payments\nTerminal\nRadar\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nIdentity\nAtlas\nWorkflows",
@@ -10478,7 +11040,7 @@
         "Pay as you go",
         "Navigate to:"
       ],
-      "source_order": 90
+      "source_order": 92
     },
     {
       "body": null,
@@ -10490,7 +11052,7 @@
         "Pay as you go",
         "Custom pricing"
       ],
-      "source_order": 91
+      "source_order": 93
     },
     {
       "body": "Create tailored solutions to help you expand into new markets, optimise payments performance, automate revenue and finance workflows, monetise financial services, and\nmore.",
@@ -10501,7 +11063,7 @@
       "section_path": [
         "Join leading enterprises on Stripe"
       ],
-      "source_order": 92
+      "source_order": 94
     },
     {
       "body": "Work with our sales team to design a solution that meets your needs:\nPayments\nPayments\nRadar\nRadar\nConnect\nConnect\nInvoicing\nInvoicing\nBilling\nBilling\nand more",
@@ -10512,7 +11074,7 @@
       "section_path": [
         "Build your custom package"
       ],
-      "source_order": 93
+      "source_order": 95
     },
     {
       "body": "Technical account management\nProfessional Services\nCertified implementation partners",
@@ -10523,7 +11085,7 @@
       "section_path": [
         "Get the support you need"
       ],
-      "source_order": 94
+      "source_order": 96
     },
     {
       "body": "IC+ pricing, discounted flat rates, subscriptions, and buy-rates for platforms.",
@@ -10534,7 +11096,7 @@
       "section_path": [
         "Flexible structures"
       ],
-      "source_order": 95
+      "source_order": 97
     },
     {
       "body": "Discounts based on volume tiers, commitments, and product usage.",
@@ -10545,7 +11107,7 @@
       "section_path": [
         "Volume-based discounts"
       ],
-      "source_order": 96
+      "source_order": 98
     },
     {
       "body": "Optional aggregated pricing for all markets, allowing you to go global with ease.",
@@ -10556,7 +11118,7 @@
       "section_path": [
         "Global single rates"
       ],
-      "source_order": 97
+      "source_order": 99
     },
     {
       "body": "Dashboards, tools, and APIs that give you transparency into your costs.",
@@ -10567,7 +11129,7 @@
       "section_path": [
         "Cost transparency"
       ],
-      "source_order": 98
+      "source_order": 100
     },
     {
       "body": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
@@ -10578,7 +11140,7 @@
       "section_path": [
         "Integrating Stripe provides a 326% return on investment"
       ],
-      "source_order": 99
+      "source_order": 101
     },
     {
       "body": null,
@@ -10590,7 +11152,7 @@
         "Integrating Stripe provides a 326% return on investment",
         "Report"
       ],
-      "source_order": 100
+      "source_order": 102
     },
     {
       "body": null,
@@ -10601,7 +11163,7 @@
       "section_path": [
         "The Total Economic Impact™ Of Stripe"
       ],
-      "source_order": 101
+      "source_order": 103
     },
     {
       "body": null,
@@ -10612,7 +11174,7 @@
       "section_path": [
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
-      "source_order": 102
+      "source_order": 104
     },
     {
       "body": "BMW owners using ConnectedDrive Store",
@@ -10623,7 +11185,7 @@
       "section_path": [
         "Millions"
       ],
-      "source_order": 103
+      "source_order": 105
     },
     {
       "body": "US dealerships",
@@ -10634,7 +11196,7 @@
       "section_path": [
         "350+"
       ],
-      "source_order": 104
+      "source_order": 106
     },
     {
       "body": "Payments\nPayments\nStripe Sigma\nStripe Sigma\nBMW logo\nRead story",
@@ -10645,7 +11207,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 114
+      "source_order": 116
     },
     {
       "body": "Amazon businesses on Stripe including Prime, Audible, and Amazon Pay.",
@@ -10656,7 +11218,7 @@
       "section_path": [
         "5+"
       ],
-      "source_order": 106
+      "source_order": 108
     },
     {
       "body": "Payment methods available on Stripe",
@@ -10667,7 +11229,7 @@
       "section_path": [
         "50+"
       ],
-      "source_order": 107
+      "source_order": 109
     },
     {
       "body": null,
@@ -10678,7 +11240,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 108
+      "source_order": 110
     },
     {
       "body": "Countries in logistics network",
@@ -10689,7 +11251,7 @@
       "section_path": [
         "130"
       ],
-      "source_order": 109
+      "source_order": 111
     },
     {
       "body": "Worth of goods moved around the world each year",
@@ -10700,7 +11262,7 @@
       "section_path": [
         "$10B+"
       ],
-      "source_order": 110
+      "source_order": 112
     },
     {
       "body": null,
@@ -10711,7 +11273,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 111
+      "source_order": 113
     },
     {
       "body": "Uplift from Stripe's Global Payments Infrastructure",
@@ -10722,7 +11284,7 @@
       "section_path": [
         "+5.5%"
       ],
-      "source_order": 112
+      "source_order": 114
     },
     {
       "body": "Uplift from Adaptive Acceptance",
@@ -10733,7 +11295,7 @@
       "section_path": [
         "+1%"
       ],
-      "source_order": 113
+      "source_order": 115
     },
     {
       "body": null,
@@ -10744,7 +11306,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 114
+      "source_order": 116
     },
     {
       "body": "Amazon logo\nRead story",
@@ -10755,7 +11317,7 @@
       "section_path": [
         "Learn why BMW chose Stripe to power e-commerce and payments"
       ],
-      "source_order": 115
+      "source_order": 117
     },
     {
       "body": "Maersk logo\nRead story",
@@ -10766,7 +11328,7 @@
       "section_path": [
         "See how Amazon simplified cross-border payments with Stripe"
       ],
-      "source_order": 116
+      "source_order": 118
     },
     {
       "body": "Twilio logo\nRead story",
@@ -10777,7 +11339,7 @@
       "section_path": [
         "See how Maersk tapped into new technology to make it easier to ship around the world"
       ],
-      "source_order": 117
+      "source_order": 119
     },
     {
       "body": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
@@ -10788,7 +11350,7 @@
       "section_path": [
         "See how Twilio increased authorisation rates by 10% with Stripe"
       ],
-      "source_order": 118
+      "source_order": 120
     },
     {
       "body": null,
@@ -10799,7 +11361,7 @@
       "section_path": [
         "FAQs"
       ],
-      "source_order": 119
+      "source_order": 121
     },
     {
       "body": "Stripe charges a per-transaction fee depending on the payment method used by the end customer.\nMore details on fees by payment method.",
@@ -10811,7 +11373,7 @@
         "FAQs",
         "How are payment fees calculated?"
       ],
-      "source_order": 120
+      "source_order": 122
     },
     {
       "body": "Stripe is required to charge tax on certain products and services. Tax is charged based on your location and/ or your business/tax status, which determines whether a product or service is subject to taxes, and the applicable tax rates.\nRead more",
@@ -10823,7 +11385,7 @@
         "FAQs",
         "Will I be charged tax?"
       ],
-      "source_order": 121
+      "source_order": 123
     },
     {
       "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
@@ -10835,7 +11397,7 @@
         "FAQs",
         "Are there additional fees for refunds?"
       ],
-      "source_order": 122
+      "source_order": 124
     },
     {
       "body": "Stripe does not charge setup fees, monthly fees, or any other hidden fees like closure fees. All fees for businesses on standard pricing are listed on our website.",
@@ -10847,7 +11409,7 @@
         "FAQs",
         "Do you have setup fees or monthly fees?"
       ],
-      "source_order": 123
+      "source_order": 125
     },
     {
       "body": "Stripe offers custom pricing for businesses with large processing volumes. Eligibility varies by market.",
@@ -10859,7 +11421,7 @@
         "FAQs",
         "Do you offer any discounts?"
       ],
-      "source_order": 124
+      "source_order": 126
     },
     {
       "body": "Access a complete payments platform with simple, pay-as-you-go pricing, or contact us to design a custom package specifically for your business.",
@@ -10870,7 +11432,7 @@
       "section_path": [
         "Ready to get started? Get in touch or create an account."
       ],
-      "source_order": 125
+      "source_order": 127
     },
     {
       "body": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
@@ -10881,7 +11443,7 @@
       "section_path": [
         "See our customers"
       ],
-      "source_order": 126
+      "source_order": 128
     },
     {
       "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nAustralia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
@@ -10892,7 +11454,7 @@
       "section_path": [
         "Explore the docs"
       ],
-      "source_order": 127
+      "source_order": 129
     },
     {
       "body": "Pricing\nAtlas\nAuthorisation Boost\nBilling\nCapital\nCheckout\nClimate\nConnect\nCrypto\nData Pipeline\nElements\nFinancial Connections\nIdentity\nInvoicing\nIssuing\nLink\nManaged Payments\nPayment links\nPayments\nPayouts\nRadar\nRevenue Recognition\nStripe Sigma\nTax\nTerminal\nTreasury",
@@ -10903,7 +11465,7 @@
       "section_path": [
         "Products & pricing"
       ],
-      "source_order": 128
+      "source_order": 130
     },
     {
       "body": "Enterprises\nStartups\nAgentic commerce\nCrypto\nE-Commerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nAI companies\nCreator economy\nGaming\nHospitality, travel and leisure\nInsurance\nMedia and entertainment\nNon-profits\nProfessional services\nPublic sector\nRetail",
@@ -10914,7 +11476,7 @@
       "section_path": [
         "Solutions"
       ],
-      "source_order": 129
+      "source_order": 131
     },
     {
       "body": "Stripe App Marketplace\nStripe Partner ecosystem\nProfessional services",
@@ -10925,7 +11487,7 @@
       "section_path": [
         "Integrations & custom solutions"
       ],
-      "source_order": 130
+      "source_order": 132
     },
     {
       "body": "Documentation\nAPI reference\nAPI status\nAPI changelog\nLibraries and SDKs\nStripe Projects\nDeveloper blog",
@@ -10936,7 +11498,7 @@
       "section_path": [
         "Developers"
       ],
-      "source_order": 131
+      "source_order": 133
     },
     {
       "body": "Guides\nCustomer stories\nBlog\nCommunity\nSessions annual conference\nPrivacy & terms\nProhibited & restricted businesses\nLicences\nSitemap\nCookie settings\nMore resources",
@@ -10947,7 +11509,7 @@
       "section_path": [
         "Resources"
       ],
-      "source_order": 132
+      "source_order": 134
     },
     {
       "body": "Product roadmap\nJobs\nNewsroom\nStripe Press",
@@ -10958,7 +11520,7 @@
       "section_path": [
         "Company"
       ],
-      "source_order": 133
+      "source_order": 135
     },
     {
       "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
@@ -10969,7 +11531,7 @@
       "section_path": [
         "Support"
       ],
-      "source_order": 134
+      "source_order": 136
     },
     {
       "body": "Card payments 1.7% + A$0.30 for domestic cards\nfor domestic cards\nAccept online payments made using cards.\nfor domestic cards\nfor international cards\nif currency conversion is required",
@@ -11399,7 +11961,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "0d35b9afa3bef8c0af61d13396b4618dd7d611eeb7abc1da907814c77d99faca",
+      "content_sha256": "427406a558fba887a0db8ea2abb87e02c74e51d2a9e593d814df306641bb124e",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Terminal In-person payments Radar Fraud prevention Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what's ahead Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Pro",
       "last_modified": null,
@@ -11411,7 +11973,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "e4a8e65b843315b4ce8903af37ce0e6826898f84aa9957ae4283bcf367397ac9",
+      "content_sha256": "5e1011dc213587c567b66eefc517e0f378bf157241973ad8d8c34833cf40da54",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Local payment methods pricing Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Terminal In-person payments Radar Fraud prevention Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what's ahead Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional servi",
       "last_modified": null,
@@ -11637,88 +12199,6 @@
       "classification_status": "custom_pricing",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "882197ca61266434",
-      "fee_category": "3D Secure authentication",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "3D Secure authentication",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "3D Secure authentication"
-      ],
-      "source_evidence": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.",
-      "source_order": 23,
-      "source_text": "per 3D Secure attempt for accounts with custom pricing.",
-      "source_url": "https://stripe.com/au/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "for",
-          "percentage": null,
-          "raw": "per 3D Secure attempt for accounts with custom pricing.",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": "online",
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "custom_pricing",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "3278ceffd282bae1",
-      "fee_category": "Authorisation Boost",
-      "footnotes": [],
-      "links": [],
-      "payment_method": "card",
-      "payment_method_family": null,
-      "product": "Authorisation Boost",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Authorisation Boost"
-      ],
-      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
-      "source_order": 26,
-      "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
-      "source_url": "https://stripe.com/au/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "20.0",
-          "currency": null,
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "0.2",
-          "raw": "0.2",
-          "token_id": "0c874dd27659fabe",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "custom_pricing",
-      "confidence": 0.0,
-      "context": {},
       "entry_id": "1a4514599403a2c3",
       "fee_category": "Merchant of record services",
       "footnotes": [],
@@ -11732,7 +12212,7 @@
         "Merchant of record services"
       ],
       "source_evidence": "A complete merchant of record solution for global digital commerce. Includes indirect tax compliance (sales tax, VAT, GST) and remittance in more than 75 countries, along with fraud prevention, dispute management, invoicing, and customer support globally.\n3.5%\nper successful Managed Payments transaction in addition to Payments fees",
-      "source_order": 37,
+      "source_order": 35,
       "source_text": "A complete merchant of record solution for global digital commerce. Includes indirect tax compliance (sales tax, VAT, GST) and remittance in more than 75 countries, along with fraud prevention, dispute management, invoicing, and customer support globally.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -11773,7 +12253,7 @@
         "Card readers"
       ],
       "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\nA$89.00\nBBPOS WisePad 3\nExcl. GST\nA$449.00\nStripe Reader S710\nExcl. GST\nA$449.00\nStripe Reader S700\nExcl. GST",
-      "source_order": 39,
+      "source_order": 37,
       "source_text": "A$89.00",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -11814,7 +12294,7 @@
         "Card readers"
       ],
       "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\nA$89.00\nBBPOS WisePad 3\nExcl. GST\nA$449.00\nStripe Reader S710\nExcl. GST\nA$449.00\nStripe Reader S700\nExcl. GST",
-      "source_order": 40,
+      "source_order": 38,
       "source_text": "A$449.00",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -11855,7 +12335,7 @@
         "Card readers"
       ],
       "source_evidence": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\nA$89.00\nBBPOS WisePad 3\nExcl. GST\nA$449.00\nStripe Reader S710\nExcl. GST\nA$449.00\nStripe Reader S700\nExcl. GST",
-      "source_order": 41,
+      "source_order": 39,
       "source_text": "A$449.00",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -11871,6 +12351,129 @@
           "percentage": null,
           "raw": "449.00",
           "token_id": "b2e6ebf2b1448fa9",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": "in_person",
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "1d96d9f28d807af8",
+      "fee_category": "Mobile",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Mobile",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Mobile"
+      ],
+      "source_evidence": "Unlimited cellular data usage on enabled readers. Apps on Device data usage limited to 10 GB per reader per month.\nA$15.00\nper reader per month\nSee pricing details",
+      "source_order": 40,
+      "source_text": "A$15.00 per reader per month",
+      "source_url": "https://stripe.com/au/pricing",
+      "tokens": [
+        {
+          "amount": "15.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "15.00",
+          "token_id": "1beae66c30848d63",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "6ea2362c923c1079",
+      "fee_category": "Pay monthly",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Pay monthly",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Pay monthly"
+      ],
+      "source_evidence": "Annual subscription. Paid monthly. Based on a volume tier that works for your business.\nStarting at\nA$930.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
+      "source_order": 52,
+      "source_text": "A$930.00 per month, 1-year contract",
+      "source_url": "https://stripe.com/au/pricing",
+      "tokens": [
+        {
+          "amount": "930.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "930.00",
+          "token_id": "e3ef6a707c0ec95a",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "0f641f1e456f59ac",
+      "fee_category": "Tax Complete",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Tax Complete",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Tax Complete"
+      ],
+      "source_evidence": "All-in-one tax compliance – including automated threshold monitoring, registrations, calculations, and filings.\nStarting at\nA$140.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
+      "source_order": 57,
+      "source_text": "A$140.00 per month, 1-year contract",
+      "source_url": "https://stripe.com/au/pricing",
+      "tokens": [
+        {
+          "amount": "140.00",
+          "basis_points": null,
+          "currency": "AUD",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "140.00",
+          "token_id": "bc2a79eb10d53302",
           "value": null
         }
       ]
@@ -11896,7 +12499,7 @@
         "Tax Basic"
       ],
       "source_evidence": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing and Payment Links integrations.\n.\nAPI integration\nA$0.75\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. A$0.07 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 62,
+      "source_order": 60,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. A$0.07 per calculation API call above 10.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -11937,7 +12540,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximise savings.\nTry for free for 30 days\nStarting at\nA$300.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 65,
+      "source_order": 63,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -11965,7 +12568,7 @@
       "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "df3996ec6b94e45d",
+      "entry_id": "ebb1113a0c651e53",
       "fee_category": "Annual subscription",
       "footnotes": [],
       "links": [],
@@ -11978,8 +12581,8 @@
         "Annual subscription"
       ],
       "source_evidence": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximise savings.\nTry for free for 30 days\nStarting at\nA$300.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 66,
-      "source_text": "A$300.00",
+      "source_order": 64,
+      "source_text": "A$300.00 per month, 1-year contract",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -12019,7 +12622,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": null,
-      "source_order": 71,
+      "source_order": 69,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": []
@@ -12045,7 +12648,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 76,
+      "source_order": 74,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -12086,7 +12689,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nAustralia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 77,
+      "source_order": 75,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
@@ -12537,7 +13140,7 @@
       "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "1210bafa602d9a57",
+      "entry_id": "cffd97b99b72b292",
       "fee_category": "SEPA Direct Debit 0.8% + A$0.30",
       "footnotes": [],
       "links": [
@@ -12557,7 +13160,7 @@
       ],
       "source_evidence": "SEPA Direct Debit 0.8% + A$0.30\nMinimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.\nfor international transactions\nif currency conversion is required\nfor disputed payments\nfor failed payments",
       "source_order": 24,
-      "source_text": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries. for international transactions if currency conversion is required for disputed payments for failed payments",
+      "source_text": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -12568,9 +13171,9 @@
           "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
-          "operator": "if",
+          "operator": "for",
           "percentage": null,
-          "raw": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries. for international transactions if currency conversion is required for disputed payments for failed payments",
+          "raw": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
           "token_id": null,
           "value": null
         }
@@ -12778,67 +13381,6 @@
           "percentage": "1.7",
           "raw": "1.7",
           "token_id": "2876916ed2998933",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "unclassified_fee_candidate",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "ffa6d7205fa0eddb",
-      "fee_category": "Scalapay 4.99% + A$0.55",
-      "footnotes": [],
-      "links": [
-        {
-          "text": "Learn more",
-          "uri": "https://stripe.com/au/payment-method/scalapay"
-        }
-      ],
-      "payment_method": "scalapay",
-      "payment_method_family": null,
-      "product": "Payment methods",
-      "product_category": "local-payment-methods",
-      "qualifiers": [],
-      "section_path": [
-        "Payment methods",
-        "Scalapay 4.99% + A$0.55"
-      ],
-      "source_evidence": "Scalapay 4.99% + A$0.55\nOffer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe.\nfor international transactions\nif currency conversion is required",
-      "source_order": 37,
-      "source_text": "Scalapay 4.99% + A$0.55",
-      "source_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "tokens": [
-        {
-          "amount": "0.55",
-          "basis_points": null,
-          "currency": "AUD",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "0.55",
-          "token_id": "b5b1d873335e503b",
-          "value": null
-        },
-        {
-          "amount": null,
-          "basis_points": "499.00",
-          "currency": null,
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "percentage",
-          "note": null,
-          "operator": "+",
-          "percentage": "4.99",
-          "raw": "4.99",
-          "token_id": "2196b73f3a34732a",
           "value": null
         }
       ]
