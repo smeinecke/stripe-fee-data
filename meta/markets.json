@@ -40,8 +40,8 @@
       "https://stripe.com/en-jp/pricing/local-payment-methods"
     ],
     "us": [
-      "https://stripe.com/pricing",
-      "https://stripe.com/pricing/local-payment-methods"
+      "https://stripe.com/en-de/pricing",
+      "https://stripe.com/en-de/pricing/local-payment-methods"
     ]
   },
   "generated_at": null,

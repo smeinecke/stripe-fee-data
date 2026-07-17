@@ -1,4 +1,19 @@
 {
+  "calculator_coverage_status": "unclassified",
+  "coverage_summary": {
+    "ambiguous_entries": 0,
+    "calculable_rules": 0,
+    "conflicting_rule_identities": 0,
+    "custom_pricing": 0,
+    "ignored_non_fee": 0,
+    "included": 0,
+    "non_calculable_rules": 0,
+    "numeric_fee_candidates": 0,
+    "reference_only": 0,
+    "source_entries": 0,
+    "unclassified_fee_candidates": 0,
+    "unsupported_fee_shapes": 0
+  },
   "derivation_status": "unclassified",
   "derived_rules": [],
   "entries": [],

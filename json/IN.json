@@ -1,164 +1,424 @@
 {
+  "calculator_coverage_status": "partial",
+  "coverage_summary": {
+    "ambiguous_entries": 0,
+    "calculable_rules": 9,
+    "conflicting_rule_identities": 0,
+    "custom_pricing": 3,
+    "ignored_non_fee": 0,
+    "included": 0,
+    "non_calculable_rules": 7,
+    "numeric_fee_candidates": 1,
+    "reference_only": 0,
+    "source_entries": 52,
+    "unclassified_fee_candidates": 2,
+    "unsupported_fee_shapes": 0
+  },
   "derivation_status": "partial",
   "derived_rules": [
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": "200",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
       "card_tier": null,
       "channel": null,
       "classification_evidence": [
-        "matched card_payment pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=conditional"
+        "product=unspecified",
+        "variant=standard",
+        "account_country=IN"
       ],
       "classification_status": "non_calculable",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
       "confidence": 0.0,
+      "contributing_entry_ids": [
+        "0cbfd034ccf846bf"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "0cbfd034ccf846bf",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "200",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "0cbfd034ccf846bf",
+          "source_text": "2%",
+          "type": "percentage",
+          "value": "2"
+        }
+      ],
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "2%",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "unspecified",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": "2",
+      "presentment_currency": null,
+      "product_id": "unspecified",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "521046f604eabb49",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "0cbfd034ccf846bf",
+          "text": "2%"
+        }
+      ],
+      "source_text": "2%",
+      "source_texts": [
+        "2%"
+      ],
+      "source_url": "https://stripe.com/in/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "IN",
+      "additional_fees": [],
+      "basis_points": "9999.900",
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [
+        "product=platform",
+        "variant=standard",
+        "account_country=IN"
+      ],
+      "classification_status": "non_calculable",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "da4d6acc3adbf289"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "da4d6acc3adbf289",
+      "exactness": "range",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "9999.900",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "da4d6acc3adbf289",
+          "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
+          "type": "percentage",
+          "value": "99.999"
+        }
+      ],
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "platform",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": "99.999",
+      "presentment_currency": null,
+      "product_id": "platform",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "86259d9bc669ac58",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "da4d6acc3adbf289",
+          "text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
+        }
+      ],
+      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
+      "source_texts": [
+        "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime."
+      ],
+      "source_url": "https://stripe.com/in/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "IN",
+      "additional_fees": [],
+      "basis_points": "200",
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": "domestic",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_domestic_cards",
+        "payment_method=card",
+        "card_region=domestic",
+        "card_origin=domestic",
+        "account_country=IN"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "286266d7341690cc"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "286266d7341690cc",
       "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "200",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "286266d7341690cc",
+          "source_text": "2% for Mastercard and Visa cards issued in India*",
+          "type": "percentage",
+          "value": "2"
+        }
+      ],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "2% for Mastercard and Visa cards issued in India*",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "card_payment",
+      "name": "payments",
       "payment_method": "card",
       "payout_type": null,
       "percentage": "2",
       "presentment_currency": null,
+      "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "012e181d65e9cb3c",
+      "rule_id": "277a4b799113f61e",
       "settlement_currency": null,
-      "source_text": "2% for Mastercard and Visa cards issued in India*",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": "40.0",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": "domestic",
-      "card_region": "domestic",
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched card_payment pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=conditional",
-        "minor=20000"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "aeda0c65456d8b07",
-      "exactness": "range",
-      "fixed_amount": "200",
-      "fixed_amount_minor": "20000",
-      "fixed_currency": "INR",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "card_payment",
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": "0.4",
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "9b50a8b628fc5fdc",
-      "settlement_currency": null,
-      "source_text": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": "300",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched card_payment pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=conditional"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
+      "source_fragments": [
         {
-          "dimension": "currency_conversion_required",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
+          "entry_id": "286266d7341690cc",
+          "text": "2% for Mastercard and Visa cards issued in India*"
         }
       ],
-      "confidence": 0.0,
-      "currency_conversion_required": true,
+      "source_text": "2% for Mastercard and Visa cards issued in India*",
+      "source_texts": [
+        "2% for Mastercard and Visa cards issued in India*"
+      ],
+      "source_url": "https://stripe.com/in/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "online_domestic_cards"
+    },
+    {
+      "account_country": "IN",
+      "additional_fees": [],
+      "basis_points": "300",
+      "behavior": "alternative",
+      "billing_type": null,
+      "card_origin": "international",
+      "card_region": "international",
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=payments",
+        "variant=online_international_cards",
+        "payment_method=card",
+        "card_region=international",
+        "card_origin=international",
+        "account_country=IN"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "international"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "international"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "07b75bd30056abe6"
+      ],
+      "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "07b75bd30056abe6",
       "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "300",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "07b75bd30056abe6",
+          "source_text": "3% for Mastercard and Visa cards issued outside India",
+          "type": "percentage",
+          "value": "3"
+        }
+      ],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "3% for Mastercard and Visa cards issued outside India",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "card_payment",
+      "name": "payments",
       "payment_method": "card",
       "payout_type": null,
       "percentage": "3",
       "presentment_currency": null,
+      "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6e10c6783ca91c96",
+      "rule_id": "23f97990d5ef4c57",
       "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "07b75bd30056abe6",
+          "text": "3% for Mastercard and Visa cards issued outside India"
+        }
+      ],
       "source_text": "3% for Mastercard and Visa cards issued outside India",
+      "source_texts": [
+        "3% for Mastercard and Visa cards issued outside India"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "per_transaction",
+      "variant_id": "online_international_cards"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": "200",
       "behavior": "additive",
       "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
+      "card_origin": "international",
+      "card_region": "international",
       "card_tier": null,
-      "channel": null,
+      "channel": "online",
       "classification_evidence": [
-        "matched currency_conversion pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=additive"
+        "product=payments",
+        "variant=online_international_cards",
+        "payment_method=card",
+        "card_region=international",
+        "card_origin=international",
+        "account_country=IN",
+        "currency_conversion_required=True"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "calculable_rule",
       "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "card"
+        },
+        {
+          "dimension": "card_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "international"
+        },
+        {
+          "dimension": "card_origin",
+          "evidence": null,
+          "operator": "eq",
+          "value": "international"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        },
         {
           "dimension": "currency_conversion_required",
           "evidence": null,
@@ -166,372 +426,254 @@
           "value": true
         }
       ],
-      "confidence": 0.0,
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "c6df527d302c8a61"
+      ],
       "currency_conversion_required": true,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "c6df527d302c8a61",
       "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "200",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "c6df527d302c8a61",
+          "source_text": "+ 2% if currency conversion is required",
+          "type": "percentage_surcharge",
+          "value": "2"
+        }
+      ],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "+ 2% if currency conversion is required",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "currency_conversion",
+      "name": "payments",
       "payment_method": "card",
       "payout_type": null,
       "percentage": "2",
       "presentment_currency": null,
+      "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "1a9423fa4f1cf8e5",
+      "rule_id": "28ed61c2506d3269",
       "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "c6df527d302c8a61",
+          "text": "+ 2% if currency conversion is required"
+        }
+      ],
       "source_text": "+ 2% if currency conversion is required",
+      "source_texts": [
+        "+ 2% if currency conversion is required"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "per_transaction",
+      "variant_id": "online_international_cards"
     },
     {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": "350.0",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched card_payment pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=conditional"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "currency_conversion_required",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        }
-      ],
-      "confidence": 0.0,
-      "currency_conversion_required": true,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "c2282f925172cbf1",
-      "exactness": "exact",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "card_payment",
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": "3.5",
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "01d151a476a0f7e7",
-      "settlement_currency": null,
-      "source_text": "3.5% for American Express cards issued outside India",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": "200",
-      "behavior": "additive",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched currency_conversion pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=additive"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "currency_conversion_required",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        }
-      ],
-      "confidence": 0.0,
-      "currency_conversion_required": true,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "f4b3a2f3f8cdc9fd",
-      "exactness": "exact",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "currency_conversion",
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": "2",
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "2a0409319cff4276",
-      "settlement_currency": null,
-      "source_text": "+ 2% if currency conversion is required",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": "430.0",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched card_payment pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=conditional"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "currency_conversion_required",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        }
-      ],
-      "confidence": 0.0,
-      "currency_conversion_required": true,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "22d617d2a7dae7a3",
-      "exactness": "exact",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "card_payment",
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": "4.3",
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "670c015a80936c4a",
-      "settlement_currency": null,
-      "source_text": "4.3% for international cards with USD or other currency presentment",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": "200",
-      "behavior": "additive",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched currency_conversion pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=additive"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [
-        {
-          "dimension": "currency_conversion_required",
-          "evidence": null,
-          "operator": "eq",
-          "value": true
-        }
-      ],
-      "confidence": 0.0,
-      "currency_conversion_required": true,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "c38e9a084fe9f95b",
-      "exactness": "exact",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "currency_conversion",
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": "2",
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "c1881ecda04cd2bc",
-      "settlement_currency": null,
-      "source_text": "+ 2% if currency conversion is required",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": null,
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
       "card_tier": null,
-      "channel": null,
+      "channel": "online",
       "classification_evidence": [
-        "matched dispute pattern",
-        "channel=unknown",
-        "unit=per_dispute",
-        "behavior=conditional",
-        "minor=100000"
+        "product=disputes",
+        "variant=standard",
+        "account_country=IN",
+        "transaction_type=dispute"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "deac36067fa447fb"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "deac36067fa447fb",
       "exactness": "exact",
-      "fixed_amount": "1000.00",
-      "fixed_amount_minor": "100000",
-      "fixed_currency": "INR",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "dispute",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "711640568ca4a1a6",
-      "settlement_currency": null,
-      "source_text": "₹1,000.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched dispute pattern",
-        "channel=unknown",
-        "unit=per_dispute",
-        "behavior=conditional",
-        "minor=100000"
+      "fee_components": [
+        {
+          "amount": "1000.00",
+          "basis_points": null,
+          "currency": "INR",
+          "minor_amount": "100000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "deac36067fa447fb",
+          "source_text": "₹1,000.00",
+          "type": "fixed_amount",
+          "value": null
+        }
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "e4cb359de92f038b",
-      "exactness": "exact",
       "fixed_amount": "1000.00",
       "fixed_amount_minor": "100000",
       "fixed_currency": "INR",
+      "label": "₹1,000.00",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "dispute",
+      "name": "disputes",
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
+      "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6c10f2e842df7ca5",
+      "rule_id": "01083dd330d908b9",
       "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "deac36067fa447fb",
+          "text": "₹1,000.00"
+        }
+      ],
       "source_text": "₹1,000.00",
+      "source_texts": [
+        "₹1,000.00"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_dispute"
+      "unit": "per_dispute",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": "3000",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
       "card_tier": null,
-      "channel": null,
+      "channel": "online",
       "classification_evidence": [
-        "matched smart_disputes pattern",
-        "channel=unknown",
-        "unit=per_dispute",
-        "behavior=conditional"
+        "product=disputes",
+        "variant=standard",
+        "account_country=IN",
+        "transaction_type=dispute",
+        "card_tier=standard"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        },
+        {
+          "dimension": "card_tier",
+          "evidence": null,
+          "operator": "eq",
+          "value": "standard"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "50783c5ffb37cee3",
+        "27467a01b148e84b",
+        "67241d4ae5e42bba"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "50783c5ffb37cee3",
       "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "3000",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "50783c5ffb37cee3",
+          "source_text": "30%",
+          "type": "percentage",
+          "value": "30"
+        }
+      ],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "30%",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "smart_disputes",
+      "name": "disputes",
       "payment_method": null,
       "payout_type": null,
       "percentage": "30",
       "presentment_currency": null,
+      "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "ab86db9ec92d9f17",
+      "rule_id": "1bee6cd3538aaaae",
       "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "50783c5ffb37cee3",
+          "text": "30%"
+        },
+        {
+          "entry_id": "27467a01b148e84b",
+          "text": "Included with Payments"
+        },
+        {
+          "entry_id": "67241d4ae5e42bba",
+          "text": "Included at no additional charge for businesses on standard payments pricing"
+        }
+      ],
       "source_text": "30%",
+      "source_texts": [
+        "30%",
+        "Included with Payments",
+        "Included at no additional charge for businesses on standard payments pricing"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "per_dispute"
+      "unit": "per_dispute",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": null,
       "behavior": "informational",
@@ -540,218 +682,48 @@
       "card_region": null,
       "card_tier": null,
       "channel": null,
-      "classification_evidence": [
-        "matched payment_method pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
-      ],
-      "classification_status": "non_calculable",
+      "classification_evidence": [],
+      "classification_status": "included",
       "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "27467a01b148e84b",
-      "exactness": "included",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "payment_method",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "b212eda534e05492",
-      "settlement_currency": null,
-      "source_text": "Included with Payments",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": "standard",
-      "channel": null,
-      "classification_evidence": [
-        "matched payment_method pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=alternative"
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "9d252ba8a813c408"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "67241d4ae5e42bba",
-      "exactness": "included",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "payment_method",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "fb3caa34e2e8e85b",
-      "settlement_currency": null,
-      "source_text": "Included at no additional charge for businesses on standard payments pricing",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "9d252ba8a813c408",
       "exactness": "included",
+      "fee_components": [],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "Included",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "other",
+      "name": null,
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
+      "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "1ba48fca58390224",
+      "rule_id": "6e9f8808ff0e0b4c",
       "settlement_currency": null,
+      "source_fragments": [],
       "source_text": "Included",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "alternative",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": "standard",
-      "channel": null,
-      "classification_evidence": [
-        "matched payment_method pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=alternative"
+      "source_texts": [
+        "Included"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "ddf0b1bf661b0861",
-      "exactness": "included",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "payment_method",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "a426910e11927cb5",
-      "settlement_currency": null,
-      "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "informational",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": "20.0",
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched card_payment pattern",
-        "channel=unknown",
-        "unit=per_charge",
-        "behavior=conditional"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "3278ceffd282bae1",
-      "exactness": "custom",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "card_payment",
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": "0.2",
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "6e1dcf311593d3ff",
-      "settlement_currency": null,
-      "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_charge"
-    },
-    {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": null,
       "behavior": "informational",
@@ -760,86 +732,127 @@
       "card_region": null,
       "card_tier": null,
       "channel": null,
-      "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
-      ],
-      "classification_status": "non_calculable",
+      "classification_evidence": [],
+      "classification_status": "included",
       "conditions": [],
-      "confidence": 0.0,
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "b31be03a99f49054"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "b31be03a99f49054",
       "exactness": "included",
+      "fee_components": [],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "Included",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "other",
+      "name": null,
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
+      "product_id": "adaptive_pricing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "07144392f19b4573",
+      "rule_id": "3b02a32df1c8344b",
       "settlement_currency": null,
+      "source_fragments": [],
       "source_text": "Included",
+      "source_texts": [
+        "Included"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "informational",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
-      "basis_points": null,
-      "behavior": "alternative",
+      "basis_points": "200",
+      "behavior": "conditional",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
-      "card_tier": "standard",
-      "channel": null,
+      "card_tier": null,
+      "channel": "online",
       "classification_evidence": [
-        "matched payment_method pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=alternative"
+        "product=adaptive_pricing",
+        "variant=standard",
+        "account_country=IN"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "932599e79965b412"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "3993b59b02aad753",
-      "exactness": "included",
+      "entry_id": "932599e79965b412",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "200",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "932599e79965b412",
+          "source_text": "2%",
+          "type": "percentage",
+          "value": "2"
+        }
+      ],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "2%",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "payment_method",
+      "name": "adaptive_pricing",
       "payment_method": null,
       "payout_type": null,
-      "percentage": null,
+      "percentage": "2",
       "presentment_currency": null,
+      "product_id": "adaptive_pricing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8fcbfbb84c3ba932",
+      "rule_id": "e6afe87a7cacf73b",
       "settlement_currency": null,
-      "source_text": "Included at no additional charge for businesses on standard payments pricing",
+      "source_fragments": [
+        {
+          "entry_id": "932599e79965b412",
+          "text": "2%"
+        }
+      ],
+      "source_text": "2%",
+      "source_texts": [
+        "2%"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "per_transaction",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": null,
       "behavior": "informational",
@@ -848,86 +861,127 @@
       "card_region": null,
       "card_tier": null,
       "channel": null,
-      "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
-      ],
-      "classification_status": "non_calculable",
+      "classification_evidence": [],
+      "classification_status": "included",
       "conditions": [],
-      "confidence": 0.0,
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "42e448bbd996a95a"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "42e448bbd996a95a",
       "exactness": "included",
+      "fee_components": [],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "Included",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "other",
+      "name": null,
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
+      "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c089439cd943e913",
+      "rule_id": "7332f8701b925e71",
       "settlement_currency": null,
+      "source_fragments": [],
       "source_text": "Included",
+      "source_texts": [
+        "Included"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "informational",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": null,
-      "behavior": "informational",
+      "behavior": "conditional",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
       "card_tier": null,
-      "channel": null,
+      "channel": "online",
       "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
+        "product=radar",
+        "variant=standard",
+        "account_country=IN"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "56b4ee77a5514dea"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "832d00c078810e7f",
-      "exactness": "free",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
+      "entry_id": "56b4ee77a5514dea",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "4.00",
+          "basis_points": null,
+          "currency": "INR",
+          "minor_amount": "400",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "56b4ee77a5514dea",
+          "source_text": "₹4.00",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fixed_amount": "4.00",
+      "fixed_amount_minor": "400",
+      "fixed_currency": "INR",
+      "label": "₹4.00",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "other",
+      "name": "radar",
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
+      "product_id": "radar",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "bb8c26c94bd349a6",
+      "rule_id": "2bf5d906262abb61",
       "settlement_currency": null,
-      "source_text": "Try for free for 30 days",
+      "source_fragments": [
+        {
+          "entry_id": "56b4ee77a5514dea",
+          "text": "₹4.00"
+        }
+      ],
+      "source_text": "₹4.00",
+      "source_texts": [
+        "₹4.00"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "per_transaction",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": null,
       "behavior": "informational",
@@ -936,350 +990,296 @@
       "card_region": null,
       "card_tier": null,
       "channel": null,
-      "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
+      "classification_evidence": [],
+      "classification_status": "included",
+      "conditions": [
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "43cbbbd58d3bdf21"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
       "entry_id": "43cbbbd58d3bdf21",
       "exactness": "included",
+      "fee_components": [],
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "Included",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "other",
+      "name": null,
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
+      "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7286f623490ed2e8",
+      "rule_id": "01ffc5e8528049dd",
       "settlement_currency": null,
+      "source_fragments": [],
       "source_text": "Included",
+      "source_texts": [
+        "Included"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "informational",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
-      "basis_points": null,
+      "basis_points": "40.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
       "card_tier": null,
-      "channel": null,
+      "channel": "online",
       "classification_evidence": [
-        "matched dispute pattern",
-        "channel=unknown",
-        "unit=per_dispute",
-        "behavior=conditional",
-        "minor=100000"
+        "product=invoicing",
+        "variant=standard",
+        "account_country=IN"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "1d455270a160d3ff"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "0c7ceb1021fe7822",
+      "entry_id": "1d455270a160d3ff",
       "exactness": "exact",
-      "fixed_amount": "1000.00",
-      "fixed_amount_minor": "100000",
-      "fixed_currency": "INR",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "dispute",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "2fe65bfa897c4522",
-      "settlement_currency": null,
-      "source_text": "₹1,000.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched dispute pattern",
-        "channel=unknown",
-        "unit=per_dispute",
-        "behavior=conditional",
-        "minor=100000"
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "40.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "1d455270a160d3ff",
+          "source_text": "0.4% per paid invoice",
+          "type": "percentage",
+          "value": "0.4"
+        }
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "2e4a294f946dd678",
-      "exactness": "exact",
-      "fixed_amount": "1000.00",
-      "fixed_amount_minor": "100000",
-      "fixed_currency": "INR",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "dispute",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "bf4e747c99a15428",
-      "settlement_currency": null,
-      "source_text": "₹1,000.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched dispute pattern",
-        "channel=unknown",
-        "unit=per_dispute",
-        "behavior=conditional",
-        "minor=200000"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "29a1865ce6acca08",
-      "exactness": "exact",
-      "fixed_amount": "2000.00",
-      "fixed_amount_minor": "200000",
-      "fixed_currency": "INR",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "dispute",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "b6e25fea18bf5f0d",
-      "settlement_currency": null,
-      "source_text": "₹2,000.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
-      ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "1dcc833e6aefd2b8",
-      "exactness": "included",
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "0.4% per paid invoice",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "other",
+      "name": "invoicing",
       "payment_method": null,
       "payout_type": null,
-      "percentage": null,
+      "percentage": "0.4",
       "presentment_currency": null,
+      "product_id": "invoicing",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "6587784ce87a2b47",
+      "rule_id": "10115d1173bb517b",
       "settlement_currency": null,
-      "source_text": "Included",
+      "source_fragments": [
+        {
+          "entry_id": "1d455270a160d3ff",
+          "text": "0.4% per paid invoice"
+        }
+      ],
+      "source_text": "0.4% per paid invoice",
+      "source_texts": [
+        "0.4% per paid invoice"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "per_invoice",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
       "basis_points": null,
       "behavior": "alternative",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
-      "card_tier": "standard",
-      "channel": null,
+      "card_tier": null,
+      "channel": "online",
       "classification_evidence": [
-        "matched payment_method pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=alternative"
+        "product=ach_direct_debit",
+        "variant=standard",
+        "account_country=IN"
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "95186c9dc81044fc"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "d554a4fdbacc976f",
-      "exactness": "included",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
+      "entry_id": "95186c9dc81044fc",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "1",
+          "basis_points": null,
+          "currency": "USD",
+          "minor_amount": "100",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "95186c9dc81044fc",
+          "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fixed_amount": "1",
+      "fixed_amount_minor": "100",
+      "fixed_currency": "USD",
+      "label": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "payment_method",
+      "name": "ach_direct_debit",
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
+      "product_id": "ach_direct_debit",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "da1090fc2ecba6b0",
+      "rule_id": "521cd940229b6345",
       "settlement_currency": null,
-      "source_text": "Included at no additional charge for businesses on standard payments pricing",
+      "source_fragments": [
+        {
+          "entry_id": "95186c9dc81044fc",
+          "text": "100+ category leaders each process more than $1 billion per year on Stripe."
+        }
+      ],
+      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
+      "source_texts": [
+        "100+ category leaders each process more than $1 billion per year on Stripe."
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "yearly",
+      "variant_id": "standard"
     },
     {
-      "account_country": null,
+      "account_country": "IN",
       "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
+      "basis_points": "1000",
+      "behavior": "alternative",
       "billing_type": null,
-      "card_origin": null,
+      "card_origin": "domestic",
       "card_region": null,
       "card_tier": null,
       "channel": null,
       "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
+        "product=unspecified",
+        "variant=standard",
+        "account_country=IN",
+        "transaction_type=authorization"
       ],
       "classification_status": "non_calculable",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "authorization"
+        }
+      ],
       "confidence": 0.0,
+      "contributing_entry_ids": [
+        "c57714efc2135b10"
+      ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "aa01b1e122c52e78",
-      "exactness": "included",
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "other",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "48ca9d7529a156de",
-      "settlement_currency": null,
-      "source_text": "Included",
-      "source_url": "https://stripe.com/in/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational"
-    },
-    {
-      "account_country": null,
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [
-        "matched other pattern",
-        "channel=unknown",
-        "unit=unknown",
-        "behavior=informational"
+      "entry_id": "c57714efc2135b10",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "1000",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "c57714efc2135b10",
+          "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
+          "type": "percentage",
+          "value": "10"
+        }
       ],
-      "classification_status": "non_calculable",
-      "conditions": [],
-      "confidence": 0.0,
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "7f478ade4b7cabba",
-      "exactness": "included",
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
+      "label": "See how Twilio increased authorisation rates by 10% with Stripe",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "other",
+      "name": "unspecified",
       "payment_method": null,
       "payout_type": null,
-      "percentage": null,
+      "percentage": "10",
       "presentment_currency": null,
+      "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "bade7f98aff3fff9",
+      "rule_id": "4b3f55c50e1b5f35",
       "settlement_currency": null,
-      "source_text": "Included",
+      "source_fragments": [
+        {
+          "entry_id": "c57714efc2135b10",
+          "text": "See how Twilio increased authorisation rates by 10% with Stripe"
+        }
+      ],
+      "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
+      "source_texts": [
+        "See how Twilio increased authorisation rates by 10% with Stripe"
+      ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
-      "unit": "informational"
+      "unit": "informational",
+      "variant_id": "standard"
     }
   ],
   "entries": [
@@ -1288,6 +1288,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "43e2d9aa78787df8",
       "fee_category": "Payments",
       "footnotes": [],
@@ -1301,7 +1302,7 @@
         "Payments"
       ],
       "source_evidence": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
-      "source_order": 28,
+      "source_order": 0,
       "source_text": "Increase customer acquisition with 100+ payment methods.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1310,6 +1311,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "custom",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "+",
@@ -1325,6 +1327,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "0cbfd034ccf846bf",
       "fee_category": "2%",
       "footnotes": [],
@@ -1339,7 +1342,7 @@
         "2%"
       ],
       "source_evidence": "for cards issued in India",
-      "source_order": 13,
+      "source_order": 1,
       "source_text": "2%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1348,6 +1351,7 @@
           "basis_points": "200",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1363,6 +1367,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "a312b2ff5c061716",
       "fee_category": "3%",
       "footnotes": [],
@@ -1377,7 +1382,7 @@
         "3%"
       ],
       "source_evidence": "for cards issued outside India",
-      "source_order": 14,
+      "source_order": 2,
       "source_text": "3%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1386,6 +1391,7 @@
           "basis_points": "300",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1401,6 +1407,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "847d92c1a66ae7de",
       "fee_category": "Payments optimisations to boost revenue",
       "footnotes": [],
@@ -1414,7 +1421,7 @@
         "Payments optimisations to boost revenue"
       ],
       "source_evidence": "Real-time retries\nIncrease revenue with selective retries powered by machine learning.\nAuto-updated cards\nUpdate card information in real-time, improving customer experience and increasing revenue.\nCustomer authentication\nVerify a customer’s identity using 3D Secure, an authentication method for card transactions",
-      "source_order": 20,
+      "source_order": 3,
       "source_text": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1423,6 +1430,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "custom",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "if",
@@ -1438,6 +1446,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "b21dd9d9fee342ee",
       "fee_category": "Security, reliability and compliance",
       "footnotes": [],
@@ -1451,7 +1460,7 @@
         "Security, reliability and compliance"
       ],
       "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
-      "source_order": 24,
+      "source_order": 4,
       "source_text": "99.999% average historical uptime",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1460,6 +1469,7 @@
           "basis_points": "9999.900",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1475,6 +1485,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "da4d6acc3adbf289",
       "fee_category": "Security, reliability and compliance",
       "footnotes": [],
@@ -1488,7 +1499,7 @@
         "Security, reliability and compliance"
       ],
       "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
-      "source_order": 25,
+      "source_order": 5,
       "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1497,6 +1508,7 @@
           "basis_points": "9999.900",
           "currency": null,
           "exactness": "range",
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
@@ -1512,6 +1524,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "286266d7341690cc",
       "fee_category": "Domestic cards",
       "footnotes": [],
@@ -1525,7 +1538,7 @@
         "Domestic cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued domestically.\nabout our different card types.\n2%\nfor Mastercard and Visa cards issued in India*\nDomestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
-      "source_order": 29,
+      "source_order": 6,
       "source_text": "2% for Mastercard and Visa cards issued in India*",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1534,6 +1547,7 @@
           "basis_points": "200",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1549,6 +1563,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "aeda0c65456d8b07",
       "fee_category": "Domestic cards",
       "footnotes": [],
@@ -1562,7 +1577,7 @@
         "Domestic cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued domestically.\nabout our different card types.\n2%\nfor Mastercard and Visa cards issued in India*\nDomestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
-      "source_order": 30,
+      "source_order": 7,
       "source_text": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1571,6 +1586,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -1584,6 +1600,7 @@
           "basis_points": "40.0",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1599,6 +1616,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "07b75bd30056abe6",
       "fee_category": "International cards",
       "footnotes": [],
@@ -1612,7 +1630,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 30,
+      "source_order": 8,
       "source_text": "3% for Mastercard and Visa cards issued outside India",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1621,6 +1639,7 @@
           "basis_points": "300",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1636,6 +1655,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "c6df527d302c8a61",
       "fee_category": "International cards",
       "footnotes": [],
@@ -1649,7 +1669,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 31,
+      "source_order": 9,
       "source_text": "+ 2% if currency conversion is required",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1658,6 +1678,7 @@
           "basis_points": "200",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
@@ -1673,6 +1694,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "c2282f925172cbf1",
       "fee_category": "International cards",
       "footnotes": [],
@@ -1686,7 +1708,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 32,
+      "source_order": 10,
       "source_text": "3.5% for American Express cards issued outside India",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1695,6 +1717,7 @@
           "basis_points": "350.0",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1710,6 +1733,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "f4b3a2f3f8cdc9fd",
       "fee_category": "International cards",
       "footnotes": [],
@@ -1723,7 +1747,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 33,
+      "source_order": 11,
       "source_text": "+ 2% if currency conversion is required",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1732,6 +1756,7 @@
           "basis_points": "200",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
@@ -1747,6 +1772,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "22d617d2a7dae7a3",
       "fee_category": "International cards",
       "footnotes": [],
@@ -1760,7 +1786,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 34,
+      "source_order": 12,
       "source_text": "4.3% for international cards with USD or other currency presentment",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1769,6 +1795,7 @@
           "basis_points": "430.0",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1784,6 +1811,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "c38e9a084fe9f95b",
       "fee_category": "International cards",
       "footnotes": [],
@@ -1797,7 +1825,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 35,
+      "source_order": 13,
       "source_text": "+ 2% if currency conversion is required",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1806,6 +1834,7 @@
           "basis_points": "200",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
@@ -1821,6 +1850,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "deac36067fa447fb",
       "fee_category": "Disputes",
       "footnotes": [],
@@ -1834,7 +1864,7 @@
         "Disputes"
       ],
       "source_evidence": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\n₹1,000.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
-      "source_order": 31,
+      "source_order": 14,
       "source_text": "₹1,000.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1843,6 +1873,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -1858,6 +1889,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "e4cb359de92f038b",
       "fee_category": "Disputes",
       "footnotes": [],
@@ -1871,7 +1903,7 @@
         "Disputes"
       ],
       "source_evidence": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\n₹1,000.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
-      "source_order": 32,
+      "source_order": 15,
       "source_text": "₹1,000.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1880,6 +1912,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -1895,6 +1928,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "50783c5ffb37cee3",
       "fee_category": "Smart Disputes",
       "footnotes": [],
@@ -1908,7 +1942,7 @@
         "Smart Disputes"
       ],
       "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.\nPayment optimisations\nIncluded with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 32,
+      "source_order": 16,
       "source_text": "30%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1917,6 +1951,7 @@
           "basis_points": "3000",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -1932,6 +1967,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "27467a01b148e84b",
       "fee_category": "Smart Disputes",
       "footnotes": [],
@@ -1945,7 +1981,7 @@
         "Smart Disputes"
       ],
       "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.\nPayment optimisations\nIncluded with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 33,
+      "source_order": 17,
       "source_text": "Included with Payments",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1954,6 +1990,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -1969,6 +2006,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "67241d4ae5e42bba",
       "fee_category": "Smart Disputes",
       "footnotes": [],
@@ -1982,7 +2020,7 @@
         "Smart Disputes"
       ],
       "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.\nPayment optimisations\nIncluded with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 34,
+      "source_order": 18,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -1991,6 +2029,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "for",
@@ -2006,6 +2045,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "9d252ba8a813c408",
       "fee_category": "Authorisation Boost",
       "footnotes": [],
@@ -2019,7 +2059,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
-      "source_order": 33,
+      "source_order": 19,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2028,6 +2068,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -2043,6 +2084,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "ddf0b1bf661b0861",
       "fee_category": "Authorisation Boost",
       "footnotes": [],
@@ -2056,7 +2098,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
-      "source_order": 34,
+      "source_order": 20,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2065,6 +2107,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "for",
@@ -2076,10 +2119,11 @@
       ]
     },
     {
-      "channel": null,
+      "channel": "online",
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "3278ceffd282bae1",
       "fee_category": "Authorisation Boost",
       "footnotes": [],
@@ -2093,7 +2137,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
-      "source_order": 35,
+      "source_order": 21,
       "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2102,6 +2146,7 @@
           "basis_points": "20.0",
           "currency": null,
           "exactness": "custom",
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -2117,6 +2162,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "b31be03a99f49054",
       "fee_category": "Adaptive Pricing",
       "footnotes": [],
@@ -2130,7 +2176,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 34,
+      "source_order": 22,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2139,6 +2185,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -2154,6 +2201,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "3993b59b02aad753",
       "fee_category": "Adaptive Pricing",
       "footnotes": [],
@@ -2167,7 +2215,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 35,
+      "source_order": 23,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2176,6 +2224,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "for",
@@ -2191,6 +2240,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "932599e79965b412",
       "fee_category": "Adaptive Pricing",
       "footnotes": [],
@@ -2204,7 +2254,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 36,
+      "source_order": 24,
       "source_text": "2%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2213,6 +2263,7 @@
           "basis_points": "200",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -2228,6 +2279,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "42e448bbd996a95a",
       "fee_category": "Radar’s machine learning",
       "footnotes": [],
@@ -2241,7 +2293,7 @@
         "Radar’s machine learning"
       ],
       "source_evidence": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\n₹4.00\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 36,
+      "source_order": 25,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2250,6 +2302,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -2265,6 +2318,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "56b4ee77a5514dea",
       "fee_category": "Radar’s machine learning",
       "footnotes": [],
@@ -2278,7 +2332,7 @@
         "Radar’s machine learning"
       ],
       "source_evidence": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\n₹4.00\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 37,
+      "source_order": 26,
       "source_text": "₹4.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2287,6 +2341,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2302,6 +2357,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "832d00c078810e7f",
       "fee_category": "Radar for Fraud Teams",
       "footnotes": [],
@@ -2315,7 +2371,7 @@
         "Radar for Fraud Teams"
       ],
       "source_evidence": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nTry for free for 30 days\n₹6.00\nper screened transaction for accounts with all payment methods on standard pricing\nContact us",
-      "source_order": 37,
+      "source_order": 27,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2324,6 +2380,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "free",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "for",
@@ -2339,6 +2396,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "22aebb07c116f58b",
       "fee_category": "Radar for Fraud Teams",
       "footnotes": [],
@@ -2352,7 +2410,7 @@
         "Radar for Fraud Teams"
       ],
       "source_evidence": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nTry for free for 30 days\n₹6.00\nper screened transaction for accounts with all payment methods on standard pricing\nContact us",
-      "source_order": 38,
+      "source_order": 28,
       "source_text": "₹6.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2361,6 +2419,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2376,6 +2435,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "43cbbbd58d3bdf21",
       "fee_category": "Dispute prevention",
       "footnotes": [],
@@ -2389,7 +2449,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 38,
+      "source_order": 29,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2398,6 +2458,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -2413,6 +2474,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "0c7ceb1021fe7822",
       "fee_category": "Dispute prevention",
       "footnotes": [],
@@ -2426,7 +2488,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 39,
+      "source_order": 30,
       "source_text": "₹1,000.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2435,6 +2497,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2450,6 +2513,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "2e4a294f946dd678",
       "fee_category": "Dispute prevention",
       "footnotes": [],
@@ -2463,7 +2527,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 40,
+      "source_order": 31,
       "source_text": "₹1,000.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2472,6 +2536,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2487,6 +2552,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "29a1865ce6acca08",
       "fee_category": "Dispute prevention",
       "footnotes": [],
@@ -2500,7 +2566,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 41,
+      "source_order": 32,
       "source_text": "₹2,000.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2509,6 +2575,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2524,6 +2591,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "1dcc833e6aefd2b8",
       "fee_category": "Stripe handles pricing for your users",
       "footnotes": [],
@@ -2537,7 +2605,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 41,
+      "source_order": 33,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2546,6 +2614,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -2561,6 +2630,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "d554a4fdbacc976f",
       "fee_category": "Stripe handles pricing for your users",
       "footnotes": [],
@@ -2574,7 +2644,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 42,
+      "source_order": 34,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2583,6 +2653,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "for",
@@ -2598,6 +2669,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "253129d799422619",
       "fee_category": "Stripe handles pricing for your users",
       "footnotes": [],
@@ -2611,7 +2683,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 43,
+      "source_order": 35,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2620,6 +2692,7 @@
           "basis_points": "25.00",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -2635,6 +2708,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "579aaeaf846fcc15",
       "fee_category": "Access to Billing",
       "footnotes": [],
@@ -2648,7 +2722,7 @@
         "Access to Billing"
       ],
       "source_evidence": "Start billing for recurring subscriptions & usage based billing.\n0.7%\nof Billing volume\nIncludes Billing transactions processed on and off Stripe. Excludes one-off invoices.\nSee pricing details",
-      "source_order": 44,
+      "source_order": 36,
       "source_text": "0.7%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2657,6 +2731,7 @@
           "basis_points": "70.0",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -2672,6 +2747,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "aa01b1e122c52e78",
       "fee_category": "Startup",
       "footnotes": [],
@@ -2685,7 +2761,7 @@
         "Startup"
       ],
       "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\nUS$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 46,
+      "source_order": 37,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2694,6 +2770,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -2709,6 +2786,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "bd26d4a1fb2b427f",
       "fee_category": "Startup",
       "footnotes": [],
@@ -2722,7 +2800,7 @@
         "Startup"
       ],
       "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\nUS$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 47,
+      "source_order": 38,
       "source_text": "US$100,000.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2731,6 +2809,7 @@
           "basis_points": null,
           "currency": "SGD",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2746,6 +2825,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "1d455270a160d3ff",
       "fee_category": "Starter",
       "footnotes": [],
@@ -2759,7 +2839,7 @@
         "Starter"
       ],
       "source_evidence": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
-      "source_order": 49,
+      "source_order": 39,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2768,6 +2848,7 @@
           "basis_points": "40.0",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -2783,6 +2864,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "1183036e931c0d34",
       "fee_category": "Atlas",
       "footnotes": [],
@@ -2796,7 +2878,7 @@
         "Atlas"
       ],
       "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
-      "source_order": 51,
+      "source_order": 40,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2805,6 +2887,7 @@
           "basis_points": null,
           "currency": "USD",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2820,6 +2903,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "89426236fbc8c2e4",
       "fee_category": "Incorporate your company",
       "footnotes": [],
@@ -2833,7 +2917,7 @@
         "Incorporate your company"
       ],
       "source_evidence": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nUS$500.00\none-off setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 52,
+      "source_order": 41,
       "source_text": "US$500.00",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2842,6 +2926,7 @@
           "basis_points": null,
           "currency": "SGD",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2857,6 +2942,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "7f478ade4b7cabba",
       "fee_category": "Pay as you go",
       "footnotes": [],
@@ -2870,7 +2956,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 54,
+      "source_order": 42,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2879,6 +2965,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "included",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": null,
@@ -2894,6 +2981,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "60fe9f1cc07e6921",
       "fee_category": "Pay as you go",
       "footnotes": [],
@@ -2907,7 +2995,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 55,
+      "source_order": 43,
       "source_text": "₹1.64",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2916,6 +3004,7 @@
           "basis_points": null,
           "currency": "INR",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": null,
@@ -2931,6 +3020,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "629cf10baa966b6d",
       "fee_category": "Integrating Stripe provides a 326% return on investment",
       "footnotes": [],
@@ -2944,7 +3034,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 64,
+      "source_order": 44,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2953,6 +3043,7 @@
           "basis_points": "32600",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -2968,6 +3059,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "95186c9dc81044fc",
       "fee_category": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "footnotes": [],
@@ -2981,7 +3073,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": null,
-      "source_order": 67,
+      "source_order": 45,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2990,6 +3082,7 @@
           "basis_points": null,
           "currency": "USD",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": "+",
@@ -3005,6 +3098,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "fa44b57ad8aac343",
       "fee_category": "$10B+",
       "footnotes": [],
@@ -3018,7 +3112,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 75,
+      "source_order": 46,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3027,6 +3121,7 @@
           "basis_points": null,
           "currency": "USD",
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "amount",
           "note": null,
           "operator": "+",
@@ -3042,6 +3137,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "529e79f9daa64454",
       "fee_category": "+5.5%",
       "footnotes": [],
@@ -3055,7 +3151,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 77,
+      "source_order": 47,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3064,6 +3160,7 @@
           "basis_points": "550.0",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
@@ -3079,6 +3176,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "1f4bfe1430751031",
       "fee_category": "+1%",
       "footnotes": [],
@@ -3092,7 +3190,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 78,
+      "source_order": 48,
       "source_text": "+1%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3101,6 +3199,7 @@
           "basis_points": "100",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
@@ -3116,6 +3215,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "c57714efc2135b10",
       "fee_category": "See how Twilio increased authorisation rates by 10% with Stripe",
       "footnotes": [],
@@ -3129,7 +3229,7 @@
         "See how Twilio increased authorisation rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 83,
+      "source_order": 49,
       "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3138,6 +3238,7 @@
           "basis_points": "1000",
           "currency": null,
           "exactness": null,
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
@@ -3153,6 +3254,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "3e3ef727f8992efc",
       "fee_category": "See our customers",
       "footnotes": [],
@@ -3166,7 +3268,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 91,
+      "source_order": 50,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3175,6 +3277,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "from",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "for",
@@ -3190,6 +3293,7 @@
       "classification_evidence": [],
       "classification_status": "unclassified",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "ad0ae73fef80daea",
       "fee_category": "Explore the docs",
       "footnotes": [],
@@ -3203,7 +3307,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 92,
+      "source_order": 51,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3212,6 +3316,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "range",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "per",
@@ -4364,7 +4469,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "09d1ab98ca962dd35382d7e3e04d452060068867755d374ffd4014f4c22e45bb",
+      "content_sha256": "0f5771fd49b182b11ac28b540c9feb98f59d754b3730ef2c07084f01c1b299c5",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what's ahead Atlas Start-up incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payments Payments Online payments Payment link",
       "last_modified": null,
@@ -4380,10 +4485,11 @@
     {
       "channel": null,
       "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
+        "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "custom_pricing",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "43e2d9aa78787df8",
       "fee_category": "Payments",
       "footnotes": [],
@@ -4397,7 +4503,7 @@
         "Payments"
       ],
       "source_evidence": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
-      "source_order": 28,
+      "source_order": 0,
       "source_text": "Increase customer acquisition with 100+ payment methods.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4406,6 +4512,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "custom",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "+",
@@ -4419,90 +4526,11 @@
     {
       "channel": null,
       "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
+        "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "custom_pricing",
       "confidence": 0.0,
-      "entry_id": "0cbfd034ccf846bf",
-      "fee_category": "2%",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Standard",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Standard",
-        "2%"
-      ],
-      "source_evidence": "for cards issued in India",
-      "source_order": 13,
-      "source_text": "2%",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "200",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "2",
-          "raw": "2",
-          "token_id": "3cb87e06a5a240a8",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "a312b2ff5c061716",
-      "fee_category": "3%",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Standard",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Standard",
-        "3%"
-      ],
-      "source_evidence": "for cards issued outside India",
-      "source_order": 14,
-      "source_text": "3%",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "300",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "3",
-          "raw": "3",
-          "token_id": "6c301278c91c375a",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
+      "context": {},
       "entry_id": "847d92c1a66ae7de",
       "fee_category": "Payments optimisations to boost revenue",
       "footnotes": [],
@@ -4516,7 +4544,7 @@
         "Payments optimisations to boost revenue"
       ],
       "source_evidence": "Real-time retries\nIncrease revenue with selective retries powered by machine learning.\nAuto-updated cards\nUpdate card information in real-time, improving customer experience and increasing revenue.\nCustomer authentication\nVerify a customer’s identity using 3D Secure, an authentication method for card transactions",
-      "source_order": 20,
+      "source_order": 3,
       "source_text": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4525,6 +4553,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "custom",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "if",
@@ -4536,40 +4565,42 @@
       ]
     },
     {
-      "channel": null,
+      "channel": "online",
       "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
+        "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "custom_pricing",
       "confidence": 0.0,
-      "entry_id": "b21dd9d9fee342ee",
-      "fee_category": "Security, reliability and compliance",
+      "context": {},
+      "entry_id": "3278ceffd282bae1",
+      "fee_category": "Authorisation Boost",
       "footnotes": [],
       "links": [],
-      "payment_method": null,
+      "payment_method": "card",
       "payment_method_family": null,
-      "product": "Security, reliability and compliance",
+      "product": "Authorisation Boost",
       "product_category": "pricing",
       "qualifiers": [],
       "section_path": [
-        "Security, reliability and compliance"
+        "Authorisation Boost"
       ],
-      "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
-      "source_order": 24,
-      "source_text": "99.999% average historical uptime",
+      "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing\nMore features",
+      "source_order": 21,
+      "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
         {
           "amount": null,
-          "basis_points": "9999.900",
+          "basis_points": "20.0",
           "currency": null,
-          "exactness": null,
+          "exactness": "custom",
+          "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": null,
-          "percentage": "99.999",
-          "raw": "99.999",
-          "token_id": "55dbb96490e2bf04",
+          "percentage": "0.2",
+          "raw": "0.2",
+          "token_id": "0c874dd27659fabe",
           "value": null
         }
       ]
@@ -4577,673 +4608,11 @@
     {
       "channel": null,
       "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
+        "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
-      "entry_id": "da4d6acc3adbf289",
-      "fee_category": "Security, reliability and compliance",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Security, reliability and compliance",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Security, reliability and compliance"
-      ],
-      "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
-      "source_order": 25,
-      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "9999.900",
-          "currency": null,
-          "exactness": "range",
-          "kind": "percentage",
-          "note": null,
-          "operator": "+",
-          "percentage": "99.999",
-          "raw": "99.999",
-          "token_id": "55dbb96490e2bf04",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "932599e79965b412",
-      "fee_category": "Adaptive Pricing",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Adaptive Pricing",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Adaptive Pricing"
-      ],
-      "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 36,
-      "source_text": "2%",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "200",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "2",
-          "raw": "2",
-          "token_id": "3cb87e06a5a240a8",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "56b4ee77a5514dea",
-      "fee_category": "Radar’s machine learning",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Radar’s machine learning",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Radar’s machine learning"
-      ],
-      "source_evidence": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\n₹4.00\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 37,
-      "source_text": "₹4.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "4.00",
-          "basis_points": null,
-          "currency": "INR",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "4.00",
-          "token_id": "c47484397c284fe3",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "22aebb07c116f58b",
-      "fee_category": "Radar for Fraud Teams",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Radar for Fraud Teams",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Radar for Fraud Teams"
-      ],
-      "source_evidence": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nTry for free for 30 days\n₹6.00\nper screened transaction for accounts with all payment methods on standard pricing\nContact us",
-      "source_order": 38,
-      "source_text": "₹6.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "6.00",
-          "basis_points": null,
-          "currency": "INR",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "6.00",
-          "token_id": "115b74834468fdbd",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "253129d799422619",
-      "fee_category": "Stripe handles pricing for your users",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Stripe handles pricing for your users",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Stripe handles pricing for your users"
-      ],
-      "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 43,
-      "source_text": "0.25%",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "25.00",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "0.25",
-          "raw": "0.25",
-          "token_id": "56715c7f7bd02241",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "579aaeaf846fcc15",
-      "fee_category": "Access to Billing",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Access to Billing",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Access to Billing"
-      ],
-      "source_evidence": "Start billing for recurring subscriptions & usage based billing.\n0.7%\nof Billing volume\nIncludes Billing transactions processed on and off Stripe. Excludes one-off invoices.\nSee pricing details",
-      "source_order": 44,
-      "source_text": "0.7%",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "70.0",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "0.7",
-          "raw": "0.7",
-          "token_id": "feff65990ff2271b",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "bd26d4a1fb2b427f",
-      "fee_category": "Startup",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Startup",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Startup"
-      ],
-      "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\nUS$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 47,
-      "source_text": "US$100,000.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "100000.00",
-          "basis_points": null,
-          "currency": "SGD",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "100,000.00",
-          "token_id": "dfb965bc8299a941",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "1d455270a160d3ff",
-      "fee_category": "Starter",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Starter",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Starter"
-      ],
-      "source_evidence": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
-      "source_order": 49,
-      "source_text": "0.4% per paid invoice",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "40.0",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "0.4",
-          "raw": "0.4",
-          "token_id": "a0f4f4bdf6ad695e",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "1183036e931c0d34",
-      "fee_category": "Atlas",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Atlas",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Atlas"
-      ],
-      "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
-      "source_order": 51,
-      "source_text": "Get over $50K in discounts and perks.",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "50",
-          "basis_points": null,
-          "currency": "USD",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "50",
-          "token_id": "efaf40888d8e2331",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "89426236fbc8c2e4",
-      "fee_category": "Incorporate your company",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Incorporate your company",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Incorporate your company"
-      ],
-      "source_evidence": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nUS$500.00\none-off setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 52,
-      "source_text": "US$500.00",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "500.00",
-          "basis_points": null,
-          "currency": "SGD",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "500.00",
-          "token_id": "a1de4d194c4d5cf3",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "60fe9f1cc07e6921",
-      "fee_category": "Pay as you go",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Pay as you go",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Pay as you go"
-      ],
-      "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 55,
-      "source_text": "₹1.64",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "1.64",
-          "basis_points": null,
-          "currency": "INR",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "1.64",
-          "token_id": "948c4a87b6276c28",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "629cf10baa966b6d",
-      "fee_category": "Integrating Stripe provides a 326% return on investment",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Integrating Stripe provides a 326% return on investment",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Integrating Stripe provides a 326% return on investment"
-      ],
-      "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 64,
-      "source_text": "Integrating Stripe provides a 326% return on investment",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "32600",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "326",
-          "raw": "326",
-          "token_id": "32ecf94effa03b3f",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "95186c9dc81044fc",
-      "fee_category": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "100+ category leaders each process more than $1 billion per year on Stripe."
-      ],
-      "source_evidence": null,
-      "source_order": 67,
-      "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "1",
-          "basis_points": null,
-          "currency": "USD",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "1",
-          "token_id": "a6b59d8c4da363d7",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "fa44b57ad8aac343",
-      "fee_category": "$10B+",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "$10B+",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "$10B+"
-      ],
-      "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 75,
-      "source_text": "$10B+",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": "10",
-          "basis_points": null,
-          "currency": "USD",
-          "exactness": null,
-          "kind": "amount",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "10",
-          "token_id": "6e59d3d31a45bdd1",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "529e79f9daa64454",
-      "fee_category": "+5.5%",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "+5.5%",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "+5.5%"
-      ],
-      "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 77,
-      "source_text": "+5.5%",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "550.0",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": "+",
-          "percentage": "5.5",
-          "raw": "5.5",
-          "token_id": "20fef6f97e37d417",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "1f4bfe1430751031",
-      "fee_category": "+1%",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "+1%",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "+1%"
-      ],
-      "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 78,
-      "source_text": "+1%",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "100",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": "+",
-          "percentage": "1",
-          "raw": "1",
-          "token_id": "2a49369a7620c82d",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
-      "entry_id": "c57714efc2135b10",
-      "fee_category": "See how Twilio increased authorisation rates by 10% with Stripe",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "See how Twilio increased authorisation rates by 10% with Stripe",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "See how Twilio increased authorisation rates by 10% with Stripe"
-      ],
-      "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 83,
-      "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "1000",
-          "currency": null,
-          "exactness": null,
-          "kind": "percentage",
-          "note": null,
-          "operator": null,
-          "percentage": "10",
-          "raw": "10",
-          "token_id": "f9c0aea58f804c94",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
-      ],
-      "classification_status": "non_calculable",
-      "confidence": 0.0,
+      "context": {},
       "entry_id": "3e3ef727f8992efc",
       "fee_category": "See our customers",
       "footnotes": [],
@@ -5257,7 +4626,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 91,
+      "source_order": 50,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -5266,6 +4635,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "from",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "for",
@@ -5279,10 +4649,11 @@
     {
       "channel": null,
       "classification_evidence": [
-        "no clear numeric fee or unrecognized category"
+        "no clear calculable fee or unsupported shape"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "unclassified_fee_candidate",
       "confidence": 0.0,
+      "context": {},
       "entry_id": "ad0ae73fef80daea",
       "fee_category": "Explore the docs",
       "footnotes": [],
@@ -5296,7 +4667,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 92,
+      "source_order": 51,
       "source_text": "Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -5305,6 +4676,7 @@
           "basis_points": null,
           "currency": null,
           "exactness": "range",
+          "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
           "operator": "per",

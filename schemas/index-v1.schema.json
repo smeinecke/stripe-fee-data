@@ -7,6 +7,18 @@
           "title": "Account Country",
           "type": "string"
         },
+        "calculator_coverage_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Calculator Coverage Status"
+        },
         "content_sha256": {
           "anyOf": [
             {

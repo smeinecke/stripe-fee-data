@@ -7,6 +7,14 @@
           "title": "Account Country",
           "type": "string"
         },
+        "calculator_coverage_status": {
+          "default": "unclassified",
+          "title": "Calculator Coverage Status",
+          "type": "string"
+        },
+        "coverage_summary": {
+          "$ref": "#/$defs/CoverageSummary"
+        },
         "derivation_status": {
           "title": "Derivation Status",
           "type": "string"
@@ -17,7 +25,7 @@
         },
         "rules": {
           "items": {
-            "$ref": "#/$defs/FeeRule"
+            "$ref": "#/$defs/CoreFeeRule"
           },
           "title": "Rules",
           "type": "array"
@@ -39,6 +47,320 @@
         "derivation_status"
       ],
       "title": "CoreFeeEntry",
+      "type": "object"
+    },
+    "CoreFeeRule": {
+      "description": "A compact, calculator-facing fee rule without provenance.",
+      "properties": {
+        "account_country": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Account Country"
+        },
+        "behavior": {
+          "default": "additive",
+          "title": "Behavior",
+          "type": "string"
+        },
+        "channel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel"
+        },
+        "classification_status": {
+          "default": "unclassified",
+          "title": "Classification Status",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "$ref": "#/$defs/FeeCondition"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "exactness": {
+          "default": "exact",
+          "title": "Exactness",
+          "type": "string"
+        },
+        "fee_components": {
+          "items": {
+            "$ref": "#/$defs/FeeComponent"
+          },
+          "title": "Fee Components",
+          "type": "array"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
+        "payment_method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payment Method"
+        },
+        "product_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Product Id"
+        },
+        "provider": {
+          "default": "stripe",
+          "title": "Provider",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "unit": {
+          "default": "per_transaction",
+          "title": "Unit",
+          "type": "string"
+        },
+        "variant_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variant Id"
+        }
+      },
+      "required": [
+        "rule_id"
+      ],
+      "title": "CoreFeeRule",
+      "type": "object"
+    },
+    "CoverageSummary": {
+      "description": "Summary of how source pricing records were classified.",
+      "properties": {
+        "ambiguous_entries": {
+          "default": 0,
+          "title": "Ambiguous Entries",
+          "type": "integer"
+        },
+        "calculable_rules": {
+          "default": 0,
+          "title": "Calculable Rules",
+          "type": "integer"
+        },
+        "conflicting_rule_identities": {
+          "default": 0,
+          "title": "Conflicting Rule Identities",
+          "type": "integer"
+        },
+        "custom_pricing": {
+          "default": 0,
+          "title": "Custom Pricing",
+          "type": "integer"
+        },
+        "ignored_non_fee": {
+          "default": 0,
+          "title": "Ignored Non Fee",
+          "type": "integer"
+        },
+        "included": {
+          "default": 0,
+          "title": "Included",
+          "type": "integer"
+        },
+        "non_calculable_rules": {
+          "default": 0,
+          "title": "Non Calculable Rules",
+          "type": "integer"
+        },
+        "numeric_fee_candidates": {
+          "default": 0,
+          "title": "Numeric Fee Candidates",
+          "type": "integer"
+        },
+        "reference_only": {
+          "default": 0,
+          "title": "Reference Only",
+          "type": "integer"
+        },
+        "source_entries": {
+          "default": 0,
+          "title": "Source Entries",
+          "type": "integer"
+        },
+        "unclassified_fee_candidates": {
+          "default": 0,
+          "title": "Unclassified Fee Candidates",
+          "type": "integer"
+        },
+        "unsupported_fee_shapes": {
+          "default": 0,
+          "title": "Unsupported Fee Shapes",
+          "type": "integer"
+        }
+      },
+      "title": "CoverageSummary",
+      "type": "object"
+    },
+    "FeeComponent": {
+      "description": "One calculable or descriptive component of a fee formula.",
+      "properties": {
+        "amount": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Amount"
+        },
+        "basis_points": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Basis Points"
+        },
+        "currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Currency"
+        },
+        "minor_amount": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minor Amount"
+        },
+        "operator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Operator"
+        },
+        "schedule_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Schedule Id"
+        },
+        "source_entry_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Entry Id"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "FeeComponent",
       "type": "object"
     },
     "FeeCondition": {
@@ -74,395 +396,6 @@
         "value"
       ],
       "title": "FeeCondition",
-      "type": "object"
-    },
-    "FeeRule": {
-      "description": "A derived calculation-ready fee rule.\n\nMoney amounts are represented as exact decimal strings in major units\ntogether with a currency code. Percentage rates are represented as exact\ndecimal strings and as basis points for unambiguous computation.",
-      "properties": {
-        "account_country": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Account Country"
-        },
-        "additional_fees": {
-          "items": {
-            "type": "string"
-          },
-          "title": "Additional Fees",
-          "type": "array"
-        },
-        "basis_points": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Basis Points"
-        },
-        "behavior": {
-          "default": "additive",
-          "title": "Behavior",
-          "type": "string"
-        },
-        "billing_type": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Billing Type"
-        },
-        "card_origin": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Card Origin"
-        },
-        "card_region": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Card Region"
-        },
-        "card_tier": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Card Tier"
-        },
-        "channel": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Channel"
-        },
-        "classification_evidence": {
-          "items": {
-            "type": "string"
-          },
-          "title": "Classification Evidence",
-          "type": "array"
-        },
-        "classification_status": {
-          "default": "unclassified",
-          "title": "Classification Status",
-          "type": "string"
-        },
-        "conditions": {
-          "items": {
-            "$ref": "#/$defs/FeeCondition"
-          },
-          "title": "Conditions",
-          "type": "array"
-        },
-        "confidence": {
-          "default": 0.0,
-          "title": "Confidence",
-          "type": "number"
-        },
-        "currency_conversion_required": {
-          "anyOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Currency Conversion Required"
-        },
-        "customer_country": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Customer Country"
-        },
-        "dispute_state": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Dispute State"
-        },
-        "entry_id": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Entry Id"
-        },
-        "exactness": {
-          "default": "exact",
-          "title": "Exactness",
-          "type": "string"
-        },
-        "fixed_amount": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Fixed Amount"
-        },
-        "fixed_amount_minor": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Fixed Amount Minor"
-        },
-        "fixed_currency": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Fixed Currency"
-        },
-        "maximum_amount": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Maximum Amount"
-        },
-        "minimum_amount": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Minimum Amount"
-        },
-        "name": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Name"
-        },
-        "payment_method": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Payment Method"
-        },
-        "payout_type": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Payout Type"
-        },
-        "percentage": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Percentage"
-        },
-        "presentment_currency": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Presentment Currency"
-        },
-        "provider": {
-          "default": "stripe",
-          "title": "Provider",
-          "type": "string"
-        },
-        "recurring": {
-          "anyOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Recurring"
-        },
-        "rule_id": {
-          "title": "Rule Id",
-          "type": "string"
-        },
-        "settlement_currency": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Settlement Currency"
-        },
-        "source_text": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Source Text"
-        },
-        "source_url": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Source Url"
-        },
-        "transaction_amount_max": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Transaction Amount Max"
-        },
-        "transaction_amount_min": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Transaction Amount Min"
-        },
-        "unit": {
-          "default": "per_transaction",
-          "title": "Unit",
-          "type": "string"
-        }
-      },
-      "required": [
-        "rule_id"
-      ],
-      "title": "FeeRule",
       "type": "object"
     }
   },
