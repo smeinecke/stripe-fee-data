@@ -25,11 +25,11 @@
       "display_name": "Alipay",
       "family": "wallet",
       "fee_rule_refs": [
-        "945fea09a4dbc408",
-        "986ea5262b940270",
-        "b3881d826ac33ca3",
-        "eddc20372df6602b",
-        "f49ac4717cc2f158"
+        "310e85f4c05d70c2",
+        "8561a4440de8adeb",
+        "95e7752f47d69a4f",
+        "9922271cf58fd678",
+        "a8c88afcc43ed017"
       ],
       "localized_names": [],
       "method_id": "alipay",
@@ -51,8 +51,8 @@
       "display_name": "Amazon Pay",
       "family": "wallet",
       "fee_rule_refs": [
-        "4d03172f562bda2f",
-        "8b7912053be24444"
+        "66f5ca133ac0b1fb",
+        "cc54b555f5c91309"
       ],
       "localized_names": [],
       "method_id": "amazon_pay",
@@ -91,11 +91,11 @@
       "display_name": "Bancontact",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "20fdd25dea51cdc0",
-        "36c6ef4b08a4c132",
-        "714815d9f6109f5d",
-        "f3442c579f403730",
-        "f3c8f061812d66cf"
+        "02ef3a171dee3d1e",
+        "085d19e2c6a7de79",
+        "51212c257ebdb1c3",
+        "dc91f4fba5d57d0c",
+        "eaec6b1b5f0dcd0c"
       ],
       "localized_names": [],
       "method_id": "bancontact",
@@ -117,11 +117,11 @@
       "display_name": "Bank Transfer",
       "family": "other",
       "fee_rule_refs": [
+        "09c2613471ef2f6d",
         "0b4b1a9c4f1eabd5",
-        "4f5c6984d97242e9",
-        "8d63f3baef504b66",
-        "a5adc1ab6d0b2ab5",
-        "fdce4d3f93c6a515"
+        "2faed41f49ae4e2c",
+        "8f660563f5c5e0f4",
+        "95930e6a4386775a"
       ],
       "localized_names": [],
       "method_id": "bank_transfer",
@@ -141,9 +141,9 @@
       "display_name": "Billie",
       "family": "buy_now_pay_later",
       "fee_rule_refs": [
-        "3985891c30fd3055",
-        "850a6ce722137c65",
-        "9792ba2dff4d6776"
+        "42cfa77453978f6b",
+        "9191440f850e5bcb",
+        "bb42381bfb20aa21"
       ],
       "localized_names": [],
       "method_id": "billie",
@@ -161,10 +161,10 @@
       "display_name": "Bizum",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "48f8a58c059b8796",
-        "59ed4c22d932cc41",
-        "5dc61b4deaa9174d",
-        "6d2a2eceae05df21"
+        "068105a974c61ae2",
+        "5aa07e7a50353913",
+        "868431b57c73dfba",
+        "b88de217b39df00d"
       ],
       "localized_names": [],
       "method_id": "bizum",
@@ -184,10 +184,10 @@
       "display_name": "Blik",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "2809a7eea68170e1",
-        "326a66e270e48ed8",
-        "926a1476fb465ae5",
-        "9ffdd4fdbf7b1e00"
+        "21aa5ebe359d53c4",
+        "4538e54aa9fff80b",
+        "91b89622e4c57ec9",
+        "d7052b693f204063"
       ],
       "localized_names": [],
       "method_id": "blik",
@@ -208,36 +208,29 @@
       "family": "card",
       "fee_rule_refs": [
         "09cbca83d956df8a",
-        "15b309c8697711b1",
-        "15be652236b418e4",
-        "1f45e17e53607973",
+        "0b1ad743e065a31d",
+        "118f016e57a52ff6",
+        "1b99c9f83e5e05f3",
         "23f97990d5ef4c57",
-        "24e8a1424efb90f8",
         "254612d2d6f1f728",
         "25dba5c334406606",
+        "270867f80daa0aca",
         "28ed61c2506d3269",
-        "2ac4c2b87001cbe8",
-        "30739a716bc58861",
-        "3359ad0c34e2c5bf",
         "37516d790a3aa567",
         "381f2d8ff757d342",
-        "3be24a25e05b863f",
-        "4654b53e112f3b73",
         "4e7bfd10d72ecf1e",
         "4ebffce99a38c851",
         "4ee3b55e1a183280",
-        "5eaa337117b44ec6",
-        "62384af8d646bd4c",
+        "4fbb9ce55a955dd2",
+        "541c9add32ec546d",
+        "6061667e22b78ebd",
         "62957dbf78f9d179",
-        "63b07df6d731fd9b",
         "6793a09e35b8add3",
-        "67c474fa808f9512",
-        "69dc7bafbd0c4347",
         "6b1bee21e107e178",
         "6b4a7b17ac0df493",
         "6ba021c7de403dac",
+        "6d82c1e1d942636d",
         "6df756bd0bc67a20",
-        "6ee3345ce3b8116d",
         "70f2dd7ed64ff312",
         "71801e181da72fa3",
         "7645ee3797611d4f",
@@ -249,35 +242,29 @@
         "82ed6c9535671e86",
         "866d95e15ea17ca2",
         "8894641377885807",
+        "88c473583dc2b723",
         "8a025fc0cb2340c2",
         "8aa88fbdfc729304",
         "8b04e87b019d82b7",
         "8e102e4c562746ae",
         "93fc7d3f2408ce40",
+        "95068aabf56ecf15",
         "97bc912915fc01bd",
         "996c5cfac60695bb",
         "9d3a79db9f1bbbb2",
-        "a1ac57f9ed8010f2",
         "a2505ef695599e98",
         "a3cf894eee864385",
         "a8e96d82a0701f65",
-        "aa5e06250997c6c0",
         "abbb6adb04cd6f8f",
-        "b6db1bce938af2cb",
-        "bbe3e4a085e33f08",
-        "c89411343af874fb",
-        "c909a0994d9377d5",
-        "d35d21bf1fb40238",
-        "d5ea241c6b4ead4d",
+        "ac75c0bd26c33a91",
+        "cb7ec01b8275fcda",
         "dbe04be6f0d0cc7b",
         "dd8b4ce253adc7c6",
         "dee1bddc5d6a4c35",
         "ea9ebf2078ac3e8a",
         "ec14d62cc7eea380",
-        "ecd46d7fc57c9b1d",
         "f4ebd0c9e4e77055",
-        "f589547b6a19ebd8",
-        "fb90ac0570d38805"
+        "f589547b6a19ebd8"
       ],
       "localized_names": [],
       "method_id": "card",
@@ -308,11 +295,11 @@
       "display_name": "Eps",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "30afa9891129024e",
-        "52802402599fe796",
-        "8e231b0f5293396e",
-        "ad892c29bdc8d35f",
-        "bffb1116a14276b6"
+        "3f413c12b2f4be40",
+        "44c182bae471d95c",
+        "4bb6e7616ccadab1",
+        "55d8ff004709b386",
+        "c4b046702917eda8"
       ],
       "localized_names": [],
       "method_id": "eps",
@@ -334,15 +321,12 @@
       "display_name": "Klarna",
       "family": "buy_now_pay_later",
       "fee_rule_refs": [
-        "05887dace6283523",
-        "3ff11a555054d9ae",
+        "2a2c1ff2ccdbde78",
+        "2f5e97c03d663402",
+        "401b2beae4d46e29",
+        "4151218ab5337732",
         "5db1aead4d24fe03",
         "741ade64cd7a777d",
-        "7ad79fc3b8b48ab5",
-        "881da963aa167d78",
-        "ad24a58c2859c20a",
-        "d6e85d14a19b872c",
-        "d8ea05ea8ee5cdb9",
         "f37af73542fb9228"
       ],
       "localized_names": [],
@@ -365,8 +349,8 @@
       "display_name": "Konbini",
       "family": "other",
       "fee_rule_refs": [
-        "719295438402ea1e",
-        "ae90fae2374b8fa2"
+        "358b1dc49a9bc35a",
+        "6d4c9c0e8936ca85"
       ],
       "localized_names": [],
       "method_id": "konbini",
@@ -402,11 +386,11 @@
       "display_name": "Mb Way",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "67601552b5834e25",
-        "74373bff290257ed",
-        "81e491e16d61f10b",
-        "a0d92c314e29a0f2",
-        "c022aad26cb2b403"
+        "320896099dd4ba0e",
+        "55a84322ab9c0882",
+        "6954b16104e4f3c0",
+        "a9438b69e982268b",
+        "f5da59715e0ac454"
       ],
       "localized_names": [],
       "method_id": "mb_way",
@@ -428,8 +412,8 @@
       "display_name": "Mobilepay",
       "family": "wallet",
       "fee_rule_refs": [
-        "5f44666fa206e661",
-        "f90618b04f4febdc"
+        "ba7a2ca8b72f13c7",
+        "de968d2b1c7d4892"
       ],
       "localized_names": [],
       "method_id": "mobilepay",
@@ -445,9 +429,9 @@
       "display_name": "Multibanco",
       "family": "cash_voucher",
       "fee_rule_refs": [
-        "282e036dfeb125c8",
-        "2b952032f64b45b4",
-        "411ead7f90ba082d"
+        "0baf042a6ca364ef",
+        "24093002ab4de978",
+        "fdcf717db0a02506"
       ],
       "localized_names": [],
       "method_id": "multibanco",
@@ -465,10 +449,10 @@
       "display_name": "Pay By Bank",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "04db97fc014f22db",
-        "4f862fd27136df6b",
-        "68be64a9013cc27d",
-        "fb0bd5f6d5627437"
+        "16b08d52c63bb80a",
+        "a7fc87b22dd21c4b",
+        "ab21ed568d051153",
+        "c46cb24cae3d551d"
       ],
       "localized_names": [],
       "method_id": "pay_by_bank",
@@ -488,9 +472,9 @@
       "display_name": "Paypal",
       "family": "wallet",
       "fee_rule_refs": [
-        "28d1559f92eafffb",
-        "33c9bb515bd1832d",
-        "be28f42fc5c705fd"
+        "0a30f862ef651812",
+        "308fcb4367245591",
+        "8e4b170871daa424"
       ],
       "localized_names": [],
       "method_id": "paypal",
@@ -508,16 +492,11 @@
       "display_name": "Pix",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "1dea0c64a3a3cccd",
-        "269b7564cc14b425",
+        "064d6730b525d26b",
+        "36d53293ee4a7228",
         "5140369f2f88cdf4",
-        "657ead24874acc3c",
-        "6c1097a530fe7b56",
-        "7784a14de490ea4a",
-        "c34c294cee3b7691",
-        "cc53fb9078b11cf3",
-        "efab1772e21edf5e",
-        "f48c2390d18bdfd1"
+        "ae1579f2dadd6872",
+        "baa97f4941940996"
       ],
       "localized_names": [],
       "method_id": "pix",
@@ -539,11 +518,11 @@
       "display_name": "Przelewy24",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "0d82bcb9e384ed4b",
-        "845355bf118bc9ce",
-        "d1efe407e2fd1038",
-        "eb8c874f5b772549",
-        "fe7b72fe95e54a62"
+        "0ebdf5bd48b732e4",
+        "5eef78dd1ab76c87",
+        "879f46931450bc9d",
+        "ae05f32d96469c19",
+        "f1c4dac03f690c91"
       ],
       "localized_names": [],
       "method_id": "przelewy24",
@@ -565,9 +544,9 @@
       "display_name": "Revolut Pay",
       "family": "wallet",
       "fee_rule_refs": [
-        "4b5390530a7d60c2",
-        "b53fbf442304e6c8",
-        "fa334bc1d6a0a59a"
+        "137a393b172229c2",
+        "3b1635ea610d7398",
+        "c6bb1099560f5e01"
       ],
       "localized_names": [],
       "method_id": "revolut_pay",
@@ -585,10 +564,10 @@
       "display_name": "Satispay",
       "family": "wallet",
       "fee_rule_refs": [
-        "2b3d4b2e80aceda3",
-        "357d1171b7c443b6",
-        "d4e492d2fcb28ab7",
-        "db3467fc75338789"
+        "363f345e243c5122",
+        "3e755f1f6d0f64f9",
+        "6f6f3f80b5b6eb63",
+        "89108a9c9e602118"
       ],
       "localized_names": [],
       "method_id": "satispay",
@@ -608,12 +587,12 @@
       "display_name": "Scalapay",
       "family": "buy_now_pay_later",
       "fee_rule_refs": [
+        "109846c05f9f7548",
+        "3322d0c4bede0209",
         "3ad3757bb87e91f6",
-        "513de641ebf58f0a",
-        "88e47a90dece3080",
+        "523c72bc13d8b88a",
         "a2d056d19cb36d90",
         "f38c15be93fab474",
-        "f3a202470dd640c3",
         "fe3cba20716b9754"
       ],
       "localized_names": [],
@@ -634,8 +613,8 @@
       "display_name": "Sepa Bank Transfer",
       "family": "bank_debit",
       "fee_rule_refs": [
-        "1492a823964743e3",
-        "e6f56d5e7da8b292"
+        "16371ab375dcae19",
+        "f452b931363b8295"
       ],
       "localized_names": [],
       "method_id": "sepa_bank_transfer",
@@ -677,8 +656,8 @@
       "display_name": "Swish",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "8b78be36d7d9cca7",
-        "a05c0c53bea81632"
+        "11eb8fa4be4e9652",
+        "a8c8f0394b5e7099"
       ],
       "localized_names": [],
       "method_id": "swish",
@@ -694,9 +673,9 @@
       "display_name": "Twint",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "321778271ab1dbc1",
-        "d8a01f411e92a697",
-        "dae441a5aea8bf3d"
+        "0825e03ff760b280",
+        "5b4772f90811a1af",
+        "d43179b85de5ec50"
       ],
       "localized_names": [],
       "method_id": "twint",
@@ -714,14 +693,10 @@
       "display_name": "Upi",
       "family": "bank_redirect",
       "fee_rule_refs": [
-        "4beef9d88edc6c5a",
-        "53bce169ab8eeb9a",
-        "5cec9b469af3748a",
-        "6c4cf88d55d63e55",
-        "90ab3d2cbc755a72",
-        "ac17d8e387d63382",
-        "b22297b152e320f5",
-        "e0d051c02f015bad"
+        "2187f0712260e21d",
+        "58d4a56b78a843b4",
+        "60caaf30e6bbdfdd",
+        "e42494dc721f96d6"
       ],
       "localized_names": [],
       "method_id": "upi",
@@ -741,11 +716,11 @@
       "display_name": "Wechat Pay",
       "family": "wallet",
       "fee_rule_refs": [
-        "60a526e0e19cbafb",
-        "953bf88d9484f265",
-        "97f51eff51df4bbc",
-        "99b69c8b28f015bf",
-        "e2df889ed9a12d7a"
+        "4a195ee627ebd000",
+        "91f1b7d14d997c57",
+        "a277adc74921f35d",
+        "f1a514b69376679c",
+        "ffa2b31e64affe45"
       ],
       "localized_names": [],
       "method_id": "wechat_pay",

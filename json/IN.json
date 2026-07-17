@@ -1,16 +1,16 @@
 {
-  "calculator_coverage_status": "partial",
+  "calculator_coverage_status": "complete",
   "coverage_summary": {
     "ambiguous_entries": 0,
-    "calculable_rules": 9,
+    "calculable_rules": 10,
     "conflicting_rule_identities": 0,
-    "custom_pricing": 2,
+    "custom_pricing": 0,
     "ignored_non_fee": 0,
     "included": 0,
     "non_calculable_rules": 15,
-    "numeric_fee_candidates": 1,
+    "numeric_fee_candidates": 0,
     "reference_only": 0,
-    "source_entries": 49,
+    "source_entries": 48,
     "unclassified_fee_candidates": 2,
     "unsupported_fee_shapes": 0
   },
@@ -98,6 +98,102 @@
       "source_text": "2%",
       "source_texts": [
         "2%"
+      ],
+      "source_url": "https://stripe.com/in/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "IN",
+      "additional_fees": [],
+      "basis_points": "9999.900",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": "domestic",
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [
+        "product=platform",
+        "variant=standard",
+        "account_country=IN",
+        "pricing_plan=custom"
+      ],
+      "classification_status": "non_calculable",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        },
+        {
+          "dimension": "pricing_plan",
+          "evidence": null,
+          "operator": "eq",
+          "value": "custom"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "367e693290ffbfa7"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "367e693290ffbfa7",
+      "exactness": "range",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "9999.900",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "367e693290ffbfa7",
+          "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing",
+          "type": "percentage",
+          "value": "99.999"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing"
+        ],
+        "source_entry_ids": [
+          "367e693290ffbfa7"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "platform",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": "99.999",
+      "presentment_currency": null,
+      "product_id": "platform",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "904e9b694d08a81b",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "367e693290ffbfa7",
+          "text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing"
+        }
+      ],
+      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing",
+      "source_texts": [
+        "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing"
       ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
@@ -356,7 +452,7 @@
         "account_country=IN",
         "currency_conversion_required=True"
       ],
-      "classification_status": "non_calculable",
+      "classification_status": "calculable_rule",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -389,7 +485,7 @@
           "value": true
         }
       ],
-      "confidence": 0.0,
+      "confidence": 0.85,
       "contributing_entry_ids": [
         "c6df527d302c8a61"
       ],
@@ -413,14 +509,14 @@
         }
       ],
       "fee_evidence": {
-        "confidence": 0.0,
+        "confidence": 0.85,
         "phrases": [
           "+ 2% if currency conversion is required"
         ],
         "source_entry_ids": [
           "c6df527d302c8a61"
         ],
-        "type": "insufficient"
+        "type": "explicit_fee_phrase"
       },
       "fixed_amount": null,
       "fixed_amount_minor": null,
@@ -1841,28 +1937,28 @@
       "conditions": [],
       "confidence": 0.7,
       "contributing_entry_ids": [
-        "08bf6870794af041"
+        "b9e97c3802b6f5fe"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "08bf6870794af041",
+      "entry_id": "b9e97c3802b6f5fe",
       "exactness": "included",
       "fee_components": [],
       "fee_evidence": {
         "confidence": 0.7,
         "phrases": [
-          "revenue share from Stripe. Included"
+          "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included"
         ],
         "source_entry_ids": [
-          "08bf6870794af041"
+          "b9e97c3802b6f5fe"
         ],
         "type": "included"
       },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "revenue share from Stripe. Included",
+      "label": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": null,
@@ -1873,12 +1969,12 @@
       "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "b6abac9b56acf392",
+      "rule_id": "012d64c14fceba11",
       "settlement_currency": null,
       "source_fragments": [],
-      "source_text": "revenue share from Stripe. Included",
+      "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_texts": [
-        "revenue share from Stripe. Included"
+        "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included"
       ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
@@ -2168,45 +2264,6 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "43e2d9aa78787df8",
-      "fee_category": "Payments",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Payments",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Payments"
-      ],
-      "source_evidence": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
-      "source_order": 0,
-      "source_text": "Increase customer acquisition with 100+ payment methods.",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "Increase customer acquisition with 100+ payment methods.",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
       "entry_id": "0cbfd034ccf846bf",
       "fee_category": "2%",
       "footnotes": [],
@@ -2221,7 +2278,7 @@
         "2%"
       ],
       "source_evidence": "for cards issued in India",
-      "source_order": 1,
+      "source_order": 0,
       "source_text": "2%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2261,7 +2318,7 @@
         "3%"
       ],
       "source_evidence": "for cards issued outside India",
-      "source_order": 2,
+      "source_order": 1,
       "source_text": "3%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2287,45 +2344,6 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "847d92c1a66ae7de",
-      "fee_category": "Payments optimisations to boost revenue",
-      "footnotes": [],
-      "links": [],
-      "payment_method": "card",
-      "payment_method_family": null,
-      "product": "Payments optimisations to boost revenue",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Payments optimisations to boost revenue"
-      ],
-      "source_evidence": "Real-time retries\nIncrease revenue with selective retries powered by machine learning.\nAuto-updated cards\nUpdate card information in real-time, improving customer experience and increasing revenue.\nCustomer authentication\nVerify a customer’s identity using 3D Secure, an authentication method for card transactions",
-      "source_order": 3,
-      "source_text": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "if",
-          "percentage": null,
-          "raw": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
       "entry_id": "b21dd9d9fee342ee",
       "fee_category": "Security, reliability and compliance",
       "footnotes": [],
@@ -2339,7 +2357,7 @@
         "Security, reliability and compliance"
       ],
       "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
-      "source_order": 4,
+      "source_order": 2,
       "source_text": "99.999% average historical uptime",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2365,7 +2383,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "da4d6acc3adbf289",
+      "entry_id": "367e693290ffbfa7",
       "fee_category": "Security, reliability and compliance",
       "footnotes": [],
       "links": [],
@@ -2378,15 +2396,15 @@
         "Security, reliability and compliance"
       ],
       "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
-      "source_order": 5,
-      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
+      "source_order": 3,
+      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime. Custom pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
         {
           "amount": null,
           "basis_points": "9999.900",
           "currency": null,
-          "exactness": "range",
+          "exactness": "custom",
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
@@ -2417,7 +2435,7 @@
         "Domestic cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued domestically.\nabout our different card types.\n2%\nfor Mastercard and Visa cards issued in India*\nDomestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
-      "source_order": 6,
+      "source_order": 4,
       "source_text": "2% for Mastercard and Visa cards issued in India*",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2456,7 +2474,7 @@
         "Domestic cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued domestically.\nabout our different card types.\n2%\nfor Mastercard and Visa cards issued in India*\nDomestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
-      "source_order": 7,
+      "source_order": 5,
       "source_text": "Domestic debit card transactions have the Merchant Discount Rate (MDR) of 0.4% capped to ₹200.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2509,7 +2527,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 8,
+      "source_order": 6,
       "source_text": "3% for Mastercard and Visa cards issued outside India",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2548,7 +2566,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 9,
+      "source_order": 7,
       "source_text": "+ 2% if currency conversion is required",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2587,7 +2605,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 10,
+      "source_order": 8,
       "source_text": "3.5% for American Express cards issued outside India",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2626,7 +2644,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 11,
+      "source_order": 9,
       "source_text": "+ 2% if currency conversion is required",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2665,7 +2683,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 12,
+      "source_order": 10,
       "source_text": "4.3% for international cards with USD or other currency presentment",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2704,7 +2722,7 @@
         "International cards"
       ],
       "source_evidence": "Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.\n3%\nfor Mastercard and Visa cards issued outside India\n+ 2%\nif currency conversion is required\n3.5%\nfor American Express cards issued outside India\n+ 2%\nif currency conversion is required\n4.3%\nfor international cards with USD or other currency presentment\n+ 2%\nif currency conversion is required",
-      "source_order": 13,
+      "source_order": 11,
       "source_text": "+ 2% if currency conversion is required",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2743,7 +2761,7 @@
         "Disputes"
       ],
       "source_evidence": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\n₹1,000.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
-      "source_order": 14,
+      "source_order": 12,
       "source_text": "Dispute received fee ₹1,000.00 for each dispute you receive.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2782,7 +2800,7 @@
         "Disputes"
       ],
       "source_evidence": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\n₹1,000.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
-      "source_order": 15,
+      "source_order": 13,
       "source_text": "Dispute countered fee ₹1,000.00 for each dispute you respond to manually.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2821,7 +2839,7 @@
         "Smart Disputes"
       ],
       "source_evidence": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence. (\npublic preview)\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
-      "source_order": 16,
+      "source_order": 14,
       "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2860,7 +2878,7 @@
         "Payment optimisations"
       ],
       "source_evidence": "Included with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 17,
+      "source_order": 15,
       "source_text": "Included with Payments",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2899,7 +2917,7 @@
         "Payment optimisations"
       ],
       "source_evidence": "Included with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 18,
+      "source_order": 16,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2938,7 +2956,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 19,
+      "source_order": 17,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -2977,7 +2995,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 20,
+      "source_order": 18,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3016,7 +3034,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimisations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 21,
+      "source_order": 19,
       "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3055,7 +3073,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 22,
+      "source_order": 20,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3094,7 +3112,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 23,
+      "source_order": 21,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3133,7 +3151,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 24,
+      "source_order": 22,
       "source_text": "Customers will be presented a conversion fee starting at 2%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3172,7 +3190,7 @@
         "Radar’s machine learning"
       ],
       "source_evidence": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\n₹4.00\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 25,
+      "source_order": 23,
       "source_text": "Included For accounts with all payment methods on standard pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3211,7 +3229,7 @@
         "Radar’s machine learning"
       ],
       "source_evidence": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\n₹4.00\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 26,
+      "source_order": 24,
       "source_text": "₹4.00 per screened transaction for accounts with custom pricing for any payment method",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3250,7 +3268,7 @@
         "Radar for Fraud Teams"
       ],
       "source_evidence": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nTry for free for 30 days\n₹6.00\nper screened transaction for accounts with all payment methods on standard pricing\nContact us",
-      "source_order": 27,
+      "source_order": 25,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3289,7 +3307,7 @@
         "Radar for Fraud Teams"
       ],
       "source_evidence": "Advanced fraud protection tools allowing for greater control and customisable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nTry for free for 30 days\n₹6.00\nper screened transaction for accounts with all payment methods on standard pricing\nContact us",
-      "source_order": 28,
+      "source_order": 26,
       "source_text": "₹6.00 per screened transaction for accounts with all payment methods on standard pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3328,7 +3346,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 29,
+      "source_order": 27,
       "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3367,7 +3385,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 30,
+      "source_order": 28,
       "source_text": "₹1,000.00 per",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3406,7 +3424,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 31,
+      "source_order": 29,
       "source_text": "₹1,000.00 per",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3445,7 +3463,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 32,
+      "source_order": 30,
       "source_text": "₹2,000.00 per",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3471,7 +3489,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "08bf6870794af041",
+      "entry_id": "b9e97c3802b6f5fe",
       "fee_category": "Stripe handles pricing for your users",
       "footnotes": [],
       "links": [],
@@ -3484,8 +3502,8 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 33,
-      "source_text": "revenue share from Stripe. Included",
+      "source_order": 31,
+      "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
         {
@@ -3496,9 +3514,9 @@
           "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
-          "operator": null,
+          "operator": "if",
           "percentage": null,
-          "raw": "revenue share from Stripe. Included",
+          "raw": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
           "token_id": null,
           "value": null
         }
@@ -3523,7 +3541,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 34,
+      "source_order": 32,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3562,7 +3580,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 35,
+      "source_order": 33,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3601,7 +3619,7 @@
         "Access to Billing"
       ],
       "source_evidence": "Start billing for recurring subscriptions & usage based billing.\n0.7%\nof Billing volume\nIncludes Billing transactions processed on and off Stripe. Excludes one-off invoices.\nSee pricing details",
-      "source_order": 36,
+      "source_order": 34,
       "source_text": "0.7% of Billing volume",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3640,7 +3658,7 @@
         "Startup"
       ],
       "source_evidence": "For teams launching usage-based products. Pay as your business grows.\nIncluded\nUS$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 37,
+      "source_order": 35,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3679,7 +3697,7 @@
         "Starter"
       ],
       "source_evidence": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
-      "source_order": 38,
+      "source_order": 36,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3718,7 +3736,7 @@
         "Atlas"
       ],
       "source_evidence": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
-      "source_order": 39,
+      "source_order": 37,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3757,7 +3775,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 40,
+      "source_order": 38,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3796,7 +3814,7 @@
         "Pay as you go"
       ],
       "source_evidence": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 41,
+      "source_order": 39,
       "source_text": "₹1.64 per additional step",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3835,7 +3853,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 42,
+      "source_order": 40,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3874,7 +3892,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": null,
-      "source_order": 43,
+      "source_order": 41,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": []
@@ -3898,7 +3916,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 44,
+      "source_order": 42,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3937,7 +3955,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 45,
+      "source_order": 43,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3976,7 +3994,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 46,
+      "source_order": 44,
       "source_text": "+1%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4015,7 +4033,7 @@
         "See how Twilio increased authorisation rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 47,
+      "source_order": 45,
       "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4054,7 +4072,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 48,
+      "source_order": 46,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4069,6 +4087,45 @@
           "operator": "for",
           "percentage": null,
           "raw": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "f6c26d0b71d65c50",
+      "fee_category": "Explore the docs",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Explore the docs",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Explore the docs"
+      ],
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_order": 47,
+      "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
+      "source_url": "https://stripe.com/in/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "from",
+          "is_minor_currency": false,
+          "kind": "qualifier",
+          "note": null,
+          "operator": "per",
+          "percentage": null,
+          "raw": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
           "token_id": null,
           "value": null
         }
@@ -5238,7 +5295,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "23fd4b2b5d53ac3b11b42057c064e4fd87e9bd726a751f3b1fded2d7c9ed6d53",
+      "content_sha256": "30a7176b25a71ebba825d4bd366bc372b7201f1a35fb37f8b0a77fab96fde480",
       "etag": null,
       "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing and card infrastructure Platforms and marketplaces Connect Payments for platforms More Product roadmap See what's ahead Atlas Start-up incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payments Payments Online payments Payment link",
       "last_modified": null,
@@ -5251,129 +5308,6 @@
   ],
   "transient_failure": false,
   "unclassified_entries": [
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "custom_pricing",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "43e2d9aa78787df8",
-      "fee_category": "Payments",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Payments",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Payments"
-      ],
-      "source_evidence": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
-      "source_order": 0,
-      "source_text": "Increase customer acquisition with 100+ payment methods.",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "Increase customer acquisition with 100+ payment methods.",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "custom_pricing",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "847d92c1a66ae7de",
-      "fee_category": "Payments optimisations to boost revenue",
-      "footnotes": [],
-      "links": [],
-      "payment_method": "card",
-      "payment_method_family": null,
-      "product": "Payments optimisations to boost revenue",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Payments optimisations to boost revenue"
-      ],
-      "source_evidence": "Real-time retries\nIncrease revenue with selective retries powered by machine learning.\nAuto-updated cards\nUpdate card information in real-time, improving customer experience and increasing revenue.\nCustomer authentication\nVerify a customer’s identity using 3D Secure, an authentication method for card transactions",
-      "source_order": 3,
-      "source_text": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "if",
-          "percentage": null,
-          "raw": "Verify a customer’s identity using 3D Secure, an authentication method for card transactions",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "unclassified_fee_candidate",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "da4d6acc3adbf289",
-      "fee_category": "Security, reliability and compliance",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Security, reliability and compliance",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Security, reliability and compliance"
-      ],
-      "source_evidence": "99.999% average historical uptime\nMaximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.\nPCI compliant\nUse our libraries to collect payment information without sensitive data ever hitting your servers.\nRegulatory licences globally\nStripe is certified to the highest industry standards and has obtained regulatory licences around the world.\nStandard pricing\nCustom pricing\nFAQs",
-      "source_order": 5,
-      "source_text": "Maximise your revenue with a platform that handles 250 million+ API requests a day, while maintaining 99.999% uptime.",
-      "source_url": "https://stripe.com/in/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": "9999.900",
-          "currency": null,
-          "exactness": "range",
-          "is_minor_currency": false,
-          "kind": "percentage",
-          "note": null,
-          "operator": "+",
-          "percentage": "99.999",
-          "raw": "99.999",
-          "token_id": "55dbb96490e2bf04",
-          "value": null
-        }
-      ]
-    },
     {
       "channel": null,
       "classification_evidence": [
@@ -5395,7 +5329,7 @@
         "See our customers"
       ],
       "source_evidence": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
-      "source_order": 48,
+      "source_order": 46,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -5410,6 +5344,47 @@
           "operator": "for",
           "percentage": null,
           "raw": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [
+        "no clear calculable fee or unsupported shape"
+      ],
+      "classification_status": "unclassified_fee_candidate",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "f6c26d0b71d65c50",
+      "fee_category": "Explore the docs",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Explore the docs",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Explore the docs"
+      ],
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_order": 47,
+      "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
+      "source_url": "https://stripe.com/in/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "from",
+          "is_minor_currency": false,
+          "kind": "qualifier",
+          "note": null,
+          "operator": "per",
+          "percentage": null,
+          "raw": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
           "token_id": null,
           "value": null
         }
