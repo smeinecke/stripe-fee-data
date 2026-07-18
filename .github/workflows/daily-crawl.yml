@@ -64,7 +64,19 @@ jobs:
 
       - name: Validate generated JSON
         working-directory: ./crawler
-        run: uv run stripe-fee-crawler validate ..
+        run: |
+          uv run stripe-fee-crawler validate .. \
+            --strict \
+            --require-all-complete
+
+      - name: Assert crawler-revision matches submodule
+        run: |
+          test "$(git -C crawler rev-parse HEAD)" = \
+            "$(python -c 'import json; print(json.load(open("meta/crawler-revision.json"))["crawler_revision"])')"
+
+      - name: Assert no regression
+        run: |
+          test "$(python -c 'import json; print(json.load(open("change-report.json"))["has_regression"])')" = "False"
 
       - name: Update README statistics
         run: python3 scripts/generate_readme.py
