@@ -223,6 +223,11 @@
           "title": "Dropped Numeric Entries",
           "type": "integer"
         },
+        "free": {
+          "default": 0,
+          "title": "Free",
+          "type": "integer"
+        },
         "ignored_non_fee": {
           "default": 0,
           "title": "Ignored Non Fee",
@@ -231,6 +236,11 @@
         "included": {
           "default": 0,
           "title": "Included",
+          "type": "integer"
+        },
+        "informational": {
+          "default": 0,
+          "title": "Informational",
           "type": "integer"
         },
         "informational_conflicts": {

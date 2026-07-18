@@ -360,7 +360,6 @@
       "family": "card",
       "fee_rule_refs": [
         "05523dd74434ccdf",
-        "0beedd7128f5dc26",
         "13b5f3efd1506229",
         "16fd0a90f2f5065d",
         "1c127474c77028de",
@@ -370,13 +369,13 @@
         "359c4df4dbd54c45",
         "3963ece32d3d4b65",
         "3b55c9d766475a5e",
+        "3c811daf79095c13",
         "407cfb4d646812c5",
         "48dda1f454b801e2",
         "4ab8ba22961579ce",
         "51b0e1aeb1a551cb",
         "5342d7d8c3fe2e19",
         "5d92d9a9184d6f36",
-        "5f2312355266cac7",
         "64e2a9be4bd4d819",
         "68987ec0b8649d7d",
         "69af75bf06eb7e90",
@@ -385,6 +384,7 @@
         "7714932d6f0b7117",
         "785d9e882ed92c2e",
         "7f86da9c77dd59a2",
+        "8370d8b8042c19aa",
         "844fef2aedcb31bf",
         "89ae50007e449af2",
         "95f80830bf0d02cf",
@@ -393,7 +393,6 @@
         "9dded4b573a38f84",
         "a8c794b8e2c3552a",
         "b989db6c004a0827",
-        "bc42b78ca67ac905",
         "c03857d57d3dbfbb",
         "c27290fce871e22e",
         "c30bd82e7b1e4e8f",
@@ -634,21 +633,17 @@
         "5f1df43006a77c22",
         "605fd3377adc350d",
         "7755d38faaf11bd8",
-        "7a197865ec2a71ef",
         "7a981d49509b1178",
         "7eeb9eea18b8124d",
-        "7ef2c89f55eb1c9c",
         "8cfb3b8a256cf3c3",
         "a7fe381937836f1d",
         "a8dd7841b359b3de",
         "b6d29f5635302a30",
         "b73fee620a4170b7",
         "b85c37cc4c6251f0",
-        "c8d7cda4ca5f3a89",
         "ceb242cbef183839",
         "d1dc4cd5419d4477",
         "d4505bd99352c875",
-        "dd8360143b63e042",
         "e47e46fdb5fe27e9",
         "ef9fd123ab920d71",
         "f724587bfeec3274",
@@ -855,6 +850,21 @@
       ]
     },
     {
+      "display_name": "Paypay",
+      "family": "other",
+      "fee_rule_refs": [
+        "bfe1cd0632cafc0b"
+      ],
+      "localized_names": [],
+      "method_id": "paypay",
+      "source_refs": [
+        "https://stripe.com/en-jp/pricing"
+      ],
+      "supported_account_countries": [
+        "JP"
+      ]
+    },
+    {
       "display_name": "Pix",
       "family": "bank_redirect",
       "fee_rule_refs": [
@@ -980,18 +990,13 @@
       "display_name": "Scalapay",
       "family": "buy_now_pay_later",
       "fee_rule_refs": [
-        "10cf3a0b0bda5b88",
         "1f68b648d8c6f3c3",
         "484ef749c375ccea",
-        "5eea921f83c77ca0",
         "60402448bd293b50",
         "9217127dc3f5bb44",
-        "93bec044d3586e63",
-        "9ddf72b5cb451a2a",
         "bf567e482ed8c361",
         "d6c4ddc55a60ef0c",
-        "ea66a8bc27e33151",
-        "ec1210c180040665"
+        "ea66a8bc27e33151"
       ],
       "localized_names": [],
       "method_id": "scalapay",
@@ -1012,7 +1017,6 @@
       "display_name": "Sepa Bank Transfer",
       "family": "bank_debit",
       "fee_rule_refs": [
-        "089e29eaf349f149",
         "763fe56e17414466"
       ],
       "localized_names": [],
@@ -1037,12 +1041,12 @@
         "3a72918b435fd4cb",
         "4cd506286045e3d1",
         "67a7c55dc3b5fc74",
-        "762e1ed75cdf7806",
         "7dcdaaf1a4969994",
         "7fa59ba245fb8293",
         "a7dfc07e2b39c649",
         "adcf325555bef0d5",
         "af4cd1a2c284c85c",
+        "bbadc2b7d45ad234",
         "c24cb142ab1bff47",
         "cb516a433470d0fc",
         "cc1b6aa8691c46a1",
@@ -1217,7 +1221,7 @@
       "display_name": "Zip",
       "family": "other",
       "fee_rule_refs": [
-        "78d9fdd5ecebdf9b",
+        "8560ebce5d80efb6",
         "b04a9d5248cb7d64",
         "bdf8ede6996accd2",
         "e881c6913b1370c4"
