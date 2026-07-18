@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "account_country": "ID",
+    "checked_at": null,
+    "country_name": "Indonesia",
+    "reason": "pricing_page_unavailable",
+    "requested_urls": [
+      "https://stripe.com/en-id/pricing",
+      "https://stripe.com/en-id/pricing/local-payment-methods"
+    ],
+    "status": "pricing_page_unavailable",
+    "stripe_market_code": "id"
+  }
+]

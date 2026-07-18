@@ -123,6 +123,18 @@
           "default": null,
           "title": "Account Country"
         },
+        "checked_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Checked At"
+        },
         "country_name": {
           "anyOf": [
             {
@@ -134,42 +146,6 @@
           ],
           "default": null,
           "title": "Country Name"
-        },
-        "first_confirmed_at": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "First Confirmed At"
-        },
-        "last_confirmed_at": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Last Confirmed At"
-        },
-        "last_status": {
-          "anyOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Last Status"
         },
         "reason": {
           "anyOf": [
@@ -183,6 +159,13 @@
           "default": null,
           "title": "Reason"
         },
+        "requested_urls": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Requested Urls",
+          "type": "array"
+        },
         "status": {
           "default": "unsupported",
           "title": "Status",
@@ -191,18 +174,6 @@
         "stripe_market_code": {
           "title": "Stripe Market Code",
           "type": "string"
-        },
-        "temporary": {
-          "default": false,
-          "title": "Temporary",
-          "type": "boolean"
-        },
-        "tested_urls": {
-          "items": {
-            "type": "string"
-          },
-          "title": "Tested Urls",
-          "type": "array"
         }
       },
       "required": [

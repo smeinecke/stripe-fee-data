@@ -1521,6 +1521,13 @@
     "market": {
       "$ref": "#/$defs/Market"
     },
+    "requested_urls": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Requested Urls",
+      "type": "array"
+    },
     "schema_version": {
       "default": 1,
       "title": "Schema Version",

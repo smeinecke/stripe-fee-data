@@ -49,8 +49,23 @@ are isolated per request.
 
 ## Output layout
 
-The `crawl` command writes `json/`, `meta/`, `schemas/`, and `change-report.json`
-under the `--output` directory.
+The `crawl` command writes:
+
+- `json/` — per-market output, `index.json`, `core-fees.json`, `payment-methods.json`
+- `meta/` — `markets.json`, `unsupported-markets.json`, `transient-failures.json`,
+  `crawler-revision.json`, `crawl-report.json`, `schema-version.json`
+- `schemas/` — generated JSON schemas
+- `change-report.json` — `ChangeReport` regression report
+- `README.md` — regenerated from the artifacts by `scripts/generate_readme.py`
+
+`change-report.json` is a `ChangeReport` (schema version, generated timestamp,
+changes list, `has_regression`).  `meta/crawl-report.json` is a `CrawlReport`
+containing execution statistics and is excluded from the deterministic "changed"
+flag so a second identical run can report `changed=false`.
+
+Unsupported markets (e.g. Indonesia when the pricing page is unavailable) are
+recorded in `meta/unsupported-markets.json` with `reason` and `requested_urls`;
+they are not silently dropped from completeness validation.
 
 ## Classifier tuning points
 
@@ -83,11 +98,15 @@ under the `--output` directory.
 - The crawler records its Git revision in `meta/crawler-revision.json`; strict
   validation fails if the `crawler/` submodule points to a different commit.
 - Strict validation also fails when:
+  - `change-report.json` is missing, malformed, or has `has_regression: true`,
+  - `meta/crawl-report.json` is missing or not a valid `CrawlReport`,
   - derived rules exist but `core-fees.json` is empty,
   - every derived rule for a supported market is non-calculable,
   - a base fee is classified only as a surcharge/modifier,
   - `coverage_summary.blocking_fee_conflicts` is greater than 0,
   - `coverage_summary.dropped_numeric_entries` is greater than 0,
-  - `change-report.json` has `has_regression: true`.
+  - README counts disagree with `core-fees.json` or the market metadata,
+  - a discovered market is missing from `index.json`, `unsupported-markets.json`,
+    and `transient-failures.json` (when `--require-all-complete` is used).
 - A stale baseline whose `change-report.json` already has `has_regression: true`
   is overwritten with a clean report during the next crawl.

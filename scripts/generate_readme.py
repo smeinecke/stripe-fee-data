@@ -5,9 +5,8 @@ from __future__ import annotations
 
 import json
 import re
-import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 STATS_START = "<!-- STATS_START -->"
@@ -29,46 +28,15 @@ def _format_dt(value: str | None) -> str:
         return value
 
 
-def _git_latest_update(data_dir: Path) -> datetime | None:
-    """Return the latest relevant timestamp from git or the current time.
-
-    If the data directory has uncommitted changes, the data is being updated
-    right now, so use the current UTC time. Otherwise, fall back to the last
-    commit that touched the json/ or meta/ directories.
-    """
-    try:
-        status = subprocess.run(
-            ["git", "status", "--porcelain", "--", "json/", "meta/"],
-            cwd=data_dir,
-            capture_output=True,
-            text=True,
-            check=True,
-        )
-    except (FileNotFoundError, subprocess.CalledProcessError):
-        return None
-
-    if status.stdout.strip():
-        return datetime.now(timezone.utc)
-
-    try:
-        log = subprocess.run(
-            ["git", "log", "-1", "--format=%cI", "--", "json/", "meta/"],
-            cwd=data_dir,
-            capture_output=True,
-            text=True,
-            check=True,
-        )
-    except (FileNotFoundError, subprocess.CalledProcessError):
-        return None
-
-    commit_date = log.stdout.strip()
-    if not commit_date:
-        return None
-
-    try:
-        return datetime.fromisoformat(commit_date.replace("Z", "+00:00"))
-    except Exception:
-        return None
+def _load_json_list(path: Path) -> list:
+    if not path.exists():
+        return []
+    data = _load_json(path)
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        return data.get("markets", []) or []
+    return []
 
 
 def _derive_stats(data_dir: Path) -> dict:
@@ -76,11 +44,10 @@ def _derive_stats(data_dir: Path) -> dict:
     core_fees = _load_json(data_dir / "json" / "core-fees.json")
     payment_methods_catalog = _load_json(data_dir / "json" / "payment-methods.json")
     markets_meta = _load_json(data_dir / "meta" / "markets.json")
-    unsupported = _load_json(data_dir / "meta" / "unsupported-markets.json")
-    transient_failures = _load_json(data_dir / "meta" / "transient-failures.json")
+    unsupported = _load_json_list(data_dir / "meta" / "unsupported-markets.json")
+    transient_failures = _load_json_list(data_dir / "meta" / "transient-failures.json")
 
     markets = index.get("markets", [])
-    total_markets = len(markets)
     status_counts: dict[str, int] = {}
     for market in markets:
         status = market.get("derivation_status") or "unknown"
@@ -98,10 +65,22 @@ def _derive_stats(data_dir: Path) -> dict:
             payment_methods.add(method_id)
 
     regions: set[str] = set()
+    all_market_codes: set[str] = set()
     for market in markets_meta.get("markets", []):
         region = market.get("region")
         if region:
             regions.add(region)
+        code = market.get("account_country") or market.get("stripe_market_code")
+        if code:
+            all_market_codes.add(code.upper())
+    for item in unsupported:
+        code = item.get("account_country") or item.get("stripe_market_code")
+        if code:
+            all_market_codes.add(code.upper())
+    for item in transient_failures:
+        code = item.get("account_country") or item.get("stripe_market_code")
+        if code:
+            all_market_codes.add(code.upper())
 
     latest_update = None
     for market in markets:
@@ -126,17 +105,14 @@ def _derive_stats(data_dir: Path) -> dict:
         except Exception:
             pass
 
-    if latest_update is None:
-        latest_update = _git_latest_update(data_dir)
-
     return {
-        "total_markets": total_markets,
+        "total_markets": len(all_market_codes),
         "status_counts": status_counts,
         "total_rules": total_rules,
         "payment_methods": sorted(payment_methods),
         "regions": sorted(regions),
-        "unsupported_count": len(unsupported) if isinstance(unsupported, list) else 0,
-        "transient_count": len(transient_failures) if isinstance(transient_failures, list) else 0,
+        "unsupported_count": len(unsupported),
+        "transient_count": len(transient_failures),
         "latest_update": latest_update,
     }
 
@@ -179,11 +155,13 @@ def _replace_section(content: str, start_marker: str, end_marker: str, body: str
 
 
 def main() -> int:
-    data_dir = Path(__file__).parent.parent
+    data_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent.parent
     readme_path = data_dir / "README.md"
     if not readme_path.exists():
-        print(f"ERROR: README not found: {readme_path}", file=sys.stderr)
-        return 1
+        readme_path.write_text(
+            "# Stripe Fee Data\n\n" f"{STATS_START}\n{STATS_END}\n\n",
+            encoding="utf-8",
+        )
 
     stats = _derive_stats(data_dir)
     body = _render_stats(stats)

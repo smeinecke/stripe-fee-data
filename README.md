@@ -1,38 +1,15 @@
-# Stripe Fee Data Repository
-
-[![GitHub last commit](https://img.shields.io/github/last-commit/smeinecke/stripe-fee-data?label=last%20update)](https://github.com/smeinecke/stripe-fee-data)
-
-This repository publishes structured, schema-validated, and deterministic JSON data derived from Stripe's public pricing pages. It is maintained by the [stripe-fee-crawler](https://github.com/smeinecke/stripe-fee-crawler) project.
-
-## Statistics
+# Stripe Fee Data
 
 <!-- STATS_START -->
 | Metric | Value |
 |--------|------:|
 | Markets | **9** |
-| Derivation status | 8 partial, 1 unclassified |
-| Core fee rules | **523** |
-| Payment methods | 43 (ach_direct_debit, affirm, afterpay, alipay, amazon_pay, apple_pay, bacs_direct_debit, bancontact, bank_transfer, billie, bizum, blik, card, cash_app_afterpay, cash_app_pay, clearpay, click_to_pay, eps, google_pay, ideal, klarna, konbini, link, mb_way, mobilepay, multibanco, pad, pay_by_bank, paypal, pix, przelewy24, revolut_pay, satispay, scalapay, sepa_bank_transfer, sepa_direct_debit, sunbit, swish, tap_to_pay, twint, upi, wechat_pay, zip) |
+| Derivation status | 8 complete |
+| Core fee rules | **615** |
+| Payment methods | 44 (ach_direct_debit, affirm, afterpay, alipay, amazon_pay, apple_pay, bacs_direct_debit, bancontact, bank_transfer, billie, bizum, blik, card, cash_app_afterpay, cash_app_pay, clearpay, click_to_pay, eps, google_pay, ideal, klarna, konbini, link, mb_way, mobilepay, multibanco, pad, pay_by_bank, paypal, paypay, pix, przelewy24, revolut_pay, satispay, scalapay, sepa_bank_transfer, sepa_direct_debit, sunbit, swish, tap_to_pay, twint, upi, wechat_pay, zip) |
 | Regions | 5 (asia_pacific, europe, middle_east_africa, north_america, south_america) |
-| Unsupported markets | 0 |
+| Unsupported markets | 1 |
 | Transient failures | 0 |
-| Last crawled | 2026-07-18 10:26 UTC |
+| Last crawled | — |
 <!-- STATS_END -->
 
-## Structure
-
-- `json/` — per-market normalized fee data plus consolidated indexes.
-- `meta/` — manifests, unsupported markets, schema version info, and change reports.
-- `schemas/` — JSON schemas used to validate every published file.
-
-## Determinism
-
-All output is sorted deterministically and written with stable SHA-256 identifiers. Re-running the crawler against identical source pages produces byte-for-byte identical JSON files.
-
-## Disclaimer
-
-This is an unofficial, community-maintained data set. Always refer to [stripe.com/pricing](https://stripe.com/pricing) for the latest, authoritative fee information. Do not use these files for billing or tax calculations without independent verification.
-
-## License
-
-The data and schemas are published under the same license as the crawler.
