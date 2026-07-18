@@ -26,17 +26,23 @@ Caching is enabled by default and disabled only by `--no-cache` or
 `1`, `true`, `yes`, `on` are true; `0`, `false`, `no`, `off`, and empty/unset are
 false; other values raise an error.
 
-The configured snapshot TTL (default 24 hours) controls reuse of public pricing
-pages. Fresh cached entries are returned without a network request even when the
-origin sent `Cache-Control: no-cache` or `max-age=0`. Expired entries are
-revalidated with `If-None-Match`/`If-Modified-Since`; a `304 Not Modified`
-refreshes the stored timestamp and reuses the body, while a `200` replaces it.
+The cache policy can be `ttl` (default) or `http`:
+- `ttl`: the configured snapshot TTL (default 24 hours) controls reuse of public
+  pricing pages. Fresh cached entries are returned without a network request even
+  when the origin sent `Cache-Control: no-cache` or `max-age=0`. Shorter positive
+  `max-age` values are also ignored. Expired entries are revalidated with
+  `If-None-Match`/`If-Modified-Since`; a `304 Not Modified` refreshes the stored
+  timestamp and reuses the body, while a `200` replaces it.
+- `http`: origin cache directives are respected normally (`no-cache` and
+  `max-age=0` require revalidation; positive `max-age` is an upper bound).
+
 Responses carrying `Cache-Control: no-store` or `private` are never persisted and
 any existing stored copy for the same key is removed.
 
-CLI flags: `--cache-dir`, `--cache-ttl-hours`, `--no-cache`, `--refresh-cache`.
+CLI flags: `--cache-dir`, `--cache-ttl-hours`, `--cache-policy`, `--no-cache`, `--refresh-cache`.
 Environment variables: `STRIPE_FEE_CRAWLER_CACHE_DIR`, `STRIPE_FEE_CRAWLER_CACHE_TTL_HOURS`,
-`STRIPE_FEE_CRAWLER_NO_CACHE`, `STRIPE_FEE_CRAWLER_REFRESH_CACHE`.
+`STRIPE_FEE_CRAWLER_CACHE_POLICY`, `STRIPE_FEE_CRAWLER_NO_CACHE`,
+`STRIPE_FEE_CRAWLER_REFRESH_CACHE`.
 
 Each HTTP request uses a fresh `httpx.AsyncClient` with an empty cookie jar, so cookies
 are isolated per request.
