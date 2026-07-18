@@ -20,3 +20,5 @@ if [ "$submodule_rev" != "$metadata_rev" ]; then
 fi
 
 echo "Crawler revision matches: $metadata_rev"
+
+python3 scripts/verify_workflows.py
