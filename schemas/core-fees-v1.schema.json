@@ -198,6 +198,11 @@
           "title": "Ambiguous Entries",
           "type": "integer"
         },
+        "blocking_fee_conflicts": {
+          "default": 0,
+          "title": "Blocking Fee Conflicts",
+          "type": "integer"
+        },
         "calculable_rules": {
           "default": 0,
           "title": "Calculable Rules",
@@ -226,6 +231,11 @@
         "included": {
           "default": 0,
           "title": "Included",
+          "type": "integer"
+        },
+        "informational_conflicts": {
+          "default": 0,
+          "title": "Informational Conflicts",
           "type": "integer"
         },
         "non_calculable_rules": {

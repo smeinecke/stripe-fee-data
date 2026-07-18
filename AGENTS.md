@@ -39,9 +39,16 @@ under the `--output` directory.
   - `_PAYMENT_METHOD_TOKENS` for recognized method tokens.
   - `_EEA_COUNTRY_CODES` for domestic-region mapping.
   - `_infer_product_id` and `_variant_id_for` for product/variant assignment.
+  - `_infer_card_type` and `_infer_card_network` for debit/credit and network splits.
+  - `_infer_product_feature`, `_infer_integration_type`, `_infer_payment_method_variant`,
+    `_infer_pricing_tier`, `_infer_contract_length`, and `_infer_customer_country`
+    for add-on and LPM-specific dimensions.
+  - `_is_marketing_or_statistical` excludes platform/marketing numbers from fee rules.
   - `_is_modifier_entry` and `_group_entries` control how fragments are merged
     into logical rows (caps/minimums attach to a base row; `+` surcharges and
     Tap to Pay are standalone rules).
+  - `_merge_subset_groups` absorbs partial duplicate rows (e.g. a base fee repeated
+    with and without a cap) so they do not surface as conflicts.
 
 ## Common test fixtures
 
@@ -60,6 +67,8 @@ under the `--output` directory.
   - derived rules exist but `core-fees.json` is empty,
   - every derived rule for a supported market is non-calculable,
   - a base fee is classified only as a surcharge/modifier,
+  - `coverage_summary.blocking_fee_conflicts` is greater than 0,
+  - `coverage_summary.dropped_numeric_entries` is greater than 0,
   - `change-report.json` has `has_regression: true`.
 - A stale baseline whose `change-report.json` already has `has_regression: true`
   is overwritten with a clean report during the next crawl.
