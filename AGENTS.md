@@ -15,11 +15,24 @@ This repository contains the generated Stripe merchant fee data and the
 
 ## HTTP cache
 
-The crawler keeps a 24-hour on-disk HTTP cache under `.cache/stripe-fee-crawler/http/`.
-Cache keys include the URL, method, and a crawler-specific version; known tracking
-parameters (`utm_*`, `gclid`, `fbclid`) are stripped from the key. Responses carrying
-`Cache-Control: no-store` or `private` are not persisted. Expired or `no-cache`/`max-age=0`
-responses are revalidated with `If-None-Match`/`If-Modified-Since` before reuse.
+The crawler keeps a persistent on-disk HTTP cache under
+`${XDG_CACHE_HOME:-$HOME/.cache}/stripe-fee-crawler/http` by default. Cache keys
+include the URL, method, market, locale, and a crawler-specific version; known
+tracking parameters (`utm_*`, `gclid`, `fbclid`) are stripped from the key.
+
+Caching is enabled by default and disabled only by `--no-cache` or
+`STRIPE_FEE_CRAWLER_NO_CACHE=true`. `STRIPE_FEE_CRAWLER_NO_CACHE` and
+`STRIPE_FEE_CRAWLER_REFRESH_CACHE` are parsed as strict booleans:
+`1`, `true`, `yes`, `on` are true; `0`, `false`, `no`, `off`, and empty/unset are
+false; other values raise an error.
+
+The configured snapshot TTL (default 24 hours) controls reuse of public pricing
+pages. Fresh cached entries are returned without a network request even when the
+origin sent `Cache-Control: no-cache` or `max-age=0`. Expired entries are
+revalidated with `If-None-Match`/`If-Modified-Since`; a `304 Not Modified`
+refreshes the stored timestamp and reuses the body, while a `200` replaces it.
+Responses carrying `Cache-Control: no-store` or `private` are never persisted and
+any existing stored copy for the same key is removed.
 
 CLI flags: `--cache-dir`, `--cache-ttl-hours`, `--no-cache`, `--refresh-cache`.
 Environment variables: `STRIPE_FEE_CRAWLER_CACHE_DIR`, `STRIPE_FEE_CRAWLER_CACHE_TTL_HOURS`,
