@@ -1,17 +1,17 @@
 {
   "cache_stats": {
-    "bytes_avoided": 12612806,
+    "bytes_avoided": 25951139,
     "cache_304_responses": 0,
-    "cache_dir": "/home/runner/.cache/stripe-fee-crawler/http",
+    "cache_dir": "/home/calvin/.cache/stripe-fee-crawler/http",
     "cache_enabled": true,
     "cache_errors": 0,
-    "cache_hits": 16,
-    "cache_misses": 17,
+    "cache_hits": 33,
+    "cache_misses": 0,
     "cache_policy": "ttl",
     "cache_revalidations": 0,
     "cache_ttl_hours": 24.0,
-    "cache_writes": 17,
-    "network_requests": 17
+    "cache_writes": 0,
+    "network_requests": 0
   },
   "change_report_path": "../change-report.json",
   "changed": true,

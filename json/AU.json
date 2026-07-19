@@ -26510,8 +26510,8 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "e5e1a8f4f843b3904642cfe1c6562cd2c725740b54833b4298813c271e7425f4",
-      "detected_currency": null,
+      "content_sha256": "74d349697357d68ff9dbd3b9d291217a67255ba637a9a4d24c96165d80bd3b2c",
+      "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
       "effective_url": "https://stripe.com/au/pricing",
@@ -26526,8 +26526,8 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "1fac6ff5fcff422e4cb7e0d865e21a852b5fb8d62d40ac88638c27dc396c74b3",
-      "detected_currency": null,
+      "content_sha256": "115b3a12fa5bfa218db0cba9213740b90d5ccf271932487927031dbaccebbbb4",
+      "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
       "effective_url": "https://stripe.com/au/pricing/local-payment-methods",
