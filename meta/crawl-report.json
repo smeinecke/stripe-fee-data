@@ -14,7 +14,7 @@
     "network_requests": 0
   },
   "change_report_path": "../change-report.json",
-  "changed": true,
+  "changed": false,
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
