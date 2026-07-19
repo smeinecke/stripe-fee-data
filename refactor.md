@@ -1,9 +1,9 @@
 # Refactoring & Optimization Plan
 
-> **Status 2026-07-19: largely implemented.** Landed in crawler commits `182d088` →
-> `22fdda0` (superproject `72b9b5b`); verified against that checkout — 200 tests pass,
-> regeneration reports `changed: false`. Completed items are checked `[x]` below;
-> unchecked items remain open (see "Remaining work" at the end).
+> **Status 2026-07-19: complete** (except one micro-item, see "Remaining work").
+> Landed in crawler commits `182d088` → `d9b432a` (superproject `c498b14`); verified
+> against that checkout — 200 tests pass (83.7% coverage), regeneration reports
+> `changed: false`.
 
 Scope: the `crawler/` submodule (`stripe_fee_crawler`, ~10,300 lines src) plus repo-level
 `scripts/`. Goal: reduce complexity, remove confirmed-dead code, restructure oversized
@@ -106,15 +106,15 @@ Gate: `make all` equivalent (ruff, pytest) + regeneration produces an empty chan
 - [x] `_validate_completeness` (1163–1303) *(done: `_safe_load[T]` in validation/publication.py:439)*: extract a `_safe_load(path, validator, errors)`
       helper for the six repeated load/parse blocks, then split the three cross-check
       loops.
-- [ ] `_label_references_component` (487–532): replace the hand-rolled 4-level decimal
+- [x] `_label_references_component` (487–532): replace the hand-rolled 4-level decimal
       branching (with two bare `except Exception`) by reusing
       `pricing_tokens._parse_decimal`.
-- [ ] Pre-filter calculable rules once instead of repeating
+- [x] Pre-filter calculable rules once instead of repeating
       `if not _is_calculable_status(...): return` in ~12 validators.
 
 **regression.py**
 
-- [ ] `_detect_changes` (121–324, E): split its five independent phases into
+- [x] `_detect_changes` (121–324, E) *(done: `_diff_market_set/_diff_market_counts/_diff_rule_values/_diff_duplicate_identifiers/_diff_state_transitions`)*: split its five independent phases into
       `_diff_market_set`, `_diff_market_counts`, `_diff_rule_values`,
       `_diff_state_transitions`, duplicate-id detection.
 
@@ -154,7 +154,7 @@ re-exported from `stripe_fee_crawler.validation`.
 - [x] **Allowed-value sets in models.py**: `classification_status` literal set written out
       3× (237–253, 417–433, 640–656), `exactness` 2× (377, 664), `derivation_status` 2×
       (530, 695), `calculator_coverage_status` 2× (538, 703) → module-level frozensets.
-- [ ] **Currency knowledge**: `pricing_tokens` owns symbols/codes/exponents;
+- [x] **Currency knowledge** *(done: `currencies.py`)*: `pricing_tokens` owns symbols/codes/exponents;
       `market_detection` owns `_CURRENCY_PATTERNS`/`CURRENCY_BY_COUNTRY`; `validation`
       imports `CURRENCY_SYMBOLS` function-locally (467, 479) → one `currencies.py`,
       imports at module top.
@@ -172,7 +172,7 @@ re-exported from `stripe_fee_crawler.validation`.
       classify + output). Note: `extract._infer_payment_method` deliberately keeps its
       original substring list — switching it to the full token list changed the
       generated data, violating the byte-identical invariant.
-- [ ] **Pricing-page heuristics**: `http._has_pricing_structure` (214–228) vs
+- [x] **Pricing-page heuristics** *(done: centralized in `market_detection._has_pricing_structure`)*: `http._has_pricing_structure` (214–228) vs
       `discovery._is_pricing_page` signals (346–354) — two drifting copies.
 - [x] **cli.py**: shared Click decorator (`_crawl_options`) for the ~11 crawl/cache options duplicated across
       `crawl_cmd` and `crawl_market_cmd` (~-40 lines); hoist function-local imports.
@@ -182,7 +182,7 @@ re-exported from `stripe_fee_crawler.validation`.
       `validation._country_code_from_item`; `_condition_key_data` vs `_condition_key`
       in validation; ~15 open+`json.load` try/except blocks across validation/regression
       → one `_read_json`.
-- [ ] **FeeRule legacy flat fields** (`_sync_legacy_fields`, models.py:443–467) mirrored
+- [x] **FeeRule legacy flat fields** *(done: documented in `FeeRule._sync_legacy_fields` docstring)* (`_sync_legacy_fields`, models.py:443–467) mirrored
       back in `output._to_core_fee_components` and read by regression: document
       `fee_components` as the single source of truth; keep the mirror (published schema)
       but generate it in exactly one place.
@@ -211,22 +211,21 @@ Hot path: per-line tokenization (`pricing_tokens`) → extraction (`extract`/`co
    directly on the loop thread while holding the semaphore — concurrency collapses to
    serial for the CPU portion. `await asyncio.to_thread(...)` for both.
 
-**Medium** — ✅ 6, 7 done; 5 and 8 open
+**Medium** — ✅ 5–8 done
 
-5. ⏳ `extract._infer_payment_method` (196–230): ~30-item list literal rebuilt per entry →
-   module-level constant. **Still open** — the inline list remains (kept as-is because
-   switching to the shared token vocabulary changed output; hoisting the *same* list to
-   a module constant is still safe and worthwhile).
+5. `extract._infer_payment_method` (196–230): ~30-item list literal rebuilt per entry →
+   module-level constant. *(done: `_EXTRACT_PAYMENT_METHODS` — same list, hoisted, so
+   output stays identical.)*
 6. `http_cache._read_entry`/`_write_entry` (385, 408): blocking file I/O of full cached
    bodies inside async `fetch` while holding locks → `asyncio.to_thread` (the flock
    acquire already is).
 7. `output.py:166–167`: writes each market file then re-reads it from disk to hash —
    serialize once, hash the in-memory string, write the same string.
-8. ⏳ **Still open** — `output.commit`: `_list_changed_files` runs twice per publish (334 and via
+8. `output.commit` *(done: `_changed_files_cache`)*: `_list_changed_files` runs twice per publish (334 and via
    `_output_dir_exists_and_matches` 336→487), and validate+regression re-read the whole
    tree again — compute the changed set once and reuse.
 
-**Low / cleanup** — ✅ 9 done; 10–12 open
+**Low / cleanup** — ✅ 9, 11, 12 done; 10 open
 
 9. `http_cache` stats: `model_copy(update=...)` on a frozen pydantic model for every
    counter bump (~10 sites) → mutable counter, build `CacheStats` at the end.
@@ -241,25 +240,14 @@ Benchmark before/after: time a full `crawl` from warm HTTP cache; record in the 
 
 ---
 
-## Remaining work (as of crawler `22fdda0`)
+## Remaining work (as of crawler `d9b432a`)
 
-Everything else in this plan is implemented and verified. Still open:
+Everything in this plan is implemented and verified, except one micro-optimization:
 
-- **Phase 2 / validation**: `_label_references_component` still hand-rolls decimal
-  branching with bare `except Exception` (validation/semantic_rules.py:60, 92, 97) —
-  reuse `pricing_tokens._parse_decimal`. The `_is_calculable_status` early-return is
-  still repeated ~10× instead of a single pre-filter.
-- **Phase 2 / regression**: `_detect_changes` (regression.py:121) remains one monolithic
-  E-rated function — split into the five `_diff_*` phases.
-- **Phase 4**: currency knowledge still split (`pricing_tokens` vs `market_detection`;
-  `validation/semantic_rules.py:40` still imports `CURRENCY_SYMBOLS` function-locally).
-  Pricing-page heuristics still duplicated (`http._has_pricing_structure` vs
-  `discovery._is_pricing_page`). FeeRule legacy-field single-source-of-truth
-  documentation not yet added.
-- **Phase 5**: items 5 (hoist extract method list), 8 (compute changed-file set once per
-  publish), 10 (guard debug-log URL normalization), 11 (`_fee_signature(group[0])`
-  recomputed per comparison, classify/dedup.py:318), 12 (`_text_has` lowercases per
-  call).
+- **Phase 5 item 10**: `logger.debug("... %s", _normalize_url(url))` still runs full URL
+  normalization eagerly on every cache hit/revalidation (http_cache.py:494, 501) — guard
+  with `logger.isEnabledFor(logging.DEBUG)` or log the raw url. Negligible impact;
+  fix opportunistically.
 
 ---
 
