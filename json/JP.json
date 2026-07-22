@@ -16761,7 +16761,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-jp/pricing",
-      "content_sha256": "b81241cf6f36c3c74212ddb2e3de1f54619d84e41cf5c6bd287915f27ffd0fcf",
+      "content_sha256": "caef92d58352d47a5348884a28655df7eae6d7508ebcc912e73eee6bef5636b1",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -16777,7 +16777,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
-      "content_sha256": "af07dcf04e823cedcb2d9ba0ac1bc91904502876f6913f5d18bf3a741087f615",
+      "content_sha256": "2da9c102d53a1a025057ff00eaa26a394c02d28a52a197edf0f7bf623160c699",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",

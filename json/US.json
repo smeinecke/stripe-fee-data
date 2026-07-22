@@ -34670,7 +34670,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nGuide me\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -34730,7 +34730,7 @@
       "source_order": 9
     },
     {
-      "body": "Product roadmap\nSee what’s ahead\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nIdentity\nOnline identity verification\nFinancial Connections\nLinked financial account data\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCommunity\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nJobs\nNewsroom\nStripe Press\nContact\nBecome a partner",
+      "body": "Product roadmap\nSee what’s ahead\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nIdentity\nOnline identity verification\nFinancial Connections\nLinked financial account data\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nNot sure where to start? Tell us about your business to get personalized Stripe product recommendations.\nFind what's right for you\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCommunity\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nJobs\nNewsroom\nStripe Press\nContact\nBecome a partner",
       "heading": "More",
       "level": 1,
       "links": [],
@@ -39363,7 +39363,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/pricing",
-      "content_sha256": "821401f93eb819a88c3a722cce20b0d5a26404458d17154dc247feaa98cb84e6",
+      "content_sha256": "2c5f643c6317fb596c021e5f3765c909bd59cc52cebbb6872529fdc8f764105b",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
@@ -39379,7 +39379,7 @@
     },
     {
       "canonical_url": "https://stripe.com/pricing/local-payment-methods",
-      "content_sha256": "2f47e001fa5989b87d2e17bf7fa8c5b74e2a03cb71689adef6905fb92745de65",
+      "content_sha256": "abbf3c14fda145e66d6f6190f7139f6ce5ee157b72470821a3f48afb37735e91",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
