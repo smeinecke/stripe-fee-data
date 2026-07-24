@@ -78,10 +78,23 @@ jobs:
         run: |
           test "$(python -c 'import json; print(json.load(open("change-report.json"))["has_regression"])')" = "False"
 
+      - name: Detect value changes
+        id: value_changes
+        run: |
+          change_count=$(python3 -c 'import json; print(len(json.load(open("change-report.json")).get("changes", [])))')
+          if [ "$change_count" -eq 0 ]; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No fee value changes detected."
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Update README statistics
+        if: steps.value_changes.outputs.has_changes == 'true'
         run: python3 scripts/generate_readme.py
 
       - name: Commit generated data
+        if: steps.value_changes.outputs.has_changes == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
