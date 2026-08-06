@@ -3,21 +3,21 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 27,
+    "calculable_rules": 23,
     "conflicting_rule_identities": 2,
     "custom_pricing": 2,
     "dropped_numeric_entries": 0,
-    "free": 2,
+    "free": 1,
     "ignored_non_fee": 8,
-    "included": 12,
+    "included": 11,
     "informational": 2,
     "informational_conflicts": 2,
-    "non_calculable_rules": 0,
+    "non_calculable_rules": 1,
     "numeric_fee_candidates": 0,
-    "numeric_source_entries": 43,
+    "numeric_source_entries": 40,
     "reference_only": 0,
-    "referenced_numeric_entries": 43,
-    "source_entries": 66,
+    "referenced_numeric_entries": 40,
+    "source_entries": 61,
     "unclassified_fee_candidates": 0,
     "unsupported_fee_shapes": 0
   },
@@ -724,6 +724,465 @@
       "transaction_amount_min": null,
       "unit": "per_dispute",
       "variant_id": "won_dispute"
+    },
+    {
+      "account_country": "AE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "informational",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "included",
+      "conditions": [
+        {
+          "dimension": "cross_border",
+          "evidence": null,
+          "operator": "eq",
+          "value": false
+        },
+        {
+          "dimension": "transaction_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "8895509ad32e4ca5"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "8895509ad32e4ca5",
+      "exactness": "included",
+      "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included"
+        ],
+        "source_entry_ids": [
+          "8895509ad32e4ca5"
+        ],
+        "type": "included"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": null,
+      "payment_method": "card",
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "359c4df4dbd54c45",
+      "settlement_currency": null,
+      "source_fragments": [],
+      "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
+      "source_texts": [
+        "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included"
+      ],
+      "source_url": "https://stripe.com/ae/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "channel=online",
+        "cross_border=False",
+        "transaction_region=domestic",
+        "account_country=AE",
+        "product_feature=visa_resolution",
+        "transaction_type=dispute"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "cross_border",
+          "evidence": null,
+          "operator": "eq",
+          "value": false
+        },
+        {
+          "dimension": "transaction_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AE"
+        },
+        {
+          "dimension": "product_feature",
+          "evidence": null,
+          "operator": "eq",
+          "value": "visa_resolution"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "ad7654633c05396f"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "ad7654633c05396f",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "60.00",
+          "basis_points": null,
+          "currency": "AED",
+          "minor_amount": "6000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "ad7654633c05396f",
+          "source_text": "AED60.00 per",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "AED60.00 per"
+        ],
+        "source_entry_ids": [
+          "ad7654633c05396f"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "60.00",
+      "fixed_amount_minor": "6000",
+      "fixed_currency": "AED",
+      "label": "AED60.00 per",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "655ee6cb434bd25d",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "ad7654633c05396f",
+          "text": "AED60.00 per"
+        }
+      ],
+      "source_text": "AED60.00 per",
+      "source_texts": [
+        "AED60.00 per"
+      ],
+      "source_url": "https://stripe.com/ae/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "channel=online",
+        "cross_border=False",
+        "transaction_region=domestic",
+        "account_country=AE",
+        "product_feature=mastercard_resolution",
+        "transaction_type=dispute",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "cross_border",
+          "evidence": null,
+          "operator": "eq",
+          "value": false
+        },
+        {
+          "dimension": "transaction_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AE"
+        },
+        {
+          "dimension": "product_feature",
+          "evidence": null,
+          "operator": "eq",
+          "value": "mastercard_resolution"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "c22e947a784ade57"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "c22e947a784ade57",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "60.00",
+          "basis_points": null,
+          "currency": "AED",
+          "minor_amount": "6000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "c22e947a784ade57",
+          "source_text": "AED60.00 per",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "AED60.00 per"
+        ],
+        "source_entry_ids": [
+          "c22e947a784ade57"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "60.00",
+      "fixed_amount_minor": "6000",
+      "fixed_currency": "AED",
+      "label": "AED60.00 per",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "ebf08b931a4bebc8",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "c22e947a784ade57",
+          "text": "AED60.00 per"
+        }
+      ],
+      "source_text": "AED60.00 per",
+      "source_texts": [
+        "AED60.00 per"
+      ],
+      "source_url": "https://stripe.com/ae/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "channel=online",
+        "cross_border=False",
+        "transaction_region=domestic",
+        "account_country=AE",
+        "product_feature=mastercard_resolution",
+        "transaction_type=dispute",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "cross_border",
+          "evidence": null,
+          "operator": "eq",
+          "value": false
+        },
+        {
+          "dimension": "transaction_region",
+          "evidence": null,
+          "operator": "eq",
+          "value": "domestic"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AE"
+        },
+        {
+          "dimension": "product_feature",
+          "evidence": null,
+          "operator": "eq",
+          "value": "mastercard_resolution"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "1965acc6c7ad5090"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "1965acc6c7ad5090",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "120.00",
+          "basis_points": null,
+          "currency": "AED",
+          "minor_amount": "12000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "1965acc6c7ad5090",
+          "source_text": "AED120.00 per",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "AED120.00 per"
+        ],
+        "source_entry_ids": [
+          "1965acc6c7ad5090"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "120.00",
+      "fixed_amount_minor": "12000",
+      "fixed_currency": "AED",
+      "label": "AED120.00 per",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "c2c1e33156873f80",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "1965acc6c7ad5090",
+          "text": "AED120.00 per"
+        }
+      ],
+      "source_text": "AED120.00 per",
+      "source_texts": [
+        "AED120.00 per"
+      ],
+      "source_url": "https://stripe.com/ae/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
     },
     {
       "account_country": "AE",
@@ -2012,960 +2471,6 @@
           "evidence": null,
           "operator": "eq",
           "value": "online"
-        },
-        {
-          "dimension": "pricing_plan",
-          "evidence": null,
-          "operator": "eq",
-          "value": "standard"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "machine_learning"
-        },
-        {
-          "dimension": "pricing_tier",
-          "evidence": null,
-          "operator": "eq",
-          "value": "standard"
-        }
-      ],
-      "confidence": 0.7,
-      "contributing_entry_ids": [
-        "b107009a91ac3e44"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "b107009a91ac3e44",
-      "exactness": "included",
-      "fee_components": [],
-      "fee_evidence": {
-        "confidence": 0.7,
-        "phrases": [
-          "Included For accounts with all payment methods on standard pricing"
-        ],
-        "source_entry_ids": [
-          "b107009a91ac3e44"
-        ],
-        "type": "included"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Included For accounts with all payment methods on standard pricing",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": null,
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "radar",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "069222779dde5c3d",
-      "settlement_currency": null,
-      "source_fragments": [],
-      "source_text": "Included For accounts with all payment methods on standard pricing",
-      "source_texts": [
-        "Included For accounts with all payment methods on standard pricing"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "standard_pricing"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=radar",
-        "variant=custom_pricing",
-        "channel=online",
-        "account_country=AE",
-        "pricing_plan=custom",
-        "product_feature=machine_learning"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AE"
-        },
-        {
-          "dimension": "pricing_plan",
-          "evidence": null,
-          "operator": "eq",
-          "value": "custom"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "machine_learning"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "29d0211770a8f09f"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "29d0211770a8f09f",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "0.20",
-          "basis_points": null,
-          "currency": "AED",
-          "minor_amount": "20",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "29d0211770a8f09f",
-          "source_text": "AED0.20 per screened transaction for accounts with custom pricing for any payment method",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.85,
-        "phrases": [
-          "AED0.20 per screened transaction for accounts with custom pricing for any payment method"
-        ],
-        "source_entry_ids": [
-          "29d0211770a8f09f"
-        ],
-        "type": "explicit_fee_phrase"
-      },
-      "fixed_amount": "0.20",
-      "fixed_amount_minor": "20",
-      "fixed_currency": "AED",
-      "label": "AED0.20 per screened transaction for accounts with custom pricing for any payment method",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "radar",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "radar",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "0a101c1303fb7e86",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "29d0211770a8f09f",
-          "text": "AED0.20 per screened transaction for accounts with custom pricing for any payment method"
-        }
-      ],
-      "source_text": "AED0.20 per screened transaction for accounts with custom pricing for any payment method",
-      "source_texts": [
-        "AED0.20 per screened transaction for accounts with custom pricing for any payment method"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_screened_transaction",
-      "variant_id": "custom_pricing"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "free",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "fraud_teams"
-        }
-      ],
-      "confidence": 0.7,
-      "contributing_entry_ids": [
-        "832d00c078810e7f"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "832d00c078810e7f",
-      "exactness": "included",
-      "fee_components": [],
-      "fee_evidence": {
-        "confidence": 0.7,
-        "phrases": [
-          "Try for free for 30 days"
-        ],
-        "source_entry_ids": [
-          "832d00c078810e7f"
-        ],
-        "type": "free"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Try for free for 30 days",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": null,
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "radar",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "1d37112d805eacdf",
-      "settlement_currency": null,
-      "source_fragments": [],
-      "source_text": "Try for free for 30 days",
-      "source_texts": [
-        "Try for free for 30 days"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=radar",
-        "variant=standard_pricing",
-        "channel=online",
-        "account_country=AE",
-        "pricing_plan=standard",
-        "product_feature=fraud_teams",
-        "pricing_tier=standard"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AE"
-        },
-        {
-          "dimension": "pricing_plan",
-          "evidence": null,
-          "operator": "eq",
-          "value": "standard"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "fraud_teams"
-        },
-        {
-          "dimension": "pricing_tier",
-          "evidence": null,
-          "operator": "eq",
-          "value": "standard"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "73c2fdd77e4f9d6d"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "73c2fdd77e4f9d6d",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "0.20",
-          "basis_points": null,
-          "currency": "AED",
-          "minor_amount": "20",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "73c2fdd77e4f9d6d",
-          "source_text": "AED0.20 per screened transaction for accounts with all payment methods on standard pricing",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.85,
-        "phrases": [
-          "AED0.20 per screened transaction for accounts with all payment methods on standard pricing"
-        ],
-        "source_entry_ids": [
-          "73c2fdd77e4f9d6d"
-        ],
-        "type": "explicit_fee_phrase"
-      },
-      "fixed_amount": "0.20",
-      "fixed_amount_minor": "20",
-      "fixed_currency": "AED",
-      "label": "AED0.20 per screened transaction for accounts with all payment methods on standard pricing",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "radar",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "radar",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "441ef4994882ad6e",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "73c2fdd77e4f9d6d",
-          "text": "AED0.20 per screened transaction for accounts with all payment methods on standard pricing"
-        }
-      ],
-      "source_text": "AED0.20 per screened transaction for accounts with all payment methods on standard pricing",
-      "source_texts": [
-        "AED0.20 per screened transaction for accounts with all payment methods on standard pricing"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_screened_transaction",
-      "variant_id": "standard_pricing"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=radar",
-        "variant=custom_pricing",
-        "channel=online",
-        "account_country=AE",
-        "pricing_plan=custom",
-        "product_feature=fraud_teams"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AE"
-        },
-        {
-          "dimension": "pricing_plan",
-          "evidence": null,
-          "operator": "eq",
-          "value": "custom"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "fraud_teams"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "72cd8a2b6c9a6621"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "72cd8a2b6c9a6621",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "0.28",
-          "basis_points": null,
-          "currency": "AED",
-          "minor_amount": "28",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "72cd8a2b6c9a6621",
-          "source_text": "AED0.28 per screened transaction for accounts with custom pricing for any payment method",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.85,
-        "phrases": [
-          "AED0.28 per screened transaction for accounts with custom pricing for any payment method"
-        ],
-        "source_entry_ids": [
-          "72cd8a2b6c9a6621"
-        ],
-        "type": "explicit_fee_phrase"
-      },
-      "fixed_amount": "0.28",
-      "fixed_amount_minor": "28",
-      "fixed_currency": "AED",
-      "label": "AED0.28 per screened transaction for accounts with custom pricing for any payment method",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "radar",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "radar",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "dc046d2c80838169",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "72cd8a2b6c9a6621",
-          "text": "AED0.28 per screened transaction for accounts with custom pricing for any payment method"
-        }
-      ],
-      "source_text": "AED0.28 per screened transaction for accounts with custom pricing for any payment method",
-      "source_texts": [
-        "AED0.28 per screened transaction for accounts with custom pricing for any payment method"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_screened_transaction",
-      "variant_id": "custom_pricing"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "included",
-      "conditions": [
-        {
-          "dimension": "cross_border",
-          "evidence": null,
-          "operator": "eq",
-          "value": false
-        },
-        {
-          "dimension": "transaction_region",
-          "evidence": null,
-          "operator": "eq",
-          "value": "domestic"
-        },
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
-        }
-      ],
-      "confidence": 0.7,
-      "contributing_entry_ids": [
-        "8895509ad32e4ca5"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "8895509ad32e4ca5",
-      "exactness": "included",
-      "fee_components": [],
-      "fee_evidence": {
-        "confidence": 0.7,
-        "phrases": [
-          "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included"
-        ],
-        "source_entry_ids": [
-          "8895509ad32e4ca5"
-        ],
-        "type": "included"
-      },
-      "fixed_amount": null,
-      "fixed_amount_minor": null,
-      "fixed_currency": null,
-      "label": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": null,
-      "payment_method": "card",
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "disputes",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "359c4df4dbd54c45",
-      "settlement_currency": null,
-      "source_fragments": [],
-      "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
-      "source_texts": [
-        "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "informational",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=disputes",
-        "variant=standard",
-        "channel=online",
-        "cross_border=False",
-        "transaction_region=domestic",
-        "account_country=AE",
-        "product_feature=visa_resolution",
-        "transaction_type=dispute"
-      ],
-      "classification_status": "calculable_rule",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "cross_border",
-          "evidence": null,
-          "operator": "eq",
-          "value": false
-        },
-        {
-          "dimension": "transaction_region",
-          "evidence": null,
-          "operator": "eq",
-          "value": "domestic"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AE"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "visa_resolution"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
-        }
-      ],
-      "confidence": 0.85,
-      "contributing_entry_ids": [
-        "ad7654633c05396f"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "ad7654633c05396f",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "60.00",
-          "basis_points": null,
-          "currency": "AED",
-          "minor_amount": "6000",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "ad7654633c05396f",
-          "source_text": "AED60.00 per",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.85,
-        "phrases": [
-          "AED60.00 per"
-        ],
-        "source_entry_ids": [
-          "ad7654633c05396f"
-        ],
-        "type": "explicit_fee_phrase"
-      },
-      "fixed_amount": "60.00",
-      "fixed_amount_minor": "6000",
-      "fixed_currency": "AED",
-      "label": "AED60.00 per",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "disputes",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "disputes",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "655ee6cb434bd25d",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "ad7654633c05396f",
-          "text": "AED60.00 per"
-        }
-      ],
-      "source_text": "AED60.00 per",
-      "source_texts": [
-        "AED60.00 per"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=disputes",
-        "variant=standard",
-        "channel=online",
-        "cross_border=False",
-        "transaction_region=domestic",
-        "account_country=AE",
-        "product_feature=mastercard_resolution",
-        "transaction_type=dispute",
-        "conflict: semantic identity with differing fee signature"
-      ],
-      "classification_status": "conflict",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "cross_border",
-          "evidence": null,
-          "operator": "eq",
-          "value": false
-        },
-        {
-          "dimension": "transaction_region",
-          "evidence": null,
-          "operator": "eq",
-          "value": "domestic"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AE"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "mastercard_resolution"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "c22e947a784ade57"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "c22e947a784ade57",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "60.00",
-          "basis_points": null,
-          "currency": "AED",
-          "minor_amount": "6000",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "c22e947a784ade57",
-          "source_text": "AED60.00 per",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.85,
-        "phrases": [
-          "AED60.00 per"
-        ],
-        "source_entry_ids": [
-          "c22e947a784ade57"
-        ],
-        "type": "explicit_fee_phrase"
-      },
-      "fixed_amount": "60.00",
-      "fixed_amount_minor": "6000",
-      "fixed_currency": "AED",
-      "label": "AED60.00 per",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "disputes",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "disputes",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "ebf08b931a4bebc8",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "c22e947a784ade57",
-          "text": "AED60.00 per"
-        }
-      ],
-      "source_text": "AED60.00 per",
-      "source_texts": [
-        "AED60.00 per"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "conditional",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": "online",
-      "classification_evidence": [
-        "product=disputes",
-        "variant=standard",
-        "channel=online",
-        "cross_border=False",
-        "transaction_region=domestic",
-        "account_country=AE",
-        "product_feature=mastercard_resolution",
-        "transaction_type=dispute",
-        "conflict: semantic identity with differing fee signature"
-      ],
-      "classification_status": "conflict",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
-        {
-          "dimension": "cross_border",
-          "evidence": null,
-          "operator": "eq",
-          "value": false
-        },
-        {
-          "dimension": "transaction_region",
-          "evidence": null,
-          "operator": "eq",
-          "value": "domestic"
-        },
-        {
-          "dimension": "account_country",
-          "evidence": null,
-          "operator": "eq",
-          "value": "AE"
-        },
-        {
-          "dimension": "product_feature",
-          "evidence": null,
-          "operator": "eq",
-          "value": "mastercard_resolution"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "dispute"
-        }
-      ],
-      "confidence": 0.0,
-      "contributing_entry_ids": [
-        "1965acc6c7ad5090"
-      ],
-      "currency_conversion_required": null,
-      "customer_country": null,
-      "dispute_state": null,
-      "entry_id": "1965acc6c7ad5090",
-      "exactness": "exact",
-      "fee_components": [
-        {
-          "amount": "120.00",
-          "basis_points": null,
-          "currency": "AED",
-          "minor_amount": "12000",
-          "operator": null,
-          "schedule_id": null,
-          "source_entry_id": "1965acc6c7ad5090",
-          "source_text": "AED120.00 per",
-          "type": "fixed_amount",
-          "value": null
-        }
-      ],
-      "fee_evidence": {
-        "confidence": 0.85,
-        "phrases": [
-          "AED120.00 per"
-        ],
-        "source_entry_ids": [
-          "1965acc6c7ad5090"
-        ],
-        "type": "explicit_fee_phrase"
-      },
-      "fixed_amount": "120.00",
-      "fixed_amount_minor": "12000",
-      "fixed_currency": "AED",
-      "label": "AED120.00 per",
-      "maximum_amount": null,
-      "minimum_amount": null,
-      "name": "disputes",
-      "payment_method": null,
-      "payout_type": null,
-      "percentage": null,
-      "presentment_currency": null,
-      "product_id": "disputes",
-      "provider": "stripe",
-      "recurring": null,
-      "rule_id": "c2c1e33156873f80",
-      "settlement_currency": null,
-      "source_fragments": [
-        {
-          "entry_id": "1965acc6c7ad5090",
-          "text": "AED120.00 per"
-        }
-      ],
-      "source_text": "AED120.00 per",
-      "source_texts": [
-        "AED120.00 per"
-      ],
-      "source_url": "https://stripe.com/ae/pricing",
-      "transaction_amount_max": null,
-      "transaction_amount_min": null,
-      "unit": "per_dispute",
-      "variant_id": "standard"
-    },
-    {
-      "account_country": "AE",
-      "additional_fees": [],
-      "basis_points": null,
-      "behavior": "informational",
-      "billing_type": null,
-      "card_origin": null,
-      "card_region": null,
-      "card_tier": null,
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "included",
-      "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
         }
       ],
       "confidence": 0.7,
@@ -3120,14 +2625,14 @@
       "card_origin": null,
       "card_region": null,
       "card_tier": null,
-      "channel": "online",
+      "channel": null,
       "classification_evidence": [
-        "product=subscriptions",
+        "product=unspecified",
         "variant=standard",
         "account_country=AE",
-        "contract_length=1_year"
+        "contract_length=month_to_month"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "account_country",
@@ -3139,28 +2644,28 @@
           "dimension": "contract_length",
           "evidence": null,
           "operator": "eq",
-          "value": "1_year"
+          "value": "month_to_month"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
-        "e376c3ff03724877"
+        "08c4352e3e95f640"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "e376c3ff03724877",
+      "entry_id": "08c4352e3e95f640",
       "exactness": "exact",
       "fee_components": [
         {
-          "amount": "2200.00",
+          "amount": "40.00",
           "basis_points": null,
           "currency": "AED",
-          "minor_amount": "220000",
+          "minor_amount": "4000",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "e376c3ff03724877",
-          "source_text": "AED2,200.00 per month, 1-year contract",
+          "source_entry_id": "08c4352e3e95f640",
+          "source_text": "AED40.00 per month, cancel any time",
           "type": "fixed_amount",
           "value": null
         }
@@ -3168,38 +2673,38 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "AED2,200.00 per month, 1-year contract"
+          "AED40.00 per month, cancel any time"
         ],
         "source_entry_ids": [
-          "e376c3ff03724877"
+          "08c4352e3e95f640"
         ],
         "type": "explicit_fee_phrase"
       },
-      "fixed_amount": "2200.00",
-      "fixed_amount_minor": "220000",
+      "fixed_amount": "40.00",
+      "fixed_amount_minor": "4000",
       "fixed_currency": "AED",
-      "label": "AED2,200.00 per month, 1-year contract",
+      "label": "AED40.00 per month, cancel any time",
       "maximum_amount": null,
       "minimum_amount": null,
-      "name": "subscriptions",
+      "name": "unspecified",
       "payment_method": null,
       "payout_type": null,
       "percentage": null,
       "presentment_currency": null,
-      "product_id": "subscriptions",
+      "product_id": "unspecified",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c3d3b636a60c1c0e",
+      "rule_id": "9f14ddcf49fb3929",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "e376c3ff03724877",
-          "text": "AED2,200.00 per month, 1-year contract"
+          "entry_id": "08c4352e3e95f640",
+          "text": "AED40.00 per month, cancel any time"
         }
       ],
-      "source_text": "AED2,200.00 per month, 1-year contract",
+      "source_text": "AED40.00 per month, cancel any time",
       "source_texts": [
-        "AED2,200.00 per month, 1-year contract"
+        "AED40.00 per month, cancel any time"
       ],
       "source_url": "https://stripe.com/ae/pricing",
       "transaction_amount_max": null,
@@ -4685,6 +4190,162 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
+      "entry_id": "8895509ad32e4ca5",
+      "fee_category": "Dispute prevention",
+      "footnotes": [],
+      "links": [],
+      "payment_method": "card",
+      "payment_method_family": null,
+      "product": "Dispute prevention",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Dispute prevention"
+      ],
+      "source_evidence": "Dispute deflection lookups\nAED60.00\nper\nVisa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution",
+      "source_order": 9,
+      "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "from",
+          "is_minor_currency": false,
+          "kind": "qualifier",
+          "note": null,
+          "operator": "if",
+          "percentage": null,
+          "raw": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "ad7654633c05396f",
+      "fee_category": "Dispute prevention",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Dispute prevention",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Dispute prevention"
+      ],
+      "source_evidence": "Visa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution",
+      "source_order": 10,
+      "source_text": "AED60.00 per",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": "60.00",
+          "basis_points": null,
+          "currency": "AED",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "60.00",
+          "token_id": "dfc5e824d1278f0b",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "c22e947a784ade57",
+      "fee_category": "Dispute prevention",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Dispute prevention",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Dispute prevention"
+      ],
+      "source_evidence": "Visa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution",
+      "source_order": 11,
+      "source_text": "AED60.00 per",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": "60.00",
+          "basis_points": null,
+          "currency": "AED",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "60.00",
+          "token_id": "dfc5e824d1278f0b",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "1965acc6c7ad5090",
+      "fee_category": "Dispute prevention",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Dispute prevention",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Dispute prevention"
+      ],
+      "source_evidence": "Mastercard resolution",
+      "source_order": 12,
+      "source_text": "AED120.00 per",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": "120.00",
+          "basis_points": null,
+          "currency": "AED",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "120.00",
+          "token_id": "a36daac9af641cf8",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
       "entry_id": "edf479304fb0081f",
       "fee_category": "Payment optimizations",
       "footnotes": [],
@@ -4698,7 +4359,7 @@
         "Payment optimizations"
       ],
       "source_evidence": "Included at no additional charge for businesses on standard payments pricing",
-      "source_order": 9,
+      "source_order": 13,
       "source_text": "Included with Payments",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4737,7 +4398,7 @@
         "Payment optimizations"
       ],
       "source_evidence": "",
-      "source_order": 10,
+      "source_order": 14,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4776,7 +4437,7 @@
         "3D Secure authentication"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.",
-      "source_order": 11,
+      "source_order": 15,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4815,7 +4476,7 @@
         "3D Secure authentication"
       ],
       "source_evidence": "$0.03\nper 3D Secure attempt for accounts with custom pricing.",
-      "source_order": 12,
+      "source_order": 16,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4854,7 +4515,7 @@
         "3D Secure authentication"
       ],
       "source_evidence": "",
-      "source_order": 13,
+      "source_order": 17,
       "source_text": "$0.03 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4893,7 +4554,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 14,
+      "source_order": 18,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4932,7 +4593,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 15,
+      "source_order": 19,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4971,7 +4632,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "",
-      "source_order": 16,
+      "source_order": 20,
       "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5010,7 +4671,7 @@
         "USD payouts"
       ],
       "source_evidence": "Minimum fee of $25.00",
-      "source_order": 17,
+      "source_order": 21,
       "source_text": "1% of USD payout volume",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5049,7 +4710,7 @@
         "USD payouts"
       ],
       "source_evidence": "",
-      "source_order": 18,
+      "source_order": 22,
       "source_text": "Minimum fee of $25.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5088,7 +4749,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 19,
+      "source_order": 23,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5127,7 +4788,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Customers will be presented a conversion fee starting at\n2%",
-      "source_order": 20,
+      "source_order": 24,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5166,7 +4827,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "",
-      "source_order": 21,
+      "source_order": 25,
       "source_text": "Customers will be presented a conversion fee starting at 2%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5205,7 +4866,7 @@
         "Instant payouts"
       ],
       "source_evidence": "1.5%\nof Instant Payouts volume\nMinimum fee of AED2.00",
-      "source_order": 22,
+      "source_order": 26,
       "source_text": "standard schedule for free.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5244,7 +4905,7 @@
         "Instant payouts"
       ],
       "source_evidence": "Minimum fee of AED2.00",
-      "source_order": 23,
+      "source_order": 27,
       "source_text": "1.5% of Instant Payouts volume",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5283,7 +4944,7 @@
         "Instant payouts"
       ],
       "source_evidence": "",
-      "source_order": 24,
+      "source_order": 28,
       "source_text": "Minimum fee of AED2.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5322,7 +4983,7 @@
         "Accept payments"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 25,
+      "source_order": 29,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5361,7 +5022,7 @@
         "Accept payments"
       ],
       "source_evidence": "",
-      "source_order": 26,
+      "source_order": 30,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5400,7 +5061,7 @@
         "Custom domain"
       ],
       "source_evidence": "",
-      "source_order": 27,
+      "source_order": 31,
       "source_text": "$10.00 per month",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5439,7 +5100,7 @@
         "Post-payment invoices"
       ],
       "source_evidence": "on transaction total\n$2.00\ncap per invoice",
-      "source_order": 28,
+      "source_order": 32,
       "source_text": "0.4%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5478,7 +5139,7 @@
         "Post-payment invoices"
       ],
       "source_evidence": "",
-      "source_order": 29,
+      "source_order": 33,
       "source_text": "$2.00 cap per invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5504,357 +5165,6 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "b107009a91ac3e44",
-      "fee_category": "Radar’s machine learning",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Radar’s machine learning",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Radar’s machine learning"
-      ],
-      "source_evidence": "AED0.20\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 30,
-      "source_text": "Included For accounts with all payment methods on standard pricing",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "included",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "for",
-          "percentage": null,
-          "raw": "Included For accounts with all payment methods on standard pricing",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "29d0211770a8f09f",
-      "fee_category": "Radar’s machine learning",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Radar’s machine learning",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Radar’s machine learning"
-      ],
-      "source_evidence": "",
-      "source_order": 31,
-      "source_text": "AED0.20 per screened transaction for accounts with custom pricing for any payment method",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": "0.20",
-          "basis_points": null,
-          "currency": "AED",
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "0.20",
-          "token_id": "351a325416e496ef",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "832d00c078810e7f",
-      "fee_category": "Radar for Fraud Teams",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Radar for Fraud Teams",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Radar for Fraud Teams"
-      ],
-      "source_evidence": "AED0.20\nper screened transaction for accounts with all payment methods on standard pricing\nAED0.28\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 32,
-      "source_text": "Try for free for 30 days",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "free",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "for",
-          "percentage": null,
-          "raw": "Try for free for 30 days",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "73c2fdd77e4f9d6d",
-      "fee_category": "Radar for Fraud Teams",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Radar for Fraud Teams",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Radar for Fraud Teams"
-      ],
-      "source_evidence": "AED0.28\nper screened transaction for accounts with custom pricing for any payment method",
-      "source_order": 33,
-      "source_text": "AED0.20 per screened transaction for accounts with all payment methods on standard pricing",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": "0.20",
-          "basis_points": null,
-          "currency": "AED",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "0.20",
-          "token_id": "351a325416e496ef",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "72cd8a2b6c9a6621",
-      "fee_category": "Radar for Fraud Teams",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Radar for Fraud Teams",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Radar for Fraud Teams"
-      ],
-      "source_evidence": "",
-      "source_order": 34,
-      "source_text": "AED0.28 per screened transaction for accounts with custom pricing for any payment method",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": "0.28",
-          "basis_points": null,
-          "currency": "AED",
-          "exactness": "custom",
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "0.28",
-          "token_id": "44c3d6763a7ea911",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "8895509ad32e4ca5",
-      "fee_category": "Dispute prevention",
-      "footnotes": [],
-      "links": [],
-      "payment_method": "card",
-      "payment_method_family": null,
-      "product": "Dispute prevention",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Dispute prevention"
-      ],
-      "source_evidence": "Dispute deflection lookups\nAED60.00\nper\nVisa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 35,
-      "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": null,
-          "basis_points": null,
-          "currency": null,
-          "exactness": "from",
-          "is_minor_currency": false,
-          "kind": "qualifier",
-          "note": null,
-          "operator": "if",
-          "percentage": null,
-          "raw": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
-          "token_id": null,
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "ad7654633c05396f",
-      "fee_category": "Dispute prevention",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Dispute prevention",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Dispute prevention"
-      ],
-      "source_evidence": "Visa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 36,
-      "source_text": "AED60.00 per",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": "60.00",
-          "basis_points": null,
-          "currency": "AED",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "60.00",
-          "token_id": "dfc5e824d1278f0b",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "c22e947a784ade57",
-      "fee_category": "Dispute prevention",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Dispute prevention",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Dispute prevention"
-      ],
-      "source_evidence": "Visa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution\nCompare plans",
-      "source_order": 37,
-      "source_text": "AED60.00 per",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": "60.00",
-          "basis_points": null,
-          "currency": "AED",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "60.00",
-          "token_id": "dfc5e824d1278f0b",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "1965acc6c7ad5090",
-      "fee_category": "Dispute prevention",
-      "footnotes": [],
-      "links": [],
-      "payment_method": null,
-      "payment_method_family": null,
-      "product": "Dispute prevention",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Dispute prevention"
-      ],
-      "source_evidence": "Mastercard resolution\nCompare plans",
-      "source_order": 38,
-      "source_text": "AED120.00 per",
-      "source_url": "https://stripe.com/ae/pricing",
-      "tokens": [
-        {
-          "amount": "120.00",
-          "basis_points": null,
-          "currency": "AED",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "120.00",
-          "token_id": "a36daac9af641cf8",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": null,
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
       "entry_id": "b9e97c3802b6f5fe",
       "fee_category": "Stripe handles pricing for your users",
       "footnotes": [],
@@ -5868,7 +5178,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 39,
+      "source_order": 34,
       "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5907,7 +5217,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 40,
+      "source_order": 35,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5946,7 +5256,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "starting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 41,
+      "source_order": 36,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5972,7 +5282,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "e376c3ff03724877",
+      "entry_id": "08c4352e3e95f640",
       "fee_category": "Pay monthly",
       "footnotes": [],
       "links": [],
@@ -5984,13 +5294,13 @@
       "section_path": [
         "Pay monthly"
       ],
-      "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 42,
-      "source_text": "AED2,200.00 per month, 1-year contract",
+      "source_evidence": "",
+      "source_order": 37,
+      "source_text": "AED40.00 per month, cancel any time",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
         {
-          "amount": "2200.00",
+          "amount": "40.00",
           "basis_points": null,
           "currency": "AED",
           "exactness": null,
@@ -5999,8 +5309,8 @@
           "note": null,
           "operator": null,
           "percentage": null,
-          "raw": "2,200.00",
-          "token_id": "c1db711b3f679196",
+          "raw": "40.00",
+          "token_id": "56747b05db42529e",
           "value": null
         }
       ]
@@ -6024,7 +5334,7 @@
         "Pay as you go"
       ],
       "source_evidence": "10,000 steps per month\nAED0.066\nper additional step",
-      "source_order": 43,
+      "source_order": 38,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6063,7 +5373,7 @@
         "Pay as you go"
       ],
       "source_evidence": "",
-      "source_order": 44,
+      "source_order": 39,
       "source_text": "AED0.066 per additional step",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6102,7 +5412,7 @@
         "Startup"
       ],
       "source_evidence": "$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 45,
+      "source_order": 40,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6141,7 +5451,7 @@
         "Startup"
       ],
       "source_evidence": "billing allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 46,
+      "source_order": 41,
       "source_text": "$100,000.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6180,7 +5490,7 @@
         "Starter"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 47,
+      "source_order": 42,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6219,7 +5529,7 @@
         "Tax Complete"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 48,
+      "source_order": 43,
       "source_text": "AED330.00 per month, 1-year contract",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6258,7 +5568,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 49,
+      "source_order": 44,
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6297,7 +5607,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 50,
+      "source_order": 45,
       "source_text": "AED2.00 per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6336,7 +5646,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 51,
+      "source_order": 46,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6375,7 +5685,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "AED90.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 52,
+      "source_order": 47,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6414,7 +5724,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 53,
+      "source_order": 48,
       "source_text": "AED90.00 per month",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6453,7 +5763,7 @@
         "Annual subscription"
       ],
       "source_evidence": "AED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 54,
+      "source_order": 49,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6492,7 +5802,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 55,
+      "source_order": 50,
       "source_text": "AED700.00 per month, 1-year contract",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6531,7 +5841,7 @@
         "Atlas"
       ],
       "source_evidence": "",
-      "source_order": 56,
+      "source_order": 51,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6570,7 +5880,7 @@
         "Incorporate your company"
       ],
       "source_evidence": "one-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 57,
+      "source_order": 52,
       "source_text": "$500.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6609,7 +5919,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 58,
+      "source_order": 53,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6648,7 +5958,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 59,
+      "source_order": 54,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": []
@@ -6672,7 +5982,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 60,
+      "source_order": 55,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6711,7 +6021,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 61,
+      "source_order": 56,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6750,7 +6060,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 62,
+      "source_order": 57,
       "source_text": "+1%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6789,7 +6099,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 63,
+      "source_order": 58,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6828,7 +6138,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 64,
+      "source_order": 59,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6866,8 +6176,8 @@
       "section_path": [
         "Explore the docs"
       ],
-      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 65,
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_order": 60,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6927,7 +6237,7 @@
       "source_order": 0
     },
     {
-      "body": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link - Stripe’s accelerated checkout.\nReduce fraud and increase revenue with ML optimisations.\nSave engineering time with pre-built UIs.",
+      "body": "An online payments platform engineered for growth.\nIncrease customer acquisition with 100+ payment methods.\nImprove conversion with Link, Stripe’s accelerated checkout.\nGet AI-powered fraud protection for card payments with Radar Lite.\nSave engineering time with pre-built UIs.",
       "heading": "Payments",
       "level": 1,
       "links": [],
@@ -6957,7 +6267,7 @@
       "section_path": [
         "Money management"
       ],
-      "source_order": 50
+      "source_order": 47
     },
     {
       "body": "Connect\nPayments for platforms",
@@ -6971,7 +6281,7 @@
       "source_order": 9
     },
     {
-      "body": "Product roadmap\nSee what’s ahead\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCommunity\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nJobs\nNewsroom\nStripe Press\nContact\nBecome a partner",
+      "body": "Product roadmap\nSee what’s ahead\nRadar\nFraud prevention\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nCareers\nNewsroom\nStripe Press\nContact\nBecome a partner",
       "heading": "More",
       "level": 1,
       "links": [],
@@ -7005,12 +6315,12 @@
     },
     {
       "body": null,
-      "heading": "Money Management",
+      "heading": "Money management",
       "level": 1,
       "links": [],
       "section_id": "e6aa91b2abf2f0e4",
       "section_path": [
-        "Money Management"
+        "Money management"
       ],
       "source_order": 8
     },
@@ -7079,7 +6389,7 @@
       "section_path": [
         "Custom"
       ],
-      "source_order": 59
+      "source_order": 56
     },
     {
       "body": null,
@@ -7193,7 +6503,7 @@
       "source_order": 24
     },
     {
-      "body": "Online and in-person payments, recurring billing, embedded payments, and much more.\nGlobal payments\nPayments\nPayment Links\nCheckout\nRadar\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nAtlas\nWorkflows\nCustom pricing",
+      "body": "Online and in-person payments, recurring billing, embedded payments, and much more.\nGlobal payments\nPayments\nPayment Links\nCheckout\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nRadar\nAtlas\nWorkflows\nCustom pricing",
       "heading": "Explore pricing for the full Stripe platform",
       "level": 1,
       "links": [],
@@ -7259,6 +6569,17 @@
       "source_order": 30
     },
     {
+      "body": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nAED60.00\nper\nVisa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution",
+      "heading": "Dispute prevention",
+      "level": 1,
+      "links": [],
+      "section_id": "f3df0b28764f01a0",
+      "section_path": [
+        "Dispute prevention"
+      ],
+      "source_order": 31
+    },
+    {
       "body": "Included with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
       "heading": "Payment optimizations",
       "level": 1,
@@ -7267,7 +6588,7 @@
       "section_path": [
         "Payment optimizations"
       ],
-      "source_order": 31
+      "source_order": 32
     },
     {
       "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.",
@@ -7278,7 +6599,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_order": 32
+      "source_order": 33
     },
     {
       "body": "Increase acceptance rates and reduce card processing costs with AI-powered payment optimizations, inclusive of Adaptive Acceptance, card account updater and network tokens.\nIndividual pricing available for Adaptive Acceptance, card account updater, and network tokens.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
@@ -7289,7 +6610,7 @@
       "section_path": [
         "Authorization Boost"
       ],
-      "source_order": 33
+      "source_order": 34
     },
     {
       "body": null,
@@ -7300,7 +6621,7 @@
       "section_path": [
         "More features"
       ],
-      "source_order": 34
+      "source_order": 35
     },
     {
       "body": "Payout US dollars to your local bank account.\n1%\nof USD payout volume\nMinimum fee of $25.00",
@@ -7311,7 +6632,7 @@
       "section_path": [
         "USD payouts"
       ],
-      "source_order": 35
+      "source_order": 36
     },
     {
       "body": "Present prices in local currencies to your customers, tailoring customer experience and increasing revenue.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
@@ -7322,7 +6643,7 @@
       "section_path": [
         "Adaptive Pricing"
       ],
-      "source_order": 36
+      "source_order": 37
     },
     {
       "body": "Access funds within minutes through an eligible debit card or bank account. Alternatively, pay out your funds on our\nstandard schedule for free.\n1.5%\nof Instant Payouts volume\nMinimum fee of AED2.00",
@@ -7333,7 +6654,7 @@
       "section_path": [
         "Instant payouts"
       ],
-      "source_order": 37
+      "source_order": 38
     },
     {
       "body": "No-code links to sell online without a website.\nAccept payments in minutes by generating no-code links.\nSell products, offer subscriptions, and more.\nCreate at scale via our API to automate marketing campaigns and sales operations.",
@@ -7344,7 +6665,7 @@
       "section_path": [
         "Payment Links"
       ],
-      "source_order": 38
+      "source_order": 39
     },
     {
       "body": "Accept payments made on Stripe Checkout.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing",
@@ -7355,7 +6676,7 @@
       "section_path": [
         "Accept payments"
       ],
-      "source_order": 43
+      "source_order": 44
     },
     {
       "body": "Use your own domain while hosting your payments page or customer portal on Stripe.\n$10.00\nper month",
@@ -7366,7 +6687,7 @@
       "section_path": [
         "Custom domain"
       ],
-      "source_order": 44
+      "source_order": 45
     },
     {
       "body": "Automatically generate an invoice after a one-time purchase.\n0.4%\non transaction total\n$2.00\ncap per invoice",
@@ -7377,7 +6698,7 @@
       "section_path": [
         "Post-payment invoices"
       ],
-      "source_order": 45
+      "source_order": 46
     },
     {
       "body": "Prebuilt payment form optimized for conversion.\nSave engineering time and get started quickly.\nReduce friction with features designed to improve conversion.\nCustomize with your branding.",
@@ -7388,7 +6709,7 @@
       "section_path": [
         "Checkout"
       ],
-      "source_order": 42
+      "source_order": 43
     },
     {
       "body": null,
@@ -7399,7 +6720,7 @@
       "section_path": [
         "Accept payments"
       ],
-      "source_order": 43
+      "source_order": 44
     },
     {
       "body": null,
@@ -7410,7 +6731,7 @@
       "section_path": [
         "Custom domain"
       ],
-      "source_order": 44
+      "source_order": 45
     },
     {
       "body": null,
@@ -7421,51 +6742,7 @@
       "section_path": [
         "Post-payment invoices"
       ],
-      "source_order": 45
-    },
-    {
-      "body": "AI-powered fraud and abuse protection.\nReduce fraud across payment methods with AI powered by the Stripe network.\nFlag and prevent suspicious accounts from joining your platform.\nStay ahead of emerging fraud and stop abuse across the entire customer lifecycle.\nGet started with zero integration, or access Radar’s intelligence via API.",
-      "heading": "Radar",
-      "level": 1,
-      "links": [],
-      "section_id": "ff2e963ff6d0c33a",
-      "section_path": [
-        "Radar"
-      ],
       "source_order": 46
-    },
-    {
-      "body": "Fraud protection powered by billions of data points across the Stripe network.\nIncluded\nFor accounts with all payment methods on standard pricing\nAED0.20\nper screened transaction for accounts with custom pricing for any payment method",
-      "heading": "Radar’s machine learning",
-      "level": 1,
-      "links": [],
-      "section_id": "39718969c7164ee2",
-      "section_path": [
-        "Radar’s machine learning"
-      ],
-      "source_order": 47
-    },
-    {
-      "body": "Advanced fraud protection tools allowing for greater control and customizable settings. Includes Radar’s machine learning.\nSupport for Radar risk scores for non-Stripe transactions is available.\nto learn more.\nTry for free for 30 days\nAED0.20\nper screened transaction for accounts with all payment methods on standard pricing\nAED0.28\nper screened transaction for accounts with custom pricing for any payment method",
-      "heading": "Radar for Fraud Teams",
-      "level": 1,
-      "links": [],
-      "section_id": "828775d4a68d5195",
-      "section_path": [
-        "Radar for Fraud Teams"
-      ],
-      "source_order": 48
-    },
-    {
-      "body": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard.\nIncluded\nDispute deflection lookups\nAED60.00\nper\nVisa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution\nCompare plans",
-      "heading": "Dispute prevention",
-      "level": 1,
-      "links": [],
-      "section_id": "f3df0b28764f01a0",
-      "section_path": [
-        "Dispute prevention"
-      ],
-      "source_order": 49
     },
     {
       "body": null,
@@ -7476,7 +6753,7 @@
       "section_path": [
         "Money management"
       ],
-      "source_order": 50
+      "source_order": 47
     },
     {
       "body": "Embedded payments for platforms and marketplaces.\nLaunch faster with Stripe-hosted or prebuilt embedded components.\nSave time by using tooling from Stripe for onboarding, risk, tax forms and more.\nGrow revenue by monetizing payments.",
@@ -7487,7 +6764,7 @@
       "section_path": [
         "Connect"
       ],
-      "source_order": 51
+      "source_order": 48
     },
     {
       "body": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a\nrevenue share from Stripe.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
@@ -7498,7 +6775,7 @@
       "section_path": [
         "Stripe handles pricing for your users"
       ],
-      "source_order": 52
+      "source_order": 49
     },
     {
       "body": "Streamline critical business processes with modular billing, tax, revenue reporting, and data analysis tools that work seamlessly together.",
@@ -7509,7 +6786,7 @@
       "section_path": [
         "Revenue and finance automation"
       ],
-      "source_order": 53
+      "source_order": 50
     },
     {
       "body": "Subscription management software for recurring revenue models² and one-time billing.\nRespond to user demand faster with flexible pricing models.\nIncrease revenue and reduce churn with Smart Retries and recovery workflow automations.\nSave engineering time with no-code tools or our composable APIs.\nChoose a plan",
@@ -7520,10 +6797,10 @@
       "section_path": [
         "Billing"
       ],
-      "source_order": 54
+      "source_order": 51
     },
     {
-      "body": "Annual subscription. Paid monthly. Based on a volume tier that works for your business.\nStarting at\nAED2,200.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
+      "body": "Monthly subscription for more predictable pricing. Best for businesses with higher payment volumes looking to maximize savings.\nStarting at\nAED40.00\nper month, cancel any time",
       "heading": "Pay monthly",
       "level": 1,
       "links": [],
@@ -7531,7 +6808,7 @@
       "section_path": [
         "Pay monthly"
       ],
-      "source_order": 55
+      "source_order": 73
     },
     {
       "body": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nAED0.066\nper additional step",
@@ -7553,7 +6830,7 @@
       "section_path": [
         "Metronome"
       ],
-      "source_order": 57
+      "source_order": 54
     },
     {
       "body": "For teams launching usage-based products. Pay as your business grows.\nIncluded\n$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
@@ -7564,7 +6841,7 @@
       "section_path": [
         "Startup"
       ],
-      "source_order": 58
+      "source_order": 55
     },
     {
       "body": null,
@@ -7575,7 +6852,7 @@
       "section_path": [
         "Custom"
       ],
-      "source_order": 59
+      "source_order": 56
     },
     {
       "body": "Global invoicing software.\nCreate, customize, and send an invoice in minutes—no code required.\nSave time with automated accounts receivable and invoicing workflows.\nConfigure invoices for any use case.",
@@ -7586,7 +6863,7 @@
       "section_path": [
         "Invoicing"
       ],
-      "source_order": 60
+      "source_order": 57
     },
     {
       "body": "Invoicing features to get started quickly.\n0.4%\nper paid invoice\nSee pricing details",
@@ -7597,7 +6874,7 @@
       "section_path": [
         "Starter"
       ],
-      "source_order": 61
+      "source_order": 58
     },
     {
       "body": "Grow faster with global, all-in-one tax compliance.\nGet compliant quickly with no-code and low-code setups.\nReceive alerts when you reach a sales tax, VAT, or GST threshold and need to collect taxes.\nScale with confidence by automating tax calculations and collections in 100+ countries.\nIncrease your finance team’s efficiency by easily registering and filing taxes in 90+ countries.\nChoose a plan",
@@ -7608,7 +6885,7 @@
       "section_path": [
         "Tax"
       ],
-      "source_order": 62
+      "source_order": 59
     },
     {
       "body": "All-in-one tax compliance —including automated threshold monitoring, registrations, calculations, and filings.\nStarting at\nAED330.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.",
@@ -7619,7 +6896,7 @@
       "section_path": [
         "Tax Complete"
       ],
-      "source_order": 63
+      "source_order": 60
     },
     {
       "body": "This plan includes only automated tax calculations for businesses that operate in limited regions.\nNo-code integration\n0.5%\nper transaction, where you’re registered to collect taxes\nTaxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
@@ -7630,7 +6907,7 @@
       "section_path": [
         "Tax Basic"
       ],
-      "source_order": 64
+      "source_order": 61
     },
     {
       "body": "An interactive SQL environment for analyzing your Stripe data and creating custom reports.\nGet faster, more comprehensive insights using SQL or AI-powered natural language prompts.\nMake confident, data-driven decisions with fully customizable reporting.\nKeep teams in sync and save time with scheduled reports.",
@@ -7641,7 +6918,7 @@
       "section_path": [
         "Stripe Sigma"
       ],
-      "source_order": 65
+      "source_order": 62
     },
     {
       "body": "Flexible monthly subscription–cancel anytime. Best for businesses with low or unpredictable payment volume.\nTry for free for 30 days\nAED90.00\nper month\nSubscription and cancellation\nterms apply.",
@@ -7652,7 +6929,7 @@
       "section_path": [
         "Monthly subscription"
       ],
-      "source_order": 72
+      "source_order": 69
     },
     {
       "body": "Annual subscription, paid monthly. Best for businesses with higher payment volume looking to maximize savings.\nTry for free for 30 days\nStarting at\nAED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
@@ -7663,7 +6940,7 @@
       "section_path": [
         "Annual subscription"
       ],
-      "source_order": 73
+      "source_order": 70
     },
     {
       "body": "Send Stripe data and reports directly to your data warehouse or cloud storage.\nIncludes access to Stripe Sigma.\nSet up your pipeline in minutes, and automate data delivery—no code required.\nSpeed up your financial close, and access more complete business insights.\nGet insights faster and fully customizable reporting with Stripe Sigma.",
@@ -7673,6 +6950,39 @@
       "section_id": "a09f293d40ec3f89",
       "section_path": [
         "Data Pipeline"
+      ],
+      "source_order": 65
+    },
+    {
+      "body": null,
+      "heading": "Monthly subscription",
+      "level": 1,
+      "links": [],
+      "section_id": "a63d71ea48a69048",
+      "section_path": [
+        "Monthly subscription"
+      ],
+      "source_order": 66
+    },
+    {
+      "body": null,
+      "heading": "Annual subscription",
+      "level": 1,
+      "links": [],
+      "section_id": "f6bb0a5a9c368c8e",
+      "section_path": [
+        "Annual subscription"
+      ],
+      "source_order": 67
+    },
+    {
+      "body": "Automated revenue reporting to streamline accrual accounting.\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.\nChoose a plan",
+      "heading": "Revenue Recognition",
+      "level": 1,
+      "links": [],
+      "section_id": "9bb446322114bde8",
+      "section_path": [
+        "Revenue Recognition"
       ],
       "source_order": 68
     },
@@ -7699,39 +7009,6 @@
       "source_order": 70
     },
     {
-      "body": "Automated revenue reporting to streamline accrual accounting.\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.\nChoose a plan",
-      "heading": "Revenue Recognition",
-      "level": 1,
-      "links": [],
-      "section_id": "9bb446322114bde8",
-      "section_path": [
-        "Revenue Recognition"
-      ],
-      "source_order": 71
-    },
-    {
-      "body": null,
-      "heading": "Monthly subscription",
-      "level": 1,
-      "links": [],
-      "section_id": "a63d71ea48a69048",
-      "section_path": [
-        "Monthly subscription"
-      ],
-      "source_order": 72
-    },
-    {
-      "body": null,
-      "heading": "Annual subscription",
-      "level": 1,
-      "links": [],
-      "section_id": "f6bb0a5a9c368c8e",
-      "section_path": [
-        "Annual subscription"
-      ],
-      "source_order": 73
-    },
-    {
       "body": null,
       "heading": "More",
       "level": 1,
@@ -7739,6 +7016,39 @@
       "section_id": "187897ce0afcf20b",
       "section_path": [
         "More"
+      ],
+      "source_order": 71
+    },
+    {
+      "body": "AI-powered fraud and abuse protection.\nReduce fraud across payment methods with AI powered by the Stripe network.\nFlag and prevent suspicious accounts from joining your platform.\nStay ahead of emerging fraud and stop abuse across the entire customer lifecycle.\nGet started with zero integration, or access Radar’s intelligence via API.\nChoose a plan",
+      "heading": "Radar",
+      "level": 1,
+      "links": [],
+      "section_id": "ff2e963ff6d0c33a",
+      "section_path": [
+        "Radar"
+      ],
+      "source_order": 72
+    },
+    {
+      "body": null,
+      "heading": "Pay monthly",
+      "level": 1,
+      "links": [],
+      "section_id": "a37e938862138917",
+      "section_path": [
+        "Pay monthly"
+      ],
+      "source_order": 73
+    },
+    {
+      "body": null,
+      "heading": "Pay as you go",
+      "level": 1,
+      "links": [],
+      "section_id": "f2a0ffcd487499d2",
+      "section_path": [
+        "Pay as you go"
       ],
       "source_order": 74
     },
@@ -7787,7 +7097,7 @@
       "source_order": 78
     },
     {
-      "body": "Global payments\nMoney management\nRevenue and finance automation\nMore\nGlobal payments\nPayments\nPayment Links\nCheckout\nRadar\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nAtlas\nWorkflows",
+      "body": "Global payments\nMoney management\nRevenue and finance automation\nMore\nGlobal payments\nPayments\nPayment Links\nCheckout\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nTax\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nRadar\nAtlas\nWorkflows",
       "heading": "Navigate to:",
       "level": 3,
       "links": [],
@@ -8202,7 +7512,7 @@
       "source_order": 115
     },
     {
-      "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
       "heading": "Explore the docs",
       "level": 1,
       "links": [],
@@ -8224,7 +7534,7 @@
       "source_order": 117
     },
     {
-      "body": "Enterprises\nStartups\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nPlatforms\nSaaS\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail",
+      "body": "Enterprises\nStartups\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail",
       "heading": "Solutions",
       "level": 1,
       "links": [],
@@ -8268,7 +7578,7 @@
       "source_order": 121
     },
     {
-      "body": "Product roadmap\nJobs\nNewsroom\nStripe Press",
+      "body": "Product roadmap\nCareers\nNewsroom\nStripe Press",
       "heading": "Company",
       "level": 1,
       "links": [],
@@ -8293,13 +7603,13 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "03e4606501bdfec31e315701c79f1651d50396a1f605bd7a84604455e2278260",
+      "content_sha256": "07d3549050dd8dc5079a6607badfe79003715f8b5870df7541a5c4b80cd56022",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
       "effective_url": "https://stripe.com/ae/pricing",
       "etag": null,
-      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payme",
+      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Radar Fraud prevention Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Careers Newsroom Stripe Press Contact Become a par",
       "last_modified": null,
       "page_id": "pricing",
       "page_title": "Pricing & Fees",
@@ -8309,13 +7619,13 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "72dba82676140f60f38e1cf767276195f0da75caaf424d5ffe0b0950f34bf2fa",
+      "content_sha256": "07d3549050dd8dc5079a6607badfe79003715f8b5870df7541a5c4b80cd56022",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
       "effective_url": "https://stripe.com/ae/pricing",
       "etag": null,
-      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 100+ Radar Fraud prevention Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money Management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Community Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Jobs Newsroom Stripe Press Contact Become a partner Payme",
+      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Radar Fraud prevention Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Careers Newsroom Stripe Press Contact Become a par",
       "last_modified": null,
       "page_id": "pricing",
       "page_title": "Pricing & Fees",
@@ -8429,7 +7739,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 51,
+      "source_order": 46,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8470,7 +7780,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 58,
+      "source_order": 53,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8511,7 +7821,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 59,
+      "source_order": 54,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": []
@@ -8537,7 +7847,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 63,
+      "source_order": 58,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8578,7 +7888,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 64,
+      "source_order": 59,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8618,8 +7928,8 @@
       "section_path": [
         "Explore the docs"
       ],
-      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nChina\n简体中文\nEnglish\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 65,
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_order": 60,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8660,7 +7970,7 @@
         "Instant payouts"
       ],
       "source_evidence": "1.5%\nof Instant Payouts volume\nMinimum fee of AED2.00",
-      "source_order": 22,
+      "source_order": 26,
       "source_text": "standard schedule for free.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8701,7 +8011,7 @@
         "Startup"
       ],
       "source_evidence": "billing allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 46,
+      "source_order": 41,
       "source_text": "$100,000.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8742,7 +8052,7 @@
         "Annual subscription"
       ],
       "source_evidence": "AED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 54,
+      "source_order": 49,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [

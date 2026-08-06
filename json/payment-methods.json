@@ -110,12 +110,12 @@
       "family": "wallet",
       "fee_rule_refs": [
         "0f3422cf53b3ef97",
-        "100d3e93299506c7",
         "462fbc268970b346",
         "488d923b40e6a49a",
         "87ac886e91b38e37",
         "c9cc5a93e46ab755",
-        "d07f56ddcad0c62f"
+        "d07f56ddcad0c62f",
+        "e14155921aee89ee"
       ],
       "localized_names": [],
       "method_id": "amazon_pay",
@@ -132,8 +132,8 @@
       "display_name": "Apple Pay",
       "family": "other",
       "fee_rule_refs": [
-        "04318dd65d6355d7",
         "2284fc091680de86",
+        "535136de2f5f464e",
         "75595f206b0ec1dd",
         "aa9b7cf088265108",
         "ad76fd90f10827be",
@@ -371,6 +371,8 @@
         "3b55c9d766475a5e",
         "3c811daf79095c13",
         "407cfb4d646812c5",
+        "42889d79ad3c2caa",
+        "432aa787b70665a7",
         "48dda1f454b801e2",
         "4ab8ba22961579ce",
         "51b0e1aeb1a551cb",
@@ -387,6 +389,7 @@
         "8370d8b8042c19aa",
         "844fef2aedcb31bf",
         "89ae50007e449af2",
+        "91be45ee96e72e1a",
         "95f80830bf0d02cf",
         "9825b6e921aa3dc2",
         "98772b36e8b0a982",
@@ -397,17 +400,14 @@
         "c27290fce871e22e",
         "c30bd82e7b1e4e8f",
         "c484928ce65ac15e",
-        "c4c4a5ac2e968ab0",
         "c58bd314c653e697",
         "cd010cdd42130eee",
         "cfdb181e7071cf59",
-        "d8ad0166220f0e30",
         "e4a5d1320dad538a",
         "e71a79e81dd8d6c7",
-        "eecefeef521e93b7",
+        "ea7cf01f43c919cb",
         "f0c8493e493e1df4",
         "f1d652897351a0a3",
-        "f26b2cb0efafb0f6",
         "f4458645e2ce61ae",
         "ffaac752627e59b4"
       ],
@@ -552,11 +552,11 @@
         "097f0bc1419f9a8b",
         "09815db422d24ed1",
         "3464bf201c5dacd3",
-        "559bf04850335b60",
         "a17251b4afda11dd",
         "a3a787a0ca18e124",
         "c68a873e5318d158",
-        "dad66abc57c95f6a"
+        "dad66abc57c95f6a",
+        "e619f16f203131f7"
       ],
       "localized_names": [],
       "method_id": "google_pay",
@@ -629,6 +629,7 @@
         "4c7e9f97ff0e5fe4",
         "56cd4f28e05a1845",
         "5b16d271398bdd10",
+        "5c169448e18fe7a8",
         "5eb3d817490aed98",
         "5f1df43006a77c22",
         "605fd3377adc350d",
@@ -636,6 +637,7 @@
         "7a981d49509b1178",
         "7eeb9eea18b8124d",
         "8cfb3b8a256cf3c3",
+        "8f0f7fb293ef4a68",
         "a7fe381937836f1d",
         "a8dd7841b359b3de",
         "b6d29f5635302a30",
@@ -646,6 +648,7 @@
         "d4505bd99352c875",
         "e47e46fdb5fe27e9",
         "ef9fd123ab920d71",
+        "f3378cc17ac125a5",
         "f724587bfeec3274",
         "fd934a84955a5398"
       ],
@@ -687,16 +690,16 @@
       "display_name": "Link",
       "family": "other",
       "fee_rule_refs": [
-        "043e45de2eb06e67",
-        "2da81e724da72f91",
+        "1bd15ce4b6506ad4",
         "401cf10bf38224e5",
         "a62a79b091dadf2f",
-        "f3086be091e4a5fa"
+        "b8723557de55bd85",
+        "b872899f44bf010d",
+        "ef798554dd4d2296"
       ],
       "localized_names": [],
       "method_id": "link",
       "source_refs": [
-        "https://stripe.com/pricing",
         "https://stripe.com/pricing/local-payment-methods"
       ],
       "supported_account_countries": [
@@ -871,7 +874,10 @@
         "093b15c4ffae3243",
         "17fa8de0028a2155",
         "19855d065e8fb92f",
+        "1c04703e668b812e",
+        "46598fa8fc7c7a44",
         "4a6d45e523487940",
+        "527bcb6cae2e553d",
         "553bba28cd434417",
         "7e29067fc40c6b7a",
         "80b995d3ca5d6c4e",
@@ -889,6 +895,7 @@
         "https://stripe.com/en-br/pricing/local-payment-methods",
         "https://stripe.com/en-de/pricing/local-payment-methods",
         "https://stripe.com/gb/pricing/local-payment-methods",
+        "https://stripe.com/pricing",
         "https://stripe.com/pricing/local-payment-methods"
       ],
       "supported_account_countries": [
@@ -963,10 +970,8 @@
         "1347abd155e5937a",
         "1a199127890bd564",
         "41af53be1bcedf26",
-        "48e1aa93e8df23dd",
         "59006e33f1905bec",
         "940985297b852cb4",
-        "a414deba655e37ee",
         "b1872bdbcb4e5d80",
         "b2e5cf4d3292e293",
         "b55c6664e2bf837e"
@@ -975,13 +980,11 @@
       "method_id": "satispay",
       "source_refs": [
         "https://stripe.com/au/pricing/local-payment-methods",
-        "https://stripe.com/en-de/pricing/local-payment-methods",
         "https://stripe.com/gb/pricing/local-payment-methods",
         "https://stripe.com/pricing/local-payment-methods"
       ],
       "supported_account_countries": [
         "AU",
-        "DE",
         "GB",
         "US"
       ]
