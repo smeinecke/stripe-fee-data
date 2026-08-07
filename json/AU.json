@@ -23625,7 +23625,7 @@
       "source_order": 94
     },
     {
-      "body": "Work with our sales team to design a solution that meets your needs:\nPayments\nPayments\nRadar\nRadar\nConnect\nConnect\nInvoicing\nInvoicing\nBilling\nBilling\nand more",
+      "body": "Work with our sales team to design a solution that meets your needs:\nPayments\nRadar\nConnect\nInvoicing\nBilling\nand more",
       "heading": "Build your custom package",
       "level": 1,
       "links": [],
@@ -23758,7 +23758,7 @@
       "source_order": 106
     },
     {
-      "body": "Payments\nPayments\nStripe Sigma\nStripe Sigma\nBMW logo\nRead story",
+      "body": "Payments\nStripe Sigma\nBMW logo\nRead story",
       "heading": "Products used",
       "level": 1,
       "links": [],
@@ -26080,7 +26080,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "146184f6d26e8a55f2999dd7bb65665cbd948fbbe4c42c262277bee6b48c32ac",
+      "content_sha256": "bd7fb9d7190e53b4851f34e5097997e304fb512cfbca6f894ca8884ec662021c",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -26096,7 +26096,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "3a0591e2ec1a331a56c4d236f15974550a53032eaea1ee3e82c66883c7d5e39f",
+      "content_sha256": "9826d9e36e04ddfcf118d20135164e87f77b6d8daa8e458c6e3507ea9b6ec638",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",

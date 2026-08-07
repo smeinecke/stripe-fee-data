@@ -26628,16 +26628,16 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "3.6% per successful transaction for domestic cards",
-              "Card payments 3.6% per successful transaction for domestic cards"
+              "3.6% per successful transaction for cards",
+              "Card payments 3.6% per successful transaction for cards"
             ],
             "source_entry_ids": [
-              "24c967106a24fce7",
-              "4759ec033aa2e200"
+              "23b5fdcac9719e66",
+              "369b84f186b59fda"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "3.6% per successful transaction for domestic cards",
+          "label": "3.6% per successful transaction for cards",
           "payment_method": "card",
           "product_id": "payments",
           "provider": "stripe",

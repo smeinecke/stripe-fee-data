@@ -30923,7 +30923,7 @@
       "source_order": 119
     },
     {
-      "body": "Work with our sales team to design a solution that meets your needs:\nPayments\nPayments\nRadar\nRadar\nConnect\nConnect\nInvoicing\nInvoicing\nBilling\nBilling\nand more",
+      "body": "Work with our sales team to design a solution that meets your needs:\nPayments\nRadar\nConnect\nInvoicing\nBilling\nand more",
       "heading": "Build your custom package",
       "level": 1,
       "links": [],
@@ -31056,7 +31056,7 @@
       "source_order": 131
     },
     {
-      "body": "Billing\nBilling\nRadar\nRadar\nStripe Sigma\nStripe Sigma\nBMW logo\nRead story",
+      "body": "Billing\nRadar\nStripe Sigma\nBMW logo\nRead story",
       "heading": "Products used",
       "level": 1,
       "links": [],
@@ -33901,7 +33901,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "80a266f98fc9b9d39a27d3e71be41c32392706065d71b7e855aa34d4804ffaa9",
+      "content_sha256": "d8e2399ddd1d47f99d1d11d0c1a93fdff33f5d44f600eff449541579e5f91067",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -33917,7 +33917,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "2150d9292591c8d06ad90aa00fd789ae6a84c7e166b1c155d62f101efb7b116f",
+      "content_sha256": "0a7945f255e33deda2eb5d55ccc61620dde778a2477d33262810be5e3b0a3927",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
