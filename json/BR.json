@@ -7466,7 +7466,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "5755ade506f502a7fd978f47f4572d6d044a4d102f4999da691a0af49c65791d",
+      "content_sha256": "170f799be75b623b3681c0021e2272ac6c645b004f8c506d309f0d4f06522af9",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -7482,7 +7482,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "b0d2b4aaebb6177fc35ab67b4188c01c41f33aec3477aa2dd4cc2196fab04917",
+      "content_sha256": "41c8132359ce2d57109e3fadccb35791b9107d2053efabc906ff4123d6118599",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
