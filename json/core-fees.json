@@ -9108,14 +9108,14 @@
         "free": 1,
         "ignored_non_fee": 15,
         "included": 12,
-        "informational": 7,
+        "informational": 8,
         "informational_conflicts": 20,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 203,
+        "numeric_source_entries": 204,
         "reference_only": 0,
-        "referenced_numeric_entries": 203,
-        "source_entries": 229,
+        "referenced_numeric_entries": 204,
+        "source_entries": 230,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -16846,7 +16846,7 @@
         }
       ],
       "stripe_market_code": "de",
-      "unclassified_count": 28
+      "unclassified_count": 29
     },
     {
       "account_country": "GB",
@@ -26552,14 +26552,14 @@
         "free": 1,
         "ignored_non_fee": 12,
         "included": 10,
-        "informational": 6,
+        "informational": 7,
         "informational_conflicts": 4,
         "non_calculable_rules": 0,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 108,
+        "numeric_source_entries": 109,
         "reference_only": 0,
-        "referenced_numeric_entries": 108,
-        "source_entries": 130,
+        "referenced_numeric_entries": 109,
+        "source_entries": 131,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -30415,7 +30415,7 @@
         }
       ],
       "stripe_market_code": "jp",
-      "unclassified_count": 19
+      "unclassified_count": 20
     },
     {
       "account_country": "US",
@@ -30423,15 +30423,15 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 153,
-        "conflicting_rule_identities": 25,
+        "calculable_rules": 154,
+        "conflicting_rule_identities": 23,
         "custom_pricing": 4,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 16,
         "included": 14,
         "informational": 11,
-        "informational_conflicts": 25,
+        "informational_conflicts": 23,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
         "numeric_source_entries": 272,
@@ -30444,6 +30444,97 @@
       "derivation_status": "complete",
       "locale": "en-us",
       "rules": [
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "card"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "card_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "domestic"
+            },
+            {
+              "dimension": "card_origin",
+              "evidence": null,
+              "operator": "eq",
+              "value": "domestic"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "290.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "2.9"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "2.9% + 30¢ per successful transaction for domestic cards",
+              "Card payments 2.9% + 30¢ per successful transaction for domestic cards"
+            ],
+            "source_entry_ids": [
+              "e416327e11e851fa",
+              "344d8c1bcb58a794"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "2.9% + 30¢ per successful transaction for domestic cards",
+          "payment_method": "card",
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "9dded4b573a38f84",
+          "unit": "per_transaction",
+          "variant_id": "online_domestic_cards"
+        },
         {
           "account_country": "US",
           "behavior": "conditional",
