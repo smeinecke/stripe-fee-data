@@ -149,6 +149,21 @@ jobs:
           if conclusion not in FAILURE_CONCLUSIONS:
               sys.exit(0)
 
+          # Daily Crawl has a scheduled retry at 10:00 UTC for first-attempt
+          # scheduled failures (transient connection issues). Wait for the retry
+          # attempt to complete before opening a CI failure issue.
+          if (
+              workflow_name == "Daily Crawl"
+              and event_type == "schedule"
+              and conclusion in {"failure", "timed_out"}
+              and str(attempt) == "1"
+          ):
+              print(
+                  "Daily Crawl first scheduled attempt failed; "
+                  "a retry is scheduled for 10:00 UTC. No issue created for this attempt."
+              )
+              sys.exit(0)
+
           message = format_message()
           issue_number = find_open_issue()
           if issue_number is not None:

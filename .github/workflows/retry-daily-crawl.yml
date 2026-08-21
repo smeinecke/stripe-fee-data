@@ -1,0 +1,92 @@
+name: Retry Daily Crawl
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Rerun failed Daily Crawl if first attempt
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY'
+          import json
+          import os
+          import subprocess
+          import sys
+          from datetime import date, datetime, timezone
+
+          REPO = os.environ["GITHUB_REPOSITORY"]
+          WORKFLOW_FILE = "daily-crawl.yml"
+          RETRYABLE = {"failure", "timed_out"}
+          TODAY = datetime.now(timezone.utc).date()
+
+
+          def gh(*args: str) -> str:
+              result = subprocess.run(
+                  ["gh", *args],
+                  check=True,
+                  text=True,
+                  capture_output=True,
+              )
+              return result.stdout
+
+
+          def is_today(created_at: str) -> bool:
+              ts = created_at.replace("Z", "+00:00")
+              return datetime.fromisoformat(ts).date() == TODAY
+
+
+          output = gh(
+              "run", "list",
+              "--repo", REPO,
+              "--workflow", WORKFLOW_FILE,
+              "--json", "databaseId,conclusion,runAttempt,event,status,createdAt",
+              "--limit", "10",
+          )
+          runs = json.loads(output)
+          if not runs:
+              print("No Daily Crawl runs found.")
+              sys.exit(0)
+
+          candidate = None
+          for run in runs:
+              if run.get("event") != "schedule":
+                  continue
+              if run.get("status") != "completed":
+                  continue
+              if run.get("conclusion") not in RETRYABLE:
+                  continue
+              if run.get("runAttempt") != 1:
+                  continue
+              if not is_today(run.get("createdAt", "")):
+                  continue
+              candidate = run
+              break
+
+          if candidate is None:
+              print("No first-attempt scheduled Daily Crawl failure from today to retry.")
+              sys.exit(0)
+
+          run_id = candidate["databaseId"]
+          print(
+              f"Rerunning Daily Crawl run {run_id} "
+              f"(conclusion={candidate['conclusion']}, attempt={candidate['runAttempt']})"
+          )
+          gh(
+              "run", "rerun",
+              str(run_id),
+              "--repo", REPO,
+          )
+          PY
