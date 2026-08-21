@@ -52,7 +52,7 @@ jobs:
               "run", "list",
               "--repo", REPO,
               "--workflow", WORKFLOW_FILE,
-              "--json", "databaseId,conclusion,runAttempt,event,status,createdAt",
+              "--json", "databaseId,conclusion,attempt,event,status,createdAt",
               "--limit", "10",
           )
           runs = json.loads(output)
@@ -68,7 +68,7 @@ jobs:
                   continue
               if run.get("conclusion") not in RETRYABLE:
                   continue
-              if run.get("runAttempt") != 1:
+              if run.get("attempt") != 1:
                   continue
               if not is_today(run.get("createdAt", "")):
                   continue
@@ -82,7 +82,7 @@ jobs:
           run_id = candidate["databaseId"]
           print(
               f"Rerunning Daily Crawl run {run_id} "
-              f"(conclusion={candidate['conclusion']}, attempt={candidate['runAttempt']})"
+              f"(conclusion={candidate['conclusion']}, attempt={candidate['attempt']})"
           )
           gh(
               "run", "rerun",
