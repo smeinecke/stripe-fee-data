@@ -1,6 +1,6 @@
 {
   "cache_stats": {
-    "bytes_avoided": 12432211,
+    "bytes_avoided": 12432216,
     "cache_304_responses": 0,
     "cache_dir": "/home/runner/.cache/stripe-fee-crawler/http",
     "cache_enabled": true,
@@ -18,15 +18,15 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 594,
-    "conflicting_rule_identities": 89,
+    "calculable_rules": 593,
+    "conflicting_rule_identities": 91,
     "custom_pricing": 21,
     "dropped_numeric_entries": 0,
     "free": 11,
     "ignored_non_fee": 96,
     "included": 89,
     "informational": 51,
-    "informational_conflicts": 89,
+    "informational_conflicts": 91,
     "non_calculable_rules": 8,
     "numeric_fee_candidates": 0,
     "numeric_source_entries": 1087,
