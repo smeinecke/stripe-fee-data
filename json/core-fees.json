@@ -7,21 +7,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 23,
-        "conflicting_rule_identities": 2,
+        "calculable_rules": 22,
+        "conflicting_rule_identities": 4,
         "custom_pricing": 2,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 8,
         "included": 11,
         "informational": 2,
-        "informational_conflicts": 2,
+        "informational_conflicts": 4,
         "non_calculable_rules": 1,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 40,
+        "numeric_source_entries": 41,
         "reference_only": 0,
-        "referenced_numeric_entries": 40,
-        "source_entries": 61,
+        "referenced_numeric_entries": 41,
+        "source_entries": 62,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -531,59 +531,6 @@
           "rule_id": "655ee6cb434bd25d",
           "unit": "per_dispute",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "AE",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "AE"
-            },
-            {
-              "dimension": "pricing_plan",
-              "evidence": null,
-              "operator": "eq",
-              "value": "custom"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.03",
-              "basis_points": null,
-              "currency": "USD",
-              "minor_amount": "3",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "$0.03 per 3D Secure attempt for accounts with custom pricing."
-            ],
-            "source_entry_ids": [
-              "28e4eda65ba71a63"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "$0.03 per 3D Secure attempt for accounts with custom pricing.",
-          "payment_method": null,
-          "product_id": "three_d_secure",
-          "provider": "stripe",
-          "rule_id": "c67fac5546614a33",
-          "unit": "per_attempt",
-          "variant_id": "custom_pricing"
         },
         {
           "account_country": "AE",
@@ -1486,21 +1433,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 91,
-        "conflicting_rule_identities": 14,
+        "calculable_rules": 90,
+        "conflicting_rule_identities": 16,
         "custom_pricing": 2,
         "dropped_numeric_entries": 0,
         "free": 3,
         "ignored_non_fee": 15,
         "included": 11,
         "informational": 10,
-        "informational_conflicts": 14,
+        "informational_conflicts": 16,
         "non_calculable_rules": 1,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 164,
+        "numeric_source_entries": 165,
         "reference_only": 0,
-        "referenced_numeric_entries": 164,
-        "source_entries": 191,
+        "referenced_numeric_entries": 165,
+        "source_entries": 192,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -2333,59 +2280,6 @@
           "rule_id": "a26bd497c7d7aeef",
           "unit": "per_dispute",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "AU",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "AU"
-            },
-            {
-              "dimension": "pricing_plan",
-              "evidence": null,
-              "operator": "eq",
-              "value": "custom"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.04",
-              "basis_points": null,
-              "currency": "AUD",
-              "minor_amount": "4",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "A$0.04 per 3D Secure attempt for accounts with custom pricing."
-            ],
-            "source_entry_ids": [
-              "69578a29bc37b9a9"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "A$0.04 per 3D Secure attempt for accounts with custom pricing.",
-          "payment_method": null,
-          "product_id": "three_d_secure",
-          "provider": "stripe",
-          "rule_id": "b4446c456c5b6945",
-          "unit": "per_attempt",
-          "variant_id": "custom_pricing"
         },
         {
           "account_country": "AU",
@@ -7818,21 +7712,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 21,
-        "conflicting_rule_identities": 2,
+        "calculable_rules": 20,
+        "conflicting_rule_identities": 4,
         "custom_pricing": 2,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 8,
         "included": 10,
         "informational": 3,
-        "informational_conflicts": 2,
+        "informational_conflicts": 4,
         "non_calculable_rules": 0,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 44,
+        "numeric_source_entries": 45,
         "reference_only": 0,
-        "referenced_numeric_entries": 44,
-        "source_entries": 65,
+        "referenced_numeric_entries": 45,
+        "source_entries": 66,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -8328,59 +8222,6 @@
           "rule_id": "5fcb8baaab38db06",
           "unit": "per_dispute",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "BR",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "BR"
-            },
-            {
-              "dimension": "pricing_plan",
-              "evidence": null,
-              "operator": "eq",
-              "value": "custom"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.10",
-              "basis_points": null,
-              "currency": "BRL",
-              "minor_amount": "10",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "R$0.10 per 3D Secure attempt for accounts with custom pricing."
-            ],
-            "source_entry_ids": [
-              "500494137a24612f"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "R$0.10 per 3D Secure attempt for accounts with custom pricing.",
-          "payment_method": null,
-          "product_id": "three_d_secure",
-          "provider": "stripe",
-          "rule_id": "d0cee4cf9425ad0f",
-          "unit": "per_attempt",
-          "variant_id": "custom_pricing"
         },
         {
           "account_country": "BR",
@@ -9101,21 +8942,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 109,
-        "conflicting_rule_identities": 20,
+        "calculable_rules": 108,
+        "conflicting_rule_identities": 22,
         "custom_pricing": 6,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 15,
         "included": 12,
         "informational": 8,
-        "informational_conflicts": 20,
+        "informational_conflicts": 22,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 204,
+        "numeric_source_entries": 205,
         "reference_only": 0,
-        "referenced_numeric_entries": 204,
-        "source_entries": 230,
+        "referenced_numeric_entries": 205,
+        "source_entries": 231,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -9621,59 +9462,6 @@
           "rule_id": "70906f653064b505",
           "unit": "per_dispute",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "DE",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "DE"
-            },
-            {
-              "dimension": "pricing_plan",
-              "evidence": null,
-              "operator": "eq",
-              "value": "custom"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.03",
-              "basis_points": null,
-              "currency": "EUR",
-              "minor_amount": "3",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "€0.03 per 3D Secure attempt for accounts with custom pricing."
-            ],
-            "source_entry_ids": [
-              "2465bb8769dc6ae4"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "€0.03 per 3D Secure attempt for accounts with custom pricing.",
-          "payment_method": null,
-          "product_id": "three_d_secure",
-          "provider": "stripe",
-          "rule_id": "a6111b61bcf1c740",
-          "unit": "per_attempt",
-          "variant_id": "custom_pricing"
         },
         {
           "account_country": "DE",
@@ -16854,21 +16642,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 118,
-        "conflicting_rule_identities": 22,
+        "calculable_rules": 117,
+        "conflicting_rule_identities": 24,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 15,
         "included": 12,
         "informational": 9,
-        "informational_conflicts": 22,
+        "informational_conflicts": 24,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 224,
+        "numeric_source_entries": 225,
         "reference_only": 0,
-        "referenced_numeric_entries": 224,
-        "source_entries": 254,
+        "referenced_numeric_entries": 225,
+        "source_entries": 255,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -17226,59 +17014,6 @@
           "rule_id": "e346a6e4d9b674a2",
           "unit": "per_dispute",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "GB",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "GB"
-            },
-            {
-              "dimension": "pricing_plan",
-              "evidence": null,
-              "operator": "eq",
-              "value": "custom"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.03",
-              "basis_points": null,
-              "currency": "GBP",
-              "minor_amount": "3",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "£0.03 per 3D Secure attempt for accounts with custom pricing."
-            ],
-            "source_entry_ids": [
-              "24311163b67abec2"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "£0.03 per 3D Secure attempt for accounts with custom pricing.",
-          "payment_method": null,
-          "product_id": "three_d_secure",
-          "provider": "stripe",
-          "rule_id": "740719bac43930be",
-          "unit": "per_attempt",
-          "variant_id": "custom_pricing"
         },
         {
           "account_country": "GB",
@@ -26545,21 +26280,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 59,
-        "conflicting_rule_identities": 4,
+        "calculable_rules": 58,
+        "conflicting_rule_identities": 6,
         "custom_pricing": 2,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 12,
         "included": 10,
         "informational": 7,
-        "informational_conflicts": 4,
+        "informational_conflicts": 6,
         "non_calculable_rules": 0,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 109,
+        "numeric_source_entries": 110,
         "reference_only": 0,
-        "referenced_numeric_entries": 109,
-        "source_entries": 131,
+        "referenced_numeric_entries": 110,
+        "source_entries": 132,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -27336,59 +27071,6 @@
           "rule_id": "008cf978fe3348ed",
           "unit": "per_dispute",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            },
-            {
-              "dimension": "pricing_plan",
-              "evidence": null,
-              "operator": "eq",
-              "value": "custom"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "3",
-              "basis_points": null,
-              "currency": "JPY",
-              "minor_amount": "3",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "¥3 per 3D Secure attempt for accounts with custom pricing."
-            ],
-            "source_entry_ids": [
-              "9e832f7c5af0e5d4"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "¥3 per 3D Secure attempt for accounts with custom pricing.",
-          "payment_method": null,
-          "product_id": "three_d_secure",
-          "provider": "stripe",
-          "rule_id": "75c09c994fff0c30",
-          "unit": "per_attempt",
-          "variant_id": "custom_pricing"
         },
         {
           "account_country": "JP",
@@ -30423,21 +30105,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 154,
-        "conflicting_rule_identities": 23,
+        "calculable_rules": 153,
+        "conflicting_rule_identities": 25,
         "custom_pricing": 4,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 16,
         "included": 14,
         "informational": 11,
-        "informational_conflicts": 23,
+        "informational_conflicts": 25,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 272,
+        "numeric_source_entries": 273,
         "reference_only": 0,
-        "referenced_numeric_entries": 272,
-        "source_entries": 301,
+        "referenced_numeric_entries": 273,
+        "source_entries": 302,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -31246,59 +30928,6 @@
           "rule_id": "0ecd52d9d7c01248",
           "unit": "per_dispute",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "pricing_plan",
-              "evidence": null,
-              "operator": "eq",
-              "value": "custom"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.03",
-              "basis_points": null,
-              "currency": "USD",
-              "minor_amount": "3",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "$0.03 per 3D Secure attempt for accounts with custom pricing."
-            ],
-            "source_entry_ids": [
-              "28e4eda65ba71a63"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "$0.03 per 3D Secure attempt for accounts with custom pricing.",
-          "payment_method": null,
-          "product_id": "three_d_secure",
-          "provider": "stripe",
-          "rule_id": "101b3c86004e4a6d",
-          "unit": "per_attempt",
-          "variant_id": "custom_pricing"
         },
         {
           "account_country": "US",

@@ -3,21 +3,21 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 23,
-    "conflicting_rule_identities": 2,
+    "calculable_rules": 22,
+    "conflicting_rule_identities": 4,
     "custom_pricing": 2,
     "dropped_numeric_entries": 0,
     "free": 1,
     "ignored_non_fee": 8,
     "included": 11,
     "informational": 2,
-    "informational_conflicts": 2,
+    "informational_conflicts": 4,
     "non_calculable_rules": 1,
     "numeric_fee_candidates": 0,
-    "numeric_source_entries": 40,
+    "numeric_source_entries": 41,
     "reference_only": 0,
-    "referenced_numeric_entries": 40,
-    "source_entries": 61,
+    "referenced_numeric_entries": 41,
+    "source_entries": 62,
     "unclassified_fee_candidates": 0,
     "unsupported_fee_shapes": 0
   },
@@ -1414,11 +1414,19 @@
       "classification_evidence": [
         "product=three_d_secure",
         "variant=custom_pricing",
+        "channel=online",
         "account_country=AE",
-        "pricing_plan=custom"
+        "pricing_plan=custom",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
         {
           "dimension": "account_country",
           "evidence": null,
@@ -1432,7 +1440,7 @@
           "value": "custom"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "28e4eda65ba71a63"
       ],
@@ -1479,7 +1487,7 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c67fac5546614a33",
+      "rule_id": "4cc73ff75867aa44",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1490,6 +1498,110 @@
       "source_text": "$0.03 per 3D Secure attempt for accounts with custom pricing.",
       "source_texts": [
         "$0.03 per 3D Secure attempt for accounts with custom pricing."
+      ],
+      "source_url": "https://stripe.com/ae/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_attempt",
+      "variant_id": "custom_pricing"
+    },
+    {
+      "account_country": "AE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=three_d_secure",
+        "variant=custom_pricing",
+        "channel=online",
+        "account_country=AE",
+        "pricing_plan=custom",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AE"
+        },
+        {
+          "dimension": "pricing_plan",
+          "evidence": null,
+          "operator": "eq",
+          "value": "custom"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "e730fcb25f848484"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "e730fcb25f848484",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.12",
+          "basis_points": null,
+          "currency": "USD",
+          "minor_amount": "12",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "e730fcb25f848484",
+          "source_text": "$0.12 per standalone 3DS attempt Custom pricing available. to learn more",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "$0.12 per standalone 3DS attempt Custom pricing available. to learn more"
+        ],
+        "source_entry_ids": [
+          "e730fcb25f848484"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "0.12",
+      "fixed_amount_minor": "12",
+      "fixed_currency": "USD",
+      "label": "$0.12 per standalone 3DS attempt Custom pricing available. to learn more",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "three_d_secure",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "three_d_secure",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "6c229ba7cf6263e8",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "e730fcb25f848484",
+          "text": "$0.12 per standalone 3DS attempt Custom pricing available. to learn more"
+        }
+      ],
+      "source_text": "$0.12 per standalone 3DS attempt Custom pricing available. to learn more",
+      "source_texts": [
+        "$0.12 per standalone 3DS attempt Custom pricing available. to learn more"
       ],
       "source_url": "https://stripe.com/ae/pricing",
       "transaction_amount_max": null,
@@ -4436,7 +4548,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.",
+      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper standalone 3DS attempt\nRun 3D Secure authentication through Stripe while another provider processes the payment.\nCustom pricing available. to learn more",
       "source_order": 15,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
@@ -4475,7 +4587,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "$0.03\nper 3D Secure attempt for accounts with custom pricing.",
+      "source_evidence": "$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper standalone 3DS attempt\nRun 3D Secure authentication through Stripe while another provider processes the payment.\nCustom pricing available. to learn more",
       "source_order": 16,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
@@ -4514,7 +4626,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "",
+      "source_evidence": "Standalone 3DS\n$0.12\nper standalone 3DS attempt\nRun 3D Secure authentication through Stripe while another provider processes the payment.\nCustom pricing available. to learn more",
       "source_order": 17,
       "source_text": "$0.03 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/ae/pricing",
@@ -4541,6 +4653,45 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
+      "entry_id": "e730fcb25f848484",
+      "fee_category": "3D Secure authentication",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "3D Secure authentication",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "3D Secure authentication"
+      ],
+      "source_evidence": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper standalone 3DS attempt\nRun 3D Secure authentication through Stripe while another provider processes the payment.\nCustom pricing available. to learn more",
+      "source_order": 18,
+      "source_text": "$0.12 per standalone 3DS attempt Custom pricing available. to learn more",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": "0.12",
+          "basis_points": null,
+          "currency": "USD",
+          "exactness": "custom",
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "0.12",
+          "token_id": "74c1840cdf37ad79",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
       "entry_id": "bce7cbd9f0954af6",
       "fee_category": "Authorization Boost",
       "footnotes": [],
@@ -4554,7 +4705,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 18,
+      "source_order": 19,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4593,7 +4744,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 19,
+      "source_order": 20,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4632,7 +4783,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "",
-      "source_order": 20,
+      "source_order": 21,
       "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4671,7 +4822,7 @@
         "USD payouts"
       ],
       "source_evidence": "Minimum fee of $25.00",
-      "source_order": 21,
+      "source_order": 22,
       "source_text": "1% of USD payout volume",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4710,7 +4861,7 @@
         "USD payouts"
       ],
       "source_evidence": "",
-      "source_order": 22,
+      "source_order": 23,
       "source_text": "Minimum fee of $25.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4749,7 +4900,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 23,
+      "source_order": 24,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4788,7 +4939,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Customers will be presented a conversion fee starting at\n2%",
-      "source_order": 24,
+      "source_order": 25,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4827,7 +4978,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "",
-      "source_order": 25,
+      "source_order": 26,
       "source_text": "Customers will be presented a conversion fee starting at 2%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4866,7 +5017,7 @@
         "Instant payouts"
       ],
       "source_evidence": "1.5%\nof Instant Payouts volume\nMinimum fee of AED2.00",
-      "source_order": 26,
+      "source_order": 27,
       "source_text": "standard schedule for free.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4905,7 +5056,7 @@
         "Instant payouts"
       ],
       "source_evidence": "Minimum fee of AED2.00",
-      "source_order": 27,
+      "source_order": 28,
       "source_text": "1.5% of Instant Payouts volume",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4944,7 +5095,7 @@
         "Instant payouts"
       ],
       "source_evidence": "",
-      "source_order": 28,
+      "source_order": 29,
       "source_text": "Minimum fee of AED2.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4983,7 +5134,7 @@
         "Accept payments"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 29,
+      "source_order": 30,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5022,7 +5173,7 @@
         "Accept payments"
       ],
       "source_evidence": "",
-      "source_order": 30,
+      "source_order": 31,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5061,7 +5212,7 @@
         "Custom domain"
       ],
       "source_evidence": "",
-      "source_order": 31,
+      "source_order": 32,
       "source_text": "$10.00 per month",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5100,7 +5251,7 @@
         "Post-payment invoices"
       ],
       "source_evidence": "on transaction total\n$2.00\ncap per invoice",
-      "source_order": 32,
+      "source_order": 33,
       "source_text": "0.4%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5139,7 +5290,7 @@
         "Post-payment invoices"
       ],
       "source_evidence": "",
-      "source_order": 33,
+      "source_order": 34,
       "source_text": "$2.00 cap per invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5178,7 +5329,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 34,
+      "source_order": 35,
       "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5217,7 +5368,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 35,
+      "source_order": 36,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5256,7 +5407,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "starting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 36,
+      "source_order": 37,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5295,7 +5446,7 @@
         "Pay monthly"
       ],
       "source_evidence": "",
-      "source_order": 37,
+      "source_order": 38,
       "source_text": "AED40.00 per month, cancel any time",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5334,7 +5485,7 @@
         "Pay as you go"
       ],
       "source_evidence": "10,000 steps per month\nAED0.066\nper additional step",
-      "source_order": 38,
+      "source_order": 39,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5373,7 +5524,7 @@
         "Pay as you go"
       ],
       "source_evidence": "",
-      "source_order": 39,
+      "source_order": 40,
       "source_text": "AED0.066 per additional step",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5412,7 +5563,7 @@
         "Startup"
       ],
       "source_evidence": "$100,000.00\nbilling allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 40,
+      "source_order": 41,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5451,7 +5602,7 @@
         "Startup"
       ],
       "source_evidence": "billing allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 41,
+      "source_order": 42,
       "source_text": "$100,000.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5490,7 +5641,7 @@
         "Starter"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 42,
+      "source_order": 43,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5529,7 +5680,7 @@
         "Tax Complete"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 43,
+      "source_order": 44,
       "source_text": "AED330.00 per month, 1-year contract",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5568,7 +5719,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 44,
+      "source_order": 45,
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5607,7 +5758,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 45,
+      "source_order": 46,
       "source_text": "AED2.00 per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5646,7 +5797,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 46,
+      "source_order": 47,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5685,7 +5836,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "AED90.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 47,
+      "source_order": 48,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5724,7 +5875,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 48,
+      "source_order": 49,
       "source_text": "AED90.00 per month",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5763,7 +5914,7 @@
         "Annual subscription"
       ],
       "source_evidence": "AED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 49,
+      "source_order": 50,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5802,7 +5953,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 50,
+      "source_order": 51,
       "source_text": "AED700.00 per month, 1-year contract",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5841,7 +5992,7 @@
         "Atlas"
       ],
       "source_evidence": "",
-      "source_order": 51,
+      "source_order": 52,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5880,7 +6031,7 @@
         "Incorporate your company"
       ],
       "source_evidence": "one-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 52,
+      "source_order": 53,
       "source_text": "$500.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5919,7 +6070,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 53,
+      "source_order": 54,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5958,7 +6109,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 54,
+      "source_order": 55,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": []
@@ -5982,7 +6133,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 55,
+      "source_order": 56,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6021,7 +6172,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 56,
+      "source_order": 57,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6060,7 +6211,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 57,
+      "source_order": 58,
       "source_text": "+1%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6099,7 +6250,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 58,
+      "source_order": 59,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6138,7 +6289,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 59,
+      "source_order": 60,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6177,7 +6328,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 60,
+      "source_order": 61,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6281,7 +6432,7 @@
       "source_order": 9
     },
     {
-      "body": "Product roadmap\nSee what’s ahead\nRadar\nFraud prevention\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nCareers\nNewsroom\nStripe Press\nContact\nBecome a partner",
+      "body": "Product roadmap\nSee what’s ahead\nRadar\nFraud prevention\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nFintech\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nCareers\nNewsroom\nStripe Press\nContact\nBecome a partner",
       "heading": "More",
       "level": 1,
       "links": [],
@@ -6591,7 +6742,7 @@
       "source_order": 32
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper standalone 3DS attempt\nRun 3D Secure authentication through Stripe while another provider processes the payment.\nCustom pricing available. to learn more",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -7534,7 +7685,7 @@
       "source_order": 117
     },
     {
-      "body": "Enterprises\nStartups\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nAI companies\nCreator economy\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail",
+      "body": "Enterprises\nStartups\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nAI companies\nCreator economy\nFintech\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail",
       "heading": "Solutions",
       "level": 1,
       "links": [],
@@ -7603,13 +7754,13 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "8f7d765ad232eb54ef90fa92433556de2fb4915f64adc27f5be363e350fe4e92",
+      "content_sha256": "22f1a38a69210134699eb4c532b1623238189ab77e3830905a35b60f1511eab8",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
       "effective_url": "https://stripe.com/ae/pricing",
       "etag": null,
-      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Radar Fraud prevention Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Careers Newsroom Stripe Press Contact Become a par",
+      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Radar Fraud prevention Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Fintech Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Careers Newsroom Stripe Press Contact Beco",
       "last_modified": null,
       "page_id": "pricing",
       "page_title": "Pricing & Fees",
@@ -7619,13 +7770,13 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "c391149b83c5164c46c07dde467357acfdea0102626a60c412c7370263d02223",
+      "content_sha256": "92a37a3db54f076c55e62e51d5a7a55ad8ce1043a5141b789ffa96f1fd61c6eb",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
       "effective_url": "https://stripe.com/ae/pricing",
       "etag": null,
-      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Radar Fraud prevention Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Careers Newsroom Stripe Press Contact Become a par",
+      "evidence_text": "Chat with Stripe sales 8 sales reps available We're here to discuss your business needs. Chat now with sales Pricing & Fees Stripe logo Stripe logo Back Payments Payments Online payments Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Authorization Boost Acceptance optimizations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Crypto Wallet, stablecoin issuing, and card infrastructure Crypto Onramp Embeddable crypto purchases Platforms and marketplaces Connect Payments for platforms More Product roadmap See what’s ahead Radar Fraud prevention Atlas Startup incorporation Climate Carbon removal Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto Ecommerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Fintech Gaming Hospitality, travel, and leisure Insurance Media and entertainment Nonprofits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessions annual conference Careers Newsroom Stripe Press Contact Beco",
       "last_modified": null,
       "page_id": "pricing",
       "page_title": "Pricing & Fees",
@@ -7739,7 +7890,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 46,
+      "source_order": 47,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7780,7 +7931,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 53,
+      "source_order": 54,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7821,7 +7972,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 54,
+      "source_order": 55,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": []
@@ -7847,7 +7998,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 58,
+      "source_order": 59,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7888,7 +8039,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 59,
+      "source_order": 60,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7929,7 +8080,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 60,
+      "source_order": 61,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7970,7 +8121,7 @@
         "Instant payouts"
       ],
       "source_evidence": "1.5%\nof Instant Payouts volume\nMinimum fee of AED2.00",
-      "source_order": 26,
+      "source_order": 27,
       "source_text": "standard schedule for free.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8011,7 +8162,7 @@
         "Startup"
       ],
       "source_evidence": "billing allotment\n10 million usage events\nOverages subject to additional pricing",
-      "source_order": 41,
+      "source_order": 42,
       "source_text": "$100,000.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8052,7 +8203,7 @@
         "Annual subscription"
       ],
       "source_evidence": "AED700.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 49,
+      "source_order": 50,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
