@@ -8,20 +8,20 @@
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
         "calculable_rules": 22,
-        "conflicting_rule_identities": 4,
-        "custom_pricing": 2,
+        "conflicting_rule_identities": 6,
+        "custom_pricing": 1,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 8,
-        "included": 11,
+        "included": 10,
         "informational": 2,
-        "informational_conflicts": 4,
-        "non_calculable_rules": 1,
+        "informational_conflicts": 6,
+        "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 41,
+        "numeric_source_entries": 44,
         "reference_only": 0,
-        "referenced_numeric_entries": 41,
-        "source_entries": 62,
+        "referenced_numeric_entries": 44,
+        "source_entries": 64,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -1425,7 +1425,7 @@
         }
       ],
       "stripe_market_code": "ae",
-      "unclassified_count": 11
+      "unclassified_count": 10
     },
     {
       "account_country": "AU",
@@ -1433,20 +1433,20 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 90,
+        "calculable_rules": 91,
         "conflicting_rule_identities": 16,
         "custom_pricing": 2,
         "dropped_numeric_entries": 0,
         "free": 3,
         "ignored_non_fee": 15,
-        "included": 11,
+        "included": 10,
         "informational": 10,
         "informational_conflicts": 16,
         "non_calculable_rules": 1,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 165,
+        "numeric_source_entries": 166,
         "reference_only": 0,
-        "referenced_numeric_entries": 165,
+        "referenced_numeric_entries": 166,
         "source_entries": 192,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
@@ -2640,6 +2640,53 @@
           "product_id": "platform",
           "provider": "stripe",
           "rule_id": "c13bb2ac0112e58f",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AU",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "80.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.8"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.8% of billing volume"
+            ],
+            "source_entry_ids": [
+              "ce4d440987f07de2"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.8% of billing volume",
+          "payment_method": null,
+          "product_id": "billing",
+          "provider": "stripe",
+          "rule_id": "bdce557a358d08dd",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -7712,21 +7759,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 20,
-        "conflicting_rule_identities": 4,
-        "custom_pricing": 2,
+        "calculable_rules": 19,
+        "conflicting_rule_identities": 7,
+        "custom_pricing": 1,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 8,
-        "included": 10,
+        "included": 9,
         "informational": 3,
-        "informational_conflicts": 4,
-        "non_calculable_rules": 0,
+        "informational_conflicts": 7,
+        "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 45,
+        "numeric_source_entries": 48,
         "reference_only": 0,
-        "referenced_numeric_entries": 45,
-        "source_entries": 66,
+        "referenced_numeric_entries": 48,
+        "source_entries": 68,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -8544,53 +8591,6 @@
           "fee_components": [
             {
               "amount": null,
-              "basis_points": "70.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.7"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "0.7% of Billing volume"
-            ],
-            "source_entry_ids": [
-              "e37236dee7f129c2"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "0.7% of Billing volume",
-          "payment_method": null,
-          "product_id": "billing",
-          "provider": "stripe",
-          "rule_id": "8ebbe3d696ae9200",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "BR",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "BR"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
               "basis_points": "40.0",
               "currency": null,
               "minor_amount": null,
@@ -8934,7 +8934,7 @@
         }
       ],
       "stripe_market_code": "br",
-      "unclassified_count": 12
+      "unclassified_count": 11
     },
     {
       "account_country": "DE",
@@ -8942,21 +8942,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 108,
-        "conflicting_rule_identities": 22,
+        "calculable_rules": 111,
+        "conflicting_rule_identities": 20,
         "custom_pricing": 6,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 15,
-        "included": 12,
-        "informational": 8,
-        "informational_conflicts": 22,
+        "included": 11,
+        "informational": 9,
+        "informational_conflicts": 20,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 205,
+        "numeric_source_entries": 207,
         "reference_only": 0,
-        "referenced_numeric_entries": 205,
-        "source_entries": 231,
+        "referenced_numeric_entries": 207,
+        "source_entries": 232,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -9462,6 +9462,118 @@
           "rule_id": "70906f653064b505",
           "unit": "per_dispute",
           "variant_id": "standard"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            },
+            {
+              "dimension": "pricing_plan",
+              "evidence": null,
+              "operator": "eq",
+              "value": "custom"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.03",
+              "basis_points": null,
+              "currency": "EUR",
+              "minor_amount": "3",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "€0.03 per 3D Secure attempt for accounts with custom pricing."
+            ],
+            "source_entry_ids": [
+              "2465bb8769dc6ae4"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "€0.03 per 3D Secure attempt for accounts with custom pricing.",
+          "payment_method": null,
+          "product_id": "three_d_secure",
+          "provider": "stripe",
+          "rule_id": "a6111b61bcf1c740",
+          "unit": "per_attempt",
+          "variant_id": "custom_pricing"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            },
+            {
+              "dimension": "pricing_plan",
+              "evidence": null,
+              "operator": "eq",
+              "value": "custom"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.12",
+              "basis_points": null,
+              "currency": "EUR",
+              "minor_amount": "12",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "€0.12 per Custom pricing available. to learn more"
+            ],
+            "source_entry_ids": [
+              "28f7c1f181739d9d"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "€0.12 per Custom pricing available. to learn more",
+          "payment_method": null,
+          "product_id": "three_d_secure",
+          "provider": "stripe",
+          "rule_id": "a008df12892a7f12",
+          "unit": "per_transaction",
+          "variant_id": "custom_pricing"
         },
         {
           "account_country": "DE",
@@ -10513,6 +10625,53 @@
           "rule_id": "ed4785ee5d32dca0",
           "unit": "per_transaction",
           "variant_id": "online_international_cards"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "80.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.8"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.8% of billing volume"
+            ],
+            "source_entry_ids": [
+              "ce4d440987f07de2"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.8% of billing volume",
+          "payment_method": null,
+          "product_id": "billing",
+          "provider": "stripe",
+          "rule_id": "805bbf9fa6142239",
+          "unit": "per_transaction",
+          "variant_id": "standard"
         },
         {
           "account_country": "DE",
@@ -16634,7 +16793,7 @@
         }
       ],
       "stripe_market_code": "de",
-      "unclassified_count": 29
+      "unclassified_count": 30
     },
     {
       "account_country": "GB",
@@ -16642,21 +16801,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 117,
+        "calculable_rules": 118,
         "conflicting_rule_identities": 24,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 15,
-        "included": 12,
-        "informational": 9,
+        "included": 11,
+        "informational": 10,
         "informational_conflicts": 24,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 225,
+        "numeric_source_entries": 227,
         "reference_only": 0,
-        "referenced_numeric_entries": 225,
-        "source_entries": 255,
+        "referenced_numeric_entries": 227,
+        "source_entries": 256,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -18238,6 +18397,53 @@
           "rule_id": "e616a236e752c3e8",
           "unit": "per_transaction",
           "variant_id": "online_international_cards"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "80.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.8"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.8% of billing volume"
+            ],
+            "source_entry_ids": [
+              "ce4d440987f07de2"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.8% of billing volume",
+          "payment_method": null,
+          "product_id": "billing",
+          "provider": "stripe",
+          "rule_id": "81259fff79b81235",
+          "unit": "per_transaction",
+          "variant_id": "standard"
         },
         {
           "account_country": "GB",
@@ -24941,7 +25147,7 @@
         }
       ],
       "stripe_market_code": "gb",
-      "unclassified_count": 26
+      "unclassified_count": 27
     },
     {
       "account_country": "IN",
@@ -24949,20 +25155,20 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 19,
-        "conflicting_rule_identities": 2,
+        "calculable_rules": 18,
+        "conflicting_rule_identities": 4,
         "custom_pricing": 0,
         "dropped_numeric_entries": 0,
         "free": 0,
         "ignored_non_fee": 7,
-        "included": 9,
+        "included": 8,
         "informational": 1,
-        "informational_conflicts": 2,
+        "informational_conflicts": 4,
         "non_calculable_rules": 0,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 30,
+        "numeric_source_entries": 31,
         "reference_only": 0,
-        "referenced_numeric_entries": 30,
+        "referenced_numeric_entries": 31,
         "source_entries": 44,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
@@ -26094,53 +26300,6 @@
           "fee_components": [
             {
               "amount": null,
-              "basis_points": "70.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.7"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "0.7% of Billing volume"
-            ],
-            "source_entry_ids": [
-              "e37236dee7f129c2"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "0.7% of Billing volume",
-          "payment_method": null,
-          "product_id": "billing",
-          "provider": "stripe",
-          "rule_id": "c5499636dab53780",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "IN",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "IN"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
               "basis_points": "40.0",
               "currency": null,
               "minor_amount": null,
@@ -26280,21 +26439,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 58,
-        "conflicting_rule_identities": 6,
-        "custom_pricing": 2,
+        "calculable_rules": 57,
+        "conflicting_rule_identities": 9,
+        "custom_pricing": 1,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 12,
-        "included": 10,
-        "informational": 7,
-        "informational_conflicts": 6,
-        "non_calculable_rules": 0,
+        "included": 9,
+        "informational": 8,
+        "informational_conflicts": 9,
+        "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 110,
+        "numeric_source_entries": 114,
         "reference_only": 0,
-        "referenced_numeric_entries": 110,
-        "source_entries": 132,
+        "referenced_numeric_entries": 114,
+        "source_entries": 135,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -27425,53 +27584,6 @@
           "product_id": "platform",
           "provider": "stripe",
           "rule_id": "f32080654dea6442",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "70.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.7"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "0.7% of Billing volume"
-            ],
-            "source_entry_ids": [
-              "e37236dee7f129c2"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "0.7% of Billing volume",
-          "payment_method": null,
-          "product_id": "billing",
-          "provider": "stripe",
-          "rule_id": "f3c5a5b6dcb80c25",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -30106,20 +30218,20 @@
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
         "calculable_rules": 153,
-        "conflicting_rule_identities": 25,
-        "custom_pricing": 4,
+        "conflicting_rule_identities": 27,
+        "custom_pricing": 3,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 16,
-        "included": 14,
-        "informational": 11,
-        "informational_conflicts": 25,
-        "non_calculable_rules": 2,
+        "included": 13,
+        "informational": 12,
+        "informational_conflicts": 27,
+        "non_calculable_rules": 4,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 273,
+        "numeric_source_entries": 277,
         "reference_only": 0,
-        "referenced_numeric_entries": 273,
-        "source_entries": 302,
+        "referenced_numeric_entries": 277,
+        "source_entries": 305,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
