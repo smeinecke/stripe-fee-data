@@ -36947,7 +36947,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nGuide me\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nNot sure where to start? Tell us about your business to get personalized Stripe product recommendations.\nFind what's right for you",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -37007,7 +37007,7 @@
       "source_order": 9
     },
     {
-      "body": "Product roadmap\nSee what’s ahead\nRadar\nFraud prevention\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nIdentity\nOnline identity verification\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nNot sure where to start? Tell us about your business to get personalized Stripe product recommendations.\nFind what's right for you\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nFintech\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nCareers\nNewsroom\nStripe Press\nContact\nBecome a partner",
+      "body": "Product roadmap\nSee what’s ahead\nRadar\nFraud prevention\nAtlas\nStartup incorporation\nClimate\nCarbon removal\nIdentity\nOnline identity verification\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nFintech\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nCareers\nNewsroom\nStripe Press\nContact\nBecome a partner",
       "heading": "More",
       "level": 1,
       "links": [],
@@ -41916,7 +41916,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/pricing",
-      "content_sha256": "ae5c44c3364692e9a3ab1c8b356de67c6d61e73dee61866b88c73361da4b08f4",
+      "content_sha256": "4590d8deacff770aff84eb5f36674a5f1d1c6cb694fea64bf056a4d85ba7c8af",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
@@ -41932,7 +41932,7 @@
     },
     {
       "canonical_url": "https://stripe.com/pricing/local-payment-methods",
-      "content_sha256": "8fa4e84e14abd7f1a885036f57c0c4ae5de647ae98765e75729e6970b716e849",
+      "content_sha256": "2e648f2899e2e2fc45fb15638ea275942c6c5b8be27b07f4e88eb97c94d3531c",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
