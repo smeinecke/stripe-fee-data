@@ -3,16 +3,16 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 57,
-    "conflicting_rule_identities": 9,
+    "calculable_rules": 58,
+    "conflicting_rule_identities": 7,
     "custom_pricing": 1,
     "dropped_numeric_entries": 0,
     "free": 1,
     "ignored_non_fee": 12,
     "included": 9,
     "informational": 8,
-    "informational_conflicts": 9,
-    "non_calculable_rules": 2,
+    "informational_conflicts": 7,
+    "non_calculable_rules": 3,
     "numeric_fee_candidates": 0,
     "numeric_source_entries": 114,
     "reference_only": 0,
@@ -2304,10 +2304,9 @@
         "variant=custom_pricing",
         "channel=online",
         "account_country=JP",
-        "pricing_plan=custom",
-        "conflict: semantic identity with differing fee signature"
+        "pricing_plan=custom"
       ],
-      "classification_status": "conflict",
+      "classification_status": "calculable_rule",
       "conditions": [
         {
           "dimension": "channel",
@@ -2328,7 +2327,7 @@
           "value": "custom"
         }
       ],
-      "confidence": 0.0,
+      "confidence": 0.85,
       "contributing_entry_ids": [
         "9e832f7c5af0e5d4"
       ],
@@ -2405,13 +2404,11 @@
       "channel": "online",
       "classification_evidence": [
         "product=three_d_secure",
-        "variant=custom_pricing",
+        "variant=standard",
         "channel=online",
-        "account_country=JP",
-        "pricing_plan=custom",
-        "conflict: semantic identity with differing fee signature"
+        "account_country=JP"
       ],
-      "classification_status": "conflict",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "channel",
@@ -2424,22 +2421,16 @@
           "evidence": null,
           "operator": "eq",
           "value": "JP"
-        },
-        {
-          "dimension": "pricing_plan",
-          "evidence": null,
-          "operator": "eq",
-          "value": "custom"
         }
       ],
       "confidence": 0.0,
       "contributing_entry_ids": [
-        "37b9e52937abe154"
+        "44c9da4286c51d68"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "37b9e52937abe154",
+      "entry_id": "44c9da4286c51d68",
       "exactness": "exact",
       "fee_components": [
         {
@@ -2449,26 +2440,26 @@
           "minor_amount": "19",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "37b9e52937abe154",
-          "source_text": "¥19 per Custom pricing available. to learn more",
+          "source_entry_id": "44c9da4286c51d68",
+          "source_text": "¥19 per",
           "type": "fixed_amount",
           "value": null
         }
       ],
       "fee_evidence": {
-        "confidence": 0.85,
+        "confidence": 0.0,
         "phrases": [
-          "¥19 per Custom pricing available. to learn more"
+          "¥19 per"
         ],
         "source_entry_ids": [
-          "37b9e52937abe154"
+          "44c9da4286c51d68"
         ],
-        "type": "explicit_fee_phrase"
+        "type": "insufficient"
       },
       "fixed_amount": "19",
       "fixed_amount_minor": "19",
       "fixed_currency": "JPY",
-      "label": "¥19 per Custom pricing available. to learn more",
+      "label": "¥19 per",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "three_d_secure",
@@ -2479,23 +2470,23 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "3ff7b6202bdbd807",
+      "rule_id": "35f9c39ceafa6a01",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "37b9e52937abe154",
-          "text": "¥19 per Custom pricing available. to learn more"
+          "entry_id": "44c9da4286c51d68",
+          "text": "¥19 per"
         }
       ],
-      "source_text": "¥19 per Custom pricing available. to learn more",
+      "source_text": "¥19 per",
       "source_texts": [
-        "¥19 per Custom pricing available. to learn more"
+        "¥19 per"
       ],
       "source_url": "https://stripe.com/en-jp/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
-      "variant_id": "custom_pricing"
+      "variant_id": "standard"
     },
     {
       "account_country": "JP",
@@ -9315,7 +9306,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 23,
       "source_text": "Included",
       "source_url": "https://stripe.com/en-jp/pricing",
@@ -9354,7 +9345,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 24,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/en-jp/pricing",
@@ -9393,7 +9384,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Standalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "Standalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 25,
       "source_text": "¥3 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/en-jp/pricing",
@@ -9420,7 +9411,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "37b9e52937abe154",
+      "entry_id": "44c9da4286c51d68",
       "fee_category": "3D Secure authentication",
       "footnotes": [],
       "links": [],
@@ -9432,16 +9423,16 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "standalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 26,
-      "source_text": "¥19 per Custom pricing available. to learn more",
+      "source_text": "¥19 per",
       "source_url": "https://stripe.com/en-jp/pricing",
       "tokens": [
         {
           "amount": "19",
           "basis_points": null,
           "currency": "JPY",
-          "exactness": "custom",
+          "exactness": null,
           "is_minor_currency": false,
           "kind": "amount",
           "note": null,
@@ -14663,7 +14654,7 @@
       "source_order": 35
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -16680,7 +16671,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-jp/pricing",
-      "content_sha256": "198b705b615eaae732a4993d8f093336a2540eda02d71f34112e5362fe03809e",
+      "content_sha256": "34ae8a40c07903becdc934c4d10bbd0dc3bb141f2fdb46e43b1f7593e06ed323",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -16696,7 +16687,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
-      "content_sha256": "6e704d5b0ad2827ee1d81f5abc8324a08df11a8fb274925170d0e4ccb901ae0a",
+      "content_sha256": "80727770e1a0febe41958b3f5e314b9949c22ed6cdd3cfb0f0759514800198c9",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",

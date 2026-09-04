@@ -3,7 +3,7 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 111,
+    "calculable_rules": 110,
     "conflicting_rule_identities": 20,
     "custom_pricing": 6,
     "dropped_numeric_entries": 0,
@@ -12,7 +12,7 @@
     "included": 11,
     "informational": 9,
     "informational_conflicts": 20,
-    "non_calculable_rules": 2,
+    "non_calculable_rules": 3,
     "numeric_fee_candidates": 0,
     "numeric_source_entries": 207,
     "reference_only": 0,
@@ -2756,40 +2756,26 @@
       "channel": "online",
       "classification_evidence": [
         "product=three_d_secure",
-        "variant=custom_pricing",
-        "channel=online",
-        "account_country=DE",
-        "pricing_plan=custom"
+        "variant=standard",
+        "account_country=DE"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "non_calculable",
       "conditions": [
-        {
-          "dimension": "channel",
-          "evidence": null,
-          "operator": "eq",
-          "value": "online"
-        },
         {
           "dimension": "account_country",
           "evidence": null,
           "operator": "eq",
           "value": "DE"
-        },
-        {
-          "dimension": "pricing_plan",
-          "evidence": null,
-          "operator": "eq",
-          "value": "custom"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
-        "28f7c1f181739d9d"
+        "5c953e5baba63a07"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "28f7c1f181739d9d",
+      "entry_id": "5c953e5baba63a07",
       "exactness": "exact",
       "fee_components": [
         {
@@ -2799,26 +2785,26 @@
           "minor_amount": "12",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "28f7c1f181739d9d",
-          "source_text": "€0.12 per Custom pricing available. to learn more",
+          "source_entry_id": "5c953e5baba63a07",
+          "source_text": "€0.12 per",
           "type": "fixed_amount",
           "value": null
         }
       ],
       "fee_evidence": {
-        "confidence": 0.85,
+        "confidence": 0.0,
         "phrases": [
-          "€0.12 per Custom pricing available. to learn more"
+          "€0.12 per"
         ],
         "source_entry_ids": [
-          "28f7c1f181739d9d"
+          "5c953e5baba63a07"
         ],
-        "type": "explicit_fee_phrase"
+        "type": "insufficient"
       },
       "fixed_amount": "0.12",
       "fixed_amount_minor": "12",
       "fixed_currency": "EUR",
-      "label": "€0.12 per Custom pricing available. to learn more",
+      "label": "€0.12 per",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "three_d_secure",
@@ -2829,23 +2815,23 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "a008df12892a7f12",
+      "rule_id": "20160b0be04fe383",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "28f7c1f181739d9d",
-          "text": "€0.12 per Custom pricing available. to learn more"
+          "entry_id": "5c953e5baba63a07",
+          "text": "€0.12 per"
         }
       ],
-      "source_text": "€0.12 per Custom pricing available. to learn more",
+      "source_text": "€0.12 per",
       "source_texts": [
-        "€0.12 per Custom pricing available. to learn more"
+        "€0.12 per"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
-      "variant_id": "custom_pricing"
+      "variant_id": "standard"
     },
     {
       "account_country": "DE",
@@ -17555,7 +17541,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n€0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n€0.12\nper\nstandalone 3DS attempt\nCustom pricing available. to learn more",
+      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n€0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n€0.12\nper\nstandalone 3DS attempt",
       "source_order": 22,
       "source_text": "Included",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -17594,7 +17580,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "€0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n€0.12\nper\nstandalone 3DS attempt\nCustom pricing available. to learn more",
+      "source_evidence": "€0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n€0.12\nper\nstandalone 3DS attempt",
       "source_order": 23,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -17633,7 +17619,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Standalone 3DS\n€0.12\nper\nstandalone 3DS attempt\nCustom pricing available. to learn more",
+      "source_evidence": "Standalone 3DS\n€0.12\nper\nstandalone 3DS attempt",
       "source_order": 24,
       "source_text": "€0.03 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -17660,7 +17646,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "28f7c1f181739d9d",
+      "entry_id": "5c953e5baba63a07",
       "fee_category": "3D Secure authentication",
       "footnotes": [],
       "links": [],
@@ -17672,16 +17658,16 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n€0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n€0.12\nper\nstandalone 3DS attempt\nCustom pricing available. to learn more",
+      "source_evidence": "standalone 3DS attempt",
       "source_order": 25,
-      "source_text": "€0.12 per Custom pricing available. to learn more",
+      "source_text": "€0.12 per",
       "source_url": "https://stripe.com/en-de/pricing",
       "tokens": [
         {
           "amount": "0.12",
           "basis_points": null,
           "currency": "EUR",
-          "exactness": "custom",
+          "exactness": null,
           "is_minor_currency": false,
           "kind": "amount",
           "note": null,
@@ -27972,7 +27958,7 @@
       "source_order": 37
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n€0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n€0.12\nper\nstandalone 3DS attempt\nCustom pricing available. to learn more",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n€0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n€0.12\nper\nstandalone 3DS attempt",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -31589,7 +31575,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "fca2f71af341c0d98105f2775360350850f3c72834680272d207589c9a7f03d2",
+      "content_sha256": "20d0fed391450558bef1e2891b3eb43eb3590ff873eba641b4e4261797e8d8ab",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -31605,7 +31591,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "f61666512cbaf1bcba4c03af88b31dafd119824520cc1ed12d840c4d866bcec8",
+      "content_sha256": "69d2835b8f06bedd210e05911e8f22ac2d3012d0176aa3c7194aed897344e6b3",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",

@@ -3,16 +3,16 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 118,
-    "conflicting_rule_identities": 24,
+    "calculable_rules": 119,
+    "conflicting_rule_identities": 22,
     "custom_pricing": 3,
     "dropped_numeric_entries": 0,
     "free": 2,
     "ignored_non_fee": 15,
     "included": 11,
     "informational": 10,
-    "informational_conflicts": 24,
-    "non_calculable_rules": 2,
+    "informational_conflicts": 22,
+    "non_calculable_rules": 3,
     "numeric_fee_candidates": 0,
     "numeric_source_entries": 227,
     "reference_only": 0,
@@ -2728,10 +2728,9 @@
         "variant=custom_pricing",
         "channel=online",
         "account_country=GB",
-        "pricing_plan=custom",
-        "conflict: semantic identity with differing fee signature"
+        "pricing_plan=custom"
       ],
-      "classification_status": "conflict",
+      "classification_status": "calculable_rule",
       "conditions": [
         {
           "dimension": "channel",
@@ -2752,7 +2751,7 @@
           "value": "custom"
         }
       ],
-      "confidence": 0.0,
+      "confidence": 0.85,
       "contributing_entry_ids": [
         "24311163b67abec2"
       ],
@@ -2829,13 +2828,11 @@
       "channel": "online",
       "classification_evidence": [
         "product=three_d_secure",
-        "variant=custom_pricing",
+        "variant=standard",
         "channel=online",
-        "account_country=GB",
-        "pricing_plan=custom",
-        "conflict: semantic identity with differing fee signature"
+        "account_country=GB"
       ],
-      "classification_status": "conflict",
+      "classification_status": "non_calculable",
       "conditions": [
         {
           "dimension": "channel",
@@ -2848,22 +2845,16 @@
           "evidence": null,
           "operator": "eq",
           "value": "GB"
-        },
-        {
-          "dimension": "pricing_plan",
-          "evidence": null,
-          "operator": "eq",
-          "value": "custom"
         }
       ],
       "confidence": 0.0,
       "contributing_entry_ids": [
-        "b00bf7d4c1930387"
+        "6daa6f841c159459"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "b00bf7d4c1930387",
+      "entry_id": "6daa6f841c159459",
       "exactness": "exact",
       "fee_components": [
         {
@@ -2873,26 +2864,26 @@
           "minor_amount": "12",
           "operator": null,
           "schedule_id": null,
-          "source_entry_id": "b00bf7d4c1930387",
-          "source_text": "£0.12 per Custom pricing available. to learn more",
+          "source_entry_id": "6daa6f841c159459",
+          "source_text": "£0.12 per",
           "type": "fixed_amount",
           "value": null
         }
       ],
       "fee_evidence": {
-        "confidence": 0.85,
+        "confidence": 0.0,
         "phrases": [
-          "£0.12 per Custom pricing available. to learn more"
+          "£0.12 per"
         ],
         "source_entry_ids": [
-          "b00bf7d4c1930387"
+          "6daa6f841c159459"
         ],
-        "type": "explicit_fee_phrase"
+        "type": "insufficient"
       },
       "fixed_amount": "0.12",
       "fixed_amount_minor": "12",
       "fixed_currency": "GBP",
-      "label": "£0.12 per Custom pricing available. to learn more",
+      "label": "£0.12 per",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "three_d_secure",
@@ -2903,23 +2894,23 @@
       "product_id": "three_d_secure",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "c044f14418a5b1ff",
+      "rule_id": "baa88121eefcec8a",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "b00bf7d4c1930387",
-          "text": "£0.12 per Custom pricing available. to learn more"
+          "entry_id": "6daa6f841c159459",
+          "text": "£0.12 per"
         }
       ],
-      "source_text": "£0.12 per Custom pricing available. to learn more",
+      "source_text": "£0.12 per",
       "source_texts": [
-        "£0.12 per Custom pricing available. to learn more"
+        "£0.12 per"
       ],
       "source_url": "https://stripe.com/gb/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_transaction",
-      "variant_id": "custom_pricing"
+      "variant_id": "standard"
     },
     {
       "account_country": "GB",
@@ -19104,7 +19095,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 24,
       "source_text": "Included",
       "source_url": "https://stripe.com/gb/pricing",
@@ -19143,7 +19134,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 25,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/gb/pricing",
@@ -19182,7 +19173,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Standalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "Standalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 26,
       "source_text": "£0.03 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/gb/pricing",
@@ -19209,7 +19200,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "b00bf7d4c1930387",
+      "entry_id": "6daa6f841c159459",
       "fee_category": "3D Secure authentication",
       "footnotes": [],
       "links": [],
@@ -19221,16 +19212,16 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "source_evidence": "standalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "source_order": 27,
-      "source_text": "£0.12 per Custom pricing available. to learn more",
+      "source_text": "£0.12 per",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
         {
           "amount": "0.12",
           "basis_points": null,
           "currency": "GBP",
-          "exactness": "custom",
+          "exactness": null,
           "is_minor_currency": false,
           "kind": "amount",
           "note": null,
@@ -30373,7 +30364,7 @@
       "source_order": 37
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).\nCustom pricing available. to learn more",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -34266,7 +34257,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "24946ca7f182d90322589138c2071bdf86e4e81ce459f1d7f3a8e273fff5d1cf",
+      "content_sha256": "0a3e4d1ce241c05eb999f7519a001db806641e4719d268a0144e1aa3dfc4e6c9",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -34282,7 +34273,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "d75a0a5a4d11ae9644bea3104a40bcdb5d298cfd4fa462a33b167976eb4f06d6",
+      "content_sha256": "f9b4c8149b240e06f1cbe05418624b4f874ef446d635055ad99c0b22094ff146",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
