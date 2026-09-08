@@ -30453,15 +30453,15 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 154,
-        "conflicting_rule_identities": 25,
+        "calculable_rules": 153,
+        "conflicting_rule_identities": 27,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 16,
         "included": 13,
         "informational": 12,
-        "informational_conflicts": 25,
+        "informational_conflicts": 27,
         "non_calculable_rules": 5,
         "numeric_fee_candidates": 0,
         "numeric_source_entries": 277,
@@ -30474,97 +30474,6 @@
       "derivation_status": "complete",
       "locale": "en-us",
       "rules": [
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "card"
-            },
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "card_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "domestic"
-            },
-            {
-              "dimension": "card_origin",
-              "evidence": null,
-              "operator": "eq",
-              "value": "domestic"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "success",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "0.3",
-              "basis_points": null,
-              "currency": "USD",
-              "minor_amount": "30",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "290.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "2.9"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "2.9% + 30¢ per successful transaction for domestic cards",
-              "Card payments 2.9% + 30¢ per successful transaction for domestic cards"
-            ],
-            "source_entry_ids": [
-              "e416327e11e851fa",
-              "344d8c1bcb58a794"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "2.9% + 30¢ per successful transaction for domestic cards",
-          "payment_method": "card",
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "9dded4b573a38f84",
-          "unit": "per_transaction",
-          "variant_id": "online_domestic_cards"
-        },
         {
           "account_country": "US",
           "behavior": "conditional",
