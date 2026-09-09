@@ -25889,7 +25889,7 @@
         "Payment methods",
         "UPI 2% per successful charge"
       ],
-      "source_evidence": "Increase conversion with Indian customers by enabling UPI—the most popular payment method in India, with more than 80% share of online payments.",
+      "source_evidence": "Increase conversion with Indian customers by enabling UPI – the most popular payment method in India, with more than 80% share of online payments.",
       "source_order": 201,
       "source_text": "UPI 2% per successful charge",
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
@@ -25916,7 +25916,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "392a2d1759fb1dcb",
+      "entry_id": "29c52b602af9cb19",
       "fee_category": "UPI 2% per successful charge",
       "footnotes": [],
       "links": [
@@ -25936,7 +25936,7 @@
       ],
       "source_evidence": "",
       "source_order": 202,
-      "source_text": "Increase conversion with Indian customers by enabling UPI—the most popular payment method in India, with more than 80% share of online payments.",
+      "source_text": "Increase conversion with Indian customers by enabling UPI – the most popular payment method in India, with more than 80% share of online payments.",
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "tokens": [
         {
@@ -31052,7 +31052,7 @@
       "source_order": 97
     },
     {
-      "body": "Increase conversion with Indian customers by enabling UPI—the most popular payment method in India, with more than 80% share of online payments.",
+      "body": "Increase conversion with Indian customers by enabling UPI – the most popular payment method in India, with more than 80% share of online payments.",
       "heading": "UPI 2% per successful charge",
       "level": 3,
       "links": [
@@ -31575,7 +31575,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "9ab318d543b2e0dbd74bf2b8e0b9d43c553b999678861ef97b399477850aa21a",
+      "content_sha256": "24ac7a3a56ab7b28938bdf54b6027ec4612580de05e982d63b32a41fbbd5e3a6",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -31591,7 +31591,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "c05dc675518890b84e11b763cba01aff02fc56b57b7b99ace305f1660dda04d5",
+      "content_sha256": "958ad8a9ca61a0c00ebeda61037b14af53d93d419be505851f2e9772ce31e72e",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -32211,7 +32211,7 @@
       "classification_status": "ignored_non_fee",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "392a2d1759fb1dcb",
+      "entry_id": "29c52b602af9cb19",
       "fee_category": "UPI 2% per successful charge",
       "footnotes": [],
       "links": [
@@ -32231,7 +32231,7 @@
       ],
       "source_evidence": "",
       "source_order": 202,
-      "source_text": "Increase conversion with Indian customers by enabling UPI—the most popular payment method in India, with more than 80% share of online payments.",
+      "source_text": "Increase conversion with Indian customers by enabling UPI – the most popular payment method in India, with more than 80% share of online payments.",
       "source_url": "https://stripe.com/en-de/pricing/local-payment-methods",
       "tokens": [
         {

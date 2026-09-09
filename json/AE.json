@@ -7123,7 +7123,7 @@
       "source_order": 32
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nCustom pricing available for standalone 3DS.\nto learn more.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -8135,7 +8135,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "605a59e0201738dbf4ecacd6887cb4e7bb7beff8745c56c8297873f8081ec2aa",
+      "content_sha256": "b5480fdf9d6a6d4c64aafc21b5bf5e3b6dddbbc834993904c38dd4f8df0f0805",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8151,7 +8151,7 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "39fae0cea281b2c4a08fae2ea4fdafc4dc887f70e23e5e5fc1a262426b59c490",
+      "content_sha256": "ca2cee71814d2cf1a004595a372b12e5ef5045cabb4458da61ab4cf7a00e3e80",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",

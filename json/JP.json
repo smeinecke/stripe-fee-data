@@ -14654,7 +14654,7 @@
       "source_order": 35
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nCustom pricing available for standalone 3DS.\nto learn more.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n¥3\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n¥19\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -16671,7 +16671,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-jp/pricing",
-      "content_sha256": "c5b1fd399f7ff72edba08af70bbd8be92f043bdee931e8c1fc207e64d23e00de",
+      "content_sha256": "6da57fafdd9cdcdf6056aba5074c3bede74e96f5091310d421eab32cc0323449",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -16687,7 +16687,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
-      "content_sha256": "22ab74a9ff19a6d607a1ab555739f8b42855aca6e7ea8d7adb09814ad5e73198",
+      "content_sha256": "d5d6aa96e01c8208787fe6929bbb22be11ba20180441ac4c9e60739817bd6e97",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",

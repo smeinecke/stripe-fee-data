@@ -6966,7 +6966,7 @@
       "source_order": 34
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nR$0.10\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nR$0.60\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nCustom pricing available for standalone 3DS.\nto learn more.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nR$0.10\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nR$0.60\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -7999,7 +7999,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "3c66f9653a825d54b7b806a4bd45d698c60e001eb1ff30b8e19b0622ea7f01c0",
+      "content_sha256": "713801aef69ce33c2efcd8917bee2a56f9f129df82ba1f55447a5b78621aa419",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8015,7 +8015,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "765859c4068b3cb415af7fc2f5409a4a200bc10aba1866b669f735f4aeffeece",
+      "content_sha256": "b626014cf4e29ddcbebe4b29216233ecb3a544fcedb1c34f9d19fdbd3aa7cdc0",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
