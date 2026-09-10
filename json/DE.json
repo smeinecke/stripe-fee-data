@@ -27592,7 +27592,7 @@
       "source_order": 9
     },
     {
-      "body": "Product roadmap\nSee what's ahead\nRadar\nFraud prevention\nAtlas\nStart-up incorporation\nClimate\nCarbon removal\nIdentity\nOnline identity verification\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nE-commerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nFintech\nGaming\nHospitality, travel and leisure\nInsurance\nMedia and entertainment\nNon-profits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nCareers\nNewsroom\nStripe Press\nContact\nBecome a partner",
+      "body": "Product roadmap\nSee what's ahead\nRadar\nFraud prevention\nAtlas\nStart-up incorporation\nClimate\nCarbon removal\nIdentity\nOnline identity verification\nStripe Sessions 2026\nSee how Stripe is building the economic infrastructure for AI.\nWatch now\nBy stage\nEnterprises\nStartups\nBy use case\nAgentic commerce\nCrypto\nE-commerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nBy industry\nAI companies\nCreator economy\nFintech\nGaming\nHospitality, travel and leisure\nInsurance\nMedia and entertainment\nNon-profits\nProfessional services\nPublic sector\nRetail\nEcosystem\nPartners\nStripe App Marketplace\nDocumentation\nStripe docs\nAPI reference\nLibraries and SDKs\nStripe Apps\nGuides\nAccept online payments\nImplement a prebuilt checkout\nBuild a platform or marketplace\nManage subscriptions\nOffer usage-based billing\nIssue stablecoin-backed cards\nProvision and manage services with agents\nResources\nApp integrations\nCode samples\nDevelopers blog\nAPI status\nLearn\nBlog\nCustomer stories\nGuides\nSupport\nGet support\nManaged support plans\nProfessional services\nCompany\nProduct roadmap\nSessions annual conference\nCareers\nNewsroom\nStripe Press\nAbout\nContact\nBecome a partner",
       "heading": "More",
       "level": 1,
       "links": [],
@@ -29220,7 +29220,7 @@
       "source_order": 151
     },
     {
-      "body": "Product roadmap\nCareers\nNewsroom\nStripe Press",
+      "body": "About\nProduct roadmap\nCareers\nNewsroom\nStripe Press",
       "heading": "Company",
       "level": 1,
       "links": [],
@@ -31575,7 +31575,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "24ac7a3a56ab7b28938bdf54b6027ec4612580de05e982d63b32a41fbbd5e3a6",
+      "content_sha256": "4bcf6eb397db4c35513db49037b724cd282a56ff2cfd8d97a411d5f25387e816",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -31591,7 +31591,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "958ad8a9ca61a0c00ebeda61037b14af53d93d419be505851f2e9772ce31e72e",
+      "content_sha256": "a28de3510c994d80524b556f3032c2d97c5be3d67b3938e698dc2c4d0f4f1750",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
