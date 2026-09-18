@@ -27944,7 +27944,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalogue",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -27993,7 +27993,7 @@
       "source_order": 67
     },
     {
-      "body": "Connect\nPayments for platforms\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards",
+      "body": "Connect\nPayments for platforms\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -32089,7 +32089,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "5dc879e60ba780c2eaebb7d75799434e22a56d0303f060766dfa054a9410f49f",
+      "content_sha256": "82e99d7ef146570700ecb7438c77ac74650b1cb0f42881c65bdb73090240fffe",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -32105,7 +32105,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "3cf5dc85d1fc4971a8e953602852adc240376b4ab05551e476b129f837c7bc8e",
+      "content_sha256": "817084c1a999ff83eaa57ccc489ccd6542db0e82da67fcacec692090016445b0",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",

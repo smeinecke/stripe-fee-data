@@ -23517,7 +23517,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalogue",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -23566,7 +23566,7 @@
       "source_order": 57
     },
     {
-      "body": "Connect\nPayments for platforms",
+      "body": "Connect\nPayments for platforms\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -27129,7 +27129,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "29167c919de9da73ceef3f0c4b307fbeb8cdc85ad7939a570b5e46dc5ab03040",
+      "content_sha256": "e05209a4b1908d9af2e495fbd0bf40595500d6bcb39283c2f1b981f9740adb07",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27145,7 +27145,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "ec0e84998697501e7f9fb94f2460276ef957158aa9aa6634c38becb7715c3e6a",
+      "content_sha256": "65549b39dc412c2798e8431c213712cfc1949e14523a523b7cfb0b77df03df0f",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",

@@ -3,21 +3,21 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 58,
-    "conflicting_rule_identities": 7,
+    "calculable_rules": 56,
+    "conflicting_rule_identities": 11,
     "custom_pricing": 1,
     "dropped_numeric_entries": 0,
     "free": 1,
     "ignored_non_fee": 12,
     "included": 9,
     "informational": 8,
-    "informational_conflicts": 7,
+    "informational_conflicts": 11,
     "non_calculable_rules": 3,
     "numeric_fee_candidates": 0,
-    "numeric_source_entries": 114,
+    "numeric_source_entries": 116,
     "reference_only": 0,
-    "referenced_numeric_entries": 114,
-    "source_entries": 135,
+    "referenced_numeric_entries": 116,
+    "source_entries": 137,
     "unclassified_fee_candidates": 0,
     "unsupported_fee_shapes": 0
   },
@@ -610,9 +610,10 @@
         "variant=standard",
         "payment_method=konbini",
         "channel=online",
-        "account_country=JP"
+        "account_country=JP",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -633,7 +634,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "7ec0720fd6391757",
         "34c6bd4f8d6238f2",
@@ -750,9 +751,9 @@
         "payment_method=konbini",
         "channel=online",
         "account_country=JP",
-        "transaction_type=refund"
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "payment_method",
@@ -771,22 +772,16 @@
           "evidence": null,
           "operator": "eq",
           "value": "JP"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "refund"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
-        "746ec28dfe8d724d"
+        "469abb569ab51035"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "746ec28dfe8d724d",
+      "entry_id": "469abb569ab51035",
       "exactness": "exact",
       "fee_components": [
         {
@@ -796,8 +791,8 @@
           "minor_amount": "250",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "746ec28dfe8d724d",
-          "source_text": "¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "469abb569ab51035",
+          "source_text": "10% + ¥250",
           "type": "fixed_amount",
           "value": null
         },
@@ -808,8 +803,8 @@
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "746ec28dfe8d724d",
-          "source_text": "¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "469abb569ab51035",
+          "source_text": "10% + ¥250",
           "type": "percentage",
           "value": "10"
         }
@@ -817,17 +812,17 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "¥250 + 10% consumption tax for refunds"
+          "10% + ¥250"
         ],
         "source_entry_ids": [
-          "746ec28dfe8d724d"
+          "469abb569ab51035"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "250",
       "fixed_amount_minor": "250",
       "fixed_currency": "JPY",
-      "label": "¥250 + 10% consumption tax for refunds",
+      "label": "10% + ¥250",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "konbini",
@@ -838,17 +833,17 @@
       "product_id": "konbini",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "59950ebe6e8a9cf7",
+      "rule_id": "fe79ec4b37c19073",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "746ec28dfe8d724d",
-          "text": "¥250 + 10% consumption tax for refunds"
+          "entry_id": "469abb569ab51035",
+          "text": "10% + ¥250"
         }
       ],
-      "source_text": "¥250 + 10% consumption tax for refunds",
+      "source_text": "10% + ¥250",
       "source_texts": [
-        "¥250 + 10% consumption tax for refunds"
+        "10% + ¥250"
       ],
       "source_url": "https://stripe.com/en-jp/pricing",
       "transaction_amount_max": null,
@@ -1203,9 +1198,10 @@
         "product=refunds",
         "variant=standard",
         "channel=online",
-        "account_country=JP"
+        "account_country=JP",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "channel",
@@ -1220,7 +1216,7 @@
           "value": "JP"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "61adaf4bd16c523a"
       ],
@@ -1300,9 +1296,9 @@
         "variant=standard",
         "channel=online",
         "account_country=JP",
-        "transaction_type=refund"
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "channel",
@@ -1315,22 +1311,16 @@
           "evidence": null,
           "operator": "eq",
           "value": "JP"
-        },
-        {
-          "dimension": "transaction_type",
-          "evidence": null,
-          "operator": "eq",
-          "value": "refund"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
-        "cc0ecbc27a9dc34c"
+        "b77ce76588cf9437"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "cc0ecbc27a9dc34c",
+      "entry_id": "b77ce76588cf9437",
       "exactness": "exact",
       "fee_components": [
         {
@@ -1340,8 +1330,8 @@
           "minor_amount": "250",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "cc0ecbc27a9dc34c",
-          "source_text": "¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "b77ce76588cf9437",
+          "source_text": "10% + ¥250",
           "type": "fixed_amount",
           "value": null
         },
@@ -1352,8 +1342,8 @@
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "cc0ecbc27a9dc34c",
-          "source_text": "¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "b77ce76588cf9437",
+          "source_text": "10% + ¥250",
           "type": "percentage",
           "value": "10"
         }
@@ -1361,17 +1351,17 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "¥250 + 10% consumption tax for refunds"
+          "10% + ¥250"
         ],
         "source_entry_ids": [
-          "cc0ecbc27a9dc34c"
+          "b77ce76588cf9437"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "250",
       "fixed_amount_minor": "250",
       "fixed_currency": "JPY",
-      "label": "¥250 + 10% consumption tax for refunds",
+      "label": "10% + ¥250",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "refunds",
@@ -1382,17 +1372,17 @@
       "product_id": "refunds",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8b76e34533316125",
+      "rule_id": "21ac0da5e6a41a33",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "cc0ecbc27a9dc34c",
-          "text": "¥250 + 10% consumption tax for refunds"
+          "entry_id": "b77ce76588cf9437",
+          "text": "10% + ¥250"
         }
       ],
-      "source_text": "¥250 + 10% consumption tax for refunds",
+      "source_text": "10% + ¥250",
       "source_texts": [
-        "¥250 + 10% consumption tax for refunds"
+        "10% + ¥250"
       ],
       "source_url": "https://stripe.com/en-jp/pricing",
       "transaction_amount_max": null,
@@ -5980,6 +5970,109 @@
         "variant=standard",
         "payment_method=bank_transfer",
         "channel=online",
+        "account_country=JP"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "bank_transfer"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "63a5c3073ef3595a"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "63a5c3073ef3595a",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "minor_amount": null,
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "63a5c3073ef3595a",
+          "source_text": "Bank Transfers 1.5%",
+          "type": "percentage",
+          "value": "1.5"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Bank Transfers 1.5%"
+        ],
+        "source_entry_ids": [
+          "63a5c3073ef3595a"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Bank Transfers 1.5%",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "bank_transfer",
+      "payment_method": "bank_transfer",
+      "payout_type": null,
+      "percentage": "1.5",
+      "presentment_currency": null,
+      "product_id": "bank_transfer",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "0bf6301a79192ee8",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "63a5c3073ef3595a",
+          "text": "Bank Transfers 1.5%"
+        }
+      ],
+      "source_text": "Bank Transfers 1.5%",
+      "source_texts": [
+        "Bank Transfers 1.5%"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
+      "basis_points": "1000",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=bank_transfer",
+        "variant=standard",
+        "payment_method=bank_transfer",
+        "channel=online",
         "account_country=JP",
         "transaction_type=refund"
       ],
@@ -6012,12 +6105,12 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "06720b438a20b42a"
+        "c1a8e2530391476b"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "06720b438a20b42a",
+      "entry_id": "c1a8e2530391476b",
       "exactness": "exact",
       "fee_components": [
         {
@@ -6027,22 +6120,10 @@
           "minor_amount": "250",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "06720b438a20b42a",
-          "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "c1a8e2530391476b",
+          "source_text": "Bank Transfers 10% + ¥250 consumption tax for refunds",
           "type": "fixed_amount",
           "value": null
-        },
-        {
-          "amount": null,
-          "basis_points": "150.0",
-          "currency": null,
-          "minor_amount": null,
-          "operator": "+",
-          "schedule_id": null,
-          "source_entry_id": "06720b438a20b42a",
-          "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
-          "type": "percentage",
-          "value": "1.5"
         },
         {
           "amount": null,
@@ -6051,8 +6132,8 @@
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "06720b438a20b42a",
-          "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+          "source_entry_id": "c1a8e2530391476b",
+          "source_text": "Bank Transfers 10% + ¥250 consumption tax for refunds",
           "type": "percentage",
           "value": "10"
         }
@@ -6060,38 +6141,38 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+          "Bank Transfers 10% + ¥250 consumption tax for refunds"
         ],
         "source_entry_ids": [
-          "06720b438a20b42a"
+          "c1a8e2530391476b"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "250",
       "fixed_amount_minor": "250",
       "fixed_currency": "JPY",
-      "label": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "label": "Bank Transfers 10% + ¥250 consumption tax for refunds",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "bank_transfer",
       "payment_method": "bank_transfer",
       "payout_type": null,
-      "percentage": "1.5",
+      "percentage": "10",
       "presentment_currency": null,
       "product_id": "bank_transfer",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "edcfed0685713144",
+      "rule_id": "f8dc139e31dd808e",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "06720b438a20b42a",
-          "text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+          "entry_id": "c1a8e2530391476b",
+          "text": "Bank Transfers 10% + ¥250 consumption tax for refunds"
         }
       ],
-      "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "source_text": "Bank Transfers 10% + ¥250 consumption tax for refunds",
       "source_texts": [
-        "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+        "Bank Transfers 10% + ¥250 consumption tax for refunds"
       ],
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -8047,6 +8128,128 @@
     {
       "account_country": "JP",
       "additional_fees": [],
+      "basis_points": "1000",
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=konbini",
+        "variant=standard",
+        "payment_method=konbini",
+        "channel=online",
+        "account_country=JP",
+        "transaction_type=refund"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "payment_method",
+          "evidence": null,
+          "operator": "eq",
+          "value": "konbini"
+        },
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "JP"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "refund"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "cadf1d49e6765781"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "cadf1d49e6765781",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "250",
+          "basis_points": null,
+          "currency": "JPY",
+          "minor_amount": "250",
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "cadf1d49e6765781",
+          "source_text": "Konbini 10% + ¥250 consumption tax for refunds",
+          "type": "fixed_amount",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "1000",
+          "currency": null,
+          "minor_amount": null,
+          "operator": "+",
+          "schedule_id": null,
+          "source_entry_id": "cadf1d49e6765781",
+          "source_text": "Konbini 10% + ¥250 consumption tax for refunds",
+          "type": "percentage",
+          "value": "10"
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Konbini 10% + ¥250 consumption tax for refunds"
+        ],
+        "source_entry_ids": [
+          "cadf1d49e6765781"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "250",
+      "fixed_amount_minor": "250",
+      "fixed_currency": "JPY",
+      "label": "Konbini 10% + ¥250 consumption tax for refunds",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "konbini",
+      "payment_method": "konbini",
+      "payout_type": null,
+      "percentage": "10",
+      "presentment_currency": null,
+      "product_id": "konbini",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "59950ebe6e8a9cf7",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "cadf1d49e6765781",
+          "text": "Konbini 10% + ¥250 consumption tax for refunds"
+        }
+      ],
+      "source_text": "Konbini 10% + ¥250 consumption tax for refunds",
+      "source_texts": [
+        "Konbini 10% + ¥250 consumption tax for refunds"
+      ],
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "JP",
+      "additional_fees": [],
       "basis_points": "310.0",
       "behavior": "conditional",
       "billing_type": null,
@@ -8693,7 +8896,7 @@
       "section_path": [
         "Konbini payments"
       ],
-      "source_evidence": "Minimum fee of ¥120\n¥250 + 10% consumption tax for refunds",
+      "source_evidence": "Minimum fee of ¥120\n10% + ¥250\nconsumption tax for refunds",
       "source_order": 8,
       "source_text": "Accept Konbini payments from over 34,000 FamilyMarts, Lawsons, Ministops, and Seicomarts across Japan with a single integration. 3.6%",
       "source_url": "https://stripe.com/en-jp/pricing",
@@ -8732,7 +8935,7 @@
       "section_path": [
         "Konbini payments"
       ],
-      "source_evidence": "¥250 + 10% consumption tax for refunds",
+      "source_evidence": "10% + ¥250\nconsumption tax for refunds",
       "source_order": 9,
       "source_text": "Minimum fee of ¥120",
       "source_url": "https://stripe.com/en-jp/pricing",
@@ -8759,7 +8962,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "746ec28dfe8d724d",
+      "entry_id": "469abb569ab51035",
       "fee_category": "Konbini payments",
       "footnotes": [],
       "links": [],
@@ -8771,9 +8974,9 @@
       "section_path": [
         "Konbini payments"
       ],
-      "source_evidence": "",
+      "source_evidence": "consumption tax for refunds",
       "source_order": 10,
-      "source_text": "¥250 + 10% consumption tax for refunds",
+      "source_text": "10% + ¥250",
       "source_url": "https://stripe.com/en-jp/pricing",
       "tokens": [
         {
@@ -8902,7 +9105,7 @@
       "section_path": [
         "Bank-based and other payment methods"
       ],
-      "source_evidence": "¥250 + 10% consumption tax for refunds\nSee more payment methods",
+      "source_evidence": "10% + ¥250\nconsumption tax for refunds\nSee more payment methods",
       "source_order": 13,
       "source_text": "1.5%",
       "source_url": "https://stripe.com/en-jp/pricing",
@@ -8929,7 +9132,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "cc0ecbc27a9dc34c",
+      "entry_id": "b77ce76588cf9437",
       "fee_category": "Bank-based and other payment methods",
       "footnotes": [],
       "links": [],
@@ -8941,9 +9144,9 @@
       "section_path": [
         "Bank-based and other payment methods"
       ],
-      "source_evidence": "See more payment methods",
+      "source_evidence": "consumption tax for refunds\nSee more payment methods",
       "source_order": 14,
-      "source_text": "¥250 + 10% consumption tax for refunds",
+      "source_text": "10% + ¥250",
       "source_url": "https://stripe.com/en-jp/pricing",
       "tokens": [
         {
@@ -12421,8 +12624,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "06720b438a20b42a",
-      "fee_category": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "entry_id": "63a5c3073ef3595a",
+      "fee_category": "Bank Transfers 1.5%",
       "footnotes": [],
       "links": [
         {
@@ -12441,27 +12644,13 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+        "Bank Transfers 1.5%"
       ],
       "source_evidence": "Keep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.",
       "source_order": 99,
-      "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "source_text": "Bank Transfers 1.5%",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
-        {
-          "amount": "250",
-          "basis_points": null,
-          "currency": "JPY",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": "+",
-          "percentage": null,
-          "raw": "250",
-          "token_id": "73633f0ccf8e2a58",
-          "value": null
-        },
         {
           "amount": null,
           "basis_points": "150.0",
@@ -12470,24 +12659,10 @@
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
-          "operator": "+",
+          "operator": null,
           "percentage": "1.5",
           "raw": "1.5",
           "token_id": "820f4478b986de24",
-          "value": null
-        },
-        {
-          "amount": null,
-          "basis_points": "1000",
-          "currency": null,
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "percentage",
-          "note": null,
-          "operator": "+",
-          "percentage": "10",
-          "raw": "10",
-          "token_id": "f9c0aea58f804c94",
           "value": null
         }
       ]
@@ -12498,8 +12673,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "06720b438a20b42a",
-      "fee_category": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "entry_id": "63a5c3073ef3595a",
+      "fee_category": "Bank Transfers 1.5%",
       "footnotes": [],
       "links": [
         {
@@ -12518,11 +12693,60 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+        "Bank Transfers 1.5%"
       ],
       "source_evidence": "",
       "source_order": 100,
-      "source_text": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "source_text": "Bank Transfers 1.5%",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": "150.0",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": null,
+          "percentage": "1.5",
+          "raw": "1.5",
+          "token_id": "820f4478b986de24",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "c1a8e2530391476b",
+      "fee_category": "Bank Transfers 10% + ¥250 consumption tax for refunds",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/jp-bank-transfers"
+        },
+        {
+          "text": "See more payment methods",
+          "uri": "https://stripe.com/en-jp/pricing/local-payment-methods"
+        }
+      ],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Bank Transfers 10% + ¥250 consumption tax for refunds"
+      ],
+      "source_evidence": "",
+      "source_order": 101,
+      "source_text": "Bank Transfers 10% + ¥250 consumption tax for refunds",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
         {
@@ -12537,20 +12761,6 @@
           "percentage": null,
           "raw": "250",
           "token_id": "73633f0ccf8e2a58",
-          "value": null
-        },
-        {
-          "amount": null,
-          "basis_points": "150.0",
-          "currency": null,
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "percentage",
-          "note": null,
-          "operator": "+",
-          "percentage": "1.5",
-          "raw": "1.5",
-          "token_id": "820f4478b986de24",
           "value": null
         },
         {
@@ -12594,7 +12804,7 @@
         "EPS 1.6% + ¥35"
       ],
       "source_evidence": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.",
-      "source_order": 101,
+      "source_order": 102,
       "source_text": "EPS 1.6% + ¥35",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12653,7 +12863,7 @@
         "EPS 1.6% + ¥35"
       ],
       "source_evidence": "",
-      "source_order": 102,
+      "source_order": 103,
       "source_text": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12698,7 +12908,7 @@
         "EPS 1.6% + ¥35"
       ],
       "source_evidence": "",
-      "source_order": 103,
+      "source_order": 104,
       "source_text": "EPS 1.6% + ¥35",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12757,7 +12967,7 @@
         "EPS + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 104,
+      "source_order": 105,
       "source_text": "EPS + 1.5% for international transactions",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12802,7 +13012,7 @@
         "EPS + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 105,
+      "source_order": 106,
       "source_text": "EPS + 2% if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12847,7 +13057,7 @@
         "iDEAL | Wero ¥55"
       ],
       "source_evidence": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments.",
-      "source_order": 106,
+      "source_order": 107,
       "source_text": "iDEAL | Wero ¥55",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12892,7 +13102,7 @@
         "iDEAL | Wero ¥55"
       ],
       "source_evidence": "",
-      "source_order": 107,
+      "source_order": 108,
       "source_text": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12937,7 +13147,7 @@
         "iDEAL | Wero ¥55"
       ],
       "source_evidence": "",
-      "source_order": 108,
+      "source_order": 109,
       "source_text": "iDEAL | Wero ¥55",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -12982,7 +13192,7 @@
         "iDEAL | Wero + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 109,
+      "source_order": 110,
       "source_text": "iDEAL | Wero + 1.5% for international transactions",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13027,7 +13237,7 @@
         "iDEAL | Wero + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 110,
+      "source_order": 111,
       "source_text": "iDEAL | Wero + 2% if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13072,7 +13282,7 @@
         "SEPA Direct Debit 0.8% + ¥35"
       ],
       "source_evidence": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
-      "source_order": 111,
+      "source_order": 112,
       "source_text": "SEPA Direct Debit 0.8% + ¥35",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13131,7 +13341,7 @@
         "SEPA Direct Debit 0.8% + ¥35"
       ],
       "source_evidence": "",
-      "source_order": 112,
+      "source_order": 113,
       "source_text": "SEPA Direct Debit 0.8% + ¥35",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13190,7 +13400,7 @@
         "SEPA Direct Debit ¥620 cap"
       ],
       "source_evidence": "",
-      "source_order": 113,
+      "source_order": 114,
       "source_text": "SEPA Direct Debit ¥620 cap",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13235,7 +13445,7 @@
         "SEPA Direct Debit + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 114,
+      "source_order": 115,
       "source_text": "SEPA Direct Debit + 1.5% for international transactions",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13280,7 +13490,7 @@
         "SEPA Direct Debit + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 115,
+      "source_order": 116,
       "source_text": "SEPA Direct Debit + 2% if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13325,7 +13535,7 @@
         "SEPA Direct Debit ¥2,375 for disputed payments"
       ],
       "source_evidence": "",
-      "source_order": 116,
+      "source_order": 117,
       "source_text": "SEPA Direct Debit ¥2,375 for disputed payments",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13370,7 +13580,7 @@
         "SEPA Direct Debit ¥550 for failed payments"
       ],
       "source_evidence": "",
-      "source_order": 117,
+      "source_order": 118,
       "source_text": "SEPA Direct Debit ¥550 for failed payments",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13415,7 +13625,7 @@
         "Przelewy24 2.2% + ¥35"
       ],
       "source_evidence": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
-      "source_order": 118,
+      "source_order": 119,
       "source_text": "Przelewy24 2.2% + ¥35",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13474,7 +13684,7 @@
         "Przelewy24 2.2% + ¥35"
       ],
       "source_evidence": "",
-      "source_order": 119,
+      "source_order": 120,
       "source_text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13519,7 +13729,7 @@
         "Przelewy24 2.2% + ¥35"
       ],
       "source_evidence": "",
-      "source_order": 120,
+      "source_order": 121,
       "source_text": "Przelewy24 2.2% + ¥35",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13578,7 +13788,7 @@
         "Przelewy24 + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 121,
+      "source_order": 122,
       "source_text": "Przelewy24 + 1.5% for international transactions",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13623,7 +13833,7 @@
         "Przelewy24 + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 122,
+      "source_order": 123,
       "source_text": "Przelewy24 + 2% if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13668,7 +13878,7 @@
         "MB WAY 1.5% + ¥41"
       ],
       "source_evidence": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
-      "source_order": 123,
+      "source_order": 124,
       "source_text": "MB WAY 1.5% + ¥41",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13727,7 +13937,7 @@
         "MB WAY 1.5% + ¥41"
       ],
       "source_evidence": "",
-      "source_order": 124,
+      "source_order": 125,
       "source_text": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13772,7 +13982,7 @@
         "MB WAY 1.5% + ¥41"
       ],
       "source_evidence": "",
-      "source_order": 125,
+      "source_order": 126,
       "source_text": "MB WAY 1.5% + ¥41",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13831,7 +14041,7 @@
         "MB WAY + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 126,
+      "source_order": 127,
       "source_text": "MB WAY + 1.5% for international transactions",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13876,7 +14086,7 @@
         "MB WAY + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 127,
+      "source_order": 128,
       "source_text": "MB WAY + 2% if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13925,7 +14135,7 @@
         "Konbini 3.6%"
       ],
       "source_evidence": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.",
-      "source_order": 128,
+      "source_order": 129,
       "source_text": "Konbini 3.6%",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -13974,7 +14184,7 @@
         "Konbini 3.6%"
       ],
       "source_evidence": "",
-      "source_order": 129,
+      "source_order": 130,
       "source_text": "Konbini 3.6%",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -14023,7 +14233,7 @@
         "Konbini Minimum fee of ¥120"
       ],
       "source_evidence": "",
-      "source_order": 130,
+      "source_order": 131,
       "source_text": "Konbini Minimum fee of ¥120",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -14039,6 +14249,69 @@
           "percentage": null,
           "raw": "120",
           "token_id": "e5e5833828916a0a",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "cadf1d49e6765781",
+      "fee_category": "Konbini 10% + ¥250 consumption tax for refunds",
+      "footnotes": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/konbini"
+        },
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/docs/payments/konbini"
+        }
+      ],
+      "payment_method": "konbini",
+      "payment_method_family": null,
+      "product": "Payment methods",
+      "product_category": "local-payment-methods",
+      "qualifiers": [],
+      "section_path": [
+        "Payment methods",
+        "Konbini 10% + ¥250 consumption tax for refunds"
+      ],
+      "source_evidence": "",
+      "source_order": 132,
+      "source_text": "Konbini 10% + ¥250 consumption tax for refunds",
+      "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
+      "tokens": [
+        {
+          "amount": "250",
+          "basis_points": null,
+          "currency": "JPY",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": "+",
+          "percentage": null,
+          "raw": "250",
+          "token_id": "73633f0ccf8e2a58",
+          "value": null
+        },
+        {
+          "amount": null,
+          "basis_points": "1000",
+          "currency": null,
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "percentage",
+          "note": null,
+          "operator": "+",
+          "percentage": "10",
+          "raw": "10",
+          "token_id": "f9c0aea58f804c94",
           "value": null
         }
       ]
@@ -14068,7 +14341,7 @@
         "South Korean payment methods 3.1%"
       ],
       "source_evidence": "Accept payments from local cards and wallets available in South Korea without a local entity.",
-      "source_order": 131,
+      "source_order": 133,
       "source_text": "South Korean payment methods 3.1%",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -14113,7 +14386,7 @@
         "South Korean payment methods 3.1%"
       ],
       "source_evidence": "",
-      "source_order": 132,
+      "source_order": 134,
       "source_text": "South Korean payment methods 3.1%",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -14158,7 +14431,7 @@
         "South Korean payment methods + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 133,
+      "source_order": 135,
       "source_text": "South Korean payment methods + 1.5% for international transactions",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -14203,7 +14476,7 @@
         "South Korean payment methods + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 134,
+      "source_order": 136,
       "source_text": "South Korean payment methods + 2% if currency conversion is required",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -14251,7 +14524,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalog",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -14300,7 +14573,7 @@
       "source_order": 55
     },
     {
-      "body": "Connect\nPayments for platforms",
+      "body": "Connect\nPayments for platforms\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -14577,7 +14850,7 @@
       "source_order": 52
     },
     {
-      "body": "Accept Konbini payments from over 34,000 FamilyMarts, Lawsons, Ministops, and Seicomarts across Japan with a single integration.\n3.6%\nMinimum fee of ¥120\n¥250 + 10% consumption tax for refunds",
+      "body": "Accept Konbini payments from over 34,000 FamilyMarts, Lawsons, Ministops, and Seicomarts across Japan with a single integration.\n3.6%\nMinimum fee of ¥120\n10% + ¥250\nconsumption tax for refunds",
       "heading": "Konbini payments",
       "level": 1,
       "links": [],
@@ -14599,7 +14872,7 @@
       "source_order": 30
     },
     {
-      "body": "Offer bank debits, bank transfers, and other locally relevant payment methods.\n1.5%\n¥250 + 10% consumption tax for refunds\nSee more payment methods",
+      "body": "Offer bank debits, bank transfers, and other locally relevant payment methods.\n1.5%\n10% + ¥250\nconsumption tax for refunds\nSee more payment methods",
       "heading": "Bank-based and other payment methods",
       "level": 1,
       "links": [],
@@ -15572,7 +15845,7 @@
       "source_order": 118
     },
     {
-      "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used.For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
+      "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
       "heading": "Are there additional fees for refunds?",
       "level": 3,
       "links": [],
@@ -16105,7 +16378,7 @@
     },
     {
       "body": "Keep transaction costs low with bank transfers—ideal for large, one-off transactions like B2B payments.",
-      "heading": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "heading": "Bank Transfers 1.5%",
       "level": 3,
       "links": [
         {
@@ -16117,16 +16390,16 @@
           "uri": "https://stripe.com/en-jp/pricing/local-payment-methods"
         }
       ],
-      "section_id": "edc012ddf5e8207a",
+      "section_id": "b15d1b674cdb216f",
       "section_path": [
         "Payment methods",
-        "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+        "Bank Transfers 1.5%"
       ],
       "source_order": 22
     },
     {
       "body": "",
-      "heading": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+      "heading": "Bank Transfers 1.5%",
       "level": 3,
       "links": [
         {
@@ -16138,32 +16411,36 @@
           "uri": "https://stripe.com/en-jp/pricing/local-payment-methods"
         }
       ],
-      "section_id": "edc012ddf5e8207a",
+      "section_id": "b15d1b674cdb216f",
       "section_path": [
         "Payment methods",
-        "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+        "Bank Transfers 1.5%"
       ],
       "source_order": 23
     },
     {
-      "body": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.",
-      "heading": "EPS 1.6% + ¥35",
+      "body": "",
+      "heading": "Bank Transfers 10% + ¥250 consumption tax for refunds",
       "level": 3,
       "links": [
         {
           "text": "Learn more",
-          "uri": "https://stripe.com/en-jp/payment-method/eps"
+          "uri": "https://stripe.com/en-jp/payments/jp-bank-transfers"
+        },
+        {
+          "text": "See more payment methods",
+          "uri": "https://stripe.com/en-jp/pricing/local-payment-methods"
         }
       ],
-      "section_id": "da7db293d69be9cf",
+      "section_id": "98b80fec790576fd",
       "section_path": [
         "Payment methods",
-        "EPS 1.6% + ¥35"
+        "Bank Transfers 10% + ¥250 consumption tax for refunds"
       ],
       "source_order": 24
     },
     {
-      "body": "",
+      "body": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.",
       "heading": "EPS 1.6% + ¥35",
       "level": 3,
       "links": [
@@ -16181,6 +16458,23 @@
     },
     {
       "body": "",
+      "heading": "EPS 1.6% + ¥35",
+      "level": 3,
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/eps"
+        }
+      ],
+      "section_id": "da7db293d69be9cf",
+      "section_path": [
+        "Payment methods",
+        "EPS 1.6% + ¥35"
+      ],
+      "source_order": 26
+    },
+    {
+      "body": "",
       "heading": "EPS + 1.5% for international transactions",
       "level": 3,
       "links": [
@@ -16194,7 +16488,7 @@
         "Payment methods",
         "EPS + 1.5% for international transactions"
       ],
-      "source_order": 26
+      "source_order": 27
     },
     {
       "body": "",
@@ -16211,27 +16505,10 @@
         "Payment methods",
         "EPS + 2% if currency conversion is required"
       ],
-      "source_order": 27
-    },
-    {
-      "body": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments.",
-      "heading": "iDEAL | Wero ¥55",
-      "level": 3,
-      "links": [
-        {
-          "text": "Learn more",
-          "uri": "https://stripe.com/en-jp/payment-method/ideal"
-        }
-      ],
-      "section_id": "d78f809c37ee8f98",
-      "section_path": [
-        "Payment methods",
-        "iDEAL | Wero ¥55"
-      ],
       "source_order": 28
     },
     {
-      "body": "",
+      "body": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments.",
       "heading": "iDEAL | Wero ¥55",
       "level": 3,
       "links": [
@@ -16249,6 +16526,23 @@
     },
     {
       "body": "",
+      "heading": "iDEAL | Wero ¥55",
+      "level": 3,
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/ideal"
+        }
+      ],
+      "section_id": "d78f809c37ee8f98",
+      "section_path": [
+        "Payment methods",
+        "iDEAL | Wero ¥55"
+      ],
+      "source_order": 30
+    },
+    {
+      "body": "",
       "heading": "iDEAL | Wero + 1.5% for international transactions",
       "level": 3,
       "links": [
@@ -16262,7 +16556,7 @@
         "Payment methods",
         "iDEAL | Wero + 1.5% for international transactions"
       ],
-      "source_order": 30
+      "source_order": 31
     },
     {
       "body": "",
@@ -16279,27 +16573,10 @@
         "Payment methods",
         "iDEAL | Wero + 2% if currency conversion is required"
       ],
-      "source_order": 31
-    },
-    {
-      "body": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
-      "heading": "SEPA Direct Debit 0.8% + ¥35",
-      "level": 3,
-      "links": [
-        {
-          "text": "Learn more",
-          "uri": "https://stripe.com/en-jp/payments/sepa-direct-debit"
-        }
-      ],
-      "section_id": "0f6e51fd28e5c097",
-      "section_path": [
-        "Payment methods",
-        "SEPA Direct Debit 0.8% + ¥35"
-      ],
       "source_order": 32
     },
     {
-      "body": "",
+      "body": "Minimize involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
       "heading": "SEPA Direct Debit 0.8% + ¥35",
       "level": 3,
       "links": [
@@ -16317,6 +16594,23 @@
     },
     {
       "body": "",
+      "heading": "SEPA Direct Debit 0.8% + ¥35",
+      "level": 3,
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/sepa-direct-debit"
+        }
+      ],
+      "section_id": "0f6e51fd28e5c097",
+      "section_path": [
+        "Payment methods",
+        "SEPA Direct Debit 0.8% + ¥35"
+      ],
+      "source_order": 34
+    },
+    {
+      "body": "",
       "heading": "SEPA Direct Debit ¥620 cap",
       "level": 3,
       "links": [
@@ -16330,7 +16624,7 @@
         "Payment methods",
         "SEPA Direct Debit ¥620 cap"
       ],
-      "source_order": 34
+      "source_order": 35
     },
     {
       "body": "",
@@ -16347,7 +16641,7 @@
         "Payment methods",
         "SEPA Direct Debit + 1.5% for international transactions"
       ],
-      "source_order": 35
+      "source_order": 36
     },
     {
       "body": "",
@@ -16364,7 +16658,7 @@
         "Payment methods",
         "SEPA Direct Debit + 2% if currency conversion is required"
       ],
-      "source_order": 36
+      "source_order": 37
     },
     {
       "body": "",
@@ -16381,7 +16675,7 @@
         "Payment methods",
         "SEPA Direct Debit ¥2,375 for disputed payments"
       ],
-      "source_order": 37
+      "source_order": 38
     },
     {
       "body": "",
@@ -16398,27 +16692,10 @@
         "Payment methods",
         "SEPA Direct Debit ¥550 for failed payments"
       ],
-      "source_order": 38
-    },
-    {
-      "body": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
-      "heading": "Przelewy24 2.2% + ¥35",
-      "level": 3,
-      "links": [
-        {
-          "text": "Learn more",
-          "uri": "https://stripe.com/en-jp/payment-method/przelewy24"
-        }
-      ],
-      "section_id": "42dfcb873457bd6a",
-      "section_path": [
-        "Payment methods",
-        "Przelewy24 2.2% + ¥35"
-      ],
       "source_order": 39
     },
     {
-      "body": "",
+      "body": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
       "heading": "Przelewy24 2.2% + ¥35",
       "level": 3,
       "links": [
@@ -16436,6 +16713,23 @@
     },
     {
       "body": "",
+      "heading": "Przelewy24 2.2% + ¥35",
+      "level": 3,
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/przelewy24"
+        }
+      ],
+      "section_id": "42dfcb873457bd6a",
+      "section_path": [
+        "Payment methods",
+        "Przelewy24 2.2% + ¥35"
+      ],
+      "source_order": 41
+    },
+    {
+      "body": "",
       "heading": "Przelewy24 + 1.5% for international transactions",
       "level": 3,
       "links": [
@@ -16449,7 +16743,7 @@
         "Payment methods",
         "Przelewy24 + 1.5% for international transactions"
       ],
-      "source_order": 41
+      "source_order": 42
     },
     {
       "body": "",
@@ -16466,27 +16760,10 @@
         "Payment methods",
         "Przelewy24 + 2% if currency conversion is required"
       ],
-      "source_order": 42
-    },
-    {
-      "body": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
-      "heading": "MB WAY 1.5% + ¥41",
-      "level": 3,
-      "links": [
-        {
-          "text": "Learn more",
-          "uri": "https://stripe.com/en-jp/payment-method/mb-way"
-        }
-      ],
-      "section_id": "a0c59e55e431fb77",
-      "section_path": [
-        "Payment methods",
-        "MB WAY 1.5% + ¥41"
-      ],
       "source_order": 43
     },
     {
-      "body": "",
+      "body": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
       "heading": "MB WAY 1.5% + ¥41",
       "level": 3,
       "links": [
@@ -16504,6 +16781,23 @@
     },
     {
       "body": "",
+      "heading": "MB WAY 1.5% + ¥41",
+      "level": 3,
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payment-method/mb-way"
+        }
+      ],
+      "section_id": "a0c59e55e431fb77",
+      "section_path": [
+        "Payment methods",
+        "MB WAY 1.5% + ¥41"
+      ],
+      "source_order": 45
+    },
+    {
+      "body": "",
       "heading": "MB WAY + 1.5% for international transactions",
       "level": 3,
       "links": [
@@ -16517,7 +16811,7 @@
         "Payment methods",
         "MB WAY + 1.5% for international transactions"
       ],
-      "source_order": 45
+      "source_order": 46
     },
     {
       "body": "",
@@ -16534,31 +16828,10 @@
         "Payment methods",
         "MB WAY + 2% if currency conversion is required"
       ],
-      "source_order": 46
-    },
-    {
-      "body": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.",
-      "heading": "Konbini 3.6%",
-      "level": 3,
-      "links": [
-        {
-          "text": "Learn more",
-          "uri": "https://stripe.com/en-jp/payments/konbini"
-        },
-        {
-          "text": "Learn more",
-          "uri": "https://stripe.com/en-jp/docs/payments/konbini"
-        }
-      ],
-      "section_id": "06e293b4d1144acd",
-      "section_path": [
-        "Payment methods",
-        "Konbini 3.6%"
-      ],
       "source_order": 47
     },
     {
-      "body": "",
+      "body": "Offer customers the option to pay at over 34,000 convenience stores in Japan through a unified Stripe integration.",
       "heading": "Konbini 3.6%",
       "level": 3,
       "links": [
@@ -16580,6 +16853,27 @@
     },
     {
       "body": "",
+      "heading": "Konbini 3.6%",
+      "level": 3,
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/konbini"
+        },
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/docs/payments/konbini"
+        }
+      ],
+      "section_id": "06e293b4d1144acd",
+      "section_path": [
+        "Payment methods",
+        "Konbini 3.6%"
+      ],
+      "source_order": 49
+    },
+    {
+      "body": "",
       "heading": "Konbini Minimum fee of ¥120",
       "level": 3,
       "links": [
@@ -16597,7 +16891,28 @@
         "Payment methods",
         "Konbini Minimum fee of ¥120"
       ],
-      "source_order": 49
+      "source_order": 50
+    },
+    {
+      "body": "",
+      "heading": "Konbini 10% + ¥250 consumption tax for refunds",
+      "level": 3,
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/payments/konbini"
+        },
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/en-jp/docs/payments/konbini"
+        }
+      ],
+      "section_id": "99ac6b67dfdfc308",
+      "section_path": [
+        "Payment methods",
+        "Konbini 10% + ¥250 consumption tax for refunds"
+      ],
+      "source_order": 51
     },
     {
       "body": "Accept payments from local cards and wallets available in South Korea without a local entity.",
@@ -16614,7 +16929,7 @@
         "Payment methods",
         "South Korean payment methods 3.1%"
       ],
-      "source_order": 50
+      "source_order": 52
     },
     {
       "body": "",
@@ -16631,7 +16946,7 @@
         "Payment methods",
         "South Korean payment methods 3.1%"
       ],
-      "source_order": 51
+      "source_order": 53
     },
     {
       "body": "",
@@ -16648,7 +16963,7 @@
         "Payment methods",
         "South Korean payment methods + 1.5% for international transactions"
       ],
-      "source_order": 52
+      "source_order": 54
     },
     {
       "body": "",
@@ -16665,13 +16980,13 @@
         "Payment methods",
         "South Korean payment methods + 2% if currency conversion is required"
       ],
-      "source_order": 53
+      "source_order": 55
     }
   ],
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-jp/pricing",
-      "content_sha256": "98e015a7d034ec4b199daa267d47a66720cf441841d3942de13e3fad46ffa01b",
+      "content_sha256": "a1540ccc286434850feafbc88672ddb671f23e6032a32f81434b22417a1cf154",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -16687,7 +17002,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
-      "content_sha256": "d2c9d9ccb2fbbabedd4a9a3ce2500009960d984440f7c32f2c353c436eb84cb7",
+      "content_sha256": "5ca426e97cdbc00dc9551c5313f26283bb79847a0bca1a120780d815936ed974",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -17091,7 +17406,7 @@
         "EPS 1.6% + ¥35"
       ],
       "source_evidence": "",
-      "source_order": 102,
+      "source_order": 103,
       "source_text": "Let your Austrian customers pay with EPS—an online transfer payment method with over 18% market share in Austria.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -17138,7 +17453,7 @@
         "iDEAL | Wero ¥55"
       ],
       "source_evidence": "",
-      "source_order": 107,
+      "source_order": 108,
       "source_text": "Increase conversion with Dutch customers by enabling iDEAL | Wero—the most popular payment method in the Netherlands, with more than 60% share of online payments.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -17185,7 +17500,7 @@
         "MB WAY 1.5% + ¥41"
       ],
       "source_evidence": "",
-      "source_order": 124,
+      "source_order": 125,
       "source_text": "Increase conversion with Portuguese customers by enabling MB WAY—a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [
@@ -17519,7 +17834,7 @@
         "Przelewy24 2.2% + ¥35"
       ],
       "source_evidence": "",
-      "source_order": 119,
+      "source_order": 120,
       "source_text": "Let your Polish customers pay with multiple local polish payment methods, from the P24 portal.",
       "source_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
       "tokens": [

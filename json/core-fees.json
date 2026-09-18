@@ -26969,21 +26969,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 58,
-        "conflicting_rule_identities": 7,
+        "calculable_rules": 56,
+        "conflicting_rule_identities": 11,
         "custom_pricing": 1,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 12,
         "included": 9,
         "informational": 8,
-        "informational_conflicts": 7,
+        "informational_conflicts": 11,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 114,
+        "numeric_source_entries": 116,
         "reference_only": 0,
-        "referenced_numeric_entries": 114,
-        "source_entries": 135,
+        "referenced_numeric_entries": 116,
+        "source_entries": 137,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -27233,160 +27233,6 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
-              "value": "konbini"
-            },
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "from",
-          "fee_components": [
-            {
-              "amount": "120",
-              "basis_points": null,
-              "currency": "JPY",
-              "minor_amount": "120",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "minimum_fee",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "360.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "3.6"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "Accept Konbini payments from over 34,000 FamilyMarts, Lawsons, Ministops, and Seicomarts across Japan with a single integration. 3.6%",
-              "Minimum fee of ¥120",
-              "Konbini 3.6%",
-              "Konbini Minimum fee of ¥120"
-            ],
-            "source_entry_ids": [
-              "7ec0720fd6391757",
-              "34c6bd4f8d6238f2",
-              "ee8b36a49d422b02",
-              "252581d1793c0261"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "Accept Konbini payments from over 34,000 FamilyMarts, Lawsons, Ministops, and Seicomarts across Japan with a single integration. 3.6%",
-          "payment_method": "konbini",
-          "product_id": "konbini",
-          "provider": "stripe",
-          "rule_id": "ac75caddfb621000",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
-              "value": "konbini"
-            },
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "refund"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "250",
-              "basis_points": null,
-              "currency": "JPY",
-              "minor_amount": "250",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "1000",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "10"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "¥250 + 10% consumption tax for refunds"
-            ],
-            "source_entry_ids": [
-              "746ec28dfe8d724d"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "¥250 + 10% consumption tax for refunds",
-          "payment_method": "konbini",
-          "product_id": "konbini",
-          "provider": "stripe",
-          "rule_id": "59950ebe6e8a9cf7",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "payment_method",
-              "evidence": null,
-              "operator": "eq",
               "value": "paypay"
             },
             {
@@ -27434,130 +27280,6 @@
           "provider": "stripe",
           "rule_id": "bfe1cd0632cafc0b",
           "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "1.5%"
-            ],
-            "source_entry_ids": [
-              "61adaf4bd16c523a"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "1.5%",
-          "payment_method": null,
-          "product_id": "refunds",
-          "provider": "stripe",
-          "rule_id": "c9b671086b478852",
-          "unit": "per_refund",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "refund"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "250",
-              "basis_points": null,
-              "currency": "JPY",
-              "minor_amount": "250",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "1000",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "10"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "¥250 + 10% consumption tax for refunds"
-            ],
-            "source_entry_ids": [
-              "cc0ecbc27a9dc34c"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "¥250 + 10% consumption tax for refunds",
-          "payment_method": null,
-          "product_id": "refunds",
-          "provider": "stripe",
-          "rule_id": "8b76e34533316125",
-          "unit": "per_refund",
           "variant_id": "standard"
         },
         {
@@ -29374,6 +29096,65 @@
               "evidence": null,
               "operator": "eq",
               "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bank Transfers 1.5%"
+            ],
+            "source_entry_ids": [
+              "63a5c3073ef3595a"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bank Transfers 1.5%",
+          "payment_method": "bank_transfer",
+          "product_id": "bank_transfer",
+          "provider": "stripe",
+          "rule_id": "0bf6301a79192ee8",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bank_transfer"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
             },
             {
               "dimension": "transaction_type",
@@ -29399,18 +29180,6 @@
             },
             {
               "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "1.5"
-            },
-            {
-              "amount": null,
               "basis_points": "1000",
               "currency": null,
               "minor_amount": null,
@@ -29425,18 +29194,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds"
+              "Bank Transfers 10% + ¥250 consumption tax for refunds"
             ],
             "source_entry_ids": [
-              "06720b438a20b42a"
+              "c1a8e2530391476b"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Bank Transfers 1.5% ¥250 + 10% consumption tax for refunds",
+          "label": "Bank Transfers 10% + ¥250 consumption tax for refunds",
           "payment_method": "bank_transfer",
           "product_id": "bank_transfer",
           "provider": "stripe",
-          "rule_id": "edcfed0685713144",
+          "rule_id": "f8dc139e31dd808e",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -30623,6 +30392,83 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
+              "value": "konbini"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "refund"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "250",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "250",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "1000",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "10"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Konbini 10% + ¥250 consumption tax for refunds"
+            ],
+            "source_entry_ids": [
+              "cadf1d49e6765781"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Konbini 10% + ¥250 consumption tax for refunds",
+          "payment_method": "konbini",
+          "product_id": "konbini",
+          "provider": "stripe",
+          "rule_id": "59950ebe6e8a9cf7",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
               "value": "card"
             },
             {
@@ -30806,15 +30652,15 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 153,
-        "conflicting_rule_identities": 27,
+        "calculable_rules": 154,
+        "conflicting_rule_identities": 25,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 16,
         "included": 13,
         "informational": 12,
-        "informational_conflicts": 27,
+        "informational_conflicts": 25,
         "non_calculable_rules": 5,
         "numeric_fee_candidates": 0,
         "numeric_source_entries": 283,
@@ -30827,6 +30673,97 @@
       "derivation_status": "complete",
       "locale": "en-us",
       "rules": [
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "card"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "card_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "domestic"
+            },
+            {
+              "dimension": "card_origin",
+              "evidence": null,
+              "operator": "eq",
+              "value": "domestic"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.3",
+              "basis_points": null,
+              "currency": "USD",
+              "minor_amount": "30",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "290.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "2.9"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "2.9% + 30¢ per successful transaction for domestic cards",
+              "Card payments 2.9% + 30¢ per successful transaction for domestic cards"
+            ],
+            "source_entry_ids": [
+              "e416327e11e851fa",
+              "344d8c1bcb58a794"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "2.9% + 30¢ per successful transaction for domestic cards",
+          "payment_method": "card",
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "9dded4b573a38f84",
+          "unit": "per_transaction",
+          "variant_id": "online_domestic_cards"
+        },
         {
           "account_country": "US",
           "behavior": "conditional",

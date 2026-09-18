@@ -4934,7 +4934,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalogue",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -4983,7 +4983,7 @@
       "source_order": 38
     },
     {
-      "body": "Connect\nPayments for platforms",
+      "body": "Connect\nPayments for platforms\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -6064,7 +6064,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "a1d66fb1112f9338d67cdd60cce15bbcdfe7b42e227432718f2c84e7861d75d8",
+      "content_sha256": "0b46cb389fd7c14dd9490afe339e4b8afbba65b8ed71a3cf96f8baace6da7f66",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",
@@ -6080,7 +6080,7 @@
     },
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "2c3ed317cbf6a27edd38b3113704f7bfb53b7ea8d19e19a0c618d656ccfd00fc",
+      "content_sha256": "94791ebb5a40577eff7c8d085810111296f640c2e6624bc98b323cf5ea255b83",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",

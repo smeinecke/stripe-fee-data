@@ -235,6 +235,7 @@
       "family": "other",
       "fee_rule_refs": [
         "05e23f9c76046efb",
+        "0bf6301a79192ee8",
         "0c391d498b5db724",
         "1129bf0a7caef34e",
         "20b0660d53f762b4",
@@ -259,7 +260,7 @@
         "d41580f0507f921c",
         "ddb1acb2cf28170e",
         "e30a76d65a7d260d",
-        "edcfed0685713144"
+        "f8dc139e31dd808e"
       ],
       "localized_names": [],
       "method_id": "bank_transfer",
@@ -400,6 +401,7 @@
         "95f80830bf0d02cf",
         "9825b6e921aa3dc2",
         "98772b36e8b0a982",
+        "9dded4b573a38f84",
         "a8c794b8e2c3552a",
         "b989db6c004a0827",
         "c03857d57d3dbfbb",
@@ -680,13 +682,12 @@
       "display_name": "Konbini",
       "family": "other",
       "fee_rule_refs": [
-        "59950ebe6e8a9cf7",
-        "ac75caddfb621000"
+        "59950ebe6e8a9cf7"
       ],
       "localized_names": [],
       "method_id": "konbini",
       "source_refs": [
-        "https://stripe.com/en-jp/pricing"
+        "https://stripe.com/en-jp/pricing/local-payment-methods"
       ],
       "supported_account_countries": [
         "JP"

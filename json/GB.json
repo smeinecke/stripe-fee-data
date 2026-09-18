@@ -29938,7 +29938,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalogue",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -29987,7 +29987,7 @@
       "source_order": 67
     },
     {
-      "body": "Connect\nPayments for platforms\nCapital for platforms\nCustomer financing\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards",
+      "body": "Connect\nPayments for platforms\nCapital for platforms\nCustomer financing\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -34257,7 +34257,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "e4ad56178c21d5eec1ab7edfcbff9f385d6a48a553c5c1b2c5d1a075e1eaea54",
+      "content_sha256": "55e63fe696698023570c99f2fa281050bcaebd13cd9918593ed08ba8993e4656",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -34273,7 +34273,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "8f8822478e940e3453c122f141f7e43807bde6ad8809813524b917b0bd554f43",
+      "content_sha256": "e9fdf82ba7e43e94e70fd909f452cfc91dcf86277287a5e353b38ca93e1290ea",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",

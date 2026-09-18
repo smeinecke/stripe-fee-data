@@ -6753,7 +6753,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalog",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -6802,7 +6802,7 @@
       "source_order": 47
     },
     {
-      "body": "Connect\nPayments for platforms",
+      "body": "Connect\nPayments for platforms\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -7986,7 +7986,7 @@
       "source_order": 110
     },
     {
-      "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used.For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
+      "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
       "heading": "Are there additional fees for refunds?",
       "level": 3,
       "links": [],
@@ -8135,7 +8135,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "d8e088ab5721d61be58993f2c9da0155cde4fd11eb64cc0c0f285119b62f779d",
+      "content_sha256": "34da0d97fbecc41a879f3d90e299504608ff48d75df1c52770be7a5406eccfdb",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8151,7 +8151,7 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "e8f588790e67f2b7580a2851f74786303b236ef79ec80af36a551e0b7b6403bf",
+      "content_sha256": "df23e6d7c4312ac9225f5888dc6089919c32761610911861cf3bf990d11ac467",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",

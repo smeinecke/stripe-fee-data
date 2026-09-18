@@ -6574,7 +6574,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalog",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -6623,7 +6623,7 @@
       "source_order": 47
     },
     {
-      "body": "Connect\nPayments for platforms",
+      "body": "Connect\nPayments for platforms\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -7719,7 +7719,7 @@
       "source_order": 102
     },
     {
-      "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used.For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
+      "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
       "heading": "Are there additional fees for refunds?",
       "level": 3,
       "links": [],
@@ -7999,7 +7999,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "f8d5a45acd9d159899f1ec31f04848af673d47d20bc6ffa9955ba89217de15e5",
+      "content_sha256": "270683d576d0b57f7dd749c576ba34702d524479568c71af20029efaf977e487",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8015,7 +8015,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "3a8c7efef464a601008472e2a13b87dc4c95a075a33a115b69e917b3a8ddbe7b",
+      "content_sha256": "9d18ee2fc268b1e4952b29a84a1e5dc52324b8778ac53be70f9409d08b98c110",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
