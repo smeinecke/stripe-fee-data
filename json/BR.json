@@ -7854,7 +7854,7 @@
       "source_order": 114
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nStripe Brasil Soluções de Pagamento Ltda. - Instituição de Pagamento\nTax ID (CNPJ): 22.121.209/0001-46\nStripe Brasil Soluções de Pagamento Ltda - Payment Institution is a payment institution that operates as an acquirer.\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nStripe Brasil Soluções de Pagamento Ltda. - Instituição de Pagamento\nTax ID (CNPJ): 22.121.209/0001-46\nStripe Brasil Soluções de Pagamento Ltda - Payment Institution is a payment institution that operates as an acquirer.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -7999,7 +7999,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "da590ca80a1dd98c08926e3b5009cd6b92825e322d0b03b37ddd3ca61e9a7645",
+      "content_sha256": "a2ef78acfda85551e9dfa05111d337fdf935d24dd9fb67817fdb277f0416bb3e",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8015,7 +8015,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "0eadcf5ce18c48c133eff6e994a8e6a701e42945b1028ab522b122b27c3e469a",
+      "content_sha256": "cfba4b5d25ae88ec52bf27aae20a253785d9855ee7620706679f52f8438abc8a",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
