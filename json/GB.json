@@ -10,14 +10,14 @@
     "free": 2,
     "ignored_non_fee": 15,
     "included": 11,
-    "informational": 10,
+    "informational": 9,
     "informational_conflicts": 22,
     "non_calculable_rules": 3,
     "numeric_fee_candidates": 0,
-    "numeric_source_entries": 227,
+    "numeric_source_entries": 226,
     "reference_only": 0,
-    "referenced_numeric_entries": 227,
-    "source_entries": 256,
+    "referenced_numeric_entries": 226,
+    "source_entries": 255,
     "unclassified_fee_candidates": 0,
     "unsupported_fee_shapes": 0
   },
@@ -20137,7 +20137,7 @@
       "section_path": [
         "Card readers"
       ],
-      "source_evidence": "BBPOS WisePad 3\nExcl. VAT\n£229.00\nStripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT\n£249.00\nStripe Reader T600\nExcl. VAT",
+      "source_evidence": "BBPOS WisePad 3\nExcl. VAT\n£229.00\nStripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT",
       "source_order": 50,
       "source_text": "£49.00",
       "source_url": "https://stripe.com/gb/pricing",
@@ -20176,7 +20176,7 @@
       "section_path": [
         "Card readers"
       ],
-      "source_evidence": "Stripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT\n£249.00\nStripe Reader T600\nExcl. VAT",
+      "source_evidence": "Stripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT",
       "source_order": 51,
       "source_text": "£229.00",
       "source_url": "https://stripe.com/gb/pricing",
@@ -20215,7 +20215,7 @@
       "section_path": [
         "Card readers"
       ],
-      "source_evidence": "Stripe Reader S700\nExcl. VAT\n£249.00\nStripe Reader T600\nExcl. VAT",
+      "source_evidence": "Stripe Reader S700\nExcl. VAT",
       "source_order": 52,
       "source_text": "£229.00",
       "source_url": "https://stripe.com/gb/pricing",
@@ -20242,45 +20242,6 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "07045538f3813629",
-      "fee_category": "Card readers",
-      "footnotes": [],
-      "links": [],
-      "payment_method": "card",
-      "payment_method_family": null,
-      "product": "Card readers",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Card readers"
-      ],
-      "source_evidence": "Stripe Reader T600\nExcl. VAT",
-      "source_order": 53,
-      "source_text": "£249.00",
-      "source_url": "https://stripe.com/gb/pricing",
-      "tokens": [
-        {
-          "amount": "249.00",
-          "basis_points": null,
-          "currency": "GBP",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "249.00",
-          "token_id": "89fe6493eccde71f",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": "in_person",
-      "classification_evidence": [],
-      "classification_status": "unclassified",
-      "confidence": 0.0,
-      "context": {},
       "entry_id": "2881000fd86f9aa7",
       "fee_category": "Mobile",
       "footnotes": [],
@@ -20294,7 +20255,7 @@
         "Mobile"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 54,
+      "source_order": 53,
       "source_text": "£7.00 per reader per month",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20333,7 +20294,7 @@
         "Financial Connections"
       ],
       "source_evidence": "Reduce development time with a single integration.",
-      "source_order": 55,
+      "source_order": 54,
       "source_text": "Instantly verify bank accounts from 5,000 financial institutions.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20372,7 +20333,7 @@
         "Instant bank account verifications"
       ],
       "source_evidence": "Micro-deposit verifications are free",
-      "source_order": 56,
+      "source_order": 55,
       "source_text": "£1.25 per successful API call",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20411,7 +20372,7 @@
         "Instant bank account verifications"
       ],
       "source_evidence": "",
-      "source_order": 57,
+      "source_order": 56,
       "source_text": "Micro-deposit verifications are free",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20450,7 +20411,7 @@
         "Balances"
       ],
       "source_evidence": "",
-      "source_order": 58,
+      "source_order": 57,
       "source_text": "£0.10 per successful API call",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20489,7 +20450,7 @@
         "Account owners"
       ],
       "source_evidence": "",
-      "source_order": 59,
+      "source_order": 58,
       "source_text": "£1.25 per successful API call",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20528,7 +20489,7 @@
         "Transactions"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 60,
+      "source_order": 59,
       "source_text": "£0.25 per instant verification.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20567,7 +20528,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 61,
+      "source_order": 60,
       "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20606,7 +20567,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 62,
+      "source_order": 61,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20645,7 +20606,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "starting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 63,
+      "source_order": 62,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20684,7 +20645,7 @@
         "Treasury"
       ],
       "source_evidence": "No storage fees or minimum balance required.\nIncluded\nfunding through FPS",
-      "source_order": 64,
+      "source_order": 63,
       "source_text": "Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20723,7 +20684,7 @@
         "Treasury"
       ],
       "source_evidence": "funding through FPS",
-      "source_order": 65,
+      "source_order": 64,
       "source_text": "No storage fees or minimum balance required. Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20762,7 +20723,7 @@
         "Global Payouts (Domestic)"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 66,
+      "source_order": 65,
       "source_text": "£0.50 per payout",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20801,7 +20762,7 @@
         "Global Payouts (International)"
       ],
       "source_evidence": "cross-border fees starting at\n+ 0.25%\nFX fees starting at\n+ 0.5%\nSee pricing details",
-      "source_order": 67,
+      "source_order": 66,
       "source_text": "£0.50 per payout",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20840,7 +20801,7 @@
         "Global Payouts (International)"
       ],
       "source_evidence": "FX fees starting at\n+ 0.5%\nSee pricing details",
-      "source_order": 68,
+      "source_order": 67,
       "source_text": "cross-border fees starting at + 0.25%",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20879,7 +20840,7 @@
         "Global Payouts (International)"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 69,
+      "source_order": 68,
       "source_text": "FX fees starting at + 0.5%",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20918,7 +20879,7 @@
         "Cards"
       ],
       "source_evidence": "with Treasury\nNo cross-border or FX fees",
-      "source_order": 70,
+      "source_order": 69,
       "source_text": "Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20957,7 +20918,7 @@
         "Domestic payouts"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 71,
+      "source_order": 70,
       "source_text": "£0.50 per payout",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -20996,7 +20957,7 @@
         "International payouts"
       ],
       "source_evidence": "cross-border fees starting at\n+ 0.25%\nCross-border fees depend on recipient country.\nFX fees starting at\n+ 0.5%\nFX fees vary by merchant country.\nSee pricing details",
-      "source_order": 72,
+      "source_order": 71,
       "source_text": "£0.50 per payout",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21035,7 +20996,7 @@
         "International payouts"
       ],
       "source_evidence": "Cross-border fees depend on recipient country.\nFX fees starting at\n+ 0.5%\nFX fees vary by merchant country.\nSee pricing details",
-      "source_order": 73,
+      "source_order": 72,
       "source_text": "cross-border fees starting at + 0.25%",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21074,7 +21035,7 @@
         "International payouts"
       ],
       "source_evidence": "FX fees vary by merchant country.\nSee pricing details",
-      "source_order": 74,
+      "source_order": 73,
       "source_text": "FX fees starting at + 0.5%",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21113,7 +21074,7 @@
         "Card creation"
       ],
       "source_evidence": "",
-      "source_order": 75,
+      "source_order": 74,
       "source_text": "£3.50 per standard, physical card Custom cards subject to additional pricing. Shipping rates not included.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21152,7 +21113,7 @@
         "Card transactions"
       ],
       "source_evidence": "for the first £500,000 in card transactions\nStart today and we’ll waive card transaction fees for the first £500,000 in card transaction volume.\n0.2% + 15p\nper transaction after that",
-      "source_order": 76,
+      "source_order": 75,
       "source_text": "Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21191,7 +21152,7 @@
         "Card transactions"
       ],
       "source_evidence": "Start today and we’ll waive card transaction fees for the first £500,000 in card transaction volume.\n0.2% + 15p\nper transaction after that",
-      "source_order": 77,
+      "source_order": 76,
       "source_text": "for the first £500,000 in card transactions",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21230,7 +21191,7 @@
         "Card transactions"
       ],
       "source_evidence": "0.2% + 15p\nper transaction after that",
-      "source_order": 78,
+      "source_order": 77,
       "source_text": "Start today and we’ll waive card transaction fees for the first £500,000 in card transaction volume.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21269,7 +21230,7 @@
         "Card transactions"
       ],
       "source_evidence": "",
-      "source_order": 79,
+      "source_order": 78,
       "source_text": "0.2% + 15p per transaction after that",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21322,7 +21283,7 @@
         "International payments"
       ],
       "source_evidence": "+ 2%\nif currency conversion is required",
-      "source_order": 80,
+      "source_order": 79,
       "source_text": "1% + 30p for cross-border transactions.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21375,7 +21336,7 @@
         "International payments"
       ],
       "source_evidence": "",
-      "source_order": 81,
+      "source_order": 80,
       "source_text": "+ 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21414,7 +21375,7 @@
         "Pay monthly"
       ],
       "source_evidence": "",
-      "source_order": 82,
+      "source_order": 81,
       "source_text": "£8.00 per month, cancel any time",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21453,7 +21414,7 @@
         "Pay as you go"
       ],
       "source_evidence": "10,000 steps per month\n£0.013\nper additional step",
-      "source_order": 83,
+      "source_order": 82,
       "source_text": "Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21492,7 +21453,7 @@
         "Pay as you go"
       ],
       "source_evidence": "",
-      "source_order": 84,
+      "source_order": 83,
       "source_text": "£0.013 per additional step",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21531,7 +21492,7 @@
         "Startup"
       ],
       "source_evidence": "",
-      "source_order": 85,
+      "source_order": 84,
       "source_text": "0.8% of billing volume",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21570,7 +21531,7 @@
         "Starter"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 86,
+      "source_order": 85,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21609,7 +21570,7 @@
         "Tax Complete"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 87,
+      "source_order": 86,
       "source_text": "£70.00 per month, 1-year contract",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21648,7 +21609,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes calculated and collected on Billing, Checkout, Invoicing and Payment Links integrations.\n.\nAPI integration\n£0.40\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. £0.04 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 88,
+      "source_order": 87,
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21687,7 +21648,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. £0.04 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 89,
+      "source_order": 88,
       "source_text": "£0.40 per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21726,7 +21687,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 90,
+      "source_order": 89,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. £0.04 per calculation API call above 10.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21765,7 +21726,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "£20.00\nper month\nSubscription and cancellation\nterms apply.",
-      "source_order": 91,
+      "source_order": 90,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21804,7 +21765,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 92,
+      "source_order": 91,
       "source_text": "£20.00 per month",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21843,7 +21804,7 @@
         "Annual subscription"
       ],
       "source_evidence": "£150.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 93,
+      "source_order": 92,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21882,7 +21843,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 94,
+      "source_order": 93,
       "source_text": "£150.00 per month, 1-year contract",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21921,7 +21882,7 @@
         "Atlas"
       ],
       "source_evidence": "",
-      "source_order": 95,
+      "source_order": 94,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21960,7 +21921,7 @@
         "Orders"
       ],
       "source_evidence": "Buy carbon removal tons from\nFrontier’s portfolio through the Dashboard or API.\n3%\nof order value\nSee inventory details",
-      "source_order": 96,
+      "source_order": 95,
       "source_text": "Buy carbon removal tons from 3% of order value",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -21999,7 +21960,7 @@
         "ID document and selfie verification"
       ],
       "source_evidence": "Charged when a user completes verification.",
-      "source_order": 97,
+      "source_order": 96,
       "source_text": "£1.25 per verification",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22038,7 +21999,7 @@
         "ID number lookup"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 98,
+      "source_order": 97,
       "source_text": "£0.40 per lookup",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22077,7 +22038,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 99,
+      "source_order": 98,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22116,7 +22077,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 100,
+      "source_order": 99,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": []
@@ -22140,7 +22101,7 @@
         "20%"
       ],
       "source_evidence": "",
-      "source_order": 101,
+      "source_order": 100,
       "source_text": "20% of subscription volume migrated to Stripe Billing in 7 months",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22179,7 +22140,7 @@
         "90%"
       ],
       "source_evidence": "",
-      "source_order": 102,
+      "source_order": 101,
       "source_text": "90% of global processing volume on Stripe",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22218,7 +22179,7 @@
         "96.98%"
       ],
       "source_evidence": "authorisation rate",
-      "source_order": 103,
+      "source_order": 102,
       "source_text": "96.98%",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22257,7 +22218,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 104,
+      "source_order": 103,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22296,7 +22257,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 105,
+      "source_order": 104,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -22353,7 +22314,7 @@
         "Domestic card payments 1.5% + 20p for standard UK cards"
       ],
       "source_evidence": "Accept online payments made using cards issued domestically.",
-      "source_order": 106,
+      "source_order": 105,
       "source_text": "Domestic card payments 1.5% + 20p for standard UK cards",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22424,7 +22385,7 @@
         "Domestic card payments 1.5% + 20p for standard UK cards"
       ],
       "source_evidence": "",
-      "source_order": 107,
+      "source_order": 106,
       "source_text": "Domestic card payments 1.5% + 20p for standard UK cards",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22495,7 +22456,7 @@
         "Domestic card payments 2.8% + 20p for premium UK cards"
       ],
       "source_evidence": "",
-      "source_order": 108,
+      "source_order": 107,
       "source_text": "Domestic card payments 2.8% + 20p for premium UK cards",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22558,7 +22519,7 @@
         "International card payments 2.5% + 20p for European Economic Area cards"
       ],
       "source_evidence": "Accept online payments made using cards issued internationally.",
-      "source_order": 109,
+      "source_order": 108,
       "source_text": "International card payments 2.5% + 20p for European Economic Area cards",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22621,7 +22582,7 @@
         "International card payments 2.5% + 20p for European Economic Area cards"
       ],
       "source_evidence": "",
-      "source_order": 110,
+      "source_order": 109,
       "source_text": "International card payments 2.5% + 20p for European Economic Area cards",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22684,7 +22645,7 @@
         "International card payments + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 111,
+      "source_order": 110,
       "source_text": "International card payments + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22733,7 +22694,7 @@
         "International card payments 3.15% + 20p for international cards"
       ],
       "source_evidence": "",
-      "source_order": 112,
+      "source_order": 111,
       "source_text": "International card payments 3.15% + 20p for international cards",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22796,7 +22757,7 @@
         "International card payments + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 113,
+      "source_order": 112,
       "source_text": "International card payments + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22841,7 +22802,7 @@
         "Alipay 2.9% + 20p per successful charge"
       ],
       "source_evidence": "Allow customers in China as well as Chinese travellers to pay with Alipay in 11 major currencies.",
-      "source_order": 114,
+      "source_order": 113,
       "source_text": "Alipay 2.9% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22900,7 +22861,7 @@
         "Alipay 2.9% + 20p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 115,
+      "source_order": 114,
       "source_text": "Alipay 2.9% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -22959,7 +22920,7 @@
         "Alipay + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 116,
+      "source_order": 115,
       "source_text": "Alipay + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23004,7 +22965,7 @@
         "PayPal 0.2% + 10p + PayPal fees per successful charge"
       ],
       "source_evidence": "PayPal is a trusted payment option used by hundreds of millions of global customers in more than 200 countries to pay safely and securely.",
-      "source_order": 117,
+      "source_order": 116,
       "source_text": "PayPal 0.2% + 10p + PayPal fees per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23063,7 +23024,7 @@
         "PayPal 0.2% + 10p + PayPal fees per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 118,
+      "source_order": 117,
       "source_text": "PayPal 0.2% + 10p + PayPal fees per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23122,7 +23083,7 @@
         "PayPal + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 119,
+      "source_order": 118,
       "source_text": "PayPal + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23167,7 +23128,7 @@
         "Revolut Pay 1.5% + 20p per successful charge"
       ],
       "source_evidence": "Offer your customers in the UK and the EEA the convenience of Revolut Pay, allowing them to pay directly through their Revolut account or to check out as a guest.",
-      "source_order": 120,
+      "source_order": 119,
       "source_text": "Revolut Pay 1.5% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23226,7 +23187,7 @@
         "Revolut Pay 1.5% + 20p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 121,
+      "source_order": 120,
       "source_text": "Revolut Pay 1.5% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23285,7 +23246,7 @@
         "Revolut Pay + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 122,
+      "source_order": 121,
       "source_text": "Revolut Pay + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23330,7 +23291,7 @@
         "Satispay 1.8% + 20p per successful charge"
       ],
       "source_evidence": "Increase conversion with Italian customers by accepting Satispay – a popular digital wallet used by over 6 million people.",
-      "source_order": 123,
+      "source_order": 122,
       "source_text": "Satispay 1.8% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23389,7 +23350,7 @@
         "Satispay 1.8% + 20p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 124,
+      "source_order": 123,
       "source_text": "Satispay 1.8% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23448,7 +23409,7 @@
         "Satispay + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 125,
+      "source_order": 124,
       "source_text": "Satispay + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23493,7 +23454,7 @@
         "Satispay + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 126,
+      "source_order": 125,
       "source_text": "Satispay + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23538,7 +23499,7 @@
         "WeChat Pay 2.9% + 20p per successful charge"
       ],
       "source_evidence": "Let your customers pay with WeChat Pay – the wallet inside the popular messaging app WeChat that has more than 900 million active monthly users.",
-      "source_order": 127,
+      "source_order": 126,
       "source_text": "WeChat Pay 2.9% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23597,7 +23558,7 @@
         "WeChat Pay 2.9% + 20p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 128,
+      "source_order": 127,
       "source_text": "WeChat Pay 2.9% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23656,7 +23617,7 @@
         "WeChat Pay + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 129,
+      "source_order": 128,
       "source_text": "WeChat Pay + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23705,7 +23666,7 @@
         "ACH Direct Debit 0.8% for standard settlement timing"
       ],
       "source_evidence": "Lower transaction costs and minimize payment failure rates with ACH bank debits, popular in the US.",
-      "source_order": 130,
+      "source_order": 129,
       "source_text": "ACH Direct Debit 0.8% for standard settlement timing",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23754,7 +23715,7 @@
         "ACH Direct Debit 0.8% for standard settlement timing"
       ],
       "source_evidence": "",
-      "source_order": 131,
+      "source_order": 130,
       "source_text": "ACH Direct Debit 0.8% for standard settlement timing",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23803,7 +23764,7 @@
         "ACH Direct Debit £5.00 cap"
       ],
       "source_evidence": "",
-      "source_order": 132,
+      "source_order": 131,
       "source_text": "ACH Direct Debit £5.00 cap",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23852,7 +23813,7 @@
         "ACH Direct Debit + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 133,
+      "source_order": 132,
       "source_text": "ACH Direct Debit + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23901,7 +23862,7 @@
         "ACH Direct Debit + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 134,
+      "source_order": 133,
       "source_text": "ACH Direct Debit + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23950,7 +23911,7 @@
         "ACH Direct Debit £1.25 per instant bank account validation"
       ],
       "source_evidence": "",
-      "source_order": 135,
+      "source_order": 134,
       "source_text": "ACH Direct Debit £1.25 per instant bank account validation",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -23999,7 +23960,7 @@
         "ACH Direct Debit £15.00 for disputed payments"
       ],
       "source_evidence": "",
-      "source_order": 136,
+      "source_order": 135,
       "source_text": "ACH Direct Debit £15.00 for disputed payments",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24048,7 +24009,7 @@
         "ACH Direct Debit £4.00 for failed payments"
       ],
       "source_evidence": "",
-      "source_order": 137,
+      "source_order": 136,
       "source_text": "ACH Direct Debit £4.00 for failed payments",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24093,7 +24054,7 @@
         "Bacs Direct Debit 1%"
       ],
       "source_evidence": "Lower transaction costs and minimise payment failure rates with Bacs Direct Debit, popular in the UK.",
-      "source_order": 138,
+      "source_order": 137,
       "source_text": "Bacs Direct Debit 1%",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24138,7 +24099,7 @@
         "Bacs Direct Debit 1%"
       ],
       "source_evidence": "",
-      "source_order": 139,
+      "source_order": 138,
       "source_text": "Bacs Direct Debit 1%",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24183,7 +24144,7 @@
         "Bacs Direct Debit Minimum fee of 20p £4.00 cap"
       ],
       "source_evidence": "",
-      "source_order": 140,
+      "source_order": 139,
       "source_text": "Bacs Direct Debit Minimum fee of 20p £4.00 cap",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24242,7 +24203,7 @@
         "Bacs Direct Debit + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 141,
+      "source_order": 140,
       "source_text": "Bacs Direct Debit + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24287,7 +24248,7 @@
         "Bacs Direct Debit £5.00 for disputed payments"
       ],
       "source_evidence": "",
-      "source_order": 142,
+      "source_order": 141,
       "source_text": "Bacs Direct Debit £5.00 for disputed payments",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24332,7 +24293,7 @@
         "Bancontact 1.4% + 20p"
       ],
       "source_evidence": "Let your Belgian customers pay with Bancontact – Belgium’s most popular payment method offered by over 80% of online businesses.",
-      "source_order": 143,
+      "source_order": 142,
       "source_text": "Bancontact 1.4% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24391,7 +24352,7 @@
         "Bancontact 1.4% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 144,
+      "source_order": 143,
       "source_text": "Let your Belgian customers pay with Bancontact – Belgium’s most popular payment method offered by over 80% of online businesses.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24436,7 +24397,7 @@
         "Bancontact 1.4% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 145,
+      "source_order": 144,
       "source_text": "Bancontact 1.4% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24495,7 +24456,7 @@
         "Bancontact + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 146,
+      "source_order": 145,
       "source_text": "Bancontact + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24540,7 +24501,7 @@
         "Bancontact + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 147,
+      "source_order": 146,
       "source_text": "Bancontact + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24585,7 +24546,7 @@
         "Bizum 1.5% + 20p per successful charge"
       ],
       "source_evidence": "Increase conversion with Spanish customers by enabling Bizum – a leading mobile payment method in Spain used by over 20 million people.",
-      "source_order": 148,
+      "source_order": 147,
       "source_text": "Bizum 1.5% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24644,7 +24605,7 @@
         "Bizum 1.5% + 20p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 149,
+      "source_order": 148,
       "source_text": "Bizum 1.5% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24703,7 +24664,7 @@
         "Bizum + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 150,
+      "source_order": 149,
       "source_text": "Bizum + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24748,7 +24709,7 @@
         "Bizum + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 151,
+      "source_order": 150,
       "source_text": "Bizum + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24793,7 +24754,7 @@
         "BLIK 1.6% + 20p"
       ],
       "source_evidence": "Let your Polish customers pay with BLIK, Poland's largest payment method with more than 65% share of e-commerce payments.",
-      "source_order": 152,
+      "source_order": 151,
       "source_text": "BLIK 1.6% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24852,7 +24813,7 @@
         "BLIK 1.6% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 153,
+      "source_order": 152,
       "source_text": "Let your Polish customers pay with BLIK, Poland's largest payment method with more than 65% share of e-commerce payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24897,7 +24858,7 @@
         "BLIK 1.6% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 154,
+      "source_order": 153,
       "source_text": "BLIK 1.6% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -24956,7 +24917,7 @@
         "BLIK + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 155,
+      "source_order": 154,
       "source_text": "BLIK + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25001,7 +24962,7 @@
         "BLIK + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 156,
+      "source_order": 155,
       "source_text": "BLIK + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25046,7 +25007,7 @@
         "EPS 1.6% + 20p"
       ],
       "source_evidence": "Let your Austrian customers pay with EPS – an online transfer payment method with over 18% market share in Austria.",
-      "source_order": 157,
+      "source_order": 156,
       "source_text": "EPS 1.6% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25105,7 +25066,7 @@
         "EPS 1.6% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 158,
+      "source_order": 157,
       "source_text": "Let your Austrian customers pay with EPS – an online transfer payment method with over 18% market share in Austria.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25150,7 +25111,7 @@
         "EPS 1.6% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 159,
+      "source_order": 158,
       "source_text": "EPS 1.6% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25209,7 +25170,7 @@
         "EPS + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 160,
+      "source_order": 159,
       "source_text": "EPS + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25254,7 +25215,7 @@
         "EPS + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 161,
+      "source_order": 160,
       "source_text": "EPS + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25299,7 +25260,7 @@
         "GBP Bank Transfers 0.5%"
       ],
       "source_evidence": "Keep transaction costs low with bank transfers – ideal for large, one-off transactions such as B2B payments.",
-      "source_order": 162,
+      "source_order": 161,
       "source_text": "GBP Bank Transfers 0.5%",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25344,7 +25305,7 @@
         "GBP Bank Transfers 0.5%"
       ],
       "source_evidence": "",
-      "source_order": 163,
+      "source_order": 162,
       "source_text": "GBP Bank Transfers 0.5%",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25389,7 +25350,7 @@
         "GBP Bank Transfers £5.00 cap"
       ],
       "source_evidence": "",
-      "source_order": 164,
+      "source_order": 163,
       "source_text": "GBP Bank Transfers £5.00 cap",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25434,7 +25395,7 @@
         "GBP Bank Transfers £0.50 per successful refund"
       ],
       "source_evidence": "",
-      "source_order": 165,
+      "source_order": 164,
       "source_text": "GBP Bank Transfers £0.50 per successful refund",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25479,7 +25440,7 @@
         "iDEAL | Wero £0.25"
       ],
       "source_evidence": "Increase conversion with Dutch customers by enabling iDEAL | Wero – the most popular payment method in the Netherlands, with more than 60% share of online payments.",
-      "source_order": 166,
+      "source_order": 165,
       "source_text": "iDEAL | Wero £0.25",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25524,7 +25485,7 @@
         "iDEAL | Wero £0.25"
       ],
       "source_evidence": "",
-      "source_order": 167,
+      "source_order": 166,
       "source_text": "Increase conversion with Dutch customers by enabling iDEAL | Wero – the most popular payment method in the Netherlands, with more than 60% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25569,7 +25530,7 @@
         "iDEAL | Wero £0.25"
       ],
       "source_evidence": "",
-      "source_order": 168,
+      "source_order": 167,
       "source_text": "iDEAL | Wero £0.25",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25614,7 +25575,7 @@
         "iDEAL | Wero + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 169,
+      "source_order": 168,
       "source_text": "iDEAL | Wero + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25659,7 +25620,7 @@
         "iDEAL | Wero + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 170,
+      "source_order": 169,
       "source_text": "iDEAL | Wero + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25704,7 +25665,7 @@
         "Przelewy24 2.2% + 20p"
       ],
       "source_evidence": "Let your Polish customers pay with multiple local Polish payment methods, from the P24 portal.",
-      "source_order": 171,
+      "source_order": 170,
       "source_text": "Przelewy24 2.2% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25763,7 +25724,7 @@
         "Przelewy24 2.2% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 172,
+      "source_order": 171,
       "source_text": "Let your Polish customers pay with multiple local Polish payment methods, from the P24 portal.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25808,7 +25769,7 @@
         "Przelewy24 2.2% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 173,
+      "source_order": 172,
       "source_text": "Przelewy24 2.2% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25867,7 +25828,7 @@
         "Przelewy24 + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 174,
+      "source_order": 173,
       "source_text": "Przelewy24 + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25912,7 +25873,7 @@
         "Przelewy24 + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 175,
+      "source_order": 174,
       "source_text": "Przelewy24 + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -25957,7 +25918,7 @@
         "SEPA Direct Debit £0.30"
       ],
       "source_evidence": "Minimise involuntary churn for subscriptions or recurring payments by debiting your customers’ bank accounts in 36 European countries.",
-      "source_order": 176,
+      "source_order": 175,
       "source_text": "SEPA Direct Debit £0.30",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26002,7 +25963,7 @@
         "SEPA Direct Debit £0.30"
       ],
       "source_evidence": "",
-      "source_order": 177,
+      "source_order": 176,
       "source_text": "SEPA Direct Debit £0.30",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26047,7 +26008,7 @@
         "SEPA Direct Debit + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 178,
+      "source_order": 177,
       "source_text": "SEPA Direct Debit + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26092,7 +26053,7 @@
         "SEPA Direct Debit + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 179,
+      "source_order": 178,
       "source_text": "SEPA Direct Debit + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26137,7 +26098,7 @@
         "SEPA Direct Debit £13.00 for disputed payments"
       ],
       "source_evidence": "",
-      "source_order": 180,
+      "source_order": 179,
       "source_text": "SEPA Direct Debit £13.00 for disputed payments",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26182,7 +26143,7 @@
         "SEPA Direct Debit £3.00 for failed payments"
       ],
       "source_evidence": "",
-      "source_order": 181,
+      "source_order": 180,
       "source_text": "SEPA Direct Debit £3.00 for failed payments",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26227,7 +26188,7 @@
         "TWINT 2.6% + 20p"
       ],
       "source_evidence": "Let Swiss customers pay with TWINT, a popular bank redirect method in Switzerland.",
-      "source_order": 182,
+      "source_order": 181,
       "source_text": "TWINT 2.6% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26286,7 +26247,7 @@
         "TWINT 2.6% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 183,
+      "source_order": 182,
       "source_text": "TWINT 2.6% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26345,7 +26306,7 @@
         "TWINT + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 184,
+      "source_order": 183,
       "source_text": "TWINT + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26390,7 +26351,7 @@
         "TWINT + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 185,
+      "source_order": 184,
       "source_text": "TWINT + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26435,7 +26396,7 @@
         "USD Bank Transfer 0.5% per successful transaction"
       ],
       "source_evidence": "Keep transaction costs low and reduce operational burden with bank transfers – ideal for large, one-off transactions like B2B payments.",
-      "source_order": 186,
+      "source_order": 185,
       "source_text": "USD Bank Transfer 0.5% per successful transaction",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26480,7 +26441,7 @@
         "USD Bank Transfer 0.5% per successful transaction"
       ],
       "source_evidence": "",
-      "source_order": 187,
+      "source_order": 186,
       "source_text": "USD Bank Transfer 0.5% per successful transaction",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26525,7 +26486,7 @@
         "USD Bank Transfer £5.00 cap"
       ],
       "source_evidence": "",
-      "source_order": 188,
+      "source_order": 187,
       "source_text": "USD Bank Transfer £5.00 cap",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26570,7 +26531,7 @@
         "USD Bank Transfer + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 189,
+      "source_order": 188,
       "source_text": "USD Bank Transfer + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26615,7 +26576,7 @@
         "USD Bank Transfer + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 190,
+      "source_order": 189,
       "source_text": "USD Bank Transfer + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26660,7 +26621,7 @@
         "USD Bank Transfer £15.00 per wire payment"
       ],
       "source_evidence": "",
-      "source_order": 191,
+      "source_order": 190,
       "source_text": "USD Bank Transfer £15.00 per wire payment",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26705,7 +26666,7 @@
         "USD Bank Transfer £0.50 per successful refund"
       ],
       "source_evidence": "",
-      "source_order": 192,
+      "source_order": 191,
       "source_text": "USD Bank Transfer £0.50 per successful refund",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26750,7 +26711,7 @@
         "Pay by Bank 0.5% + 20p per successful charge"
       ],
       "source_evidence": "Reduce payment costs by accepting real-time bank payments.",
-      "source_order": 193,
+      "source_order": 192,
       "source_text": "Pay by Bank 0.5% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26809,7 +26770,7 @@
         "Pay by Bank 0.5% + 20p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 194,
+      "source_order": 193,
       "source_text": "Pay by Bank 0.5% + 20p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26868,7 +26829,7 @@
         "Pay by Bank £5.00 cap"
       ],
       "source_evidence": "",
-      "source_order": 195,
+      "source_order": 194,
       "source_text": "Pay by Bank £5.00 cap",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26913,7 +26874,7 @@
         "Pay by Bank + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 196,
+      "source_order": 195,
       "source_text": "Pay by Bank + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -26958,7 +26919,7 @@
         "Pay by Bank + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 197,
+      "source_order": 196,
       "source_text": "Pay by Bank + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27003,7 +26964,7 @@
         "EUR Bank Transfer 0.5% per successful transaction"
       ],
       "source_evidence": "Keep transaction costs low and reduce operational burden with bank transfers – ideal for large, one-off transactions like B2B payments.",
-      "source_order": 198,
+      "source_order": 197,
       "source_text": "EUR Bank Transfer 0.5% per successful transaction",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27048,7 +27009,7 @@
         "EUR Bank Transfer 0.5% per successful transaction"
       ],
       "source_evidence": "",
-      "source_order": 199,
+      "source_order": 198,
       "source_text": "EUR Bank Transfer 0.5% per successful transaction",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27093,7 +27054,7 @@
         "EUR Bank Transfer £5.00 cap"
       ],
       "source_evidence": "",
-      "source_order": 200,
+      "source_order": 199,
       "source_text": "EUR Bank Transfer £5.00 cap",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27138,7 +27099,7 @@
         "EUR Bank Transfer + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 201,
+      "source_order": 200,
       "source_text": "EUR Bank Transfer + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27183,7 +27144,7 @@
         "EUR Bank Transfer + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 202,
+      "source_order": 201,
       "source_text": "EUR Bank Transfer + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27228,7 +27189,7 @@
         "EUR Bank Transfer £0.50 per successful refund"
       ],
       "source_evidence": "",
-      "source_order": 203,
+      "source_order": 202,
       "source_text": "EUR Bank Transfer £0.50 per successful refund",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27273,7 +27234,7 @@
         "EUR Bank Transfer £15.00 per international wire payment"
       ],
       "source_evidence": "",
-      "source_order": 204,
+      "source_order": 203,
       "source_text": "EUR Bank Transfer £15.00 per international wire payment",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27318,7 +27279,7 @@
         "MB WAY 1.5% + 20p"
       ],
       "source_evidence": "Increase conversion with Portuguese customers by enabling MB WAY – a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
-      "source_order": 205,
+      "source_order": 204,
       "source_text": "MB WAY 1.5% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27377,7 +27338,7 @@
         "MB WAY 1.5% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 206,
+      "source_order": 205,
       "source_text": "Increase conversion with Portuguese customers by enabling MB WAY – a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27422,7 +27383,7 @@
         "MB WAY 1.5% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 207,
+      "source_order": 206,
       "source_text": "MB WAY 1.5% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27481,7 +27442,7 @@
         "MB WAY + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 208,
+      "source_order": 207,
       "source_text": "MB WAY + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27526,7 +27487,7 @@
         "MB WAY + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 209,
+      "source_order": 208,
       "source_text": "MB WAY + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27571,7 +27532,7 @@
         "Pix 2% per successful charge"
       ],
       "source_evidence": "Increase conversion with Brazilian customers by enabling Pix—the most popular payment method in Brazil, with more than 40% share of online payments.",
-      "source_order": 210,
+      "source_order": 209,
       "source_text": "Pix 2% per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27616,7 +27577,7 @@
         "Pix 2% per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 211,
+      "source_order": 210,
       "source_text": "Increase conversion with Brazilian customers by enabling Pix—the most popular payment method in Brazil, with more than 40% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27661,7 +27622,7 @@
         "Pix 2% per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 212,
+      "source_order": 211,
       "source_text": "Pix 2% per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27706,7 +27667,7 @@
         "Pix + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 213,
+      "source_order": 212,
       "source_text": "Pix + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27751,7 +27712,7 @@
         "Pix + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 214,
+      "source_order": 213,
       "source_text": "Pix + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27796,7 +27757,7 @@
         "UPI 2% per successful charge"
       ],
       "source_evidence": "Increase conversion with Indian customers by enabling UPI – the most popular payment method in India, with more than 80% share of online payments.",
-      "source_order": 215,
+      "source_order": 214,
       "source_text": "UPI 2% per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27841,7 +27802,7 @@
         "UPI 2% per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 216,
+      "source_order": 215,
       "source_text": "Increase conversion with Indian customers by enabling UPI – the most popular payment method in India, with more than 80% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27886,7 +27847,7 @@
         "UPI 2% per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 217,
+      "source_order": 216,
       "source_text": "UPI 2% per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27931,7 +27892,7 @@
         "UPI + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 218,
+      "source_order": 217,
       "source_text": "UPI + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -27976,7 +27937,7 @@
         "UPI + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 219,
+      "source_order": 218,
       "source_text": "UPI + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28021,7 +27982,7 @@
         "Clearpay 6% + 30p per successful charge"
       ],
       "source_evidence": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers.",
-      "source_order": 220,
+      "source_order": 219,
       "source_text": "Clearpay 6% + 30p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28080,7 +28041,7 @@
         "Clearpay 6% + 30p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 221,
+      "source_order": 220,
       "source_text": "Let your customers break their payment into 3 or 4 interest-free instalments using Afterpay/Clearpay, with 25 million active global customers.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28125,7 +28086,7 @@
         "Clearpay 6% + 30p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 222,
+      "source_order": 221,
       "source_text": "Clearpay 6% + 30p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28184,7 +28145,7 @@
         "Clearpay + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 223,
+      "source_order": 222,
       "source_text": "Clearpay + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28229,7 +28190,7 @@
         "Clearpay + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 224,
+      "source_order": 223,
       "source_text": "Clearpay + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28278,7 +28239,7 @@
         "Klarna United States, Canada 5.99% + 30p"
       ],
       "source_evidence": "Offer flexible payment options that give customers more freedom to choose when and how to pay for a purchase, with 150 million consumers across 27 markets.",
-      "source_order": 225,
+      "source_order": 224,
       "source_text": "Klarna United States, Canada 5.99% + 30p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28341,7 +28302,7 @@
         "Klarna United States, Canada 5.99% + 30p"
       ],
       "source_evidence": "",
-      "source_order": 226,
+      "source_order": 225,
       "source_text": "Klarna United States, Canada 5.99% + 30p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28404,7 +28365,7 @@
         "Klarna United States, Canada + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 227,
+      "source_order": 226,
       "source_text": "Klarna United States, Canada + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28453,7 +28414,7 @@
         "Klarna United States, Canada + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 228,
+      "source_order": 227,
       "source_text": "Klarna United States, Canada + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28502,7 +28463,7 @@
         "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + 35p"
       ],
       "source_evidence": "",
-      "source_order": 229,
+      "source_order": 228,
       "source_text": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland 2.99% + 35p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28565,7 +28526,7 @@
         "Klarna Austria, Belgium, Germany, Netherlands, Switzerland + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 230,
+      "source_order": 229,
       "source_text": "Klarna Austria, Belgium, Germany, Netherlands, Switzerland + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28614,7 +28575,7 @@
         "Klarna Denmark, Finland, Norway, Sweden 2.99% + 35p"
       ],
       "source_evidence": "",
-      "source_order": 231,
+      "source_order": 230,
       "source_text": "Klarna Denmark, Finland, Norway, Sweden 2.99% + 35p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28677,7 +28638,7 @@
         "Klarna Denmark, Finland, Norway, Sweden + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 232,
+      "source_order": 231,
       "source_text": "Klarna Denmark, Finland, Norway, Sweden + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28726,7 +28687,7 @@
         "Klarna Czech Republic, France, Greece, Ireland, Italy, Poland, Portugal, Romania, Spain, United Kingdom 4.99% + 35p"
       ],
       "source_evidence": "",
-      "source_order": 233,
+      "source_order": 232,
       "source_text": "Klarna Czech Republic, France, Greece, Ireland, Italy, Poland, Portugal, Romania, Spain, United Kingdom 4.99% + 35p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28789,7 +28750,7 @@
         "Klarna Czech Republic, France, Greece, Ireland, Italy, Poland, Portugal, Romania, Spain, United Kingdom + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 234,
+      "source_order": 233,
       "source_text": "Klarna Czech Republic, France, Greece, Ireland, Italy, Poland, Portugal, Romania, Spain, United Kingdom + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28838,7 +28799,7 @@
         "Klarna Australia, New Zealand 4.99% + 35p"
       ],
       "source_evidence": "",
-      "source_order": 235,
+      "source_order": 234,
       "source_text": "Klarna Australia, New Zealand 4.99% + 35p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28901,7 +28862,7 @@
         "Klarna Australia, New Zealand + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 236,
+      "source_order": 235,
       "source_text": "Klarna Australia, New Zealand + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28950,7 +28911,7 @@
         "Klarna Australia, New Zealand + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 237,
+      "source_order": 236,
       "source_text": "Klarna Australia, New Zealand + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -28999,7 +28960,7 @@
         "Klarna £20.00 for lost disputes"
       ],
       "source_evidence": "Certain businesses may qualify for temporarily reduced rates on select local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
-      "source_order": 238,
+      "source_order": 237,
       "source_text": "Klarna £20.00 for lost disputes",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29048,7 +29009,7 @@
         "Klarna £20.00 for lost disputes"
       ],
       "source_evidence": "",
-      "source_order": 239,
+      "source_order": 238,
       "source_text": "Certain businesses may qualify for temporarily reduced rates on select local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29107,7 +29068,7 @@
         "Billie 3.5% + 25p per successful charge"
       ],
       "source_evidence": "Increase revenue by offering 30-day payment terms for B2B transactions while you receive full payment upfront.",
-      "source_order": 240,
+      "source_order": 239,
       "source_text": "Billie 3.5% + 25p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29166,7 +29127,7 @@
         "Billie 3.5% + 25p per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 241,
+      "source_order": 240,
       "source_text": "Billie 3.5% + 25p per successful charge",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29225,7 +29186,7 @@
         "Billie + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 242,
+      "source_order": 241,
       "source_text": "Billie + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29270,7 +29231,7 @@
         "Scalapay 4.99% + 35p"
       ],
       "source_evidence": "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe.",
-      "source_order": 243,
+      "source_order": 242,
       "source_text": "Scalapay 4.99% + 35p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29329,7 +29290,7 @@
         "Scalapay 4.99% + 35p"
       ],
       "source_evidence": "",
-      "source_order": 244,
+      "source_order": 243,
       "source_text": "Offer 3 or 4 interest-free instalment payments with Scalapay – used by over 11 million people across Europe.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29374,7 +29335,7 @@
         "Scalapay 4.99% + 35p"
       ],
       "source_evidence": "",
-      "source_order": 245,
+      "source_order": 244,
       "source_text": "Scalapay 4.99% + 35p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29433,7 +29394,7 @@
         "Scalapay + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 246,
+      "source_order": 245,
       "source_text": "Scalapay + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29478,7 +29439,7 @@
         "Scalapay + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 247,
+      "source_order": 246,
       "source_text": "Scalapay + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29523,7 +29484,7 @@
         "Multibanco 2.95% + 20p"
       ],
       "source_evidence": "Allow your customers in Portugal to pay with Multibanco, a voucher-based payment method.",
-      "source_order": 248,
+      "source_order": 247,
       "source_text": "Multibanco 2.95% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29582,7 +29543,7 @@
         "Multibanco 2.95% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 249,
+      "source_order": 248,
       "source_text": "Multibanco 2.95% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29641,7 +29602,7 @@
         "Multibanco + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 250,
+      "source_order": 249,
       "source_text": "Multibanco + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29686,7 +29647,7 @@
         "Multibanco + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 251,
+      "source_order": 250,
       "source_text": "Multibanco + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29731,7 +29692,7 @@
         "South Korean payment methods 3.1% + 20p"
       ],
       "source_evidence": "Accept payments from local cards and wallets available in South Korea without a local entity.",
-      "source_order": 252,
+      "source_order": 251,
       "source_text": "South Korean payment methods 3.1% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29790,7 +29751,7 @@
         "South Korean payment methods 3.1% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 253,
+      "source_order": 252,
       "source_text": "South Korean payment methods 3.1% + 20p",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29849,7 +29810,7 @@
         "South Korean payment methods + 1.5% for international transactions"
       ],
       "source_evidence": "",
-      "source_order": 254,
+      "source_order": 253,
       "source_text": "South Korean payment methods + 1.5% for international transactions",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -29894,7 +29855,7 @@
         "South Korean payment methods + 2% if currency conversion is required"
       ],
       "source_evidence": "",
-      "source_order": 255,
+      "source_order": 254,
       "source_text": "South Korean payment methods + 2% if currency conversion is required",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -30606,7 +30567,7 @@
       "source_order": 59
     },
     {
-      "body": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\n£49.00\nBBPOS WisePad 3\nExcl. VAT\n£229.00\nStripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT\n£249.00\nStripe Reader T600\nExcl. VAT",
+      "body": "Use pre-certified card readers with cloud-based fleet management that streamlines device logistics and management at scale.\n£49.00\nBBPOS WisePad 3\nExcl. VAT\n£229.00\nStripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT",
       "heading": "Card readers",
       "level": 1,
       "links": [],
@@ -34257,7 +34218,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "61d38fe5b5469c78af95332d2121ef34acaebf2912e00bd5637924380cfcafa3",
+      "content_sha256": "08b0ad9e665579c225af03755ad865c2f1c72c84b6234a6741bb191fdd7a42ad",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -34273,7 +34234,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "b30c29f9cbac5c74afc7b436e2eb05dc65fdc1c264ac6ccfe5fa93fd1c3b6129",
+      "content_sha256": "30fd885db7bc5664c5d94ae7acb2b7f6e67bcfd94f9cc863796220975bae4dc4",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -34393,7 +34354,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 90,
+      "source_order": 89,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. £0.04 per calculation API call above 10.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -34434,7 +34395,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 99,
+      "source_order": 98,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -34475,7 +34436,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 100,
+      "source_order": 99,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": []
@@ -34501,7 +34462,7 @@
         "20%"
       ],
       "source_evidence": "",
-      "source_order": 101,
+      "source_order": 100,
       "source_text": "20% of subscription volume migrated to Stripe Billing in 7 months",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -34542,7 +34503,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 104,
+      "source_order": 103,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -34583,7 +34544,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 105,
+      "source_order": 104,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -34630,7 +34591,7 @@
         "Bancontact 1.4% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 144,
+      "source_order": 143,
       "source_text": "Let your Belgian customers pay with Bancontact – Belgium’s most popular payment method offered by over 80% of online businesses.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -34677,7 +34638,7 @@
         "BLIK 1.6% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 153,
+      "source_order": 152,
       "source_text": "Let your Polish customers pay with BLIK, Poland's largest payment method with more than 65% share of e-commerce payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -34724,7 +34685,7 @@
         "EPS 1.6% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 158,
+      "source_order": 157,
       "source_text": "Let your Austrian customers pay with EPS – an online transfer payment method with over 18% market share in Austria.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -34771,7 +34732,7 @@
         "iDEAL | Wero £0.25"
       ],
       "source_evidence": "",
-      "source_order": 167,
+      "source_order": 166,
       "source_text": "Increase conversion with Dutch customers by enabling iDEAL | Wero – the most popular payment method in the Netherlands, with more than 60% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -34818,7 +34779,7 @@
         "MB WAY 1.5% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 206,
+      "source_order": 205,
       "source_text": "Increase conversion with Portuguese customers by enabling MB WAY – a popular digital wallet payment method in Portugal, with more than 45% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -34865,7 +34826,7 @@
         "Pix 2% per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 211,
+      "source_order": 210,
       "source_text": "Increase conversion with Brazilian customers by enabling Pix—the most popular payment method in Brazil, with more than 40% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -34912,7 +34873,7 @@
         "UPI 2% per successful charge"
       ],
       "source_evidence": "",
-      "source_order": 216,
+      "source_order": 215,
       "source_text": "Increase conversion with Indian customers by enabling UPI – the most popular payment method in India, with more than 80% share of online payments.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -34993,7 +34954,7 @@
       "section_path": [
         "Card readers"
       ],
-      "source_evidence": "BBPOS WisePad 3\nExcl. VAT\n£229.00\nStripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT\n£249.00\nStripe Reader T600\nExcl. VAT",
+      "source_evidence": "BBPOS WisePad 3\nExcl. VAT\n£229.00\nStripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT",
       "source_order": 50,
       "source_text": "£49.00",
       "source_url": "https://stripe.com/gb/pricing",
@@ -35034,7 +34995,7 @@
       "section_path": [
         "Card readers"
       ],
-      "source_evidence": "Stripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT\n£249.00\nStripe Reader T600\nExcl. VAT",
+      "source_evidence": "Stripe Reader S710\nExcl. VAT\n£229.00\nStripe Reader S700\nExcl. VAT",
       "source_order": 51,
       "source_text": "£229.00",
       "source_url": "https://stripe.com/gb/pricing",
@@ -35075,7 +35036,7 @@
       "section_path": [
         "Card readers"
       ],
-      "source_evidence": "Stripe Reader S700\nExcl. VAT\n£249.00\nStripe Reader T600\nExcl. VAT",
+      "source_evidence": "Stripe Reader S700\nExcl. VAT",
       "source_order": 52,
       "source_text": "£229.00",
       "source_url": "https://stripe.com/gb/pricing",
@@ -35092,47 +35053,6 @@
           "percentage": null,
           "raw": "229.00",
           "token_id": "f06133659ab5e047",
-          "value": null
-        }
-      ]
-    },
-    {
-      "channel": "in_person",
-      "classification_evidence": [
-        "no clear calculable fee or unsupported shape"
-      ],
-      "classification_status": "informational",
-      "confidence": 0.0,
-      "context": {},
-      "entry_id": "07045538f3813629",
-      "fee_category": "Card readers",
-      "footnotes": [],
-      "links": [],
-      "payment_method": "card",
-      "payment_method_family": null,
-      "product": "Card readers",
-      "product_category": "pricing",
-      "qualifiers": [],
-      "section_path": [
-        "Card readers"
-      ],
-      "source_evidence": "Stripe Reader T600\nExcl. VAT",
-      "source_order": 53,
-      "source_text": "£249.00",
-      "source_url": "https://stripe.com/gb/pricing",
-      "tokens": [
-        {
-          "amount": "249.00",
-          "basis_points": null,
-          "currency": "GBP",
-          "exactness": null,
-          "is_minor_currency": false,
-          "kind": "amount",
-          "note": null,
-          "operator": null,
-          "percentage": null,
-          "raw": "249.00",
-          "token_id": "89fe6493eccde71f",
           "value": null
         }
       ]
@@ -35158,7 +35078,7 @@
         "Financial Connections"
       ],
       "source_evidence": "Reduce development time with a single integration.",
-      "source_order": 55,
+      "source_order": 54,
       "source_text": "Instantly verify bank accounts from 5,000 financial institutions.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -35199,7 +35119,7 @@
         "Treasury"
       ],
       "source_evidence": "No storage fees or minimum balance required.\nIncluded\nfunding through FPS",
-      "source_order": 64,
+      "source_order": 63,
       "source_text": "Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -35240,7 +35160,7 @@
         "Treasury"
       ],
       "source_evidence": "funding through FPS",
-      "source_order": 65,
+      "source_order": 64,
       "source_text": "No storage fees or minimum balance required. Included",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -35281,7 +35201,7 @@
         "Card transactions"
       ],
       "source_evidence": "0.2% + 15p\nper transaction after that",
-      "source_order": 78,
+      "source_order": 77,
       "source_text": "Start today and we’ll waive card transaction fees for the first £500,000 in card transaction volume.",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -35322,7 +35242,7 @@
         "Annual subscription"
       ],
       "source_evidence": "£150.00\nper month, 1-year contract\nSubscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 93,
+      "source_order": 92,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/gb/pricing",
       "tokens": [
@@ -35369,7 +35289,7 @@
         "Przelewy24 2.2% + 20p"
       ],
       "source_evidence": "",
-      "source_order": 172,
+      "source_order": 171,
       "source_text": "Let your Polish customers pay with multiple local Polish payment methods, from the P24 portal.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
@@ -35420,7 +35340,7 @@
         "Klarna £20.00 for lost disputes"
       ],
       "source_evidence": "",
-      "source_order": 239,
+      "source_order": 238,
       "source_text": "Certain businesses may qualify for temporarily reduced rates on select local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [

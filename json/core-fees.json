@@ -1499,14 +1499,14 @@
         "free": 3,
         "ignored_non_fee": 15,
         "included": 10,
-        "informational": 10,
+        "informational": 9,
         "informational_conflicts": 14,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 172,
+        "numeric_source_entries": 171,
         "reference_only": 0,
-        "referenced_numeric_entries": 172,
-        "source_entries": 198,
+        "referenced_numeric_entries": 171,
+        "source_entries": 197,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -8149,7 +8149,7 @@
         }
       ],
       "stripe_market_code": "au",
-      "unclassified_count": 26
+      "unclassified_count": 25
     },
     {
       "account_country": "BR",
@@ -9406,14 +9406,14 @@
         "free": 1,
         "ignored_non_fee": 15,
         "included": 11,
-        "informational": 9,
+        "informational": 8,
         "informational_conflicts": 20,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 213,
+        "numeric_source_entries": 212,
         "reference_only": 0,
-        "referenced_numeric_entries": 213,
-        "source_entries": 238,
+        "referenced_numeric_entries": 212,
+        "source_entries": 237,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -17264,7 +17264,7 @@
         }
       ],
       "stripe_market_code": "de",
-      "unclassified_count": 30
+      "unclassified_count": 29
     },
     {
       "account_country": "GB",
@@ -17279,14 +17279,14 @@
         "free": 2,
         "ignored_non_fee": 15,
         "included": 11,
-        "informational": 10,
+        "informational": 9,
         "informational_conflicts": 22,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 227,
+        "numeric_source_entries": 226,
         "reference_only": 0,
-        "referenced_numeric_entries": 227,
-        "source_entries": 256,
+        "referenced_numeric_entries": 226,
+        "source_entries": 255,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -25677,7 +25677,7 @@
         }
       ],
       "stripe_market_code": "gb",
-      "unclassified_count": 27
+      "unclassified_count": 26
     },
     {
       "account_country": "IN",
@@ -26976,14 +26976,14 @@
         "free": 1,
         "ignored_non_fee": 12,
         "included": 9,
-        "informational": 8,
+        "informational": 7,
         "informational_conflicts": 11,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 116,
+        "numeric_source_entries": 115,
         "reference_only": 0,
-        "referenced_numeric_entries": 116,
-        "source_entries": 137,
+        "referenced_numeric_entries": 115,
+        "source_entries": 136,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -30644,7 +30644,7 @@
         }
       ],
       "stripe_market_code": "jp",
-      "unclassified_count": 20
+      "unclassified_count": 19
     },
     {
       "account_country": "US",
@@ -30659,14 +30659,14 @@
         "free": 2,
         "ignored_non_fee": 16,
         "included": 13,
-        "informational": 12,
+        "informational": 11,
         "informational_conflicts": 25,
         "non_calculable_rules": 5,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 283,
+        "numeric_source_entries": 282,
         "reference_only": 0,
-        "referenced_numeric_entries": 283,
-        "source_entries": 311,
+        "referenced_numeric_entries": 282,
+        "source_entries": 310,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -41601,7 +41601,7 @@
         }
       ],
       "stripe_market_code": "us",
-      "unclassified_count": 31
+      "unclassified_count": 30
     }
   ],
   "schema_version": 1
