@@ -1499,14 +1499,14 @@
         "free": 3,
         "ignored_non_fee": 15,
         "included": 10,
-        "informational": 9,
+        "informational": 10,
         "informational_conflicts": 14,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 171,
+        "numeric_source_entries": 172,
         "reference_only": 0,
-        "referenced_numeric_entries": 171,
-        "source_entries": 197,
+        "referenced_numeric_entries": 172,
+        "source_entries": 198,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -8149,7 +8149,7 @@
         }
       ],
       "stripe_market_code": "au",
-      "unclassified_count": 25
+      "unclassified_count": 26
     },
     {
       "account_country": "BR",
@@ -17279,14 +17279,14 @@
         "free": 2,
         "ignored_non_fee": 15,
         "included": 11,
-        "informational": 9,
+        "informational": 10,
         "informational_conflicts": 22,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 226,
+        "numeric_source_entries": 227,
         "reference_only": 0,
-        "referenced_numeric_entries": 226,
-        "source_entries": 255,
+        "referenced_numeric_entries": 227,
+        "source_entries": 256,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -25677,7 +25677,7 @@
         }
       ],
       "stripe_market_code": "gb",
-      "unclassified_count": 26
+      "unclassified_count": 27
     },
     {
       "account_country": "IN",
@@ -30659,14 +30659,14 @@
         "free": 2,
         "ignored_non_fee": 16,
         "included": 13,
-        "informational": 11,
+        "informational": 12,
         "informational_conflicts": 25,
         "non_calculable_rules": 5,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 282,
+        "numeric_source_entries": 283,
         "reference_only": 0,
-        "referenced_numeric_entries": 282,
-        "source_entries": 310,
+        "referenced_numeric_entries": 283,
+        "source_entries": 311,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -41601,7 +41601,7 @@
         }
       ],
       "stripe_market_code": "us",
-      "unclassified_count": 30
+      "unclassified_count": 31
     }
   ],
   "schema_version": 1
