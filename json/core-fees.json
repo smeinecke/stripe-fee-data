@@ -1567,7 +1567,7 @@
             },
             {
               "amount": null,
-              "basis_points": "170.0",
+              "basis_points": "165.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -1575,26 +1575,26 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "1.7"
+              "value": "1.65"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "1.7% + A$0.30 for domestic cards*",
-              "Card payments 1.7% + A$0.30 for domestic cards*"
+              "1.65% + A$0.30 for domestic cards*",
+              "Card payments 1.65% + A$0.30 for domestic cards*"
             ],
             "source_entry_ids": [
-              "64bfec26504aee71",
-              "ce25d059b0058c36"
+              "4019caccbd7fd099",
+              "2a9c652444888ed1"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "1.7% + A$0.30 for domestic cards*",
+          "label": "1.65% + A$0.30 for domestic cards*",
           "payment_method": "card",
           "product_id": "payments",
           "provider": "stripe",
-          "rule_id": "cd010cdd42130eee",
+          "rule_id": "2f1225ab9a3f73fc",
           "unit": "per_transaction",
           "variant_id": "online_domestic_cards"
         },
@@ -3541,7 +3541,7 @@
             },
             {
               "amount": null,
-              "basis_points": "170.0",
+              "basis_points": "165.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -3549,24 +3549,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "1.7"
+              "value": "1.65"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Apple Pay 1.7% + A$0.30 for domestic cards*"
+              "Apple Pay 1.65% + A$0.30 for domestic cards*"
             ],
             "source_entry_ids": [
-              "c20d36d1bf4dd32c"
+              "fd8ec144146c0554"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+          "label": "Apple Pay 1.65% + A$0.30 for domestic cards*",
           "payment_method": "apple_pay",
           "product_id": "apple_pay",
           "provider": "stripe",
-          "rule_id": "535136de2f5f464e",
+          "rule_id": "95dd4d4b390c2793",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -3760,7 +3760,7 @@
             },
             {
               "amount": null,
-              "basis_points": "170.0",
+              "basis_points": "165.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -3768,24 +3768,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "1.7"
+              "value": "1.65"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Google Pay 1.7% + A$0.30 for domestic cards*"
+              "Google Pay 1.65% + A$0.30 for domestic cards*"
             ],
             "source_entry_ids": [
-              "3113eed2325bc101"
+              "662c2287c7111167"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Google Pay 1.7% + A$0.30 for domestic cards*",
+          "label": "Google Pay 1.65% + A$0.30 for domestic cards*",
           "payment_method": "google_pay",
           "product_id": "google_pay",
           "provider": "stripe",
-          "rule_id": "e619f16f203131f7",
+          "rule_id": "144887191a6be805",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -17276,9 +17276,9 @@
         "conflicting_rule_identities": 22,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
-        "free": 2,
+        "free": 3,
         "ignored_non_fee": 15,
-        "included": 11,
+        "included": 10,
         "informational": 10,
         "informational_conflicts": 22,
         "non_calculable_rules": 3,
@@ -17286,7 +17286,7 @@
         "numeric_source_entries": 227,
         "reference_only": 0,
         "referenced_numeric_entries": 227,
-        "source_entries": 256,
+        "source_entries": 257,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -30656,9 +30656,9 @@
         "conflicting_rule_identities": 25,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
-        "free": 2,
+        "free": 3,
         "ignored_non_fee": 16,
-        "included": 13,
+        "included": 12,
         "informational": 12,
         "informational_conflicts": 25,
         "non_calculable_rules": 5,
@@ -30666,7 +30666,7 @@
         "numeric_source_entries": 283,
         "reference_only": 0,
         "referenced_numeric_entries": 283,
-        "source_entries": 311,
+        "source_entries": 312,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },

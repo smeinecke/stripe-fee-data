@@ -26,7 +26,7 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": "170.0",
+      "basis_points": "165.00",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": "domestic",
@@ -77,13 +77,13 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "64bfec26504aee71",
-        "ce25d059b0058c36"
+        "4019caccbd7fd099",
+        "2a9c652444888ed1"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "64bfec26504aee71",
+      "entry_id": "4019caccbd7fd099",
       "exactness": "exact",
       "fee_components": [
         {
@@ -93,66 +93,66 @@
           "minor_amount": "30",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "64bfec26504aee71",
-          "source_text": "1.7% + A$0.30 for domestic cards*",
+          "source_entry_id": "4019caccbd7fd099",
+          "source_text": "1.65% + A$0.30 for domestic cards*",
           "type": "fixed_amount",
           "value": null
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "64bfec26504aee71",
-          "source_text": "1.7% + A$0.30 for domestic cards*",
+          "source_entry_id": "4019caccbd7fd099",
+          "source_text": "1.65% + A$0.30 for domestic cards*",
           "type": "percentage",
-          "value": "1.7"
+          "value": "1.65"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "1.7% + A$0.30 for domestic cards*",
-          "Card payments 1.7% + A$0.30 for domestic cards*"
+          "1.65% + A$0.30 for domestic cards*",
+          "Card payments 1.65% + A$0.30 for domestic cards*"
         ],
         "source_entry_ids": [
-          "64bfec26504aee71",
-          "ce25d059b0058c36"
+          "4019caccbd7fd099",
+          "2a9c652444888ed1"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "1.7% + A$0.30 for domestic cards*",
+      "label": "1.65% + A$0.30 for domestic cards*",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "payments",
       "payment_method": "card",
       "payout_type": null,
-      "percentage": "1.7",
+      "percentage": "1.65",
       "presentment_currency": null,
       "product_id": "payments",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "cd010cdd42130eee",
+      "rule_id": "2f1225ab9a3f73fc",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "64bfec26504aee71",
-          "text": "1.7% + A$0.30 for domestic cards*"
+          "entry_id": "4019caccbd7fd099",
+          "text": "1.65% + A$0.30 for domestic cards*"
         },
         {
-          "entry_id": "ce25d059b0058c36",
-          "text": "Card payments 1.7% + A$0.30 for domestic cards*"
+          "entry_id": "2a9c652444888ed1",
+          "text": "Card payments 1.65% + A$0.30 for domestic cards*"
         }
       ],
-      "source_text": "1.7% + A$0.30 for domestic cards*",
+      "source_text": "1.65% + A$0.30 for domestic cards*",
       "source_texts": [
-        "1.7% + A$0.30 for domestic cards*",
-        "Card payments 1.7% + A$0.30 for domestic cards*"
+        "1.65% + A$0.30 for domestic cards*",
+        "Card payments 1.65% + A$0.30 for domestic cards*"
       ],
       "source_url": "https://stripe.com/au/pricing",
       "transaction_amount_max": null,
@@ -4977,7 +4977,7 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": "170.0",
+      "basis_points": "165.00",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": null,
@@ -5028,12 +5028,12 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "c20d36d1bf4dd32c"
+        "fd8ec144146c0554"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "c20d36d1bf4dd32c",
+      "entry_id": "fd8ec144146c0554",
       "exactness": "exact",
       "fee_components": [
         {
@@ -5043,59 +5043,59 @@
           "minor_amount": "30",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "c20d36d1bf4dd32c",
-          "source_text": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+          "source_entry_id": "fd8ec144146c0554",
+          "source_text": "Apple Pay 1.65% + A$0.30 for domestic cards*",
           "type": "fixed_amount",
           "value": null
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "c20d36d1bf4dd32c",
-          "source_text": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+          "source_entry_id": "fd8ec144146c0554",
+          "source_text": "Apple Pay 1.65% + A$0.30 for domestic cards*",
           "type": "percentage",
-          "value": "1.7"
+          "value": "1.65"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Apple Pay 1.7% + A$0.30 for domestic cards*"
+          "Apple Pay 1.65% + A$0.30 for domestic cards*"
         ],
         "source_entry_ids": [
-          "c20d36d1bf4dd32c"
+          "fd8ec144146c0554"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "label": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "apple_pay",
       "payment_method": "apple_pay",
       "payout_type": null,
-      "percentage": "1.7",
+      "percentage": "1.65",
       "presentment_currency": null,
       "product_id": "apple_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "535136de2f5f464e",
+      "rule_id": "95dd4d4b390c2793",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "c20d36d1bf4dd32c",
-          "text": "Apple Pay 1.7% + A$0.30 for domestic cards*"
+          "entry_id": "fd8ec144146c0554",
+          "text": "Apple Pay 1.65% + A$0.30 for domestic cards*"
         }
       ],
-      "source_text": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "source_texts": [
-        "Apple Pay 1.7% + A$0.30 for domestic cards*"
+        "Apple Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -5333,7 +5333,7 @@
     {
       "account_country": "AU",
       "additional_fees": [],
-      "basis_points": "170.0",
+      "basis_points": "165.00",
       "behavior": "conditional",
       "billing_type": null,
       "card_origin": null,
@@ -5384,12 +5384,12 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "3113eed2325bc101"
+        "662c2287c7111167"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "3113eed2325bc101",
+      "entry_id": "662c2287c7111167",
       "exactness": "exact",
       "fee_components": [
         {
@@ -5399,59 +5399,59 @@
           "minor_amount": "30",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "3113eed2325bc101",
-          "source_text": "Google Pay 1.7% + A$0.30 for domestic cards*",
+          "source_entry_id": "662c2287c7111167",
+          "source_text": "Google Pay 1.65% + A$0.30 for domestic cards*",
           "type": "fixed_amount",
           "value": null
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "3113eed2325bc101",
-          "source_text": "Google Pay 1.7% + A$0.30 for domestic cards*",
+          "source_entry_id": "662c2287c7111167",
+          "source_text": "Google Pay 1.65% + A$0.30 for domestic cards*",
           "type": "percentage",
-          "value": "1.7"
+          "value": "1.65"
         }
       ],
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "Google Pay 1.7% + A$0.30 for domestic cards*"
+          "Google Pay 1.65% + A$0.30 for domestic cards*"
         ],
         "source_entry_ids": [
-          "3113eed2325bc101"
+          "662c2287c7111167"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "0.30",
       "fixed_amount_minor": "30",
       "fixed_currency": "AUD",
-      "label": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "label": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "google_pay",
       "payment_method": "google_pay",
       "payout_type": null,
-      "percentage": "1.7",
+      "percentage": "1.65",
       "presentment_currency": null,
       "product_id": "google_pay",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "e619f16f203131f7",
+      "rule_id": "144887191a6be805",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "3113eed2325bc101",
-          "text": "Google Pay 1.7% + A$0.30 for domestic cards*"
+          "entry_id": "662c2287c7111167",
+          "text": "Google Pay 1.65% + A$0.30 for domestic cards*"
         }
       ],
-      "source_text": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "source_texts": [
-        "Google Pay 1.7% + A$0.30 for domestic cards*"
+        "Google Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -14102,8 +14102,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "64bfec26504aee71",
-      "fee_category": "1.7% + A$0.30",
+      "entry_id": "4019caccbd7fd099",
+      "fee_category": "1.65% + A$0.30",
       "footnotes": [],
       "links": [],
       "payment_method": "card",
@@ -14113,11 +14113,11 @@
       "qualifiers": [],
       "section_path": [
         "Standard",
-        "1.7% + A$0.30"
+        "1.65% + A$0.30"
       ],
       "source_evidence": "* Lower pricing from 1 Oct 2026",
       "source_order": 0,
-      "source_text": "1.7% + A$0.30 for domestic cards*",
+      "source_text": "1.65% + A$0.30 for domestic cards*",
       "source_url": "https://stripe.com/au/pricing",
       "tokens": [
         {
@@ -14136,16 +14136,16 @@
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "exactness": null,
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
-          "percentage": "1.7",
-          "raw": "1.7",
-          "token_id": "2876916ed2998933",
+          "percentage": "1.65",
+          "raw": "1.65",
+          "token_id": "07c034087d938681",
           "value": null
         }
       ]
@@ -14156,8 +14156,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "be1e8ef8dc0181d6",
-      "fee_category": "1.7% + A$0.30",
+      "entry_id": "4125dcb3b95ad0f7",
+      "fee_category": "1.65% + A$0.30",
       "footnotes": [],
       "links": [],
       "payment_method": null,
@@ -14167,7 +14167,7 @@
       "qualifiers": [],
       "section_path": [
         "Standard",
-        "1.7% + A$0.30"
+        "1.65% + A$0.30"
       ],
       "source_evidence": "",
       "source_order": 1,
@@ -16983,8 +16983,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "ce25d059b0058c36",
-      "fee_category": "Card payments 1.7% + A$0.30 for domestic cards*",
+      "entry_id": "2a9c652444888ed1",
+      "fee_category": "Card payments 1.65% + A$0.30 for domestic cards*",
       "footnotes": [],
       "links": [
         {
@@ -17007,11 +17007,11 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Card payments 1.7% + A$0.30 for domestic cards*"
+        "Card payments 1.65% + A$0.30 for domestic cards*"
       ],
       "source_evidence": "Accept online payments made using cards.",
       "source_order": 72,
-      "source_text": "Card payments 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Card payments 1.65% + A$0.30 for domestic cards*",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -17030,16 +17030,16 @@
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "exactness": null,
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
-          "percentage": "1.7",
-          "raw": "1.7",
-          "token_id": "2876916ed2998933",
+          "percentage": "1.65",
+          "raw": "1.65",
+          "token_id": "07c034087d938681",
           "value": null
         }
       ]
@@ -17050,8 +17050,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "ce25d059b0058c36",
-      "fee_category": "Card payments 1.7% + A$0.30 for domestic cards*",
+      "entry_id": "2a9c652444888ed1",
+      "fee_category": "Card payments 1.65% + A$0.30 for domestic cards*",
       "footnotes": [],
       "links": [
         {
@@ -17074,11 +17074,11 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Card payments 1.7% + A$0.30 for domestic cards*"
+        "Card payments 1.65% + A$0.30 for domestic cards*"
       ],
       "source_evidence": "",
       "source_order": 73,
-      "source_text": "Card payments 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Card payments 1.65% + A$0.30 for domestic cards*",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -17097,16 +17097,16 @@
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "exactness": null,
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
-          "percentage": "1.7",
-          "raw": "1.7",
-          "token_id": "2876916ed2998933",
+          "percentage": "1.65",
+          "raw": "1.65",
+          "token_id": "07c034087d938681",
           "value": null
         }
       ]
@@ -17400,8 +17400,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "c20d36d1bf4dd32c",
-      "fee_category": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "entry_id": "fd8ec144146c0554",
+      "fee_category": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "footnotes": [],
       "links": [
         {
@@ -17420,11 +17420,11 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Apple Pay 1.7% + A$0.30 for domestic cards*"
+        "Apple Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_evidence": "Offer Apple Pay out of the box to customers who have set it up on their device or browser, enabling faster checkout.",
       "source_order": 79,
-      "source_text": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -17443,16 +17443,16 @@
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "exactness": null,
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
-          "percentage": "1.7",
-          "raw": "1.7",
-          "token_id": "2876916ed2998933",
+          "percentage": "1.65",
+          "raw": "1.65",
+          "token_id": "07c034087d938681",
           "value": null
         }
       ]
@@ -17463,8 +17463,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "c20d36d1bf4dd32c",
-      "fee_category": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "entry_id": "fd8ec144146c0554",
+      "fee_category": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "footnotes": [],
       "links": [
         {
@@ -17483,11 +17483,11 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Apple Pay 1.7% + A$0.30 for domestic cards*"
+        "Apple Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_evidence": "",
       "source_order": 80,
-      "source_text": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -17506,16 +17506,16 @@
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "exactness": null,
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
-          "percentage": "1.7",
-          "raw": "1.7",
-          "token_id": "2876916ed2998933",
+          "percentage": "1.65",
+          "raw": "1.65",
+          "token_id": "07c034087d938681",
           "value": null
         }
       ]
@@ -17624,8 +17624,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "3113eed2325bc101",
-      "fee_category": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "entry_id": "662c2287c7111167",
+      "fee_category": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "footnotes": [],
       "links": [
         {
@@ -17644,11 +17644,11 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Google Pay 1.7% + A$0.30 for domestic cards*"
+        "Google Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_evidence": "Offer Google Pay out of the box to customers who have set it up on their device or browser.",
       "source_order": 83,
-      "source_text": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -17667,16 +17667,16 @@
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "exactness": null,
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
-          "percentage": "1.7",
-          "raw": "1.7",
-          "token_id": "2876916ed2998933",
+          "percentage": "1.65",
+          "raw": "1.65",
+          "token_id": "07c034087d938681",
           "value": null
         }
       ]
@@ -17687,8 +17687,8 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "3113eed2325bc101",
-      "fee_category": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "entry_id": "662c2287c7111167",
+      "fee_category": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "footnotes": [],
       "links": [
         {
@@ -17707,11 +17707,11 @@
       "qualifiers": [],
       "section_path": [
         "Payment methods",
-        "Google Pay 1.7% + A$0.30 for domestic cards*"
+        "Google Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_evidence": "",
       "source_order": 84,
-      "source_text": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "source_text": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -17730,16 +17730,16 @@
         },
         {
           "amount": null,
-          "basis_points": "170.0",
+          "basis_points": "165.00",
           "currency": null,
           "exactness": null,
           "is_minor_currency": false,
           "kind": "percentage",
           "note": null,
           "operator": "+",
-          "percentage": "1.7",
-          "raw": "1.7",
-          "token_id": "2876916ed2998933",
+          "percentage": "1.65",
+          "raw": "1.65",
+          "token_id": "07c034087d938681",
           "value": null
         }
       ]
@@ -23666,13 +23666,13 @@
     },
     {
       "body": "for domestic cards*\n* Lower pricing from 1 Oct 2026",
-      "heading": "1.7% + A$0.30",
+      "heading": "1.65% + A$0.30",
       "level": 2,
       "links": [],
-      "section_id": "8851d8644a085478",
+      "section_id": "893c94e4a0b99381",
       "section_path": [
         "Standard",
-        "1.7% + A$0.30"
+        "1.65% + A$0.30"
       ],
       "source_order": 13
     },
@@ -25041,7 +25041,7 @@
     },
     {
       "body": "Accept online payments made using cards.",
-      "heading": "Card payments 1.7% + A$0.30 for domestic cards*",
+      "heading": "Card payments 1.65% + A$0.30 for domestic cards*",
       "level": 3,
       "links": [
         {
@@ -25057,16 +25057,16 @@
           "uri": "https://support.stripe.com/questions/updates-to-card-pricing-in-australia-from-october-2026"
         }
       ],
-      "section_id": "653ddc7953abf32c",
+      "section_id": "93a4e4b252bd3dd6",
       "section_path": [
         "Payment methods",
-        "Card payments 1.7% + A$0.30 for domestic cards*"
+        "Card payments 1.65% + A$0.30 for domestic cards*"
       ],
       "source_order": 0
     },
     {
       "body": "",
-      "heading": "Card payments 1.7% + A$0.30 for domestic cards*",
+      "heading": "Card payments 1.65% + A$0.30 for domestic cards*",
       "level": 3,
       "links": [
         {
@@ -25082,10 +25082,10 @@
           "uri": "https://support.stripe.com/questions/updates-to-card-pricing-in-australia-from-october-2026"
         }
       ],
-      "section_id": "653ddc7953abf32c",
+      "section_id": "93a4e4b252bd3dd6",
       "section_path": [
         "Payment methods",
-        "Card payments 1.7% + A$0.30 for domestic cards*"
+        "Card payments 1.65% + A$0.30 for domestic cards*"
       ],
       "source_order": 1
     },
@@ -25192,7 +25192,7 @@
     },
     {
       "body": "Offer Apple Pay out of the box to customers who have set it up on their device or browser, enabling faster checkout.",
-      "heading": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "heading": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "level": 3,
       "links": [
         {
@@ -25204,16 +25204,16 @@
           "uri": "https://support.stripe.com/questions/updates-to-card-pricing-in-australia-from-october-2026"
         }
       ],
-      "section_id": "d35c2500066ade76",
+      "section_id": "a7a077d88aa85f9e",
       "section_path": [
         "Payment methods",
-        "Apple Pay 1.7% + A$0.30 for domestic cards*"
+        "Apple Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_order": 7
     },
     {
       "body": "",
-      "heading": "Apple Pay 1.7% + A$0.30 for domestic cards*",
+      "heading": "Apple Pay 1.65% + A$0.30 for domestic cards*",
       "level": 3,
       "links": [
         {
@@ -25225,10 +25225,10 @@
           "uri": "https://support.stripe.com/questions/updates-to-card-pricing-in-australia-from-october-2026"
         }
       ],
-      "section_id": "d35c2500066ade76",
+      "section_id": "a7a077d88aa85f9e",
       "section_path": [
         "Payment methods",
-        "Apple Pay 1.7% + A$0.30 for domestic cards*"
+        "Apple Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_order": 8
     },
@@ -25276,7 +25276,7 @@
     },
     {
       "body": "Offer Google Pay out of the box to customers who have set it up on their device or browser.",
-      "heading": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "heading": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "level": 3,
       "links": [
         {
@@ -25288,16 +25288,16 @@
           "uri": "https://support.stripe.com/questions/updates-to-card-pricing-in-australia-from-october-2026"
         }
       ],
-      "section_id": "a68abf84e9b2c280",
+      "section_id": "d707d586f7d331a7",
       "section_path": [
         "Payment methods",
-        "Google Pay 1.7% + A$0.30 for domestic cards*"
+        "Google Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_order": 11
     },
     {
       "body": "",
-      "heading": "Google Pay 1.7% + A$0.30 for domestic cards*",
+      "heading": "Google Pay 1.65% + A$0.30 for domestic cards*",
       "level": 3,
       "links": [
         {
@@ -25309,10 +25309,10 @@
           "uri": "https://support.stripe.com/questions/updates-to-card-pricing-in-australia-from-october-2026"
         }
       ],
-      "section_id": "a68abf84e9b2c280",
+      "section_id": "d707d586f7d331a7",
       "section_path": [
         "Payment methods",
-        "Google Pay 1.7% + A$0.30 for domestic cards*"
+        "Google Pay 1.65% + A$0.30 for domestic cards*"
       ],
       "source_order": 12
     },
@@ -27129,7 +27129,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "830aaf8d621caf6ddbd6a81dccca2a7331e807ed0d6608f1b508b16826267180",
+      "content_sha256": "79868419665e376b8d8c62ccd25df7e961372ea90ff55bb1b622d3fb0bde599c",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27145,7 +27145,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "070b2021f7756de140f33dcd4d4986ab36b2a922feecac3e9e28ba507e4e5b36",
+      "content_sha256": "8f62eba40a673de830d3d2e1a837ddf9a9ae3d9dfb4fded401f63503b15f9923",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27812,8 +27812,8 @@
       "classification_status": "informational",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "be1e8ef8dc0181d6",
-      "fee_category": "1.7% + A$0.30",
+      "entry_id": "4125dcb3b95ad0f7",
+      "fee_category": "1.65% + A$0.30",
       "footnotes": [],
       "links": [],
       "payment_method": null,
@@ -27823,7 +27823,7 @@
       "qualifiers": [],
       "section_path": [
         "Standard",
-        "1.7% + A$0.30"
+        "1.65% + A$0.30"
       ],
       "source_evidence": "",
       "source_order": 1,

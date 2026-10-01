@@ -133,8 +133,8 @@
       "family": "other",
       "fee_rule_refs": [
         "2284fc091680de86",
-        "535136de2f5f464e",
         "75595f206b0ec1dd",
+        "95dd4d4b390c2793",
         "aa9b7cf088265108",
         "ad76fd90f10827be",
         "b139fd86a79e4c5b",
@@ -374,6 +374,7 @@
         "1f81aa4b79f7ee68",
         "297758ee820729a0",
         "2c6ac3f09f7ea5a5",
+        "2f1225ab9a3f73fc",
         "359c4df4dbd54c45",
         "3963ece32d3d4b65",
         "3b55c9d766475a5e",
@@ -409,7 +410,6 @@
         "c30bd82e7b1e4e8f",
         "c484928ce65ac15e",
         "c58bd314c653e697",
-        "cd010cdd42130eee",
         "cfdb181e7071cf59",
         "e4a5d1320dad538a",
         "e71a79e81dd8d6c7",
@@ -559,12 +559,12 @@
       "fee_rule_refs": [
         "097f0bc1419f9a8b",
         "09815db422d24ed1",
+        "144887191a6be805",
         "3464bf201c5dacd3",
         "a17251b4afda11dd",
         "a3a787a0ca18e124",
         "c68a873e5318d158",
-        "dad66abc57c95f6a",
-        "e619f16f203131f7"
+        "dad66abc57c95f6a"
       ],
       "localized_names": [],
       "method_id": "google_pay",
