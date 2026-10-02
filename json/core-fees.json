@@ -1499,14 +1499,14 @@
         "free": 3,
         "ignored_non_fee": 15,
         "included": 10,
-        "informational": 10,
+        "informational": 9,
         "informational_conflicts": 14,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
         "numeric_source_entries": 172,
         "reference_only": 0,
         "referenced_numeric_entries": 172,
-        "source_entries": 198,
+        "source_entries": 197,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -1581,16 +1581,16 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "1.65% + A$0.30 for domestic cards*",
-              "Card payments 1.65% + A$0.30 for domestic cards*"
+              "1.65% + A$0.30 for domestic cards",
+              "Card payments 1.65% + A$0.30 for domestic cards"
             ],
             "source_entry_ids": [
-              "4019caccbd7fd099",
-              "2a9c652444888ed1"
+              "fb66a24398e1afef",
+              "e2656e2c1e8b846d"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "1.65% + A$0.30 for domestic cards*",
+          "label": "1.65% + A$0.30 for domestic cards",
           "payment_method": "card",
           "product_id": "payments",
           "provider": "stripe",
@@ -1737,7 +1737,7 @@
             },
             {
               "amount": null,
-              "basis_points": "170.0",
+              "basis_points": "165.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -1745,24 +1745,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage",
-              "value": "1.7"
+              "value": "1.65"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "1.7% + A$0.10 for domestic cards*"
+              "1.65% + A$0.10 for domestic cards"
             ],
             "source_entry_ids": [
-              "fb913e03097cd46e"
+              "a534e7bb9ed365e4"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "1.7% + A$0.10 for domestic cards*",
+          "label": "1.65% + A$0.10 for domestic cards",
           "payment_method": "card",
           "product_id": "terminal",
           "provider": "stripe",
-          "rule_id": "ea7cf01f43c919cb",
+          "rule_id": "77f043c89a1f5365",
           "unit": "per_transaction",
           "variant_id": "domestic_cards"
         },
@@ -3555,14 +3555,14 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Apple Pay 1.65% + A$0.30 for domestic cards*"
+              "Apple Pay 1.65% + A$0.30 for domestic cards"
             ],
             "source_entry_ids": [
-              "fd8ec144146c0554"
+              "406aa1de8384873c"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Apple Pay 1.65% + A$0.30 for domestic cards*",
+          "label": "Apple Pay 1.65% + A$0.30 for domestic cards",
           "payment_method": "apple_pay",
           "product_id": "apple_pay",
           "provider": "stripe",
@@ -3612,7 +3612,7 @@
           "fee_components": [
             {
               "amount": null,
-              "basis_points": "180.0",
+              "basis_points": "185.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -3620,24 +3620,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage_surcharge",
-              "value": "1.8"
+              "value": "1.85"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Apple Pay + 1.8% for international cards*"
+              "Apple Pay + 1.85% for international cards*"
             ],
             "source_entry_ids": [
-              "dec69bd1aa2a063b"
+              "0c336bb5e10436fe"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Apple Pay + 1.8% for international cards*",
+          "label": "Apple Pay + 1.85% for international cards*",
           "payment_method": "apple_pay",
           "product_id": "apple_pay",
           "provider": "stripe",
-          "rule_id": "aa9b7cf088265108",
+          "rule_id": "64ccd8027b44657f",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -3774,14 +3774,14 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Google Pay 1.65% + A$0.30 for domestic cards*"
+              "Google Pay 1.65% + A$0.30 for domestic cards"
             ],
             "source_entry_ids": [
-              "662c2287c7111167"
+              "037404901bc1973e"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Google Pay 1.65% + A$0.30 for domestic cards*",
+          "label": "Google Pay 1.65% + A$0.30 for domestic cards",
           "payment_method": "google_pay",
           "product_id": "google_pay",
           "provider": "stripe",
@@ -3831,7 +3831,7 @@
           "fee_components": [
             {
               "amount": null,
-              "basis_points": "180.0",
+              "basis_points": "185.00",
               "currency": null,
               "minor_amount": null,
               "operator": "+",
@@ -3839,24 +3839,24 @@
               "source_entry_id": null,
               "source_text": null,
               "type": "percentage_surcharge",
-              "value": "1.8"
+              "value": "1.85"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Google Pay + 1.8% for international cards*"
+              "Google Pay + 1.85% for international cards*"
             ],
             "source_entry_ids": [
-              "fd95eb63da05edc9"
+              "5146d68fced265c7"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Google Pay + 1.8% for international cards*",
+          "label": "Google Pay + 1.85% for international cards*",
           "payment_method": "google_pay",
           "product_id": "google_pay",
           "provider": "stripe",
-          "rule_id": "097f0bc1419f9a8b",
+          "rule_id": "1b3a88f04ead5352",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -8149,7 +8149,7 @@
         }
       ],
       "stripe_market_code": "au",
-      "unclassified_count": 26
+      "unclassified_count": 25
     },
     {
       "account_country": "BR",
