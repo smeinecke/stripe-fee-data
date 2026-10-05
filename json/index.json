@@ -4,7 +4,7 @@
     {
       "account_country": "AE",
       "calculator_coverage_status": "complete",
-      "content_sha256": "661d1ce672a0e4251dc6b25cc49dd8da5d792981b050f756ea3550789cb7bfdd",
+      "content_sha256": "fe801b531663317c31aec935547e40b986958f11a9c28c1af1310a3102122d2d",
       "data_path": "json/AE.json",
       "derivation_status": "complete",
       "locale": "en-ae",
@@ -19,7 +19,7 @@
     {
       "account_country": "AU",
       "calculator_coverage_status": "complete",
-      "content_sha256": "7decf694905e87e0a4b4e82e48962194bce6ed42dbf121c7a3547d05792ed8b9",
+      "content_sha256": "89e30a326c493b7e3ca8c4b1f70921412af94374ca89e70226e2c0ff7c90e634",
       "data_path": "json/AU.json",
       "derivation_status": "complete",
       "locale": "en-au",
@@ -34,7 +34,7 @@
     {
       "account_country": "BR",
       "calculator_coverage_status": "complete",
-      "content_sha256": "0ceefa52abe8c2f4ec838bae8e3245e89153c946a9012d468902e83bb7bfec2e",
+      "content_sha256": "245d0344571b085b8ad43c1b117a90a89a18f0ae7f3ee8325ef3dee69020778b",
       "data_path": "json/BR.json",
       "derivation_status": "complete",
       "locale": "en-br",
@@ -49,7 +49,7 @@
     {
       "account_country": "DE",
       "calculator_coverage_status": "complete",
-      "content_sha256": "8c314bff9ce5600942f5e8375039a5225b731f4f05561eac5e17f4b4479ff81a",
+      "content_sha256": "3499b7cea71f2e0132c40ba5869ec64ce683d4546bd882c4167fdae976c61a1f",
       "data_path": "json/DE.json",
       "derivation_status": "complete",
       "locale": "en-de",
@@ -64,7 +64,7 @@
     {
       "account_country": "GB",
       "calculator_coverage_status": "complete",
-      "content_sha256": "2f2410d7108a8d2eebf6815ee6a0d2478b790ab4b12aa106b975563ddbdedcd8",
+      "content_sha256": "5b60f5bafbc83909aa48982911dffdc8560261368ecc3212fd76b19bcba8b032",
       "data_path": "json/GB.json",
       "derivation_status": "complete",
       "locale": "en-gb",
@@ -79,7 +79,7 @@
     {
       "account_country": "IN",
       "calculator_coverage_status": "complete",
-      "content_sha256": "3eda94c812c7f8c18316b974cd2b8bd3890f38b4878cae9fc17b6d83b1cd94e6",
+      "content_sha256": "416ccb909390ac0405deec3105a48d1b8d9b30df73c2763259892c2816b0c67e",
       "data_path": "json/IN.json",
       "derivation_status": "complete",
       "locale": "en-in",
@@ -94,7 +94,7 @@
     {
       "account_country": "JP",
       "calculator_coverage_status": "complete",
-      "content_sha256": "5e3ba141349a183a437f7b8c483acd1f0a8aec0e82f16c3d8cffcb55da1618ca",
+      "content_sha256": "b14339df353132246313326bee910148fbf1596c28e0ea231bd6815a00c86089",
       "data_path": "json/JP.json",
       "derivation_status": "complete",
       "locale": "en-jp",
@@ -109,7 +109,7 @@
     {
       "account_country": "US",
       "calculator_coverage_status": "complete",
-      "content_sha256": "d0ac387e5846d7d3e7fd09bade1ce258088184f167516dfaa8a9b06076a684f9",
+      "content_sha256": "d88708f9732a5e10883b9b007865dbe5b00df9d0b55d6a0fa94f9c9db7ca1338",
       "data_path": "json/US.json",
       "derivation_status": "complete",
       "locale": "en-us",
