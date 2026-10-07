@@ -6064,7 +6064,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "d90e49647df2650a8e347e68bf7fefaf7ed597c83e3aaf479067a664445b31dd",
+      "content_sha256": "473da205ffa9019d6f3629a24ca89a7d74f4c840638e93216aa6d6097c2f4d17",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",
@@ -6080,7 +6080,7 @@
     },
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "74a946a1393e08ffcf915f3e3756571c94ec4ad2e3ea92fb0f9c69b061b1748d",
+      "content_sha256": "473da205ffa9019d6f3629a24ca89a7d74f4c840638e93216aa6d6097c2f4d17",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",

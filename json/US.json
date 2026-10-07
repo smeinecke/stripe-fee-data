@@ -34968,7 +34968,12 @@
       "entry_id": "c2db02f563217ea1",
       "fee_category": "Cash App Afterpay 6% + 30¢ per successful charge",
       "footnotes": [],
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "payment_method": null,
       "payment_method_family": null,
       "product": "Payment methods",
@@ -34978,7 +34983,7 @@
         "Payment methods",
         "Cash App Afterpay 6% + 30¢ per successful charge"
       ],
-      "source_evidence": "",
+      "source_evidence": "Add Cash App Afterpay to your Stripe integration to give customers the flexibility to pay over time while you get paid in full upfront.",
       "source_order": 268,
       "source_text": "Cash App Afterpay 6% + 30¢ per successful charge",
       "source_url": "https://stripe.com/pricing/local-payment-methods",
@@ -35022,7 +35027,12 @@
       "entry_id": "c2db02f563217ea1",
       "fee_category": "Cash App Afterpay 6% + 30¢ per successful charge",
       "footnotes": [],
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "payment_method": null,
       "payment_method_family": null,
       "product": "Payment methods",
@@ -35076,7 +35086,12 @@
       "entry_id": "5dfb93905737f479",
       "fee_category": "Cash App Afterpay + 1.5% for international transactions",
       "footnotes": [],
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "payment_method": null,
       "payment_method_family": null,
       "product": "Payment methods",
@@ -35116,7 +35131,12 @@
       "entry_id": "1d39b46eb147d0e2",
       "fee_category": "Cash App Afterpay + 1% if currency conversion is required",
       "footnotes": [],
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "payment_method": null,
       "payment_method_family": null,
       "product": "Payment methods",
@@ -37291,7 +37311,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nGuide me\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nNot sure where to start?\nGet recommendations\nTell us about your business\nSee all products\nExplore our full product catalog",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalog",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -37340,7 +37360,7 @@
       "source_order": 70
     },
     {
-      "body": "Connect\nPayments for platforms\nCapital for platforms\nCustomer financing\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards\nNot sure where to start?\nGet recommendations\nTell us about your business\nSee all products\nExplore our full product catalog",
+      "body": "Connect\nPayments for platforms\nCapital for platforms\nCustomer financing\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards\nSee all products",
       "heading": "Platforms and marketplaces",
       "level": 1,
       "links": [],
@@ -41618,10 +41638,15 @@
       "source_order": 140
     },
     {
-      "body": "",
+      "body": "Add Cash App Afterpay to your Stripe integration to give customers the flexibility to pay over time while you get paid in full upfront.",
       "heading": "Cash App Afterpay 6% + 30¢ per successful charge",
       "level": 3,
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "section_id": "d9dd954e26e25b15",
       "section_path": [
         "Payment methods",
@@ -41633,7 +41658,12 @@
       "body": "",
       "heading": "Cash App Afterpay 6% + 30¢ per successful charge",
       "level": 3,
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "section_id": "d9dd954e26e25b15",
       "section_path": [
         "Payment methods",
@@ -41645,7 +41675,12 @@
       "body": "",
       "heading": "Cash App Afterpay + 1.5% for international transactions",
       "level": 3,
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "section_id": "90e103200b8d3b34",
       "section_path": [
         "Payment methods",
@@ -41657,7 +41692,12 @@
       "body": "",
       "heading": "Cash App Afterpay + 1% if currency conversion is required",
       "level": 3,
-      "links": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "uri": "https://stripe.com/payments/afterpay-clearpay"
+        }
+      ],
       "section_id": "abbcc09a964044e2",
       "section_path": [
         "Payment methods",
@@ -42362,7 +42402,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/pricing",
-      "content_sha256": "a062d919c3732725d6f71ddd7c375be4dfa5a68973a2f01a368cb28e22dd6007",
+      "content_sha256": "4b6b20a15e3d4f18d4a865b32057bbf9ff4f75d57d2b602168a6014905477064",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
@@ -42378,7 +42418,7 @@
     },
     {
       "canonical_url": "https://stripe.com/pricing/local-payment-methods",
-      "content_sha256": "df701886fadf5352b7cfea6408d5a20600eca9512608c3af916522c1bd99dff1",
+      "content_sha256": "882a4469ae924017329ad0a1d61e3c3440519add0fffec4ed5c5565d3e70d9d5",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
