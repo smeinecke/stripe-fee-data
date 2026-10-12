@@ -24989,7 +24989,7 @@
       "source_order": 135
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -27089,7 +27089,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "3c7571e573bcebb954715e9df8185d2274b02f7a6453b98d1c01987468c2dea6",
+      "content_sha256": "0d7620c87122c01d4cfafcc0e3e9d6903591301cc69ca1546d2eeb947378e2e9",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27105,7 +27105,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "3ef0cff82bf0d7675f18719e48d1e2ec275c567b74dc2f701cbde8624021ddc1",
+      "content_sha256": "504c5c90532c2e47f6c6c5cdee178f855ba078de560d364fa536532bb056fedf",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
