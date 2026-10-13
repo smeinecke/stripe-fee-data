@@ -8,20 +8,20 @@
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
         "calculable_rules": 23,
-        "conflicting_rule_identities": 4,
-        "custom_pricing": 1,
+        "conflicting_rule_identities": 6,
+        "custom_pricing": 2,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 8,
         "included": 10,
-        "informational": 2,
-        "informational_conflicts": 4,
+        "informational": 3,
+        "informational_conflicts": 6,
         "non_calculable_rules": 4,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 44,
+        "numeric_source_entries": 48,
         "reference_only": 0,
-        "referenced_numeric_entries": 44,
-        "source_entries": 64,
+        "referenced_numeric_entries": 48,
+        "source_entries": 70,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -1484,7 +1484,7 @@
         }
       ],
       "stripe_market_code": "ae",
-      "unclassified_count": 10
+      "unclassified_count": 12
     },
     {
       "account_country": "AU",
@@ -1493,20 +1493,20 @@
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
         "calculable_rules": 96,
-        "conflicting_rule_identities": 14,
-        "custom_pricing": 2,
+        "conflicting_rule_identities": 16,
+        "custom_pricing": 3,
         "dropped_numeric_entries": 0,
         "free": 3,
         "ignored_non_fee": 15,
         "included": 10,
-        "informational": 9,
-        "informational_conflicts": 14,
+        "informational": 10,
+        "informational_conflicts": 16,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 172,
+        "numeric_source_entries": 176,
         "reference_only": 0,
-        "referenced_numeric_entries": 172,
-        "source_entries": 197,
+        "referenced_numeric_entries": 176,
+        "source_entries": 203,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -8149,7 +8149,7 @@
         }
       ],
       "stripe_market_code": "au",
-      "unclassified_count": 25
+      "unclassified_count": 27
     },
     {
       "account_country": "BR",
@@ -8157,21 +8157,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 20,
-        "conflicting_rule_identities": 5,
+        "calculable_rules": 19,
+        "conflicting_rule_identities": 7,
         "custom_pricing": 1,
         "dropped_numeric_entries": 0,
-        "free": 1,
+        "free": 2,
         "ignored_non_fee": 8,
-        "included": 9,
+        "included": 10,
         "informational": 3,
-        "informational_conflicts": 5,
+        "informational_conflicts": 7,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 48,
+        "numeric_source_entries": 49,
         "reference_only": 0,
-        "referenced_numeric_entries": 48,
-        "source_entries": 68,
+        "referenced_numeric_entries": 49,
+        "source_entries": 71,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -8984,59 +8984,6 @@
           "classification_status": "calculable_rule",
           "conditions": [
             {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "BR"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "25.00",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.25"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "0.25%"
-            ],
-            "source_entry_ids": [
-              "253129d799422619"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "0.25%",
-          "payment_method": null,
-          "product_id": "platform",
-          "provider": "stripe",
-          "rule_id": "65ddeb058bd93dda",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "BR",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
               "dimension": "account_country",
               "evidence": null,
               "operator": "eq",
@@ -9400,20 +9347,20 @@
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
         "calculable_rules": 111,
-        "conflicting_rule_identities": 20,
-        "custom_pricing": 6,
+        "conflicting_rule_identities": 22,
+        "custom_pricing": 7,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 15,
         "included": 11,
-        "informational": 8,
-        "informational_conflicts": 20,
+        "informational": 9,
+        "informational_conflicts": 22,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 212,
+        "numeric_source_entries": 216,
         "reference_only": 0,
-        "referenced_numeric_entries": 212,
-        "source_entries": 237,
+        "referenced_numeric_entries": 216,
+        "source_entries": 243,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -17264,7 +17211,7 @@
         }
       ],
       "stripe_market_code": "de",
-      "unclassified_count": 29
+      "unclassified_count": 31
     },
     {
       "account_country": "GB",
@@ -17273,20 +17220,20 @@
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
         "calculable_rules": 119,
-        "conflicting_rule_identities": 22,
-        "custom_pricing": 3,
+        "conflicting_rule_identities": 24,
+        "custom_pricing": 4,
         "dropped_numeric_entries": 0,
         "free": 3,
         "ignored_non_fee": 15,
         "included": 10,
-        "informational": 10,
-        "informational_conflicts": 22,
+        "informational": 11,
+        "informational_conflicts": 24,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 227,
+        "numeric_source_entries": 231,
         "reference_only": 0,
-        "referenced_numeric_entries": 227,
-        "source_entries": 257,
+        "referenced_numeric_entries": 231,
+        "source_entries": 263,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -25677,7 +25624,7 @@
         }
       ],
       "stripe_market_code": "gb",
-      "unclassified_count": 27
+      "unclassified_count": 29
     },
     {
       "account_country": "IN",
@@ -26969,21 +26916,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 56,
-        "conflicting_rule_identities": 11,
+        "calculable_rules": 55,
+        "conflicting_rule_identities": 13,
         "custom_pricing": 1,
         "dropped_numeric_entries": 0,
-        "free": 1,
+        "free": 2,
         "ignored_non_fee": 12,
-        "included": 9,
+        "included": 10,
         "informational": 7,
-        "informational_conflicts": 11,
+        "informational_conflicts": 13,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 115,
+        "numeric_source_entries": 116,
         "reference_only": 0,
-        "referenced_numeric_entries": 115,
-        "source_entries": 136,
+        "referenced_numeric_entries": 116,
+        "source_entries": 139,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -27842,59 +27789,6 @@
           "product_id": "managed_payments",
           "provider": "stripe",
           "rule_id": "de0675b6d4ce2394",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "25.00",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.25"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "0.25%"
-            ],
-            "source_entry_ids": [
-              "253129d799422619"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "0.25%",
-          "payment_method": null,
-          "product_id": "platform",
-          "provider": "stripe",
-          "rule_id": "f32080654dea6442",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -30653,20 +30547,20 @@
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
         "calculable_rules": 154,
-        "conflicting_rule_identities": 25,
-        "custom_pricing": 3,
+        "conflicting_rule_identities": 27,
+        "custom_pricing": 4,
         "dropped_numeric_entries": 0,
         "free": 3,
         "ignored_non_fee": 16,
         "included": 12,
-        "informational": 12,
-        "informational_conflicts": 25,
+        "informational": 13,
+        "informational_conflicts": 27,
         "non_calculable_rules": 5,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 283,
+        "numeric_source_entries": 287,
         "reference_only": 0,
-        "referenced_numeric_entries": 283,
-        "source_entries": 312,
+        "referenced_numeric_entries": 287,
+        "source_entries": 318,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -41601,7 +41495,7 @@
         }
       ],
       "stripe_market_code": "us",
-      "unclassified_count": 31
+      "unclassified_count": 33
     }
   ],
   "schema_version": 1

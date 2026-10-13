@@ -3,21 +3,21 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 20,
-    "conflicting_rule_identities": 5,
+    "calculable_rules": 19,
+    "conflicting_rule_identities": 7,
     "custom_pricing": 1,
     "dropped_numeric_entries": 0,
-    "free": 1,
+    "free": 2,
     "ignored_non_fee": 8,
-    "included": 9,
+    "included": 10,
     "informational": 3,
-    "informational_conflicts": 5,
+    "informational_conflicts": 7,
     "non_calculable_rules": 3,
     "numeric_fee_candidates": 0,
-    "numeric_source_entries": 48,
+    "numeric_source_entries": 49,
     "reference_only": 0,
-    "referenced_numeric_entries": 48,
-    "source_entries": 68,
+    "referenced_numeric_entries": 49,
+    "source_entries": 71,
     "unclassified_fee_candidates": 0,
     "unsupported_fee_shapes": 0
   },
@@ -2592,9 +2592,10 @@
         "product=platform",
         "variant=standard",
         "channel=online",
-        "account_country=BR"
+        "account_country=BR",
+        "conflict: semantic identity with differing fee signature"
       ],
-      "classification_status": "calculable_rule",
+      "classification_status": "conflict",
       "conditions": [
         {
           "dimension": "channel",
@@ -2609,7 +2610,7 @@
           "value": "BR"
         }
       ],
-      "confidence": 0.85,
+      "confidence": 0.0,
       "contributing_entry_ids": [
         "253129d799422619"
       ],
@@ -2667,6 +2668,103 @@
       "source_text": "0.25%",
       "source_texts": [
         "0.25%"
+      ],
+      "source_url": "https://stripe.com/en-br/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_transaction",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "BR",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=platform",
+        "variant=standard",
+        "channel=online",
+        "account_country=BR",
+        "conflict: semantic identity with differing fee signature"
+      ],
+      "classification_status": "conflict",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "BR"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "77f3288756fbb86c"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "77f3288756fbb86c",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "0.10",
+          "basis_points": null,
+          "currency": "BRL",
+          "minor_amount": "10",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "77f3288756fbb86c",
+          "source_text": "R$0.10 per transaction",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "R$0.10 per transaction"
+        ],
+        "source_entry_ids": [
+          "77f3288756fbb86c"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "0.10",
+      "fixed_amount_minor": "10",
+      "fixed_currency": "BRL",
+      "label": "R$0.10 per transaction",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "platform",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "platform",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "32a09b5dee1aa323",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "77f3288756fbb86c",
+          "text": "R$0.10 per transaction"
+        }
+      ],
+      "source_text": "R$0.10 per transaction",
+      "source_texts": [
+        "R$0.10 per transaction"
       ],
       "source_url": "https://stripe.com/en-br/pricing",
       "transaction_amount_max": null,
@@ -3228,19 +3326,195 @@
       "card_region": null,
       "card_tier": null,
       "channel": null,
+      "classification_evidence": [
+        "product=unspecified",
+        "variant=standard",
+        "account_country=BR",
+        "contract_length=month_to_month"
+      ],
+      "classification_status": "free",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "BR"
+        },
+        {
+          "dimension": "contract_length",
+          "evidence": null,
+          "operator": "eq",
+          "value": "month_to_month"
+        }
+      ],
+      "confidence": 0.0,
+      "contributing_entry_ids": [
+        "a028b281f5f8ec62",
+        "9b1da726624a5793"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "a028b281f5f8ec62",
+      "exactness": "free",
+      "fee_components": [
+        {
+          "amount": "13",
+          "basis_points": null,
+          "currency": "BRL",
+          "minor_amount": "1300",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "a028b281f5f8ec62",
+          "source_text": "R$0.013 per row synced",
+          "type": "free",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "R$0.013 per row synced",
+          "5,000 rows synced free per month"
+        ],
+        "source_entry_ids": [
+          "a028b281f5f8ec62",
+          "9b1da726624a5793"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "R$0.013 per row synced",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "unspecified",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "unspecified",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "00fd0c26dc2a199e",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "a028b281f5f8ec62",
+          "text": "R$0.013 per row synced"
+        },
+        {
+          "entry_id": "9b1da726624a5793",
+          "text": "5,000 rows synced free per month"
+        }
+      ],
+      "source_text": "R$0.013 per row synced",
+      "source_texts": [
+        "R$0.013 per row synced",
+        "5,000 rows synced free per month"
+      ],
+      "source_url": "https://stripe.com/en-br/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "BR",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "informational",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "included",
+      "conditions": [
+        {
+          "dimension": "channel",
+          "evidence": null,
+          "operator": "eq",
+          "value": "online"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "authorization"
+        }
+      ],
+      "confidence": 0.7,
+      "contributing_entry_ids": [
+        "7fc093cf54f425f5"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "7fc093cf54f425f5",
+      "exactness": "included",
+      "fee_components": [],
+      "fee_evidence": {
+        "confidence": 0.7,
+        "phrases": [
+          "Charged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included."
+        ],
+        "source_entry_ids": [
+          "7fc093cf54f425f5"
+        ],
+        "type": "included"
+      },
+      "fixed_amount": null,
+      "fixed_amount_minor": null,
+      "fixed_currency": null,
+      "label": "Charged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included.",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": null,
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "platform",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "385d1d391b63abba",
+      "settlement_currency": null,
+      "source_fragments": [],
+      "source_text": "Charged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included.",
+      "source_texts": [
+        "Charged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included."
+      ],
+      "source_url": "https://stripe.com/en-br/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "informational",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "BR",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "informational",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": null,
       "classification_evidence": [],
       "classification_status": "free",
       "conditions": [],
       "confidence": 0.7,
       "contributing_entry_ids": [
-        "ec253640cd211428",
         "8ebda9518a808590",
         "7f478ade4b7cabba"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "ec253640cd211428",
+      "entry_id": "8ebda9518a808590",
       "exactness": "included",
       "fee_components": [],
       "fee_evidence": {
@@ -3250,7 +3524,6 @@
           "Included"
         ],
         "source_entry_ids": [
-          "ec253640cd211428",
           "8ebda9518a808590",
           "7f478ade4b7cabba"
         ],
@@ -3310,7 +3583,6 @@
       ],
       "confidence": 0.0,
       "contributing_entry_ids": [
-        "d97803d88b5a8d1f",
         "48f224d2b383cac2",
         "eabf1696dcb032a5",
         "1183036e931c0d34",
@@ -3320,13 +3592,12 @@
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "d97803d88b5a8d1f",
+      "entry_id": "48f224d2b383cac2",
       "exactness": "exact",
       "fee_components": [],
       "fee_evidence": {
-        "confidence": 0.85,
+        "confidence": 0.0,
         "phrases": [
-          "R$0.10 per transaction",
           "0.25% of volume",
           "R$0.093 per additional step",
           "Get over $50K in discounts and perks.",
@@ -3334,19 +3605,18 @@
           "$10B+"
         ],
         "source_entry_ids": [
-          "d97803d88b5a8d1f",
           "48f224d2b383cac2",
           "eabf1696dcb032a5",
           "1183036e931c0d34",
           "077400961462b557",
           "fa44b57ad8aac343"
         ],
-        "type": "explicit_fee_phrase"
+        "type": "insufficient"
       },
       "fixed_amount": null,
       "fixed_amount_minor": null,
       "fixed_currency": null,
-      "label": "R$0.10 per transaction",
+      "label": "0.25% of volume",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "unspecified",
@@ -3360,10 +3630,6 @@
       "rule_id": "5118bf412d68ecda",
       "settlement_currency": null,
       "source_fragments": [
-        {
-          "entry_id": "d97803d88b5a8d1f",
-          "text": "R$0.10 per transaction"
-        },
         {
           "entry_id": "48f224d2b383cac2",
           "text": "0.25% of volume"
@@ -3385,9 +3651,8 @@
           "text": "$10B+"
         }
       ],
-      "source_text": "R$0.10 per transaction",
+      "source_text": "0.25% of volume",
       "source_texts": [
-        "R$0.10 per transaction",
         "0.25% of volume",
         "R$0.093 per additional step",
         "Get over $50K in discounts and perks.",
@@ -5498,21 +5763,60 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "ec253640cd211428",
-      "fee_category": "Access to Data Pipeline",
+      "entry_id": "a028b281f5f8ec62",
+      "fee_category": "Postgres database sync",
       "footnotes": [],
       "links": [],
       "payment_method": null,
       "payment_method_family": null,
-      "product": "Access to Data Pipeline",
+      "product": "Postgres database sync",
       "product_category": "pricing",
       "qualifiers": [],
       "section_path": [
-        "Access to Data Pipeline"
+        "Postgres database sync"
       ],
-      "source_evidence": "R$0.10\nper transaction\nSee pricing details",
+      "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month",
       "source_order": 43,
-      "source_text": "Try for free for 30 days",
+      "source_text": "R$0.013 per row synced",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": [
+        {
+          "amount": "13",
+          "basis_points": null,
+          "currency": "BRL",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "0.013",
+          "token_id": "27afe490828bd616",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "9b1da726624a5793",
+      "fee_category": "Postgres database sync",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Postgres database sync",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Postgres database sync"
+      ],
+      "source_evidence": "",
+      "source_order": 44,
+      "source_text": "5,000 rows synced free per month",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
         {
@@ -5523,9 +5827,9 @@
           "is_minor_currency": false,
           "kind": "qualifier",
           "note": null,
-          "operator": "for",
+          "operator": "per",
           "percentage": null,
-          "raw": "Try for free for 30 days",
+          "raw": "5,000 rows synced free per month",
           "token_id": null,
           "value": null
         }
@@ -5537,20 +5841,20 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "d97803d88b5a8d1f",
-      "fee_category": "Access to Data Pipeline",
+      "entry_id": "77f3288756fbb86c",
+      "fee_category": "Data warehouse or cloud storage sync",
       "footnotes": [],
       "links": [],
       "payment_method": null,
       "payment_method_family": null,
-      "product": "Access to Data Pipeline",
+      "product": "Data warehouse or cloud storage sync",
       "product_category": "pricing",
       "qualifiers": [],
       "section_path": [
-        "Access to Data Pipeline"
+        "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "See pricing details",
-      "source_order": 44,
+      "source_evidence": "Charged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included.\nTry for free for 30 days\nSee pricing details",
+      "source_order": 45,
       "source_text": "R$0.10 per transaction",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5576,6 +5880,84 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
+      "entry_id": "7fc093cf54f425f5",
+      "fee_category": "Data warehouse or cloud storage sync",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Data warehouse or cloud storage sync",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Data warehouse or cloud storage sync"
+      ],
+      "source_evidence": "Try for free for 30 days\nSee pricing details",
+      "source_order": 46,
+      "source_text": "Charged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included.",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "included",
+          "is_minor_currency": false,
+          "kind": "qualifier",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "Charged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included.",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "b80c132a0aff0ffc",
+      "fee_category": "Data warehouse or cloud storage sync",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Data warehouse or cloud storage sync",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Data warehouse or cloud storage sync"
+      ],
+      "source_evidence": "See pricing details",
+      "source_order": 47,
+      "source_text": "Try for free for 30 days",
+      "source_url": "https://stripe.com/en-br/pricing",
+      "tokens": [
+        {
+          "amount": null,
+          "basis_points": null,
+          "currency": null,
+          "exactness": "free",
+          "is_minor_currency": false,
+          "kind": "qualifier",
+          "note": null,
+          "operator": "for",
+          "percentage": null,
+          "raw": "Try for free for 30 days",
+          "token_id": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
       "entry_id": "8ebda9518a808590",
       "fee_category": "Access to Revenue Recognition",
       "footnotes": [],
@@ -5589,7 +5971,7 @@
         "Access to Revenue Recognition"
       ],
       "source_evidence": "0.25%\nof volume\nSee pricing details",
-      "source_order": 45,
+      "source_order": 48,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5628,7 +6010,7 @@
         "Access to Revenue Recognition"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 46,
+      "source_order": 49,
       "source_text": "0.25% of volume",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5667,7 +6049,7 @@
         "Pay as you go"
       ],
       "source_evidence": "10,000 steps per month\nR$0.093\nper additional step",
-      "source_order": 47,
+      "source_order": 50,
       "source_text": "Included",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5706,7 +6088,7 @@
         "Pay as you go"
       ],
       "source_evidence": "",
-      "source_order": 48,
+      "source_order": 51,
       "source_text": "R$0.093 per additional step",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5745,7 +6127,7 @@
         "Atlas"
       ],
       "source_evidence": "",
-      "source_order": 49,
+      "source_order": 52,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5784,7 +6166,7 @@
         "Incorporate your company"
       ],
       "source_evidence": "one-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 50,
+      "source_order": 53,
       "source_text": "$500.00",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5823,7 +6205,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 51,
+      "source_order": 54,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5862,7 +6244,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 52,
+      "source_order": 55,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": []
@@ -5886,7 +6268,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 53,
+      "source_order": 56,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5925,7 +6307,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 54,
+      "source_order": 57,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -5964,7 +6346,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 55,
+      "source_order": 58,
       "source_text": "+1%",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -6003,7 +6385,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 56,
+      "source_order": 59,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -6042,7 +6424,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 57,
+      "source_order": 60,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -6081,7 +6463,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nBrazil (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 58,
+      "source_order": 61,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -6130,7 +6512,7 @@
         "Card payments 3.99% + R$0.39 per successful transaction for domestic cards"
       ],
       "source_evidence": "Accept online payments made using cards.",
-      "source_order": 59,
+      "source_order": 62,
       "source_text": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6193,7 +6575,7 @@
         "Card payments 3.99% + R$0.39 per successful transaction for domestic cards"
       ],
       "source_evidence": "",
-      "source_order": 60,
+      "source_order": 63,
       "source_text": "Card payments 3.99% + R$0.39 per successful transaction for domestic cards",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6256,7 +6638,7 @@
         "Card payments + 2% for transactions with international cards, Stripe will charge the User a fee corresponding to the percentage applied above on the transaction amount (after conversion to local currency )."
       ],
       "source_evidence": "",
-      "source_order": 61,
+      "source_order": 64,
       "source_text": "Card payments + 2% for transactions with international cards, Stripe will charge the User a fee corresponding to the percentage applied above on the transaction amount (after conversion to local currency ).",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6301,7 +6683,7 @@
         "Pix 1.19%"
       ],
       "source_evidence": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
-      "source_order": 62,
+      "source_order": 65,
       "source_text": "Pix 1.19%",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6346,7 +6728,7 @@
         "Pix 1.19%"
       ],
       "source_evidence": "",
-      "source_order": 63,
+      "source_order": 66,
       "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6391,7 +6773,7 @@
         "Pix 1.19%"
       ],
       "source_evidence": "",
-      "source_order": 64,
+      "source_order": 67,
       "source_text": "Pix 1.19%",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6436,7 +6818,7 @@
         "Boleto Bancário R$3.45"
       ],
       "source_evidence": "Let your Brazilian customers pay with Boleto—a voucher-based payment method that represents more than 20% of transactions in Brazil.",
-      "source_order": 65,
+      "source_order": 68,
       "source_text": "Boleto Bancário R$3.45",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6481,7 +6863,7 @@
         "Boleto Bancário R$3.45"
       ],
       "source_evidence": "",
-      "source_order": 66,
+      "source_order": 69,
       "source_text": "Let your Brazilian customers pay with Boleto—a voucher-based payment method that represents more than 20% of transactions in Brazil.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -6526,7 +6908,7 @@
         "Boleto Bancário R$3.45"
       ],
       "source_evidence": "",
-      "source_order": 67,
+      "source_order": 70,
       "source_text": "Boleto Bancário R$3.45",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -7241,7 +7623,7 @@
       "source_order": 59
     },
     {
-      "body": "Send Stripe data and reports directly to your data warehouse or cloud storage.\nSet up your pipeline in minutes, and automate data delivery—no code required.\nSpeed up your financial close, and access more complete business insights.\nOffload ongoing maintenance with a pipeline that's built into Stripe.",
+      "body": "Stream real-time Stripe data to Postgres, or sync Stripe data to your data warehouse or cloud storage.\nSet up a pipeline with no code and automate data delivery.\nSync real-time Stripe data without managing APIs or webhooks.\nClose the books faster and get richer insights on revenue and churn.\nChoose a plan",
       "heading": "Data Pipeline",
       "level": 1,
       "links": [],
@@ -7252,15 +7634,26 @@
       "source_order": 60
     },
     {
-      "body": "Centralize your Stripe data with other business data.\nTry for free for 30 days\nR$0.10\nper transaction\nSee pricing details",
-      "heading": "Access to Data Pipeline",
+      "body": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\nR$0.013\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month",
+      "heading": "Postgres database sync",
       "level": 1,
       "links": [],
-      "section_id": "da80a00f0d611a91",
+      "section_id": "75c8056d7056e94c",
       "section_path": [
-        "Access to Data Pipeline"
+        "Postgres database sync"
       ],
       "source_order": 61
+    },
+    {
+      "body": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more.\nPay as you go\nR$0.10\nper transaction\nCharged when a user or connected account processes a transaction or submits an authorization or payment request. All your Stripe data is automatically included.\nTry for free for 30 days\nSee pricing details",
+      "heading": "Data warehouse or cloud storage sync",
+      "level": 1,
+      "links": [],
+      "section_id": "001bac34667c707f",
+      "section_path": [
+        "Data warehouse or cloud storage sync"
+      ],
+      "source_order": 62
     },
     {
       "body": "Automated revenue reporting to streamline accrual accounting.\nClose books quickly and accurately with automated accounting reports and dashboards.\nEasily review finances and audit in real time.\nStay compliant with ASC 606 and IFRS 15.",
@@ -7271,7 +7664,7 @@
       "section_path": [
         "Revenue Recognition"
       ],
-      "source_order": 62
+      "source_order": 63
     },
     {
       "body": "Simplify accrual accounting.\nTry for free for 30 days\n0.25%\nof volume\nSee pricing details",
@@ -7282,7 +7675,7 @@
       "section_path": [
         "Access to Revenue Recognition"
       ],
-      "source_order": 63
+      "source_order": 64
     },
     {
       "body": null,
@@ -7293,7 +7686,7 @@
       "section_path": [
         "More"
       ],
-      "source_order": 64
+      "source_order": 65
     },
     {
       "body": "AI-powered fraud and abuse protection.\nReduce fraud across payment methods with AI powered by the Stripe network.\nFlag and prevent suspicious accounts from joining your platform.\nStay ahead of emerging fraud and stop abuse across the entire customer lifecycle.\nGet started with zero integration, or access Radar’s intelligence via API.",
@@ -7304,7 +7697,7 @@
       "section_path": [
         "Radar"
       ],
-      "source_order": 65
+      "source_order": 66
     },
     {
       "body": "No commitment, no recurring fees. Start building workflows today.\nIncluded\n10,000 steps per month\nR$0.093\nper additional step",
@@ -7315,7 +7708,7 @@
       "section_path": [
         "Pay as you go"
       ],
-      "source_order": 70
+      "source_order": 71
     },
     {
       "body": "Software to quickly incorporate your startup.\nFile your incorporation paperwork in minutes.\nUse documents trusted by law firms, tax attorneys, and venture capital investors.\nGet over $50K in discounts and perks.",
@@ -7326,7 +7719,7 @@
       "section_path": [
         "Atlas"
       ],
-      "source_order": 67
+      "source_order": 68
     },
     {
       "body": "Incorporate your company, get your EIN, issue equity, and file your 83(b) tax election.\nOne-time\n$500.00\none-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
@@ -7337,7 +7730,7 @@
       "section_path": [
         "Incorporate your company"
       ],
-      "source_order": 68
+      "source_order": 69
     },
     {
       "body": "Automate tasks and create custom flows, without writing code.\nAutomate business processes with 600+ event triggers.\nEliminate boilerplate code with visual workflow builder.\nExtend Stripe capabilities by connecting third-party applications.\nMonitor and debug with built-in logging and versioning.",
@@ -7348,7 +7741,7 @@
       "section_path": [
         "Workflows"
       ],
-      "source_order": 69
+      "source_order": 70
     },
     {
       "body": null,
@@ -7359,7 +7752,7 @@
       "section_path": [
         "Pay as you go"
       ],
-      "source_order": 70
+      "source_order": 71
     },
     {
       "body": "Global payments\nMoney management\nRevenue and finance automation\nMore\nGlobal payments\nPayments\nPayment Links\nCheckout\nMoney management\nConnect\nRevenue and finance automation\nBilling\nMetronome\nInvoicing\nStripe Sigma\nData Pipeline\nRevenue Recognition\nMore\nRadar\nAtlas\nWorkflows",
@@ -7371,7 +7764,7 @@
         "Pay as you go",
         "Navigate to:"
       ],
-      "source_order": 71
+      "source_order": 72
     },
     {
       "body": null,
@@ -7383,7 +7776,7 @@
         "Pay as you go",
         "Custom pricing"
       ],
-      "source_order": 72
+      "source_order": 73
     },
     {
       "body": "Create tailored solutions to help you expand into new markets, optimize payments performance, automate revenue and finance workflows, monetize financial services, and\nmore.",
@@ -7394,7 +7787,7 @@
       "section_path": [
         "Join leading enterprises on Stripe"
       ],
-      "source_order": 73
+      "source_order": 74
     },
     {
       "body": "Work with our sales team to design a solution that meets your needs:\nPayments\nRadar\nConnect\nInvoicing\nBilling\nand more",
@@ -7405,7 +7798,7 @@
       "section_path": [
         "Build your custom package"
       ],
-      "source_order": 74
+      "source_order": 75
     },
     {
       "body": "Technical account management\nProfessional Services\nCertified implementation partners",
@@ -7416,7 +7809,7 @@
       "section_path": [
         "Get the support you need"
       ],
-      "source_order": 75
+      "source_order": 76
     },
     {
       "body": "IC+ pricing, discounted flat rates, subscriptions, and buy-rates for platforms.",
@@ -7427,7 +7820,7 @@
       "section_path": [
         "Flexible structures"
       ],
-      "source_order": 76
+      "source_order": 77
     },
     {
       "body": "Discounts based on volume tiers, commitments, and product usage.",
@@ -7438,7 +7831,7 @@
       "section_path": [
         "Volume-based discounts"
       ],
-      "source_order": 77
+      "source_order": 78
     },
     {
       "body": "Optional aggregated pricing for all markets, allowing you to go global with ease.",
@@ -7449,7 +7842,7 @@
       "section_path": [
         "Global single rates"
       ],
-      "source_order": 78
+      "source_order": 79
     },
     {
       "body": "Dashboards, tools, and APIs that give you transparency into your costs.",
@@ -7460,7 +7853,7 @@
       "section_path": [
         "Cost transparency"
       ],
-      "source_order": 79
+      "source_order": 80
     },
     {
       "body": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
@@ -7471,7 +7864,7 @@
       "section_path": [
         "Integrating Stripe provides a 326% return on investment"
       ],
-      "source_order": 80
+      "source_order": 81
     },
     {
       "body": null,
@@ -7483,7 +7876,7 @@
         "Integrating Stripe provides a 326% return on investment",
         "Report"
       ],
-      "source_order": 81
+      "source_order": 82
     },
     {
       "body": null,
@@ -7494,7 +7887,7 @@
       "section_path": [
         "The Total Economic Impact™ Of Stripe"
       ],
-      "source_order": 82
+      "source_order": 83
     },
     {
       "body": null,
@@ -7505,7 +7898,7 @@
       "section_path": [
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
-      "source_order": 83
+      "source_order": 84
     },
     {
       "body": "BMW owners using ConnectedDrive Store",
@@ -7516,7 +7909,7 @@
       "section_path": [
         "Millions"
       ],
-      "source_order": 84
+      "source_order": 85
     },
     {
       "body": "US dealerships",
@@ -7527,7 +7920,7 @@
       "section_path": [
         "350+"
       ],
-      "source_order": 85
+      "source_order": 86
     },
     {
       "body": "Payments\nStripe Sigma\nBMW logo\nRead story",
@@ -7538,7 +7931,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 95
+      "source_order": 96
     },
     {
       "body": "Amazon businesses on Stripe including Prime, Audible, and Amazon Pay.",
@@ -7549,7 +7942,7 @@
       "section_path": [
         "5+"
       ],
-      "source_order": 87
+      "source_order": 88
     },
     {
       "body": "Payment methods available on Stripe",
@@ -7560,7 +7953,7 @@
       "section_path": [
         "50+"
       ],
-      "source_order": 88
+      "source_order": 89
     },
     {
       "body": null,
@@ -7571,7 +7964,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 89
+      "source_order": 90
     },
     {
       "body": "Countries in logistics network",
@@ -7582,7 +7975,7 @@
       "section_path": [
         "130"
       ],
-      "source_order": 90
+      "source_order": 91
     },
     {
       "body": "Worth of goods moved around the world each year",
@@ -7593,7 +7986,7 @@
       "section_path": [
         "$10B+"
       ],
-      "source_order": 91
+      "source_order": 92
     },
     {
       "body": null,
@@ -7604,7 +7997,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 92
+      "source_order": 93
     },
     {
       "body": "Uplift from Stripe's Global Payments Infrastructure",
@@ -7615,7 +8008,7 @@
       "section_path": [
         "+5.5%"
       ],
-      "source_order": 93
+      "source_order": 94
     },
     {
       "body": "Uplift from Adaptive Acceptance",
@@ -7626,7 +8019,7 @@
       "section_path": [
         "+1%"
       ],
-      "source_order": 94
+      "source_order": 95
     },
     {
       "body": null,
@@ -7637,7 +8030,7 @@
       "section_path": [
         "Products used"
       ],
-      "source_order": 95
+      "source_order": 96
     },
     {
       "body": "Amazon logo\nRead story",
@@ -7648,7 +8041,7 @@
       "section_path": [
         "Learn why BMW chose Stripe to power ecommerce and payments"
       ],
-      "source_order": 96
+      "source_order": 97
     },
     {
       "body": "Maersk logo\nRead story",
@@ -7659,7 +8052,7 @@
       "section_path": [
         "See how Amazon simplified cross-border payments with Stripe"
       ],
-      "source_order": 97
+      "source_order": 98
     },
     {
       "body": "Twilio logo\nRead story",
@@ -7670,7 +8063,7 @@
       "section_path": [
         "See how Maersk tapped into new technology to make it easier to ship around the world"
       ],
-      "source_order": 98
+      "source_order": 99
     },
     {
       "body": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
@@ -7681,7 +8074,7 @@
       "section_path": [
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
-      "source_order": 99
+      "source_order": 100
     },
     {
       "body": null,
@@ -7692,7 +8085,7 @@
       "section_path": [
         "FAQs"
       ],
-      "source_order": 100
+      "source_order": 101
     },
     {
       "body": "Stripe charges a per-transaction fee depending on the payment method used by the end customer.\nMore details on fees by payment method.",
@@ -7704,7 +8097,7 @@
         "FAQs",
         "How are payment fees calculated?"
       ],
-      "source_order": 101
+      "source_order": 102
     },
     {
       "body": "Stripe is required to charge tax on certain products and services. Tax is charged based on your location and/ or your business/tax status, which determines whether a product or service is subject to taxes, and the applicable tax rates.\nRead more",
@@ -7716,7 +8109,7 @@
         "FAQs",
         "Will I be charged tax?"
       ],
-      "source_order": 102
+      "source_order": 103
     },
     {
       "body": "For businesses on standard pricing: There may be\nfees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, Connect and currency conversion fees from the original transaction are not returned.\nFor businesses on custom pricing: There may be fees for issuing refunds depending on your fee schedule with Stripe.",
@@ -7728,7 +8121,7 @@
         "FAQs",
         "Are there additional fees for refunds?"
       ],
-      "source_order": 103
+      "source_order": 104
     },
     {
       "body": "Stripe does not charge setup fees, monthly fees, or any other hidden fees like closure fees. All fees for businesses on standard pricing are listed on our website.",
@@ -7740,7 +8133,7 @@
         "FAQs",
         "Do you have setup fees or monthly fees?"
       ],
-      "source_order": 104
+      "source_order": 105
     },
     {
       "body": "Stripe offers custom pricing for businesses with large processing volumes. Eligibility varies by market.",
@@ -7752,7 +8145,7 @@
         "FAQs",
         "Do you offer any discounts?"
       ],
-      "source_order": 105
+      "source_order": 106
     },
     {
       "body": "Access a complete payments platform with simple, pay-as-you-go pricing, or contact us to design a custom package specifically for your business.",
@@ -7763,7 +8156,7 @@
       "section_path": [
         "Ready to get started? Get in touch or create an account."
       ],
-      "source_order": 106
+      "source_order": 107
     },
     {
       "body": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
@@ -7774,7 +8167,7 @@
       "section_path": [
         "See our customers"
       ],
-      "source_order": 107
+      "source_order": 108
     },
     {
       "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nBrazil (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
@@ -7785,7 +8178,7 @@
       "section_path": [
         "Explore the docs"
       ],
-      "source_order": 108
+      "source_order": 109
     },
     {
       "body": "Pricing\nAtlas\nAuthorization Boost\nBilling\nCapital\nCheckout\nClimate\nConnect\nCrypto\nData Pipeline\nElements\nFinancial Connections\nIdentity\nInvoicing\nIssuing\nLink\nManaged Payments\nPayment links\nPayments\nPayouts\nRadar\nRevenue Recognition\nStripe Sigma\nTax\nTerminal\nTreasury",
@@ -7796,7 +8189,7 @@
       "section_path": [
         "Products & pricing"
       ],
-      "source_order": 109
+      "source_order": 110
     },
     {
       "body": "Enterprises\nStartups\nAgentic commerce\nCrypto\nEcommerce\nEmbedded finance\nFinance automation\nGlobal businesses\nIn-app payments\nMarketplaces\nMoney management\nPlatforms\nSaaS\nAI companies\nCreator economy\nFintech\nGaming\nHospitality, travel, and leisure\nInsurance\nMedia and entertainment\nNonprofits\nProfessional services\nPublic sector\nRetail",
@@ -7807,7 +8200,7 @@
       "section_path": [
         "Solutions"
       ],
-      "source_order": 110
+      "source_order": 111
     },
     {
       "body": "Stripe App Marketplace\nStripe Partner ecosystem\nProfessional services",
@@ -7818,7 +8211,7 @@
       "section_path": [
         "Integrations & custom solutions"
       ],
-      "source_order": 111
+      "source_order": 112
     },
     {
       "body": "Documentation\nAPI reference\nAPI status\nAPI changelog\nLibraries and SDKs\nStripe Projects\nDeveloper blog",
@@ -7829,7 +8222,7 @@
       "section_path": [
         "Developers"
       ],
-      "source_order": 112
+      "source_order": 113
     },
     {
       "body": "Guides\nCustomer stories\nBlog\nCommunity\nSessions annual conference\nPrivacy & terms\nProhibited & restricted businesses\nLicenses\nSitemap\nCookie settings\nMore resources",
@@ -7840,7 +8233,7 @@
       "section_path": [
         "Resources"
       ],
-      "source_order": 113
+      "source_order": 114
     },
     {
       "body": "About\nInstitutional\nProduct roadmap\nCareers\nNewsroom\nStripe Press",
@@ -7851,7 +8244,7 @@
       "section_path": [
         "Company"
       ],
-      "source_order": 114
+      "source_order": 115
     },
     {
       "body": "Get support\nManaged support plans\nSign in\nStripe Brasil Soluções de Pagamento Ltda. - Instituição de Pagamento\nTax ID (CNPJ): 22.121.209/0001-46\nStripe Brasil Soluções de Pagamento Ltda - Payment Institution is a payment institution that operates as an acquirer.\n© 2026 Stripe, LLC",
@@ -7862,7 +8255,7 @@
       "section_path": [
         "Support"
       ],
-      "source_order": 115
+      "source_order": 116
     },
     {
       "body": "Accept online payments made using cards.",
@@ -7999,7 +8392,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "404e3c283812d9f86d75973c797bf5d2ca061033f10dd291f264b0662d265baf",
+      "content_sha256": "f81ef723a55bf32a372cad0ce4c66997be86abaeeda3d82a6159431f24daee4b",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8015,7 +8408,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "e5a8ab8c707de631ae8729c0a594be095a107e531f98a7d623f639589f2e698f",
+      "content_sha256": "8d1eb5acf30398248ddbc518d568cf536cd0dfa5eb263387dffd168ee78846ba",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8135,7 +8528,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 51,
+      "source_order": 54,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -8176,7 +8569,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 52,
+      "source_order": 55,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": []
@@ -8202,7 +8595,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 56,
+      "source_order": 59,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -8243,7 +8636,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 57,
+      "source_order": 60,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -8284,7 +8677,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nBrazil (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 58,
+      "source_order": 61,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/en-br/pricing",
       "tokens": [
@@ -8331,7 +8724,7 @@
         "Pix 1.19%"
       ],
       "source_evidence": "",
-      "source_order": 63,
+      "source_order": 66,
       "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
@@ -8460,7 +8853,7 @@
         "Boleto Bancário R$3.45"
       ],
       "source_evidence": "",
-      "source_order": 66,
+      "source_order": 69,
       "source_text": "Let your Brazilian customers pay with Boleto—a voucher-based payment method that represents more than 20% of transactions in Brazil.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
