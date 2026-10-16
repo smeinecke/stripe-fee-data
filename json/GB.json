@@ -19333,7 +19333,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 24,
       "source_text": "Included",
       "source_url": "https://stripe.com/gb/pricing",
@@ -19372,7 +19372,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 25,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/gb/pricing",
@@ -19411,7 +19411,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Standalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "Standalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 26,
       "source_text": "£0.03 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/gb/pricing",
@@ -19450,7 +19450,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "standalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "standalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 27,
       "source_text": "£0.12 per",
       "source_url": "https://stripe.com/gb/pricing",
@@ -30875,7 +30875,7 @@
       "source_order": 37
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\n£0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n£0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -34768,7 +34768,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "568d2c81ab2ea46c2ef82a91a0671ca0cc51fc13509fbf18f04ba0a0d4d3724f",
+      "content_sha256": "fb7b7230a6d0c9df6ff40f2995da01076a8ae949b7b6dd772af3ac391bfa0b5b",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -34784,7 +34784,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "1d8ba584ff9f3f4e28edc3016dd990c4bfcbbca39a0a6ead3da4184d4247fb75",
+      "content_sha256": "6b7d9d6803ae8472bf1ab62f6e98ab1763391cda5b1218b0635efc9e9b4b61ae",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",

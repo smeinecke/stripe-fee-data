@@ -15254,7 +15254,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 21,
       "source_text": "Included",
       "source_url": "https://stripe.com/au/pricing",
@@ -15293,7 +15293,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "A$0.04\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "A$0.04\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 22,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/au/pricing",
@@ -15332,7 +15332,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "Standalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "Standalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 23,
       "source_text": "A$0.04 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/au/pricing",
@@ -15371,7 +15371,7 @@
       "section_path": [
         "3D Secure authentication"
       ],
-      "source_evidence": "standalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "source_evidence": "standalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "source_order": 24,
       "source_text": "A$0.15 per",
       "source_url": "https://stripe.com/au/pricing",
@@ -24349,7 +24349,7 @@
       "source_order": 35
     },
     {
-      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
+      "body": "Verify a customer's identity using 3D Secure, an authentication method, before an online card purchase.\nIncluded\nwith Payments\nIncluded at no additional charge for businesses on standard payments pricing\nA$0.04\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\nA$0.15\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorise the payment with any payment service provider (PSP).",
       "heading": "3D Secure authentication",
       "level": 1,
       "links": [],
@@ -27557,7 +27557,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "a3ad12393e6abb6730eca3c4ae9b4e20171a7d9dee0bcd458c66e99244c8d4ba",
+      "content_sha256": "d60c9d8da0c1d6af40b7e97860daff9f223e0df4be7603df06c3e748b33a88f1",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27573,7 +27573,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "c0440de4eab9af636b92333adcda0aa0d5abdcac72b3f3f21c69104d4df45395",
+      "content_sha256": "c2b73bbe694052fac7a4fa2a3326f147b0bb61ed62c09910f2e5898e813735e9",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",

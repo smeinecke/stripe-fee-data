@@ -6050,7 +6050,7 @@
       "source_order": 99
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -6064,7 +6064,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "71cf2e849ff4e60dbb345b4e04e0994f03003df76f510aaf812ecccda0a405e1",
+      "content_sha256": "8a051ee279b219a91777c9784944798c76c6ce9b8081dd02f2613c714e942e57",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",
@@ -6080,7 +6080,7 @@
     },
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "9baa01ee1fc5f8d3b676cd953638c879553cfdcfc4a141c144cb0c78b572c2da",
+      "content_sha256": "4e2df7a7071a6f9c53f9fe921a82d61112f6d71bb90bae466c558b4c6c48481f",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",
