@@ -8247,7 +8247,7 @@
       "source_order": 115
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\nStripe Brasil Soluções de Pagamento Ltda. - Instituição de Pagamento\nTax ID (CNPJ): 22.121.209/0001-46\nStripe Brasil Soluções de Pagamento Ltda - Payment Institution is a payment institution that operates as an acquirer.\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nStripe Brasil Soluções de Pagamento Ltda. - Instituição de Pagamento\nTax ID (CNPJ): 22.121.209/0001-46\nStripe Brasil Soluções de Pagamento Ltda - Payment Institution is a payment institution that operates as an acquirer.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -8392,7 +8392,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "ecf01f3ba4f3ec91243ae18e266ffcf50e5caa6fdfbff843460fab7dbedf6cdf",
+      "content_sha256": "a207d381061881fa6d35756247fb71ad072c8a113ea3110b4497e435ea6016ac",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8408,7 +8408,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "f35e4a9a1026f5ca2f678ab6303bbf2f65f2f8d8dbddfc0520d3bb9362eb747a",
+      "content_sha256": "7051805606e575cdab52411bb7e7898444955fad8e7f1bde7bf98f90b0403f71",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
