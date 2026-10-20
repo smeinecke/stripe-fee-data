@@ -29509,7 +29509,7 @@
         "Payment methods",
         "Klarna £20.00 for lost disputes"
       ],
-      "source_evidence": "Certain businesses may qualify for temporarily reduced rates on select local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
+      "source_evidence": "Certain businesses may qualify for temporarily reduced rates on selected local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
       "source_order": 245,
       "source_text": "Klarna £20.00 for lost disputes",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
@@ -29536,7 +29536,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "88e3fc5aa72d07cb",
+      "entry_id": "7bb7dd2bf447d28d",
       "fee_category": "Klarna £20.00 for lost disputes",
       "footnotes": [],
       "links": [
@@ -29560,7 +29560,7 @@
       ],
       "source_evidence": "",
       "source_order": 246,
-      "source_text": "Certain businesses may qualify for temporarily reduced rates on select local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
+      "source_text": "Certain businesses may qualify for temporarily reduced rates on selected local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
         {
@@ -34489,7 +34489,7 @@
       "source_order": 122
     },
     {
-      "body": "Certain businesses may qualify for temporarily reduced rates on select local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
+      "body": "Certain businesses may qualify for temporarily reduced rates on selected local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
       "heading": "Klarna £20.00 for lost disputes",
       "level": 3,
       "links": [
@@ -34768,7 +34768,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "2e2581cf88d9e3c7576ed2ca020bacc00c4efd943bdd7d95bed15ddc0826479a",
+      "content_sha256": "ee7ed945edcb538fbabbfaae95b53c345cbd8708913672e23c474e41d5d91e31",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -34784,7 +34784,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "467954d13cf0a9d7ebeb3eee09f660ae691cc5f0bfefd92dc10b0213552e8f8e",
+      "content_sha256": "2fba42f4a61cdf540a5dd3e5c7296dc938a031c665db741707ff3d350d0df546",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -35990,7 +35990,7 @@
       "classification_status": "custom_pricing",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "88e3fc5aa72d07cb",
+      "entry_id": "7bb7dd2bf447d28d",
       "fee_category": "Klarna £20.00 for lost disputes",
       "footnotes": [],
       "links": [
@@ -36014,7 +36014,7 @@
       ],
       "source_evidence": "",
       "source_order": 246,
-      "source_text": "Certain businesses may qualify for temporarily reduced rates on select local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
+      "source_text": "Certain businesses may qualify for temporarily reduced rates on selected local payment methods, including Klarna, that Stripe enables for you (after notifying you). These payment methods will be available for 1.5% + 20p per transaction for at least 2 months, after which the above standard pricing will apply unless you disable the payment methods.",
       "source_url": "https://stripe.com/gb/pricing/local-payment-methods",
       "tokens": [
         {

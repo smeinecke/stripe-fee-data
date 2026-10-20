@@ -14258,7 +14258,7 @@
       "confidence": 0.0,
       "contributing_entry_ids": [
         "d4426715efaed5ab",
-        "58b034e606496c14"
+        "1269200efd46d8fc"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
@@ -14283,11 +14283,11 @@
         "confidence": 0.85,
         "phrases": [
           "Zip A$4.00 for lost disputed payments",
-          "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
+          "Businesses interested in offering longer interest-free terms (12, 24 or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
         ],
         "source_entry_ids": [
           "d4426715efaed5ab",
-          "58b034e606496c14"
+          "1269200efd46d8fc"
         ],
         "type": "explicit_fee_phrase"
       },
@@ -14313,14 +14313,14 @@
           "text": "Zip A$4.00 for lost disputed payments"
         },
         {
-          "entry_id": "58b034e606496c14",
-          "text": "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
+          "entry_id": "1269200efd46d8fc",
+          "text": "Businesses interested in offering longer interest-free terms (12, 24 or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
         }
       ],
       "source_text": "Zip A$4.00 for lost disputed payments",
       "source_texts": [
         "Zip A$4.00 for lost disputed payments",
-        "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
+        "Businesses interested in offering longer interest-free terms (12, 24 or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs ."
       ],
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "transaction_amount_max": null,
@@ -23847,7 +23847,7 @@
         "Payment methods",
         "Zip A$4.00 for lost disputed payments"
       ],
-      "source_evidence": "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
+      "source_evidence": "Businesses interested in offering longer interest-free terms (12, 24 or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
       "source_order": 201,
       "source_text": "Zip A$4.00 for lost disputed payments",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
@@ -23874,7 +23874,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "58b034e606496c14",
+      "entry_id": "1269200efd46d8fc",
       "fee_category": "Zip A$4.00 for lost disputed payments",
       "footnotes": [],
       "links": [
@@ -23902,7 +23902,7 @@
       ],
       "source_evidence": "",
       "source_order": 202,
-      "source_text": "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
+      "source_text": "Businesses interested in offering longer interest-free terms (12, 24 or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -23915,7 +23915,7 @@
           "note": null,
           "operator": "for",
           "percentage": null,
-          "raw": "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
+          "raw": "Businesses interested in offering longer interest-free terms (12, 24 or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
           "token_id": null,
           "value": null
         }
@@ -27529,7 +27529,7 @@
       "source_order": 112
     },
     {
-      "body": "Businesses interested in offering longer interest-free terms (12, 24, or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
+      "body": "Businesses interested in offering longer interest-free terms (12, 24 or 36 months) through Zip Money can request access by reaching out to support . Note that access is subject to approval. Fees for Zip are assessed per successful transaction. Fees include GST. about Zip in our docs .",
       "heading": "Zip A$4.00 for lost disputed payments",
       "level": 3,
       "links": [
@@ -27557,7 +27557,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "abc19ba985c5d7a2718fc9101bdedc38bb51902393ef8652bd7e2c396f6b5e24",
+      "content_sha256": "b3471f16b3143e103b413cdcef4a3ef70e95a7fc2abf097728b634fbf455efab",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27573,7 +27573,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "a299347d199d9d56dceab6b09aff8bfe0a79d35321ee02af6d5065540086fd83",
+      "content_sha256": "0987f7e3a77a6b55b19813ffa28c90f7c2a1540cc3d92c244dd8912417230f93",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
