@@ -6682,7 +6682,7 @@
         "Payment methods",
         "Pix 1.19%"
       ],
-      "source_evidence": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_evidence": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions.",
       "source_order": 65,
       "source_text": "Pix 1.19%",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
@@ -6709,7 +6709,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "64ada2cc5ee3c1dc",
+      "entry_id": "25ea26a1d520ee23",
       "fee_category": "Pix 1.19%",
       "footnotes": [],
       "links": [
@@ -6729,7 +6729,7 @@
       ],
       "source_evidence": "",
       "source_order": 66,
-      "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
         {
@@ -8247,7 +8247,7 @@
       "source_order": 115
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\nStripe Brasil Soluções de Pagamento Ltda. - Instituição de Pagamento\nTax ID (CNPJ): 22.121.209/0001-46\nStripe Brasil Soluções de Pagamento Ltda - Payment Institution is a payment institution that operates as an acquirer.\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\nStripe Brasil Soluções de Pagamento Ltda. - Instituição de Pagamento\nTax ID (CNPJ): 22.121.209/0001-46\nStripe Brasil Soluções de Pagamento Ltda - Payment Institution is a payment institution that operates as an acquirer.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -8321,7 +8321,7 @@
       "source_order": 2
     },
     {
-      "body": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "body": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions.",
       "heading": "Pix 1.19%",
       "level": 3,
       "links": [
@@ -8392,7 +8392,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-br/pricing",
-      "content_sha256": "baec13dccf61f501e510f1a56d16f4a30f839357cdc689e4cf8cd06a0fee2874",
+      "content_sha256": "0be765bc5ff7a4ffae9ebb1e26a56261835e8aa1aa5a4b540cbcab40064e5840",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8408,7 +8408,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-br/pricing/local-payment-methods",
-      "content_sha256": "3e2a3626e2b5d20904edf308359cfafa23a41b386a4ea7373d63f7d74a771c5a",
+      "content_sha256": "2c6d498e48b9846f4de812db67f1480fa8f5d5d22fb6f39de1574bfaf590dee9",
       "detected_currency": "BRL",
       "detected_locale": "en-br",
       "detected_market": "BR",
@@ -8705,7 +8705,7 @@
       "classification_status": "ignored_non_fee",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "64ada2cc5ee3c1dc",
+      "entry_id": "25ea26a1d520ee23",
       "fee_category": "Pix 1.19%",
       "footnotes": [],
       "links": [
@@ -8725,7 +8725,7 @@
       ],
       "source_evidence": "",
       "source_order": 66,
-      "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_text": "Accept payments with Pix, Brazil's most popular payment method—used in more than 40% of online transactions.",
       "source_url": "https://stripe.com/en-br/pricing/local-payment-methods",
       "tokens": [
         {

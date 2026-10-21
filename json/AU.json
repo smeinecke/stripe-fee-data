@@ -22078,7 +22078,7 @@
         "Payment methods",
         "Pix 2% per successful charge"
       ],
-      "source_evidence": "Increase conversion with Brazilian customers by enabling Pix—the most popular payment method in Brazil, with more than 40% share of online payments.",
+      "source_evidence": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "source_order": 168,
       "source_text": "Pix 2% per successful charge",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
@@ -22105,7 +22105,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "0fde78992a145109",
+      "entry_id": "1256e7deddd6c9f3",
       "fee_category": "Pix 2% per successful charge",
       "footnotes": [],
       "links": [
@@ -22125,7 +22125,7 @@
       ],
       "source_evidence": "",
       "source_order": 169,
-      "source_text": "Increase conversion with Brazilian customers by enabling Pix—the most popular payment method in Brazil, with more than 40% share of online payments.",
+      "source_text": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -25457,7 +25457,7 @@
       "source_order": 135
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -26977,7 +26977,7 @@
       "source_order": 84
     },
     {
-      "body": "Increase conversion with Brazilian customers by enabling Pix—the most popular payment method in Brazil, with more than 40% share of online payments.",
+      "body": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "heading": "Pix 2% per successful charge",
       "level": 3,
       "links": [
@@ -27557,7 +27557,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "b3471f16b3143e103b413cdcef4a3ef70e95a7fc2abf097728b634fbf455efab",
+      "content_sha256": "1cdcfa74055e1e8cdbf53bf2c3fa732c0117f21cc5aa1c1c7323ec371c23486f",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27573,7 +27573,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "0987f7e3a77a6b55b19813ffa28c90f7c2a1540cc3d92c244dd8912417230f93",
+      "content_sha256": "439cb82d8998413dcbfb1139555d8d0a653f1583240559d8f0da86de33ba34a0",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -28146,7 +28146,7 @@
       "classification_status": "ignored_non_fee",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "0fde78992a145109",
+      "entry_id": "1256e7deddd6c9f3",
       "fee_category": "Pix 2% per successful charge",
       "footnotes": [],
       "links": [
@@ -28166,7 +28166,7 @@
       ],
       "source_evidence": "",
       "source_order": 169,
-      "source_text": "Increase conversion with Brazilian customers by enabling Pix—the most popular payment method in Brazil, with more than 40% share of online payments.",
+      "source_text": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
