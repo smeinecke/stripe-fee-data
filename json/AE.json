@@ -8589,7 +8589,7 @@
       "source_order": 122
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -8603,7 +8603,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "a0384b774e9862f57d59b9905049461d31cd3ea9ff2168b5e868bb62b11c2b16",
+      "content_sha256": "f26c231bddcd3b640d10a454985dbc0afc693330f58ad3e196a536cbf22c5a53",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8619,7 +8619,7 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "a16ca78eb7f44ad464febf0fa314886c47228404a869cecd1e92efbb92c17937",
+      "content_sha256": "36f33fdaf8d60c98d3e4d01edf47b87644e54e0a9a2a40e7c1ec2eaeaa063ba8",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
