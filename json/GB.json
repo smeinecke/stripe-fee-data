@@ -32247,7 +32247,7 @@
       "source_order": 161
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -34768,7 +34768,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "1cd4f47bdd8ca45f9551bc6b72f5aaf8814beade82dc1cd06aee22db1939f7a4",
+      "content_sha256": "20c7a59ec90a7498a63602e1aacb0ccb663a92b54348a79d5dd01cfb7bc32701",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -34784,7 +34784,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "1c387878b74f29ce0ad0a6209e059baf8e3826d3b3d9ed98b0067b4b45f6896c",
+      "content_sha256": "7ea82e957a8afa3045e3a9fb232955790556622fa7a84fcc0478fb161b83a7d8",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
