@@ -16373,7 +16373,7 @@
       "source_order": 131
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -17379,7 +17379,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-jp/pricing",
-      "content_sha256": "05ab856ee6b55c276ca4342729087a09a5c4a3771a396a562eddeec481ababa8",
+      "content_sha256": "37d851b68e7907fd9f7bb42ef653fbcd13f93b5b1bb9b505f07bf207963e91da",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -17395,7 +17395,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
-      "content_sha256": "a7b42890f88aa25da5c66485775f3de85b3dbf132d0d90f6bf23d6b664ce9d86",
+      "content_sha256": "e3ea83d0b9a002b8b446fd17d583972378c406be8e8276486218b2e5a476d2dc",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",

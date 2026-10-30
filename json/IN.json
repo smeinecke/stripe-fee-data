@@ -3,7 +3,7 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 18,
+    "calculable_rules": 19,
     "conflicting_rule_identities": 4,
     "custom_pricing": 0,
     "dropped_numeric_entries": 0,
@@ -14,10 +14,10 @@
     "informational_conflicts": 4,
     "non_calculable_rules": 0,
     "numeric_fee_candidates": 0,
-    "numeric_source_entries": 31,
+    "numeric_source_entries": 32,
     "reference_only": 0,
-    "referenced_numeric_entries": 31,
-    "source_entries": 44,
+    "referenced_numeric_entries": 32,
+    "source_entries": 45,
     "unclassified_fee_candidates": 0,
     "unsupported_fee_shapes": 0
   },
@@ -1185,6 +1185,7 @@
         "product=disputes",
         "variant=standard",
         "account_country=IN",
+        "product_feature=dispute_appealed_fee",
         "dispute_state=countered",
         "transaction_type=dispute"
       ],
@@ -1195,6 +1196,12 @@
           "evidence": null,
           "operator": "eq",
           "value": "IN"
+        },
+        {
+          "dimension": "product_feature",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute_appealed_fee"
         },
         {
           "dimension": "dispute_state",
@@ -1256,7 +1263,7 @@
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "d57ce922ee00928c",
+      "rule_id": "4ed99e08d261c6df",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -1267,6 +1274,102 @@
       "source_text": "Dispute countered fee ₹1,000.00 for each dispute you respond to manually.",
       "source_texts": [
         "Dispute countered fee ₹1,000.00 for each dispute you respond to manually."
+      ],
+      "source_url": "https://stripe.com/in/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "IN",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "account_country=IN",
+        "transaction_type=dispute"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "IN"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "44fd1e2d52a1d4ed"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "44fd1e2d52a1d4ed",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "1000.00",
+          "basis_points": null,
+          "currency": "INR",
+          "minor_amount": "100000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "44fd1e2d52a1d4ed",
+          "source_text": "Dispute appealed fee ₹1,000.00 for each dispute you appeal.",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Dispute appealed fee ₹1,000.00 for each dispute you appeal."
+        ],
+        "source_entry_ids": [
+          "44fd1e2d52a1d4ed"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "1000.00",
+      "fixed_amount_minor": "100000",
+      "fixed_currency": "INR",
+      "label": "Dispute appealed fee ₹1,000.00 for each dispute you appeal.",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "d0287e72df42487e",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "44fd1e2d52a1d4ed",
+          "text": "Dispute appealed fee ₹1,000.00 for each dispute you appeal."
+        }
+      ],
+      "source_text": "Dispute appealed fee ₹1,000.00 for each dispute you appeal.",
+      "source_texts": [
+        "Dispute appealed fee ₹1,000.00 for each dispute you appeal."
       ],
       "source_url": "https://stripe.com/in/pricing",
       "transaction_amount_max": null,
@@ -3695,7 +3798,7 @@
       "section_path": [
         "Disputes"
       ],
-      "source_evidence": "In rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
+      "source_evidence": "In rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.\nDispute appealed fee\n₹1,000.00\nfor each dispute you appeal.\nYou don't get this fee back, even if you win. Additional network fees apply.",
       "source_order": 12,
       "source_text": "Dispute received fee ₹1,000.00 for each dispute you receive.",
       "source_url": "https://stripe.com/in/pricing",
@@ -3734,9 +3837,48 @@
       "section_path": [
         "Disputes"
       ],
-      "source_evidence": "You get this fee back for won disputes. You don't get this fee back for lost disputes.",
+      "source_evidence": "You get this fee back for won disputes. You don't get this fee back for lost disputes.\nDispute appealed fee\n₹1,000.00\nfor each dispute you appeal.\nYou don't get this fee back, even if you win. Additional network fees apply.",
       "source_order": 13,
       "source_text": "Dispute countered fee ₹1,000.00 for each dispute you respond to manually.",
+      "source_url": "https://stripe.com/in/pricing",
+      "tokens": [
+        {
+          "amount": "1000.00",
+          "basis_points": null,
+          "currency": "INR",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "1,000.00",
+          "token_id": "855d393ae2e3546b",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "44fd1e2d52a1d4ed",
+      "fee_category": "Disputes",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Disputes",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Disputes"
+      ],
+      "source_evidence": "You don't get this fee back, even if you win. Additional network fees apply.",
+      "source_order": 14,
+      "source_text": "Dispute appealed fee ₹1,000.00 for each dispute you appeal.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
         {
@@ -3774,7 +3916,7 @@
         "Smart Disputes"
       ],
       "source_evidence": "There's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
-      "source_order": 14,
+      "source_order": 15,
       "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3813,7 +3955,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Dispute deflection lookups\n₹1,000.00\nper\nVisa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution",
-      "source_order": 15,
+      "source_order": 16,
       "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3852,7 +3994,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Visa resolution\n₹1,000.00\nper\nVisa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution",
-      "source_order": 16,
+      "source_order": 17,
       "source_text": "₹1,000.00 per",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3891,7 +4033,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Visa Compelling Evidence 3.0 block\n₹2,000.00\nper\nMastercard resolution",
-      "source_order": 17,
+      "source_order": 18,
       "source_text": "₹1,000.00 per",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3930,7 +4072,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Mastercard resolution",
-      "source_order": 18,
+      "source_order": 19,
       "source_text": "₹2,000.00 per",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -3969,7 +4111,7 @@
         "Payment optimisations"
       ],
       "source_evidence": "Included at no additional charge for businesses on standard payments pricing",
-      "source_order": 19,
+      "source_order": 20,
       "source_text": "Included with Payments",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4008,7 +4150,7 @@
         "Payment optimisations"
       ],
       "source_evidence": "",
-      "source_order": 20,
+      "source_order": 21,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4047,7 +4189,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 21,
+      "source_order": 22,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4086,7 +4228,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 22,
+      "source_order": 23,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4125,7 +4267,7 @@
         "Authorisation Boost"
       ],
       "source_evidence": "",
-      "source_order": 23,
+      "source_order": 24,
       "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4164,7 +4306,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 24,
+      "source_order": 25,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4203,7 +4345,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Customers will be presented a conversion fee starting at\n2%",
-      "source_order": 25,
+      "source_order": 26,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4242,7 +4384,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "",
-      "source_order": 26,
+      "source_order": 27,
       "source_text": "Customers will be presented a conversion fee starting at 2%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4281,7 +4423,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 27,
+      "source_order": 28,
       "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4320,7 +4462,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 28,
+      "source_order": 29,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4359,7 +4501,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "starting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 29,
+      "source_order": 30,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4398,7 +4540,7 @@
         "Access to Billing"
       ],
       "source_evidence": "Includes Billing transactions processed on and off Stripe. Excludes one-off invoices.\nSee pricing details",
-      "source_order": 30,
+      "source_order": 31,
       "source_text": "0.7% of Billing volume",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4437,7 +4579,7 @@
         "Startup"
       ],
       "source_evidence": "",
-      "source_order": 31,
+      "source_order": 32,
       "source_text": "0.8% of billing volume",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4476,7 +4618,7 @@
         "Starter"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 32,
+      "source_order": 33,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4515,7 +4657,7 @@
         "Pay as you go"
       ],
       "source_evidence": "10,000 steps per month\n₹1.64\nper additional step",
-      "source_order": 33,
+      "source_order": 34,
       "source_text": "Included",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4554,7 +4696,7 @@
         "Pay as you go"
       ],
       "source_evidence": "",
-      "source_order": 34,
+      "source_order": 35,
       "source_text": "₹1.64 per additional step",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4593,7 +4735,7 @@
         "Atlas"
       ],
       "source_evidence": "",
-      "source_order": 35,
+      "source_order": 36,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4632,7 +4774,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 36,
+      "source_order": 37,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4671,7 +4813,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 37,
+      "source_order": 38,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": []
@@ -4695,7 +4837,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 38,
+      "source_order": 39,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4734,7 +4876,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 39,
+      "source_order": 40,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4773,7 +4915,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 40,
+      "source_order": 41,
       "source_text": "+1%",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4812,7 +4954,7 @@
         "See how Twilio increased authorisation rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 41,
+      "source_order": 42,
       "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4851,7 +4993,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 42,
+      "source_order": 43,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -4890,7 +5032,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 43,
+      "source_order": 44,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -5283,7 +5425,7 @@
       "source_order": 30
     },
     {
-      "body": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\n₹1,000.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
+      "body": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\n₹1,000.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\n₹1,000.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.\nDispute appealed fee\n₹1,000.00\nfor each dispute you appeal.\nYou don't get this fee back, even if you win. Additional network fees apply.",
       "heading": "Disputes",
       "level": 1,
       "links": [],
@@ -6064,7 +6206,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "825a47988d08325ce2a1cffceb18da4d1cfae1a4d6db57b5141cd3311e780654",
+      "content_sha256": "5912c47f95a6067168dc87a2c6b6e9f28e8c72a2f5b83acbcab002d332c0ac4e",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",
@@ -6080,7 +6222,7 @@
     },
     {
       "canonical_url": "https://stripe.com/in/pricing",
-      "content_sha256": "04605a175f9e714d1d7c84a9bb266e714eec7aa04815b35eda1bcdda51f053cd",
+      "content_sha256": "5b9062b7d218a5072fbe4aed44e05fae515234c16d7fc40907d0586db8d26088",
       "detected_currency": "INR",
       "detected_locale": "en-in",
       "detected_market": "IN",
@@ -6200,7 +6342,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic Impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 36,
+      "source_order": 37,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -6241,7 +6383,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 37,
+      "source_order": 38,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": []
@@ -6267,7 +6409,7 @@
         "See how Twilio increased authorisation rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 41,
+      "source_order": 42,
       "source_text": "See how Twilio increased authorisation rates by 10% with Stripe",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -6308,7 +6450,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 42,
+      "source_order": 43,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [
@@ -6349,7 +6491,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nIndia (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 43,
+      "source_order": 44,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/in/pricing",
       "tokens": [

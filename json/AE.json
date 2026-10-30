@@ -3,7 +3,7 @@
   "coverage_summary": {
     "ambiguous_entries": 0,
     "blocking_fee_conflicts": 0,
-    "calculable_rules": 23,
+    "calculable_rules": 24,
     "conflicting_rule_identities": 6,
     "custom_pricing": 2,
     "dropped_numeric_entries": 0,
@@ -14,10 +14,10 @@
     "informational_conflicts": 6,
     "non_calculable_rules": 4,
     "numeric_fee_candidates": 0,
-    "numeric_source_entries": 48,
+    "numeric_source_entries": 49,
     "reference_only": 0,
-    "referenced_numeric_entries": 48,
-    "source_entries": 70,
+    "referenced_numeric_entries": 49,
+    "source_entries": 71,
     "unclassified_fee_candidates": 0,
     "unsupported_fee_shapes": 0
   },
@@ -718,6 +718,7 @@
         "product=disputes",
         "variant=standard",
         "account_country=AE",
+        "product_feature=dispute_appealed_fee",
         "dispute_state=countered",
         "transaction_type=dispute"
       ],
@@ -728,6 +729,12 @@
           "evidence": null,
           "operator": "eq",
           "value": "AE"
+        },
+        {
+          "dimension": "product_feature",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute_appealed_fee"
         },
         {
           "dimension": "dispute_state",
@@ -789,7 +796,7 @@
       "product_id": "disputes",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "4bade44864b808f0",
+      "rule_id": "f512f76afc73631d",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -800,6 +807,102 @@
       "source_text": "Dispute countered fee AED60.00 for each dispute you respond to manually.",
       "source_texts": [
         "Dispute countered fee AED60.00 for each dispute you respond to manually."
+      ],
+      "source_url": "https://stripe.com/ae/pricing",
+      "transaction_amount_max": null,
+      "transaction_amount_min": null,
+      "unit": "per_dispute",
+      "variant_id": "standard"
+    },
+    {
+      "account_country": "AE",
+      "additional_fees": [],
+      "basis_points": null,
+      "behavior": "conditional",
+      "billing_type": null,
+      "card_origin": null,
+      "card_region": null,
+      "card_tier": null,
+      "channel": "online",
+      "classification_evidence": [
+        "product=disputes",
+        "variant=standard",
+        "account_country=AE",
+        "transaction_type=dispute"
+      ],
+      "classification_status": "calculable_rule",
+      "conditions": [
+        {
+          "dimension": "account_country",
+          "evidence": null,
+          "operator": "eq",
+          "value": "AE"
+        },
+        {
+          "dimension": "transaction_type",
+          "evidence": null,
+          "operator": "eq",
+          "value": "dispute"
+        }
+      ],
+      "confidence": 0.85,
+      "contributing_entry_ids": [
+        "ecbee881ea36af29"
+      ],
+      "currency_conversion_required": null,
+      "customer_country": null,
+      "dispute_state": null,
+      "entry_id": "ecbee881ea36af29",
+      "exactness": "exact",
+      "fee_components": [
+        {
+          "amount": "60.00",
+          "basis_points": null,
+          "currency": "AED",
+          "minor_amount": "6000",
+          "operator": null,
+          "schedule_id": null,
+          "source_entry_id": "ecbee881ea36af29",
+          "source_text": "Dispute appealed fee AED60.00 for each dispute you appeal.",
+          "type": "fixed_amount",
+          "value": null
+        }
+      ],
+      "fee_evidence": {
+        "confidence": 0.85,
+        "phrases": [
+          "Dispute appealed fee AED60.00 for each dispute you appeal."
+        ],
+        "source_entry_ids": [
+          "ecbee881ea36af29"
+        ],
+        "type": "explicit_fee_phrase"
+      },
+      "fixed_amount": "60.00",
+      "fixed_amount_minor": "6000",
+      "fixed_currency": "AED",
+      "label": "Dispute appealed fee AED60.00 for each dispute you appeal.",
+      "maximum_amount": null,
+      "minimum_amount": null,
+      "name": "disputes",
+      "payment_method": null,
+      "payout_type": null,
+      "percentage": null,
+      "presentment_currency": null,
+      "product_id": "disputes",
+      "provider": "stripe",
+      "recurring": null,
+      "rule_id": "e942af73ab4937e5",
+      "settlement_currency": null,
+      "source_fragments": [
+        {
+          "entry_id": "ecbee881ea36af29",
+          "text": "Dispute appealed fee AED60.00 for each dispute you appeal."
+        }
+      ],
+      "source_text": "Dispute appealed fee AED60.00 for each dispute you appeal.",
+      "source_texts": [
+        "Dispute appealed fee AED60.00 for each dispute you appeal."
       ],
       "source_url": "https://stripe.com/ae/pricing",
       "transaction_amount_max": null,
@@ -4812,7 +4915,7 @@
       "section_path": [
         "Disputes"
       ],
-      "source_evidence": "In rare cases, network fees also apply.\nDispute countered fee\nAED60.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
+      "source_evidence": "In rare cases, network fees also apply.\nDispute countered fee\nAED60.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.\nDispute appealed fee\nAED60.00\nfor each dispute you appeal.\nYou don't get this fee back, even if you win. Additional network fees apply.",
       "source_order": 8,
       "source_text": "Dispute received fee AED60.00 for each dispute you receive.",
       "source_url": "https://stripe.com/ae/pricing",
@@ -4851,9 +4954,48 @@
       "section_path": [
         "Disputes"
       ],
-      "source_evidence": "You get this fee back for won disputes. You don't get this fee back for lost disputes.",
+      "source_evidence": "You get this fee back for won disputes. You don't get this fee back for lost disputes.\nDispute appealed fee\nAED60.00\nfor each dispute you appeal.\nYou don't get this fee back, even if you win. Additional network fees apply.",
       "source_order": 9,
       "source_text": "Dispute countered fee AED60.00 for each dispute you respond to manually.",
+      "source_url": "https://stripe.com/ae/pricing",
+      "tokens": [
+        {
+          "amount": "60.00",
+          "basis_points": null,
+          "currency": "AED",
+          "exactness": null,
+          "is_minor_currency": false,
+          "kind": "amount",
+          "note": null,
+          "operator": null,
+          "percentage": null,
+          "raw": "60.00",
+          "token_id": "dfc5e824d1278f0b",
+          "value": null
+        }
+      ]
+    },
+    {
+      "channel": null,
+      "classification_evidence": [],
+      "classification_status": "unclassified",
+      "confidence": 0.0,
+      "context": {},
+      "entry_id": "ecbee881ea36af29",
+      "fee_category": "Disputes",
+      "footnotes": [],
+      "links": [],
+      "payment_method": null,
+      "payment_method_family": null,
+      "product": "Disputes",
+      "product_category": "pricing",
+      "qualifiers": [],
+      "section_path": [
+        "Disputes"
+      ],
+      "source_evidence": "You don't get this fee back, even if you win. Additional network fees apply.",
+      "source_order": 10,
+      "source_text": "Dispute appealed fee AED60.00 for each dispute you appeal.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
         {
@@ -4891,7 +5033,7 @@
         "Smart Disputes"
       ],
       "source_evidence": "There's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
-      "source_order": 10,
+      "source_order": 11,
       "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4930,7 +5072,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Dispute deflection lookups\nAED60.00\nper\nVisa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution",
-      "source_order": 11,
+      "source_order": 12,
       "source_text": "Help reduce dispute rates with dispute prevention tools powered by Verifi from Visa and Ethoca from Mastercard. Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -4969,7 +5111,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Visa resolution\nAED60.00\nper\nVisa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution",
-      "source_order": 12,
+      "source_order": 13,
       "source_text": "AED60.00 per",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5008,7 +5150,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Visa Compelling Evidence 3.0 block\nAED120.00\nper\nMastercard resolution",
-      "source_order": 13,
+      "source_order": 14,
       "source_text": "AED60.00 per",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5047,7 +5189,7 @@
         "Dispute prevention"
       ],
       "source_evidence": "Mastercard resolution",
-      "source_order": 14,
+      "source_order": 15,
       "source_text": "AED120.00 per",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5086,7 +5228,7 @@
         "Payment optimizations"
       ],
       "source_evidence": "Included at no additional charge for businesses on standard payments pricing",
-      "source_order": 15,
+      "source_order": 16,
       "source_text": "Included with Payments",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5125,7 +5267,7 @@
         "Payment optimizations"
       ],
       "source_evidence": "",
-      "source_order": 16,
+      "source_order": 17,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5164,7 +5306,7 @@
         "3D Secure authentication"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
-      "source_order": 17,
+      "source_order": 18,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5203,7 +5345,7 @@
         "3D Secure authentication"
       ],
       "source_evidence": "$0.03\nper 3D Secure attempt for accounts with custom pricing.\nStandalone 3DS\n$0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
-      "source_order": 18,
+      "source_order": 19,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5242,7 +5384,7 @@
         "3D Secure authentication"
       ],
       "source_evidence": "Standalone 3DS\n$0.12\nper\nstandalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
-      "source_order": 19,
+      "source_order": 20,
       "source_text": "$0.03 per 3D Secure attempt for accounts with custom pricing.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5281,7 +5423,7 @@
         "3D Secure authentication"
       ],
       "source_evidence": "standalone 3DS attempt\nUse the standalone 3DS API to run EMV 3D Secure (3DS) authentication and authorize the payment with any payment service provider (PSP).",
-      "source_order": 20,
+      "source_order": 21,
       "source_text": "$0.12 per",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5320,7 +5462,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 21,
+      "source_order": 22,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5359,7 +5501,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "0.2%\nper successful online card transaction for accounts with custom payments pricing",
-      "source_order": 22,
+      "source_order": 23,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5398,7 +5540,7 @@
         "Authorization Boost"
       ],
       "source_evidence": "",
-      "source_order": 23,
+      "source_order": 24,
       "source_text": "0.2% per successful online card transaction for accounts with custom payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5437,7 +5579,7 @@
         "USD payouts"
       ],
       "source_evidence": "Minimum fee of $25.00",
-      "source_order": 24,
+      "source_order": 25,
       "source_text": "1% of USD payout volume",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5476,7 +5618,7 @@
         "USD payouts"
       ],
       "source_evidence": "",
-      "source_order": 25,
+      "source_order": 26,
       "source_text": "Minimum fee of $25.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5515,7 +5657,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\nCustomers will be presented a conversion fee starting at\n2%",
-      "source_order": 26,
+      "source_order": 27,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5554,7 +5696,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "Customers will be presented a conversion fee starting at\n2%",
-      "source_order": 27,
+      "source_order": 28,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5593,7 +5735,7 @@
         "Adaptive Pricing"
       ],
       "source_evidence": "",
-      "source_order": 28,
+      "source_order": 29,
       "source_text": "Customers will be presented a conversion fee starting at 2%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5632,7 +5774,7 @@
         "Instant payouts"
       ],
       "source_evidence": "1.5%\nof Instant Payouts volume\nMinimum fee of AED2.00",
-      "source_order": 29,
+      "source_order": 30,
       "source_text": "standard schedule for free.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5671,7 +5813,7 @@
         "Instant payouts"
       ],
       "source_evidence": "Minimum fee of AED2.00",
-      "source_order": 30,
+      "source_order": 31,
       "source_text": "1.5% of Instant Payouts volume",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5710,7 +5852,7 @@
         "Instant payouts"
       ],
       "source_evidence": "",
-      "source_order": 31,
+      "source_order": 32,
       "source_text": "Minimum fee of AED2.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5749,7 +5891,7 @@
         "Accept payments"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing",
-      "source_order": 32,
+      "source_order": 33,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5788,7 +5930,7 @@
         "Accept payments"
       ],
       "source_evidence": "",
-      "source_order": 33,
+      "source_order": 34,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5827,7 +5969,7 @@
         "Custom domain"
       ],
       "source_evidence": "",
-      "source_order": 34,
+      "source_order": 35,
       "source_text": "$10.00 per month",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5866,7 +6008,7 @@
         "Post-payment invoices"
       ],
       "source_evidence": "on transaction total\n$2.00\ncap per invoice",
-      "source_order": 35,
+      "source_order": 36,
       "source_text": "0.4%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5905,7 +6047,7 @@
         "Post-payment invoices"
       ],
       "source_evidence": "",
-      "source_order": 36,
+      "source_order": 37,
       "source_text": "$2.00 cap per invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5944,7 +6086,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "with Payments\nIncluded at no additional charge for businesses on standard payments pricing\n0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 37,
+      "source_order": 38,
       "source_text": "Stripe sets and collects processing fees from your users, so you don’t have to. about how to qualify for a revenue share from Stripe. Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -5983,7 +6125,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "0.25%\nstarting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 38,
+      "source_order": 39,
       "source_text": "Included at no additional charge for businesses on standard payments pricing",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6022,7 +6164,7 @@
         "Stripe handles pricing for your users"
       ],
       "source_evidence": "starting fee for platforms that deploy their own payments pricing to earn revenue on each transaction.\nSee pricing details",
-      "source_order": 39,
+      "source_order": 40,
       "source_text": "0.25%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6061,7 +6203,7 @@
         "Pay monthly"
       ],
       "source_evidence": "",
-      "source_order": 40,
+      "source_order": 41,
       "source_text": "AED40.00 per month, cancel any time",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6100,7 +6242,7 @@
         "Pay as you go"
       ],
       "source_evidence": "10,000 steps per month\nAED0.066\nper additional step",
-      "source_order": 41,
+      "source_order": 42,
       "source_text": "Included",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6139,7 +6281,7 @@
         "Pay as you go"
       ],
       "source_evidence": "",
-      "source_order": 42,
+      "source_order": 43,
       "source_text": "AED0.066 per additional step",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6178,7 +6320,7 @@
         "Startup"
       ],
       "source_evidence": "0.8%\nof billing volume",
-      "source_order": 43,
+      "source_order": 44,
       "source_text": "$0.04 per 1K ingest events",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6217,7 +6359,7 @@
         "Startup"
       ],
       "source_evidence": "",
-      "source_order": 44,
+      "source_order": 45,
       "source_text": "0.8% of billing volume",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6256,7 +6398,7 @@
         "Starter"
       ],
       "source_evidence": "See pricing details",
-      "source_order": 45,
+      "source_order": 46,
       "source_text": "0.4% per paid invoice",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6295,7 +6437,7 @@
         "Tax Complete"
       ],
       "source_evidence": "Subscription and cancellation\nterms apply.",
-      "source_order": 46,
+      "source_order": 47,
       "source_text": "AED330.00 per month, 1-year contract",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6334,7 +6476,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes calculated and collected on Billing, Checkout, Invoicing, and Payment Links integrations.\n.\nAPI integration\nAED2.00\nper transaction, where you’re registered to collect taxes\nTaxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 47,
+      "source_order": 48,
       "source_text": "0.5% per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6373,7 +6515,7 @@
         "Tax Basic"
       ],
       "source_evidence": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.\n.\nCompare plans",
-      "source_order": 48,
+      "source_order": 49,
       "source_text": "AED2.00 per transaction, where you’re registered to collect taxes",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6412,7 +6554,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 49,
+      "source_order": 50,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6451,7 +6593,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "AED90.00\nper month\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.",
-      "source_order": 50,
+      "source_order": 51,
       "source_text": "Try for free for 30 days",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6490,7 +6632,7 @@
         "Monthly subscription"
       ],
       "source_evidence": "Includes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.",
-      "source_order": 51,
+      "source_order": 52,
       "source_text": "AED90.00 per month",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6529,7 +6671,7 @@
         "Annual subscription"
       ],
       "source_evidence": "AED700.00\nper month, 1-year contract\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 52,
+      "source_order": 53,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6568,7 +6710,7 @@
         "Annual subscription"
       ],
       "source_evidence": "Includes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 53,
+      "source_order": 54,
       "source_text": "AED700.00 per month, 1-year contract",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6607,7 +6749,7 @@
         "Postgres database sync"
       ],
       "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nAED370.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
-      "source_order": 54,
+      "source_order": 55,
       "source_text": "AED0.009 per row synced",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6646,7 +6788,7 @@
         "Postgres database sync"
       ],
       "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\nAED0.009\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nAED370.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
-      "source_order": 55,
+      "source_order": 56,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6685,7 +6827,7 @@
         "Postgres database sync"
       ],
       "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
-      "source_order": 56,
+      "source_order": 57,
       "source_text": "AED370.00 per month, includes up to 50,000 rows synced",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6724,7 +6866,7 @@
         "Data warehouse or cloud storage sync"
       ],
       "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nAED239.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nAED184.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
-      "source_order": 57,
+      "source_order": 58,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6763,7 +6905,7 @@
         "Data warehouse or cloud storage sync"
       ],
       "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nAED239.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nAED184.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
-      "source_order": 58,
+      "source_order": 59,
       "source_text": "AED239.00 per month, includes up to 1,000 charges Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6802,7 +6944,7 @@
         "Data warehouse or cloud storage sync"
       ],
       "source_evidence": "Includes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
-      "source_order": 59,
+      "source_order": 60,
       "source_text": "AED184.00 per month, 1-year contract, includes up to 1,000 charges",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6841,7 +6983,7 @@
         "Atlas"
       ],
       "source_evidence": "",
-      "source_order": 60,
+      "source_order": 61,
       "source_text": "Get over $50K in discounts and perks.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6880,7 +7022,7 @@
         "Incorporate your company"
       ],
       "source_evidence": "one-time setup fee (includes government fees and your first year of registered agent services)\nSee pricing details",
-      "source_order": 61,
+      "source_order": 62,
       "source_text": "$500.00",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6919,7 +7061,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 62,
+      "source_order": 63,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -6958,7 +7100,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 63,
+      "source_order": 64,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": []
@@ -6982,7 +7124,7 @@
         "$10B+"
       ],
       "source_evidence": "Worth of goods moved around the world each year",
-      "source_order": 64,
+      "source_order": 65,
       "source_text": "$10B+",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7021,7 +7163,7 @@
         "+5.5%"
       ],
       "source_evidence": "Uplift from Stripe's Global Payments Infrastructure",
-      "source_order": 65,
+      "source_order": 66,
       "source_text": "+5.5%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7060,7 +7202,7 @@
         "+1%"
       ],
       "source_evidence": "Uplift from Adaptive Acceptance",
-      "source_order": 66,
+      "source_order": 67,
       "source_text": "+1%",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7099,7 +7241,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 67,
+      "source_order": 68,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7138,7 +7280,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 68,
+      "source_order": 69,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7177,7 +7319,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 69,
+      "source_order": 70,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -7547,7 +7689,7 @@
       "source_order": 28
     },
     {
-      "body": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\nAED60.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\nAED60.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.",
+      "body": "Respond to card payment disputes, also known as chargebacks.\nDispute received fee\nAED60.00\nfor each dispute you receive.\nIn rare cases, network fees also apply.\nDispute countered fee\nAED60.00\nfor each dispute you respond to manually.\nYou get this fee back for won disputes. You don't get this fee back for lost disputes.\nDispute appealed fee\nAED60.00\nfor each dispute you appeal.\nYou don't get this fee back, even if you win. Additional network fees apply.",
       "heading": "Disputes",
       "level": 1,
       "links": [],
@@ -8589,7 +8731,7 @@
       "source_order": 122
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -8603,7 +8745,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "cbd34c08da7163542a40bd984a6172a9fc2a558a31d74997dbaec7b323af9ba1",
+      "content_sha256": "3fe0135986579832f193184fab31a6492b27df6a1980786c43f16a0a74fca20d",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8619,7 +8761,7 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "3a6a828f352e9c18cfa36bc519ab14a7a12d46b3f366fb082147b6c1839eb370",
+      "content_sha256": "7e0aa336bac2ff62f76febd182f686ab786562ca68e435bc68fb3d6a21eec778",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8739,7 +8881,7 @@
         "Tax Basic"
       ],
       "source_evidence": ".\nCompare plans",
-      "source_order": 49,
+      "source_order": 50,
       "source_text": "Taxes on transactions created through Stripe's payment APIs or any payment processor. Each transaction includes 10 calculation API calls. AED0.20 per calculation API call above 10.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8780,7 +8922,7 @@
         "Integrating Stripe provides a 326% return on investment"
       ],
       "source_evidence": "Forrester’s Total Economic impact study suggests a more than 3x return on investment among businesses that deployed Stripe.\nRead the report\nGuidesCard_32",
-      "source_order": 62,
+      "source_order": 63,
       "source_text": "Integrating Stripe provides a 326% return on investment",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8821,7 +8963,7 @@
         "100+ category leaders each process more than $1 billion per year on Stripe."
       ],
       "source_evidence": "",
-      "source_order": 63,
+      "source_order": 64,
       "source_text": "100+ category leaders each process more than $1 billion per year on Stripe.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": []
@@ -8847,7 +8989,7 @@
         "See how Twilio increased authorization rates by 10% with Stripe"
       ],
       "source_evidence": "BMW logo\nAmazon logo\nMaersk logo\nTwilio logo",
-      "source_order": 67,
+      "source_order": 68,
       "source_text": "See how Twilio increased authorization rates by 10% with Stripe",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8888,7 +9030,7 @@
         "See our customers"
       ],
       "source_evidence": "",
-      "source_order": 68,
+      "source_order": 69,
       "source_text": "From startups to Fortune 500s, explore how millions of businesses use Stripe to start and scale their companies.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8929,7 +9071,7 @@
         "Explore the docs"
       ],
       "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nStripe logo\nUnited Arab Emirates (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
-      "source_order": 69,
+      "source_order": 70,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -8970,7 +9112,7 @@
         "Instant payouts"
       ],
       "source_evidence": "1.5%\nof Instant Payouts volume\nMinimum fee of AED2.00",
-      "source_order": 29,
+      "source_order": 30,
       "source_text": "standard schedule for free.",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -9011,7 +9153,7 @@
         "Annual subscription"
       ],
       "source_evidence": "AED700.00\nper month, 1-year contract\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nCompare plans",
-      "source_order": 52,
+      "source_order": 53,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -9052,7 +9194,7 @@
         "Postgres database sync"
       ],
       "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\nAED0.009\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nAED370.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
-      "source_order": 55,
+      "source_order": 56,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [
@@ -9093,7 +9235,7 @@
         "Data warehouse or cloud storage sync"
       ],
       "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nAED239.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nAED184.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
-      "source_order": 57,
+      "source_order": 58,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/ae/pricing",
       "tokens": [

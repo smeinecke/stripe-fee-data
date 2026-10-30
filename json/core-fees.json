@@ -7,7 +7,7 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 23,
+        "calculable_rules": 24,
         "conflicting_rule_identities": 6,
         "custom_pricing": 2,
         "dropped_numeric_entries": 0,
@@ -18,10 +18,10 @@
         "informational_conflicts": 6,
         "non_calculable_rules": 4,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 48,
+        "numeric_source_entries": 49,
         "reference_only": 0,
-        "referenced_numeric_entries": 48,
-        "source_entries": 70,
+        "referenced_numeric_entries": 49,
+        "source_entries": 71,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -344,6 +344,12 @@
               "value": "AE"
             },
             {
+              "dimension": "product_feature",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute_appealed_fee"
+            },
+            {
               "dimension": "dispute_state",
               "evidence": null,
               "operator": "eq",
@@ -386,7 +392,60 @@
           "payment_method": null,
           "product_id": "disputes",
           "provider": "stripe",
-          "rule_id": "4bade44864b808f0",
+          "rule_id": "f512f76afc73631d",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AE"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "60.00",
+              "basis_points": null,
+              "currency": "AED",
+              "minor_amount": "6000",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Dispute appealed fee AED60.00 for each dispute you appeal."
+            ],
+            "source_entry_ids": [
+              "ecbee881ea36af29"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Dispute appealed fee AED60.00 for each dispute you appeal.",
+          "payment_method": null,
+          "product_id": "disputes",
+          "provider": "stripe",
+          "rule_id": "e942af73ab4937e5",
           "unit": "per_dispute",
           "variant_id": "standard"
         },
@@ -1492,7 +1551,7 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 96,
+        "calculable_rules": 97,
         "conflicting_rule_identities": 16,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
@@ -1503,10 +1562,10 @@
         "informational_conflicts": 16,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 176,
+        "numeric_source_entries": 177,
         "reference_only": 0,
-        "referenced_numeric_entries": 176,
-        "source_entries": 203,
+        "referenced_numeric_entries": 177,
+        "source_entries": 204,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -2152,6 +2211,12 @@
               "value": "AU"
             },
             {
+              "dimension": "product_feature",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute_appealed_fee"
+            },
+            {
               "dimension": "dispute_state",
               "evidence": null,
               "operator": "eq",
@@ -2194,7 +2259,60 @@
           "payment_method": null,
           "product_id": "disputes",
           "provider": "stripe",
-          "rule_id": "ac0ba7dae54ca258",
+          "rule_id": "83b34a31d7ad41e1",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AU",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "25.00",
+              "basis_points": null,
+              "currency": "AUD",
+              "minor_amount": "2500",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Dispute appealed fee A$25.00 for each dispute you appeal."
+            ],
+            "source_entry_ids": [
+              "025734581564f919"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Dispute appealed fee A$25.00 for each dispute you appeal.",
+          "payment_method": null,
+          "product_id": "disputes",
+          "provider": "stripe",
+          "rule_id": "d99045bab7b6548d",
           "unit": "per_dispute",
           "variant_id": "standard"
         },
@@ -8157,7 +8275,7 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 19,
+        "calculable_rules": 20,
         "conflicting_rule_identities": 7,
         "custom_pricing": 1,
         "dropped_numeric_entries": 0,
@@ -8168,10 +8286,10 @@
         "informational_conflicts": 7,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 49,
+        "numeric_source_entries": 50,
         "reference_only": 0,
-        "referenced_numeric_entries": 49,
-        "source_entries": 71,
+        "referenced_numeric_entries": 50,
+        "source_entries": 72,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -8480,6 +8598,12 @@
               "value": "BR"
             },
             {
+              "dimension": "product_feature",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute_appealed_fee"
+            },
+            {
               "dimension": "dispute_state",
               "evidence": null,
               "operator": "eq",
@@ -8522,7 +8646,60 @@
           "payment_method": null,
           "product_id": "disputes",
           "provider": "stripe",
-          "rule_id": "b4ed94a02ad8a60e",
+          "rule_id": "e3c6a6b2b1aa04ae",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "BR",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "BR"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "55.00",
+              "basis_points": null,
+              "currency": "BRL",
+              "minor_amount": "5500",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Dispute appealed fee R$55.00 for each dispute you appeal."
+            ],
+            "source_entry_ids": [
+              "a13bf4e1e0648ec3"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Dispute appealed fee R$55.00 for each dispute you appeal.",
+          "payment_method": null,
+          "product_id": "disputes",
+          "provider": "stripe",
+          "rule_id": "2cf6f41f871f3889",
           "unit": "per_dispute",
           "variant_id": "standard"
         },
@@ -17223,17 +17400,17 @@
         "conflicting_rule_identities": 24,
         "custom_pricing": 4,
         "dropped_numeric_entries": 0,
-        "free": 3,
+        "free": 2,
         "ignored_non_fee": 15,
-        "included": 10,
-        "informational": 11,
+        "included": 11,
+        "informational": 9,
         "informational_conflicts": 24,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 231,
+        "numeric_source_entries": 227,
         "reference_only": 0,
-        "referenced_numeric_entries": 231,
-        "source_entries": 263,
+        "referenced_numeric_entries": 227,
+        "source_entries": 256,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -18628,7 +18805,6 @@
               "£0.50 per payout"
             ],
             "source_entry_ids": [
-              "17a57104cb06069e",
               "ec3c26014ee2616c"
             ],
             "type": "explicit_fee_phrase"
@@ -18694,7 +18870,6 @@
               "£0.50 per payout"
             ],
             "source_entry_ids": [
-              "0236467afac633f6",
               "7d29bef4228ec9b6"
             ],
             "type": "explicit_fee_phrase"
@@ -25624,7 +25799,7 @@
         }
       ],
       "stripe_market_code": "gb",
-      "unclassified_count": 29
+      "unclassified_count": 27
     },
     {
       "account_country": "IN",
@@ -25632,7 +25807,7 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 18,
+        "calculable_rules": 19,
         "conflicting_rule_identities": 4,
         "custom_pricing": 0,
         "dropped_numeric_entries": 0,
@@ -25643,10 +25818,10 @@
         "informational_conflicts": 4,
         "non_calculable_rules": 0,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 31,
+        "numeric_source_entries": 32,
         "reference_only": 0,
-        "referenced_numeric_entries": 31,
-        "source_entries": 44,
+        "referenced_numeric_entries": 32,
+        "source_entries": 45,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -26388,6 +26563,12 @@
               "value": "IN"
             },
             {
+              "dimension": "product_feature",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute_appealed_fee"
+            },
+            {
               "dimension": "dispute_state",
               "evidence": null,
               "operator": "eq",
@@ -26430,7 +26611,60 @@
           "payment_method": null,
           "product_id": "disputes",
           "provider": "stripe",
-          "rule_id": "d57ce922ee00928c",
+          "rule_id": "4ed99e08d261c6df",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "IN",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "IN"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "1000.00",
+              "basis_points": null,
+              "currency": "INR",
+              "minor_amount": "100000",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Dispute appealed fee ₹1,000.00 for each dispute you appeal."
+            ],
+            "source_entry_ids": [
+              "44fd1e2d52a1d4ed"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Dispute appealed fee ₹1,000.00 for each dispute you appeal.",
+          "payment_method": null,
+          "product_id": "disputes",
+          "provider": "stripe",
+          "rule_id": "d0287e72df42487e",
           "unit": "per_dispute",
           "variant_id": "standard"
         },
