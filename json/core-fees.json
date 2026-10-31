@@ -17396,21 +17396,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 119,
+        "calculable_rules": 122,
         "conflicting_rule_identities": 24,
         "custom_pricing": 4,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 15,
-        "included": 11,
+        "included": 13,
         "informational": 9,
         "informational_conflicts": 24,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 227,
+        "numeric_source_entries": 230,
         "reference_only": 0,
-        "referenced_numeric_entries": 227,
-        "source_entries": 256,
+        "referenced_numeric_entries": 230,
+        "source_entries": 262,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -18805,7 +18805,7 @@
               "£0.50 per payout"
             ],
             "source_entry_ids": [
-              "ec3c26014ee2616c"
+              "893b1d02ad42f68c"
             ],
             "type": "explicit_fee_phrase"
           },
@@ -18824,16 +18824,175 @@
           "classification_status": "calculable_rule",
           "conditions": [
             {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "payout"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "2.50",
+              "basis_points": null,
+              "currency": "GBP",
+              "minor_amount": "250",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "£2.50 per payout"
+            ],
+            "source_entry_ids": [
+              "31ccdd53a88330a6"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "£2.50 per payout",
+          "payment_method": null,
+          "product_id": "payouts",
+          "provider": "stripe",
+          "rule_id": "feff86f8f01d7c44",
+          "unit": "per_payout",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "from",
+          "fee_components": [
+            {
+              "amount": "20.00",
+              "basis_points": null,
+              "currency": "GBP",
+              "minor_amount": "2000",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "£20.00 Starting at"
+            ],
+            "source_entry_ids": [
+              "69637077a6c22e88"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "£20.00 Starting at",
+          "payment_method": null,
+          "product_id": "payouts",
+          "provider": "stripe",
+          "rule_id": "482b4bb0bd868b65",
+          "unit": "per_payout",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "50.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.5% of the converted amount"
+            ],
+            "source_entry_ids": [
+              "08797b64ad139b77"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.5% of the converted amount",
+          "payment_method": null,
+          "product_id": "payouts",
+          "provider": "stripe",
+          "rule_id": "7bd70640f0da663f",
+          "unit": "per_payout",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
               "dimension": "cross_border",
               "evidence": null,
               "operator": "eq",
-              "value": true
+              "value": false
             },
             {
               "dimension": "transaction_region",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "account_country",
@@ -18852,33 +19011,45 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.50",
+              "amount": "1.50",
               "basis_points": null,
               "currency": "GBP",
-              "minor_amount": "50",
-              "operator": null,
+              "minor_amount": "150",
+              "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
               "source_text": null,
               "type": "fixed_amount",
               "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "75.00",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.75"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "£0.50 per payout"
+              "0.75% + £1.50 per payout"
             ],
             "source_entry_ids": [
-              "7d29bef4228ec9b6"
+              "1ed5b4e38b05fab3"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "£0.50 per payout",
+          "label": "0.75% + £1.50 per payout",
           "payment_method": null,
           "product_id": "payouts",
           "provider": "stripe",
-          "rule_id": "2f943a2e26f8ca5b",
+          "rule_id": "4a0c67167e7f4ff8",
           "unit": "per_payout",
           "variant_id": "standard"
         },
@@ -30780,21 +30951,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 154,
-        "conflicting_rule_identities": 27,
+        "calculable_rules": 153,
+        "conflicting_rule_identities": 36,
         "custom_pricing": 4,
         "dropped_numeric_entries": 0,
         "free": 3,
         "ignored_non_fee": 16,
-        "included": 12,
-        "informational": 13,
-        "informational_conflicts": 27,
-        "non_calculable_rules": 5,
+        "included": 14,
+        "informational": 11,
+        "informational_conflicts": 36,
+        "non_calculable_rules": 4,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 287,
+        "numeric_source_entries": 285,
         "reference_only": 0,
-        "referenced_numeric_entries": 287,
-        "source_entries": 318,
+        "referenced_numeric_entries": 285,
+        "source_entries": 317,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -32705,145 +32876,13 @@
               "dimension": "cross_border",
               "evidence": null,
               "operator": "eq",
-              "value": false
+              "value": true
             },
             {
               "dimension": "transaction_region",
               "evidence": null,
               "operator": "eq",
-              "value": "domestic"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "payout"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "1.50",
-              "basis_points": null,
-              "currency": "USD",
-              "minor_amount": "150",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "$1.50 per payout"
-            ],
-            "source_entry_ids": [
-              "ac55c9ffc38e6dee",
-              "97f745e300307001"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "$1.50 per payout",
-          "payment_method": null,
-          "product_id": "payouts",
-          "provider": "stripe",
-          "rule_id": "dfa2d94f5f8647bb",
-          "unit": "per_payout",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "cross_border",
-              "evidence": null,
-              "operator": "eq",
-              "value": false
-            },
-            {
-              "dimension": "transaction_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "domestic"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "payout"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "1.50",
-              "basis_points": null,
-              "currency": "USD",
-              "minor_amount": "150",
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "$1.50 per payout"
-            ],
-            "source_entry_ids": [
-              "b51b35764f1dabd3",
-              "51e91d5cb6e39347"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "$1.50 per payout",
-          "payment_method": null,
-          "product_id": "payouts",
-          "provider": "stripe",
-          "rule_id": "b06d2584e347bd18",
-          "unit": "per_payout",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "cross_border",
-              "evidence": null,
-              "operator": "eq",
-              "value": false
-            },
-            {
-              "dimension": "transaction_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "domestic"
+              "value": "uk"
             },
             {
               "dimension": "account_country",
@@ -32856,49 +32895,33 @@
           "exactness": "from",
           "fee_components": [
             {
-              "amount": "0.5",
+              "amount": "25.00",
               "basis_points": null,
               "currency": "USD",
-              "minor_amount": "50",
+              "minor_amount": "2500",
               "operator": null,
               "schedule_id": null,
               "source_entry_id": null,
               "source_text": null,
-              "type": "minimum_fee",
+              "type": "fixed_amount",
               "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "75.00",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.75"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "+ 0.75% of amount",
-              "Minimum fee of 50¢"
+              "$25.00 Starting at"
             ],
             "source_entry_ids": [
-              "8b675fd28d6f1ec5",
-              "beeaa0ec49914261",
-              "a6ed37f05854efe5",
-              "4910d2a8245ba5c6"
+              "52f1ac5a532499e7"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "+ 0.75% of amount",
+          "label": "$25.00 Starting at",
           "payment_method": null,
           "product_id": "payouts",
           "provider": "stripe",
-          "rule_id": "3733caf9922c3a34",
+          "rule_id": "fb7ec96630c8d9df",
           "unit": "per_payout",
           "variant_id": "standard"
         },
@@ -32918,8 +32941,55 @@
               "dimension": "transaction_region",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "uk"
             },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "50.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.5% of the converted amount"
+            ],
+            "source_entry_ids": [
+              "a82fd99627de4afb"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.5% of the converted amount",
+          "payment_method": null,
+          "product_id": "payouts",
+          "provider": "stripe",
+          "rule_id": "cc71633b663a04b4",
+          "unit": "per_payout",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
             {
               "dimension": "account_country",
               "evidence": null,
@@ -32937,10 +33007,10 @@
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "1.50",
+              "amount": "0.50",
               "basis_points": null,
               "currency": "USD",
-              "minor_amount": "150",
+              "minor_amount": "50",
               "operator": null,
               "schedule_id": null,
               "source_entry_id": null,
@@ -32952,19 +33022,18 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "$1.50 per payout"
+              "$0.50 per payout"
             ],
             "source_entry_ids": [
-              "81826f5f9aaed1d8",
-              "9892f81f600efbc1"
+              "fcbe5758e37cd04e"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "$1.50 per payout",
+          "label": "$0.50 per payout",
           "payment_method": null,
-          "product_id": "payouts",
+          "product_id": "stablecoin_payments",
           "provider": "stripe",
-          "rule_id": "30a1aa0ae6610703",
+          "rule_id": "d3fd2d5f3f13c368",
           "unit": "per_payout",
           "variant_id": "standard"
         },
@@ -41729,7 +41798,7 @@
         }
       ],
       "stripe_market_code": "us",
-      "unclassified_count": 33
+      "unclassified_count": 31
     }
   ],
   "schema_version": 1
