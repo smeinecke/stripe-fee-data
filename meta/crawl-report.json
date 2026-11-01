@@ -1,6 +1,6 @@
 {
   "cache_stats": {
-    "bytes_avoided": 12608127,
+    "bytes_avoided": 12625461,
     "cache_304_responses": 0,
     "cache_dir": "/home/runner/.cache/stripe-fee-crawler/http",
     "cache_enabled": true,
