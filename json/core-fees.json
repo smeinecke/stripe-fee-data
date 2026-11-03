@@ -10604,14 +10604,14 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "1.4% + €0.10 per successful charge for EEA cards"
+              "1.4% + €0.10 per successful charge for EEA and UK cards"
             ],
             "source_entry_ids": [
-              "82b46135aa4426e0"
+              "debf21d9af98aa74"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "1.4% + €0.10 per successful charge for EEA cards",
+          "label": "1.4% + €0.10 per successful charge for EEA and UK cards",
           "payment_method": "card",
           "product_id": "terminal",
           "provider": "stripe",
@@ -10641,13 +10641,13 @@
               "dimension": "card_region",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "card_origin",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "account_country",
@@ -10699,20 +10699,20 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "2.9% + €0.10 per successful charge for non-EEA cards"
+              "2.9% + €0.10 per successful charge for all other cards"
             ],
             "source_entry_ids": [
-              "d883159d89b98b08"
+              "680770d595d7eff0"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "2.9% + €0.10 per successful charge for non-EEA cards",
+          "label": "2.9% + €0.10 per successful charge for all other cards",
           "payment_method": "card",
           "product_id": "terminal",
           "provider": "stripe",
-          "rule_id": "7f86da9c77dd59a2",
+          "rule_id": "24264fb141b22104",
           "unit": "per_charge",
-          "variant_id": "international_cards"
+          "variant_id": "domestic_cards"
         },
         {
           "account_country": "DE",
@@ -10736,13 +10736,13 @@
               "dimension": "card_region",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "card_origin",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "account_country",
@@ -10787,7 +10787,7 @@
           "payment_method": "tap_to_pay",
           "product_id": "terminal",
           "provider": "stripe",
-          "rule_id": "8fe9fe552ba45c25",
+          "rule_id": "c8073404b8d60191",
           "unit": "per_attempt",
           "variant_id": "tap_to_pay"
         },
@@ -18318,16 +18318,22 @@
               "dimension": "card_region",
               "evidence": null,
               "operator": "eq",
-              "value": "eea"
+              "value": "uk"
             },
             {
               "dimension": "card_origin",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            },
+            {
+              "dimension": "customer_country",
               "evidence": null,
               "operator": "eq",
               "value": "GB"
@@ -18376,20 +18382,20 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "1.4% + 10p per successful charge for EEA cards"
+              "1.4% + 10p per successful charge for UK and EEA cards"
             ],
             "source_entry_ids": [
-              "f6840af1f3d1e1f3"
+              "beb2fc7ad27665d4"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "1.4% + 10p per successful charge for EEA cards",
+          "label": "1.4% + 10p per successful charge for UK and EEA cards",
           "payment_method": "card",
           "product_id": "terminal",
           "provider": "stripe",
-          "rule_id": "c03857d57d3dbfbb",
+          "rule_id": "4deb5683ac40f1f5",
           "unit": "per_charge",
-          "variant_id": "international_cards"
+          "variant_id": "domestic_cards"
         },
         {
           "account_country": "GB",
@@ -18413,13 +18419,13 @@
               "dimension": "card_region",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "card_origin",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "account_country",
@@ -18471,20 +18477,20 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "2.9% + 10p per successful charge for non-EEA cards"
+              "2.9% + 10p per successful charge for all other cards"
             ],
             "source_entry_ids": [
-              "933841bf7f5a7aae"
+              "a59ca7dad82867c8"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "2.9% + 10p per successful charge for non-EEA cards",
+          "label": "2.9% + 10p per successful charge for all other cards",
           "payment_method": "card",
           "product_id": "terminal",
           "provider": "stripe",
-          "rule_id": "4ab8ba22961579ce",
+          "rule_id": "6c0b4fcc976947f1",
           "unit": "per_charge",
-          "variant_id": "international_cards"
+          "variant_id": "domestic_cards"
         },
         {
           "account_country": "GB",
@@ -18508,13 +18514,13 @@
               "dimension": "card_region",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "card_origin",
               "evidence": null,
               "operator": "eq",
-              "value": "international"
+              "value": "domestic"
             },
             {
               "dimension": "account_country",
@@ -18559,7 +18565,7 @@
           "payment_method": "tap_to_pay",
           "product_id": "terminal",
           "provider": "stripe",
-          "rule_id": "17fa5b3579295d07",
+          "rule_id": "23aad04209dea73b",
           "unit": "per_attempt",
           "variant_id": "tap_to_pay"
         },
@@ -27321,21 +27327,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 55,
-        "conflicting_rule_identities": 13,
+        "calculable_rules": 66,
+        "conflicting_rule_identities": 15,
         "custom_pricing": 1,
         "dropped_numeric_entries": 0,
         "free": 2,
-        "ignored_non_fee": 12,
+        "ignored_non_fee": 13,
         "included": 10,
         "informational": 8,
-        "informational_conflicts": 13,
+        "informational_conflicts": 15,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 117,
+        "numeric_source_entries": 134,
         "reference_only": 0,
-        "referenced_numeric_entries": 117,
-        "source_entries": 140,
+        "referenced_numeric_entries": 134,
+        "source_entries": 158,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -29039,6 +29045,225 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
+              "value": "satispay"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "charge"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "50",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "50",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "180.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.8"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Satispay 1.8% + ¥50 per successful charge"
+            ],
+            "source_entry_ids": [
+              "aaf21a8f248da799"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Satispay 1.8% + ¥50 per successful charge",
+          "payment_method": "satispay",
+          "product_id": "satispay",
+          "provider": "stripe",
+          "rule_id": "b278df03c4c1b392",
+          "unit": "per_charge",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "satispay"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Satispay + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "fb20d775679bc101"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Satispay + 1.5% for international transactions",
+          "payment_method": "satispay",
+          "product_id": "satispay",
+          "provider": "stripe",
+          "rule_id": "14700129e2b01147",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "satispay"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Satispay + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "b4e45e1e66680626"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Satispay + 2% if currency conversion is required",
+          "payment_method": "satispay",
+          "product_id": "satispay",
+          "provider": "stripe",
+          "rule_id": "0f1cff48a361f9e9",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
               "value": "wechat_pay"
             },
             {
@@ -29518,6 +29743,213 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
+              "value": "blik"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "50",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "50",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "190.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.9"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "BLIK 1.9% + ¥50"
+            ],
+            "source_entry_ids": [
+              "70cb7ac699b4d434"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "BLIK 1.9% + ¥50",
+          "payment_method": "blik",
+          "product_id": "blik",
+          "provider": "stripe",
+          "rule_id": "54c0214ae91fc6ff",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "blik"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "BLIK + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "df5fa45b04d3ba44"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "BLIK + 1.5% for international transactions",
+          "payment_method": "blik",
+          "product_id": "blik",
+          "provider": "stripe",
+          "rule_id": "86b7bbb2bae1eadb",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "blik"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "BLIK + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "d8c67be2b8b26d33"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "BLIK + 2% if currency conversion is required",
+          "payment_method": "blik",
+          "product_id": "blik",
+          "provider": "stripe",
+          "rule_id": "685646fe92c1f8d0",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
               "value": "eps"
             },
             {
@@ -29907,6 +30339,225 @@
           "product_id": "ideal",
           "provider": "stripe",
           "rule_id": "71c8e604a2ad0e73",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pay_by_bank"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "charge"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "50",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "50",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pay by Bank 1.5% + ¥50 per successful charge"
+            ],
+            "source_entry_ids": [
+              "41aa7dd7a0695e50"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pay by Bank 1.5% + ¥50 per successful charge",
+          "payment_method": "pay_by_bank",
+          "product_id": "pay_by_bank",
+          "provider": "stripe",
+          "rule_id": "2df7c5507b84ff70",
+          "unit": "per_charge",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pay_by_bank"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pay by Bank + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "dd5c758c814ebd25"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pay by Bank + 1.5% for international transactions",
+          "payment_method": "pay_by_bank",
+          "product_id": "pay_by_bank",
+          "provider": "stripe",
+          "rule_id": "460f256840958c8d",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pay_by_bank"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pay by Bank + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "f01cb9d45bd96636"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pay by Bank + 2% if currency conversion is required",
+          "payment_method": "pay_by_bank",
+          "product_id": "pay_by_bank",
+          "provider": "stripe",
+          "rule_id": "a22f5b81bb067576",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -30683,6 +31334,142 @@
         },
         {
           "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "scalapay"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Scalapay + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "740e35ae1beb7e77"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Scalapay + 1.5% for international transactions",
+          "payment_method": "scalapay",
+          "product_id": "scalapay",
+          "provider": "stripe",
+          "rule_id": "612a9cb8d79784f0",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "scalapay"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Scalapay + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "f46aaa8c76f6cd5d"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Scalapay + 2% if currency conversion is required",
+          "payment_method": "scalapay",
+          "product_id": "scalapay",
+          "provider": "stripe",
+          "rule_id": "23960a1f33cecb00",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
           "behavior": "conditional",
           "channel": "online",
           "classification_status": "calculable_rule",
@@ -30943,7 +31730,7 @@
         }
       ],
       "stripe_market_code": "jp",
-      "unclassified_count": 20
+      "unclassified_count": 21
     },
     {
       "account_country": "US",

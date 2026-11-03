@@ -4366,12 +4366,12 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "82b46135aa4426e0"
+        "debf21d9af98aa74"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "82b46135aa4426e0",
+      "entry_id": "debf21d9af98aa74",
       "exactness": "exact",
       "fee_components": [
         {
@@ -4381,8 +4381,8 @@
           "minor_amount": "10",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "82b46135aa4426e0",
-          "source_text": "1.4% + €0.10 per successful charge for EEA cards",
+          "source_entry_id": "debf21d9af98aa74",
+          "source_text": "1.4% + €0.10 per successful charge for EEA and UK cards",
           "type": "fixed_amount",
           "value": null
         },
@@ -4393,8 +4393,8 @@
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "82b46135aa4426e0",
-          "source_text": "1.4% + €0.10 per successful charge for EEA cards",
+          "source_entry_id": "debf21d9af98aa74",
+          "source_text": "1.4% + €0.10 per successful charge for EEA and UK cards",
           "type": "percentage",
           "value": "1.4"
         }
@@ -4402,17 +4402,17 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "1.4% + €0.10 per successful charge for EEA cards"
+          "1.4% + €0.10 per successful charge for EEA and UK cards"
         ],
         "source_entry_ids": [
-          "82b46135aa4426e0"
+          "debf21d9af98aa74"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "0.10",
       "fixed_amount_minor": "10",
       "fixed_currency": "EUR",
-      "label": "1.4% + €0.10 per successful charge for EEA cards",
+      "label": "1.4% + €0.10 per successful charge for EEA and UK cards",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "terminal",
@@ -4427,13 +4427,13 @@
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "82b46135aa4426e0",
-          "text": "1.4% + €0.10 per successful charge for EEA cards"
+          "entry_id": "debf21d9af98aa74",
+          "text": "1.4% + €0.10 per successful charge for EEA and UK cards"
         }
       ],
-      "source_text": "1.4% + €0.10 per successful charge for EEA cards",
+      "source_text": "1.4% + €0.10 per successful charge for EEA and UK cards",
       "source_texts": [
-        "1.4% + €0.10 per successful charge for EEA cards"
+        "1.4% + €0.10 per successful charge for EEA and UK cards"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
@@ -4447,17 +4447,17 @@
       "basis_points": "290.0",
       "behavior": "conditional",
       "billing_type": null,
-      "card_origin": "international",
-      "card_region": "international",
+      "card_origin": "domestic",
+      "card_region": "domestic",
       "card_tier": null,
       "channel": "in_person",
       "classification_evidence": [
         "product=terminal",
-        "variant=international_cards",
+        "variant=domestic_cards",
         "payment_method=card",
         "channel=in_person",
-        "card_region=international",
-        "card_origin=international",
+        "card_region=domestic",
+        "card_origin=domestic",
         "account_country=DE",
         "success=True",
         "transaction_type=charge"
@@ -4480,13 +4480,13 @@
           "dimension": "card_region",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": "domestic"
         },
         {
           "dimension": "card_origin",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": "domestic"
         },
         {
           "dimension": "account_country",
@@ -4509,12 +4509,12 @@
       ],
       "confidence": 0.85,
       "contributing_entry_ids": [
-        "d883159d89b98b08"
+        "680770d595d7eff0"
       ],
       "currency_conversion_required": null,
       "customer_country": null,
       "dispute_state": null,
-      "entry_id": "d883159d89b98b08",
+      "entry_id": "680770d595d7eff0",
       "exactness": "exact",
       "fee_components": [
         {
@@ -4524,8 +4524,8 @@
           "minor_amount": "10",
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "d883159d89b98b08",
-          "source_text": "2.9% + €0.10 per successful charge for non-EEA cards",
+          "source_entry_id": "680770d595d7eff0",
+          "source_text": "2.9% + €0.10 per successful charge for all other cards",
           "type": "fixed_amount",
           "value": null
         },
@@ -4536,8 +4536,8 @@
           "minor_amount": null,
           "operator": "+",
           "schedule_id": null,
-          "source_entry_id": "d883159d89b98b08",
-          "source_text": "2.9% + €0.10 per successful charge for non-EEA cards",
+          "source_entry_id": "680770d595d7eff0",
+          "source_text": "2.9% + €0.10 per successful charge for all other cards",
           "type": "percentage",
           "value": "2.9"
         }
@@ -4545,17 +4545,17 @@
       "fee_evidence": {
         "confidence": 0.85,
         "phrases": [
-          "2.9% + €0.10 per successful charge for non-EEA cards"
+          "2.9% + €0.10 per successful charge for all other cards"
         ],
         "source_entry_ids": [
-          "d883159d89b98b08"
+          "680770d595d7eff0"
         ],
         "type": "explicit_fee_phrase"
       },
       "fixed_amount": "0.10",
       "fixed_amount_minor": "10",
       "fixed_currency": "EUR",
-      "label": "2.9% + €0.10 per successful charge for non-EEA cards",
+      "label": "2.9% + €0.10 per successful charge for all other cards",
       "maximum_amount": null,
       "minimum_amount": null,
       "name": "terminal",
@@ -4566,23 +4566,23 @@
       "product_id": "terminal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "7f86da9c77dd59a2",
+      "rule_id": "24264fb141b22104",
       "settlement_currency": null,
       "source_fragments": [
         {
-          "entry_id": "d883159d89b98b08",
-          "text": "2.9% + €0.10 per successful charge for non-EEA cards"
+          "entry_id": "680770d595d7eff0",
+          "text": "2.9% + €0.10 per successful charge for all other cards"
         }
       ],
-      "source_text": "2.9% + €0.10 per successful charge for non-EEA cards",
+      "source_text": "2.9% + €0.10 per successful charge for all other cards",
       "source_texts": [
-        "2.9% + €0.10 per successful charge for non-EEA cards"
+        "2.9% + €0.10 per successful charge for all other cards"
       ],
       "source_url": "https://stripe.com/en-de/pricing",
       "transaction_amount_max": null,
       "transaction_amount_min": null,
       "unit": "per_charge",
-      "variant_id": "international_cards"
+      "variant_id": "domestic_cards"
     },
     {
       "account_country": "DE",
@@ -4599,8 +4599,8 @@
         "variant=tap_to_pay",
         "payment_method=tap_to_pay",
         "channel=in_person",
-        "card_region=international",
-        "card_origin=international",
+        "card_region=domestic",
+        "card_origin=domestic",
         "account_country=DE",
         "transaction_type=authorization"
       ],
@@ -4622,13 +4622,13 @@
           "dimension": "card_region",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": "domestic"
         },
         {
           "dimension": "card_origin",
           "evidence": null,
           "operator": "eq",
-          "value": "international"
+          "value": "domestic"
         },
         {
           "dimension": "account_country",
@@ -4690,7 +4690,7 @@
       "product_id": "terminal",
       "provider": "stripe",
       "recurring": null,
-      "rule_id": "8fe9fe552ba45c25",
+      "rule_id": "c8073404b8d60191",
       "settlement_currency": null,
       "source_fragments": [
         {
@@ -18763,7 +18763,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "82b46135aa4426e0",
+      "entry_id": "debf21d9af98aa74",
       "fee_category": "Cards and wallets",
       "footnotes": [],
       "links": [],
@@ -18775,9 +18775,9 @@
       "section_path": [
         "Cards and wallets"
       ],
-      "source_evidence": "2.9% + €0.10\nper successful charge for non-EEA cards\n+ €0.10\nper authorisation for\nTap to Pay\nAccept contactless payments without additional hardware using compatible iPhone or Android devices.\n+ €0.05\nper authorisation for optional\npoint-to-point-encryption\nAccess PCI-certified point-to-point-encryption (P2PE) required in certain industries. All Terminal transactions are end-to-end encrypted by default.",
+      "source_evidence": "2.9% + €0.10\nper successful charge for all other cards\n+ €0.10\nper authorisation for\nTap to Pay\nAccept contactless payments without additional hardware using compatible iPhone or Android devices.\n+ €0.05\nper authorisation for optional\npoint-to-point-encryption\nAccess PCI-certified point-to-point-encryption (P2PE) required in certain industries. All Terminal transactions are end-to-end encrypted by default.",
       "source_order": 44,
-      "source_text": "1.4% + €0.10 per successful charge for EEA cards",
+      "source_text": "1.4% + €0.10 per successful charge for EEA and UK cards",
       "source_url": "https://stripe.com/en-de/pricing",
       "tokens": [
         {
@@ -18816,7 +18816,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "d883159d89b98b08",
+      "entry_id": "680770d595d7eff0",
       "fee_category": "Cards and wallets",
       "footnotes": [],
       "links": [],
@@ -18830,7 +18830,7 @@
       ],
       "source_evidence": "+ €0.10\nper authorisation for\nTap to Pay\nAccept contactless payments without additional hardware using compatible iPhone or Android devices.\n+ €0.05\nper authorisation for optional\npoint-to-point-encryption\nAccess PCI-certified point-to-point-encryption (P2PE) required in certain industries. All Terminal transactions are end-to-end encrypted by default.",
       "source_order": 45,
-      "source_text": "2.9% + €0.10 per successful charge for non-EEA cards",
+      "source_text": "2.9% + €0.10 per successful charge for all other cards",
       "source_url": "https://stripe.com/en-de/pricing",
       "tokens": [
         {
@@ -29069,7 +29069,7 @@
       "source_order": 58
     },
     {
-      "body": "Accept widely used credit cards, debit cards, and digital wallets for in-person payments.\n1.4% + €0.10\nper successful charge for EEA cards\n2.9% + €0.10\nper successful charge for non-EEA cards\n+ €0.10\nper authorisation for\nTap to Pay\nAccept contactless payments without additional hardware using compatible iPhone or Android devices.\n+ €0.05\nper authorisation for optional\npoint-to-point-encryption\nAccess PCI-certified point-to-point-encryption (P2PE) required in certain industries. All Terminal transactions are end-to-end encrypted by default.",
+      "body": "Accept widely used credit cards, debit cards, and digital wallets for in-person payments.\n1.4% + €0.10\nper successful charge for EEA and UK cards\n2.9% + €0.10\nper successful charge for all other cards\n+ €0.10\nper authorisation for\nTap to Pay\nAccept contactless payments without additional hardware using compatible iPhone or Android devices.\n+ €0.05\nper authorisation for optional\npoint-to-point-encryption\nAccess PCI-certified point-to-point-encryption (P2PE) required in certain industries. All Terminal transactions are end-to-end encrypted by default.",
       "heading": "Cards and wallets",
       "level": 1,
       "links": [],
@@ -30111,7 +30111,7 @@
       "source_order": 152
     },
     {
-      "body": "Get support\nManaged support plans\nSign in\nGet industry insights and updates from Stripe\nEnter your company website\nThanks for subscribing. Look out for Stripe updates in your inbox.\nContinue\nSubscribe\nSubscribed\nPlease enter a valid work email\nReceive marketing communication from Stripe (including via automated systems) regarding product updates, industry news, and event invitations. You can\nunsubscribe at any time.\nPrivacy Policy.\nSomething went wrong on our end. Sorry about that. You can still contact us at\nsales@stripe.com.\nWe're sorry, but we're unable to serve your request.\n© 2026 Stripe, LLC",
+      "body": "Get support\nManaged support plans\nSign in\n© 2026 Stripe, LLC",
       "heading": "Support",
       "level": 1,
       "links": [],
@@ -32557,7 +32557,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "c146045dbeb902444703ecec62ee2a1a3a2b1b8d24162c388687abc8721aed62",
+      "content_sha256": "0e07bb6847aaeb994dbbed20b394991a9dc7225f0b6600d9e52a43c9d8751e99",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -32573,7 +32573,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "3b8a25dc1f116eec7868b2de9079ec250c823ae86e95e134faf1d01b95dacd63",
+      "content_sha256": "90ea52c341934d581784892275b078d411b48b4283156e8aa988f3b44133fa83",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
