@@ -11021,7 +11021,7 @@
       "section_path": [
         "Smart Disputes"
       ],
-      "source_evidence": "There's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "source_evidence": "There's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "source_order": 16,
       "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/en-jp/pricing",
@@ -17718,7 +17718,7 @@
       "source_order": 32
     },
     {
-      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "heading": "Smart Disputes",
       "level": 1,
       "links": [],
@@ -20093,7 +20093,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-jp/pricing",
-      "content_sha256": "7f51502506c28efd597d3e216172cecadd66dc7555aa129c6779f4b7625024fb",
+      "content_sha256": "c2a11cd8bd5cfb625f4097df23cd26be3ee7e3cd04e0c46b9c9aa930e8b4d46b",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -20109,7 +20109,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
-      "content_sha256": "e6514581ae0a973991bf618bf1f12c051ca3345c092ec4eadaf2d4a1eab7133d",
+      "content_sha256": "9eb2f88f8bf4606dfc692269dcff9e47fe7747f59c0ea8f9e2f484ff1e7f7228",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
