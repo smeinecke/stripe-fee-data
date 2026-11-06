@@ -15123,7 +15123,7 @@
       "section_path": [
         "Smart Disputes"
       ],
-      "source_evidence": "There's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "source_evidence": "There's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "source_order": 15,
       "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/au/pricing",
@@ -24458,7 +24458,7 @@
       "source_order": 32
     },
     {
-      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "heading": "Smart Disputes",
       "level": 1,
       "links": [],
@@ -27699,7 +27699,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "9b36a63d535c630ddcadfa9fba198a57a59fe72b837d236afd5ef61eb2d1ea1b",
+      "content_sha256": "37e7359bf5bdb36491722b2f236eec1087b0f720ded662ccddfe004a60e44b17",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27715,7 +27715,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "aded5a6325f39eb1879a2955807cb652b2fad9937d4bb365c4728495c4b720a3",
+      "content_sha256": "dc289273078aa5375a4f4cfc289d3449bb6870fd3502d9c4729d57ab729532e1",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",

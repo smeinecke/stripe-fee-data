@@ -19476,7 +19476,7 @@
       "section_path": [
         "Smart Disputes"
       ],
-      "source_evidence": "There's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "source_evidence": "There's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "source_order": 17,
       "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/gb/pricing",
@@ -31233,7 +31233,7 @@
       "source_order": 83
     },
     {
-      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "heading": "Smart Disputes",
       "level": 1,
       "links": [],
@@ -35170,7 +35170,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "f6ac1a5bca3057fc1513ce240332db04b66a50324f297f1f6bdb1eebc49902d3",
+      "content_sha256": "97db4655e04c538084e3698e2010a42f64d97854dfd15c5b5a1aa2364b1c2e5a",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -35186,7 +35186,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "790efff613e5a3f8bb9517c2c4eea109b1a95e26e3ee6c0a7e6df2820bd6b05b",
+      "content_sha256": "b06bb77e78c3361f23f5c43e4dedbd5df920215fb93f05a32e33031dfc9a0391",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",

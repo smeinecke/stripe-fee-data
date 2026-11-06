@@ -5032,7 +5032,7 @@
       "section_path": [
         "Smart Disputes"
       ],
-      "source_evidence": "There's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "source_evidence": "There's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "source_order": 11,
       "source_text": "Smart Disputes fee 30% of the disputed amount for each dispute you win.",
       "source_url": "https://stripe.com/ae/pricing",
@@ -7700,7 +7700,7 @@
       "source_order": 29
     },
     {
-      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Dispute fee for lost disputes. The dispute received fee still applies.",
+      "body": "Respond to disputes with evidence that Stripe's AI prepares for you. You can also add your own evidence.\nSmart Disputes fee\n30%\nof the disputed amount for each dispute you win.\nThere's no Smart Disputes fee for lost disputes. The dispute received fee still applies.",
       "heading": "Smart Disputes",
       "level": 1,
       "links": [],
@@ -8745,7 +8745,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "f96942a3a248b695aff2b8c701d0afe19624fe0a1abb128289a4fbde1a365e8f",
+      "content_sha256": "2ed4301bc11f5c00833e203cd9fd65927932689f06311374c1812e7eeaa41733",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8761,7 +8761,7 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "d252acceaf70137e4813151ab730dca68ac452f8bcd82f719a58a9aee7049014",
+      "content_sha256": "98846526eece39d51e6f6733153d4b1d15731590387b441e2f372c032a46cb7b",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
