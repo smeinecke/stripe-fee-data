@@ -38609,7 +38609,7 @@
   "schema_version": 1,
   "sections": [
     {
-      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nGuide me\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nNot sure where to start?\nGet recommendations\nTell us about your business\nSee all products\nExplore our full product catalog",
+      "body": "Products\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nBack\nProducts\nSolutions\nDevelopers\nResources\nPricing\nDashboard\nSign in\nSign in\nSee all products\nExplore our full product catalog",
       "heading": "Stripe logo",
       "level": 1,
       "links": [
@@ -38658,7 +38658,7 @@
       "source_order": 70
     },
     {
-      "body": "Connect\nPayments for platforms\nCapital for platforms\nCustomer financing\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards\nNot sure where to start?\nGet recommendations\nTell us about your business\nSee all products\nExplore our full product catalog",
+      "body": "Connect\nPayments for platforms\nCapital for platforms\nCustomer financing\nTreasury for platforms\nEmbedded financial services\nIssuing\nPhysical and virtual cards\nSee all products",
       "heading": "Embedded Finance",
       "level": 1,
       "links": [],
@@ -43722,7 +43722,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/pricing",
-      "content_sha256": "ee9726cd5e0ae55edb1927169cc8f72536e7d384aeea9a930daf76043634650d",
+      "content_sha256": "2da49c2a2d100a4c45a97675be628488923fca010dc88ee73cb1afd21144682a",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
@@ -43738,7 +43738,7 @@
     },
     {
       "canonical_url": "https://stripe.com/pricing/local-payment-methods",
-      "content_sha256": "18a0bb7fc13ee7a7425479e9a97225f422b30ca3b98d8f6e290f7513417a65db",
+      "content_sha256": "2df8527f696e4270932e9b0527b940b8efb51012ff09c128a90145518c6e9a09",
       "detected_currency": "USD",
       "detected_locale": "en-us",
       "detected_market": "US",
