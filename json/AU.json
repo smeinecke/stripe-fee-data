@@ -16917,7 +16917,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "A row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 61,
       "source_text": "A$0.004 per row synced",
       "source_url": "https://stripe.com/au/pricing",
@@ -16956,7 +16956,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\nA$0.004\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\nA$0.004\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 62,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/au/pricing",
@@ -16995,7 +16995,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "A row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 63,
       "source_text": "A$140.00 per month, includes up to 50,000 rows synced",
       "source_url": "https://stripe.com/au/pricing",
@@ -17034,7 +17034,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
       "source_order": 64,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/au/pricing",
@@ -17073,7 +17073,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
       "source_order": 65,
       "source_text": "A$101.00 per month, includes up to 1,000 charges Starting at",
       "source_url": "https://stripe.com/au/pricing",
@@ -24931,7 +24931,7 @@
       "source_order": 75
     },
     {
-      "body": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\nA$0.004\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "body": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\nA$0.004\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "heading": "Postgres database sync",
       "level": 1,
       "links": [],
@@ -24942,7 +24942,7 @@
       "source_order": 76
     },
     {
-      "body": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
+      "body": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
       "heading": "Data warehouse or cloud storage sync",
       "level": 1,
       "links": [],
@@ -27699,7 +27699,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "dc9d5d9ebca0c9da322383d49b5ddb46f60c0b303fd184769230d907565ee358",
+      "content_sha256": "7541c8424e8b82ecf051e59f70126f1180430a33a2febae9eaed693b608e479b",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -27715,7 +27715,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "83e856ff67abd20be6d63d53223410f9ec0f08d8477968e9eccf5e29dc194fb2",
+      "content_sha256": "d1620db863d1e3005ae7553296226c499d53021ce03f4d91389b73e24dadaccb",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -28723,7 +28723,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\nA$0.004\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\nA$0.004\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\nA$140.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 62,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/au/pricing",
@@ -28764,7 +28764,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\nA$101.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\nA$78.00\nper month, 1-year contract, includes up to 1,000 charges\nTiered pricing based on charges\nSee pricing details",
       "source_order": 64,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/au/pricing",

@@ -21493,7 +21493,7 @@
       "section_path": [
         "Cross-border payouts"
       ],
-      "source_evidence": "SWIFT wire transfer\n£20.00\nCurrency conversion\nStarting at\n0.5%\nof the converted amount",
+      "source_evidence": "SWIFT electronic transfer\n£20.00\nCurrency conversion\nStarting at\n0.5%\nof the converted amount",
       "source_order": 68,
       "source_text": "£2.50 per payout",
       "source_url": "https://stripe.com/gb/pricing",
@@ -21532,7 +21532,7 @@
       "section_path": [
         "Cross-border payouts"
       ],
-      "source_evidence": "Send money to recipients globally using your choice of payment rail\nPayouts to US, Canada, Australia, or EU\nStarting at\nUS$0.50\nper payout to the US\nEquivalent fee applies in local destination currency (CAD, AUD, EUR)\nLocal rails in any other country\n£2.50\nper payout\nSWIFT wire transfer\n£20.00\nCurrency conversion\nStarting at\n0.5%\nof the converted amount",
+      "source_evidence": "Send money to recipients globally using your choice of payment rail\nPayouts to US, Canada, Australia or EU\nStarting at\nUS$0.50\nper payout to the US\nEquivalent fee applies in local destination currency (CAD, AUD, EUR)\nLocal rails in any other country\n£2.50\nper payout\nSWIFT electronic transfer\n£20.00\nCurrency conversion\nStarting at\n0.5%\nof the converted amount",
       "source_order": 69,
       "source_text": "£20.00 Starting at",
       "source_url": "https://stripe.com/gb/pricing",
@@ -22588,7 +22588,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "A row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 95,
       "source_text": "£0.002 per row synced",
       "source_url": "https://stripe.com/gb/pricing",
@@ -22627,7 +22627,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\n£0.002\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\n£0.002\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 96,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/gb/pricing",
@@ -22666,7 +22666,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "A row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 97,
       "source_text": "£80.00 per month, includes up to 50,000 rows synced",
       "source_url": "https://stripe.com/gb/pricing",
@@ -22705,7 +22705,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "source_order": 98,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/gb/pricing",
@@ -22744,7 +22744,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "source_order": 99,
       "source_text": "£48.00 per month, includes up to 1,000 charges Starting at",
       "source_url": "https://stripe.com/gb/pricing",
@@ -23197,7 +23197,7 @@
       "section_path": [
         "Explore the docs"
       ],
-      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nEmoney and payment services are provided by Stripe Payments UK, Limited, an electronic money institution authorised by the Financial Conduct Authority (firm reference number: 900461) for the issuance of electronic money.\nPrepaid debit cards are issued by Cross River Bank and Lead Bank. Cash-like, high-risk resale, gambling, and government payments transactions are not eligible for cashback.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nE-money and payment services are provided by Stripe Payments UK, Limited, an electronic money institution authorised by the Financial Conduct Authority (firm reference number: 900461) for the issuance of electronic money.\nPrepaid debit cards are issued by Cross River Bank and Lead Bank. Cash-like, high-risk resale, gambling and government payments transactions are not eligible for cashback.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
       "source_order": 111,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/gb/pricing",
@@ -31651,7 +31651,7 @@
       "source_order": 72
     },
     {
-      "body": "Send money instantly to 100+ countries\nPay recipients globally using local bank transfers, international wires, or debit cards.\nLaunch quickly with no-code tools or APIs and flexible funding options.\nExpand your global reach and reduce cross-border fees.",
+      "body": "Send money instantly to 100+ countries\nPay recipients globally using local bank transfers, international electronic transfers or debit cards.\nLaunch quickly with no code tools or APIs and flexible funding options.\nExpand your global reach and reduce cross-border fees.",
       "heading": "Global Payouts",
       "level": 1,
       "links": [],
@@ -31695,7 +31695,7 @@
       "source_order": 76
     },
     {
-      "body": "Send money to recipients globally using your choice of payment rail\nPayouts to US, Canada, Australia, or EU\nStarting at\nUS$0.50\nper payout to the US\nEquivalent fee applies in local destination currency (CAD, AUD, EUR)\nLocal rails in any other country\n£2.50\nper payout\nSWIFT wire transfer\n£20.00\nCurrency conversion\nStarting at\n0.5%\nof the converted amount",
+      "body": "Send money to recipients globally using your choice of payment rail\nPayouts to US, Canada, Australia or EU\nStarting at\nUS$0.50\nper payout to the US\nEquivalent fee applies in local destination currency (CAD, AUD, EUR)\nLocal rails in any other country\n£2.50\nper payout\nSWIFT electronic transfer\n£20.00\nCurrency conversion\nStarting at\n0.5%\nof the converted amount",
       "heading": "Cross-border payouts",
       "level": 1,
       "links": [],
@@ -31959,7 +31959,7 @@
       "source_order": 100
     },
     {
-      "body": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\n£0.002\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "body": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\n£0.002\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "heading": "Postgres database sync",
       "level": 1,
       "links": [],
@@ -31970,7 +31970,7 @@
       "source_order": 101
     },
     {
-      "body": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "body": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "heading": "Data warehouse or cloud storage sync",
       "level": 1,
       "links": [],
@@ -32572,7 +32572,7 @@
       "source_order": 155
     },
     {
-      "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nEmoney and payment services are provided by Stripe Payments UK, Limited, an electronic money institution authorised by the Financial Conduct Authority (firm reference number: 900461) for the issuance of electronic money.\nPrepaid debit cards are issued by Cross River Bank and Lead Bank. Cash-like, high-risk resale, gambling, and government payments transactions are not eligible for cashback.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "body": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nE-money and payment services are provided by Stripe Payments UK, Limited, an electronic money institution authorised by the Financial Conduct Authority (firm reference number: 900461) for the issuance of electronic money.\nPrepaid debit cards are issued by Cross River Bank and Lead Bank. Cash-like, high-risk resale, gambling and government payments transactions are not eligible for cashback.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
       "heading": "Explore the docs",
       "level": 1,
       "links": [],
@@ -35170,7 +35170,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "8bfefb726b593790643a67f33db3306ed0cf14ff9835e7784b910e722d45f673",
+      "content_sha256": "dc4202696d433140b001a2e1e2996f4726b5ad306a9b9c1340d7181bfbf51d51",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -35186,7 +35186,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "436967eeb6441bf06f042845d12813670a272c172b33d3ad82aa4b806539c03c",
+      "content_sha256": "c7daf2b66027d950831c7a09a7f1da43916c2f6c2b9e6c964e10595b2d07e74d",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -35495,7 +35495,7 @@
       "section_path": [
         "Explore the docs"
       ],
-      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nEmoney and payment services are provided by Stripe Payments UK, Limited, an electronic money institution authorised by the Financial Conduct Authority (firm reference number: 900461) for the issuance of electronic money.\nPrepaid debit cards are issued by Cross River Bank and Lead Bank. Cash-like, high-risk resale, gambling, and government payments transactions are not eligible for cashback.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
+      "source_evidence": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go.\nRead the docs\n¹ Stripe Radar for Fraud teams and Stripe Connect with platform-controlled pricing are priced separately.\n²\nBasic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.\nE-money and payment services are provided by Stripe Payments UK, Limited, an electronic money institution authorised by the Financial Conduct Authority (firm reference number: 900461) for the issuance of electronic money.\nPrepaid debit cards are issued by Cross River Bank and Lead Bank. Cash-like, high-risk resale, gambling and government payments transactions are not eligible for cashback.\nStripe logo\nUnited Kingdom (English)\nAustralia\nEnglish\nAustria\nDeutsch\nEnglish\nBelgium\nNederlands\nFrançais\nDeutsch\nEnglish\nBrazil\nPortuguês\nEnglish\nBulgaria\nEnglish\nCanada\nEnglish\nFrançais\nCroatia\nEnglish\nItaliano\nCyprus\nEnglish\nCzech Republic\nEnglish\nDenmark\nEnglish\nEstonia\nEnglish\nFinland\nEnglish\nSvenska\nFrance\nFrançais\nEnglish\nGermany\nDeutsch\nEnglish\nGibraltar\nEnglish\nGreece\nEnglish\nHong Kong SAR, China\nEnglish\n简体中文\nHungary\nEnglish\nIndia\nEnglish\nIreland\nEnglish\nItaly\nItaliano\nEnglish\nJapan\n日本語\nEnglish\nLatvia\nEnglish\nLiechtenstein\nDeutsch\nEnglish\nLithuania\nEnglish\nLuxembourg\nFrançais\nDeutsch\nEnglish\nMainland China\n简体中文\nEnglish\nMalaysia\nEnglish\n简体中文\nMalta\nEnglish\nMexico\nEspañol\nEnglish\nNetherlands\nNederlands\nEnglish\nNew Zealand\nEnglish\nNorway\nEnglish\nPoland\nEnglish\nPortugal\nPortuguês\nEnglish\nRomania\nEnglish\nSingapore\nEnglish\n简体中文\nSlovakia\nEnglish\nSlovenia\nEnglish\nItaliano\nSpain\nEspañol\nEnglish\nSweden\nSvenska\nEnglish\nSwitzerland\nDeutsch\nFrançais\nItaliano\nEnglish\nThailand\nไทย\nEnglish\nUnited Arab Emirates\nEnglish\nUnited Kingdom\nEnglish\nUnited States\nEnglish\nEspañol\n简体中文",
       "source_order": 111,
       "source_text": "Start building your integration and accept your first payment in minutes. Stripe libraries are available in every language from Ruby to Go. Basic usage-based billing features will continue to be available via Stripe's Meters API as part of Billing pricing, with up to 100M events per month included.",
       "source_url": "https://stripe.com/gb/pricing",
@@ -36193,7 +36193,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\n£0.002\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\n£0.002\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n£80.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 96,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/gb/pricing",
@@ -36234,7 +36234,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n£48.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n£37.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "source_order": 98,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/gb/pricing",

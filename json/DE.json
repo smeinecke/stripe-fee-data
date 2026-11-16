@@ -20352,7 +20352,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "A row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 83,
       "source_text": "€0.002 per row synced",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -20391,7 +20391,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\n€0.002\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\n€0.002\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 84,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -20430,7 +20430,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "A row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 85,
       "source_text": "€90.00 per month, includes up to 50,000 rows synced",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -20469,7 +20469,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "source_order": 86,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -20508,7 +20508,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "source_order": 87,
       "source_text": "€57.00 per month, includes up to 1,000 charges Starting at",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -29421,7 +29421,7 @@
       "source_order": 90
     },
     {
-      "body": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\n€0.002\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "body": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\n€0.002\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "heading": "Postgres database sync",
       "level": 1,
       "links": [],
@@ -29432,7 +29432,7 @@
       "source_order": 91
     },
     {
-      "body": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "body": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "heading": "Data warehouse or cloud storage sync",
       "level": 1,
       "links": [],
@@ -32557,7 +32557,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "e1242a65453140b72d5695e558f7f31dd17c1443beee4ae4e3fa0175826860aa",
+      "content_sha256": "51f672a7d1718378fa5c454e3e9313e42ada03251a86f11796d675d84361022f",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -32573,7 +32573,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "8903e17bebbc2d73eb982dca7bbf9ff22c701a6228a939cd9ef9f38e1f043968",
+      "content_sha256": "46adfcb381d5b4f0c16494ce9dd0918308f8b080221ff67f55da01b513059bca",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -33662,7 +33662,7 @@
       "section_path": [
         "Postgres database sync"
       ],
-      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions, and more.\nPay as you go\n€0.002\nper row synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
+      "source_evidence": "Power applications with real-time data. Stream Stripe API data, including payments, charges, subscriptions and more.\nPay as you go\n€0.002\nper row synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.\n5,000 rows synced free per month\nMonthly subscription\nStarting at\n€90.00\nper month, includes up to 50,000 rows synced\nA row synced is counted each time Stripe creates, updates or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced. Subscription and cancellation\nterms apply.",
       "source_order": 84,
       "source_text": "5,000 rows synced free per month Starting at",
       "source_url": "https://stripe.com/en-de/pricing",
@@ -33703,7 +33703,7 @@
       "section_path": [
         "Data warehouse or cloud storage sync"
       ],
-      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports, and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks, and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
+      "source_evidence": "Get richer insights and faster reporting. Sync enriched datasets, prebuilt reports and Stripe API data on a scheduled cadence to Snowflake, Google BigQuery, Databricks and more. Includes Stripe Sigma.\nTry for free for 30 days\nMonthly subscription\nStarting at\n€57.00\nper month, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nAnnual subscription\nStarting at\n€44.00\nper month, 1-year contract, includes up to 1,000 charges\nIncludes successful charges on Stripe and through third-party processors connected to any Stripe service. Subscription and cancellation\nterms apply.\nSee pricing details",
       "source_order": 86,
       "source_text": "Try for free for 30 days Starting at",
       "source_url": "https://stripe.com/en-de/pricing",
