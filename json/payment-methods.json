@@ -687,12 +687,13 @@
       "display_name": "Konbini",
       "family": "other",
       "fee_rule_refs": [
-        "59950ebe6e8a9cf7"
+        "59950ebe6e8a9cf7",
+        "ac75caddfb621000"
       ],
       "localized_names": [],
       "method_id": "konbini",
       "source_refs": [
-        "https://stripe.com/en-jp/pricing/local-payment-methods"
+        "https://stripe.com/en-jp/pricing"
       ],
       "supported_account_countries": [
         "JP"
