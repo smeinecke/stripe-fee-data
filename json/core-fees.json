@@ -1551,21 +1551,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 97,
-        "conflicting_rule_identities": 16,
+        "calculable_rules": 103,
+        "conflicting_rule_identities": 25,
         "custom_pricing": 3,
         "dropped_numeric_entries": 0,
         "free": 3,
         "ignored_non_fee": 15,
         "included": 10,
         "informational": 10,
-        "informational_conflicts": 16,
+        "informational_conflicts": 25,
         "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 177,
+        "numeric_source_entries": 195,
         "reference_only": 0,
-        "referenced_numeric_entries": 177,
-        "source_entries": 204,
+        "referenced_numeric_entries": 195,
+        "source_entries": 222,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -4412,6 +4412,343 @@
         },
         {
           "account_country": "AU",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "6b6e687fed771d70"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit + 1.5% for international transactions",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "61afba088ffb9662",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AU",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "d6ea3aac611a5951"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit + 2% if currency conversion is required",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "ba85610c42d0ecfe",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AU",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            },
+            {
+              "dimension": "dispute_state",
+              "evidence": null,
+              "operator": "eq",
+              "value": "lost"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "21.00",
+              "basis_points": null,
+              "currency": "AUD",
+              "minor_amount": "2100",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit A$21.00 for disputed payments"
+            ],
+            "source_entry_ids": [
+              "7404e10ba50066a0"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit A$21.00 for disputed payments",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "91a634ee0a6be318",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AU",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "failed"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "5.50",
+              "basis_points": null,
+              "currency": "AUD",
+              "minor_amount": "550",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit A$5.50 for failed payments"
+            ],
+            "source_entry_ids": [
+              "28ef6e0ad31c5d1b"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit A$5.50 for failed payments",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "e9bd83293de120a7",
+          "unit": "per_attempt",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AU",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "refund"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.70",
+              "basis_points": null,
+              "currency": "AUD",
+              "minor_amount": "70",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit A$0.70 per successful refund"
+            ],
+            "source_entry_ids": [
+              "bc67aa39b8ffac4c"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit A$0.70 per successful refund",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "a349b89f197dc723",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "AU",
           "behavior": "conditional",
           "channel": "online",
           "classification_status": "calculable_rule",
@@ -5472,6 +5809,12 @@
           "classification_status": "calculable_rule",
           "conditions": [
             {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pad"
+            },
+            {
               "dimension": "channel",
               "evidence": null,
               "operator": "eq",
@@ -5482,51 +5825,122 @@
               "evidence": null,
               "operator": "eq",
               "value": "AU"
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "refund"
             }
           ],
           "confidence": 0.85,
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "0.50",
+              "amount": "0.40",
               "basis_points": null,
               "currency": "AUD",
-              "minor_amount": "50",
-              "operator": null,
+              "minor_amount": "40",
+              "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
               "source_text": null,
               "type": "fixed_amount",
               "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "100",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "PayTo A$0.50 for refunds"
+              "Pre-authorised debits in Canada 1% + A$0.40"
             ],
             "source_entry_ids": [
-              "92c70b95154b0fd4"
+              "416e137feff171d3"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "PayTo A$0.50 for refunds",
-          "payment_method": null,
-          "product_id": "refunds",
+          "label": "Pre-authorised debits in Canada 1% + A$0.40",
+          "payment_method": "pad",
+          "product_id": "pad",
           "provider": "stripe",
-          "rule_id": "a9589c1eefa8c34a",
-          "unit": "per_refund",
+          "rule_id": "0dff856238807a80",
+          "unit": "per_transaction",
           "variant_id": "standard"
         },
         {
           "account_country": "AU",
-          "behavior": "conditional",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "card_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "card_origin",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "AU"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "b57fe04048f0352c"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada + 1.5% for international transactions",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "6bc0fb2130a26607",
+          "unit": "per_transaction",
+          "variant_id": "online_international_cards"
+        },
+        {
+          "account_country": "AU",
+          "behavior": "additive",
           "channel": "online",
           "classification_status": "calculable_rule",
           "conditions": [
@@ -5543,44 +5957,44 @@
               "value": "AU"
             },
             {
-              "dimension": "transaction_type",
+              "dimension": "currency_conversion_required",
               "evidence": null,
               "operator": "eq",
-              "value": "failed"
+              "value": true
             }
           ],
           "confidence": 0.85,
           "exactness": "exact",
           "fee_components": [
             {
-              "amount": "2.50",
-              "basis_points": null,
-              "currency": "AUD",
-              "minor_amount": "250",
-              "operator": null,
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
               "schedule_id": null,
               "source_entry_id": null,
               "source_text": null,
-              "type": "fixed_amount",
-              "value": null
+              "type": "percentage_surcharge",
+              "value": "2"
             }
           ],
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "Australia BECS Direct Debit A$2.50 for failed payments"
+              "Pre-authorised debits in Canada + 2% if currency conversion is required"
             ],
             "source_entry_ids": [
-              "f1b551e3bb434724"
+              "fa7cc17db0eaae0f"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "Australia BECS Direct Debit A$2.50 for failed payments",
+          "label": "Pre-authorised debits in Canada + 2% if currency conversion is required",
           "payment_method": null,
           "product_id": "payments",
           "provider": "stripe",
-          "rule_id": "7bb1a4af366771af",
-          "unit": "per_attempt",
+          "rule_id": "54cf0898763ac4e1",
+          "unit": "per_transaction",
           "variant_id": "online_domestic_cards"
         },
         {
@@ -9523,21 +9937,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 111,
-        "conflicting_rule_identities": 22,
+        "calculable_rules": 115,
+        "conflicting_rule_identities": 25,
         "custom_pricing": 7,
         "dropped_numeric_entries": 0,
         "free": 1,
         "ignored_non_fee": 15,
         "included": 11,
         "informational": 10,
-        "informational_conflicts": 22,
-        "non_calculable_rules": 3,
+        "informational_conflicts": 25,
+        "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 217,
+        "numeric_source_entries": 226,
         "reference_only": 0,
-        "referenced_numeric_entries": 217,
-        "source_entries": 244,
+        "referenced_numeric_entries": 226,
+        "source_entries": 253,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 1
       },
@@ -12679,18 +13093,6 @@
               "evidence": null,
               "operator": "eq",
               "value": "DE"
-            },
-            {
-              "dimension": "settlement_timing",
-              "evidence": null,
-              "operator": "eq",
-              "value": "standard"
-            },
-            {
-              "dimension": "pricing_tier",
-              "evidence": null,
-              "operator": "eq",
-              "value": "standard"
             }
           ],
           "confidence": 0.85,
@@ -12724,20 +13126,20 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "ACH Direct Debit 0.8% per transaction for standard settlement timing",
+              "ACH Direct Debit 0.8%",
               "ACH Direct Debit €5.00 cap"
             ],
             "source_entry_ids": [
-              "501a267f5f001f98",
+              "bbbee1ee80047d36",
               "f27c38347c3461d6"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "ACH Direct Debit 0.8% per transaction for standard settlement timing",
+          "label": "ACH Direct Debit 0.8%",
           "payment_method": "ach_direct_debit",
           "product_id": "ach_direct_debit",
           "provider": "stripe",
-          "rule_id": "f28585a93ff6d479",
+          "rule_id": "f519a6c8bcbbf676",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -14466,6 +14868,321 @@
           "provider": "stripe",
           "rule_id": "aae49f574944d069",
           "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pad"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.25",
+              "basis_points": null,
+              "currency": "EUR",
+              "minor_amount": "25",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "100",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada 1% + €0.25"
+            ],
+            "source_entry_ids": [
+              "8f1c30dc8dbab5fc"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada 1% + €0.25",
+          "payment_method": "pad",
+          "product_id": "pad",
+          "provider": "stripe",
+          "rule_id": "b376d4bd53221759",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada + 2% if currency conversion is required",
+              "South Korean payment methods + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "fa7cc17db0eaae0f",
+              "eabc103880b70c0d"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada + 2% if currency conversion is required",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "746db84dde93b680",
+          "unit": "per_transaction",
+          "variant_id": "online_domestic_cards"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            },
+            {
+              "dimension": "dispute_state",
+              "evidence": null,
+              "operator": "eq",
+              "value": "lost"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "13.00",
+              "basis_points": null,
+              "currency": "EUR",
+              "minor_amount": "1300",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada €13.00 for disputed payments"
+            ],
+            "source_entry_ids": [
+              "c7e8eb72e2c4d8f1"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada €13.00 for disputed payments",
+          "payment_method": null,
+          "product_id": "disputes",
+          "provider": "stripe",
+          "rule_id": "99132697a5a7ad6d",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "failed"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "3.50",
+              "basis_points": null,
+              "currency": "EUR",
+              "minor_amount": "350",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada €3.50 for failed payments"
+            ],
+            "source_entry_ids": [
+              "8ee50251f73ff7aa"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada €3.50 for failed payments",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "c3492b3d21f8be52",
+          "unit": "per_attempt",
+          "variant_id": "online_domestic_cards"
+        },
+        {
+          "account_country": "DE",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "DE"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "refund"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.45",
+              "basis_points": null,
+              "currency": "EUR",
+              "minor_amount": "45",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada €0.45 per successful refund"
+            ],
+            "source_entry_ids": [
+              "39082b369bcb2496"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada €0.45 per successful refund",
+          "payment_method": null,
+          "product_id": "refunds",
+          "provider": "stripe",
+          "rule_id": "c2d8254d773c6b63",
+          "unit": "per_refund",
           "variant_id": "standard"
         },
         {
@@ -17326,65 +18043,6 @@
           "rule_id": "14532e0de1e7ba5c",
           "unit": "per_transaction",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "DE",
-          "behavior": "additive",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "DE"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "200",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage_surcharge",
-              "value": "2"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "South Korean payment methods + 2% if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "eabc103880b70c0d"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "South Korean payment methods + 2% if currency conversion is required",
-          "payment_method": null,
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "746db84dde93b680",
-          "unit": "per_transaction",
-          "variant_id": "online_domestic_cards"
         }
       ],
       "stripe_market_code": "de",
@@ -17396,21 +18054,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 122,
-        "conflicting_rule_identities": 24,
+        "calculable_rules": 126,
+        "conflicting_rule_identities": 27,
         "custom_pricing": 4,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 15,
         "included": 13,
         "informational": 9,
-        "informational_conflicts": 24,
-        "non_calculable_rules": 3,
+        "informational_conflicts": 27,
+        "non_calculable_rules": 2,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 230,
+        "numeric_source_entries": 239,
         "reference_only": 0,
-        "referenced_numeric_entries": 230,
-        "source_entries": 262,
+        "referenced_numeric_entries": 239,
+        "source_entries": 271,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -20557,18 +21215,6 @@
               "evidence": null,
               "operator": "eq",
               "value": "GB"
-            },
-            {
-              "dimension": "settlement_timing",
-              "evidence": null,
-              "operator": "eq",
-              "value": "standard"
-            },
-            {
-              "dimension": "pricing_tier",
-              "evidence": null,
-              "operator": "eq",
-              "value": "standard"
             }
           ],
           "confidence": 0.85,
@@ -20602,20 +21248,20 @@
           "fee_evidence": {
             "confidence": 0.85,
             "phrases": [
-              "ACH Direct Debit 0.8% for standard settlement timing",
+              "ACH Direct Debit 0.8%",
               "ACH Direct Debit £5.00 cap"
             ],
             "source_entry_ids": [
-              "0f8db0ffff9812a4",
+              "bbbee1ee80047d36",
               "2a172193bfbeccb9"
             ],
             "type": "explicit_fee_phrase"
           },
-          "label": "ACH Direct Debit 0.8% for standard settlement timing",
+          "label": "ACH Direct Debit 0.8%",
           "payment_method": "ach_direct_debit",
           "product_id": "ach_direct_debit",
           "provider": "stripe",
-          "rule_id": "f5cb0ef76a8d04ae",
+          "rule_id": "47fee499397892fe",
           "unit": "per_transaction",
           "variant_id": "standard"
         },
@@ -22267,6 +22913,321 @@
           "provider": "stripe",
           "rule_id": "1dae3af7c36be98b",
           "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pad"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.2",
+              "basis_points": null,
+              "currency": "GBP",
+              "minor_amount": "20",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "100",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada 1% + 20p"
+            ],
+            "source_entry_ids": [
+              "6a23e37e8c309b67"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada 1% + 20p",
+          "payment_method": "pad",
+          "product_id": "pad",
+          "provider": "stripe",
+          "rule_id": "28526b269c0d08c6",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada + 2% if currency conversion is required",
+              "South Korean payment methods + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "fa7cc17db0eaae0f",
+              "eabc103880b70c0d"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada + 2% if currency conversion is required",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "8d697f65c70645b1",
+          "unit": "per_transaction",
+          "variant_id": "online_domestic_cards"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            },
+            {
+              "dimension": "dispute_state",
+              "evidence": null,
+              "operator": "eq",
+              "value": "lost"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "11.00",
+              "basis_points": null,
+              "currency": "GBP",
+              "minor_amount": "1100",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada £11.00 for disputed payments"
+            ],
+            "source_entry_ids": [
+              "0a4a144d87283471"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada £11.00 for disputed payments",
+          "payment_method": null,
+          "product_id": "disputes",
+          "provider": "stripe",
+          "rule_id": "ab2016e61350d6bd",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "failed"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "3.00",
+              "basis_points": null,
+              "currency": "GBP",
+              "minor_amount": "300",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada £3.00 for failed payments"
+            ],
+            "source_entry_ids": [
+              "29c44419990e66d5"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada £3.00 for failed payments",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "f66092eb70195dca",
+          "unit": "per_attempt",
+          "variant_id": "online_domestic_cards"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "refund"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "0.40",
+              "basis_points": null,
+              "currency": "GBP",
+              "minor_amount": "40",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorised debits in Canada £0.40 per successful refund"
+            ],
+            "source_entry_ids": [
+              "9c293ee4ea7239c2"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorised debits in Canada £0.40 per successful refund",
+          "payment_method": null,
+          "product_id": "refunds",
+          "provider": "stripe",
+          "rule_id": "33f433c521bdeb85",
+          "unit": "per_refund",
           "variant_id": "standard"
         },
         {
@@ -25914,65 +26875,6 @@
           "rule_id": "a996e7bb67faa443",
           "unit": "per_transaction",
           "variant_id": "standard"
-        },
-        {
-          "account_country": "GB",
-          "behavior": "additive",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "GB"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "200",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage_surcharge",
-              "value": "2"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "South Korean payment methods + 2% if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "eabc103880b70c0d"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "South Korean payment methods + 2% if currency conversion is required",
-          "payment_method": null,
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "8d697f65c70645b1",
-          "unit": "per_transaction",
-          "variant_id": "online_domestic_cards"
         }
       ],
       "stripe_market_code": "gb",
@@ -27327,21 +28229,21 @@
       "coverage_summary": {
         "ambiguous_entries": 0,
         "blocking_fee_conflicts": 0,
-        "calculable_rules": 68,
-        "conflicting_rule_identities": 11,
+        "calculable_rules": 85,
+        "conflicting_rule_identities": 17,
         "custom_pricing": 1,
         "dropped_numeric_entries": 0,
         "free": 2,
         "ignored_non_fee": 13,
         "included": 10,
         "informational": 8,
-        "informational_conflicts": 11,
+        "informational_conflicts": 17,
         "non_calculable_rules": 3,
         "numeric_fee_candidates": 0,
-        "numeric_source_entries": 132,
+        "numeric_source_entries": 164,
         "reference_only": 0,
-        "referenced_numeric_entries": 132,
-        "source_entries": 156,
+        "referenced_numeric_entries": 164,
+        "source_entries": 188,
         "unclassified_fee_candidates": 0,
         "unsupported_fee_shapes": 0
       },
@@ -27844,77 +28746,6 @@
           "product_id": "refunds",
           "provider": "stripe",
           "rule_id": "c9b671086b478852",
-          "unit": "per_refund",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            },
-            {
-              "dimension": "transaction_type",
-              "evidence": null,
-              "operator": "eq",
-              "value": "refund"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": "250",
-              "basis_points": null,
-              "currency": "JPY",
-              "minor_amount": "250",
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "fixed_amount",
-              "value": null
-            },
-            {
-              "amount": null,
-              "basis_points": "1000",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "10"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "¥250 + 10% consumption tax for refunds"
-            ],
-            "source_entry_ids": [
-              "cc0ecbc27a9dc34c"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "¥250 + 10% consumption tax for refunds",
-          "payment_method": null,
-          "product_id": "refunds",
-          "provider": "stripe",
-          "rule_id": "8b76e34533316125",
           "unit": "per_refund",
           "variant_id": "standard"
         },
@@ -29670,6 +30501,765 @@
         },
         {
           "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "6b6e687fed771d70"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit + 1.5% for international transactions",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "653c25f132f67de5",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "d6ea3aac611a5951"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit + 2% if currency conversion is required",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "e4dac04bf9c11d45",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "dispute_state",
+              "evidence": null,
+              "operator": "eq",
+              "value": "lost"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "2500",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "2500",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit ¥2,500 for disputed payments"
+            ],
+            "source_entry_ids": [
+              "a1186a2434e38355"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit ¥2,500 for disputed payments",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "9b23d2ccfeb04846",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "failed"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "650",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "650",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit ¥650 for failed payments"
+            ],
+            "source_entry_ids": [
+              "fb6cb3dc09374c0e"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit ¥650 for failed payments",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "342ed431a99b7dc0",
+          "unit": "per_attempt",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "ach_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "refund"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "85",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "85",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "ACH Direct Debit ¥85 per successful refund"
+            ],
+            "source_entry_ids": [
+              "a019d8acc0d72c8a"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "ACH Direct Debit ¥85 per successful refund",
+          "payment_method": "ach_direct_debit",
+          "product_id": "ach_direct_debit",
+          "provider": "stripe",
+          "rule_id": "d829e1a5ee9fe93c",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bacs_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "range",
+          "fee_components": [
+            {
+              "amount": "50",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "50",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": "1000",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "1000",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "maximum_fee",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "100",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bacs Direct Debit 1% + ¥50",
+              "Bacs Direct Debit ¥1,000 cap"
+            ],
+            "source_entry_ids": [
+              "af923905d4742c7a",
+              "bcaf6a793b8b73db"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bacs Direct Debit 1% + ¥50",
+          "payment_method": "bacs_direct_debit",
+          "product_id": "bacs_direct_debit",
+          "provider": "stripe",
+          "rule_id": "3a1fe8a162fb3ed5",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bacs_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bacs Direct Debit + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "ac42b8c83df348b7"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bacs Direct Debit + 1.5% for international transactions",
+          "payment_method": "bacs_direct_debit",
+          "product_id": "bacs_direct_debit",
+          "provider": "stripe",
+          "rule_id": "a591e92895b8c2fd",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bacs_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bacs Direct Debit + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "727b0cb6eb7f5006"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bacs Direct Debit + 2% if currency conversion is required",
+          "payment_method": "bacs_direct_debit",
+          "product_id": "bacs_direct_debit",
+          "provider": "stripe",
+          "rule_id": "4ccd416e3b159b21",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bacs_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "dispute_state",
+              "evidence": null,
+              "operator": "eq",
+              "value": "lost"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "2500",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "2500",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bacs Direct Debit ¥2,500 for disputed payments"
+            ],
+            "source_entry_ids": [
+              "cfc5914d03ee403a"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bacs Direct Debit ¥2,500 for disputed payments",
+          "payment_method": "bacs_direct_debit",
+          "product_id": "bacs_direct_debit",
+          "provider": "stripe",
+          "rule_id": "eaef0d0e433feeb4",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bacs_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "failed"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "650",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "650",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bacs Direct Debit ¥650 for failed payments"
+            ],
+            "source_entry_ids": [
+              "fff832ff96a38c1f"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bacs Direct Debit ¥650 for failed payments",
+          "payment_method": "bacs_direct_debit",
+          "product_id": "bacs_direct_debit",
+          "provider": "stripe",
+          "rule_id": "fab23034723ac643",
+          "unit": "per_attempt",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bacs_direct_debit"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "refund"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "85",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "85",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Bacs Direct Debit ¥85 per successful refund"
+            ],
+            "source_entry_ids": [
+              "e77064722f017a7c"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Bacs Direct Debit ¥85 per successful refund",
+          "payment_method": "bacs_direct_debit",
+          "product_id": "bacs_direct_debit",
+          "provider": "stripe",
+          "rule_id": "964a7f751badf6a9",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
           "behavior": "conditional",
           "channel": "online",
           "classification_status": "calculable_rule",
@@ -30358,6 +31948,286 @@
               "dimension": "payment_method",
               "evidence": null,
               "operator": "eq",
+              "value": "bank_transfer"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "success",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "range",
+          "fee_components": [
+            {
+              "amount": "1000",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "1000",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "maximum_fee",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "50.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "GBP Bank Transfers 0.5% per successful transaction",
+              "GBP Bank Transfers ¥1,000 cap"
+            ],
+            "source_entry_ids": [
+              "44998c7eb6fda698",
+              "f86f3fdf269ba67b"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "GBP Bank Transfers 0.5% per successful transaction",
+          "payment_method": "bank_transfer",
+          "product_id": "bank_transfer",
+          "provider": "stripe",
+          "rule_id": "c69febda21b6263e",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bank_transfer"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "cross_border",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            },
+            {
+              "dimension": "transaction_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "GBP Bank Transfers + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "4b1b2d1bb63e3434"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "GBP Bank Transfers + 1.5% for international transactions",
+          "payment_method": "bank_transfer",
+          "product_id": "bank_transfer",
+          "provider": "stripe",
+          "rule_id": "14bc07d38b9aafa6",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bank_transfer"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "GBP Bank Transfers + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "d3bb1d08c1f2e5a5"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "GBP Bank Transfers + 2% if currency conversion is required",
+          "payment_method": "bank_transfer",
+          "product_id": "bank_transfer",
+          "provider": "stripe",
+          "rule_id": "5956eef4295be31a",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "bank_transfer"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "refund"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "85",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "85",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "GBP Bank Transfers ¥85 per successful refund"
+            ],
+            "source_entry_ids": [
+              "79e863961a91a099"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "GBP Bank Transfers ¥85 per successful refund",
+          "payment_method": "bank_transfer",
+          "product_id": "bank_transfer",
+          "provider": "stripe",
+          "rule_id": "a07406183c402b17",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
               "value": "ideal"
             },
             {
@@ -30542,6 +32412,329 @@
           "rule_id": "71c8e604a2ad0e73",
           "unit": "per_transaction",
           "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "payment_method",
+              "evidence": null,
+              "operator": "eq",
+              "value": "pad"
+            },
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "50",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "50",
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            },
+            {
+              "amount": null,
+              "basis_points": "100",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "1"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorized debits in Canada 1% + ¥50"
+            ],
+            "source_entry_ids": [
+              "9484ddd973b8aa7d"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorized debits in Canada 1% + ¥50",
+          "payment_method": "pad",
+          "product_id": "pad",
+          "provider": "stripe",
+          "rule_id": "2150b783565c3d2d",
+          "unit": "per_transaction",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "card_region",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "card_origin",
+              "evidence": null,
+              "operator": "eq",
+              "value": "international"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "150.0",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "1.5"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorized debits in Canada + 1.5% for international transactions",
+              "South Korean payment methods + 1.5% for international transactions"
+            ],
+            "source_entry_ids": [
+              "21e33adac92f44a2",
+              "fcfaf4f7c90fe00c"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorized debits in Canada + 1.5% for international transactions",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "9fa43f45cf4fb7f5",
+          "unit": "per_transaction",
+          "variant_id": "online_international_cards"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "additive",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "currency_conversion_required",
+              "evidence": null,
+              "operator": "eq",
+              "value": true
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "200",
+              "currency": null,
+              "minor_amount": null,
+              "operator": "+",
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage_surcharge",
+              "value": "2"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorized debits in Canada + 2% if currency conversion is required",
+              "South Korean payment methods + 2% if currency conversion is required"
+            ],
+            "source_entry_ids": [
+              "aa426fdc5363f06f",
+              "eabc103880b70c0d"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorized debits in Canada + 2% if currency conversion is required",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "4b4a2c6d10279070",
+          "unit": "per_transaction",
+          "variant_id": "online_domestic_cards"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "dispute_state",
+              "evidence": null,
+              "operator": "eq",
+              "value": "lost"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "dispute"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "2500",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "2500",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorized debits in Canada ¥2,500 for disputed payments"
+            ],
+            "source_entry_ids": [
+              "d78f228a75081339"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorized debits in Canada ¥2,500 for disputed payments",
+          "payment_method": null,
+          "product_id": "disputes",
+          "provider": "stripe",
+          "rule_id": "2f69e0d7677c366f",
+          "unit": "per_dispute",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "JP",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "JP"
+            },
+            {
+              "dimension": "transaction_type",
+              "evidence": null,
+              "operator": "eq",
+              "value": "failed"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": "650",
+              "basis_points": null,
+              "currency": "JPY",
+              "minor_amount": "650",
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "fixed_amount",
+              "value": null
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "Pre-authorized debits in Canada ¥650 for failed payments"
+            ],
+            "source_entry_ids": [
+              "d847dcad1daaa420"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "Pre-authorized debits in Canada ¥650 for failed payments",
+          "payment_method": null,
+          "product_id": "payments",
+          "provider": "stripe",
+          "rule_id": "f374e11ae1ceddc5",
+          "unit": "per_attempt",
+          "variant_id": "online_domestic_cards"
         },
         {
           "account_country": "JP",
@@ -31725,130 +33918,6 @@
           "product_id": "payments",
           "provider": "stripe",
           "rule_id": "6bd344a98090edbe",
-          "unit": "per_transaction",
-          "variant_id": "online_domestic_cards"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "additive",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "card_region",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
-              "dimension": "card_origin",
-              "evidence": null,
-              "operator": "eq",
-              "value": "international"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "150.0",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage_surcharge",
-              "value": "1.5"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "South Korean payment methods + 1.5% for international transactions"
-            ],
-            "source_entry_ids": [
-              "fcfaf4f7c90fe00c"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "South Korean payment methods + 1.5% for international transactions",
-          "payment_method": null,
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "9fa43f45cf4fb7f5",
-          "unit": "per_transaction",
-          "variant_id": "online_international_cards"
-        },
-        {
-          "account_country": "JP",
-          "behavior": "additive",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "JP"
-            },
-            {
-              "dimension": "currency_conversion_required",
-              "evidence": null,
-              "operator": "eq",
-              "value": true
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "200",
-              "currency": null,
-              "minor_amount": null,
-              "operator": "+",
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage_surcharge",
-              "value": "2"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "South Korean payment methods + 2% if currency conversion is required"
-            ],
-            "source_entry_ids": [
-              "eabc103880b70c0d"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "South Korean payment methods + 2% if currency conversion is required",
-          "payment_method": null,
-          "product_id": "payments",
-          "provider": "stripe",
-          "rule_id": "4b4a2c6d10279070",
           "unit": "per_transaction",
           "variant_id": "online_domestic_cards"
         }
