@@ -24837,7 +24837,7 @@
         "Payment methods",
         "Pix 2% per successful charge"
       ],
-      "source_evidence": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_evidence": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions.",
       "source_order": 187,
       "source_text": "Pix 2% per successful charge",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
@@ -24864,7 +24864,7 @@
       "classification_status": "unclassified",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "1256e7deddd6c9f3",
+      "entry_id": "2bab3486e3e61c54",
       "fee_category": "Pix 2% per successful charge",
       "footnotes": [],
       "links": [
@@ -24884,7 +24884,7 @@
       ],
       "source_evidence": "",
       "source_order": 188,
-      "source_text": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_text": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
@@ -29911,7 +29911,7 @@
       "source_order": 102
     },
     {
-      "body": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "body": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions.",
       "heading": "Pix 2% per successful charge",
       "level": 3,
       "links": [
@@ -30491,13 +30491,13 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "e8f343fb1b5a576e185a0f308cf2ba92771fe90d7a6e6db990bd59a15434f698",
+      "content_sha256": "4ebc450c7d03a12278b2a58593d58efe7ad34d0311ea428b580fcdbc322825d4",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
       "effective_url": "https://stripe.com/au/pricing",
       "etag": null,
-      "evidence_text": "Pricing & Fees 8 sales reps available We're here to discuss your business needs. Chat now with sales Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Terminal In-person payments Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Embedded Finance Connect Payments for platforms More Product roadmap See what's ahead Radar Fraud prevention Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Fintech Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap Sessi",
+      "evidence_text": "Pricing & Fees 8 sales reps available We're here to discuss your business needs. Chat now with sales Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Terminal In-person payments Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Embedded Finance Connect Payments for platforms More Product roadmap See what's ahead Radar Fraud prevention Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Stripe Sessions 2027 Join us in San Francisco to see what’s next for the AI economy. Register now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Fintech Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Product roadmap S",
       "last_modified": null,
       "page_id": "pricing",
       "page_title": "Pricing & Fees",
@@ -30507,13 +30507,13 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "ed0745999f9fd6fc753117908486254585efd29bdedfcd86bb07bf09d15127e4",
+      "content_sha256": "7b1a0913523066fd1836d13f68e9fb9dfbf50a24455171e28ff74a40573e68ad",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
       "effective_url": "https://stripe.com/au/pricing/local-payment-methods",
       "etag": null,
-      "evidence_text": "Local payment methods pricing 8 sales reps available We're here to discuss your business needs. Chat now with sales Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Terminal In-person payments Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Embedded Finance Connect Payments for platforms More Product roadmap See what's ahead Radar Fraud prevention Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Stripe Sessions 2026 See how Stripe is building the economic infrastructure for AI. Watch now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Fintech Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Produc",
+      "evidence_text": "Local payment methods pricing 8 sales reps available We're here to discuss your business needs. Chat now with sales Stripe logo Stripe logo Back Payments Payments Online payments Managed Payments Merchant of record solution Payment links No-code payments Checkout Prebuilt payment UIs Elements Flexible UI components Payment methods Access to 125+ Terminal In-person payments Authorization Boost Acceptance optimisations Link Accelerated checkout Revenue Billing Recurring revenue Metronome Usage-based billing Subscriptions Subscription management Invoicing One-time or recurring Tax Sales tax & VAT automation Revenue Recognition Accounting automation Stripe Sigma Custom reports Data Pipeline Data sync Money management Global Payouts Payouts to third parties Capital Business financing Crypto Wallet, stablecoin issuing and card infrastructure Embedded Finance Connect Payments for platforms More Product roadmap See what's ahead Radar Fraud prevention Atlas Start-up incorporation Climate Carbon removal Identity Online identity verification Stripe Sessions 2027 Join us in San Francisco to see what’s next for the AI economy. Register now By stage Enterprises Startups By use case Agentic commerce Crypto E-commerce Embedded finance Finance automation Global businesses In-app payments Marketplaces Money management Platforms SaaS By industry AI companies Creator economy Fintech Gaming Hospitality, travel and leisure Insurance Media and entertainment Non-profits Professional services Retail Ecosystem Partners Stripe App Marketplace Documentation Stripe docs API reference Libraries and SDKs Stripe Apps Guides Accept online payments Implement a prebuilt checkout Build a platform or marketplace Manage subscriptions Offer usage-based billing Issue stablecoin-backed cards Provision and manage services with agents Resources App integrations Code samples Developers blog API status Learn Blog Customer stories Guides Support Get support Managed support plans Professional services Company Pr",
       "last_modified": null,
       "page_id": "local_payment_methods",
       "page_title": "Local payment methods pricing",
@@ -31080,7 +31080,7 @@
       "classification_status": "ignored_non_fee",
       "confidence": 0.0,
       "context": {},
-      "entry_id": "1256e7deddd6c9f3",
+      "entry_id": "2bab3486e3e61c54",
       "fee_category": "Pix 2% per successful charge",
       "footnotes": [],
       "links": [
@@ -31100,7 +31100,7 @@
       ],
       "source_evidence": "",
       "source_order": 188,
-      "source_text": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions. For businesses based in Brazil, Pix is currently invite-only.",
+      "source_text": "Accept payments with Pix, Brazil's most popular payment method – used in more than 40% of online transactions.",
       "source_url": "https://stripe.com/au/pricing/local-payment-methods",
       "tokens": [
         {
