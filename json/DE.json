@@ -33672,7 +33672,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-de/pricing",
-      "content_sha256": "a62c674d52e781db56a6e2590d5b3d98e81637598419d3560fc6b78bf47a8b56",
+      "content_sha256": "28dae500b680fadad3836059b5da1d0585ba2f0744f156899bdfdd864cab7185",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
@@ -33688,7 +33688,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-de/pricing/local-payment-methods",
-      "content_sha256": "26c7d7bf00532f005b0725b7ee461a6c75594fb332009476e28fbfc5df541cdd",
+      "content_sha256": "ae57543d7029e04736a44add1d46e3e8514bcd260ebf438437023b8cbccc7811",
       "detected_currency": "EUR",
       "detected_locale": "en-de",
       "detected_market": "DE",
