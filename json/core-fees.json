@@ -19370,59 +19370,6 @@
           "classification_status": "calculable_rule",
           "conditions": [
             {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "GB"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "25.00",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.25"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "0.25%"
-            ],
-            "source_entry_ids": [
-              "253129d799422619"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "0.25%",
-          "payment_method": null,
-          "product_id": "platform",
-          "provider": "stripe",
-          "rule_id": "6b8cdb2ef8cb36b5",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "GB",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
               "dimension": "cross_border",
               "evidence": null,
               "operator": "eq",
@@ -19715,6 +19662,59 @@
           "provider": "stripe",
           "rule_id": "4a0c67167e7f4ff8",
           "unit": "per_payout",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "GB",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "GB"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "25.00",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.25"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.25%"
+            ],
+            "source_entry_ids": [
+              "253129d799422619"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.25%",
+          "payment_method": null,
+          "product_id": "platform",
+          "provider": "stripe",
+          "rule_id": "6b8cdb2ef8cb36b5",
+          "unit": "per_transaction",
           "variant_id": "standard"
         },
         {
@@ -35800,59 +35800,6 @@
               "value": "online"
             },
             {
-              "dimension": "account_country",
-              "evidence": null,
-              "operator": "eq",
-              "value": "US"
-            }
-          ],
-          "confidence": 0.85,
-          "exactness": "exact",
-          "fee_components": [
-            {
-              "amount": null,
-              "basis_points": "25.00",
-              "currency": null,
-              "minor_amount": null,
-              "operator": null,
-              "schedule_id": null,
-              "source_entry_id": null,
-              "source_text": null,
-              "type": "percentage",
-              "value": "0.25"
-            }
-          ],
-          "fee_evidence": {
-            "confidence": 0.85,
-            "phrases": [
-              "0.25%"
-            ],
-            "source_entry_ids": [
-              "253129d799422619"
-            ],
-            "type": "explicit_fee_phrase"
-          },
-          "label": "0.25%",
-          "payment_method": null,
-          "product_id": "platform",
-          "provider": "stripe",
-          "rule_id": "0d0395d4dba5e83e",
-          "unit": "per_transaction",
-          "variant_id": "standard"
-        },
-        {
-          "account_country": "US",
-          "behavior": "conditional",
-          "channel": "online",
-          "classification_status": "calculable_rule",
-          "conditions": [
-            {
-              "dimension": "channel",
-              "evidence": null,
-              "operator": "eq",
-              "value": "online"
-            },
-            {
               "dimension": "cross_border",
               "evidence": null,
               "operator": "eq",
@@ -36015,6 +35962,59 @@
           "provider": "stripe",
           "rule_id": "d3fd2d5f3f13c368",
           "unit": "per_payout",
+          "variant_id": "standard"
+        },
+        {
+          "account_country": "US",
+          "behavior": "conditional",
+          "channel": "online",
+          "classification_status": "calculable_rule",
+          "conditions": [
+            {
+              "dimension": "channel",
+              "evidence": null,
+              "operator": "eq",
+              "value": "online"
+            },
+            {
+              "dimension": "account_country",
+              "evidence": null,
+              "operator": "eq",
+              "value": "US"
+            }
+          ],
+          "confidence": 0.85,
+          "exactness": "exact",
+          "fee_components": [
+            {
+              "amount": null,
+              "basis_points": "25.00",
+              "currency": null,
+              "minor_amount": null,
+              "operator": null,
+              "schedule_id": null,
+              "source_entry_id": null,
+              "source_text": null,
+              "type": "percentage",
+              "value": "0.25"
+            }
+          ],
+          "fee_evidence": {
+            "confidence": 0.85,
+            "phrases": [
+              "0.25%"
+            ],
+            "source_entry_ids": [
+              "253129d799422619"
+            ],
+            "type": "explicit_fee_phrase"
+          },
+          "label": "0.25%",
+          "payment_method": null,
+          "product_id": "platform",
+          "provider": "stripe",
+          "rule_id": "0d0395d4dba5e83e",
+          "unit": "per_transaction",
           "variant_id": "standard"
         },
         {

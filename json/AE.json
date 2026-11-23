@@ -7761,7 +7761,7 @@
       "source_order": 35
     },
     {
-      "body": "Enhance your platform by embedding financial services—set-up financial accounts, issue cards, and offer financing.",
+      "body": "Manage your money by holding funds, sending money globally, spending on cards, and accessing financing or enhance your platform by embedding financial services.",
       "heading": "Money management",
       "level": 1,
       "links": [],
@@ -8542,7 +8542,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "998cd8300b244107d010b185a1d03dfe681b6bbfbd57e5cc3eaca9df1cca807b",
+      "content_sha256": "b824c30f323356d9c4a9c37b7078b8b7792a73af06c1786695617bd69f2ad511",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8558,7 +8558,7 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "83845647706198d4416ffe392d850917832fff2f62650af7ddcd3dcefb97255b",
+      "content_sha256": "e7ef3887e83cedef4b27393555c0d2199083f224c704c8dd96ac026794bda89b",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",

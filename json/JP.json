@@ -21715,7 +21715,7 @@
       "source_order": 43
     },
     {
-      "body": "Enhance your platform by embedding financial services—set-up financial accounts, issue cards, and offer financing.",
+      "body": "Manage your money by holding funds, sending money globally, spending on cards, and accessing financing or enhance your platform by embedding financial services.",
       "heading": "Money management",
       "level": 1,
       "links": [],
@@ -24345,7 +24345,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/en-jp/pricing",
-      "content_sha256": "22cf2bee341c892dbe80b048c1a26cbba91cceaf92f7970650736aa11d879a6c",
+      "content_sha256": "5815daae1be02dcfd1dfa75866cec49605b5b5b92f79d1765e8bec7996a3a4b0",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",
@@ -24361,7 +24361,7 @@
     },
     {
       "canonical_url": "https://stripe.com/en-jp/pricing/local-payment-methods",
-      "content_sha256": "cc30efa6c2c63eb7117000691fd71cd390a0304e86d691c5c7fcedba5cab0328",
+      "content_sha256": "32e2644ac163cb0b3ece89f4a8a5a5464dacb6f9273b7b1a4aa7bc77c766a4ac",
       "detected_currency": "JPY",
       "detected_locale": "en-jp",
       "detected_market": "JP",

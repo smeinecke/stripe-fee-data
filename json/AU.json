@@ -27213,7 +27213,7 @@
       "source_order": 45
     },
     {
-      "body": "Enhance your platform by embedding financial services – set up financial accounts, issue cards, and offer financing.",
+      "body": "Manage your money by holding funds, sending money globally, spending on cards, and accessing financing or enhance your platform by embedding financial services.",
       "heading": "Money management",
       "level": 1,
       "links": [],
@@ -30491,7 +30491,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/au/pricing",
-      "content_sha256": "a548426ca3bce612095287964eb56e6e8f06ff754f31d7d722b34a0b5b9cb4cb",
+      "content_sha256": "d3f3b01ced1335b96fb8e00b4d809b62cfc80f627dd97f859bcc5ea1e06226f4",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
@@ -30507,7 +30507,7 @@
     },
     {
       "canonical_url": "https://stripe.com/au/pricing/local-payment-methods",
-      "content_sha256": "c37e6d8d77bfd636f0fad86aafc107c4821ef7cc1edefd7e6afca17673043454",
+      "content_sha256": "909d3525c8f9f154efec5505f818c453a0c25f747c3e13b82597c299348d3480",
       "detected_currency": "AUD",
       "detected_locale": "en-au",
       "detected_market": "AU",
