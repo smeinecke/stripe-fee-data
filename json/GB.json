@@ -36285,7 +36285,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/gb/pricing",
-      "content_sha256": "6c0b6cc2d4b79cf7f0e1e69050307566cd381eeb97678f3ed3ddd8e6a905a370",
+      "content_sha256": "b2783a39aa85a7ec008fa738a42aa77640b8bec2fbf7da1e9fbded7515a2e622",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
@@ -36301,7 +36301,7 @@
     },
     {
       "canonical_url": "https://stripe.com/gb/pricing/local-payment-methods",
-      "content_sha256": "9ee753e441f2ac414fb05347ebe492a3d3792feb066badb51448c56b5933130c",
+      "content_sha256": "01ec85943d3f5b103f84b88d2fae55a508f02139a404ae8d76aff92fd3788fe3",
       "detected_currency": "GBP",
       "detected_locale": "en-gb",
       "detected_market": "GB",
