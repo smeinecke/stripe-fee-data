@@ -8542,7 +8542,7 @@
   "sources": [
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "41ca815ce4104d2f4ee22693b03dbb2a29fc021b46ce7223b5d525a9bf4685de",
+      "content_sha256": "030dcc4c0f5fd4e9ce10ff416493918e7c256c0512bf5ee3ad2d560d65fcad38",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
@@ -8558,7 +8558,7 @@
     },
     {
       "canonical_url": "https://stripe.com/ae/pricing",
-      "content_sha256": "f5ca914798e40294bc497df9c830b1063709e446a31ea792c623dd009457b980",
+      "content_sha256": "d8a3b476e09ddd1f061760ddb822685fcd8e778efd3ed8801851b31bbc35d386",
       "detected_currency": "AED",
       "detected_locale": "en-ae",
       "detected_market": "AE",
